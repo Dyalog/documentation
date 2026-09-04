@@ -146,7 +146,7 @@ The `ProgressCallback` variant option is described in the [Dyalog Programming Re
 
 * The first element of the right argument to the callback function is the character vector `'⎕NMOVE'`.
 
-## Note
+## Notes
 
 When `⎕NMOVE` copies and deletes files:
 

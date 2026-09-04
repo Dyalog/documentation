@@ -115,7 +115,7 @@ A **vector of character vectors** as input will result in a **vector of characte
 
 A **stream** as input will result in a **vector of character vectors** document output. Any and all line endings in the output document will be implied at the end of each character vector.
 
-Note that the shape of the output document may be significantly different to that of the input document.
+The shape of the output document can be significantly different to that of the input document.
 
 If the ResultText option is specified, the output type may be forced to be a **character vector** or **vector of character vectors** as described above, regardless of the input document.
 
@@ -136,7 +136,7 @@ For more information on the syntax of the search pattern, see the [PCRE document
 
 There may be multiple search patterns. If more than one search pattern is specified and more than one pattern matches the same part of the input document then priority is given to the pattern specified first.
 
-Note that when anchoring a search to the beginning of a line, it is essential to use `^` (`⎕UCS 94`), not `∧` (`⎕UCS 8743`).
+When anchoring a search to the beginning of a line, it is essential to use `^` (`⎕UCS 94`), not `∧` (`⎕UCS 8743`).
 
 ## Transformation pattern
 
@@ -230,7 +230,7 @@ The pattern has two subpatterns - (`A`) and (`B`). Therefore Offsets and Lengths
 
 When `ABC` is searched the first match is the `A` in the first subpattern. The second subpattern does not feature. Offsets is `0 0` and Lengths is `1 1`: the entire pattern matched from offset 0 length 1 and the first subpattern also matched from offset 0 length 1. The second subpattern did not feature in the match.
 
-Note that `¯1` is only used as a "filler" when there are higher-numbered subpatterns that did match.
+`¯1` is only used as a "filler" when there are higher-numbered subpatterns that did match.
 
 The second match is the B in the second subpattern. Offsets is `1 ¯1 1` and Lengths is `1 ¯1 1`: the entire pattern matched from offset 1 length 1 and the second subpattern also matched from offset 1 length 1. The first subpattern did not feature in the match and this is indicated by the `¯1`s. There has to be something between the offset/length for the entire pattern and the second subpattern.
 
@@ -401,7 +401,7 @@ This option specifies the encoding of the input stream when it cannot be determi
 When the stream is read from its start, and the start of the stream contains a recognised Byte Order Mark (BOM), the encoding is taken as that specified by the BOM and this option is ignored. Otherwise, the encoding is assumed to be as specified by this option.
 
 |------------|----------------------------------------------------------------------------------------------------------------------------------|
-|UTF-8 { .shaded } |The stream is processed as UTF-8 data. Note that ASCII is a subset of UTF-8, so this default is also suitable for ASCII data.     |
+|UTF-8 { .shaded } |The stream is processed as UTF-8 data. ASCII is a subset of UTF-8, so this default is also suitable for ASCII data.     |
 |UTF-16      |The stream is processed as UTF16 little-endian data on little-ended systems, or as UTF16 big-endian data on big-endian systems.   |
 |UTF-16LE    |The stream is processed as UTF16 little-endian data.                                                                              |
 |UTF-16BE    |The stream is processed as UTF16 big-endian data.                                                                                 |
@@ -598,7 +598,7 @@ Place every non-space sequence of characters in brackets:
 
 Replace all sequences of one or more spaces by newline:
 
-Note that the effect of this is dependent on the input format
+The effect of this is dependent on the input format.
 
 Character vector input results in a single character vector output with embedded newlines:
 

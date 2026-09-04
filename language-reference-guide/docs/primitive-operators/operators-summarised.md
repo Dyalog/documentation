@@ -7,7 +7,7 @@ search:
 
 [](#monadic-operators) and [](#dyadic-operators) below summarise the Monadic and Dyadic primitive operators whose detailed descriptions  follow in alphabetical order in this section.
 
-Some operators may include an axis specification (indicated `[]`in the tables). Note that in these case `⎕IO` is an implicit argument of the derived function.
+Some operators can include an axis specification (indicated `[]`in the tables). In these cases, `⎕IO` is an implicit argument of the derived function.
 
 Table: Monadic Primitive Operators { #monadic-operators }
 

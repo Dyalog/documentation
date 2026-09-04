@@ -11,7 +11,7 @@ search:
 
 The result is a numeric matrix with shape (5 2) whose rows represent the most recent occurrence of the following events.
 
-1. File creation (see note)
+1. File creation (see below)
 2. Undefined, currently `(0 0)`
 3. Last update of the access matrix
 4. Undefined, currently `(0 0)`
@@ -19,7 +19,7 @@ The result is a numeric matrix with shape (5 2) whose rows represent the most re
 
 For each event, the first column contain the user number and the second a timestamp. Like the timestamp reported by `⎕FRDCI` this is measured in 60<sup>th</sup>s of a second since 1st January 1970 (UTC).
 
-**Note:** `⎕FHIST` collects information only if journaling and/or checksum is in operation. If neither is in use, the collection of data for `⎕FHIST` is disabled and its result is entirely 0. If a file has both journaling and checksum disabled, and then either is  enabled, the collection of data for `⎕FHIST` is enabled too. In this case, the information in row 1 of `⎕FHIST` relates to the most recent enabling `⎕FPROPS` operation rather than the original `⎕FCREATE`.
+`⎕FHIST` collects information only if journaling and/or checksum is in operation. If neither is in use, the collection of data for `⎕FHIST` is disabled and its result is entirely 0. If a file has both journaling and checksum disabled, and then either is  enabled, the collection of data for `⎕FHIST` is enabled too. In this case, the information in row 1 of `⎕FHIST` relates to the most recent enabling `⎕FPROPS` operation rather than the original `⎕FCREATE`.
 
 In the examples that follow, the `FHist` function is used below to format the result of `⎕FHIST`.
 ```apl

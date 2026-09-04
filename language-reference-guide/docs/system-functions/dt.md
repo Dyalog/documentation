@@ -45,7 +45,7 @@ Time numbers in `R` can be of type DECF even when [`⎕FR`](fr.md) is `645` if t
 
 ## Time Numbers
 
-If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.
+If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. The last column indicates whether (Yes) or not (No) negative numbers are allowed.
 
 Table: Time numbers { #timenumbers }
 

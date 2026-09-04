@@ -25,7 +25,7 @@ Shy result `R` is a vector of thread numbers (if any) unblocked by the `⎕TPUT`
 
 If `X` is omitted, the *value* associated with each of the tokens added to the pool is the same as its *type*.
 
-Note that you cannot put a 0-token into the pool; 0-s are removed from `Y`.
+You cannot put a 0-token into the pool; 0-s are removed from `Y`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

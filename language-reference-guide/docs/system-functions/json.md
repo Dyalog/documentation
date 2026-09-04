@@ -223,7 +223,7 @@ c
       j.a.⎕NL 9
 d
 ```
-Note that `f⍺` is an invalid APL name:
+`f⍺` is an invalid APL name:
 ```apl
       j.a.d.⎕NL 2
 e       
@@ -273,7 +273,7 @@ Table: JSON types { #import-types-table }
 | `5`     | Specified by `Null` variant            | Null                     |
 | `6`     | Enclosed character vector              | Lacking APL equivalent   |
 
-Note that:
+In addition:
 
 - JSON <code class="language-nonAPL">null</code> is converted into the specified (or implied) value of [`Null`](#variant-option-null); `⊂'null'` (the default) or `⎕NULL`.
 - JSON values that lack an APL equivalent, <code class="language-nonAPL">true</code> and <code class="language-nonAPL">false</code>, and, if `Dialect` is `'JSON5'`, the JSON5 numeric constants <code class="language-nonAPL">Infinity</code>, <code class="language-nonAPL">-Infinity</code>, and <code class="language-nonAPL">NaN</code>, are converted to enclosed character vectors `⊂'true'`, `⊂'false'`, and so on.

@@ -9,7 +9,7 @@ search:
 
 `Y` must be a simple integer scalar or 1 or 2 element vector containing the file tie number followed by an optional passnumber. If the passnumber is omitted it is assumed to be zero.
 
-`X` must be a valid access matrix, that is, a 3-column integer matrix with any number of rows.  The function sets access control for a set of specific users (1<sup>st</sup> column) and file operations (2<sup>nd</sup> column) with specified passnumbers ( 3<sup>rd</sup> column). Note that a 0 in the 1<sup>st</sup> column specifies **all** users, a `¯1` in the 2<sup>nd</sup> column specifies **all** file operations, and a `0` in the 3<sup>rd</sup> column specifies that **no** passnumber is required. For further details, see [File Access Control](../../../programming-reference-guide/component-files/component-files).
+`X` must be a valid access matrix, that is, a 3-column integer matrix with any number of rows.  The function sets access control for a set of specific users (1<sup>st</sup> column) and file operations (2<sup>nd</sup> column) with specified passnumbers ( 3<sup>rd</sup> column). A `0` in the 1<sup>st</sup> column specifies **all** users, a `¯1` in the 2<sup>nd</sup> column specifies **all** file operations, and a `0` in the 3<sup>rd</sup> column specifies that **no** passnumber is required. For further details, see [File Access Control](../../../programming-reference-guide/component-files/component-files).
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result of `⎕FSTAC` is the tie number of the file.
 

@@ -12,7 +12,7 @@ The editor may be used to edit Dyalog script files (*.dyalog* files) and general
 
 `R` is Boolean. 1 means that the information was removed; 0 that it wasn't.
 
-Note that the workspace object itself remains in the workspace; just the information about its associated file is removed.
+The workspace object itself remains in the workspace; just the information about its associated file is removed.
 
 <h2 class="example">Examples</h2>
 ```apl

@@ -11,7 +11,7 @@ search:
 
 `⎕BASE` is typically used to call a method in the Base Class which has been *superseded* by a Method in the current Class.
 
-Note that `⎕BASE.Y` is *special syntax* and any direct reference to `⎕BASE` on its own or in any other context, is meaningless and causes `SYNTAX ERROR`.
+`⎕BASE.Y` is *special syntax* and any direct reference to `⎕BASE` on its own or in any other context, is meaningless and causes `SYNTAX ERROR`.
 
 In the following example, Class `DomesticParrot` derives from Class `Parrot` and supersedes its `Speak` method. `DomesticParrot.Speak` calls the `Speak` method in its Base Class `Parrot`, via `⎕BASE`.
 ```apl

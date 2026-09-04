@@ -19,8 +19,7 @@ DOMAIN ERROR: Divide by zero
 
 See [APL Error Messages](../../../programming-reference-guide/error-messages/apl-errors).
 
-!!! note
-    `⎕SIGNAL` can be used to reset the value of this system constant.
+`⎕SIGNAL` can be used to reset the value of this system constant.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -5,7 +5,7 @@ search:
 
 # <span>Data Representation (Dyadic)</span> `R←X ⎕DR Y`{{key}}
 
-Dyadic `⎕DR` converts the data type of its argument `Y` according to the type specification `X`. See [Data Representation (Monadic)](data-representation-monadic.md) for a list of data types but note that 1287 is not a permitted value in `X`.
+Dyadic `⎕DR` converts the data type of its argument `Y` according to the type specification `X`. See [Data Representation (Monadic)](data-representation-monadic.md) for a list of data types, but 1287 is not a permitted value in `X`.
 
 ## Case 1
 

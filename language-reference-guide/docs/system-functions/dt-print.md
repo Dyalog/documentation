@@ -28,12 +28,11 @@ Character scalars in `Y` are always interpreted as meaning "now".
 
 `R` is an array of the same shape as `Y`, where each element is either a timestamp, time number or Boolean value as determined by the second or only element in `X`.
 
-!!! note
-    Time numbers in `R` may be of type DECF even if `⎕FR` is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.
+Time numbers in `R` can be of type DECF even if `⎕FR` is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.
 
 ## Time Numbers
 
-If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. Note that the last column indicated whether (Yes) or not (No) negative numbers are allowed.
+If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. The last column indicates whether (Yes) or not (No) negative numbers are allowed.
 
 |Code|Description|Category|Epoch<sup>1</sup>|Neg<sup>8</sup>|
 |---|---|---|---|---|
@@ -143,7 +142,7 @@ Any element in `Y` may be specified as a military time zone character and is imp
 |Y        |Yankee        |UTC -12   |
 |Z        |Zulu          |UTC +0    |
 
-Note that the resolutions of system clocks vary by platform.
+The resolutions of system clocks vary by platform.
 
 ## Examples 
 

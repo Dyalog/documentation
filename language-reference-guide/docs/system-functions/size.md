@@ -11,7 +11,7 @@ If the name in `Y` identifies an object with an active referent, the workspace r
 
 The result returned for an external variable is the space required to store the external array.  The result for a system constant, variable or function is 0.  The result returned for a GUI object gives the amount of workspace needed to store it, but excludes the space required for its children.
 
-Note: Wherever possible, Dyalog APL *shares* the whole or part of a workspace object rather than generates a separate copy; however `⎕SIZE` reports the size as though nothing is shared. `⎕SIZE` also includes the space required for the interpreter's internal information about the object in question.
+Wherever possible, Dyalog APL *shares* the whole or part of a workspace object rather than generates a separate copy; however `⎕SIZE` reports the size as though nothing is shared. `⎕SIZE` also includes the space required for the interpreter's internal information about the object in question.
 
 <h2 class="example">Examples</h2>
 ```apl

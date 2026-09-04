@@ -6,8 +6,8 @@ search:
 
 # <span>Create Data Binding Source</span> `R←{X}2015⌶Y`{{key}}
 
-!!! note
-    **.NET Framework only**
+!!! Info "Information"
+    This function is available only in the .NET Framework interface.
 
 Creates an object that may be used as a data source for WPF data binding. For more information on the concepts of WPF data binding, see [Microsoft Developer Network's Data Binding Overview](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/).
 
@@ -63,7 +63,7 @@ In this case, `Y` specifies the name of a variable which is one of the following
 
 `X` (if specified) defines the binding type for the bind variable named by `Y` and is a single .NET Type.
 
-Note that in the following examples, the reason for expunging the name first is discussed in the section headed Rebinding a Variable.
+In the following examples, the reason for expunging the name first is discussed in the section headed Rebinding a Variable.
 
 ## Binding a Character Vector
 
@@ -147,7 +147,7 @@ A vector of .NET objects is bound in the same way as a vector of character vecto
 
 ```
 
-Note that, as a specific optimisation for binding DateTime data, it is not necessary to create `DateTime` objects in the workspace. Instead, the data may be represented by 7-element integer vectors (`⎕TS` format) or character strings that can be parsed by the DateTime.Parse(String) method.  However, in both cases it is necessary to explicitly specify the binding type to force the data to be converted to `DateTime`, as illustrated by the following examples:
+As a specific optimisation for binding DateTime data, it is not necessary to create `DateTime` objects in the workspace. Instead, the data can be represented by 7-element integer vectors (`⎕TS` format) or character strings that can be parsed by the DateTime.Parse(String) method. However, in both cases it is necessary to explicitly specify the binding type to force the data to be converted to `DateTime`, as illustrated by the following examples:
 ```apl
       TSEaster←7↑¨Easter
       bindSource←DateTime (2015⌶) 'TSEaster'

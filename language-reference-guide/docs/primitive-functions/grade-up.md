@@ -46,7 +46,7 @@ search:
 
 ```
 
-!!! note
+!!! Info "Information"
     Character arrays sort differently in the Unicode and Classic Editions.
 
 ```apl

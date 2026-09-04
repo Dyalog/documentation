@@ -51,7 +51,7 @@ The following example shows how `⌷`obtains the items in an Excel Sheets collec
 
 ## Performance Considerations
 
-Note that the *values* of the index set are obtained or assigned by calls to the corresponding PropertyGet and PropertySet functions. Furthermore, if there is a sequence of primitive functions to the left of the _index_ function, that operate on the index set itself (functions such as dyadic `⍴,↑,↓,⊃`) as opposed to functions that operate on the *values* of the index set (functions such as `+,⌈,⌊,⍴¨`), calls to the PropertyGet and PropertySet functions are deferred until the required index set has been completely determined. The full set of functions that cause deferral of calls to the PropertyGet and PropertySet functions is the same as the set of functions that applies to selective specification.
+The *values* of the index set are obtained or assigned by calls to the corresponding PropertyGet and PropertySet functions. Furthermore, if there is a sequence of primitive functions to the left of the _index_ function, that operate on the index set itself (functions such as dyadic `⍴,↑,↓,⊃`) as opposed to functions that operate on the *values* of the index set (functions such as `+,⌈,⌊,⍴¨`), calls to the PropertyGet and PropertySet functions are deferred until the required index set has been completely determined. The full set of functions that cause deferral of calls to the PropertyGet and PropertySet functions is the same as the set of functions that applies to selective specification.
 
 If for example, `CompFile` is an Instance of the [ComponentFile Class](../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example):
 ```apl
@@ -60,7 +60,7 @@ If for example, `CompFile` is an Instance of the [ComponentFile Class](../../../
 
 would only call the PropertyGet function (for `CompFile`) once, to get the value of the last element.
 
-Note that similarly, the expression
+Similarly, the expression
 ```apl
       10000⍴⌷CompFile
 ```

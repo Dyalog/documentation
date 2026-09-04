@@ -5,7 +5,7 @@ search:
 
 # <span>Assignment (Selective)</span> `(EXP X)←Y`{{key}}
 
-`X` is the *name* of a variable in the workspace, possibly modified by the indexing function `(EXP X[I])←Y`, see [Assignment (Indexed)](assignment-indexed.md).  `EXP` is an expression that **selects** elements of `X`.  `Y` is an array expression. The result of the expression `Y` is allocated to the elements of `X` selected by `EXP`. Note that `X` may refer to a single name only.
+`X` is the *name* of a variable in the workspace, possibly modified by the indexing function `(EXP X[I])←Y`, see [Assignment (Indexed)](assignment-indexed.md).  `EXP` is an expression that **selects** elements of `X`.  `Y` is an array expression. The result of the expression `Y` is allocated to the elements of `X` selected by `EXP`. `X` can refer to a single name only.
 
 The following functions may appear in the selection expression. Where appropriate these functions may be used with axis `[]` and with the _each_ operator `¨`.
 
@@ -25,7 +25,7 @@ Table: Functions for Selective Assignment {: #Selective_Assignment_Functions }
 |`⌷` |Index                         |
 |`∊` |Enlist ( `⎕ML≥1` )            |
 
-Note: _mix_ and _split_ (monadic `↑` and `↓`), _type_ (monadic `∊` when `⎕ML<1`) and _membership_ (dyadic `∊`) may not be used in the selection expression.
+_Mix_ and _split_ (monadic `↑` and `↓`), _type_ (monadic `∊` when `⎕ML<1`), and _membership_ (dyadic `∊`) cannot be used in the selection expression.
 
 <h2 class="example">Examples</h2>
 ```apl

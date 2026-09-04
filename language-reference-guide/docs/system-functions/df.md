@@ -37,7 +37,7 @@ Pete's Form
 1 11
 ```
 
-Notice that `⎕DF` will accept any character array, but `⎕FMT` always returns a matrix.
+`⎕DF` accepts any character array, but `⎕FMT` always returns a matrix.
 ```apl
 
       F.⎕DF 2 2 5⍴⎕A
@@ -63,7 +63,7 @@ PQRST
 5 5
 ```
 
-Note that `⎕DF` defines the Display Form statically, rather than dynamically.
+`⎕DF` defines the Display Form statically, rather than dynamically.
 ```apl
 
       'F'⎕WC'Form' 'This is the Caption'
@@ -114,7 +114,7 @@ CLEAR WS
 Session
 ```
 
-Note that `⎕DF` applies directly to the object in question and is not automatically applied in a hierarchical fashion.
+`⎕DF` applies directly to the object in question and is not automatically applied in a hierarchical fashion.
 ```apl
 
       'X'⎕NS ''

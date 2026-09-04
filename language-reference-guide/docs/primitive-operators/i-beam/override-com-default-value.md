@@ -6,8 +6,8 @@ search:
 
 # <span>Override COM Default Value</span> `R←{X}(2041⌶)Y`{{key}}
 
-!!! note
-    **Windows only**
+!!! windows "Dyalog on Microsoft Windows"
+    This function is available only under Microsoft Windows.
 
 Certain COM objects, for example, VT_BLOBs, cannot be represented in APL or may be in error. By default Dyalog will generate a `DOMAIN ERROR` in these cases. For COM objects of type **VT_EMPTY** the interpreter by default returns `⎕NULL`.
 

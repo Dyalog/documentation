@@ -6,8 +6,8 @@ search:
 
 # <span>Fork New Task</span> `R←4000⌶Y`{{key}}
 
-!!! note
-    **AIX only**
+!!! unix "Dyalog on AIX"
+    This function is available only under AIX.
 
 `Y` must be is a simple empty vector but is ignored.
 
@@ -32,7 +32,7 @@ The following external interfaces and resources that may be present in the paren
 - GUI objects (all children of `'.'`)
 - I/O to the current terminal
 
-Note that External Functions established using `⎕NA` are replicated in the child process.
+External Functions established using `⎕NA` are replicated in the child process.
 
 The function will fail with a `DOMAIN ERROR` if there is more than one APL thread running.
 

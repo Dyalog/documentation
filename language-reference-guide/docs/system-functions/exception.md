@@ -40,8 +40,7 @@ mscorlib
 
 Similarly to GUI objects, `⎕EXCEPTION` is not preserved across a save/load cycle if the workspace is loaded in a different interpreter.
 
-!!! note
-    `⎕SIGNAL` can be used to reset the value of this system constant.
+`⎕SIGNAL` can be used to reset the value of this system constant.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -125,7 +125,7 @@ Pauline
 └───────┴───────┘
 ```
 
-Notice that in the last statement, the shape of the third item was extended by catenating it with its prototype.
+In the last statement, the shape of the third item was extended by catenating it with its prototype.
 
 ### Example (Matrix of Matrices)
 
@@ -173,7 +173,7 @@ INDEX ERROR
 
 ```
 
-Note that `⊃[4]Y` generates an `INDEX ERROR` because 4 is greater than the length of the result.
+`⊃[4]Y` generates an `INDEX ERROR` because 4 is greater than the length of the result.
 
 ### Example (Vector K)
 

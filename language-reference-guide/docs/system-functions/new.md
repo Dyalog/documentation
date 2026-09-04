@@ -59,7 +59,7 @@ Noname
 9.2 9.2 9.6 9.6
 ```
 
-Note that **.NET Types** are accessed as follows.
+**.NET Types** are accessed as follows.
 
 If the name specified by the first item of `Y` would otherwise generate a `VALUE ERROR`, and `⎕USING` has been set, APL attempts to load the Type specified by `Y` from the .NET assemblies (DLLs) specified in `⎕USING`. If successful, the name specified by `Y` is entered into the SYMBOL TABLE with a name-class of `9.6`. Subsequent references to that symbol (in this case `DateTime`) are resolved directly and do not involve any assembly searching.
 
@@ -83,7 +83,7 @@ To specify the initial values of any properties, `Y[2]` must be a vector (or sca
 #.[Form]
 ```
 
-Note that as `⎕NEW` provides no facility to *name* a GUI object, the Event property should use the *onEvent* syntax so that a callback function (or the result of `⎕DQ`) receives a ref to the object. Otherwise, without the *onEvent* syntax, the first element of the argument to a callback function will contain a character vector such as `'[Form].[Button]'` which merely describes the type of the object but does not identify the object itself.
+As `⎕NEW` provides no facility to *name* a GUI object, the Event property should use the *onEvent* syntax so that a callback function (or the result of `⎕DQ`) receives a ref to the object. Otherwise, without the *onEvent* syntax, the first element of the argument to a callback function will contain a character vector such as `'[Form].[Button]'` which merely describes the type of the object but does not identify the object itself.
 ```apl
       cap←'Caption' 'Push Me'
       ev← 'Event' ('onSelect' 'foo')
@@ -91,7 +91,7 @@ Note that as `⎕NEW` provides no facility to *name* a GUI object, the Event pr
 
 ```
 
-Note that you may not create an instance of OCXClass using `⎕NEW`.
+You cannot create an instance of OCXClass using `⎕NEW`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -29,11 +29,11 @@ If `X` is specified, it defines the type and shape to be associated with *raw* d
 
 The values are more fully explained in [Data Representation (Monadic)](data-representation-monadic.md).
 
-Following items determine the shape of the mapped array. A value of `¯1` on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. Note that if    `X` is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.
+Following items determine the shape of the mapped array. A value of `¯1` on any (but normally the first) axis in the shape is replaced by the system to mean: read as many complete records from the file as possible. Only one axis may be specified in this way. If `X` is a singleton, the data on the file is mapped as a scalar and only the first value on the file is accessible.
 
 If no left argument is given, file is assumed to contain a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
 
-Note that a *raw* mapped file may be updated *only* if its *file offset* is 0. Note also that Windows does not support mapped files of zero length.
+A *raw* mapped file can be updated *only* if its *file offset* is 0. Microsoft Windows does not support mapped files of zero length.
 
 <h2 class="example">Examples</h2>
 
@@ -67,7 +67,7 @@ Then, map a read-write variable:
       var←⎕MAP'c:\myvar' 'w' 
 ```
 
-Note that a mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
+A mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
 ```apl
       +/163 ¯1 ⎕MAP'c:\shorts.dat'
 42

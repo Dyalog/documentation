@@ -79,7 +79,7 @@ Character data consists of free-form text. The free-form text should not include
 
 ### Entity References and Character References
 
-Entity references are named representations of single characters which cannot normally be used in character data because they are used to delimit markup, such as &gt; for '>'. Character references are numeric representations of any character, such as &#20; for space. Note that character references always take values in the Unicode code space, regardless of the encoding of the XML text itself.
+Entity references are named representations of single characters which cannot normally be used in character data because they are used to delimit markup, such as &gt; for '>'. Character references are numeric representations of any character, such as &#20; for space. Character references always take values in the Unicode code space, regardless of the encoding of the XML text itself.
 
 `⎕XML` converts entity references and all character references which the APL character set is able to represent into their character equivalent when generating APL array data; when generating XML it converts any or all characters to entity references as needed.
 
@@ -117,7 +117,7 @@ Attributes with names beginning **xml:** are reserved. Only **xml:space** is tre
 - **preserve** - space normalization is disabled – all whitespace is preserved as given.
 - **any other value** – rejected.
 
-Regardless of whether the attribute name and value have a recognised meaning, the attribute will be included in the APL array / generated XML. Note that when the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
+Regardless of whether the attribute name and value have a recognised meaning, the attribute will be included in the APL array / generated XML. When the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
 
 ### Comments
 
@@ -125,7 +125,7 @@ Comments are fully supported markup. They are delimited by '<!--' and '-->' and 
 
 ### CDATA Sections
 
-CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They and are delimited by '<![CDATA[' and ']]>'. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. Note that this means that if you convert XML to an APL array and then convert this back to XML, CDATA sections will not be regenerated. It is, however, *possible* to generate CDATA sections in XML by presenting them as markup.
+CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They and are delimited by '<![CDATA[' and ']]>'. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, *possible* to generate CDATA sections in XML by presenting them as markup.
 
 ### Processing Instructions
 
@@ -147,9 +147,9 @@ The remainder of XML markup, including document type declarations,  XML declarat
 - The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for "&lt;xml>&lt;document id="001">An introduction to XML &lt;/document>&lt;/xml>&lt;/code>" the _xml_ element is at level 0 and the _document id_ element is at level 1. The text within the _document id_ element is at level 2.
 - Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by '<' and '>' characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
 - All XML markup other than tags are delimited by either '<!' and '>', or '<?' and '>' characters. By default these are not stored in the result matrix but the `Markup` option can be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing '<' and '>' characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing '<' and '>' characters are stripped, such entries will always have either '!' or '&' as the first character.
-- Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element, it is included with its parent rather than as a separate row in the result. Note that when this happens, the level number stored is that of the parent; the data itself implicitly has a level number one greater.
+- Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element, it is included with its parent rather than as a separate row in the result. When this happens, the level number stored is that of the parent; the data itself implicitly has a level number one greater.
 - Attribute name and value pairs associated with the element name are stored in the fourth column, in an (*n x 2*) matrix of character values, for the *n* (including zero) pairs.
-- Each row is further described in the fifth column as a convenience to simplify processing of the array (although this information could be deduced). Any given row can contain an entry for an element, character data, markup not otherwise defined, a comment or a processing instruction. Furthermore, an element will have zero or more of these as children. For all types except elements, the value in the fifth column is as shown above. For elements, the value is computed by adding together the value of the row itself (1) and those of its children. For example, the value for a row for an element which contains one or more sub-elements and character data is 7 – that is 1 (element) + 2 (child element) + 4 (character data). It should be noted that:
+- Each row is further described in the fifth column as a convenience to simplify processing of the array (although this information could be deduced). Any given row can contain an entry for an element, character data, markup not otherwise defined, a comment or a processing instruction. Furthermore, an element will have zero or more of these as children. For all types except elements, the value in the fifth column is as shown above. For elements, the value is computed by adding together the value of the row itself (1) and those of its children. For example, the value for a row for an element which contains one or more sub-elements and character data is 7 – that is 1 (element) + 2 (child element) + 4 (character data). In addition:
 - Odd values always represent elements. Odd values other than 1 indicate that there are children.
 - Elements which contain just character data (5) are combined into a single row as noted previously.
 - Only immediate children are considered when computing the value. For example, an element which contains a sub-element which in turn contains character data does not itself contain the character data.
@@ -185,7 +185,7 @@ Table: Variant options for `⎕XML` { #variantoptionsforxml }
 
 The values of each option are tabulated below. In each case the value of the option for _variant_ is given first, followed by its equivalent for the optional left argument in brackets; for example, `Strip` `(strip)`.
 
-Note that the default value is shown first, and that the option names and values are case-sensitive.
+The default value is shown first, and the option names and values are case-sensitive.
 
 If options are specified using the optional left argument,  `X` specifies a set of option/value pairs, each of which is a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. In the examples below, this method is illustrated by the equivalent expression written as a comment, following the recommended approach using the _variant_ operator `⍠`:
 ```apl
@@ -200,7 +200,7 @@ Errors detected in the input arrays or options will all cause `DOMAIN ERROR`.
 
 The left-argument name is `whitespace`.
 
-When converting from XML, `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Note that attribute values are not comprised of character data, so white space in attribute values is always preserved.
+When converting from XML, `Whitespace` specifies the default handling of white space surrounding and within character data. When converting to XML `Whitespace` specifies the default formatting of the XML. Attribute values are not comprised of character data, so white space in attribute values is always preserved.
 
 |Converting from XML||
 |---|---|

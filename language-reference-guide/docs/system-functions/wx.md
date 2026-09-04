@@ -20,7 +20,7 @@ If `⎕WX` is 3 (2<sup>nd</sup> bit is also set) COM and .NET objects adopt the 
 
 Any attempt to set `⎕WX` to 2 generates a `DOMAIN ERROR`.
 
-Note that it is the value of `⎕WX` in the object itself, rather than the value of `⎕WX` in the calling environment, that determines its behaviour.
+It is the value of `⎕WX` in the object itself, rather than the value of `⎕WX` in the calling environment, that determines its behaviour.
 
 When you create an object, its `⎕WX` (like any other system variable) is initially inherited from its parent.
 

@@ -28,7 +28,7 @@ For other argument values, `R` is given by the expression `Y-X×⌊Y÷X+0=X`. Th
 1J1 ¯1J1 0J1
 ```
 
-Note that the ASCII Broken Bar (`⎕UCS 166`, U+00A6) is not interpreted as _residue_.
+The ASCII Broken Bar (`⎕UCS 166`, U+00A6) is not interpreted as _residue_.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

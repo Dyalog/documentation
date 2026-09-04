@@ -31,7 +31,7 @@ The special character `↑` stands for the list of namespace ancestors:
 
 In other words, the search is conducted upwards through enclosing namespaces, emulating the static scope rule inherent in modern block-structured languages.
 
-Note that the `⎕PATH` mechanism is used ONLY if the function reference cannot be satisfied in the current namespace.  This is analogous to the case when the Windows or UNIX PATH variable begins with a `'.'`.
+The `⎕PATH` mechanism is used ONLY if the function reference cannot be satisfied in the current namespace.  This is analogous to the case when the Windows or UNIX PATH variable begins with a `'.'`.
 
 <h2 class="example">Examples</h2>
 ```other
@@ -60,7 +60,7 @@ Note that the `⎕PATH` mechanism is used ONLY if the function reference cannot 
                        VALUE ERROR
 ```
 
-Note that `⎕PATH` is a *session* variable.  This means that it is workspace-wide and survives `)LOAD` and `)CLEAR`. It can of course, be localised by a defined function or operator.
+`⎕PATH` is a *session* variable.  This means that it is workspace-wide and survives `)LOAD` and `)CLEAR`. It can of course, be localised by a defined function or operator.
 
 `⎕PATH` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕PATH` may therefore be considered an archaic feature.
 

@@ -15,7 +15,7 @@ It is convenient to treat .NET namespaces and assemblies in pairs. For example:
   ⎕USING,←⊂'System.Windows.Forms,System.Windows.Forms.dll'  ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
 ```
 
-Note that because Dyalog APL automatically loads `mscorlib.dll` (which contains the most commonly used classes in the `System` Namespace), it is not actually necessary to specify it explicitly in `⎕USING`.
+Because Dyalog APL automatically loads `mscorlib.dll` (which contains the most commonly used classes in the `System` Namespace), it is not actually necessary to specify it explicitly in `⎕USING`.
 
 `⎕USING` has Namespace scope, that is, each Dyalog namespace, class or instance has its own value of `⎕USING` that is initially inherited from its parent space but which may be separately modified. `⎕USING` may also be localised in a function header, so that different functions can declare different search paths for .NET namespaces/assemblies.
 
