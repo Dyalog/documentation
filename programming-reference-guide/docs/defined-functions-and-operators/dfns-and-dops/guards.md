@@ -24,6 +24,6 @@ If an expression occurs without a guard, it is evaluated immediately as the defa
 
 Local definitions and guards can be interleaved in any order.
 
-Note again that any code following the first unguarded expression (which terminates the function) could never be executed and would therefore be redundant.
+Any code following the first unguarded expression (which terminates the function) could never be executed and would therefore be redundant.
 
 See also [Error-Guards](error-guards.md).

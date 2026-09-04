@@ -10,7 +10,7 @@ The `entries` Field is initialised to an empty vector of `DiaryEntry` instances 
 
 The `entries` Field is referenced through the `Entry` Property, which is defined as the [Default Property](../class-members/properties/default-property.md). This allows individual entries to be referenced and changed using indexing on a `Diary` Instance.
 
-Note that `DiaryEntry` is defined in the script first (before `Diary`) because it is referenced by the initialisation of the `Diaries.entries` Field
+`DiaryEntry` is defined in the script first (before `Diary`) because it is referenced by the initialisation of the `Diaries.entries` Field.
 
 Create a new instance of `Diary`.
 ```apl

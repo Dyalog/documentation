@@ -1,6 +1,6 @@
 # Thread Switching
 
-!!! warning
+!!! Warning "Warning"
     Programming with threads requires care!
 
 The interpreter may switch between running threads at the following points:
@@ -25,4 +25,4 @@ You can prevent threads from interacting in critical sections of code by using t
 
 ## High Priority Callback Functions
 
-Note that the interpreter cannot perform thread-switching during the execution of a *high-priority callback*. This is a callback function that is invoked by a *high-priority* event which demands that the interpreter must return a result to Windows before it may process any other event. Such high-priority events include Configure, ExitWindows, DateTimeChange, DockStart, DockCancel, DropDown. It is therefore not permitted to use a `:Hold` control structure in a high-priority callback function.
+The interpreter cannot perform thread-switching during the execution of a *high-priority callback*. This is a callback function that is invoked by a *high-priority* event which demands that the interpreter must return a result to Windows before it may process any other event. Such high-priority events include Configure, ExitWindows, DateTimeChange, DockStart, DockCancel, DropDown. It is therefore not permitted to use a `:Hold` control structure in a high-priority callback function.

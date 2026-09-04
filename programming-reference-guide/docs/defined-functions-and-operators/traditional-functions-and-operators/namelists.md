@@ -26,7 +26,7 @@ LENGTH ERROR
      ^
 ```
 
-Note that if you specify a *single* name in the Namelist, the function may be called only with a 1-element vector right argument. If the *result* of a function is declared as a Namelist, the values of the names will automatically be stranded together in the specified order and returned as the result of the function when the function terminates.
+If you specify a *single* name in the Namelist, the function can be called only with a 1-element vector right argument. If the *result* of a function is declared as a Namelist, the values of the names will automatically be stranded together in the specified order and returned as the result of the function when the function terminates.
 
 <h2 class="example">Example</h2>
 ```apl

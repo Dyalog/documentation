@@ -23,7 +23,7 @@ A Shared Field is not only accessible from an instance...
 Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov...
 ```
 
-Notice that in this case it is necessary to insert a `:Using` statement (or the equivalent assignment to `⎕USING`) in order to specify the .NET search path for the DateTimeFormatInfo type. Without this, the Class would fail to fix.
+In this case, it is necessary to insert a `:Using` statement (or the equivalent assignment to `⎕USING`) in order to specify the .NET search path for the DateTimeFormatInfo type. Without this, the Class would fail to fix.
 
 You can see how the assignment works by executing the same statements in the Session:
 ```apl

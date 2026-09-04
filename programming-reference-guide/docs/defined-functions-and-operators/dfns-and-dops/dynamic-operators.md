@@ -11,7 +11,7 @@ where `⍺⍺` and `⍵⍵` are the left and right operands (functions or arrays
 
 <h2 class="example">Example</h2>
 
-The following monadic `each` operator applies its function operand only to unique elements of its argument. It then distributes the result to match the original argument. This can deliver a performance improvement over the primitive _each_ (`¨`) operator if the operand function is costly and the argument contains a significant number of duplicate elements. Note however, that if the operand function causes side effects, the operation of dop and primitive versions will be different.
+The following monadic `each` operator applies its function operand only to unique elements of its argument. It then distributes the result to match the original argument. This can deliver a performance improvement over the primitive _each_ (`¨`) operator if the operand function is costly and the argument contains a significant number of duplicate elements. However, if the operand function causes side effects, the operation of dop and primitive versions is different.
 ```apl
       each←{              ⍝ Fast each:                           
           shp←⍴⍵          ⍝ Shape and ...                        

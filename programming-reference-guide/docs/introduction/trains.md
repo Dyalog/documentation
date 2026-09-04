@@ -4,7 +4,7 @@
 
 A *Train* is a derived function constructed from a sequence of 2 or 3 functions, or from an array followed by two functions, which bind together to form a function.
 
-Note that the right-most item  of a function train (which is by definition a function) must be isolated from anything to its right, otherwise it will be bound to that rather than to the items to its left. This is done using parentheses.
+The right-most item of a function train (which is by definition a function) must be isolated from anything to its right, otherwise it will be bound to that rather than to the items to its left. This is done using parentheses.
 
 For example, the following expression  comprises a function train `-,÷` that is separated from its argument 2 by parentheses:
 ```apl

@@ -6,7 +6,7 @@ Workspaces may be explicitly saved with an identifying name. The workspace may s
 
 Workspaces are stored in files whose names must conform to operating system conventions. When a workspace name is specified without a file suffix, these are added or implied. For further information, see [WSEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/wsext).
 
-If the name of the file in which the workspace is saved contains spaces, the ws argument for the system functions `)SAVE`, `)COPY`, `)PCOPY`, `)LOAD`, `)XLOAD` and `)DROP` should be surrounded by two double-quote (") characters. To include a " character in the file name, you must specify two adjoining double-quotes (that is, """"). Note however that Windows does not allow double-quotes in file names, so this effectively applies only to non-Windows systems.
+If the name of the file in which the workspace is saved contains spaces, the ws argument for the system functions `)SAVE`, `)COPY`, `)PCOPY`, `)LOAD`, `)XLOAD` and `)DROP` should be surrounded by two double-quote (") characters. To include a " character in the file name, you must specify two adjoining double-quotes (that is, """"). However, Microsoft Windows does not allow double-quotes in file names, so this effectively applies only to non-Windows systems.
 
 <h2 class="example">Examples</h2>
 ```apl

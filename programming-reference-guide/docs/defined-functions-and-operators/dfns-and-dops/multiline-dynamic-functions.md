@@ -14,7 +14,7 @@ For example in the following, the expressions `sum←` and `num←` create **loc
 
 An assignment to `⍵` is not allowed and will result in an error. For assignment to `⍺`, see [Default Left Argument](default-left-argument.md).
 
-Note that dfns may be commented in the usual way using `⍝`.
+Dfns can be commented in the usual way using `⍝`.
 
 When the interpreter encounters a local definition, a new local name is created. The name is shadowed dynamically exactly as if the assignment had been preceded by: `⎕SHADOW` *name* `⋄`.
 
@@ -45,7 +45,7 @@ To display arrays to the session from within a dfn, you can use the explicit dis
        }
 ```
 
-Note that local definitions can be used to specify local nested dfns:
+Local definitions can be used to specify local nested dfns:
 ```apl
 
       rms←{                ⍝ Root Mean Square

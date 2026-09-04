@@ -48,4 +48,4 @@ Cameron
 
 Using the k-cell terminology, if `r` is the rank of the array, its major cells are its `r-1`-cells.
 
-Note that if the right operand `k` of the _rank_ Operator `⍤` is negative, it is interpreted as `0⌈r+k`. Therefore the value `¯1` selects the major cells of the array.
+If the right operand `k` of the _rank_ Operator `⍤` is negative, it is interpreted as `0⌈r+k`. Therefore the value `¯1` selects the major cells of the array.

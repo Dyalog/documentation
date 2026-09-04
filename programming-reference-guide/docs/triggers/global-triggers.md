@@ -55,15 +55,16 @@ The argument to the trigger function is an instance of the internal class `Trigg
 
 ```
 
-!!! note
-     - like other Triggers, only the most recently fixed global trigger function will apply and be called on assignment to a global variable. 
-     - global triggers do not apply to local names nor to semi-globals (names which are localised further up the stack).
-     - an assignment to a global variable will fire both its specific trigger (if defined) and the global trigger. However, the order of execution is undefined.
-     - do not use an argument name for your trigger function that may conflict with a global variable name in the namespace.
+Global Triggers behave as follows:
+
+- Like other Triggers, only the most recently fixed global trigger function applies and is called on assignment to a global variable.
+- Global triggers do not apply to local names nor to semi-globals (names which are localised further up the stack).
+- An assignment to a global variable fires both its specific trigger (if defined) and the global trigger. However, the order of execution is undefined.
+- Do not use an argument name for your trigger function that might conflict with a global variable name in the namespace.
 
 ## Further Example
 
-A potential use for a global trigger is to detect the unintended creation of global variables due to localisation omissions. Note however that the timing of the activation of the Trigger is unpredictable. In this example, the trigger for the assignment to `b` activates after function `hoo` has exited. When Threads are involved, timing becomes even less predictable.
+A potential use for a global trigger is to detect the unintended creation of global variables due to localisation omissions. However, the timing of the activation of the Trigger is unpredictable. In this example, the trigger for the assignment to `b` activates after function `hoo` has exited. When Threads are involved, timing becomes even less predictable.
 ```apl
      ∇ CatchGlobals arg
 [1]    ⍝ Displays a warning when a global is assigned

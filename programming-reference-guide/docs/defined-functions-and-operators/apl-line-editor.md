@@ -200,7 +200,7 @@ warning unmatched brackets
 [5]
 ```
 
-Note that there is an imbalance in the number of quotes. This will result in a `SYNTAX ERROR` when this operation is executed.
+There is an imbalance in the number of quotes. This will result in a `SYNTAX ERROR` when this operation is executed.
 
 ### Traditional Functions and Operators
 

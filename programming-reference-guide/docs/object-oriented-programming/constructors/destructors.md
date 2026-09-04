@@ -12,13 +12,13 @@ But be aware that a destructor will also be called if:
 - The Instance is re-assigned (see below)
 - The result of `⎕NEW` is not assigned (the instance gets created then immediately destroyed).
 - APL creates (and then destroys) a new Instance as a result of a reference to a member of an [empty Instance](empty-arrays-of-instances-how.md). The destructor is called after APL has obtained the appropriate value from the instance and no longer needs it.
-- The constructor function fails. Note that the Instance is actually created before the constructor is run (inside it), and if the constructor fails, the fledgling Instance is discarded. Note too that this means a destructor *may* need to deal with a partially constructed instance, so the code may need to check that resources were actually acquired, before releasing them.
+- The constructor function fails. The Instance is actually created before the constructor is run (inside it), and if the constructor fails, the fledgling Instance is discarded. This means a destructor *might* need to deal with a partially constructed instance, so the code might need to check that resources were actually acquired, before releasing them.
 - On the execution of `)CLEAR`, `)LOAD`, `⎕LOAD`, `)OFF` or `⎕OFF`.
 
-!!! warning 
+!!! Warning "Warning"
     A destructor may be executed on **any** thread.
 
-Note that an Instance of a Class only disappears when the *last reference* to it disappears. For example, the sequence:
+An Instance of a Class only disappears when the *last reference* to it disappears. For example, the sequence:
 ```apl
       I1←⎕NEW MyClass
       I2←I1
@@ -44,7 +44,7 @@ A Destructor is identified by the statement `:Implements Destructor` which must 
 This Parrot is dead
 ```
 
-Note that reassignment to `pol` causes the Instance referenced by `pol` to be destroyed and the Destructor invoked:
+Reassignment to `pol` causes the Instance referenced by `pol` to be destroyed and the Destructor invoked:
 ```apl
       pol←⎕NEW Parrot 'Scarlet Macaw'
       pol←⎕NEW Parrot 'Scarlet Macaw'

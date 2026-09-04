@@ -43,7 +43,7 @@ But look what happens when we try to select really strong cheese:
 The cat ate the last one!
 ```
 
-Note that this message is not the result of the expression, but was explicitly displayed by the `make_excuse` function. The clue to this behaviour is the shape of `board`; it is empty!
+This message is not the result of the expression, but was explicitly displayed by the `make_excuse` function. The clue to this behaviour is the shape of `board`; it is empty!
 ```apl
       ⍴board
 0
@@ -59,6 +59,6 @@ caused APL to run the *niladic* Constructor `make_excuse`, which displayed:
 The cat ate the last one!
 ```
 
-Notice that the behaviour of empty arrays of Instances is modelled VERY closely after the behaviour of empty arrays in general. In particular, the Class designer is given the task of deciding what the types of the members of the prototype are.
+The behaviour of empty arrays of Instances is modelled VERY closely after the behaviour of empty arrays in general. In particular, the Class designer is given the task of deciding what the types of the members of the prototype are.
 
 The full explanation is given in the [next topic](empty-arrays-of-instances-how.md).

@@ -13,7 +13,7 @@ The following function displays information when the value of variables `A` or `
      ∇
 ```
 
-Note that on the very first assignment to `A`, when the variable was previously undefined, `arg.OldValue` is a `VALUE ERROR`.
+On the very first assignment to `A`, when the variable was previously undefined, `arg.OldValue` is a `VALUE ERROR`.
 ```apl
       A←10
  A  is now   10
@@ -48,7 +48,7 @@ Note that on the very first assignment to `A`, when the variable was previously 
  A  was      #.[Instance of MyClass] 
 ```
 
-Note that Trigger functions are actioned only by assignment, so changing `A` to a Form using `⎕WC` does not invoke `TRIG`.
+Trigger functions are actioned only by assignment, so changing `A` to a Form using `⎕WC` does not invoke `TRIG`.
 ```apl
       'A'⎕WC'FORM' ⍝ Note that Trigger Function is not invoked
 ```

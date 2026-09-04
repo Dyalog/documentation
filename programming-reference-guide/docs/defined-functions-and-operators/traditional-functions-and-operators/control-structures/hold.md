@@ -64,7 +64,7 @@ If this deadlock situation is detected acquisition of the tokens is abandoned. T
 
 You can avoid deadlock by ensuring that threads always attempt to acquire tokens in the same chronological order, and that threads never attempt to acquire tokens that they already own.
 
-Note that token acquisition for any particular `:Hold` is atomic, that is, either *all* of the tokens or *none* of them are acquired. The following example *cannot* deadlock:
+Token acquisition for any particular `:Hold` is atomic, that is, either *all* of the tokens or *none* of them are acquired. The following example *cannot* deadlock:
 
 |Thread 1                                                                           |Thread 2                                              |
 |-----------------------------------------------------------------------------------|------------------------------------------------------|
@@ -114,7 +114,7 @@ or,
     tie←fname ⎕FSTIE 0
 ```
 
-Note that `:Hold`, like its component file system counterpart `⎕FHOLD`, is a device to enable *co-operating* threads to synchronise their operation.
+`:Hold`, like its component file system counterpart `⎕FHOLD`, is a device to enable *co-operating* threads to synchronise their operation.
 
 `:Hold` does not *prevent* threads from updating the same data structures concurrently, it prevents threads only from `:Hold`ing the same tokens.
 
