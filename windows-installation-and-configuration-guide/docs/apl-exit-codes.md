@@ -15,8 +15,8 @@ When APL or a bound .EXE terminates, it returns an exit code to the calling envi
 |9  |Dyalog has encountered a Microsoft Windows-related error when starting and is unable to continue. For example it cannot register clipboard formats.|
 |10 |CEF sub-process crash - something has gone unexpectedly wrong with either the HTMLRenderer or CEF sub-processes and cannot continue |
 |11 |Cannot create c-stack (macOS only)                                                             |
-|12 |APL was unable to load the HMON (health monitor) library (20.0 onwards)                        |
-|13 |APL loaded the HMON (health monitor) library but was unable to initialise it (20.0 onwards)    |
+|12 |APL was unable to load the HMON (Health Monitor) library (20.0 onwards)                        |
+|13 |APL loaded the HMON (Health Monitor) library but was unable to initialise it (20.0 onwards)    |
 
 ## Notes
 

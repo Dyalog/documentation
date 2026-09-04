@@ -168,7 +168,7 @@ Pressing <kbd>Home</kbd> or <kbd>End</kbd> multiple times progresses through the
 
 ### APL Exit Codes
 
-Two new APL exit codes have been added, both concerning the HMON (health monitor) library:
+Two new APL exit codes have been added, both concerning the HMON (Health Monitor) library:
 
 - `12`  
 The library could not be loaded.
