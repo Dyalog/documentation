@@ -13,8 +13,8 @@ Table: Configuration dialog box – General tab
 |Label|Parameter|Description|
 |---|---|---|
 |Recently used file list size|[File_Stack_Size](../configuration-parameters/file-stack-size.md)|Specifies the number of the most recently used workspaces displayed in the File menu|
-|Underline URLs and links|[URLHighlight](../configuration-parameters/urlhighlight.md)|Specifies whether or not URLs and links are highlighted in Session and Edit windows|
-|Display Value Tips|[Enabled](../configuration-parameters/valuetips/enabled.md)|Specifies whether or not Value Tips are enabled|
+|Underline URLs and links|[URLHighlight](../configuration-parameters/urlhighlight.md)|Specifies whether URLs and links are highlighted in Session and Edit windows|
+|Display Value Tips|[Enabled](../configuration-parameters/valuetips/enabled.md)|Specifies whether Value Tips are enabled|
 |Display Value Tips after|[Delay](../configuration-parameters/valuetips/delay.md)|Specifies the delay before APL displays a Value Tip|
 |Colour Scheme|[ColourScheme](../configuration-parameters/valuetips/colourscheme.md)|Specifies the colour scheme used to display Value Tips|
 |Enable DPI Scaling of the interpreter and development environment|[AutoDPI](../configuration-parameters/autodpi.md)|Enables or disables DPI scaling for the APL Session|
@@ -44,7 +44,7 @@ Table: Configuration dialog box – Unicode Input tab (Input Method Editor Prope
 
 |Label|Parameter|Description|
 |---|---|---|
-|Use Ctrl+X,C,V for clipboard|[UseXCV](../configuration-parameters/usexcv.md)|Specifies whether or not the commonly used keystrokes for copy, cut and paste  are recognised as such|
+|Use Ctrl+X,C,V for clipboard|[UseXCV](../configuration-parameters/usexcv.md)|Specifies whether the commonly used keystrokes for copy, cut, and paste are recognised as such|
 |Enable Backtick Keyboard introducer|&nbsp;|Enables the *Backtick* keyboard, in which the backtick character introduces APL glyphs. See [Backtick Keyboard](../../../windows-ui-guide/ime-configuration#backtick-keyboard)|
 |Enable Overstrikes|[ResolveOverstrikes](../configuration-parameters/resolveoverstrikes.md)|1 = enable overstrikes. 0 = disable overstrikes|
 |Overstrikes do not require the OS introducer key|&nbsp;|1 = IME identifies overstrike operation automatically 0 = IME requires the **&lt;OS&gt;** key (default <kbd>Ctrl</kbd>+<kbd>Bksp</kbd>) to signal an overstrike operation|
@@ -166,12 +166,12 @@ Table: Configuration dialog box – Session tab
 |Input buffer size|[Input_Size](../configuration-parameters/input-size.md)|The size of the buffer used to store marked lines (lines awaiting execution) in the Session|
 |History size|[History_Size](../configuration-parameters/history-size.md)|The size of the buffer used to store previously entered (input) lines in the Session|
 |PFKey buffer size|[PFKey_Size](../configuration-parameters/pfkey-size.md)|The size of the buffer used to store PFKey definitions ( [`⎕PFKEY`](../../../language-reference-guide/system-functions/pfkey) )|
-|Confirm on Deletion from Session log|[Confirm_Session_Delete](../configuration-parameters/confirm-session-delete.md)|Specifies whether or not you are prompted to confirm the deletion of a line from the Session (and Session log)|
+|Confirm on Deletion from Session log|[Confirm_Session_Delete](../configuration-parameters/confirm-session-delete.md)|Specifies whether you are prompted to confirm the deletion of a line from the Session (and Session log)|
 |Session log size|[Log_Size](../configuration-parameters/log-size.md)|The size of the Session log buffer|
 |Session file|[Session_File](../configuration-parameters/session-file.md)|The name of the Session file in which the definition of your session ( [`⎕SE`](../../../language-reference-guide/system-functions/se) ) is stored|
-|Use log file|[Log_File_InUse](../configuration-parameters/log-file-inuse.md)|Specifies whether or not the Session log is saved in a session log file|
+|Use log file|[Log_File_InUse](../configuration-parameters/log-file-inuse.md)|Specifies whether the Session log is saved in a session log file|
 |Use log file|[Log_File](../configuration-parameters/log-file.md)|The full pathname of the Session log file|
-|Multiline Input|[Dyalog_LineEditor_Mode](../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether or not multi-line input is enabled in the Session|
+|Multiline Input|[Dyalog_LineEditor_Mode](../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether multi-line input is enabled in the Session|
 
 Note: The size-related values in the Session tab are specified as an integer value followed by one of K, M, G, T, P, or E. Where no character is included, the default is K (kilobytes).
 
