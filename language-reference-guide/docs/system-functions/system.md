@@ -270,11 +270,11 @@ For example, if the local time is 07:00 while UTC is 10:00, then `⎕OS.UTCOffse
 A three-element integer vector:
 
 - Microsoft Windows: major and minor version and build number
-- Linux: major, minor, and patch version
+- Linux or macOS: major, minor, and patch version
 - AIX: version and release number, followed by a `0`
 
 !!! Warning "Warning"
-    Microsoft has made both Windows 10 and Windows 11 identify themselves as "Windows 10".
+    Microsoft has made both Windows 10 and Windows 11 report their version as "10", but [`⎕SYSTEM.OS.Description`](#os-description) includes the number "11" on Windows 11.
     
     The following expression will determine whether a reported version 10 is truly 10: `((10=⊃)∧22000>⊢/)⎕SYSTEM.OS.Version`.
 
