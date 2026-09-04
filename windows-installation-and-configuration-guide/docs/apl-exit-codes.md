@@ -22,4 +22,4 @@ When APL or a bound .EXE terminates, it returns an exit code to the calling envi
 
 Under UNIX exit codes greater than 127 indicates (127+signal number) of the untrapped signal which caused the process to terminate.
 
-APL applications can generate  a custom return code by specifying an integer value to the right of `⎕OFF`. Dyalog recommends using values greater than 13 for this purpose.
+APL applications can generate  a custom return code by specifying an integer value to the right of [`⎕OFF`](../../language-reference-guide/system-functions/off/). Dyalog recommends using values greater than 13 for this purpose.

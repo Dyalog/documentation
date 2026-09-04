@@ -175,7 +175,7 @@ The library could not be loaded.
 - `13`  
 The library was loaded but could not be initialised.
 
-An application that returns its own exit code from `⎕OFF` should therefore use a value greater than 13.
+An application that returns its own exit code from [`⎕OFF`](../../language-reference-guide/system-functions/off/) should therefore use a value greater than 13.
 
 ### Microsoft Windows IDE
 
