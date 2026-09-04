@@ -157,7 +157,7 @@ Open the function `F.Dual.Build`. This function turns the Dual's parent namespac
 
 Run function `F.Dual.Build`. You should see a Form containing a single instance of the Dual control. Please resist any temptation to play with it at this stage; we want it to be in its default state for when we save it.
 
-Type the following expression. The ClassID, which uniquely identifies your control (and so will not be the same as that shown below), is allocated when you create the ActiveXControl object.
+Type the following expression; the ClassID, which uniquely identifies your control (and so will not be the same as that shown below), is allocated when you create the ActiveXControl object:
 ```apl
         F.Dual.ClassID
 {002F9614-50F7-4F3B-BB0B-FA3316964E78}

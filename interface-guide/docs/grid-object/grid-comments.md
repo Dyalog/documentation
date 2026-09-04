@@ -32,7 +32,7 @@ This method is used to add a new comment. For example, the following statement a
 
 The height and width of the comment window, specified by the last 2 elements of the right argument to `⎕NQ` are both optional. If the cell already has an associated comment, the new comment replaces it.
 
-Just before the comment is displayed, the Grid generates a ShowComment event which gives you the opportunity to (temporarily) change the text and/or window size of a comment dynamically.
+Immediately before the comment is displayed, the Grid generates a ShowComment event; this gives you the opportunity to (temporarily) change the text and/or window size of a comment dynamically.
 
 ## DelComment Method
 

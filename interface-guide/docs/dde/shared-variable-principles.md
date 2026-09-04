@@ -33,7 +33,7 @@ The coupling process is symmetrical and there is no specific order in which offe
 |`⎕SVO 'X'`    |&nbsp;        |
 |`2`           |&nbsp;        |
 
-In this example, both partners specified exactly whom they wished to share with. These are termed **specific offers**. It is also possible to make a **general offer**, which means that you offer to share a particular variable with **anyone**. Coupling can be established by any other processor that offers to share the same variable with you, but the other processor must make a **specific offer** to couple with your general one. The rule is in fact, that sharing may be established by matching a specific offer with another specific offer, or by matching a specific offer with a general offer. Two general offers cannot establish a connection.
+In this example, both partners specified exactly whom they wanted to share with. These are termed **specific offers**. It is also possible to make a **general offer**, which means that you offer to share a particular variable with **anyone**. Coupling can be established by any other processor that offers to share the same variable with you, but the other processor must make a **specific offer** to couple with your general one. The rule is that sharing can be established by matching a specific offer with another specific offer, or by matching a specific offer with a general offer. Two general offers cannot establish a connection.
 
 ## The State Vector
 

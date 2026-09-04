@@ -12,7 +12,7 @@ A simple approach is to have two buttons for the user to press; one for Fahrenhe
 
 ![](../img/temperature-converter-5.png)
 
-It is not necessary to specify the Size of the button; the default size fits the Caption nicely. Now let's add the Centigrade to Fahrenheit button. This will be called `C2F` and have an associated callback function `c2f`. We could have chosen to have a single callback function associated with both buttons, which would save a few lines of code. Having separate functions is perhaps clearer.
+It is not necessary to specify the Size of the button; the default size fits the Caption nicely. Now let's add the Centigrade to Fahrenheit button. This will be called `C2F` and have an associated callback function `c2f`. We could have chosen to have a single callback function associated with both buttons, which would save a few lines of code. However, having separate functions is clearer.
 
 Again, the statement is split into two only to make it fit onto the page.
 ```apl

@@ -1,6 +1,6 @@
 # Metafiles
 
-A Windows metafile is a mechanism for representing a picture as a collection of graphics commands. Once a metafile has been created, the picture that it represents can be drawn repeatedly from it. Metafiles are device-independent, so the picture can be reproduced on different devices. Unlike bitmaps, metafiles can be scaled accurately and are therefore particularly useful for passing graphical information between different applications. Some other applications only support *placeable* metafiles. See RealSize property for details.
+A Windows metafile is a mechanism for representing a picture as a collection of graphics commands. Once a metafile has been created, the picture that it represents can be drawn repeatedly from it. Metafiles are device-independent, so the picture can be reproduced on different devices. Unlike bitmaps, metafiles can be scaled accurately and are, therefore, particularly useful for passing graphical information between different applications. Some other applications only support *placeable* metafiles. See RealSize property for details.
 
 ## Creating a Metafile Object
 
@@ -10,7 +10,7 @@ In Dyalog APL, a Windows metafile is represented by the Metafile object. This is
    'Ducky'⎕WC'Metafile'(Dir,'AN00015_.wmf')
 ```
 
-If instead you wanted to create a metafile drawing from scratch, you could do so as follows. There is no need to assign names to the graphical objects drawn onto the Metafile.
+If you wanted to create a new metafile drawing instead, you could do so as follows (there is no need to assign names to the graphical objects drawn onto the Metafile):
 ```apl
      'METADUCK'  ⎕WC 'Metafile' ''
      'METADUCK.' ⎕WC 'Poly' DUCK

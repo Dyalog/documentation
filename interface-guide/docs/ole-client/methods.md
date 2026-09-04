@@ -13,7 +13,7 @@ If a method takes parameters, you must call it as if it were monadic. Each eleme
 If a method takes a parameter declared as a string (VT_BSTR) you must call it with an **enclosed** character vector.
 
 !!! Legacy "Legacy"
-    In previous versions of Dyalog APL, a character vector was automatically enclosed if required. For backwards compatibility you can select old or new behaviour using `⎕WX`. If `⎕WX` is `3` (the default) you **must** enclose a single string argument. If `⎕WX` is `0` or `1`, you **can** supply a simple character vector.
+    In previous versions of Dyalog, a character vector was automatically enclosed if required. For backwards compatibility you can select old or new behaviour using `⎕WX`. If `⎕WX` is `3` (the default) you **must** enclose a single string argument. If `⎕WX` is `0` or `1`, you **can** supply a simple character vector.
 
 For example, the OpenDatabase method in the DAO.DBEngine OLE server may be called with a single parameter that specifies the name of the database to be opened. You may call it from APL with either of the following two expressions:
 ```apl
@@ -54,7 +54,7 @@ This means that the method takes either no arguments or one argument. To call it
       Idle ⍬
 ```
 
-You cannot therefore call a function in an *APL* server with a single argument that is an empty numeric vector.
+You cannot, therefore, call a function in an *APL* server with a single argument that is an empty numeric vector.
 
 ## Output Parameters
 
@@ -117,7 +117,7 @@ Alternatively, you may simply use the result as an argument to a defined functio
 
 In both these cases, the namespace associated with the result of the OpenDatabase method is *unnamed*. Assigning the result of OpenDatabase to `DB` does not set the namespace *name* to `DB`, it merely assigns a namespace *reference* to `DB`.
 
-To preserve compatibility with previous versions of Dyalog APL that did not support namespace references, a method that returns an object may be called with the name of the (new) namespace as its left argument. OLE methods do not themselves accept left arguments, so this extension does not conflict with OLE conventions.
+To preserve compatibility with previous versions of Dyalog that did not support namespace references, a method that returns an object can be called with the name of the (new) namespace as its left argument. OLE methods do not themselves accept left arguments, so this extension does not conflict with OLE conventions.
 ```apl
       'DB' OpenDatabase ⊂'example.mdb'
 ```

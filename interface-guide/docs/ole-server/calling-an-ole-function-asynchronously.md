@@ -8,7 +8,7 @@ In certain cases the client may not be interested in a result from a function an
 
 For an *out-of-process* OLE Server, this can be achieved by having the function that is called directly by the client *post* an event (using `⎕NQ`) onto the event queue and then return. When the function terminates, APL will take the next event from the queue and take the appropriate action. If the event has an associated callback function, APL will invoke it. This happens immediately *after* the original function has terminated and a result (if any) has been returned to the client. This means that the APL OLEServer continues processing at the same time as the client application.
 
-However, while the OLEServer is processing, further OLE requests will be queued. For example, if the client were to call the same function again immediately, the function would not be invoked until the original processing has finished and the client would therefore wait (OLE itself will actually time-out after a certain period). Nevertheless, this technique is an effective way to offload batch processing tasks to a second (background) APL process or to one running on a different computer.
+However, while the OLEServer is processing, further OLE requests will be queued. For example, if the client were to call the same function again immediately, the function would not be invoked until the original processing has finished and the client would, therefore, wait (OLE itself will time out after a certain period). Nevertheless, this technique is an effective way to offload batch processing tasks to a second (background) APL process or to one running on a different computer.
 
 ## The OLEASYNC Workspace
 

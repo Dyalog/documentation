@@ -44,7 +44,7 @@ Select "Next" and give the application a name, then select "Finish".
 
 ![](../img/temperature-converter-13.png)
 
-The resulting icon is shown below. Although by default you get a standard Dyalog APL icon, you can of course select another one from elsewhere on your system.
+The resulting icon is shown below. Although you get a standard Dyalog APL icon by default, you can select another one from elsewhere on your system.
 
 ![](../img/temperature-converter-14.png)
 

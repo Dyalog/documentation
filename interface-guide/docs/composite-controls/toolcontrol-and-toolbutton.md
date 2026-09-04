@@ -53,7 +53,7 @@ The bitmaps used when the buttons are *inactive* may be created using the statem
 
 ![](../img/tb-inactive-bitmaps.bmp)
 
-In the Dyalog Session, if Native Look and Feel is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles. For further information, see [Native Look and Feel](../introduction/native-look-and-feel.md).
+In the Dyalog Session, if [Native Look and Feel](../introduction/native-look-and-feel.md) is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles.
 
 ## Creating ImageLists for ToolButtons
 
@@ -107,7 +107,7 @@ The MultiLine property specifies whether or not ToolButtons (and other child con
 
 If MultiLine is 0 (the default), the ToolControl object *clips* its children and the user must resize the Form to bring more objects into view.
 
-You can change MultiLine dynamically, using `⎕WS`.
+You can change MultiLine dynamically, using `⎕WS`:
 ```apl
 'F'⎕WC'Form' 'ToolControl: MultiLine 0'
 'F.TB'⎕WC'ToolControl'('Style' 'List')

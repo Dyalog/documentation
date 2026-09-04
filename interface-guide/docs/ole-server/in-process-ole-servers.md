@@ -32,4 +32,4 @@ regsvr32 should also be used (with the */u* flag) to unregister an in-process OL
 C:\WINDOWS\System32>regsvr32 /u c:\MyWS\mysvr.dll
 ```
 
-In both cases, regsvr32 actually starts the OLE Server. This in turn loads the appropriate Dyalog APL DLL. If you are using the development DLL and your session start-up code fails for any reason, the regsvr32 process will hang and have to be terminated using the Task Manager.
+In both cases, regsvr32 starts the OLE Server. This loads the appropriate Dyalog DLL. If you are using the development DLL and your session start-up code fails for any reason, the regsvr32 process will hang and need to be terminated using the Task Manager.

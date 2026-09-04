@@ -18,7 +18,7 @@ All the functions and variables that represent methods and properties through wh
 
 You may turn a workspace containing one or more ActiveXControl objects into an installable OCX file by selecting the *Export* menu item  from the Session *File* menu.
 
-A single OCX file can therefore contain a number of ActiveX Controls.
+A single OCX file can, therefore, contain a number of ActiveX Controls.
 
 When a Dyalog APL ActiveX Control is loaded by a host application, functions in the stub load the appropriate Dyalog APL dynamic link library (DyalogDLL for short) into the host application. The Dyalog dll must either be on the system PATH or be in the same directory as the OCX file.
 

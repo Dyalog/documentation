@@ -4,7 +4,7 @@ By default, Properties exposed by a COM object behave in the same way as Propert
 
 To query the value of a property, you simply reference it. To set the value of the property, you assign a new value to it. If the Property is an Indexed Property, you may use indexing to set or retrieve the value of a particular element.
 
-In previous versions of Dyalog APL, indexed Properties of COM objects were exposed as Methods and for backwards compatibility this behaviour can be retained by setting `⎕WX` to `0` or `1` (the default value is `3`). See Language Reference.
+In previous versions of Dyalog, indexed Properties of COM objects were exposed as Methods and for backwards compatibility this behaviour can be retained by setting [`⎕WX`](../../../language-reference-guide/system-functions/wx/) to `0` or `1` (the default value is `3`).
 
 If the old (pre-Version 11.0) behaviour is selected., indexed properties are exposed as methods and you treat the property as if it were an APL function. To obtain the value of the property, you must call it monadically, specifying the required index (or other information) as the argument. To set the value of the property, you must call it dyadically, specifying the required index (or other information) as the right argument and the new value as the left argument.
 

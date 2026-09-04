@@ -191,4 +191,4 @@ The result is illustrated below.
 
 ![](../img/cloning-example.png)
 
-When a namespace is cloned in this way, the objects (functions, variables and other namespaces) within it are not necessarily duplicated. Instead, the objects in cloned namespaces are in effect just pointers to the original objects. However, if you subsequently change the clone, or the original object to which it refers, the two are de-coupled and a second *copy* ensues. This mechanism makes it possible to create large numbers of *instances* of a single *class* namespace without consuming an excessive amount of workspace.
+When a namespace is cloned in this way, the objects (functions, variables, and other namespaces) within it are not necessarily duplicated. Instead, the objects in cloned namespaces are in effect just pointers to the original objects. However, if you subsequently change the clone, or the original object to which it refers, the two are de-coupled and a second *copy* ensues. This mechanism makes it possible to create large numbers of *instances* of a single *class* namespace without consuming an excessive amount of workspace.

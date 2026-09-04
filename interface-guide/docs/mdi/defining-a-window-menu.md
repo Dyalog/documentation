@@ -11,4 +11,4 @@ The task of updating the Window menu with the names of the SubForms is performed
       'F1.MB' ⎕WS 'MDIMenu' 'WM'
 ```
 
-The name you specify is just the name of the menu itself, not its full pathname. If you have several MenuBars in your application, you must specify the MDIMenu property separately for each one.
+The name you specify is only the name of the menu itself, not its full pathname. If you have several MenuBars in your application, you must specify the MDIMenu property separately for each one.
