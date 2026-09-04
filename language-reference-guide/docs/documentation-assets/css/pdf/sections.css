@@ -1,0 +1,26 @@
+/*------- Section Numbering -------*/
+
+body { counter-reset: h1counter h2counter h3counter toc-counter; }
+h1.chapter {
+    counter-reset: h2counter;
+}
+
+h2:not(.contents) {
+    counter-reset: h3counter;
+}
+
+h1.chapter:before {
+    counter-increment: h1counter;
+    content: counter(h1counter) "\0000a0\0000a0";
+}
+
+h2:not(.contents):before {
+    counter-increment: h2counter;
+    content: counter(h1counter) "." counter(h2counter) "\0000a0\0000a0";
+}
+
+
+h3:before {
+    counter-increment: h3counter;
+    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "\0000a0\0000a0";
+}

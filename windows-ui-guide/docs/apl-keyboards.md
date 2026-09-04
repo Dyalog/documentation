@@ -28,7 +28,7 @@ The default keyboard mapping for unsupported languages is American English.
 
 The IME translate tables include mappings for the special command keystrokes used by Dyalog APL.
 
-These command keystroke mappings are ignored by applications unless the application is explicitly named in the Dyalog Unicode IME configuration. It is expected that only terminal emulators used for running UNIX-based versions of Dyalog APL will use this feature.
+These command keystroke mappings are ignored by applications unless the application is explicitly named in the Dyalog Unicode IME configuration. It is expected that only terminal emulators used for running Unix-based versions of Dyalog APL will use this feature.
 
 In particular, Dyalog APL for Windows Unicode Edition does not use the mappings in the translate tables; the mappings are defined under `Options/Configure/Keyboard Shortcuts` (see [Keyboard Shortcuts Tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab/)).
 

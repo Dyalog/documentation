@@ -15,8 +15,8 @@ with a config.json:
 
 {
     "exclude": [
-        "UNIX Installation",
-        "UNIX User Guide"
+        "Unix Installation",
+        "Unix User Guide"
     ]
 }
 

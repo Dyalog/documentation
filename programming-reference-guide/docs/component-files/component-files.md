@@ -32,7 +32,7 @@ In addition to the data held in a component, the user ID that wrote it and the t
 
 ## Multi-User Access
 
-`⎕FSTIE` ties a file for **shared** (that is, multi-user) access. This kind of access would be appropriate for a multi-user UNIX system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.
+`⎕FSTIE` ties a file for **shared** (that is, multi-user) access. This kind of access would be appropriate for a multi-user Unix system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.
 
 `⎕FHOLD` provides the means for the user to temporarily prevent other co-operating users from accessing one or more files. This is necessary to allow a single logical update involving more than one component, and perhaps more than one file, to be completed without interference from another user. `⎕FHOLD` is applicable to External Variables as well as Component Files
 
