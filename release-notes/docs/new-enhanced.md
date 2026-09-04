@@ -166,17 +166,6 @@ When the cursor is placed in a line in the Session:
 
 Pressing <kbd>Home</kbd> or <kbd>End</kbd> multiple times progresses through the list in the order shown.
 
-### APL Exit Codes
-
-Two new APL exit codes have been added, both concerning the HMON (Health Monitor) library:
-
-- `12`  
-The library could not be loaded.
-- `13`  
-The library was loaded but could not be initialised.
-
-An application that returns its own exit code from [`⎕OFF`](../../language-reference-guide/system-functions/off/) should therefore use a value greater than 13.
-
 ### Microsoft Windows IDE
 
 The following changes have been made to the Microsoft Windows IDE:
