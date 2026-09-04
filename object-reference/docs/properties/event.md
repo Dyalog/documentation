@@ -86,17 +86,17 @@ For example, the event specification:
       'Event' 'onSelect' 'DoIt&'
 ```
 
-tells `⎕DQ` to execute the callback function `DoIt` asynchronously as a thread when a Select event occurs on the object. Note that a callback function executed in this way should not return a result (because `⎕DQ` does not wait for it) and any result will be displayed in the Session window.
+tells `⎕DQ` to execute the callback function `DoIt` asynchronously as a thread when a Select event occurs on the object. A callback function executed in this way should not return a result (because `⎕DQ` does not wait for it) and any result will be displayed in the Session window.
 
 ### Execute
 
 If action code is set to a character vector whose first element is the execute symbol (`⍎`) the remaining string will be executed automatically whenever the event occurs. The default processing for the event is performed first and may not be changed or inhibited in any way.
 
-Notice that when you specify the action to be taken on the occurrence of an event there is a great difference between `'FOO'` and `'⍎FOO'`. The former causes APL to invoke the function `FOO` as a *callback function*. If the function takes an argument, APL will supply it with the event message. Secondly, the result (if any) of the function `FOO` will be used by APL and may cause the event to be disabled or changed in some way. In the second case, APL will perform the default processing for the event and then execute `FOO` without supplying an argument. If the function returns a result, it will be displayed in the Session.
+When you specify the action to be taken on the occurrence of an event there is a great difference between `'FOO'` and `'⍎FOO'`. The former causes APL to invoke the function `FOO` as a *callback function*. If the function takes an argument, APL will supply it with the event message. Secondly, the result (if any) of the function `FOO` will be used by APL and may cause the event to be disabled or changed in some way. In the second case, APL will perform the default processing for the event and then execute `FOO` without supplying an argument. If the function returns a result, it will be displayed in the Session.
 
 ## Optional Left Argument (Arg)
 
-If specified, *Arg* is an array whose value will be passed as the left argument to a callback function when that particular event (or events) is generated. Note that this is a constant defined when the value is assigned to the Event property.
+If specified, *Arg* is an array whose value will be passed as the left argument to a callback function when that particular event (or events) is generated. This is a constant defined when the value is assigned to the Event property.
 
 If the callback function is defined to take an explicit left argument and *Arg* was not specified, the call will fail with the error message:
 ```apl
@@ -177,7 +177,7 @@ Means: add the same callback for MouseUp.
 
 Means: add the same callback function `FOO` for the MouseMove event. The function will receive the array `('THIS' 1)` as its left-argument.
 
-Notice that you must use the `'on'` prefix; you cannot assign to the Event name itself. This would cause an error:
+You must use the `'on'` prefix; you cannot assign to the Event name itself. This would cause an error:
 ```apl
       F1.MouseUp←'foo'
 SYNTAX ERROR: Invalid modified assignment, or an attempt was made to change nameclass on assignment
@@ -325,7 +325,7 @@ You can only **generate** user-defined events under program control with `⎕NQ`
 └∊─────────┘
 ```
 
-Notice that if you use the *onEvent* syntax, the event property reports the event type as you specified, but the callback function receives just the number as before.
+If you use the *onEvent* syntax, the event property reports the event type as you specified, but the callback function receives just the number as before.
 ```apl
       f.on1003←'foo'
       f.Event

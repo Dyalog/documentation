@@ -19,7 +19,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[10]`|Body   |Character vector containing the HTTP Request body (initially empty).           |
 |`[11]`|Method |Character vector containing the HTTP method, for example, `'GET'` or `'POST'` .|
 
-To process the request, the callback function should return the message with only the following items changed. Note that only elements `[4 5 6 10]` are always required, and it is important to set element `[4]` to 1.
+To process the request, the callback function should return the message with only the following items changed. Only elements `[4 5 6 10]` are always required, and it is important to set element `[4]` to 1.
 
 |---|---|---|
 |`[4]`|Handle|1|
@@ -27,7 +27,7 @@ To process the request, the callback function should return the message with onl
 |`[6]`|Message|Success is indicated by `'OK'` .|
 |`[7]`|MIME|Defaults to `'text/html'` and need be specified only if the  response (Body) is not a character vecttor containing HTML.|
 |`[9]`|Headers|Not normally required.|
-|`[10]`|Body|This may be a character vector  or an integer numeric vector with values in the ranges ¯128-127 or 0-255. Note that a character vector will be prepended with a UTF-8 byte order mark (BOM). A numeric vector requires that `[7]` is an appropriate MIME type (for example, `'image/png'` )|
+|`[10]`|Body|This may be a character vector  or an integer numeric vector with values in the ranges ¯128-127 or 0-255. A character vector is prepended with a UTF-8 byte order mark (BOM). A numeric vector requires that `[7]` is an appropriate MIME type (for example, `'image/png'` )|
 
 MIME types include:
 

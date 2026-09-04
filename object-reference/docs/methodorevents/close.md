@@ -10,7 +10,7 @@ By trapping this event you can control termination of your application in many d
 - prevent the user from terminating the application if it is inappropriate at that time.
 - display an "Are you sure ?" [MsgBox](../objects/msgbox.md).
 
-Note that although all the object's child GUI objects will also be destroyed, none of the child objects will generate a Close event.
+Although all the object's child GUI objects will also be destroyed, none of the child objects will generate a Close event.
 
 The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function is a 2-element vector as follows :
 

@@ -20,7 +20,7 @@ the HTMLRenderer will request `http://dyalog_root/style.css` and `http://dyalog_
 
 When the value of InterceptedURLs is its default ( `(0 2⍴'')` it is treated as if it were set to `((1 2⍴'*://dyalog_root/*' 1)`. So by default, requests for a relative URL will fire an event in the workspace while absolute URL will be directed by the CEF to the internet.
 
-Note that if code in the page creates a web socket intended for internal use, with anything other than `dyalog_root` as the URL, the URL must match a pattern in InterceptedURLs with 1 in the second column. The following example does not require a matching pattern in InterceptedURLs.
+If code in the page creates a web socket intended for internal use, with anything other than `dyalog_root` as the URL, the URL must match a pattern in InterceptedURLs with 1 in the second column. The following example does not require a matching pattern in InterceptedURLs.
 ```apl
  // Create a new WebSocket.
   window.socket = new WebSocket('ws://dyalog_root/');

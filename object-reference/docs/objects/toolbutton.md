@@ -14,7 +14,7 @@ The behaviour and appearance of a ToolButton is further defined by its [Style](.
 
 Push buttons are used to generate actions and pop in and out when clicked. Radio and Check buttons are used to select options and have two states, normal (out) and selected (in). Their [State](../properties/state.md) property is 0 when the button is in its normal (unselected state) or 1 when it is selected.
 
-A group of adjacent ToolButtons with [Style ](../properties/style.md)`'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. Note that a group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another [Style](../properties/style.md).
+A group of adjacent ToolButtons with [Style ](../properties/style.md)`'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. A group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another [Style](../properties/style.md).
 
 A ToolButton with [Style ](../properties/style.md)`'Separator '`has no [Caption](../properties/caption.md) or picture, but appears as a vertical line and is used to separate groups of buttons.
 

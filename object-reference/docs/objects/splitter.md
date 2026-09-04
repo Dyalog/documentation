@@ -24,11 +24,11 @@ The [Posn](../properties/posn.md) and [Size](../properties/size.md) properties a
 
 When the user positions the mouse pointer directly over the Splitter object, the cursor changes (by default) to a double-headed arrow (direction in accordance with [Style](../properties/style.md)). The user may now depress the left mouse button and drag the Splitter to a new position, resizing the objects named by [SplitObj1](../properties/splitobj1.md) and [SplitObj2](../properties/splitobj2.md) in the process.
 
-You can select a different cursor using the CursorObj property. Note that setting the CursorObj property to 0 selects the default cursor, which is the appropriate double-headed arrow.
+You can select a different cursor using the CursorObj property. Setting the CursorObj property to 0 selects the default cursor, which is the appropriate double-headed arrow.
 
 When the user depresses the mouse button, the Splitter generates a [StartSplit](../methodorevents/startsplit.md) event. When the user releases the mouse button, the Splitter generates an [EndSplit](../methodorevents/endsplit.md) event. If full-drag is in effect, the Splitter also reports [Splitting](../methodorevents/splitting.md) events as it is dragged. All these events report the new or current position of the Splitter object and are provided for information only.
 
-Note that the objects named by [SplitObj1](../properties/splitobj1.md) and [SplitObj2](../properties/splitobj2.md) and any sub-objects they contain will generate Configure events when they are resized by the Splitter.
+The objects named by [SplitObj1](../properties/splitobj1.md) and [SplitObj2](../properties/splitobj2.md), and any sub-objects they contain, generate Configure events when they are resized by the Splitter.
 
 ## Alignment
 
@@ -48,15 +48,15 @@ The first approach is a hierarchical one using SubForms. This example shows how 
 
 First, you create an Edit, a SubForm, and a Splitter as children of the *Form*, using the Splitter to divide the Form into two panes, one for the Edit and the other for the SubForm. Next, you create two Edit objects and a Splitter as children of the *SubForm*, using the second Splitter to divide the SubForm into two. You can continue with this approach to any reasonable depth. [ See Splitter: Example 3.](../examples/splitter-example-3.md)
 
-Notice that, by default, when the first Splitter is shifted to the left, both panes in the SubForm expand equally.
+By default, when the first Splitter is shifted to the left, both panes in the SubForm expand equally.
 
 The second approach is to create multiple Splitters *at the same level*, that is, owned by the same parent. [ See Splitter: Example 4.](../examples/splitter-example-4.md)
 
-In this case, the third Edit object `F.E3` is unaffected by movement of the leftmost Splitter `F.S1`. Note also, that the first Splitter `F.S1` may not be dragged further right than the second Splitter `F.S2`.
+In this case, the third Edit object `F.E3` is unaffected by movement of the leftmost Splitter `F.S1`. The first Splitter `F.S1` cannot be dragged further right than the second Splitter `F.S2`.
 
 Using the non-hierarchical approach, horizontal and vertical Splitters may be combined in interesting ways. This can also be achieved using nested SubForms, but at the expense of a complex object hierarchy.[ See Splitter: Example 5.](../examples/splitter-example-5.md)
 
-Notice that in this example, with the exception of the last Splitter `F.S4`, it is necessary only to specify the [SplitObj1](../properties/splitobj1.md) property for each of the Splitters. The reason is that the first four Splitters only manage one object *directly*. For example, the object to the right of `F.S1` is in fact a horizontal Splitter `F.S2`. Dragging `F.S1` changes the length of `F.S2` which in turn changes the width of `F.E2`. and `F.E3`.
+In this example, with the exception of the last Splitter `F.S4`, it is necessary only to specify the [SplitObj1](../properties/splitobj1.md) property for each of the Splitters. The reason is that the first four Splitters only manage one object *directly*. For example, the object to the right of `F.S1` is in fact a horizontal Splitter `F.S2`. Dragging `F.S1` changes the length of `F.S2` which in turn changes the width of `F.E2`. and `F.E3`.
 
 ## Colliding Splitters
 

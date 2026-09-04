@@ -1,6 +1,6 @@
 # <span>DoPopup</span> <span>Event 846</span>
 
-This event is triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client attempts to open a new window. This could be fired by an HTML `<a>` tag with the target attribute set to open a URL in a new window or by a JavaScript `window.open()` call. Note that this does not apply to JavaScript Popup Boxes.
+This event is triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client attempts to open a new window. This could be fired by an HTML `<a>` tag with the target attribute set to open a URL in a new window or by a JavaScript `window.open()` call. This does not apply to JavaScript Popup Boxes.
 
 By default the HTMLRenderer ignores a request for a new window, but if  the DoPoup event, is enabled, it provides the information needed to process the request in the workspace.
 

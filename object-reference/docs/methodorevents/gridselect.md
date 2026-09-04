@@ -10,7 +10,7 @@ The event message reported as the result of [`⎕DQ`](../../../language-referenc
 |`[3]`|Start |2-element integer vector or matrix containing the row, column address(es) of the top left cell(s) in the selected block(s) |
 |`[4]`|End   |2-element integer vector or matrix containing the row, column address(es) of the bottom right cell(s) in the selected block|
 
-Note that the values of Start and End are sensitive to the index origin, `⎕IO`.
+The values of Start and End are sensitive to the index origin, `⎕IO`.
 
 If the selection is made with the mouse, the GridSelect event is reported when the left mouse button is released. If the selection is made using the cursor keys, the GridSelect event is reported when the Shift key is released.
 

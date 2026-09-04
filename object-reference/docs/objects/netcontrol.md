@@ -72,8 +72,7 @@ In most cases, you may use a NetControl in the cells of a [ Grid](grid.md) objec
 
 ![](../img/netcontrol3.jpg)
 
-Implementation note: The instance of the .NET control is actually placed inside an instance of the .NET class System.Windows.Forms.ContainerControl. This ContainerControl is then embedded in the Dyalog parent, such as a
-[Form](form.md). This "extra level" should have no effect on how the control is used or on how it behaves.
+The instance of the .NET control is placed inside an instance of the .NET class System.Windows.Forms.ContainerControl. This ContainerControl is then embedded in the Dyalog parent, such as a [Form](form.md). This "extra level" should have no effect on how the control is used or how it behaves.
 
 ## Application
 

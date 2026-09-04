@@ -41,7 +41,7 @@ or
       'CL' ⎕WS ('Bits' Bits)('CMap' CMap)
 ```
 
-Note that if you use the latter method, you must set **both** properties in one [`⎕WS`](../../../language-reference-guide/system-functions/ws) statement. This is also true if you wish to store data in both Text and Bitmap formats together.
+If you use the latter method, you must set **both** properties in one [`⎕WS`](../../../language-reference-guide/system-functions/ws) statement. This is also true if you wish to store data in both Text and Bitmap formats together.
 
 The [MetafileObj](../properties/metafileobj.md) property allows graphical information to be restored in and retrieved from the clipboard in Windows Metafile format. See the description of the [MetafileObj](../properties/metafileobj.md) property for details.
 

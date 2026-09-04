@@ -16,7 +16,7 @@ If the value of OverflowChar is an empty vector (the default) the data in a nume
 
 ![](../img/gridovfl.gif)
 
-The same Grid without OverflowChar being defined appears as follows. Notice how the numbers have been truncated
+The same Grid without OverflowChar being defined appears as follows. The numbers have been truncated.
 
 ![](../img/gridovno.gif)
 

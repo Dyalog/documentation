@@ -12,7 +12,7 @@ The Style property may be either `'Combo'`(the default) or `'UpDown'`. The forme
 provides a drop-down calendar that behaves in the same way as the Calendar
 object and whose appearance and behaviour is controlled by a set of properties
 namely CalendarCols, CircleToday, HasToday, MaxDate, MinDate, MonthDelta, Today
-and WeekNumbers that are common to the Calendar. Note that the Style property may only be set when the object is created.
+and WeekNumbers that are common to the Calendar. The Style property can only be set when the object is created.
 
 If Style is `'Combo'`, the Align property
 specifies the horizontal alignment of the drop-down Calendar which may be `'Left'`(the default) or `'Right'`.
@@ -30,7 +30,7 @@ The FieldType property specifies one of a set of pre-defined date/time
 formats to be used by the control. This is a character vector that may be empty
 (the default), `'Date'`, `'DateCentury'`,
 `'LongDate'`, `'Time'`or `'Custom'`. Specifying an empty vector is
-the same as specifying `'Date'`. Note that `'DateCentury'` always displays a 4-digit year, regardless of the user's Windows settings.
+the same as specifying `'Date'`. `'DateCentury'` always displays a 4-digit year, regardless of the user's Microsoft Windows settings.
 
 If FieldType is set to `'Custom'`, the
 format is defined by the [CustomFormat](../properties/customformat.md) property. CustomFormat is a character vector that may contain a mixture of

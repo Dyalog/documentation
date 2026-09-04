@@ -36,7 +36,7 @@ If instead, FCol contains a 3-element vector, it specifies the intensity of
 the red, green and blue components of the colour as values in the range 0-255.
 For example, (255 0 0) is red and (255 255 0) is yellow.
 
-Note that if the colour specified by FCol would normally be rendered as a
+If the colour specified by FCol would normally be rendered as a
 dithered colour, it is instead converted to the nearest pure colour available on
 the device. The actual colour realised also depends upon the capabilities of the
 display adapter and driver, and the current Windows colour map.

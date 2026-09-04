@@ -4,7 +4,7 @@ The RowTitleAlign property specifies the alignment of row titles in a Grid. It i
 
 An element of RowTitleAlign may be: `'Top'`, `'Bottom'`, `'Left'`, `'Right'`, `'Centre'`, `'TopLeft'`, `'TopRight'`, `'BottomLeft'`, or `'BottomRight'`.
 
-Note that both spellings `'Centre'` and `'Center'` are accepted.
+Both spellings `'Centre'` and `'Center'` are accepted.
 
 ## Application
 

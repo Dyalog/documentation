@@ -53,7 +53,7 @@ selected items. This applies only when View is `'Report'`. Its default value is 
 
 The [ItemGroups](../properties/itemgroups.md) and [ItemGroupMetrics](../properties/itemgroupmetrics.md) properties allow you to display items in groups as illustrated below.
 
-!!! note
+!!! Info "Information"
     This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
 ![](../img/lvsg1.gif)

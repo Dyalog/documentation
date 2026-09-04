@@ -10,7 +10,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'TCPGotPort'` or 378  |
 
-Note that the port number is not reported in the event message but may be obtained from [RemotePort](../properties/remoteport.md) or [LocalPort](../properties/localport.md) as appropriate.
+The port number is not reported in the event message but can be obtained from [RemotePort](../properties/remoteport.md) or [LocalPort](../properties/localport.md) as appropriate.
 
 ## Application
 

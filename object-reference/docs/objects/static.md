@@ -9,7 +9,7 @@ The overall appearance of an empty Static object is controlled by the value of i
 |`'GreyFrame' or 'GrayFrame'`|`'GreyBox' or 'GrayBox'`|
 |`'WhiteFrame'`              |`'WhiteBox'`            |
 
-Note that the colours implied by the [Style](../properties/style.md) are not "hard-coded" but are actually defined by the current Windows colour scheme as follows:
+The colours implied by the [Style](../properties/style.md) are not "hard-coded" but are defined by the current Windows colour scheme as follows:
 
 |---------|------------------------|
 |Black    |Window Border Colour    |

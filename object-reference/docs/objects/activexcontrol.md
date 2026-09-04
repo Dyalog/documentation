@@ -18,7 +18,7 @@ Each instance of an ActiveXControl, is represented by a separate namespace which
 
 When an application creates an instance of an ActiveXControl, it does so as the child of some object within its own GUI hierarchy. From the instance's viewpoint, its parent Form is replaced by a different GUI object that imposes position, size, font, background colour, and other ambient properties.
 
-The external name of an ActiveXControl is made up of the character vector defined by the [ClassName](../properties/classname.md) property, prefixed by the string "Dyalog ", and followed by the string " Control". If [ClassName](../properties/classname.md) is empty (which is the default), the name of the ActiveXControl namespace is inserted instead. Note that the name should not include APL symbols such as `∆`.[ClassName](../properties/classname.md) may only be specified when you create the ActiveXControl with `⎕WC` and may not be changed using `⎕WS`.
+The external name of an ActiveXControl is made up of the character vector defined by the [ClassName](../properties/classname.md) property, prefixed by the string "Dyalog ", and followed by the string " Control". If [ClassName](../properties/classname.md) is empty (which is the default), the name of the ActiveXControl namespace is inserted instead. The name should not include APL symbols such as `∆`. [ClassName](../properties/classname.md) may only be specified when you create the ActiveXControl with `⎕WC` and may not be changed using `⎕WS`.
 
 The [Coord](../properties/coord.md) property is read-only and its value is always `'Pixel'`. If you wish to use a different co-ordinate system for the children of an ActiveXControl object, it is necessary to set [Coord](../properties/coord.md) separately on each one of them.
 

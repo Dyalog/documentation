@@ -25,7 +25,7 @@ whose ColTitleDepth is 1, and so forth. For example:
 
 ![](../img/gridct.gif)
 
-Note that the [LockColumns](../methodorevents/lockcolumns.md) method is
+The [LockColumns](../methodorevents/lockcolumns.md) method is
 not supported in combination with hierarchical column titles.
 
 ## Application

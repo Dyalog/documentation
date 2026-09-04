@@ -10,7 +10,7 @@ If Dockable is `'Always'`, the object may be docked or undocked by the user, and
 
 If Dockable is `'Disabled'`, the object may not currently be docked or undocked by the user, but the docking menu items are present in the object's context menu.
 
-Note that by default, the user may switch between Dockable `'Always'` and `'Disabled'` by toggling the *Dockable* menu item. If you want to exercise full control over this property, you may implement your own context menu (see [ContextMenu Event](../methodorevents/contextmenu.md))
+By default, the user can switch between Dockable `'Always'` and `'Disabled'` by toggling the *Dockable* menu item. If you want to exercise full control over this property, you may implement your own context menu (see [ContextMenu Event](../methodorevents/contextmenu.md))
 
 ## Application
 

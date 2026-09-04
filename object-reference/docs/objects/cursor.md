@@ -6,7 +6,7 @@ The [File](../properties/file.md) property defines the name of a cursor file ass
 
 If the value of the [File](../properties/file.md) property is set by [`⎕WS`](../../../language-reference-guide/system-functions/ws), no immediate action is taken, but the corresponding file may subsequently be read or written using the [FileRead](../methodorevents/fileread.md) or [FileWrite](../methodorevents/filewrite.md) methods.
 
-The [Bits](../properties/bits.md) and [Mask](../properties/mask.md) properties define the appearance of the cursor. Both are Boolean matrices with a shape of 32  32. The colour of each pixel in the cursor is defined by the following table. Note that a 0 in [Bits](../properties/bits.md) combined with a 1 in [Mask](../properties/mask.md) causes the corresponding pixel to be the colour of the background. This is used to give the cursor a non-rectangular shape.
+The [Bits](../properties/bits.md) and [Mask](../properties/mask.md) properties define the appearance of the cursor. Both are Boolean matrices with a shape of 32  32. The colour of each pixel in the cursor is defined by the following table. A 0 in [Bits](../properties/bits.md) combined with a 1 in [Mask](../properties/mask.md) causes the corresponding pixel to be the colour of the background. This is used to give the cursor a non-rectangular shape.
 
 |-----|-----|-----|----------|-------|
 |Bits |0    |1    |0         |1      |

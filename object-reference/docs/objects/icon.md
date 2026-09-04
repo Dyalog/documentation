@@ -4,7 +4,7 @@ This object defines an icon.
 
 The [File](../properties/file.md) property specifies the name of an icon  file (.ICO. .GIF or .PNG), or the name of a DLL or EXE file and the identity of the icon within it.
 
-The Style property identifies the size of the icon and must be `'Large'` or `'Small'`. The former specifies a 32x32 icon and is the default; the latter specifies a 16x16 icon. The size of the icon is not embedded within the icon data, so it is **essential** to specify Style correctly. Note that a single file may contain both sizes of an icon. Style is only relevant when loading an Icon from file.
+The Style property identifies the size of the icon and must be `'Large'` or `'Small'`. The former specifies a 32x32 icon and is the default; the latter specifies a 16x16 icon. The size of the icon is not embedded within the icon data, so it is **essential** to specify Style correctly. A single file can contain both sizes of an icon. Style is only relevant when loading an Icon from file.
 
 If the value of the [File](../properties/file.md) property is set by [`⎕WS`](../../../language-reference-guide/system-functions/ws), no immediate action is taken, but the corresponding file may subsequently be read or written using the [FileRead](../methodorevents/fileread.md) or [FileWrite](../methodorevents/filewrite.md) methods.
 

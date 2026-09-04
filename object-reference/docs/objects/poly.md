@@ -8,7 +8,7 @@ The [Points](../properties/points.md) property specifies one or more sets of co-
 
 [FStyle](../properties/fstyle.md) specifies whether or not the polygon(s) are filled, and if so, how. For a solid fill ([FStyle](../properties/fstyle.md) 0), [FillCol](../properties/fillcol.md) defines the fill colour used. For a pattern fill ([FStyle](../properties/fstyle.md) 1-6) [FillCol](../properties/fillcol.md) defines the colour of the hatch lines and [BCol](../properties/bcol.md) the colour of the areas between them.
 
-Note that if you specify filling, you do not have to define a **closed** polygon. The first and last points will automatically be joined for you if necessary.
+If you specify filling, you do not have to define a **closed** polygon. The first and last points will automatically be joined for you if necessary.
 
 The value of [Dragable](../properties/dragable.md) determines whether or not the object can be dragged. The value of [AutoConf](../properties/autoconf.md) determines whether or not the Poly object is resized when its parent is resized.
 

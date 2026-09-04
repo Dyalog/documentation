@@ -17,8 +17,8 @@ as an argument to a function.
 The parameters wParam and lParam are reported as
 numeric arguments to the APL callback function.
 
-NOTE: It is not possible to pass pointers to data in wParam or lParam.
-When the APL callback executes the pointers may not be valid.
+It is not possible to pass pointers to data in wParam or lParam.
+When the APL callback executes, the pointers might not be valid.
 
 If a callback function is attached to the event, the callback function will
 be run when the event reaches the top of the queue.

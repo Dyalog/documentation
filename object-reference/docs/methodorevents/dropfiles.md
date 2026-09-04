@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when the user drags a file icon or a set of file icons and drops them onto the object. The system takes no action other than to report the event.
 
-Note that the event is only reported if [AcceptFiles](../properties/acceptfiles.md) is set to 1.
+The event is only reported if [AcceptFiles](../properties/acceptfiles.md) is set to 1.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 5-element vector as follows :
 

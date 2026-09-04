@@ -12,7 +12,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 The event message reports the co-ordinates of the cell. The default action is to raise the comment window so that it appears above all other, potentially overlapping, comment windows.
 
-Note that if the comment window relates to a row or column *title*, the value reported in element [3] or [4] of the event message is `¯1`.
+If the comment window relates to a row or column *title*, the value reported in element [3] or [4] of the event message is `¯1`.
 
 ## Application
 

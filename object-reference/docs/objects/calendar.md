@@ -52,7 +52,7 @@ You may also set the font attribute for particular days in the range currently d
 
 The [CalendarCols](../properties/calendarcols.md) property specifies the colours used for various elements in the Calendar object.
 
-You may convert dates between [IDN](../miscellaneous/international-day-number.md) and `⎕TS` representations using the [IDNToDate](../methodorevents/idntodate.md) and [DateToIDN](../methodorevents/datetoidn.md) methods. Note that these methods apply to **all** objects and not just to the Calendar object itself.
+You can convert dates between [IDN](../miscellaneous/international-day-number.md) and `⎕TS` representations using the [IDNToDate](../methodorevents/idntodate.md) and [DateToIDN](../methodorevents/datetoidn.md) methods. These methods apply to **all** objects, not just to the Calendar object itself.
 
 The [GetVisibleRange](../methodorevents/getvisiblerange.md) method reports the range of dates that is currently visible in the Calendar object.
 

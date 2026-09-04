@@ -22,11 +22,11 @@ If you do attach a "free-standing" scrollbar to a particular side of its parent 
 
 The [Align](../properties/align.md) property is a character vector containing `'Top'`, `'Bottom'`, `'Right'`, `'Left'` or `'None'`. If you specify [Align ](../properties/align.md)`'Right'` you get a vertical scrollbar attached to the right-hand edge of the parent [Form](form.md) or [Group](group.md). [Align ](../properties/align.md)`'Left'` also produces a vertical scrollbar, but one that is attached to the left-hand edge. [Align ](../properties/align.md)`'Top'` and `'Bottom'` each produce horizontal scrollbars, attached  to the top and bottom edges of the [Form](form.md) or [Group respectively](group.md).
 
-Note that the default value of [Align](../properties/align.md) is `'Right'` unless [HScroll](../properties/hscroll.md) is set to `¯1` in which case it is `'Bottom'`. It must therefore be explicitly set to `'None'` if you want a non-attached "free-standing" scrollbar.
+The default value of [Align](../properties/align.md) is `'Right'` unless [HScroll](../properties/hscroll.md) is set to `¯1` in which case it is `'Bottom'`. It must, therefore, be explicitly set to `'None'` if you want a non-attached "free-standing" scrollbar.
 
 [VScroll](../properties/vscroll.md) and [HScroll](../properties/hscroll.md) are used to specify the orientation of the scrollbar explicitly, usually in conjunction with [Align](../properties/align.md) set to `'None'`. [VScroll](../properties/vscroll.md) or [HScroll](../properties/hscroll.md) may be specified when the object is created by [`⎕WC`](../../../language-reference-guide/system-functions/wc), but cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws). The two properties are mutually exclusive. Each of them may be set to 0 or `¯1`, where `¯1` means "true" and 0 means "false". Thus ([VScroll](../properties/vscroll.md)`¯1`) defines a vertical scrollbar, while ([HScroll](../properties/hscroll.md)`¯1`) specifies a horizontal one. Setting either property to `¯1` automatically causes the other to be set to 0. If you try to set both to `¯1`, [VScroll](../properties/vscroll.md) takes precedence and [HScroll](../properties/hscroll.md) is reset to 0.
 
-[Note: the reason for using two properties where one would be sufficient is to allow for the possible future implementation of scrolling groups as provided by `⎕SM`/`⎕SR`.]
+The reason for using two properties where one would be sufficient is to allow for the possible future implementation of scrolling groups as provided by `⎕SM`/`⎕SR`.
 
 Scrolling is controlled by the [Thumb](../properties/thumb.md), [Range](../properties/range.md) and [Step](../properties/step.md) properties.
 

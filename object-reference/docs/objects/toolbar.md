@@ -31,7 +31,7 @@ to be horizontally adjacent to one another. Whenever a control is added it is
 positioned relative to the one that immediately preceded it so that its top left
 corner meets the top right corner of the previous one. The [HScroll](../properties/hscroll.md) property determines what happens when the end of the ToolBar is reached. If [HScroll](../properties/hscroll.md) is 0 (the default) a control that would otherwise extend beyond the width of the
 ToolBar is instead positioned immediately below the first control in the
-ToolBar, thereby starting a new row. Note however that the ToolBar is not
+ToolBar, thereby starting a new row. However, the ToolBar is not
 automatically resized vertically to accommodate a second row. If you want a
 multi-row ToolBar you have to set its height explicitly. If [HScroll](../properties/hscroll.md) is `¯1` or `¯2`,
 controls continue to be added along the ToolBar even though they extend beyond
@@ -45,7 +45,7 @@ left corner is positioned against the bottom left corner of the previous
 control. The [VScroll](../properties/vscroll.md) property determines
 what happens when the bottom of the ToolBar is reached. If [VScroll](../properties/vscroll.md) is 0 (the default) a control that would otherwise extend beyond the bottom of
 the ToolBar is instead positioned immediately to the right of the first one;
-thereby starting a new column. Note however that the ToolBar is not
+thereby starting a new column. However, the ToolBar is not
 automatically resized horizontally to accommodate a second column. You must set
 the width of the ToolBar explicitly.
 

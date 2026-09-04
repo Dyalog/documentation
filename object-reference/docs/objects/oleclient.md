@@ -15,7 +15,7 @@ The AutoBrowse property and Browse method are no longer relevant and are
 ignored. They are retained only for backwards compatibility with previous
 versions of Dyalog APL.
 
-Note that the PropList and MethodList properties of an OLEClient instance
+The PropList and MethodList properties of an OLEClient instance
 contain the names of the properties and methods exposed by the corresponding OLE
 Object in addition to the generic properties and methods of the OLEClient class.
 

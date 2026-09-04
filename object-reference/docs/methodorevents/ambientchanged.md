@@ -21,7 +21,7 @@ For properties supported by Dyalog APL, Property code and Description may be one
 |`¯705`       |DISPID_AMBIENT_FONT     |Font has changed|
 |`¯1`         |DISPID_AMBIENT_UNKNOWN  |Unknown         |
 
-Note that other ambient properties may be reported, although these have no corresponding Dyalog APL property.
+Other ambient properties might be reported, although these have no corresponding Dyalog APL property.
 
 ## Application
 

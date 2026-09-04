@@ -2,9 +2,9 @@
 
 Specifies a custom format for the date/time display in a [DateTimePicker](../objects/datetimepicker.md).
 
-CustomFormat is a character vector that may contain a mixture of date/time format elements and body text. The date/time elements are replaced  by the actual date/time values when the object is displayed. The body text is displayed *as-is*. Note that CustomFormat may only be specified when the [DateTimePicker](../objects/datetimepicker.md) object is created.
+CustomFormat is a character vector that may contain a mixture of date/time format elements and body text. The date/time elements are replaced  by the actual date/time values when the object is displayed. The body text is displayed *as-is*. CustomFormat can only be specified when the [DateTimePicker](../objects/datetimepicker.md) object is created.
 
-The date/time elements are defined by the following groups of characters, notice that they are case-sensitive:
+The date/time elements are defined by the following groups of characters, which are case-sensitive:
 
 |Element|Description                                                                      |
 |-------|---------------------------------------------------------------------------------|
@@ -39,8 +39,8 @@ To include a single quote in your body text, use two consecutive single quotes. 
 'Don''t forget' MMM dd',' yyyy
 ```
 
-!!! note
-    Non-format characters that are not delimited by single quotes will result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
+!!! Info "Information"
+    Non-format characters that are not delimited by single quotes result in unpredictable display by the [DateTimePicker](../objects/datetimepicker.md) object.
 
 ## Application
 

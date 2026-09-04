@@ -32,7 +32,7 @@ which is as follows :
  Dyalog Std                     16 1 0 0 400 0   0
 ```
 
-Note that the list of fonts obtained from FontList for a [Printer](../objects/printer.md) object will include TrueType fonts and printer fonts but will exclude screen
+The list of fonts obtained from FontList for a [Printer](../objects/printer.md) object will include TrueType fonts and printer fonts but will exclude screen
 fonts. FontList for [Root](../objects/root.md) will include TrueType
 fonts and screen fonts, but exclude printer-only fonts. The two lists will
 therefore (typically) be different.

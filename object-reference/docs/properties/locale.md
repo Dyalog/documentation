@@ -8,7 +8,7 @@ Locale is an integer; for example, the value 9 specifies English and the value 1
 
 Locale may **only** be specified by the `⎕WC` statement that is used to create the OLEClient; it may not subsequently be changed using `⎕WS`. A table of commonly used Locale values is given below.
 
-Note that Dyalog cannot guarantee that you will actually be given the Locale you specify. This is a function of your specific installation and the OLE server in question. However, Dyalog believes that for Microsoft products, it is a fairly safe bet that the US/English interface will be available in most countries.
+Dyalog Ltd cannot guarantee that you will be given the Locale that you specify. This is a function of your specific installation and the OLE server in question. However, Dyalog Ltd is confident that, for Microsoft products, the US/English interface will be available in most countries.
 
 |Language  |Locale|
 |----------|------|

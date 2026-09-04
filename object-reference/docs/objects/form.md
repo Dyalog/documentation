@@ -28,7 +28,7 @@ that a Form that is [Moveable ](../properties/moveable.md)**must** have a title 
 you specify any of [SysMenu](../properties/sysmenu.md), [MaxButton](../properties/maxbutton.md) or [MinButton](../properties/minbutton.md), the window must have a
 title bar in which to place these controls. A title bar itself requires a
 border. To obtain a window without a title bar, you must therefore set [Moveable](../properties/moveable.md),
-[SysMenu](../properties/sysmenu.md), [MaxButton](../properties/maxbutton.md) and [MinButton](../properties/minbutton.md) to 0. Note that setting [Caption](../properties/caption.md) does **not** force a title bar on the window.
+[SysMenu](../properties/sysmenu.md), [MaxButton](../properties/maxbutton.md) and [MinButton](../properties/minbutton.md) to 0. Setting [Caption](../properties/caption.md) does **not** force a title bar on the window.
 
 If [Sizeable](../properties/sizeable.md) is 1, the window will have
 a double-line border, regardless of the values of other properties. If [Sizeable](../properties/sizeable.md) is 0, and any one or more of [Moveable](../properties/moveable.md), [SysMenu](../properties/sysmenu.md),
@@ -36,7 +36,7 @@ a double-line border, regardless of the values of other properties. If [Sizeable
 1-pixel border. Only if all these properties are 0 will the window be
 borderless. To obtain a dialog box that may only be moved or closed, set [Border](../properties/border.md) to 2.
 
-Note that the default value for [Caption](../properties/caption.md) is an empty character vector which results in a blank title.
+The default value for [Caption](../properties/caption.md) is an empty character vector which results in a blank title.
 
 To obtain a standard dialog box with 3-dimensional appearance, create a Form
 with [Border](../properties/border.md) set to 2 and [EdgeStyle](../properties/edgestyle.md) set to `'Dialog'`, for example:
@@ -61,8 +61,8 @@ attempts to move the thumb in one of the scrollbars, the Form generates a [VScro
 [VScroll](../methodorevents/vscroll.md) and [HScroll](../methodorevents/hscroll.md) cannot be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws).
 However, you can make a scrollbar disappear by setting the corresponding element
 of [Range](../properties/range.md) to 1, thus allowing you to
-dynamically switch the scrollbar off and on. Note however that doing so will
-change the size of the Form.
+dynamically switch the scrollbar off and on. Doing so changes the size of the
+Form.
 
 Setting the [FontObj](../properties/fontobj.md) property on a Form
 does not affect the text in its title bar. However, the value of [FontObj](../properties/fontobj.md) will (unless over-ridden) be inherited by all of the objects within the Form.
@@ -89,7 +89,7 @@ characteristics:
 - Making the parent Form invisible or inactive has no effect on a Child
     Form.
 
-Note that the [Posn](../properties/posn.md) and [Size](../properties/size.md) properties of a child Form are expressed in screen coordinates and are not given
+The [Posn](../properties/posn.md) and [Size](../properties/size.md) properties of a child Form are expressed in screen coordinates and are not given
 relative to its parent.
 
 ## Application

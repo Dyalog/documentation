@@ -44,7 +44,7 @@ The external ChangeValue1 event is fired by an internal APL callback function (c
 [5]   'V2'⎕WS'Text'(⍕Value2)
 ```
 
-Note that `ChangeValue[2]` generates the external ChangeValue1 event by invoking `4 ⎕NQ`, passing it the new value provided by the TrackBar. However, the host application is permitted to modify that value, returning it in the result of `4 ⎕NQ`. This result, rather than the TrackBar value itself, is then used to update other (Label) controls in the object.
+`ChangeValue[2]` generates the external ChangeValue1 event by invoking `4 ⎕NQ`, passing it the new value provided by the TrackBar. However, the host application is permitted to modify that value, returning it in the result of `4 ⎕NQ`. This result, rather than the TrackBar value itself, is then used to update other (Label) controls in the object.
 
 The following statements were used to declare the *ChangeValue1* event The event provides a single parameter named *Value1* that may be modified in-situ by a callback function in the host application. The callback is not, otherwise, expected to return a result.
 ```apl

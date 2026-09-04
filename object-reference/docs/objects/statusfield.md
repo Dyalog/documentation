@@ -6,7 +6,7 @@ The StatusField object provides an area for displaying context sensitive help me
 
 By default a StatusField is a recessed rectangle in which information is displayed. It has a [Caption](../properties/caption.md) and a [Text](../properties/text.md) property, which by default are empty, but either or both of which can be used to present information. The [Caption](../properties/caption.md) is left justified in the field and the [Text](../properties/text.md) is displayed immediately to its right. Typically, you would use the [Caption](../properties/caption.md) property as a title to describe the information that the StatusField displays, and the [Text](../properties/text.md) property to show its current value. However, you are not obliged to use both of them and you can achieve most effects with just one.
 
-Note that when the StatusField is used to display hints it is its [Text](../properties/text.md) property that is used.
+When the StatusField is used to display hints, it is its [Text](../properties/text.md) property that is used.
 
 A StatusField may be used to monitor the status of the keyboard and this is controlled by its [Style](../properties/style.md) property. The default value for [Style](../properties/style.md) is an empty vector. However, you can set it to monitor various keyboard states as follows :
 

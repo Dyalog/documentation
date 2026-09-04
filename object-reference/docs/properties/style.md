@@ -22,15 +22,15 @@ displayed as a small box accompanied by a description. When the button is
 selected a cross appears in the box. This style of button is known as a
 "check-box".
 
-`'CommandLink'` means that the button has an icon displayed to the left of its [Caption](caption.md), the appearance of which is controlled by the  [Elevated](elevated.md) property. 
-**Note that this feature only applies if Native Look and Feel 
+`'CommandLink'` means that the button has an icon displayed to the left of its [Caption](caption.md), the appearance of which is controlled by the  [Elevated](elevated.md) property.
 
- is enabled.**
+!!! Info "Information"
+    This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
-`'Split'` specifies a `'Push'` button with an additional drop-down button, similar to that provided by a [Combo](../objects/combo.md) object. 
-**Note that this feature only applies if Native Look and Feel 
+`'Split'` specifies a `'Push'` button with an additional drop-down button, similar to that provided by a [Combo](../objects/combo.md) object.
 
- is enabled.**
+!!! Info "Information"
+    This feature only applies if [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is enabled.
 
 For a [Calendar](../objects/calendar.md) object, The Style property
 may be either `'Single'` (the default) or `'Multi'`.
