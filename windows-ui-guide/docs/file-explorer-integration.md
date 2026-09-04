@@ -43,7 +43,7 @@ You can also browse Dyalog source files. The following picture shows what you se
 
 ![](img/file-explorer-dyalog-1.png)
 
-Note that you may only *view*  workspace objects and scripts in the preview pane, it is not possible to *edit* them in the preview pane.
+You can only *view* workspace objects and scripts in the preview pane; it is not possible to *edit* them in the preview pane.
 
 ### Editing Dyalog Source Files
 

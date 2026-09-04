@@ -6,7 +6,7 @@ The editor may be invoked in several ways. From the session, you can use the sys
 
 ![](img/editor-1.png)
 
-In addition, there is a general *point-and-edit* facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. Note that, in the Session, typing a name and pressing Shift+Enter is actually a special case of *point-and-edit*. Note also that a *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
+In addition, there is a general *point-and-edit* facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. In the Session, typing a name and pressing Shift+Enter is actually a special case of *point-and-edit*. A *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
 
 The type of a new object defaults to function/operator unless the object is shadowed, in which case it defaults to a variable (vector of character vectors). You can however specify the type of a new object explicitly using `)ED` or `⎕ED`. For example, typing "`)ED ∊LIST -MAT`" in a `CLEAR WS` would create Edit windows for a vector of character vectors named `LIST` and a character matrix called `MAT`. See `)ED` or `⎕ED` for details.
 
@@ -24,7 +24,7 @@ The first edit sub-window window is created at the position specified by the **e
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 
-Note that the blue triangles indicate that the line of text is longer than can be displayed in the current Edit window.
+The blue triangles indicate that the line of text is longer than can be displayed in the current Edit window.
 
 By default, the Session has the Editor docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
 
@@ -40,7 +40,7 @@ The picture below shows the effect of maximising the Editor. The `BUILD_SESSION`
 
 ![](img/editor-5.png)
 
-Note that when the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.
+When the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.
 
 ## Window Management (Classic Dyalog mode)
 
@@ -235,7 +235,7 @@ The *View* menu provides the following actions.
 
 The *Function Line Numbers* option in the Editor menu provides an additional level of line-numbering. If selected, line numbers are displayed *independently* on each individual function (or operator) in the Class. This option is only enabled when you are editing a Class, Namespace script or Interface, and is disabled for all other types of object.
 
-Note that function line-numbering and general line-numbering are independent options and it is possible to have the entire Class numbered (from [0] to the number of lines in the Class) in addition to having line-numbering on each individual function.
+Function line-numbering and general line-numbering are independent options and it is possible to have the entire Class numbered (from [0] to the number of lines in the Class) in addition to having line-numbering on each individual function.
 
 ## Using the Editor
 
@@ -245,7 +245,7 @@ Type the name of your function and invoke the editor. To do this you may press S
 
 ### Line-Numbers on/off
 
-Try changing the line numbers setting by clicking on the *Line Numbers* option in the *Options* menu. Note that line-numbering on/off is effective for **all** edit windows.
+Try changing the line numbers setting by clicking on the *Line Numbers* option in the *Options* menu. Line-numbering on/off is effective for **all** edit windows.
 
 ### Adding Lines
 
@@ -313,7 +313,7 @@ When you press the <AC> key, or select *Align Comments* in the Editor's context 
 
 When a comment is re-aligned, text to the right of the left-most comment symbol (including spaces and other comment symbols) will remain fixed in relation to  that symbol.
 
-Note that there is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab).
+There is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab).
 
 ### Stop, Trace and Monitor Controls
 
@@ -342,7 +342,7 @@ The picture below shows the result of opening the function `⎕SE.cbtop.TB_POPUP
 
 ![](img/editor-outlining-1.png)
 
-Notice that the various control structure blocks are delineated by a treeview diagram.
+The various control structure blocks are delineated by a treeview diagram.
 
 - When you hover the mouse pointer over one of the boxes that mark the start of a block, the line marking the extent of that block becomes highlighted, as shown above.
 - If you click on a ![](img/editor-outlining-collapse-icon.png) box, the corresponding section collapses, so that only the first line of the block is displayed, as shown below.
@@ -473,7 +473,7 @@ The next picture shows the effect of opening just the `Main` section.
 
 ![](img/editor-classes-5.png)
 
-Notice that this section is delimited by the two statements:
+This section is delimited by the two statements:
 ```apl
       :Section Main
       ...
@@ -498,8 +498,8 @@ The *Find* and *Find/Replace* dialog boxes are used to locate and modify text in
 ![](img/find-replace-dialog.png)
 
 |---|---|
-|Search For|Enter the text string that you want to find. Note that the text from the last 10 searches is available from the drop-down list. If appropriate, the search text is copied from the Find Objects tool. This makes it easy to first search for functions containing a particular string, and then to locate the same string in the functions.|
-|Replace With|Enter the text string that you want to use as a replacement. Note that the text from the last 10 replacements is available from the drop-down list.|
+|Search For|Enter the text string that you want to find. The text from the last 10 searches is available from the drop-down list. If appropriate, the search text is copied from the Find Objects tool. This makes it easy to first search for functions containing a particular string, and then to locate the same string in the functions.|
+|Replace With|Enter the text string that you want to use as a replacement. The text from the last 10 replacements is available from the drop-down list.|
 |Match Case|Check this box if you want the search to be case-sensitive.|
 |Match Whole Word|Check this box if you want the search to only match only whole words.|
 |Use Regular Expressions|Check this box if you want to use Regular Expressions.|
@@ -521,7 +521,7 @@ Text searches are performed using PCRE. If the *Use Regular Expressions* box is 
 
 To save the function and terminate the edit, press Esc (EP) or select Exit from the *File* menu. The new version of the function replaces the previous one (if any) and the edit window is destroyed.
 
-Alternatively, you can select *Fix* from the *File* menu. This fixes the new version of the function in the workspace, but leaves the edit window open. Note that the history is also retained, so you can subsequently undo some changes and fix the function again.
+Alternatively, you can select *Fix* from the *File* menu. This fixes the new version of the function in the workspace, but leaves the edit window open. The history is also retained, so you can subsequently undo some changes and fix the function again.
 
 To abandon the edit, press Shift+Esc (QT) or select *Abort* from the *File* menu. This destroys the edit window but does not fix the function. The previous version (if any) is unchanged.
 
@@ -556,17 +556,17 @@ When you exit the editor with *Exit and fix*,  you will be offered a number of a
 
 **Saving a Text file**
 
-Note that if you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
+If you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
 
 ![](img/editing-text-files-save-script-file-content.png)
 
 **Saving a Script file**
 
-Note that if you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
+If you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
 
 ### Fix as code in the workspace
 
-If you choose this option, the file will be updated and the script will also be fixed in the workspace. Note that if the script refers to a base class or other external elements, it cannot be fixed unless these elements are also present in the workspace.
+If you choose this option, the file will be updated and the script will also be fixed in the workspace. If the script refers to a base class or other external elements, it cannot be fixed unless these elements are also present in the workspace.
 
 ### Save as text in the workspace
 
@@ -604,18 +604,18 @@ In order to maintain backwards compatibility with applications that rely on the 
 
 When the user opens an object in the Editor, the saved source code is presented if it exists. If the object was defined from a file and the source held in the workspace differs from the contents of the file, the user will be asked to decide whether to use the file or break the link and use the source in the workspace. If no source code is available, it is reconstituted from the internal form.
 
-Note however, that there is no mechanism to reconstitute a script, as a whole, from its tokenised form. If there is no source code, the Namespace or Class appears as if it were created using `⎕NS` rather than having originated from a script. It cannot be opened in the Editor and the result of `⎕SRC` is empty. However, the source code for individual functions and operators within the Namespace or Class will be reconstituted from their individual tokenised code when required.
+There is, however, no mechanism to reconstitute a script, as a whole, from its tokenised form. If there is no source code, the Namespace or Class appears as if it were created using `⎕NS` rather than having originated from a script. It cannot be opened in the Editor and the result of `⎕SRC` is empty. However, the source code for individual functions and operators within the Namespace or Class will be reconstituted from their individual tokenised code when required.
 
 The functions `⎕SRC` and `62 ⎕ATX` (most precise available source) use the same logic as described above to generate a result.
 
 Source code saved in the workspace is compressed to minimise space usage.
 
-Note that the white space in comment statements is retained in both the compiled form and compiled form of a function.
+The white space in comment statements is retained in both the compiled form and compiled form of a function.
 
-The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (Discard Source Information) allow the user to enable or disable this feature for functions and operators. The *AutoFormat Functions* option is automatically disabled if the **DYALOG_DISCARD_FN_SOURCE** parameter is 1. Note that the user can format code on demand).
+The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (Discard Source Information) allow the user to enable or disable this feature for functions and operators. The *AutoFormat Functions* option is automatically disabled if the **DYALOG_DISCARD_FN_SOURCE** parameter is 1. You can format code on demand.
 
 `5171⌶` (Discard Source Information) discards source code and file information for scripted objects, namespaces, classes, functions, and operators that is saved in the workspace.
 
-Note that, to ensure that they can be used by Classic Edition, the source code has been discarded from all the workspaces supplied by Dyalog as part of the distribution.
+To ensure that they can be used by Classic Edition, the source code has been discarded from all the workspaces supplied by Dyalog as part of the distribution.
 
 See also: [Discard Source Code](../../language-reference-guide/primitive-operators/i-beam/discard-source-code) and [Discard Source Information](../../language-reference-guide/primitive-operators/i-beam/discard-source-information).

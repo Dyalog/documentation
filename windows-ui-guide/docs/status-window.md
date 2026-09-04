@@ -17,4 +17,4 @@ DOMAIN ERROR
 
 The Status window can be explicitly displayed or hidden using the `[Status]` system operation which is associated with the *Tools/Status* menu item. There is also an option to have the Status window appear automatically whenever a new message is written to it. This option is selected using the `[AutoStatus]` system operation which is associated with the *Tools/AutoStatus* menu item.
 
-Note that when you close the Status window, all the system messages in it are cleared.
+When you close the Status window, all the system messages in it are cleared.
