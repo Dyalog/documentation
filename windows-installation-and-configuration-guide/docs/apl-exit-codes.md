@@ -15,9 +15,11 @@ When APL or a bound .EXE terminates, it returns an exit code to the calling envi
 |9  |Dyalog has encountered a Microsoft Windows-related error when starting and is unable to continue. For example it cannot register clipboard formats.|
 |10 |CEF sub-process crash - something has gone unexpectedly wrong with either the HTMLRenderer or CEF sub-processes and cannot continue |
 |11 |Cannot create c-stack (macOS only)                                                             |
+|12 |APL was unable to load the HMON (health monitor) library (20.0 onwards)                        |
+|13 |APL loaded the HMON (health monitor) library but was unable to initialise it (20.0 onwards)    |
 
 ## Notes
 
 Under UNIX exit codes greater than 127 indicates (127+signal number) of the untrapped signal which caused the process to terminate.
 
-APL applications can generate  a custom return code by specifying an integer value to the right of `⎕OFF`. Dyalog recommends using values greater than 12 for this purpose.
+APL applications can generate  a custom return code by specifying an integer value to the right of `⎕OFF`. Dyalog recommends using values greater than 13 for this purpose.

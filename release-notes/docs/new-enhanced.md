@@ -168,10 +168,14 @@ Pressing <kbd>Home</kbd> or <kbd>End</kbd> multiple times progresses through the
 
 ### APL Exit Codes
 
-Two new APL exit codes have been added:
+Two new APL exit codes have been added, both concerning the HMON (health monitor) library:
 
-- 12: HMON load failure
-- 13: HMON initialisation failure
+- `12`  
+The library could not be loaded.
+- `13`  
+The library was loaded but could not be initialised.
+
+An application that returns its own exit code from `⎕OFF` should therefore use a value greater than 13.
 
 ### Microsoft Windows IDE
 
