@@ -15,8 +15,8 @@ When APL or a bound executable terminates, it returns an exit code to the callin
 |9  |Dyalog has encountered a Microsoft Windows-related error when starting and is unable to continue (for example, it cannot register clipboard formats).|
 |10 |CEF sub-process crash – something has gone unexpectedly wrong with either the HTMLRenderer or CEF sub-processes and cannot continue |
 |11 |Cannot create c-stack (macOS only)                                                             |
-|12 |APL was unable to load the HMON (Health Monitor) library (Dyalog v20.0 onwards)                 |
-|13 |APL loaded the HMON (Health Monitor) library but was unable to initialise it (Dyalog v20.0 onwards)|
+|12 |APL was unable to load the HMON ([Dyalog Health Monitor](https://github.com/Dyalog/HMON)) library              |
+|13 |APL loaded the HMON (Dyalog Health Monitor) library but was unable to initialise it|
 
 Under Unix, exit codes greater than 127 indicates (127+signal number) of the untrapped signal which caused the process to terminate.
 
