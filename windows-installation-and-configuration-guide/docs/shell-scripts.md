@@ -53,7 +53,7 @@ plus←{
 
 ## Session Initialisation
 
-By default, an executable shell script does not perform Session Initialisation, meaning that features that depend on it (such as Link and SALT) are not available. To enable Session Initialisation, and thereby make those features available, set the [`DYALOG_INITSESSION`](configuration-parameters/dyalog-initsession.md) configuration parameter to `1`, as described in [Configuration Parameters](#configuration-parameters).
+By default, an executable shell script does not perform Session initialisation, so features that depend on it, such as Link and SALT, are not available. To enable Session initialisation, and thereby make those features available, set the [**DYALOG_INITSESSION**](configuration-parameters/dyalog-initsession.md) configuration parameter to `1`, as described in [Configuration Parameters](#configuration-parameters).
 
 ## Errors
 
