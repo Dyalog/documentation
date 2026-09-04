@@ -8,7 +8,7 @@ However, any Registry Value that is maintained via a configuration dialog box wi
 
 ### AutoComplete
 
-This contains registry entries that describe your personal AutoComplete options. See [Auto Complete Tab](configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md)
+This contains registry entries that describe your personal AutoComplete options. See [Auto Complete Tab](configuring-the-ide/configuration-dialog.md#auto-complete-tab)
 
 ### Captions
 
@@ -35,11 +35,11 @@ This contains entries that describe your settings for the [Workspace Explorer](.
 
 ### files
 
-This contains the size of your recently used file list (see [General Tab](configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md)) and the list of your most recently loaded workspaces.
+This contains the size of your recently used file list (see [General Tab](configuring-the-ide/configuration-dialog.md#general-tab)) and the list of your most recently loaded workspaces.
 
 ### KeyboardShortcuts/keys
 
-This contains the definitions of your Keyboard Shortcuts (Unicode Edition only). See [Keyboard Shortcuts Tab](configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab.md).
+This contains the definitions of your Keyboard Shortcuts (Unicode Edition only). See [Keyboard Shortcuts Tab](configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab).
 
 ### KeyboardShortcuts/chars
 
@@ -55,7 +55,7 @@ This contains the entries for your Printer Setup options. See  [Print Configurat
 
 ### SALT
 
-This contains entries for SALT. See [SALT](configuring-the-ide/configuration-dialog//configuration-dialog-salt-tab.md).
+This contains entries for SALT. See [SALT](configuring-the-ide/configuration-dialog.md#salt-tab).
 
 ### Search
 

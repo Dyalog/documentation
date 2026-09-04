@@ -19,4 +19,4 @@ The default values for **IniFile**, for the 64-bit and 32-bit versions respectiv
     Software\Dyalog\Dyalog APL/W {{ version_majmin }}
 ```
 
-See also [Configuration saved in](../configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md).
+See also [Configuration saved in](../configuring-the-ide/configuration-dialog.md#general-tab).
