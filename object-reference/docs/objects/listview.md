@@ -10,7 +10,7 @@ The Items property is a vector of character vectors that specifies the labels fo
 small icon (16x16 pixel) set. Alternatively, [ImageListObj](../properties/imagelistobj.md) may be empty (no icons displayed) or contain just the name of a single large icon [ImageList](imagelist.md).
 
 The [View](../properties/view.md) property contains a character vector that determines how the items are displayed. It may have one of the
-following values; `'Icon'` (the default), `'SmallIcon'`, `'List'` or `'Report'`. When View is `'Icon'` or `'SmallIcon'`, the items are arranged *row-wise* with large or small icons as appropriate. When View is set to `'List'`, the items are arranged *column-wise* using small icons. Examples of `'Icon'` and `'List'` views are illustrated below.
+following values; `'Icon'` (the default), `'SmallIcon'`, `'List'` or `'Report'`. When View is `'Icon'` or `'SmallIcon'`, the items are arranged *row-wise* with large or small icons as appropriate. In these views, setting the [Align](../properties/align.md) property to `'Left'` left-aligns the items along the left side of the object. When View is set to `'List'`, the items are arranged *column-wise* using small icons. Examples of `'Icon'` and `'List'` views are illustrated below.
 
 ![](../img/listview-icon.png)
 

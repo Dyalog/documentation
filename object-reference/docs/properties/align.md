@@ -10,6 +10,8 @@ For a [DateTimePicker](../objects/datetimepicker.md), the Align property specifi
 
 For a single-line [Edit](../objects/edit.md), Align specifies the vertical alignment of the text. It may be `'None'` (the default), `'Centre'` or `'Center'`.
 
+For a [ListView](../objects/listview.md), Align can be `'Left'`, which left-aligns the items along the left side of the object when the [View](view.md) property is `'Icon'` or `'SmallIcon'`. It has no effect when View is `'List'` or `'Report'`.
+
 For a [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), or [StatusField](../objects/statusfield.md), Align `'Right'` is used to position the object at the right end of its parent [MenuBar](../objects/menubar.md) or [StatusBar](../objects/statusbar.md). `'None'` is equivalent to `'Left'` which is the default.
 
 For objects of type [CoolBar](../objects/coolbar.md), [Splitter](../objects/splitter.md), [Scroll](../objects/scroll.md), [StatusBar](../objects/statusbar.md), [TabBar](../objects/tabbar.md), [ToolBar](../objects/toolbar.md) and [ToolControl](../objects/toolcontrol.md), Align may be `'None'`, `'Top'`, `'Bottom'`, `'Left'` or `'Right'`. It specifies to which (if any) of the four sides of the parent the object is anchored and also the default position and size of the object. Specifying Align typically causes the [Attach](attach.md) property to be set to appropriate values as follows :
