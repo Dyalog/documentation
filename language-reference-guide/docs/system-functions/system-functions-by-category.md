@@ -128,23 +128,23 @@ Table: Implicit Arguments {: #Implicit_Arguments }
 |---|---|---|---|
 |`⎕CT`, `⎕DCT`|`⌈` `⌊` `∪` `≠`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷` `|` `∨` `∧` `⎕FMT`|`⌸`|
 |`⎕DIV`|`÷`|`÷`|&nbsp;|
-|`⎕FR`<sup>1</sup>|`÷` `*` `⍟` `!` `○` `⌹`|`+` `-` `×` `÷` `*` `⍟` `|` `!` `○` `∨` `∧` `⊥` `⊤` `⌹`|&nbsp;|
-|`⎕FR`<sup>2</sup>|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷`|`⌸`|
-|`⎕FR`<sup>3</sup>|`⍒` `⍋`|`⌈` `⌊` `⍒` `⍋` `⍸` `⎕FX`|&nbsp;|
-|`⎕IO`|`⍳` `?` `⍒` `⍋` `⍸`|`⍳` `?` `⍒` `⍋` `⍉` `⊃` `⌷` `⍸` `⎕FX`|`⌸` `@` `[]`<sup>4</sup> `⎕DMX`<sup>5</sup>
+|`⎕FR`[^1]|`÷` `*` `⍟` `!` `○` `⌹`|`+` `-` `×` `÷` `*` `⍟` `|` `!` `○` `∨` `∧` `⊥` `⊤` `⌹`|&nbsp;|
+|`⎕FR`[^2]|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷`|`⌸`|
+|`⎕FR`[^3]|`⍒` `⍋`|`⌈` `⌊` `⍒` `⍋` `⍸` `⎕FX`|&nbsp;|
+|`⎕IO`|`⍳` `?` `⍒` `⍋` `⍸`|`⍳` `?` `⍒` `⍋` `⍉` `⊃` `⌷` `⍸` `⎕FX`|`⌸` `@` `[]`[^4] `⎕DMX`[^5]
 |`⎕ML`|`∊` `↑` `⊃` `≡`|&nbsp;|`⎕TC`|
 |`⎕PP`|`⍕` `⎕FMT`|&nbsp;|`⎕←` `⍞←`|
 |`⎕RL`|`?`|`?`|&nbsp;|
 
-<sup>1</sup> functions that compute real numbers and whose precision depends on `⎕FR`
+[^1]: functions that compute real numbers and whose precision depends on `⎕FR`
 
-<sup>2</sup> functions that perform tolerant comparisons (intolerant if `⎕CT`/`⎕DCT` is `0`)
+[^2]: functions that perform tolerant comparisons (intolerant if `⎕CT`/`⎕DCT` is `0`)
 
-<sup>3</sup> functions that perform intolerant comparisons (as if `⎕CT`/`⎕DCT` was `0`)
+[^3]: functions that perform intolerant comparisons (as if `⎕CT`/`⎕DCT` was `0`)
 
-<sup>4</sup> that is, bracket indexing and bracket axis
+[^4]: that is, bracket indexing and bracket axis
 
-<sup>5</sup> that is, some extended error messages take `⎕IO` into account
+[^5]: that is, some extended error messages take `⎕IO` into account
 
 Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
 
