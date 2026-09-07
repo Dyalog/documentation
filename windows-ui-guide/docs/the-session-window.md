@@ -32,7 +32,7 @@ If you press the left mouse button down over the Status window title bar, and dr
 
 The next picture shows the result of the docking operation. The Session window is now split into 2 panes, with the Status window in the upper pane and the Session log window in the lower pane. You can resize the panes by dragging with the mouse.
 
-A docked window has a title bar (in this case, the caption is *Status*) and 3 buttons which are used to *Minimise*, *Maximise* and *Close* the docked window.
+A docked window has a title bar (in this case, the caption is *Status*) and three buttons that are used to *Minimise*, *Maximise*, and *Close* the docked window.
 
 ![](img/session-docking-3.png)
 

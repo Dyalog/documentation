@@ -17,7 +17,7 @@ To change the properties of the IME go to  *Options/Configure/Unicode Input* tab
 
 ## Input translate table
 
-The translate table defines the mapping between APL characters and the keystrokes that generate those APL characters. It is possible to alter the mapping or to create support for new keyboards by altering the translate table, or by selecting a different translate table. See the *IME User Guide* for more details.
+The translate table defines the mapping between APL characters and the keystrokes that generate those APL characters. It is possible to alter the mapping or to create support for new keyboards by altering the translate table, or by selecting a different translate table.
 
 ## Backtick Keyboard
 
@@ -31,7 +31,7 @@ In the original implementations of APL, many of the special symbols could only b
 
 In Dyalog, such symbols can be generated either by a single keystroke, or (in *Replace* mode) by overtyping one symbol with another. For example `⍋` may be generated using Shift+Ctrl+4, or by switching to *Replace* mode and typing the three keystrokes Ctrl+h, Left-Cursor, Ctrl+m.
 
-Using the Dyalog Unicode IME the character can also be entered by pressing Ctrl+Bksp, Ctrl+m, Ctrl+h. Ctrl+Bksp is the default *Overstrike Introducer Key* (key code OS).
+Using the Dyalog Unicode IME the character can also be entered by pressing <kbd>Ctrl</kbd>+<kbd>Bksp</kbd>, <kbd>Ctrl</kbd>+<kbd>m</kbd>, <kbd>Ctrl</kbd>+<kbd>h</kbd>. <kbd>Ctrl</kbd>+<kbd>Bksp</kbd> is the default *Overstrike Introducer Key* (key code OS).
 
 ## Use Overstrike popup
 

@@ -6,7 +6,7 @@ The editor may be invoked in several ways. From the session, you can use the sys
 
 ![](img/editor-1.png)
 
-In addition, there is a general *point-and-edit* facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. In the Session, typing a name and pressing Shift+Enter is actually a special case of *point-and-edit*. A *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
+In addition, there is a general *point-and-edit* facility that works in edit and trace windows too. Position the input cursor over a name and double-click the left mouse button. Alternatively, you can press <kbd>Shift</kbd>+<kbd>Enter</kbd> or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. In the Session, typing a name and pressing <kbd>Shift</kbd>+<kbd>Enter</kbd> is a special case of *point-and-edit*. A *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
 
 The type of a new object defaults to function/operator unless the object is shadowed, in which case it defaults to a variable (vector of character vectors). You can however specify the type of a new object explicitly using `)ED` or `⎕ED`. For example, typing "`)ED ∊LIST -MAT`" in a `CLEAR WS` would create Edit windows for a vector of character vectors named `LIST` and a character matrix called `MAT`. See `)ED` or `⎕ED` for details.
 

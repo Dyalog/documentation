@@ -1,6 +1,6 @@
 # The Session MenuBar
 
-The Session MenuBar (`⎕SE.mb`) contains a set of menus as follows. Unless specified, the descriptions refer to the Unicode Edition, and the keyboard shortcuts are different in Classic Edition.
+The Session MenuBar (`⎕SE.mb`) contains a set of menus as follows. Unless specified, the descriptions refer to the Unicode Edition; the keyboard shortcuts are different in the Classic Edition.
 
 ## The File Menu
 
@@ -65,7 +65,7 @@ Table: Window menu operations {: #window-menu-operations }
 |-----------------|------------|---------------------------------|
 |Close all Windows|`[CloseAll]`|Closes all Edit and Trace windows|
 
-`[CloseAll]` removes all Trace windows but does *not* reset the state indicator.
+`[CloseAll]` removes all Trace windows but does not reset the state indicator.
 
 In addition, the *Window* menu will contain options to switch the focus to any subsidiary windows that are docked in the Session as illustrated above.
 
@@ -192,6 +192,6 @@ Table: Help menu operations {: #help-menu-operations }
 |Dyalog Web Site|`[DyalogWeb]`|Opens your web browser on the Dyalog home page|
 |Email Dyalog|`[DyalogEmail]`|Opens your email client and creates a new message to Dyalog Support|
 |Latest Enhancements|`[RelNotes]`|Opens `help\dyalog.chm` , starting at the first topic in the Version {{ version_majmin }} Release Notes section. Previous Release Notes are also included for your convenience.|
-|Read Me|`[ReadMe]`|Opens `help\dyalog_readme.htm` in your default web browser. `setup_readme.htm` is also included in this directory|
+|Read Me|`[ReadMe]`|Opens **help\dyalog_readme.htm** in your default web browser. **setup_readme.htm** is also included in this directory|
 |Third Party Licences|`[LicenceHelp]`|Opens `help\dyalog.chm` , starting at the first topic in the Licences for third-party components|
 |About|`[About]`|Displays an *About* dialog box|

@@ -35,7 +35,7 @@ You can load a library shown in the tree view pane by selecting *Load* from its 
 
 In either case, a message box will appear asking you to confirm. The operation to load a Type Library may take a few moments to complete.
 
-If the selected Library references any other libraries, they too are loaded. For example, loading the *Microsoft Excel 16.0 Object Library* brings in the *Microsoft Office 16.0 Object Library* and the *Microsoft Visual Basic for Applications Extensibility 5.3 Library* too. It also contains references to a general library called the *OLE Automation Type Library*, so this is also loaded.
+If the selected Library references any other libraries, they are loaded too. For example, loading the *Microsoft Excel 16.0 Object Library* brings in the *Microsoft Office 16.0 Object Library* and the *Microsoft Visual Basic for Applications Extensibility 5.3 Library*; it also contains references to a general library called the *OLE Automation Type Library*, so this is also loaded.
 
 When you `)SAVE` your workspace, all of the Type Libraries that you have loaded will be saved with it. Type library information can take up a considerable amount of workspace.
 
