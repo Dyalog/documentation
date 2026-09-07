@@ -4,7 +4,7 @@ Even if an OLE Object fails to provide Type Information, either using early or l
 
 ## Secondary Late Binding
 
-Prior to Version 14.0, this was the only form of late binding provided by Dyalog APL.
+Prior to Dyalog v14.0, this was the only form of late binding provided by Dyalog.
 
 If you refer to a name inside the OLEClient namespace that would otherwise generate a `VALUE ERROR`, and there is no Type information available for that name, APL asks the COM object if it has a member (method or property) of that name.
 

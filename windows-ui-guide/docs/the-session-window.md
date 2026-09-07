@@ -8,7 +8,7 @@ The primary purpose of the session window is to provide a scrolling area within 
 
 When you start APL, the session is loaded from the file specified by the **session_file** parameter. The position and size of the session window are defined by the Posn and Size properties of the Session object `⎕SE`, which will be as they were when the session file was last saved.
 
-In a Windows shortcut to an application, the Run: state may be one of "Normal window", "Minimised" and "Maximised". There are other states which can be set when a process is spawned. If the Run: state is Normal or Default, Dyalog uses the settings in the current session file to determine the state and size of the session on startup; for all other states (including Maximised and Minimised) these states are used, superseding the settings in the current session file.
+In a Microsoft Windows shortcut to an application, the Run: state can be one of "Normal window", "Minimised", and "Maximised". There are other states that can be set when a process is spawned. If the Run: state is Normal or Default, Dyalog uses the settings in the current session file to determine the state and size of the session on startup; for all other states (including Maximised and Minimised) these states are used, superseding the settings in the current session file.
 
 The name of the active workspace is shown in the title bar of the window, and changes if you rename the workspace or `)LOAD` another.
 

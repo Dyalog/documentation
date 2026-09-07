@@ -85,4 +85,4 @@ Keycodes, their common keystrokes, and the keystrokes specific to terminal emula
 |US     |Up Screen               |Shift+Up             |APL+PgUp           |
 |ZM     |Zoom                    |Cmd z                |Shift+APL+F12      |
 
-[^1]: If you are using PuTTY or another emulator that uses the Dyalog Unicode IME, it will be necessary to swap to a non-Dyalog APL keyboard before hitting Ctrl-l; hitting Ctrl-l while in a Dyalog APL keyboard will generate a Quad symbol.
+[^1]: If you are using PuTTY or another emulator that uses the Dyalog Unicode IME, it will be necessary to swap to a non-Dyalog APL keyboard before hitting <kbd>Ctrl</kbd>-<kbd>l</kbd>; hitting <kbd>Ctrl</kbd>-<kbd>l</kbd> while in a Dyalog APL keyboard will generate a _quad_ (`⎕`) symbol.

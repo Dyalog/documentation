@@ -4,7 +4,7 @@ COM objects created by Dyalog (OLEServer and ActiveXControl objects) export thei
 
 Using this interface, a client application may discover the names and parameters of the members supported by an object at run-time, and then access them by name. Alternatively, a client application may compile references to the object's members in advance  using their  *Dispatch IDs* or *DISPIDs*.
 
-Prior to Version 14.1, Dyalog assigned all DISPIDs automatically, making it impractical for them to be compiled into client applications. An automatically assigned DISPID is its index into the list of the names of the object's members in alphabetic order, and may therefore change when this list is altered in any way.
+Prior to Dyalog v14.1, Dyalog assigned all DISPIDs automatically, making it impractical for them to be compiled into client applications. An automatically assigned DISPID is its index into the list of the names of the object's members in alphabetic order; it can, therefore, change when this list is altered in any way.
 
 From Version 14.1 onwards, the  SetFnInfo, SetPropertyInfo and SetEventInfo methods  allow the Dyalog programmer to assign DISPIDs so that they may be used directly by client applications. The specified DISPID must be a non-zero integer. The special value `¯1` causes Dyalog to assign the DISPID automatically as before.
 
