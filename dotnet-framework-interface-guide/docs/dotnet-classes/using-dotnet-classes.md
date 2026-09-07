@@ -44,7 +44,7 @@ The rest of this page describes the mechanism by which Dyalog associates the cla
 
 ## Using a User-written Class
 
-The classes used in the previous examples are supplied with .NET, but [`⎕USING`](../../../language-reference-guide/system-functions/using/) can also load your own compiled .NET assemblies. For example, suppose the following C# class is compiled into an assembly file named **testlib.dll**:
+The classes used in the previous examples are supplied with .NET, but `⎕USING` can also load your own compiled .NET assemblies. For example, suppose the following C# class is compiled into an assembly file named **testlib.dll**:
 ```nonAPL
 namespace Foobar
 {
