@@ -23,7 +23,7 @@ Information that may prove useful in debugging the problem, including (where pos
 
 '=================== Interesting Information'
 
-Under UNIX, this interesting information section can be extracted from the *aplcore* as follows:
+Under Unix, this interesting information section can be extracted from the *aplcore* as follows:
 
 `sed -n '/======== Interesting Information/,$p' aplcore`
 

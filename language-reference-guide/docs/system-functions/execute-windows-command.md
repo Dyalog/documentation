@@ -5,7 +5,7 @@ search:
 
 # <span>Execute Windows Command</span> `{R}←⎕CMD Y`{{key}}
 
-`⎕CMD` executes the Windows Command Processor or UNIX shell or starts another Windows application program.  `⎕CMD` is a synonym of `⎕SH`.  Either system function may be used in either environment (Windows or UNIX) with exactly the same effect.  `⎕CMD` is probably more natural for the Windows user.  This section describes the behaviour of `⎕CMD` and `⎕SH` under Windows. See [Execute (UNIX) Command](execute-unix-command.md) for a discussion of the behaviour of these system functions under UNIX.
+`⎕CMD` executes the Windows Command Processor or Unix shell or starts another Windows application program.  `⎕CMD` is a synonym of `⎕SH`.  Either system function may be used in either environment (Windows or Unix) with exactly the same effect.  `⎕CMD` is probably more natural for the Windows user.  This section describes the behaviour of `⎕CMD` and `⎕SH` under Windows. See [Execute Unix Command](execute-unix-command.md) for a discussion of the behaviour of these system functions under Unix.
 
 The system commands [`)SH`](../system-commands/sh.md) and [`)CMD`](../system-commands/cmd.md) provide similar facilities.
 

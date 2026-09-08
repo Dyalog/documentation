@@ -2,7 +2,7 @@
 
 When running an APL application, it is possible that an unexpected error will occur.
 
-It is advisable to set a trap at the top level of the application which traps all possible errors; in this way the programmer can cater for any errors that are not already explicitly trapped by, for example, writing information to a file, or saving the workspace. On UNIX in particular it may also be useful to call `⎕OFF` with a positive integer to the right of the `⎕OFF` - this is used as the exit code to APL.
+It is advisable to set a trap at the top level of the application which traps all possible errors; in this way the programmer can cater for any errors that are not already explicitly trapped by, for example, writing information to a file, or saving the workspace. On Unix in particular it may also be useful to call `⎕OFF` with a positive integer to the right of the `⎕OFF` - this is used as the exit code to APL.
 
 It is also possible to generate an error which it is not possible to trap in APL code; examples include attempting to access the session in a runtime APL, or generating an error which causes APL to crash (for example, by the incorrect use of a shared library function).
 

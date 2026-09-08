@@ -48,7 +48,7 @@ Elements in column 8 (Video Attributes) may be:
 
 ## Screen Management (Async Terminals)
 
-Dyalog APL for UNIX systems on tty devices (async terminals or on terminal emulators) manages two screens; the SESSION screen and the USER screen.  If the SESSION screen is current, an assignment to `⎕SM` causes the display to switch to the USER screen and show the form defined by `⎕SM`.
+Dyalog APL for Unix systems on tty devices (async terminals or on terminal emulators) manages two screens; the SESSION screen and the USER screen.  If the SESSION screen is current, an assignment to `⎕SM` causes the display to switch to the USER screen and show the form defined by `⎕SM`.
 
 Note that Ride does not directly support `⎕SM`, although it is possible to display `⎕SM` in the tty session to which a Ride client is connected.
 

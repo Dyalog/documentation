@@ -136,8 +136,8 @@ search:
 |[`⎕SAVE`](../save.md)  |Save the active WS         |Function|
 |[`⎕SD`](../sd.md)   |Screen Dimensions                |Constant|
 |[`⎕SE`](../se.md)   |Session Namespace                |Reference|
-|[`⎕SH`](../execute-unix-command.md)   |Execute a UNIX command or another program|Monadic function|
-|[`⎕SH`](../start-unix-auxiliary-processor.md)   |Start a UNIX Auxiliary Processor|Dyadic function|
+|[`⎕SH`](../execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|
+|[`⎕SH`](../start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|
 |[`⎕SHADOW`](../shadow.md)|Shadow names             |Monadic function|
 |[`⎕SHADOW`](../shadow.md)|Shadow names         |Monadic function|
 |[`⎕SHELL`](../shell.md)|Execute a shell command or another program              |Monadic function|

@@ -40,7 +40,7 @@ The default random number generator in a `CLEAR WS` is 1 (Mersenne Twister). Thi
 
 The Lehmer linear congruential generator *RNG0* was the only random number generator provided in versions of Dyalog APL prior to Version 13.1. The implementation of this algorithm has several limitations including limited value range `(2*31)`, short period and non-uniform distribution (some values may appear more frequently than others). It is retained for backwards compatibility.
 
-Under Windows, the Operating System random number generator algorithm *RNG2* uses the `rand_s()` function. Under UNIX/Linux it uses `/dev/urandom`.
+Under Windows, the Operating System random number generator algorithm *RNG2* uses the `rand_s()` function. Under Unix it uses `/dev/urandom`.
 
 ## Random Number Sequences
 

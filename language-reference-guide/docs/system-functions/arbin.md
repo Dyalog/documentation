@@ -43,7 +43,7 @@ The result `R` is a simple numeric vector.  Each item of `R` is the numeric repr
 
 The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other than numbers in the range 0-255, or  if the current process does not have permission to read from or write to the specified device(s).
 
-## Examples (UNIX)
+## Examples (Unix)
 ```apl
       )SH mkfifo ./fifo
 

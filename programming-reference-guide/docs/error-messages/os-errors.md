@@ -1,6 +1,6 @@
 #  Operating System Error Messages
 
-The table below refers to UNIX Operating Systems under which the error code reported by Dyalog APL is (100 + the UNIX file error number). The text for the error message, which is obtained by calling `perror()`, will vary from one type of  system to another.
+The table below refers to Unix Operating Systems under which the error code reported by Dyalog APL is (100 + the Unix file error number). The text for the error message, which is obtained by calling `perror()`, will vary from one type of  system to another.
 
 See also [Windows Error Messages](windows-errors.md) for the equivalent error messages under Windows.
 

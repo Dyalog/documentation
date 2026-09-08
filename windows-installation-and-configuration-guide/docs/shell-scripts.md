@@ -5,9 +5,9 @@ Shell scripts are typically executed  from a terminal (or *shell*).
 
 A script is executed by typing its name. User input is entered from the same terminal or shell and output is displayed on the terminal or shell.
 
-## UNIX
+## Unix
 
-On UNIX (and related) systems a Dyalog APL *shell script* is a text file with the following as the first line:
+On Unix (and related) systems a Dyalog APL *shell script* is a text file with the following as the first line:
 ```apl
 #!/usr/local/bin/dyalogscript
 ```
