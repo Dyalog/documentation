@@ -12,7 +12,7 @@ The simplest `:If` control structure is a single condition of the form:
 [5]   :EndIf
 ```
 
-If the test condition (in this case `AGE<21`) is true, the statements between the `:If` and the `:EndIf` will be executed.  If the condition is false, none of these statements will be run and execution resumes after the `:EndIf`. The test condition to the right of `:If` must return a single element Boolean value 1 (true) or 0 (false).
+If the test condition (in this case, `AGE<21`) is true, the statements between the `:If` and the `:EndIf` will be executed. If the condition is false, none of these statements will be run and execution resumes after the `:EndIf`. The test condition to the right of `:If` must return a single element Boolean value `1` (true) or `0` (false).
 
 `:If` control structures may be considerably more complex.  For example, the following code will execute the statements on lines `[2-3]` if `AGE<21` is 1 (true), **or alternatively**, the statement on line `[6]` if `AGE<21` is 0 (false).
 ```apl

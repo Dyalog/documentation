@@ -80,7 +80,7 @@ Now, whenever *any* error occurs in one of the enclosed lines, or in a function 
    [2]   :Trap 11 2 3
 ```
 
-In this case, no extra lines are executed after an error. Control is passed to line `[6]` either when an error has occurred, *or* if all the lines have been executed without error. If you want to execute some code *only* after an error, you could re-code the example like this:
+In this case, no extra lines are executed after an error. Control is passed to line `[6]` either when an error has occurred or if all the lines have been executed without error. If you want to execute some code *only* after an error, you could re-code the example like this:
 ```apl
  
    [1]   ...

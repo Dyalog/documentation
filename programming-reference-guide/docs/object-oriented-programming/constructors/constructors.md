@@ -4,7 +4,7 @@ A Constructor is a special function defined in the Class script that is to be ru
 
 A Constructor is identified by a `:Implements Constructor` statement. This statement may appear anywhere in the body of the function after the function header. The significance of this is discussed below.
 
-It is also *essential* to define the Constructor to be *Public*, with a `:Access Public` statement, because like all Class members, Constructors default to being *Private*. Private Constructors currently have no use or purpose, but it is intended that they will be supported in a future release of Dyalog APL.
+It is also essential to define the Constructor to be *Public*, with a `:Access Public` statement, because, like all Class members, Constructors default to being *Private*. Private Constructors currently have no use or purpose, but it is intended that they will be supported in a future release of Dyalog.
 
 A Constructor function may be niladic or monadic and must not return a result.
 

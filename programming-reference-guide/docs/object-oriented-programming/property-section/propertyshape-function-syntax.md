@@ -15,4 +15,4 @@ The result `R` must be an integer vector or scalar that specifies the `rank` of 
 The result `R` is used by APL to check that the number of indices corresponds to the rank of the Property and that the indices are within the bounds of its dimensions. If not, the reference or assignment to the Property will fail with `RANK ERROR` or `LENGTH ERROR`.
 
 !!! Hint "Hints and Recommendations"
-    It is not possible to predict the number of times that a PropertyGet, PropertySet or PropertyShape function will be called by a particular APL expression, as this depends upon how that expression is implemented internally. You should therefore not rely on the number of times that a Get, Set or Shape function is called, and none should have any side effects on any other APL object.
+    It is not possible to predict the number of times that a PropertyGet, PropertySet, or PropertyShape function will be called by a particular APL expression, as this depends on how that expression is implemented internally. You should, therefore, not rely on the number of times that a Get, Set, or Shape function is called, and none should have any side effects on any other APL object.

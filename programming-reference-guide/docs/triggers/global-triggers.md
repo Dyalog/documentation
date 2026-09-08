@@ -58,7 +58,7 @@ The argument to the trigger function is an instance of the internal class `Trigg
 Global Triggers behave as follows:
 
 - Like other Triggers, only the most recently fixed global trigger function applies and is called on assignment to a global variable.
-- Global triggers do not apply to local names nor to semi-globals (names which are localised further up the stack).
+- Global triggers do not apply to local names or to semi-globals (names that are localised further up the stack).
 - An assignment to a global variable fires both its specific trigger (if defined) and the global trigger. However, the order of execution is undefined.
 - Do not use an argument name for your trigger function that might conflict with a global variable name in the namespace.
 

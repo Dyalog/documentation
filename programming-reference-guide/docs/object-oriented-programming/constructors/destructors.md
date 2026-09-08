@@ -12,7 +12,7 @@ But be aware that a destructor will also be called if:
 - The Instance is re-assigned (see below)
 - The result of `⎕NEW` is not assigned (the instance gets created then immediately destroyed).
 - APL creates (and then destroys) a new Instance as a result of a reference to a member of an [empty Instance](empty-arrays-of-instances-how.md). The destructor is called after APL has obtained the appropriate value from the instance and no longer needs it.
-- The constructor function fails. The Instance is actually created before the constructor is run (inside it), and if the constructor fails, the fledgling Instance is discarded. This means a destructor *might* need to deal with a partially constructed instance, so the code might need to check that resources were actually acquired, before releasing them.
+- The constructor function fails. The Instance is created before the constructor is run (inside it), and if the constructor fails, the fledgling Instance is discarded. This means a destructor *might* need to deal with a partially-constructed instance, so the code might need to check that resources were acquired before releasing them.
 - On the execution of `)CLEAR`, `)LOAD`, `⎕LOAD`, `)OFF` or `⎕OFF`.
 
 !!! Warning "Warning"

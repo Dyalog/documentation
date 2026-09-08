@@ -11,7 +11,7 @@ When the Class is fixed by the editor or by `⎕FIX`, all the defined functions 
 
 Dfns and dops in `NS` are also included in the Class but as *Private members*, because dfns and dops may not contain `:Signature` or `:Access` statements. Variables and Sub-namespaces in `NS` are **not** included.
 
-Objects imported in this way are not actually *copied*, so there is no penalty incurred in using this feature. Additions, deletions and changes to the functions in `NS` are immediately reflected in the Class.
+Objects imported in this way are not *copied*, so there is no penalty incurred in using this feature. Additions, deletions, and changes to the functions in `NS` are immediately reflected in the Class.
 
 If there is a member in the Class with the same name as a function in `NS`, the Class member takes precedence and supersedes the function in `NS`.
 

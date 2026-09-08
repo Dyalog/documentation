@@ -2,7 +2,7 @@
 
 Between the `:Class` and `:EndClass` statements, you may insert any number of function bodies, Property definitions, and other elements. When you fix the Class Script from the editor, these items will be fixed inside the Class namespace.
 
-The contents of the Class Script defines the Class *in its entirety*. You may not add or alter functions by editing them independently and you may not add variables by assignment or remove objects with `⎕EX`.
+The contents of the Class Script defines the Class in its entirety. You cannot add or alter functions by editing them independently and you cannot add variables by assignment or remove objects with `⎕EX`.
 
 When you *re-fix* a Class Script using the Editor or with `⎕FIX`, the original Class is discarded and the new definition, as specified by the Script, replaces the old one in its entirety.
 

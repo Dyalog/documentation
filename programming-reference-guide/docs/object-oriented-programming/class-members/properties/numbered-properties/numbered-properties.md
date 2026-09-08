@@ -10,6 +10,6 @@ If the expression uses indexing, APL checks that the index or indices are within
 
 If the expression references or assigns the entire Property (without indexing) APL generates a set of indices for every element of the Property and calls the PropertyGet or PropertySet function successively for every element in the Property.
 
-APL generates a `RANK ERROR` if an index contains the wrong number of elements or an `INDEX ERROR` if an index is out of bounds.
+APL generates a `RANK ERROR` if an index contains the wrong number of elements, or an `INDEX ERROR` if an index is out of bounds.
 
 When APL calls a monadic PropertyGet or PropertySet function, it supplies an argument of type PropertyArguments.

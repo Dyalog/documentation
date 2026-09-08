@@ -24,7 +24,7 @@ However, a Method declared as being `Overridable` is replaced in situ (that is, 
 
 ## Nested Classes
 
-The `:Access` statement is also used to control the visibility of one Class that is defined within another (a nested Class). A Nested Class may be either `Private` or `Public`. The `:Access` statement must precede the definition of any Class contents.
+The `:Access` statement is also used to control the visibility of one Class that is defined within another (a nested Class). A Nested Class can be either `Private` or `Public`. The `:Access` statement must precede the definition of any Class contents.
 
 A `Public` Nested Class is visible from outside its containing Class and may be used directly in its own right, whereas a `Private` Nested Class is not and may only be used by code inside the containing Class.
 

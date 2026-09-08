@@ -19,7 +19,7 @@ Building a *hash table* for the principal argument takes a significant time but 
 
 For optimal performance of *repeated* search operations, the hash table may be retained between calls, by binding the function with its principal argument using the primitive `∘` (_compose_) operator. The retained hash table is then used directly whenever this monadic derived function is applied to a subject argument.
 
-Retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.
+Retaining the hash table pays off only on a second or subsequent application of the derived function. This usually occurs in one of two ways: either the derived function is named for later (and repeated) use, as in the first example below, or it is applied repeatedly as the operand of a primitive or defined operator, as in the second example.
 
 ## Example: naming a derived function.
 ```apl

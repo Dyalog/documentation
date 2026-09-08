@@ -47,7 +47,7 @@ You may use a ref to a namespace anywhere that you would use the namespace itsel
 4 5 6
 ```
 
-Refs are references to namespaces, so that if you make a copy, it is the reference that is copied, not the namespace itself. This is sometimes referred to as a shallow as opposed to a deep copy. It means that if you change a ref, you actually change the namespace that it refers to.
+Refs are references to namespaces, so that if you make a copy, it is the reference that is copied, not the namespace itself. This is sometimes referred to as a _shallow_ as opposed to a deep copy. It means that if you change a ref, you change the namespace that it refers to.
 ```apl
       X.A+←1
       X.A

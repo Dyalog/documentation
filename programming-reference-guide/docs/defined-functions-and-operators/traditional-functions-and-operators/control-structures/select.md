@@ -20,7 +20,7 @@ In this case, the system compares the value of the array expression to the right
 
 Instead of a `:Case` statement, you may also use a `:CaseList` statement.  If so, the *enclose of* the array expression to the right of `:Select` is tested for membership of the array expression to the right of the `:CaseList` using the `∊` primitive function.
 
-Any code placed between the `:Select` and the first `:Case` or `:CaseList` statements is unreachable; future versions of Dyalog APL might generate an error when attempting to fix functions which include such code.
+Any code placed between the `:Select` and the first `:Case` or `:CaseList` statements is unreachable; future versions of Dyalog might generate an error when attempting to fix functions which include such code.
 
 <h2 class="example">Example</h2>
 ```apl

@@ -76,7 +76,7 @@ In each case, the output from the loop is:
 7 8 9
 ```
 
-In the second case, the number of items in the values vector is the same as the number of control variables. A more typical example might be.
+In the second case, the number of items in the values vector is the same as the number of control variables. A more typical example might be:
 ```apl
       :For a b c :InEach avec bvec cvec
           ...
