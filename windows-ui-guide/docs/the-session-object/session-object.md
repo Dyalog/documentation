@@ -17,7 +17,7 @@ An additional feature is provided to establish code in the Session; for more inf
 
 You may use all of the standard GUI system functions to build or configure the components of the Session to your own requirements. You may also control the Session by changing certain of its properties.
 
-Note that the Session reports a Create event when APL is first started, and a [WorkspaceLoaded](./workspaceloaded.md) event when a workspace is loaded or on a clear ws.
+The Session reports a Create event when APL is first started, and a [WorkspaceLoaded](./workspaceloaded.md) event when a workspace is loaded or on a clear ws.
 
 The Session reports a [SessionPrint](./sessionprint.md) event when certain types of output are about to be displayed. This may be used to alter the normal default display. The Session also reports a [SessionTrace](./sessiontrace.md) event when executing when an expression is execute with trace control. This may be used to alter the normal default trace.
 
@@ -112,7 +112,7 @@ The Session caption in a `CLEAR WS` will change to:
      Pete: CLEAR WS Dyalog APL/W-64 19.0
 ```
 
-Note that Caption returns the codified string used to set it.
+Caption returns the codified string used to set it.
 ```apl
      ⎕SE.Caption
 Pete: {WSID} {Product} {VER_A}.{VER_B}

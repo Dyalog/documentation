@@ -4,13 +4,13 @@ The Debugger  provides a tabbed interface that allows you to easily switch betwe
 
 ![](img/debugging-threads-1.png)
 
-In the next picture, the user has chosen to display the *Threads Tool* and then dock it between the Session and Debugger windows. Note that only one thread, thread 0 (`Run`) is suspended. All the other threads are *Paused* (because *Pause on Error* is enabled).
+In the next picture, the user has chosen to display the *Threads Tool* and then dock it between the Session and Debugger windows. Only one thread, thread 0 (`Run`), is suspended. All the other threads are *Paused* (because *Pause on Error* is enabled).
 
 ![](img/debugging-threads-2.png)
 
-The user then uses the context menu to *Switch To* Thread 14 (whose name is `Lady 14`) which was Paused on `PERSON[7]` in the middle of a `⎕TGET`. The act of switching to this thread caused it to be suspended at the beginning of its current line `PERSON[7]` and the Debugger now displays two Tabs to represent the two suspended threads. Note that both the thread id and the thread name are displayed on the Tabs.
+The user then uses the context menu to *Switch To* Thread 14 (whose name is `Lady 14`) which was Paused on `PERSON[7]` in the middle of a `⎕TGET`. The act of switching to this thread caused it to be suspended at the beginning of its current line `PERSON[7]` and the Debugger now displays two Tabs to represent the two suspended threads. Both the thread id and the thread name are displayed on the Tabs.
 
-Note also that the Session window is connected to the thread indicated by the selected Tab. In this case, typing `MYFLOOR` into the Session window displays the value of the local variable `MYFLOOR` in Thread 14 (`Lady 14`).
+The Session window is connected to the thread indicated by the selected Tab. In this case, typing `MYFLOOR` into the Session window displays the value of the local variable `MYFLOOR` in Thread 14 (`Lady 14`).
 
 ![](img/debugging-threads-3.png)
 

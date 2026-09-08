@@ -24,7 +24,7 @@ The Spy menu, illustrated above, provides the following options and actions.
 |Clear|Clears all of the event information that is currently displayed in the *Event Viewer* .|
 |Copy|Copies the highlighted rows to the clipboard.|
 |All|In this mode all the events are displayed in the *Event Viewer* as they occur, whether or not there is an action associated with them.|
-|When Placed in Object's Queue|In this mode only events that have associated actions are displayed in the event viewer. Note that KeyPress events are always queued and therefore always appear, even if there is no associated action.|
+|When Placed in Object's Queue|In this mode only events that have associated actions are displayed in the event viewer. KeyPress events are always queued and therefore always appear, even if there is no associated action.|
 |Current Queue State|In this mode the *Event Viewer* displays a snapshot of the internal event queue. Only those events that are currently in the internal APL event queue waiting to be processed are displayed.|
 |Enable Logging|This item switches event logging on and off.|
 |Close|Closes the *Event Viewer*|
