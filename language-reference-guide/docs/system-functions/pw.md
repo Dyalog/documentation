@@ -9,6 +9,8 @@ search:
 
 `⎕PW` may be assigned any integer value in the range 42 to 32767. Note that in versions of Dyalog APL prior to 13.0 `⎕PW` had a minimum value of 30; this was increased to support 128-bit decimal values. `⎕PW` has Session scope.
 
+The value of `⎕PW` in a clear workspace is defined by the [**Default_PW**](../../../dyalog-configuration-guide/configuration-parameters/default-pw) parameter, which is `76` on Microsoft Windows and `79` on UNIX and macOS.
+
 If an attempt is made to display a line wider than `⎕PW`, then the display will be folded at or before the `⎕PW` width and the folded portions indented 6 spaces.  The display of a simple numeric array may be folded at a width less than `⎕PW` so that individual numbers are not split.
 
 `⎕PW` only affects [implicit output](../../../programming-reference-guide/introduction/output) and output through `⎕`.  It does not affect the result of the function Format (`⍕`), of the system function `⎕FMT`, or output through the system functions `⎕ARBOUT` and `⎕ARBIN`, or output through `⍞`.

@@ -4,6 +4,6 @@ The value of [`⎕PW`](../../../language-reference-guide/system-functions/pw) in
 
 Valid values are those of `⎕PW`: an integer from `42` to `32767`.
 
-<!-- REVIEW(default): clear-workspace default for ⎕PW not stated in the migrated source; confirm per operating system. -->
+Default is `76` on Microsoft Windows and `79` on UNIX and macOS.
 
 Related parameters: [Auto_PW](auto-pw.md).

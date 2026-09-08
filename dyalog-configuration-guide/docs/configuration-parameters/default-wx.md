@@ -4,8 +4,7 @@ The value of [`⎕WX`](../../../language-reference-guide/system-functions/wx) in
 
 Valid values are those of `⎕WX`: `0`, `1`, or `3`.
 
-Default is `3`.
-<!-- REVIEW(default): ⎕WX clear-workspace default not stated in the migrated source; confirm (expected 3). -->
+Default is `3` on all platforms.
 
 !!! Info "Information"
     UNIX and macOS versions of Dyalog have no GUI objects, but `⎕SE` is present, so `⎕WX` still affects expressions such as `⎕SE.PropList`.
