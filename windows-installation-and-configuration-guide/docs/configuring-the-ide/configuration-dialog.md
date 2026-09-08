@@ -78,7 +78,7 @@ Table: Configuration dialog box – Output tab
 
 To alter the keystroke associated with a particular action, simply select the action required and press the keystroke. For example, to change the keystroke associated with the action **&lt;UA&gt;** (undo all changes) from (None) to <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>, simply select the corresponding row in the list and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>u</kbd>. If **Confirm before Overwrite** is checked, you will be prompted to confirm or cancel before each and every change is written back to the registry.
 
-Note that clicking on the column headings will sort on that column; shift and mouse click will sort in reverse order.
+Clicking on the column headings sorts on that column; shift and mouse click will sort in reverse order.
 
 ## Saved Responses Tab
 
@@ -173,7 +173,7 @@ Table: Configuration dialog box – Session tab
 |Use log file|[Log_File](../configuration-parameters/log-file.md)|The full pathname of the Session log file|
 |Multiline Input|[Dyalog_LineEditor_Mode](../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether multi-line input is enabled in the Session|
 
-Note: The size-related values in the Session tab are specified as an integer value followed by one of K, M, G, T, P, or E. Where no character is included, the default is K (kilobytes).
+The size-related values in the Session tab are specified as an integer value followed by one of K, M, G, T, P, or E. Where no character is included, the default is K (kilobytes).
 
 ## Trace/Edit Tab
 
@@ -216,13 +216,13 @@ These two actions always appear in the Editor File menu, but you can specify whi
 
 In both cases, you can select either **Only Functions** or **Everything**.
 
-The label for the corresponding items on the Editor File menu (see  Editor (The File Menu, editing a script)) will change according to which behaviour applies. Note that if you specify a keystroke for **&lt;S1&gt;** in the **Keyboard Shortcuts** tab, this will be associated with the unselected action.
+The label for the corresponding items on the Editor File menu (see [The File Menu (editing a script)](../../../windows-ui-guide/editor/#the-file-menu-editing-a-script)) will change according to which behaviour applies. If you specify a keystroke for **&lt;S1&gt;** in the **Keyboard Shortcuts** tab, this will be associated with the unselected action.
 
 ## Auto Complete Tab
 
 ![configuration dialog auto complete tab](../img/configuration-dialog-auto-complete-tab.png)
 
-Note: To enter values in the **OK Key** and **Cancel Key** fields, click on the field with the mouse and then press the desired keystroke.
+To enter values in the **OK Key** and **Cancel Key** fields, click on the field with the mouse and then press the desired keystroke.
 
 Table: Configuration dialog box – Auto Complete tab
 

@@ -4,7 +4,7 @@ This parameter specifies whether Dyalog APL should optimise `⎕FCHK` by allowin
 
 Optimising `⎕FCHK` in this way has a performance impact on `⎕FUNTIE` and it is recommended this optimisation is switched off if your application frequently ties and unties files.
 
-Note: this only affects component files with journaling enabled.
+This only affects component files with journaling enabled.
 
 The values of the parameter are:
 
