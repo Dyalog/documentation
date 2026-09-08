@@ -168,6 +168,7 @@ nav:
           - Dops: defined-functions-and-operators/dfns-and-dops/dynamic-operators.md
           - Restrictions: defined-functions-and-operators/dfns-and-dops/restrictions.md
       - APL Line Editor: defined-functions-and-operators/apl-line-editor.md
+  - Shell Scripts: shell-scripts.md
   - Object Oriented Programming:
       - Introducing Classes:
           - Introducing Classes: object-oriented-programming/introducing-classes/introducing-classes.md

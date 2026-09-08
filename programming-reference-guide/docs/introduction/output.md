@@ -18,7 +18,7 @@ The Session reports a [SessionPrint](../../../object-reference/methodorevents/se
 
 ## Output to Operating-System Streams
 
-When the interpreter is attached to operating-system streams, running as a [shell script](../../../windows-installation-and-configuration-guide/shell-scripts), or started from a terminal with its streams redirected, each type of output is written to either standard output (stdout) or standard error (stderr) as identified in [](#outputtype):
+When the interpreter is attached to operating-system streams, running as a [shell script](../shell-scripts.md), or started from a terminal with its streams redirected, each type of output is written to either standard output (stdout) or standard error (stderr) as identified in [](#outputtype):
 
 Table: Types of output and their stream { #outputtype }
 
