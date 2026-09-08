@@ -5,7 +5,7 @@ search:
 
 # <span>Unique</span> `R←∪Y`{{key}}
 
-`Y` may be any array. The result `R` has the same rank as `Y`, unless `Y` is a scalar, in which case `R` is a one-element vector. The major cells of `R` are the unique [major cells](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays) of `Y` (the unique elements of a vector, the unique rows of a matrix, and so forth), in the order in which they first appear in `Y`.
+`Y` may be any array. The result `R` has the same rank as `Y`, unless `Y` is a scalar, in which case `R` is a one-element vector. The [major cells](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays) of `R` are the unique major cells of `Y` (the unique elements of a vector, the unique rows of a matrix, and so on), in the order in which they first appear in `Y`.
 
 `⎕CT` and `⎕DCT` are implicit arguments of _unique_.
 
