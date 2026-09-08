@@ -1,7 +1,9 @@
 
 # Shell Scripts
 
-Shell scripts are typically executed  from a terminal (or *shell*).
+A Dyalog APL shell script is a text file of APL code, run by the program **dyalogscript**. On Microsoft Windows these files have the file extension **.apls**.
+
+Shell scripts are typically executed from a terminal (or *shell*).
 
 A script is executed by typing its name. User input is entered from the same terminal or shell and output is displayed on the terminal or shell.
 
