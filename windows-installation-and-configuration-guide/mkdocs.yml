@@ -212,7 +212,6 @@ nav:
   - Interface with Windows: interface-with-windows.md
   - Auxiliary Processors: auxiliary-processors.md
   - Access Control for External Variables: access-control-for-external-variables.md
-  - Shell Scripts: shell-scripts.md
   - Creating Executables: creating-executables.md
   - Run-Time Applications and Components: runtime-applications-and-components.md
   - Run-Time Applications Additional Considerations: runtime-applications-additional.md
