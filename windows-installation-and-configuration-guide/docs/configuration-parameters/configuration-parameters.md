@@ -37,7 +37,7 @@ Specifying an invalid value will prevent Dyalog APL from starting.
 
 You can change parameters in the Registry in one of two ways:
 
-- Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See ["The Configuration Dialog Box"](../configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) for details.
+- Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See [The Configuration Dialog Box](../configuring-the-ide/configuration-dialog.md) for details.
 - By directly editing the Windows Registry using `REGEDIT.EXE` or `REGEDIT32.EXE`. This is necessary for parameters that are not editable via the Configuration dialog box.
 
 ## References to Other Configuration Parameters

@@ -4,4 +4,4 @@ This parameter specifies the size of the buffer that is used to store programmab
 
 For further details about defining a valid value for this parameter, see [Specifying Size-related Parameters](./configuration-parameters.md).
 
-See also [PFKey buffer size](../configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md).
+See also [PFKey buffer size](../configuring-the-ide/configuration-dialog.md#session-tab).

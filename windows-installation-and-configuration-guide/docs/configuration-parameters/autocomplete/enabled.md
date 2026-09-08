@@ -2,4 +2,4 @@
 
 This parameter specifies whether or not Auto Completion is enabled
 
-See also [Use Auto Complete](../../configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md).
+See also [Use Auto Complete](../../configuring-the-ide/configuration-dialog.md#auto-complete-tab).

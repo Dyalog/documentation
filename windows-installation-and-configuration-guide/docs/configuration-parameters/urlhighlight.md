@@ -13,4 +13,4 @@ Currently a URL string is defined to be a string starting with any of the follow
 - www.
 - mailto:
 
-See also [Underline URLs and links](../configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md).
+See also [Underline URLs and links](../configuring-the-ide/configuration-dialog.md#general-tab).
