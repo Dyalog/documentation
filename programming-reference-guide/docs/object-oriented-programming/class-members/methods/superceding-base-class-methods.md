@@ -23,6 +23,6 @@ In your derived class, you might supersede this by a more sophisticated error ha
      ∇
 ```
 
-If the derived class had a function which was not marked Override, then function in the derived class which called `ErrorHandler` would call the function as defined in the derived class, but if a function in the base class called `ErrorHandler`, it would still see the base class version of this function. With Override specified, the new function supersedes the function as seen by code in the base class. Note that different derived classes can specify different Overrides.
+If the derived class had a function which was not marked Override, then function in the derived class which called `ErrorHandler` would call the function as defined in the derived class, but if a function in the base class called `ErrorHandler`, it would still see the base class version of this function. With Override specified, the new function supersedes the function as seen by code in the base class. Different derived classes can specify different Overrides.
 
 In C#, Java and some other compiled languages, the term *Virtual* is used in place of *Overridable*, which is the term used by Visual Basic and Dyalog APL.

@@ -35,7 +35,7 @@ When you `)SAVE` your workspace, Dyalog APL first performs a workspace integrity
 
 A System Error code is displayed in the dialog box and should be reported to Dyalog for diagnosis. This information also appears in the Interesting Information section of the *aplcore* file.
 
-Note that the internal error that caused the discrepancy could have occurred at any time prior to the execution of `)SAVE` and it may not be possible for Dyalog to identify the cause from this *aplcore* file.
+The internal error that caused the discrepancy could have occurred at any time prior to the execution of `)SAVE`, and it might not be possible for Dyalog to identify the cause from this *aplcore* file.
 
 If APL is started in debug mode with the **-Dc**, **-Dw** or **-DW** flags, the Workspace Integrity check is performed more frequently, and it is more likely that the resulting *aplcore* file will contain information that will allow the problem to be identified and corrected. It is also possible to enable or alter the debugging level from within APL using the SetDFlags method; Dyalog support will direct the use of this feature when necessary.
 
@@ -54,11 +54,12 @@ Non-specific System Errors are the result of Operating System exceptions that ca
 
 ## Recovering Data from aplcore files
 
-Objects may often (but not always) be recovered from *aplcore* using `)COPY` or `⎕CY`. Note that  if the *aplcore* contains a workspace with more than one instance of the same name on the stack, `⎕CY` copies the most local object whereas `)COPY` copies the global one.
+Objects may often (but not always) be recovered from *aplcore* using `)COPY` or `⎕CY`. If the *aplcore* contains a workspace with more than one instance of the same name on the stack, `⎕CY` copies the most local object whereas `)COPY` copies the global one.
 
 Be aware that in many cases an attempt to `)COPY` from or `)LOAD` an *aplcore* is likely to result in a further syserror; this may result in the original *aplcore* being overwritten, thus losing the contents of that file. It is therefore worth while taking a copy of the *aplcore* before attempting to `)COPY` from it. Attempting to copy specific items is more likely to be successful than copying the entire workspace from the aplcore.
 
-Note that in previous versions under Windows because (by default) the *aplcore* file has no extension, it was necessary to explicitly add a dot, or APL would attempt to find the non-existent file `aplcore.dws`. This is no longer true in version 14.1 onwards.
+!!! Legacy "Legacy"
+    Prior to Dyalog v14.1 under Microsoft Windows, because (by default) the *aplcore* file has no extension, it was necessary to explicitly add a dot, or APL would attempt to find the non-existent file `aplcore.dws`.
 
 ## Reporting Errors to Dyalog
 
@@ -90,7 +91,7 @@ The System Error Dialog illustrated below was produced by deliberately inducing 
      ∇
 ```
 
-Note: Under a 32-bit interpreter the `⎕NA` call should refer to dyalog32.
+Under a 32-bit interpreter, the `⎕NA` call should refer to `dyalog32`.
 
 ![syserror](../img/syserror.png)
 
@@ -137,7 +138,8 @@ goo[1]
 foo[1]
 ```
 
-Note: Dyalog recommends that enabling [**ErrorOnExternalException**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) should only be done while developing or debugging an application; ignoring such errors may result in corruption in the workspace which could result to unexpected errors later in the application.
+!!! Hint "Hints and Recommendations"
+    Dyalog Ltd recommends that you only enable [**ErrorOnExternalException**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) while developing or debugging an application; ignoring such errors might result in corruption in the workspace, which could lead to unexpected errors later in the application.
 
 ## What should I do if Dyalog hangs?
 

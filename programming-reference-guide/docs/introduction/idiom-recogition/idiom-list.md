@@ -120,7 +120,7 @@ Among other examples, this idiom optimises repeated catenation of a scalar or ve
       vector,←2+4
 ```
 
-Note that the idiom is not applied if the value of vector `V` is shared with another symbol in the workspace, as illustrated in the following examples:
+The idiom is not applied if the value of vector `V` is shared with another symbol in the workspace, as illustrated in the following examples:
 
 Example 1: the idiom is used to perform the catenation to `V1`.
 ```apl
