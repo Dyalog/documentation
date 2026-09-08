@@ -1,7 +1,7 @@
 # APLTn
 
 !!! Info "Information"
-    This configuration parameter is only relevant when using the Classic edition of Dyalog on the UNIX and macOS operating systems.
+    This configuration parameter is only relevant when using the Classic edition of Dyalog on Unix.
 
 An output translate table that overrides [`APLT`](aplt.md), if set. The name ends with a digit (for example `APLT0`), so that more than one can be defined. It takes precedence over the table implied by the terminal type.
 

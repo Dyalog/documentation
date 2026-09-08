@@ -8,7 +8,7 @@ The name of the Output Translate Table.
 Valid values are the name of an output translate table.
 
 Default is `WIN.DOT` on Microsoft Windows, where there is rarely a need to alter it.
-<!-- REVIEW(default): confirm the default on UNIX and macOS. -->
+<!-- REVIEW(default): confirm the default on Unix. -->
 
 Related parameters: [APLTrans](apltrans.md).
 

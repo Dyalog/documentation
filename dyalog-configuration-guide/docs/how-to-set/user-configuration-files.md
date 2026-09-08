@@ -4,7 +4,7 @@ A *user configuration file* defines configuration values for the current (and po
 
 A user configuration file setting overrides the Registry and the built-in default, but is overridden by an environment variable, an application configuration file, and the command line (see [Order of Precedence](order-of-precedence.md)).
 
-## UNIX and macOS
+## Unix
 
 The first time a new version of Dyalog is launched it creates and initialises a version-specific user configuration file `$HOME/.dyalog/dyalog.<version-specific>.dcfg`, where the version-specific part comprises the version number, edition, and width. For example, a 64-bit Unicode edition of Dyalog 21.0 is identified as `210U64`. The name of this file should not be changed.
 

@@ -10,7 +10,7 @@ Valid values are:
 Default depends on operating system:
 
 - Microsoft Windows: `0`
-- UNIX and macOS: `1`
+- Unix: `1`
 
 Related parameters: [Trace_Level_Warn](trace-level-warn.md).
 

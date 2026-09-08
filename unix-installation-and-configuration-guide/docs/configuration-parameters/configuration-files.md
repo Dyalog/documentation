@@ -8,4 +8,4 @@ Configuration files and their structure are documented, for all platforms, in th
 - [User Configuration Files](../../../dyalog-configuration-guide/how-to-set/user-configuration-files)
 - [Configuration File Structure](../../../dyalog-configuration-guide/how-to-set/configuration-file-structure)
 
-On UNIX and macOS, user configuration files are held in `$HOME/.dyalog/`.
+On Unix, user configuration files are held in `$HOME/.dyalog/`.

@@ -4,6 +4,6 @@ The name of the file from which the Session (`⎕SE`) is loaded when Dyalog star
 
 Default is `[DYALOG]/default.dse` (the `default.dse` file in the Dyalog installation directory).
 
-<!-- REVIEW(default): confirmed for UNIX/macOS from the Unix guide ($DYALOG/default.dse); confirm the Microsoft Windows default. -->
+<!-- REVIEW(default): confirmed for Unix from the Unix guide ($DYALOG/default.dse); confirm the Microsoft Windows default. -->
 
 See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.

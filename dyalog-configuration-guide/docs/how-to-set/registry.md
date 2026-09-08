@@ -1,7 +1,7 @@
 # Registry
 
 !!! Info "Information"
-    The Windows Registry applies to Microsoft Windows only. On UNIX and macOS there is no Registry.
+    The Windows Registry applies to Microsoft Windows only. On Unix there is no Registry.
 
 On Microsoft Windows, configuration parameters can be stored in the Registry. A Registry setting overrides only the built-in default; every other source overrides it (see [Order of Precedence](order-of-precedence.md)).
 

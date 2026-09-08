@@ -2,7 +2,7 @@
 
 One or more *Session initialisation* directories containing APL code to be installed in `⎕SE`.
 
-Valid values are a list of directory names, separated by `;` (Windows) or `:` (UNIX and macOS). If the value begins with the separator, the default list is *extended* rather than *replaced*.
+Valid values are a list of directory names, separated by `;` (Windows) or `:` (Unix). If the value begins with the separator, the default list is *extended* rather than *replaced*.
 
 Default is a directory named `StartupSession` in the standard locations. On Windows these might be:
 

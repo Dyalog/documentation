@@ -1,7 +1,7 @@
 # APLSTATUSFD
 
 !!! Info "Information"
-    This configuration parameter is only relevant on the UNIX and macOS operating systems.
+    This configuration parameter is only relevant on Unix.
 
 The number of the output stream (file descriptor) on which messages for the Status window are written. Setting it allows this output to be redirected when Dyalog is started.
 

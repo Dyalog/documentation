@@ -1,7 +1,7 @@
 # APLK0
 
 !!! Info "Information"
-    This configuration parameter is only relevant when using the Classic edition of Dyalog on the UNIX and macOS operating systems.
+    This configuration parameter is only relevant when using the Classic edition of Dyalog on Unix.
 
 An input translate table that overrides [`APLK`](aplk.md), if set. It takes precedence over the table implied by the terminal type.
 

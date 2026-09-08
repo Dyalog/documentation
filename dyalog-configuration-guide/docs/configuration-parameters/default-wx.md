@@ -7,6 +7,6 @@ Valid values are those of `⎕WX`: `0`, `1`, or `3`.
 Default is `3` on all platforms.
 
 !!! Info "Information"
-    UNIX and macOS versions of Dyalog have no GUI objects, but `⎕SE` is present, so `⎕WX` still affects expressions such as `⎕SE.PropList`.
+    Unix versions of Dyalog have no GUI objects, but `⎕SE` is present, so `⎕WX` still affects expressions such as `⎕SE.PropList`.
 
 See also [Expose properties of GUI Namespaces](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab) in the Windows Configuration Dialog.

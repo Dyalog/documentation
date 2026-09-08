@@ -1,6 +1,6 @@
 # Auto_PW
 
-Whether the value of [`⎕PW`](../../../language-reference-guide/system-functions/pw) is derived automatically from the current width of the Session (Windows) or terminal (UNIX and macOS) window.
+Whether the value of [`⎕PW`](../../../language-reference-guide/system-functions/pw) is derived automatically from the current width of the Session (Windows) or terminal (Unix) window.
 
 Valid values are:
 
@@ -10,7 +10,7 @@ Valid values are:
 Default depends on operating system:
 
 - Microsoft Windows: `0`
-- UNIX and macOS: when unset, behaves as `1` (`⎕PW` tracks the terminal width, updated when the interpreter next checks for input)
+- Unix: when unset, behaves as `1` (`⎕PW` tracks the terminal width, updated when the interpreter next checks for input)
 
 Related parameters: [Default_PW](default-pw.md).
 

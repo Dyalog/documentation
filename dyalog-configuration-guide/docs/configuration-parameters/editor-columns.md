@@ -1,7 +1,7 @@
 # EDITOR_COLUMNS
 
 !!! Info "Information"
-    This configuration parameter is only relevant on the UNIX and macOS operating systems.
+    This configuration parameter is only relevant on Unix.
 
 The columns shown in the Editor, set separately for each type of object. There is one parameter per object type:
 

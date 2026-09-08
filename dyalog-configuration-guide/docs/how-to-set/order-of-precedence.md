@@ -10,6 +10,6 @@ When a configuration parameter is set in more than one place, Dyalog applies the
 6. [Built-in defaults](built-in-defaults.md)
 
 !!! Info "Information"
-    The Registry step applies to Microsoft Windows only. On UNIX and macOS there is no Registry, so a user configuration file setting is overridden only by the sources above it.
+    The Registry step applies to Microsoft Windows only. On Unix there is no Registry, so a user configuration file setting is overridden only by the sources above it.
 
 The value actually in force for a given parameter, after the precedence rules have been applied, can be queried from within Dyalog with `2 ⎕NQ '.' 'GetEnvironment' name` or with the `]Config` user command.

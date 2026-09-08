@@ -10,4 +10,4 @@ Valid values are:
 Default is `1`, except when Dyalog is not running under a desktop (for example, in a PuTTY session), where the default is `0`.
 
 !!! Info "Information"
-    The value of **Enable_CEF** in the Windows Registry or a configuration file is currently ignored; only a value set on the command line or as an environment variable is honoured, otherwise the default is used. Under UNIX and macOS, Auxiliary Processors cannot be used while CEF is enabled.
+    The value of **Enable_CEF** in the Windows Registry or a configuration file is currently ignored; only a value set on the command line or as an environment variable is honoured, otherwise the default is used. Under Unix, Auxiliary Processors cannot be used while CEF is enabled.

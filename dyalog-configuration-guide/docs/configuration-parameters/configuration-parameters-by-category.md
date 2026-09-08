@@ -53,7 +53,7 @@ These set the values that system variables and related flags take in a clear wor
 |[`Default_PW`](default-pw.md)|The value of `⎕PW` in a clear workspace|
 |[`Default_RTL`](default-rtl.md)|The value of `⎕RTL` (response time limit) in a clear workspace|
 |[`Default_WX`](default-wx.md)|The value of `⎕WX` in a clear workspace|
-|[`Auto_PW`](auto-pw.md)|Whether the value of `⎕PW` is derived automatically from the current width of the Session (Windows) or terminal (UNIX and macOS) window|
+|[`Auto_PW`](auto-pw.md)|Whether the value of `⎕PW` is derived automatically from the current width of the Session (Windows) or terminal (Unix) window|
 |[`PropertyExposeRoot`](propertyexposeroot.md)|The default value, in a clear workspace, of the flag that specifies whether the names of the properties, methods, and events of the Root object are exposed|
 |[`PropertyExposeSE`](propertyexposese.md)|The default value, in a clear workspace, of the flag that specifies whether the names of the properties, methods, and events of the Session object (`⎕SE`) are exposed|
 
@@ -269,9 +269,9 @@ These control the user-command framework.
 |----|-----------|
 |[`UCMDCacheFile`](ucmdcachefile.md)|The name of the User Command cache file|
 
-## UNIX and macOS specific
+## Unix specific
 
-These parameters are only relevant on the UNIX and macOS operating systems.
+These parameters are only relevant on Unix.
 
 |Name|Description|
 |----|-----------|
