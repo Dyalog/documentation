@@ -54,7 +54,7 @@ This would establish a valid date window, ten years either side of the current y
 
 One way of looking at the **yy_window** variable is that it specifies a 2-element vector. If you supply only the first element, the second one defaults to the first element + 99.
 
-The system uses only the number of digits in the year specification to determine whether it refers to a fixed (4-digits) or sliding (1-, or 2-digits) window. In fact you can have a fixed lower limit and a sliding upper limit, or vice versa.
+The system uses only the number of digits in the year specification to determine whether it refers to a fixed (4-digits) or sliding (1-, or 2-digits) window. You can have a fixed lower limit and a sliding upper limit, or the other way round.
 
 YY_WINDOW=1990,10
 

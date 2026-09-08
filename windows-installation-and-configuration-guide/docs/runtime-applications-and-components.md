@@ -1,9 +1,9 @@
 # Run-Time Applications and Components
 
-Using Dyalog APL you may create different types of run-time applications and components.
+You can use Dyalog to create different types of run-time applications and components.
 
 !!! Warning "Warning"
-    The distribution of run-time applications and components requires a Dyalog APL Run-Time Agreement. Please contact Dyalog Ltd or your distributor, or see the Dyalog web page for more information.
+    The distribution of run-time applications and components requires a Dyalog Run-Time Licence. Please contact Dyalog Ltd or your distributor, or see the Dyalog website for more information.
 
 For a list of the distributable components and their corresponding file names, for the different versions of Dyalog, see [Files](files-and-directories.md). These components are referred to in hereafter by the name shown in the first column of the table. It is essential that you distribute the components that are appropriate for the Edition you are using.
 

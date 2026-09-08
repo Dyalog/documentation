@@ -50,7 +50,7 @@ External variables are subject to the same restrictions as small-span component 
 
 There is complete interoperability between 32- and 64-bit interpreters, except that 32-bit interpreters are unable to work with arrays or workspaces greater than 2GB in size.
 
-However, under Microsoft Windows, a 32-bit version of Dyalog APL can only access 32-bit DLLs, and a 64-bit version of Dyalog APL can only access 64-bit DLLs. This is a Windows restriction.
+However, under Microsoft Windows, a 32-bit version of Dyalog can only access 32-bit DLLs, and a 64-bit version of Dyalog can only access 64-bit DLLs. This is a Windows restriction.
 
 ## Unicode vs. Classic Editions
 
