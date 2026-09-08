@@ -12,4 +12,4 @@ Several issues related to corner-cases of the _stencil_ operator ([`⌺`](https:
 
 ## JSON Stings
 
-JSON strings cannot contain non-Unicode characters. If a character array contains an invalid Unicode character (that is, a character in the Unicode range U+D800-U+DFFF or greater than U+10FFFF) it is now replaced by the Unicode replacement character U+FFFD when generating a JSON string using `1∘⎕JSON` (and in other places where the interpreter generates JSON).
+JSON strings must only contain valid Unicode characters, that is, characters in the Unicode ranges U+0000-U+D7FF and U+E000-U+10FFFF. If a character array contains an invalid Unicode character, it is now replaced by the Unicode replacement character U+FFFD when generating a JSON string using `1∘⎕JSON` (and in other places where the interpreter generates JSON).
