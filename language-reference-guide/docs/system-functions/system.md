@@ -47,7 +47,7 @@ The command line used to start the current executable, split on unquoted space s
 
 <h4>CommandLine.CodeArgs</h4>
 
-This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#commandlineargs) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
+This member is intended to ease usage of APL shell scripts. It is equivalent to [CommandLink.Args](#commandline) but omits everything up to and including `-script`. If Dyalog is started without `-script` then nothing is omitted.
 
 <h4>CommandLine.Full</h4>
 
@@ -274,7 +274,7 @@ A three-element integer vector:
 - AIX: version and release number, followed by a `0`
 
 !!! Warning "Warning"
-    Microsoft has made both Windows 10 and Windows 11 report their version as "10", but [`⎕SYSTEM.OS.Description`](#os-description) includes the number "11" on Windows 11.
+    Microsoft has made both Windows 10 and Windows 11 report their version as "10", but [`⎕SYSTEM.OS.Description`](#os) includes the number "11" on Windows 11.
     
     The following expression will determine whether a reported version 10 is truly 10: `((10=⊃)∧22000>⊢/)⎕SYSTEM.OS.Version`.
 
