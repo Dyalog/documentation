@@ -4,4 +4,4 @@ This parameter specifies the value of `⎕PW` in a clear workspace. `⎕PW` is a
 
 Valid values are those of `⎕PW`: an integer from `42` to `32767`.
 
-The default is `76` on Microsoft Windows and `79` on UNIX and macOS.
+The default is `76` on Microsoft Windows and `79` on Unix.
