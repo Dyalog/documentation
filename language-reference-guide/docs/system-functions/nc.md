@@ -454,7 +454,7 @@ The same is true of Instances of .NET Classes (Types) whether created using `⎕
 9.2 9.2
 ```
 
-If you remove the GUI component of a GUI object, using the Detach method, it reverts to a plain namespace.
+If you remove the GUI component of a GUI object using the Detach method, it reverts to a plain namespace.
 ```apl
       F.Detach
       ⎕NC⊂,'F'
@@ -493,7 +493,7 @@ Classes created using the editor or `⎕FIX` have name-class 9.4.
 9.4 9.4
 ```
 
-The name of the Class is visible to a Public Method in that Class, or an Instance of that Class.
+The name of the Class is visible to a Public Method in that Class or an Instance of that Class.
 ```apl
       MyClass.NameClass'MyClass'
 9

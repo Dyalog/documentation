@@ -47,7 +47,7 @@ Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper
 
 ```
 
-Refs in `Y` are not followed but just returned unchanged.
+Refs in `Y` are not followed but returned unchanged.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

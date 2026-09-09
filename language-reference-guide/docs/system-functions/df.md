@@ -63,7 +63,7 @@ PQRST
 5 5
 ```
 
-`⎕DF` defines the Display Form statically, rather than dynamically.
+`⎕DF` defines the Display Form statically rather than dynamically.
 ```apl
 
       'F'⎕WC'Form' 'This is the Caption'

@@ -38,7 +38,7 @@ r←1+arg
  :EndClass
 ```
 
-The only two ways to permanently alter the source of a scripted object are to change the object in the editor, or to refix it using `⎕FIX`.
+The only two ways to permanently alter the source of a scripted object are to either change the object in the editor or to refix it using `⎕FIX`.
 
 !!! Hint "Hints and Recommendations"
     A useful technique to ensure that a scripted object is in sync with its source is to `⎕FIX ⎕SRC ref`, where `ref` is an object reference.

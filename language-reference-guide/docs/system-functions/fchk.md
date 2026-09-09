@@ -73,7 +73,7 @@ To forcibly check a file and attempt to fix it if damage is found:
 
 ## Specifying Options Using a Left Argument
 
-Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'` and `'rebuild'`, which determine the detailed operation of the function. These options are case-insensitive.
+Using the optional left-argument, `X` must be a vector of zero or more character vectors from among `'force'`, `'repair'`, and `'rebuild'`, which determines the detailed operation of the function. These options are case-insensitive.
 
 - If `X` contains `'force'`, `⎕FCHK` will validate the file, even if it appears to have been cleanly untied.
 - If `X` contains `'repair'`, `⎕FCHK` will repair the file, following validation, if it appears to be damaged. This option can be used in conjunction with `'force'`.

@@ -33,7 +33,7 @@ Following items determine the shape of the mapped array. A value of `¯1` on any
 
 If no left argument is given, file is assumed to contain a simple APL array, complete with header information (type, rank, shape, etc.). Such mapped files may only be updated by changing the associated array using indexed/pick assignment: `var[a]←b`, the new values must be of the same type as the originals.
 
-A *raw* mapped file can be updated *only* if its *file offset* is 0. Microsoft Windows does not support mapped files of zero length.
+A raw mapped file can only be updated if its *file offset* is 0. Microsoft Windows does not support mapped files of zero length.
 
 <h2 class="example">Examples</h2>
 
@@ -67,7 +67,7 @@ Then, map a read-write variable:
       var←⎕MAP'c:\myvar' 'w' 
 ```
 
-A mapped array need not be *named*. In the following example, a 'raw' file is mapped, summed and released, all in a single expression:
+A mapped array does not need to be _named_. In the following example, a 'raw' file is mapped, summed, and released, all in a single expression:
 ```apl
       +/163 ¯1 ⎕MAP'c:\shorts.dat'
 42

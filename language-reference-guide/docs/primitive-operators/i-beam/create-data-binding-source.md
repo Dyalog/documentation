@@ -63,7 +63,7 @@ In this case, `Y` specifies the name of a variable which is one of the following
 
 `X` (if specified) defines the binding type for the bind variable named by `Y` and is a single .NET Type.
 
-In the following examples, the reason for expunging the name first is discussed in the section headed Rebinding a Variable.
+In the following examples, the reason for expunging the name first is discussed under [Rebinding a Variable](#rebinding-a-variable).
 
 ## Binding a Character Vector
 

@@ -173,7 +173,7 @@ This namespace provides information about network identity.
 The name of the machine, which is the [hostname](https://en.wikipedia.org/wiki/Hostname) under Unix and the [NetBIOS name](https://en.wikipedia.org/wiki/NetBIOS#NetBIOS_name) under Microsoft Windows.
 
 <h4>Host.DNSDomainName</h4>
-
+On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the identifier of the currently logged-in user. This is always a character vector, even on Unix where the value looks like a number.
 The [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) domain of the machine.
 
 <h4>Host.EffectiveUserId</h4>

@@ -26,7 +26,7 @@ If `X` is specified, it may be any array and `f` may be any dyadic function that
 
 The sub-arrays of `R` are the results of the individual applications of `f`. If these results differ in rank or shape, they are extended to a common rank and shape in the manner of _mix_. See [Mix](../primitive-functions/mix.md).
 
-It is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y` because `⍤` binds tighter to its right operand than `⊢` does to its left argument, and `⊢` therefore resolves to _identity_.
+It is necessary to prevent the right operand `k` binding to the right argument. This can be done using parentheses, for example, `(f⍤1)Y`. The same can be achieved using  `⊢`, for example, `f⍤1⊢Y`, because `⍤` binds tighter to its right operand than `⊢` does to its left argument, meaning that `⊢` resolves to _identity_.
 
 ## Monadic Examples
 

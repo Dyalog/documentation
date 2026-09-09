@@ -85,7 +85,7 @@ If the function does not have an inverse, a negative argument `g` generates `DOM
 ```
 
 !!! Warning "Warning"
-    Some expressions, such as the following, will cause an infinite internal loop and APL will appear to hang. In most cases this can be resolved by issuing a hard INTERRUPT.
+    Some expressions, such as the following, will cause an infinite internal loop and Dyalog will appear to hang. In most cases this can be resolved by issuing a hard INTERRUPT.
     ```apl
       !⍣-1
       !⍣-2

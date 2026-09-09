@@ -93,7 +93,7 @@ VALUE ERROR
 
 ### File Extension
 
-Under Windows, if the file extension is omitted, **.dll** is assumed. Some DLLs are in fact **.exe** files, and in this case the extension must be specified explicitly:
+Under Microsoft Windows, if the file extension is omitted, **.dll** is assumed. Some DLLs are **.exe** files; in this case the extension must be specified explicitly:
 ```apl
       ⎕NA'... mydll.exe|foo ...'
 ```
@@ -331,7 +331,7 @@ For example:
 
 ## Using a Function
 
-A DLL function may or may not return a result, and may take zero or more arguments. This syntax is reflected in the coding of the right argument of `⎕NA`. However, the corresponding associated APL function is a result-returning niladic (if it takes no arguments) or monadic function. It cannot be dyadic and it must *always* return a vector result - a null one if there is no output from the DLL function. See Result Vector section below. Examples of the various combinations are:
+A DLL function might or might not return a result, and can take zero or more arguments. This syntax is reflected in the coding of the right argument of `⎕NA`. However, the corresponding associated APL function is a result-returning niladic (if it takes no arguments) or monadic function. It cannot be dyadic, and it must *always* return a vector result – a null one if there is no output from the DLL function. See [Result Vector](#result-vector). Examples of the various combinations are:
 
 ### DLL function Non-result-returning
 ```apl
@@ -640,7 +640,7 @@ To copy data *from* the workspace *into* an already allocated (`new`) structure:
       put (new+4) 'Peep' 20
 ```
 
-In this example, you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which would probably cause the application to fail.
+In this example, you must ensure that names no longer than 19 characters are passed to `put`. More than 19 characters would not leave `STRNCPY` enough space to include the trailing null, which could cause the application to fail.
 
 ### STRNCPYA
 
@@ -720,7 +720,7 @@ The Microsoft Windows function `MessageBox` displays a standard dialog box on th
 int MessageBox(HWND, LPCSTR, LPCSTR, UINT);
 ```
 
-The following statements provide access to this routine through an APL function of the same name. The 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays which ensures portability between Editions.
+The following statements provide access to this routine through an APL function of the same name. The 2nd and 3rd arguments are both coded as input pointers to type T null-terminated character arrays, which ensures portability between Editions.
 ```apl
       ⎕NA 'I user32|MessageBox* P <0T <0T U'
 ```
@@ -736,7 +736,7 @@ The function works equally well in the Unicode Edition because the `<0T` specifi
 ```
 
 !!! Hint "Hints and Recommendations"
-    A simpler, portable (and safer) method for displaying a Message Box is to use Dyalog's primitive `MsgBox` object.
+    A simpler, portable (and safer) method for displaying a Message Box is to use Dyalog's primitive [`MsgBox`](../../../object-reference/objects/msgbox) object.
 
 ### FindWindow()
 
@@ -811,7 +811,7 @@ In this case, the second argument is coded as `=0T`, so when the function is cal
 
 ### GetCharWidth()
 
-The function `GetCharWidth` returns the width of each character in a given range. Its first argument is a device context (handle).  Its second and third arguments specify font positions (start and end).  The third argument is the resulting integer vector that contains the character widths (this is an example of an output array).  The function returns a Boolean value to indicate success or failure.  The function is defined as follows. This function is provided in the library: `gdi32.dll`.
+The function `GetCharWidth` returns the width of each character in a given range. Its first argument is a device context (handle).  Its second and third arguments specify font positions (start and end).  The third argument is the resulting integer vector that contains the character widths (this is an example of an output array).  The function returns a Boolean value to indicate success or failure. This function is provided in the library **gdi32.dll** and is defined as follows:
 
 ```c
 BOOL GetCharWidth(HDC, UINT, UINT, LPINT);

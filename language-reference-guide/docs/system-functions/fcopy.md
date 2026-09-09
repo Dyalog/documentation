@@ -19,9 +19,9 @@ Unless otherwise specified (see File Properties below) the new file `X` will hav
 
 The result `R` is the file tie number associated with the new file `X`.
 
-The Access Code is 4609, which is the sum of the Access Codes for `⎕FREAD` (1), `⎕FRDCI` (512) and `⎕FRDAC` (4096).
+The Access Code is 4609, which is the sum of the Access Codes for `⎕FREAD` (1), `⎕FRDCI` (512), and `⎕FRDAC` (4096).
 
-Although the file need not be tied exclusively, the `⎕FCOPY` function does not yield the file to other APL processes while it is running, and it might take some considerable time to run in the case of a large component file.
+Although the file need not be tied exclusively, the `⎕FCOPY` function does not yield the file to other APL processes while it is running, and it might take a considerable time to run in the case of a large component file.
 
 <h2 class="example">Example</h2>
 ```apl

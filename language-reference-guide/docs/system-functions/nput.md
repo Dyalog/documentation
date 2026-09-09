@@ -96,7 +96,7 @@ In the second example, none of the line endings are normalised so the written fi
 In the third example, all of the line endings are normalised so the written file contains lines ending with CRLF, CRLF and CRLF.
 
 !!! Warning "Warning"
-    If two or more APL processes separately write to a file using `⎕NPUT` the behaviour is undefined. In particular, if multiple APLs use `⎕NPUT` with flags set to 2 (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
+    If two or more APL processes separately write to a file using `⎕NPUT`, the behaviour is undefined. In particular, if multiple APL processes use `⎕NPUT` with flags set to `2` (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

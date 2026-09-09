@@ -230,7 +230,7 @@ The pattern has two subpatterns - (`A`) and (`B`). Therefore Offsets and Lengths
 
 When `ABC` is searched the first match is the `A` in the first subpattern. The second subpattern does not feature. Offsets is `0 0` and Lengths is `1 1`: the entire pattern matched from offset 0 length 1 and the first subpattern also matched from offset 0 length 1. The second subpattern did not feature in the match.
 
-`¯1` is only used as a "filler" when there are higher-numbered subpatterns that did match.
+`¯1` is only used as a "filler" when there are higher-numbered subpatterns that match.
 
 The second match is the B in the second subpattern. Offsets is `1 ¯1 1` and Lengths is `1 ¯1 1`: the entire pattern matched from offset 1 length 1 and the second subpattern also matched from offset 1 length 1. The first subpattern did not feature in the match and this is indicated by the `¯1`s. There has to be something between the offset/length for the entire pattern and the second subpattern.
 

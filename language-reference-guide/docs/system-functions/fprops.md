@@ -33,7 +33,7 @@ The default properties for a newly created file are as follows:
 - Z = 0
 - E depends upon the computer architecture.
 
-The defaults for C and J can be overridden by calling `⎕FCREATE` via the _variant_ operator `⍠`. For further information, see [File Properties](fcreate.md).
+The defaults for C and J can be overridden by calling `⎕FCREATE` using the _variant_ operator `⍠`. For further information, see [File Properties](fcreate.md).
 
 # Journaling Levels
 
@@ -108,7 +108,7 @@ Compression is intended to deliver a performance gain reading and writing large 
 
 The default for the `'Z'` property is 0 which means no compression; 1 means compression. When written, components are compressed or not according to the current value of the `'Z'` property. Changing this property does not change any components already in the file.
 
-A component file may therefore contain a mixture of normal and compressed components. Only the data in file components are compressed, the file access matrix and other header information is not compressed.
+A component file can, therefore, contain a mixture of normal and compressed components. Only the data in file components are compressed; the file access matrix and other header information is not compressed.
 
 When read, compressed components are decompressed regardless of the value of the `'Z'` property.
 

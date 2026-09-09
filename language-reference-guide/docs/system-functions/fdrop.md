@@ -21,7 +21,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
       cnos~←⎕FDROP tie,-⍴vec ⍝ Remove index from dict.
 ```
 
-The result vector, though potentially large, is generated only on request.
+The potentially-large result vector is only generated request.
 
 <h1 class="example">Examples</h1>
 ```apl

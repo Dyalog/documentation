@@ -28,7 +28,7 @@ Character scalars in `Y` are always interpreted as meaning "now".
 
 `R` is an array of the same shape as `Y`, where each element is either a timestamp, time number or Boolean value as determined by the second or only element in `X`.
 
-Time numbers in `R` can be of type DECF even if `⎕FR` is 645 if their magnitude can be too great to store precisely in a double. See the table below for the type numbers where this is so.
+Time numbers in `R` can be of type DECF even if `⎕FR` is 645 if their magnitude can be too great to store precisely in a double. See [Time Numbers](#time-numbers) for the type numbers where this is so.
 
 ## Time Numbers
 

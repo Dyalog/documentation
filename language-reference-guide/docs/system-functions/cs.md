@@ -17,13 +17,13 @@ The result `R` is the full name (starting `#.`) of the space in which the functi
 
 When the function or operator terminates, the calling function resumes execution in its original space.
 
-The names listed in `X` are temporarily *exported* to the namespace `Y`.  If objects with the same name exist in `Y`, these objects are effectively *shadowed* and are inaccessible. Dyadic `⎕CS` can be used only if there is a traditional function in the state indicator (stack). Otherwise there would be no way to retract the export. In this case (for example in a clear workspace) `DOMAIN ERROR` is reported.
+The names listed in `X` are temporarily *exported* to the namespace `Y`. If objects with the same name exist in `Y`, these objects are effectively *shadowed* and are inaccessible. Dyadic `⎕CS` can only be used if there is a traditional function in the state indicator (stack), otherwise there would be no way to retract the export. In this case (for example in a clear workspace) `DOMAIN ERROR` is reported.
 
 Calling `⎕CS` with an empty argument `Y` obtains the namespace in which a function is currently executing.
 
 <h2 class="example">Example</h2>
 
-This simple example illustrates how `⎕CS` may be used to avoid typing long pathnames when building a tree of GUI objects.  The objects `NEW` and `OPEN` are created as children of the `FILE` menu as a result of using `⎕CS` to change into the `F.MB.FILE` namespace.
+This simple example illustrates how `⎕CS` can be used to avoid typing long pathnames when building a tree of GUI objects. The objects `NEW` and `OPEN` are created as children of the `FILE` menu as a result of using `⎕CS` to change into the `F.MB.FILE` namespace.
 ```apl
      ∇ MAKE_FORM;F;OLD
 [1]    'F'⎕WC'Form'
