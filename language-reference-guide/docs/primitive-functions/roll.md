@@ -13,7 +13,7 @@ For each zero element of `Y`, the corresponding element of `R` is a pseudo-rando
 
 `⎕IO` and `⎕RL` are implicit arguments of _roll_. A side effect of _roll_ is to change the value of `⎕RL`.
 
-Note that different random number generators are available; see `⎕RL` for more information.
+Different random number generators are available; see `⎕RL` for more information.
 
 <h2 class="example">Examples</h2>
 ```apl

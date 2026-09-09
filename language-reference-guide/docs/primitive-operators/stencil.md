@@ -5,7 +5,7 @@ search:
 
 # <span>Stencil</span> `R←(f⌺g)Y`{{key}}
 
-!!! note "Classic Edition"
+!!! Info "Information"
     The symbol `⌺` is not available in Classic Edition, and the _stencil_ operator is instead represented by `⎕U233A`.
 
 _Stencil_ is used in image processing, artificial neural networks, computational fluid dynamics, cellular automata, and many other fields of application. The computation is sometimes referred to as tessellation, moving window, or [stencil code](https://en.wikipedia.org/wiki/Stencil_code). This operator applies the left operand function `f` to a series of (possibly overlapping) rectangles in the array `Y`.

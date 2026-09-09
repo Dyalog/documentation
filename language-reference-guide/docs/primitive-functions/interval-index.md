@@ -5,12 +5,12 @@ search:
 
 # <span>Interval Index</span> `R←X⍸Y`{{key}}
 
-!!! note "Classic Edition"
+!!! Info "Information"
     The symbol `⍸` (Iota Underbar) is not available in Classic Edition, and _interval index_ is instead represented by `⎕U2378`.
 
 `X` is an ordered non-scalar array that represents a set of intervals or ranges.
 
-Note that the `i`<sup>th</sup> interval starts at  `X[i]`, then includes all subsequent values up to but not including `X[i+1]`.
+The `i`<sup>th</sup> interval starts at `X[i]`, then includes all subsequent values up to but not including `X[i+1]`.
 
 For example, if `X` is  `(1 3 5)` it defines 4 intervals numbered 0 to 3 as follows.
 
@@ -301,7 +301,7 @@ Another card, the 10 of diamonds is dealt. Where must it go in the hand ?
 └────────┴──┘
 ```
 
-Note that if `(∧/Y∊X)` and `X` is sorted and `⎕CT=0` ,then `x⍸y` is the same as `x⍳y`.
+If `(∧/Y∊X)` and `X` is sorted and `⎕CT=0`, then `x⍸y` is the same as `x⍳y`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

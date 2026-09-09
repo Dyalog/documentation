@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.
 
-Note that `⎕MONITOR` does not apply to  dfns or dops.
+`⎕MONITOR` does not apply to dfns or dops.
 
 `R` is a simple non-negative integer matrix of 5 columns with one row for each line in the function or operator `Y` which has the monitor set, giving:
 

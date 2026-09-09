@@ -34,7 +34,7 @@ The 3 random number generators are listed in the table below. The 4th column of 
 |1  |RNG1|Mersenne Twister.                        |`0` , `⍬` , an integer in the range 1 to `¯1+2*63` or a 625-element integer vector|
 |2  |RNG2|Operating System random number generator.|`⍬`                                                                               |
 
-Note that assigning an invalid value to the seed will cause `DOMAIN ERROR`.
+Assigning an invalid value to the seed causes `DOMAIN ERROR`.
 
 The default random number generator in a `CLEAR WS` is 1 (Mersenne Twister). This algorithm *RNG1* produces 64-bit values with good distribution.
 

@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple character scalar or vector which is taken to be the name of a visible defined function or operator.
 
-Note that `⎕MONITOR` does not apply to  dfns or dops.
+`⎕MONITOR` does not apply to dfns or dops.
 
 `X` must be a simple non-negative integer scalar or vector.  `R` is a simple integer vector of non-negative elements.
 

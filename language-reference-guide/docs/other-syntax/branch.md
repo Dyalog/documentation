@@ -14,7 +14,7 @@ The following distinct usages of the _branch_ function occur:
 |`→LINE`|Continue with the specific line             |Restart execution at the specific line of the most recently suspended function|
 |`→⍳0`  |Continue with the next expression           |No effect                                                                     |
 
-In a defined function, if `Y` is non-empty then the first element in `Y` specifies a statement line in the defined function to be executed next.  If the line does not exist, then execution of the function is terminated.  For this purpose, line 0 does not exist.  (Note that statement line numbers are independent of the index origin `⎕IO`).
+In a defined function, if `Y` is non-empty then the first element in `Y` specifies a statement line in the defined function to be executed next.  If the line does not exist, then execution of the function is terminated.  For this purpose, line 0 does not exist.  (Statement line numbers are independent of the index origin `⎕IO`).
 
 If `Y` is empty, the _branch_ function has no effect.  The next expression is executed on the same line, if any, or on the next line if not.  If there is no following line, the function is terminated.
 

@@ -7,7 +7,7 @@ search:
 
 `X` and `Y` must be numeric arrays. `X` cannot be 1 unless `Y` is also 1. `R` is the base `X` logarithm of `Y`.
 
-Note that _logarithm_ (dyadic `⍟`) is defined in terms of _natural logarithm_ (monadic `⍟`) as:
+_Logarithm_ (dyadic `⍟`) is defined in terms of _natural logarithm_ (monadic `⍟`) as:
 ```apl
       X⍟Y←→(⍟Y)÷⍟X
 ```

@@ -13,7 +13,7 @@ For a  multi-threaded and multi-process application, a single `⎕FHOLD` is used
 
 If applied to component files, then `Y` is an integer scalar, vector, or one-row matrix of file tie numbers, or a two-row matrix whose first row contains file tie numbers and whose second row contains passnumbers.
 
-If applied to external variables, then `Y` is a simple scalar character, a character vector, a non-simple scalar character vector, or a vector of character vectors that specifies one or more names of external variable(s) (NOT the file names associated with those variables). Note that when `Y` is simple, each character in `Y` is interpreted as a  variable name. If applied to component files **and** external variables, `Y` is a vector whose elements are either integer scalars representing tie numbers, or character scalars or vectors containing names of external variables.
+If applied to external variables, then `Y` is a simple scalar character, a character vector, a non-simple scalar character vector, or a vector of character vectors that specifies one or more names of external variable(s) (NOT the file names associated with those variables). When `Y` is simple, each character in `Y` is interpreted as a variable name. If applied to component files **and** external variables, `Y` is a vector whose elements are either integer scalars representing tie numbers, or character scalars or vectors containing names of external variables.
 
 The effect is as follows:
 
@@ -35,7 +35,7 @@ A hold is released by any of the following:
 - Any untrapped error or interrupt.
 - A return to immediate execution mode.
 
-Note that a hold is not released by a request for input through `⎕` or `⍞`.
+A hold is not released by a request for input through `⎕` or `⍞`.
 
 `⎕FHOLD` is generally useful only when called from a defined function, as holds set in immediate execution (desk calculator) mode are released immediately.
 

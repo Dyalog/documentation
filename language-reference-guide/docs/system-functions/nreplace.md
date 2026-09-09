@@ -25,7 +25,7 @@ The [shy](../../../programming-reference-guide/introduction/results#shy-results)
       {⍺ ⎕NREPLACE tie ⍵}/vec,indx 
 ```
 
-Note that `8 ⎕NINFO ⊃Y`  can be used to report the current position of the file pointer.
+`8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 
 ## Unicode Edition
 

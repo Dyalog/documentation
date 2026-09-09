@@ -5,7 +5,7 @@ search:
 
 # <span>Event Number</span> `R←⎕EN`{{key}}
 
-This simple integer scalar reports the identification number for the most recent event which occurred, caused by an APL action or by an interrupt or by the `⎕SIGNAL` system function.  Its value in a clear workspace is `0`.
+This simple integer scalar reports the identification number for the most recent event which occurred, caused by an APL action or by an interrupt or by the [`⎕SIGNAL`](signal.md) system function.  Its value in a clear workspace is `0`.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -19,8 +19,7 @@ DOMAIN ERROR: Divide by zero
 
 See [APL Error Messages](../../../programming-reference-guide/error-messages/apl-errors).
 
-!!! note
-    `⎕SIGNAL` can be used to reset the value of this system constant.
+The value of this system constant can be reset using `⎕SIGNAL`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -25,7 +25,7 @@ A `DOMAIN ERROR` is reported in any of the following cases:
 
 An object being copied has the same name as an active label.
 
-When copying data between Classic and Unicode Editions, `⎕CY` will fail and a `TRANSLATION ERROR` will be reported if *any* object in workspace `Y` fails conversion between Unicode and `⎕AV` indices, whether or not that object is specified by `X`. See [Note](avu.md#note) for further details.
+When copying data between Classic and Unicode Editions, `⎕CY` will fail and a `TRANSLATION ERROR` will be reported if *any* object in workspace `Y` fails conversion between Unicode and `⎕AV` indices, whether or not that object is specified by `X`. See [Character Representation](avu.md#character-representation) for further details.
 
 A `WS FULL` is reported if the active workspace becomes full during the copying process.
 

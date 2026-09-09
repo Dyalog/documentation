@@ -9,7 +9,7 @@ This function appends the ravel of its left argument `X` to the end of the desig
 
 The [shy](../../../programming-reference-guide/introduction/results#shy-results) result is the location of the internal file pointer which will be pointing to the end of the newly written data.
 
-Note that `8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
+`8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 
 ## Unicode Edition
 
