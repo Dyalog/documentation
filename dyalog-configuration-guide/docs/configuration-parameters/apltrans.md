@@ -7,10 +7,7 @@ A search path for the Output Translate Table, useful when configuring a run-time
 
 Valid values are a list of directory paths.
 
-Default is the `apltrans` sub-directory of the Dyalog installation directory (given by [`Dyalog`](dyalog.md)).
-
-On Unix, if this parameter is unset the search path defaults to the directory given by [`Dyalog`](dyalog.md); if that is also unset, it defaults to `/usr/dyalog`.
-<!-- REVIEW(default): reconcile the Microsoft Windows default (apltrans sub-directory) with the Unix default (the Dyalog directory, else /usr/dyalog). -->
+Default is the `apltrans` sub-directory of the directory given by [`Dyalog`](dyalog.md), on all platforms.
 
 Related parameters: [APLT](aplt.md), [Dyalog](dyalog.md).
 

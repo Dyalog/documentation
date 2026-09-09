@@ -7,10 +7,10 @@ Whether a log entry is written to the Windows Event Log when Dyalog would otherw
 
 Valid values are:
 
-- `0` : no entry is written to the Windows Event Log
-- `1` : an entry is written to the Windows Event Log
+- `0` – no entry is written to the Windows Event Log.
+- any value greater than `0` – an entry is written to the Windows Event Log.
 
-<!-- REVIEW(values,default): confirm whether this is a Boolean or a multi-level setting, and its default; the source describes only whether an entry is written. -->
+Default is `0`.
 
 Related parameters: [DYALOG_EVENTLOGNAME](dyalog-eventlogname.md).
 

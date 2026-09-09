@@ -7,7 +7,7 @@ The name of the Input Translate Table, which defines the keyboard layout. The ke
 
 Valid values are the name of a `.DIN` input translate table.
 
-<!-- REVIEW(default): default value not present in the migrated source; confirm. -->
+On a terminal, the default is the value of the `TERM` environment variable, or `default` if `TERM` is not set. When input and output are redirected to a file, the default is `utf8` for a `#!` script and `redirected` otherwise. On Microsoft Windows, `.din` is appended, and `TERM` is itself `win` by default, so the default there is `WIN.DIN`.
 
 Related parameters: [APLKeys](aplkeys.md).
 
