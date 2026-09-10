@@ -74,7 +74,7 @@ To see which version of CEF was used when the HTMLRenderer was built, query the 
 ```apl
       'hr' ⎕WC 'HTMLRenderer'
       hr.CEFVersion[2 3]      ⍝ CEF major version and commit number
-144 3
+144 0
 ```
 ### Auxiliary Processors
 
