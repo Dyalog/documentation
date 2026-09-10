@@ -29,7 +29,7 @@ Some of the tools that are supplied with Dyalog or can be downloaded separately 
 	- Documentation – [https://dyalog.github.io/link/4.2](https://dyalog.github.io/link/4.2/)
 - Ride v4.7
     - GitHub repository – [https://github.com/Dyalog/ride](https://github.com/Dyalog/ride/)
-	- Documentation – [https://dyalog.github.io/ride/](https://dyalog.github.io/ride/)
+	- Documentation – [https://dyalog.github.io/ride/](https://dyalog.github.io/ride/4.7/)
 - SALT v2.9
 - SQAPL v6.7
 - User Commands v2.8
