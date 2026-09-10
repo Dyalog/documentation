@@ -7,47 +7,181 @@ search:
 
 This function validates datetimes and converts datetimes between one representation and another, including textual representations.
 
-A *datetime* is a date and time of day represented by a *time number*, a *timestamp*, a *military time-zone character*, or a *text-formatted datetime*.
+## Syntax
 
-- A [*time number*](#time-numbers) is a datetime expressed as a scalar numeric value, of which there are several different sorts (principally a [Dyalog Date Number](#timenumbers)).
-- A [*timestamp*](#timestamps) is a datetime expressed as a multiple element numeric vector, of which there are several different sorts (principally [`⎕TS`](ts.md) format).
-- A [*military time zone character*](#military-time-zone-characters) is a scalar character that represents the current datetime ("now") in a particular time zone. For example, `'A'` represents the current datetime ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) + 1 hour.
-- A *text-formatted datetime* is a datetime expressed as a character vector, formatted according to a [*formatting pattern*](#formatting-patterns).
+`Y` is an array of datetimes to be validated or converted. `X` specifies the representation to convert them to (or flags them for validation) and, optionally, the representation in which they are supplied.
 
-`Y` is an array of any shape whose elements contain a time number, timestamp, military time zone character, or text-formatted datetime, in any combination.
+<h3 class="example">Examples</h3>
 
-`X` describes the representation to which the elements of `Y` are to be converted (the output format) and, optionally, the representation of the elements of `Y` (the input format). These are referred to below as <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> respectively.
+Converting a `⎕TS`-style timestamp to a Dyalog Date Number, then back to a timestamp:
 
-`X` can be a single element (<code>X<sub>R</sub></code>) or a 2-element vector (<code>X<sub>Y</sub> X<sub>R</sub></code>). Each of <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> can be:
+```apl
+      1 ⎕DT ⊂2019 2 13 10 16 56
+43508.42843
+      ¯1 ⎕DT 43508.42843
+┌──────────────────────┐
+│2019 2 13 10 16 56 352│
+└──────────────────────┘
+```
 
-- an integer *datetime code* (see [](#timenumbers) and [](#timestamps))
-- a character vector containing a *pattern* that describes how a datetime is formatted as text (see [Formatting Patterns](#formatting-patterns)).
+Converting the current "Zulu time" ([UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)) to ISO format, then checking if two ISO format dates are valid:
 
-When <code>X<sub>R</sub></code> is an integer it must be either `0` or a code from [](#timenumbers) or [](#timestamps). `0` specifies that the elements of `Y` are [to be validated](#validating-datetimes); a non-zero value specifies the datetime representation to which the elements of `Y` are to be converted. When <code>X<sub>R</sub></code> is a pattern, the elements of `R` are character vectors, each derived by formatting the corresponding element of `Y` as text according to the pattern.
+```apl
+      '%ISO%' ⎕DT 'Z'
+┌───────────────────┐
+│2026-08-12T03:23:46│
+└───────────────────┘
+      '%ISO%' 0 ⎕DT '2026-08-12T03:23:46' '2026-02-29T03:23:46'
+1 0
+```
 
-<code>X<sub>Y</sub></code> can be omitted only when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. When <code>X<sub>Y</sub></code> is omitted, the numeric elements of `Y` are interpreted as follows:
+## Datetimes
 
-- scalars are assumed to be time numbers of type Dyalog Date Number (code `1`)
-- vectors are assumed to be `⎕TS` timestamps (code `¯1`)
+A *datetime* is a date and time in one of the representations listed in [](#representations):
 
-When <code>X<sub>Y</sub></code> is an integer datetime code it explicitly specifies the datetime representation of the numeric elements of `Y`. When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against the pattern and the resulting datetime are returned in the representation given by <code>X<sub>R</sub></code> (see [Pattern matching rules](#pattern-matching-rules)). A pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes.
+Table: Datetime representations { #representations }
 
-Text-formatted datetimes and patterns are character vectors; no scalar extension occurs when character scalars appear in `X` or `Y`. A single text-formatted datetime in `Y` must be enclosed (nested); an unenclosed character vector in `Y` is interpreted as a vector of military time zone characters. As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code> meaning that a single pattern can be supplied on its own to format datetimes as text.
+| Representation | Data type | Example |
+| --- | --- | --- |
+| [*Time number*](#time-numbers) | scalar number | `46245.1415` |
+| [*Timestamp*](#timestamps) | numeric vector | `2026 8 12 3 23 46 0` |
+| [*Military time zone character*](#military-time-zone-characters) | scalar character | `'Z'` |
+| [*Text-formatted datetime*](#text-formatted-datetimes) | character vector | `'2026-08-12T03:23:46'` |
 
-Character scalars in `Y` are always interpreted as meaning "now".
+There are multiple sorts of each of these.
 
-`R` is an array of the same shape as `Y`, where each element is a timestamp, time number, character vector or Boolean value, as determined by <code>X<sub>R</sub></code> (the second or only element of `X`).
+## Right Argument
 
-Time numbers in `R` can be of type DECF even when [`⎕FR`](fr.md) is `645` if their magnitude could be too great to store precisely in a double. See [](#timenumbers) for the type numbers where this is so.
+`Y` is an array of any shape whose elements are [datetimes](#datetimes), in any combination of representations.
+
+<h3 class="example">Example</h3>
+
+Validating datetimes in various formats (two [time numbers](#time-numbers), two [timestamps](#timestamps), and two [military time zone characters](#military-time-zone-characters)):
+
+```apl
+      0 ⎕DT 46245 ¯1E7 (2026 8 12) (2026 2 29) 'B' 'b'
+1 0 1 0 1 0
+```
+
+A single timestamp or text-formatted datetime in `Y` must be enclosed (nested); an unenclosed (simple) vector in `Y` is interpreted as a vector of time numbers or military time zone characters. No scalar extension occurs when character scalars appear in `X` or `Y`.
+
+<h3 class="example">Examples</h3>
+
+Validating a single (invalid) timestamp and a single (valid) text-formatted datetime:
+
+```apl
+      0 ⎕DT ⊂2026 2 29
+0
+      'Mmm D, YYYY' 0 ⎕DT ⊂'Aug 12, 2026'
+1
+```
+
+## Left Argument
+
+`X` describes the representation to which the elements of `Y` are to be converted and, optionally, the representation according to which the elements of `Y` are to be interpreted.
+
+`X` can be a single element (<code>X<sub>R</sub></code>) or a 2-element vector (<code>X<sub>Y</sub> X<sub>R</sub></code>). Each of <code>X<sub>Y</sub></code> (the [input format](#input-formats)) and <code>X<sub>R</sub></code> (the [output format](#output-formats)) can be:
+
+- a positive integer time number code from [](#timenumbersorts)
+- a negative integer timestamp code from [](#timestampsorts)
+- a character vector [*formatting pattern*](#formatting-patterns)
+
+In addition, <code>X<sub>R</sub></code> can be `0` to [validate](#validating-datetimes) the datetimes in `Y`.
+
+<h3 class="example">Examples</h3>
+
+Find the current [Unix time](https://en.wikipedia.org/wiki/Unix_time), then convert it to a `⎕TS`-style timestamp:
+
+```apl
+      20 ⎕DT 'Z'
+1786521710
+      20 ¯1 ⎕DT 1786521710
+┌──────────────────┐
+│2026 8 12 8 1 50 0│
+└──────────────────┘
+```
+
+As a convenience, a simple (not nested) character vector `X` is implicitly enclosed and processed as <code>X<sub>R</sub></code>.
+
+<h3 class="example">Example</h3>
+
+```apl
+      'YYYY-MM-DD hh:mm:ss' ⎕DT 'Z'
+┌───────────────────┐
+│2026-08-12 07:59:39│
+└───────────────────┘
+```
+
+### Input Formats
+
+<code>X<sub>Y</sub></code> must be either an integer or a character vector.
+
+Table: Input formats { #inputformats }
+
+| <code>X<sub>Y</sub></code> | `Y` |
+| --- | --- |
+| positive integer code from [](#timenumbersorts) | time numbers interpreted accordingly |
+| negative integer code from [](#timestampsorts) | timestamps interpreted accordingly |
+| [formatting pattern](#formatting-patterns) | text-formatted datetime [matched](#pattern-matching-rules) accordingly |
+
+<code>X<sub>Y</sub></code> can be omitted when the elements of `Y` are Dyalog Date Numbers, `⎕TS`-style timestamps, or military time zone characters. A formatting pattern <code>X<sub>Y</sub></code> cannot be omitted, even when the elements of `Y` are character vectors that could unambiguously be assumed to be text-formatted datetimes. When <code>X<sub>Y</sub></code> is omitted, the elements of `Y` are interpreted according to [](#inputinterpretation):
+
+Table: Input element interpretation { #inputinterpretation }
+
+| Element of `Y` | Interpretation |
+| --- | --- |
+| scalar number | Dyalog Date Number (code `1` from [](#timenumbersorts)) |
+| numeric vector | `⎕TS`-style timestamp (code `¯1` from [](#timestampsorts)) |
+| scalar character | military time zone character |
+
+### Output Formats
+
+<code>X<sub>R</sub></code> must be either an integer or a character vector.
+
+Table: Output formats { #outputformats }
+
+| <code>X<sub>R</sub></code> | `R` |
+| --- | --- |
+| `0` | `1` for valid datetimes, `0` for invalid datetimes |
+| positive integer code from [](#timenumbersorts) | datetimes converted to specified time number |
+| negative integer code from [](#timestampsorts) | datetimes converted to specified timestamps |
+| [formatting pattern](#formatting-patterns) | datetimes formatted as text accordingly |
+
+<h3 class="example">Examples</h3>
+
+```apl
+      0 ⎕DT (2026 02 28) (2026 02 29)
+1 0
+      1 ⎕DT 'Z'
+46245.34112
+      ¯1 ⎕DT 'Z'
+┌─────────────────────┐
+│2026 8 12 8 11 14 590│
+└─────────────────────┘
+      'D Mmm "''"YY'⎕DT'Z'
+┌──────────┐
+│12 Aug '26│
+└──────────┘
+```
+
+## Result
+
+`R` is an array of the same shape as `Y`, where each element is a [time number](#time-numbers), [timestamp](#timestamps), [text-formatted datetime](#text-formatted-datetimes), or Boolean validity value, as determined by the [output format](#output-formats).
+
+Time numbers in `R` can be [128-bit decimal floating point values](../../programming-reference-guide/introduction/128-bit-decimal-floating-point.md) even when [`⎕FR`](fr.md) is `645` if their magnitudes could be too great to store precisely as 64-bit binary floating point values. See [](#timenumbersorts) for the time numbers where this is so.
 
 !!! Warning "Warning"
-    Performing arithmetic on such time numbers while [`⎕FR`](fr.md) is `645` can lose precision or signal `DOMAIN ERROR`. To compute with them accurately, set `⎕FR` to `1287` (128-bit decimal) first.
+    Performing arithmetic on such time numbers while `⎕FR` is `645` can lose precision or signal `DOMAIN ERROR`. To handle them accurately, set `⎕FR` to `1287` (128-bit decimal) first.
 
 ## Time Numbers
 
-If a value in `X` is positive it indicates that a time number type is expected in `Y` or generated in `R`, as follows. The last column indicates whether (Yes) or not (No) negative numbers are allowed.
+A *time number* is a [datetime](#datetimes) expressed as a scalar number.
 
-Table: Time numbers { #timenumbers }
+A positive number in `X` indicates that time numbers are expected in `Y` or generated in `R`.
+
+The supported time number sorts are identified by a code, listed in [](#timenumbersorts):
+
+Table: Time numbers { #timenumbersorts }
 
 |Code|Description|Category|Epoch[^1]|<0?[^2]|
 |---|---|---|---|---|
@@ -70,7 +204,7 @@ Table: Time numbers { #timenumbers }
 |Microsoft Windows|||||
 | `30` |Microsoft DOS date/time|Encoded broken-down time 2&nbsp;s resolution|N/A|No|
 | `31` |Microsoft Win32 FILETIME|Tick count[^4] 100&nbsp;ns ticks|1601-01-01 00:00|No|
-| `32` |Microsoft CLR DateTime (.NET)(Ticks property thereof)|Tick count [^4] 100&nbsp;ns ticks|0001-01-01 00:00|No|
+| `32` |Microsoft CLR DateTime (.NET) (ticks property thereof)|Tick count [^4] 100&nbsp;ns ticks|0001-01-01 00:00|No|
 | `33` |Microsoft OLE Automation Date (also known as Variant Time)|Day count with fractional part|1899-12-30 00:00|Yes [^5]|
 |Application|||||
 | `40` |Excel (1900 Date System)[^6] / Lotus 1-2-3|Day count with fractional part[^7]|1899-12-31 00:00[^8]|No|
@@ -79,7 +213,7 @@ Table: Time numbers { #timenumbers }
 | `43` |SPSS statistics package|Tick count 1&nbsp;s ticks[^3]|1582-10-14 00:00|No|
 | `44` |SAS|Tick count 1&nbsp;s ticks[^3]|1960-01-01 00:00|Yes|
 |Julian Date and variants|||||
-| `50` |Julian Date|Day count with fractional part|¯4717-11-24 12:00|No|
+| `50` |Julian Date|Day count with fractional part|¯4714-11-24 12:00|No|
 | `51` |J (J dayno)|Day count with fractional part|1800-01-01 00:00|No|
 | `52` |Reduced Julian Date|Day count with fractional part|1858-11-16 12:00|Yes|
 | `53` |Modified Julian Date|Day count with fractional part|1858-11-17 00:00|Yes|
@@ -87,49 +221,39 @@ Table: Time numbers { #timenumbers }
 | `55` |CNES Julian Date|Day count with fractional part|1950-01-01 00:00|Yes|
 | `56` |CCSDS Julian Date|Day count with fractional part|1958-01-01 00:00|Yes|
 |Decimal encoded[^9]|||||
-| `60` |Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
-| `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss (J digit time)|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
+| `60` |Floating-point decimal encoded format of the form `yyyymmdd.hhmmss`|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
+| `61` |Integer decimal encoded format of the form `yyyymmddhhmmss` (J digit time)|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
 |Misc. Operating Systems|||||
 | `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
 
-<h3 class="example">Examples: Time number to time number</h3>
+<h4 class="example">Example</h4>
+
+Converting Dyalog Date Numbers to Unix times:
 
 ```apl
-      2 1 ⎕DT 3⊃⎕FRDCI 1 1
-43886.48188
-      1 ⎕DT 'J'
-43886.48371
-      ⍝ Local time is UTC-05:00
-      3600÷⍨-/20 ⎕DT 'JZ'
-¯5
+      20 ⎕DT 0 45000
+¯2209075200 1678924800
 ```
 
-<h3 class="example">Examples: Time number to timestamp</h3>
+Converting a Dyalog component file time to the form `yyyymmdd.hhmmss`:
 
 ```apl
-      1 ¯1 ⎕DT 0 43508.42843
-┌──────────────────┬──────────────────────┐
-│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
-└──────────────────┴──────────────────────┘
-      ¯1 ⎕DT 0 43508.42843
-┌──────────────────┬──────────────────────┐
-│1899 12 31 0 0 0 0│2019 2 13 10 16 56 352│
-└──────────────────┴──────────────────────┘
-      2 ¯1 ⎕DT 3⊃⎕FRDCI 1 1
-┌──────────────────────┐
-│2020 2 26 11 33 54 466│
-└──────────────────────┘
-      1 ¯30 ⎕DT 44217.63465
-┌──────────────┐
-│44217 15 13 53│
-└──────────────┘
+      tn←'test' ⎕FCREATE 0
+      cn←'hi' ⎕FAPPEND tn
+      ⎕PP←16
+      2 60 ⎕DT 3⊃⎕FRDCI tn cn
+20260812.083544
 ```
 
 ## Timestamps
 
-If a value in `X` is negative it indicates that a timestamp type is expected in `Y` or generated in `R`, as follows:
+A *timestamp* is a [datetime](#datetimes) expressed as a numeric vector.
 
-Table: Timestamps { #timestamps }
+A negative number in `X` indicates that timestamps are expected in `Y` or generated in `R`.
+
+The supported timestamp sorts are identified by a code, listed in [](#timestampsorts):
+
+Table: Timestamps { #timestampsorts }
 
 | Code  | Description                                  | Max elements | Element contents[^10]                                        | Elided elements[^11] |
 |-------|----------------------------------------------|--------------|--------------------------------------------------------------|--------------------------------------------|
@@ -140,47 +264,58 @@ Table: Timestamps { #timestamps }
 | ISO components ||||
 | `¯10` | ISO day-of-year components                   | 6            | Year, day-of-year, hour, minute, second, microsecond         | `1 1 0 0 0 0`                            |
 | `¯11` | ISO day-of-week components                   | 7            | Year, week, day-of-week, hour, minute, second, microsecond   | `1 1 1 0 0 0 0`                              |
-| Decimal encoded[^15] ||||
+| Decimal encoded[^9] ||||
 | `¯20` | Decimal encoded date and time                | 2            | Decimal encoded date, decimal encoded time                   | `10101 0`                              |
 | DateTimePicker ||||
 | `¯30` | DateTime format                              | 4            | International Day Number, hour, minute, second               | `0 0 0 0`                              |
 
-<h3 class="example">Examples: Timestamp to time number</h3>
+<h4 class="example">Examples</h4>
+
+Converting `⎕TS`-style timestamps to decimal encoded date and time:
 
 ```apl
-      ¯1 1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⊂⎕TS
-43886.48039
-      1 ⎕DT ⎕TS 'J'
-43886.48039 43886.48039
+      ¯20 ⎕DT (2026 8 12 10 49 25 ⋄ 2026 8 12 10 49 27 ⋄ 2026 8 12 10 49 52)
+┌───────────────┬───────────────┬───────────────┐
+│20260812 104925│20260812 104927│20260812 104952│
+└───────────────┴───────────────┴───────────────┘
+```
 
-      1 ⎕DT ⊂⍬ ⍝ cf Elided element implicit values
+Elided trailing elements take the default values given in [](#timestampsorts):
+
+```apl
+      1 ⎕DT ⊂⍬
 ¯693594
       1 ⎕DT ⊂1 1 1 0 0 0 0
 ¯693594
-       ¯30 1 ⎕DT⊂44217 15 13 54
-44217.63465
-
 ```
 
-<h3 class="example">Examples: Timestamp to timestamp</h3>
+Converting between a Dyalog Date Number and the DateTime format (code `¯30`):
 
 ```apl
-      ¯30 ⎕DT ⊂⎕TS
-┌─────────────┐
-│44216 16 5 46│
-└─────────────┘
-      
-      ¯30 ¯1 ⎕DT⊂32000 15 10 0
-┌───────────────────┐
-│1987 8 12 15 10 0 0│
-└───────────────────┘
+      1 ¯30 ⎕DT 44217.63465
+┌──────────────┐
+│44217 15 13 53│
+└──────────────┘
+      ¯30 1 ⎕DT⊂44217 15 13 54
+44217.63465
+```
+
+Converting ISO year and day-of-year to year, week, and day-of-week:
+
+```apl
+      3↑¨¯10 ¯11 ⎕DT (2026 1 ⋄ 2026 224)
+┌────────┬─────────┐
+│2026 1 4│2026 33 3│
+└────────┴─────────┘
 ```
 
 ## Military Time Zone Characters
 
-Any element in `Y` can be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent. The time zones and their characters are detailed in [](#timezones).
+A *military time zone character* is a scalar character that represents the current [datetime](#datetimes) ("now") in a particular time zone.
+
+Military time zone characters can only appear in `Y`. Any element in `Y` can be specified as a military time zone character and is implicitly replaced by the current time in the time zone they represent.
+
+The supported military time zone characters are listed in [](#timezones):
 
 Table: Military time zones { #timezones }
 
@@ -195,7 +330,7 @@ Table: Military time zones { #timezones }
 |G        |Golf          |UTC+7    |
 |H        |Hotel         |UTC+8    |
 |I        |India         |UTC+9    |
-|J        |Juliet        |Local time|
+|J        |Juliet        |local time|
 |K        |Kilo          |UTC+10   |
 |L        |Lima          |UTC+11   |
 |M        |Mike          |UTC+12   |
@@ -215,7 +350,7 @@ Table: Military time zones { #timezones }
 
 The resolutions of system clocks vary by platform.
 
-<h3 class="example">Example</h3>
+<h4 class="example">Example</h4>
 
 The following expression returns UTC in `⎕TS`-form (`⎕TS` gives local time):
 
@@ -224,13 +359,26 @@ The following expression returns UTC in `⎕TS`-form (`⎕TS` gives local time):
 2026 8 10 19 9 12 120
 ```
 
-## Formatting Patterns
+The following expression computes how many hours the local time is offset from UTC (equivalent to [`⎕SYSTEM.OS.UTCOffset`](system.md#os)):
 
-Either or both of <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> can be a character vector containing a *pattern* which describes how a datetime is, or is to be, formatted as text.
+```apl
+      24×-/1 ⎕DT 'J' 'Z'
+2
+```
 
-When used as <code>X<sub>R</sub></code>, the pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern-matching Rules](#pattern-matching-rules)).
+## Text-Formatted Datetimes
 
-The formatting pattern allows a datetime to be converted to a user-configurable plain-text format. When a datetime is formatted, elements in the result are copies of the format pattern with format sequences replaced by the elements they represent.
+A *text-formatted datetime* is a datetime expressed as a character vector, formatted according to a [*formatting pattern*](#formatting-patterns).
+
+### Formatting Patterns
+
+A *formatting pattern* specifies how a datetime is expressed as a text-formatted datetime.
+
+Either or both of <code>X<sub>R</sub></code> and <code>X<sub>Y</sub></code> can be a character vector containing a formatting pattern.
+
+When used as <code>X<sub>R</sub></code>, the formatting pattern controls how each element of `Y` is formatted into a character vector in `R`. When used as <code>X<sub>Y</sub></code>, the same formatting pattern describes the text supplied in `Y` and controls how it is matched and decoded into the representation given by <code>X<sub>R</sub></code> (see [Pattern-matching Rules](#pattern-matching-rules)).
+
+The formatting pattern allows a datetime to be converted to a user-configurable plain-text format. When a datetime is formatted, elements in the result are copies of the formatting pattern with format sequences replaced by the elements they represent.
 
 The format sequences are intended to be visually reminiscent of the generated text. They use alphabetic characters easily associated with the substitution (for example `D`, `M`, and `Y` for Day, Month, and Year respectively) repeated one or more times to indicate format. Some sequences allow the first character to be replaced by a `_`, or the casing to be altered.
 
@@ -276,32 +424,20 @@ Table: Formatting sequences { #formatseq }
 
 The upper and lower case letters, underscore `_`, dollar `$`, and percent `%` are all reserved for introducing format sequences, even though not all currently have meaning. The remaining, non-reserved, characters are copied to the result unchanged; this means that the format string `hh:mm` represents the hour of the day and minute of the hour, separated by a colon (for example `12:00`). All characters or sequences of characters can be delimited by `"` or `'` at any point in the format string to prevent them from being interpreted as a part of a format sequence, and, within these delimiters, two adjacent delimiter characters produce a single delimiter.
 
-!!! Info "Information"
-    The characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of As followed by a sequence of Bs. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"` or `'` - delimited string, for example, `Aaaa""Aaaa`.
+For example, the characters `AaaaBbbb` consist of two adjacent format sequences because there is a sequence of `A`s followed by a sequence of `B`s. The characters `AaaaAaaa` consist of one format sequence because it only contains `A`s. It can be separated into two format sequences by inserting an empty `"`- or `'`-delimited string, for example, `Aaaa""Aaaa`.
 
-<h3 class="example">Examples</h3>
+<h4 class="example">Example</h4>
 
 ```apl
-      dt←1 ⎕DT ⊂2019 2 13 10 16 56
-      dt
-43508.42843
-      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
+      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT ⊂2019 2 13 10 16 56
 ┌───────────────────────────────────────┐
 │Wednesday, 13th February 2019; 10:16:56│
 └───────────────────────────────────────┘
-      '__en__Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT dt
-┌───────────────────────────────────────┐
-│Wednesday, 13th February 2019; 10:16:56│
-└───────────────────────────────────────┘
-      '"ISO date": %ISO%' ⎕DT dt
-┌─────────────────────────────┐
-│ISO date: 2019-02-13T10:16:56│
-└─────────────────────────────┘
 ```
 
-## Language
+### Language
 
-Unless overridden, English is used for text substitutions. Different languages can be selected using the [`Language` variant option](#variant-option-language) and/or the use of language specifiers within the format pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the format pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. { #languages } shows the languages that are built into the interpreter.
+Unless overridden, English is used for text substitutions. Different languages can be selected using the [`Language` variant option](#variant-option-language) and/or the use of language specifiers within the formatting pattern. In either case, the language is specified as either a two letter [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code in lower case (for example, `en`) or as a five character language with an additional underscore and two character region in upper case (for example, `en_GB`). Within the formatting pattern, `__xx__` (where `xx` is the two or five character specifier) will switch the language of the subsequent generated or matched text. [](#languages) shows the languages that are built into the interpreter.
 
 Table: Built-in languages { #languages }
 
@@ -325,11 +461,20 @@ Table: Built-in languages { #languages }
 | sv | Swedish |
 | zh | Chinese |
 
-## Predefined Patterns
+<h4 class="example">Example</h4>
 
-Any pattern can contain (in part or in whole) a named predefined pattern, which allows common date and time formats to be specified in abbreviated form. Predefined patterns can be specified for each language, allowing patterns to be tailored for the selected language.
+```apl
+      '__de__Dddd, DDoo Mmmm YYYY; hh:mm:ss' ⎕DT ⊂2019 2 13 10 16 56
+┌────────────────────────────────────┐
+│Mittwoch, 13. Februar 2019; 10:16:56│
+└────────────────────────────────────┘
+```
 
-Predefined patterns are included in a pattern using `%` delimiters. For example, `%ISO%` includes the named predefined pattern `ISO`.
+### Predefined Patterns
+
+Any formatting pattern can contain (in part or in whole) a named *predefined pattern*, which allows common date and time formats to be specified in abbreviated form. Predefined patterns can be specified for each language, allowing patterns to be tailored for the selected language.
+
+Predefined patterns are included in a formatting pattern using `%` delimiters. For example, `%ISO%` includes the named predefined pattern `ISO`.
 
 The following global predefined pattern is built into the interpreter:
 
@@ -341,19 +486,54 @@ Table: Predefined patterns built into the interpreter { #patterns }
 
 Additional predefined patterns can be defined using the [`Dictionary` variant option](#variant-option-dictionary). Predefined patterns must not contain references to other predefined patterns.
 
-## Pattern-matching Rules
+<h4 class="example">Example</h4>
 
-When <code>X<sub>Y</sub></code> is a pattern, the corresponding character vectors in `Y` are matched against it and decoded into datetime. The following additional rules apply to the matching.
+```apl
+      '"ISO date": %ISO%' ⎕DT ⊂2019 2 13 10 16 56
+┌─────────────────────────────┐
+│ISO date: 2019-02-13T10:16:56│
+└─────────────────────────────┘
+```
 
-### Two-digit Years
+### Pattern-Matching Rules
+
+When <code>X<sub>Y</sub></code> is a formatting pattern, character vectors in `Y` are matched against it.
+
+<h3 class="example">Examples</h3>
+
+```apl
+      'DD/MM/YYYY' ¯1 ⎕DT ⊂'13/02/2019'
+┌─────────────────┐
+│2019 2 13 0 0 0 0│
+└─────────────────┘
+      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ¯1 ⎕DT ⊂'Wednesday, 13th February 2019; 10:16:56'
+┌────────────────────┐
+│2019 2 13 10 16 56 0│
+└────────────────────┘
+      '__da__Dddd, DDoo mmmm YYYY' 1 ⎕DT ⊂'Onsdag, 13. februar 2019'
+43508
+```
+
+The following additional rules apply to the matching.
+
+#### Two-Digit Years
 
 Two digit years (that is, those corresponding to the formatting pattern elements `YY` and `WW`) are, by default, interpreted according to the same rules used for `⎕SM` and GUI edit fields, which are configurable using the [`YY_WINDOW`](../../../windows-installation-and-configuration-guide/configuration-parameters/yy-window/) configuration parameter.
 
-### Ambiguities and Precision
+<h4 class="example">Example</h4>
 
-Formatting *to* a text-formatted datetime can be _lossy_, that is, the formatted text does not necessarily contain sufficient information to regenerate the original datetime. A pattern used to convert *from* a text-formatted datetime is not permitted to be ambiguous, that is, it must not be possible to deduce multiple disjoint datetimes from text generated by it (for example, a pattern which contains a year and a day-of-month but no month, because there could be twelve disjoint dates for which the pattern would generate identical text). Such a pattern is rejected.
+```apl
+      'DD.MM.YY' 'YYYY-MM-DD' ⎕DT⊂'12.08.26'
+┌──────────┐
+│2026-08-12│
+└──────────┘
+```
 
-Patterns are, however, permitted to have limited precision (for example, a pattern that includes a date but no time elements, or a date plus only hour and minute time elements). Elements with lower significance than the least significant provided element can be elided and take a default value; this is analogous to the way `⎕DT` infers elements elided from timestamps.
+#### Ambiguities and Precision
+
+Formatting *to* a text-formatted datetime can be _lossy_, that is, the formatted text does not necessarily contain sufficient information to regenerate the original datetime. A formatting pattern used to convert *from* a text-formatted datetime is not permitted to be ambiguous, that is, it must not be possible to deduce multiple disjoint datetimes from text generated by it (for example, a formatting pattern which contains a year and a day-of-month but no month, because there could be twelve disjoint dates for which the formatting pattern would generate identical text). Such a formatting pattern is rejected.
+
+Formatting patterns are, however, permitted to have limited precision (for example, a formatting pattern that includes a date but no time elements, or a date plus only hour and minute time elements). Elements with lower significance than the least significant provided element can be elided and take a default value; this is analogous to the way `⎕DT` infers elements elided from timestamps.
 
 There are three principal means of specifying a date:
 
@@ -369,39 +549,42 @@ If a text-formatted datetime contains elements from more than one of these three
 
 Elided elements of a year, month, day-of-month date are all (including the year) implicitly `1`. Elided elements of times are all implicitly `0`.
 
-Some combinations of variable-length substitutions can make particular texts impossible to parse unambiguously. For example, the pattern `MD` (1 to 2 digits of month immediately followed by 1 to 2 digits of day-of-month) formats both 3 December and 23 January as `123`, so the text `123` cannot be matched against `MD` and an error is signalled. Whether such an ambiguity actually arises depends on the text being parsed: the text `1231` can only mean 31 December and is matched without error. Where two or more variable-length numeric or alphanumeric substitutions are adjacent, you can place literal text between them that cannot be confused with the substitution text to avoid such ambiguities.
+Some combinations of variable-length substitutions can make particular texts impossible to parse unambiguously. For example, the formatting pattern `MD` (1 to 2 digits of month immediately followed by 1 to 2 digits of day-of-month) formats both 3 December and 23 January as `123`, so the text `123` cannot be matched against `MD` and an error is signalled. Whether such an ambiguity actually arises depends on the text being parsed: the text `1231` can only mean 31 December and is matched without error. Where two or more variable-length numeric or alphanumeric substitutions are adjacent, you can place literal text between them that cannot be confused with the substitution text to avoid such ambiguities.
 
-### Consistency
+#### Consistency
 
-The formatted text is parsed and used to compute a datetime according to the given pattern, and must precisely match the text that would be produced if the resulting datetime were formatted using that same pattern. That is:
+The formatted text is parsed and used to compute a datetime according to the given formatting pattern, and must precisely match the text that would be produced if the resulting datetime were formatted using that same formatting pattern. That is:
 
-- The formatted text must contain valid substitution text where a format sequence appears in the pattern — for example, a full month name where `Mmmm` appears in the pattern.
-- All other characters, including spaces and literal characters, must exactly match the pattern.
+- The formatted text must contain valid substitution text where a format sequence appears in the formatting pattern – for example, a full month name where `Mmmm` appears in the formatting pattern.
+- All other characters, including spaces and literal characters, must exactly match the formatting pattern.
 - All characters must be in the correct case.
-- The elements in the formatted text must be consistent with one another. If the pattern contains the same element (or variations of the same element) more than once, they must have the same value in each case. Elements that are not independent must not be contradictory. For example, the text `Mon 5 Feb 2025` superficially appears to match the pattern `Ddd D Mmm YYYY` but is contradictory, because 5 February 2025 was a Wednesday, not a Monday.
+- The elements in the formatted text must be consistent with one another. If the formatting pattern contains the same element (or variations of the same element) more than once, they must have the same value in each case. Elements that are not independent must not be contradictory. For example, the text `Mon 5 Feb 2025` superficially appears to match the formatting pattern `Ddd D Mmm YYYY` but is contradictory, because 5 February 2025 was a Wednesday, not a Monday.
 
-If a pattern is rejected, or a text-formatted datetime cannot be matched against the pattern for any of the reasons above, a `DOMAIN ERROR` is signalled and an explanatory message is included.
+If a formatting pattern is rejected, or a text-formatted datetime cannot be matched against the formatting pattern for any of the reasons above, a `DOMAIN ERROR` is signalled and an explanatory message is included.
+
+## Validating Datetimes
+
+When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` instead of converting them, interpreting each according to <code>X<sub>Y</sub></code>. `R` is a Boolean with a `1` for each element of `Y` that represents a valid datetime and a `0` for each that does not.
 
 <h3 class="example">Examples</h3>
 
+Validating a mixture of representations, one of which is not a datetime at all:
+
 ```apl
-      'DD/MM/YYYY' 1 ⎕DT ⊂'13/02/2019'
-43508
-      'DD/MM/YYYY' ¯1 ⎕DT ⊂'13/02/2019'
-┌─────────────────┐
-│2019 2 13 0 0 0 0│
-└─────────────────┘
-      'Dddd, DDoo Mmmm YYYY; hh:mm:ss' ¯1 ⎕DT ⊂'Wednesday, 13th February 2019; 10:16:56'
-┌────────────────────┐
-│2019 2 13 10 16 56 0│
-└────────────────────┘
-      '__da__Dddd, DDoo mmmm YYYY' 1 ⎕DT ⊂'Onsdag, 13. februar 2019'
-43508
+      0 ⎕DT ⎕TS (2020 13 1) 'J' 'DT' #
+1 0 1 0 0
+```
+
+Validating text-formatted datetimes. 1900 was not a leap year, but 2000 was:
+
+```apl
+      'YYYY-MM-DD' 0 ⎕DT '1900-02-29' '2000-02-29'
+0 1
 ```
 
 ## Variant Options
 
-`⎕DT` supports the `Language` and `Dictionary` variant options, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsfordt). These only apply when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
+`⎕DT` has two variant options, `Language` and `Dictionary`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsfordt). They apply only when <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are formatting patterns.
 
 Table: Variant options for `⎕DT` { #variantoptionsfordt }
 
@@ -414,20 +597,20 @@ Table: Variant options for `⎕DT` { #variantoptionsfordt }
 
 The `Language` variant option specifies the language used for formatting and matching datetimes and defaults to `'en'` (English). A language is named by a two or five character value (for example `'en'` or `'en_GB'`). The value can be one of the following:
 
-- a single character vector, which applies to whichever of <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are patterns.
-- A 2-element vector of two character vectors, which apply to <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> respectively (each is used only if the corresponding value is a pattern).
+- a single character vector, which applies to whichever of <code>X<sub>Y</sub></code> and/or <code>X<sub>R</sub></code> are formatting patterns.
+- A 2-element vector of two character vectors, which apply to <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> respectively (each is used only if the corresponding value is a formatting pattern).
 
-The setting can be explicitly overridden within a format pattern using the `__xx__` specifier described under [Language](#language).
+The setting can be explicitly overridden within a formatting pattern using the `__xx__` specifier described under [Language](#language).
 
 <h4 class="example">Examples</h4>
 
 ```apl
-      '__da__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT dt
+      '__da__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT ⊂2019 2 13 10 16 56
 ┌──────────────────────────────────┐
 │Onsdag, 13. februar 2019; 10:16:56│
 └──────────────────────────────────┘
       fmt←'Dddd, DDoo mmmm YYYY; hh:mm:ss'
-      fmt(⎕DT⍠'Language' 'da') dt
+      fmt ⎕DT⍠'Language' 'da' ⊂2019 2 13 10 16 56
 ┌──────────────────────────────────┐
 │Onsdag, 13. februar 2019; 10:16:56│
 └──────────────────────────────────┘
@@ -435,7 +618,7 @@ The setting can be explicitly overridden within a format pattern using the `__xx
 
 ### Variant Option: `Dictionary`
 
-The `Dictionary` variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both patterns, the dictionary is applied to both.
+The `Dictionary` variant option specifies a namespace that contains additional or replacement names for the months (and so on) and/or predefined patterns, for languages and language regions. If <code>X<sub>Y</sub></code> and <code>X<sub>R</sub></code> are both formatting patterns, the dictionary is applied to both.
 
 At the top level there can be zero or more sub-namespaces with two or five character names, according to the rules for language and language regions. Within each of these, month names (and so on) are defined as shown in [](#names).
 
@@ -506,54 +689,34 @@ dict←(
 
 In the above example:
 
-- the predefined pattern `ISOweek` is defined globally and is not redefined. This means that it has the same value for all languages. Similarly, `DateCompact` has the same value for all languages, but although the definition is global, it contains the pattern `MMM` and this will be substituted with the month name in the selected language.
+- the predefined pattern `ISOweek` is defined globally and is not redefined. This means that it has the same value for all languages. Similarly, `DateCompact` has the same value for all languages, but although the definition is global, it contains the formatting pattern `MMM` and this will be substituted with the month name in the selected language.
 - The predefined patterns `DateVerbose` is defined globally, and redefined for languages `fr` and `en_US`. The global definition will be used when any language other than `fr` and `en_US` is selected. If there was no global definition it would only be defined for `fr`, all regional variations of `fr`, and `en_US`.
 - There is no explicit definition of patterns or names for language region `en_GB`. If this language is selected, the definitions for `en` will be used.
 - There is an explicit definition for `ShortMonthNames` for language region `en_US`. If this language is selected, the definition of `ShortMonthNames` is as defined, and as for `en` for other names. As `en` is not defined in the dictionary, the built-in defaults are used.
 
 ```apl
-      '%DateVerbose%'(⎕DT⍠'Dictionary'dict) dt
+      '%DateVerbose%' ⎕DT⍠'Dictionary'dict ⊂2019 2 13 10 16 56
 ┌───────────────────────┐
 │the date is 13 Feb 2019│
 └───────────────────────┘
-      '%DateVerbose%'(⎕DT⍠('Dictionary' dict)('Language' 'en_US')) dt
+      '%DateVerbose%' ⎕DT⍠('Dictionary' dict ⋄ 'Language' 'en_US') ⊂2019 2 13 10 16 56
 ┌─────────────────────────┐
 │the date is Feb. 13, 2019│
 └─────────────────────────┘
-      '__cy__Dddd, DDoo mmmm YYYY; hh:mm:ss'(⎕DT⍠'Dictionary' dict) dt
+      '__cy__Dddd, DDoo mmmm YYYY; hh:mm:ss' ⎕DT⍠'Dictionary' dict ⊂2019 2 13 10 16 56
 ┌──────────────────────────────────────────┐
 │Dydd Mercher, 13eg chwefror 2019; 10:16:56│
 └──────────────────────────────────────────┘
-      '__cy__%DateVerbose%'(⎕DT⍠'Dictionary' dict) dt
+      '__cy__%DateVerbose%' ⎕DT⍠'Dictionary' dict ⊂2019 2 13 10 16 56
 ┌───────────────────────┐
 │the date is 13 Chw 2019│
 └───────────────────────┘
 ```
 
-## Validating Datetimes
-
-When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` instead of converting them, interpreting each according to <code>X<sub>Y</sub></code> as described above. `R` is a Boolean with a `1` for each element of `Y` that represents a valid datetime and a `0` for each that does not.
-
-<h3 class="example">Examples</h3>
-
-```apl
-      0 ⎕DT ⎕TS (2020 13 1) 'J' 'DT' #
-1 0 1 0 0
-
-      ¯30 0 ⎕DT⊂32000 15 10 0
-1
-
-      'DD/MM/YYYY' 0 ⎕DT '13/02/2019' '31/02/2019'
-1 0
-
-      'YYYY-MM-DD' 0 ⎕DT '1900-02-29' '2000-02-29'
-0 1
-```
-
-[^1]: The epoch is the datetime represented by 0 in the [proleptic Gregorian calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar).
-[^2]: Are negative values allowed? No datetime can represent a date earlier than ¯4713-01-01 00:00:00.
+[^1]: The epoch is the datetime represented by `0` in the [proleptic Gregorian calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar).
+[^2]: Are negative values allowed? No datetime can represent a date earlier than ¯4714-11-24 00:00:00.
 [^3]: There are the same number of ticks per day regardless of leap seconds.
-[^4]: Generated as DECF values regardless of the setting of `⎕FR` due to their magnitude.
+[^4]: Due to their possible magnitude, these are generated as [128-bit decimal floating point values](../../programming-reference-guide/introduction/128-bit-decimal-floating-point.md) regardless of the setting of [`⎕FR`](fr.md).
 [^5]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.
 [^6]: Excel supports two time number conventions. On Windows the 1900 Date System is the default and on macOS the 1904 Date System is the default. Both systems can use either convention and the convention in use is stored in the worksheet so that the platforms interoperate.
 [^7]: Count includes the invalid date 1900-02-29.
@@ -563,8 +726,7 @@ When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` in
 [^11]: If a timestamp in `Y` has fewer than the maximum number of elements, the remaining elements take the default values shown.
 [^12]: Natural sentence case, which can be specified for `M` (month name) and `d` (day name) only, causes the text to be substituted in the case which is natural for the language; some languages (for example, English) always capitalise the first letter of day and month names whereas others (for example, French) do not.
 [^13]: Dates at the start of the year can be in the final week of the previous year, and dates at the end of the year can be in the first week of the following year.
-[^14]: An ordinal indicator is a character or group of characters following a numeral, such as (in English) the suffixes -st, -nd, -rd, -th as in 1st, 2nd, 3rd, 4th.
-[^15]: Decimal encoded formats encode human-readable dates and times into a single number with the most significant part in the most significant decimal digit, for example 2020-01-23 is encoded as 20200123, and 13:17:56 is encoded as 131756.
+[^14]: An ordinal indicator is a character or group of characters following a numeral, such as the English suffixes -st, -nd, -rd, and -th in 1st, 2nd, 3rd, and 4th.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
