@@ -79,7 +79,7 @@ Table: Time numbers { #timenumbers }
 | `43` |SPSS statistics package|Tick count 1&nbsp;s ticks[^3]|1582-10-14 00:00|No|
 | `44` |SAS|Tick count 1&nbsp;s ticks[^3]|1960-01-01 00:00|Yes|
 |Julian Date and variants|||||
-| `50` |Julian Date|Day count with fractional part|¯4717-11-24 12:00|No|
+| `50` |Julian Date|Day count with fractional part|¯4714-11-24 12:00|No|
 | `51` |J (J dayno)|Day count with fractional part|1800-01-01 00:00|No|
 | `52` |Reduced Julian Date|Day count with fractional part|1858-11-16 12:00|Yes|
 | `53` |Modified Julian Date|Day count with fractional part|1858-11-17 00:00|Yes|
@@ -551,7 +551,7 @@ When <code>X<sub>R</sub></code> is `0`, `⎕DT` validates the elements of `Y` in
 ```
 
 [^1]: The epoch is the datetime represented by 0 in the [proleptic Gregorian calendar](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar).
-[^2]: Are negative values allowed? No datetime can represent a date earlier than ¯4713-01-01 00:00:00.
+[^2]: Are negative values allowed? No datetime can represent a date earlier than ¯4714-11-24 00:00:00.
 [^3]: There are the same number of ticks per day regardless of leap seconds.
 [^4]: Generated as DECF values regardless of the setting of `⎕FR` due to their magnitude.
 [^5]: For negative numbers, the integral part counts backward from 1899-12-30 and the fractional part counts forward from the date so reached.
