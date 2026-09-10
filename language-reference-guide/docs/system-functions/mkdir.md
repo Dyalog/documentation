@@ -37,7 +37,7 @@ FILE NAME ERROR: /Users/Pete/Documents/temp: Already exists
         ∧
 
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
-FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Unable to create directory
+FILE NAME ERROR: /Users/Pete/Documents/temp/t1/t2: Unable to create directory("The system cannot find the path specified.")
       ⎕←⎕MKDIR'/Users/Pete/Documents/temp/t1/t2'
         ∧
 
