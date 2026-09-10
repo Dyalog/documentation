@@ -1,6 +1,6 @@
 # Native Look and Feel
 
-*Native Look and Feel* is a Dyalog option that affects the appearance of the controls provided by the Dyalog GUI Interface and those used by the Dyalog Session. It is implemented by the **XPLookAndFeel** parameter.
+*Native Look and Feel* is a Dyalog option that affects the appearance of the controls provided by the Dyalog GUI Interface and those used by the Dyalog Session. It is implemented by the [**XPLookAndFeel**](../../../windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel/) configuration parameter. Dyalog reads that parameter before it loads any configuration file, so it must be set on the command line, as an environment variable, or in the Registry.
 
 Most of the Dyalog controls (with the notable exception of the Dyalog Grid) are standard Windows user-interface components provided by the Windows Common Controls library `comctl32.dll`. Successive versions of Windows have introduced new versions of the Windows Common Control Library which typically provide additional features as well as certain differences in appearance. However, each version of Windows continues to support older versions of the Common Control Library as well as the latest one. The decision as to which is loaded is made at run-time.
 

@@ -1,6 +1,6 @@
 # Native Look and Feel
 
-*Native Look and Feel* is a Dyalog option that affects the appearance of the controls provided by the Dyalog GUI Interface and those used by the Dyalog Session. It is implemented by the **XPLookAndFeel** parameter.
+*Native Look and Feel* is a Dyalog option that affects the appearance of the controls provided by the Dyalog GUI Interface and those used by the Dyalog Session. It is implemented by the [**XPLookAndFeel**](../../../windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel/) configuration parameter. Dyalog reads that parameter before it loads any configuration file, so it must be set on the command line, as an environment variable, or in the Registry.
 
 Most of the Dyalog controls (with the notable exception of the Dyalog Grid) are standard Windows user-interface components provided by the Windows Common Controls library `comctl32.dll`. Successive versions of Windows have introduced new versions of the Windows Common Control Library which typically provide additional features as well as certain differences in appearance. However, each version of Windows continues to support older versions of the Common Control Library as well as the latest one. The decision as to which is loaded is made at run-time.
 
@@ -20,7 +20,7 @@ By default *Native Look and Feel* is disabled in end-user applications. There ar
 
 If you use the *File/Export…* menu item on the Session MenuBar  to create a bound executable, an OLE Server (in-process or out-of-process), an ActiveX Control or a .NET Assembly, check the option box labelled *Enable Native Look and Feel* in the *create bound file* dialog box. See [Creating Executables and COM Servers](../../../windows-installation-and-configuration-guide/creating-executables).
 
-If not, set the **XPLookandFeel** parameter to 1, when you run the program. For example:
+If not, set the **XPLookAndFeel** configuration parameter to `1` when you run the program, for example:
 ```apl
 dyalogrt.exe XPLookAndFeel=1 myws.dws
 ```
