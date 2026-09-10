@@ -445,8 +445,8 @@ Table: Names { #names }
 | --- | ---  |
 | `MonthNames` | A twelve-element vector of character vectors containing the full names corresponding to January to December, respectively. |
 | `ShortMonthNames` | A twelve-element vector of character vectors containing the short names corresponding to Jan to Dec, respectively. |
-| `WeekdayNames` | A seven-element vector of character vectors containing the full names corresponding to Monday to Sunday, respectively. |
-| `ShortWeekdayNames` | A seven-element vector of character vectors containing the full names corresponding to Mon to Sun, respectively. |
+| `WeekdayNames` | A seven-element vector of character vectors containing the full names corresponding to Sunday to Saturday, respectively. |
+| `ShortWeekdayNames` | A seven-element vector of character vectors containing the short names corresponding to Sun to Sat, respectively. |
 | `MorningAfternoon` | A two-element vector of character vectors containing the names corresponding to AM and PM, respectively. |
 | `Ordinals` | A character vector containing the one ordinal used for all numbers in the range 1 to 31, or a thirty one-element vector of character vectors containing the ordinals for 1 to 31, respectively. |
 
