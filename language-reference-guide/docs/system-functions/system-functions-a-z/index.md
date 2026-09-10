@@ -85,7 +85,7 @@ search:
 |[`⎕LOCK`](../lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕LX`](../lx.md)    |Latent Expression        |Variable|
 |[`⎕MAP`](../map.md)  |Map a file                                              |Ambivalent function|
-|[`⎕MKDIR`](../mkdir.md)   |Create a directory                                           |Ambivalent function|
+|[`⎕MKDIR`](../mkdir.md)   |Create Directory                                           |Ambivalent function|
 |[`⎕ML`](../ml.md) |Migration Level              |Variable|
 |[`⎕MONITOR`](../query-monitor.md)|Monitor query|Monadic function|
 |[`⎕MONITOR`](../set-monitor.md)|Monitor set    |Dyadic function|
