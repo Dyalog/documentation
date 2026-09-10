@@ -223,8 +223,8 @@ Table: Time numbers { #timenumbersorts }
 |Decimal encoded[^9]|||||
 | `60` |Floating-point decimal encoded format of the form `yyyymmdd.hhmmss`|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
 | `61` |Integer decimal encoded format of the form `yyyymmddhhmmss` (J digit time)|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
-|Misc. Operating Systems|||||
-| `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
+|Miscellaneous Operating Systems|||||
+| `70` |AmigaOS|Tick count 1&nbsp;s ticks[^3]|1978-01-01 00:00|No|
 
 <h4 class="example">Example</h4>
 
