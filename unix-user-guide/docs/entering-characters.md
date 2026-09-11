@@ -15,7 +15,7 @@ Newly-added glyphs are not always added to the keymap (keyboard mapping file) in
 
 The following glyphs are not yet present in the distributed Linux keymap:
 
-- `⍛` (Jot Underbar, Unicode character "APL FUNCTIONAL SYMBOL JOT UNDERBAR"). Used from Dyalog v20.0 for the [_behind_](../../language-reference-guide/primitive-operators/behind/) operator.
+- `⍛` (Jot Underbar, Unicode character "APL FUNCTIONAL SYMBOL JOT UNDERBAR"). Used from Dyalog v20.0 for the [_behind_](../language-reference-guide/primitive-operators/behind.md) operator.
 
 In this situation, there are several methods in which such glyphs can be typed. For `⍛`, you can do any of the following:
 

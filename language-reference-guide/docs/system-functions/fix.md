@@ -15,7 +15,7 @@ If `Y` is a simple character vector, it must start with `file://`, followed by t
 
 If specified, `X` must be a numeric scalar. It can currently take the value `0`, `1` or `2`. If not specified, the value is assumed to be `1`.
 
-If `X` is `0`, `Y` must specify a single valid *namespace* which might or might not be named, or a file containing such a definition. If so, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
+If `X` is `0`, `Y` must specify a single valid *namespace* which might or might not be named, or a file containing such a definition. If so, the [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` contains a reference to the *namespace*. Even if the *namespace* is named, it is not established *per se*, although it will exist for as long as at least one reference to it exists.
 
 If `X` is `1`, `Y` must specify a single valid *namespace* which might or might not be named, or a file containing such a definition.  If so, the shy result `R` contains a reference to the *namespace*. If `Y` contains the definition of a named *namespace*, the *namespace* is established in the workspace.
 
@@ -154,7 +154,7 @@ Controls how internal references are inserted to implement lexical scope.
 |`'InClasses'` <small>(default)</small>|To implement lexical scope, `⎕FIX` will insert internal references only into Classes and sub-classes in the script, but not into namespaces.|
 |`'None'`   |No internal references are inserted and lexical scope does not apply.                                                                                |
 
-See [Lexical Scope in Scripts](../../../earlier-release-notes/release-notes-v19-0/introduction/lexical-scope-in-scripts).
+See [Lexical Scope in Scripts](../../earlier-release-notes/release-notes-v19-0/introduction/lexical-scope-in-scripts.md).
 
 The following examples illustrate how different values of the `InjectReferences` option affect the scope of objects in scripts. The examples are based on the following family tree:
 

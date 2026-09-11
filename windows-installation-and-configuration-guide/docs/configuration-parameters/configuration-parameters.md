@@ -17,7 +17,7 @@ Furthermore, you are not limited to the set of parameters employed by APL itself
 
 Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under UNIX and Linux, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
 
-The value of a parameter obtained by the [GetEnvironment](../../../object-reference/methodorevents/getenvironment) method uses exactly the same set of rules.
+The value of a parameter obtained by the [GetEnvironment](../../object-reference/methodorevents/getenvironment.md) method uses exactly the same set of rules.
 
 The following section details those parameters that are implemented by Registry Values in the top-level folder identified by **IniFile**. Values that are implemented in sub-folders are *mainly* internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.
 

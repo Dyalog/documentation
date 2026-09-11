@@ -2,9 +2,9 @@
 
 Prompts user to select a file.
 
-The FileBox object implements the standard Windows FileSelection Dialog Box. This is a "modal" object. When you create a FileBox with [`⎕WC`](../../../language-reference-guide/system-functions/wc), it is initially invisible and the user cannot interact with it. To use it, you must execute [`⎕DQ`](../../../language-reference-guide/system-functions/dq) with the name of the FileBox as its right argument. This causes the FileBox to be displayed. During the "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq) the user may interact **only** with the FileBox, or with other applications. When the user terminates the operation (by pressing the "Save", "Open", or "Cancel" Buttons, or by closing the window) the "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates, and the FileBox disappears.
+The FileBox object implements the standard Windows FileSelection Dialog Box. This is a "modal" object. When you create a FileBox with [`⎕WC`](../../language-reference-guide/system-functions/wc.md), it is initially invisible and the user cannot interact with it. To use it, you must execute [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) with the name of the FileBox as its right argument. This causes the FileBox to be displayed. During the "local" [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) the user may interact **only** with the FileBox, or with other applications. When the user terminates the operation (by pressing the "Save", "Open", or "Cancel" Buttons, or by closing the window) the "local" [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) terminates, and the FileBox disappears.
 
-When the "local" [`⎕DQ`](../../../language-reference-guide/system-functions/dq) is terminated, the FileBox generates either an [FileBoxOK](../methodorevents/fileboxok.md)(71) or [FileBoxCancel](../methodorevents/fileboxcancel.md)(72) event. The former is generated when the user presses the "Save" or "Open" button; the latter when the user presses the "Cancel" button or closes the FileBox.
+When the "local" [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) is terminated, the FileBox generates either an [FileBoxOK](../methodorevents/fileboxok.md)(71) or [FileBoxCancel](../methodorevents/fileboxcancel.md)(72) event. The former is generated when the user presses the "Save" or "Open" button; the latter when the user presses the "Cancel" button or closes the FileBox.
 
 The [FileMode](../properties/filemode.md) property is a character vector which indicates the mode in which the selected file is going to be opened. [FileMode](../properties/filemode.md) may be `'Read'` (the default) or `'Write'`. If [FileMode](../properties/filemode.md) is `'Write'`, files listed in the File Selection Box are "greyed", although they may still be selected.
 
@@ -22,7 +22,7 @@ The [Filters](../properties/filters.md) property is a nested scalar or vector co
 
 The [Index](../properties/index-property.md) property determines which of the filters is initially selected. Its default value is `⎕IO`.
 
-When [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates with [FileBoxOK](../methodorevents/fileboxok.md), the [File](../properties/file.md), [Directory](../properties/directory.md), and [Index](../properties/index-property.md) properties are updated to reflect the contents of the fields within the FileBox.
+When [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) terminates with [FileBoxOK](../methodorevents/fileboxok.md), the [File](../properties/file.md), [Directory](../properties/directory.md), and [Index](../properties/index-property.md) properties are updated to reflect the contents of the fields within the FileBox.
 
 The operating system imposes limits on both the length of the name of the file, and on the total path length. In version {{ version_majmin }}attempting to set the `File` or `Directory` Properties to too long a name will generate a DOMAIN ERROR, while attempting to use too long a File name within the FileBox will result in the appearence of an error MessageBox.
 

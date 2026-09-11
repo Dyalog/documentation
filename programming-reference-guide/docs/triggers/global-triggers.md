@@ -1,6 +1,6 @@
 # Global Triggers
 
-A global Trigger is a function that triggers on any assignment to a global variable in the same namespace. Global Triggers may be disabled and re-enabled using `2007⌶`. See [Disable Global Triggers](../../../language-reference-guide/primitive-operators/i-beam/disable-global-triggers).
+A global Trigger is a function that triggers on any assignment to a global variable in the same namespace. Global Triggers may be disabled and re-enabled using `2007⌶`. See [Disable Global Triggers](../../language-reference-guide/primitive-operators/i-beam/disable-global-triggers.md).
 
 This is implemented by the function declaration statement:
 

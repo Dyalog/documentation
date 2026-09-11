@@ -18,7 +18,7 @@ The _rank_ operator `⍤` applies monadic function `f` successively to sub-array
 
 If `B` is a two item vector `q r`, it is implicitly extended to `r q r`. If  `B` has a single item `r`, it is implicitly extended to `r r r`.
 
-If an item `k` of `B` is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where `r` is the rank of the corresponding argument. A value of `¯1` selects major cells.  For further information, see [Cells and Sub-arrays](../../../programming-reference-guide/introduction/arrays/cells-and-subarrays).
+If an item `k` of `B` is zero or positive it selects k-cells of the corresponding argument. If it is negative, it selects (r+k)-cells where `r` is the rank of the corresponding argument. A value of `¯1` selects major cells.  For further information, see [Cells and Sub-arrays](../../programming-reference-guide/introduction/arrays/cells-and-subarrays.md).
 
 If `X` is omitted, `f` may be any monadic function that returns a result. `Y` may be any array. The _rank_ operator `⍤` applies function `f` successively to the sub-arrays in `Y` specified by `p` (that is, the first item of `B`, as specified or implicitly extended).
 

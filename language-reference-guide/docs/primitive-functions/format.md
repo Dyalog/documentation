@@ -164,8 +164,8 @@ By replacing spaces with `^`, it is clearer to see how the result of `⍕` is fo
 
 ## See Also
 
-- [Display of Arrays](../../../programming-reference-guide/introduction/arrays/display-of-arrays) – how arrays appear in the session
-- [`⎕FMT`](../../system-functions/format-monadic/) – Format (Monadic): returns a character matrix
+- [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays.md) – how arrays appear in the session
+- [`⎕FMT`](../system-functions/format-monadic.md) – Format (Monadic): returns a character matrix
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

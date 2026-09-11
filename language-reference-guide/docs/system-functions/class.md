@@ -48,7 +48,7 @@ Animal
 
 ### Example 2
 
-The Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example)) illustrates the use of Interfaces.
+The Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md)) illustrates the use of Interfaces.
 
 In this case, the `Penguin` Class derives from `Animal` (as above) but additionally supports the `BirdBehaviour` and `FishBehaviour` Interfaces, thereby inheriting members from both.
 ```apl
@@ -65,7 +65,7 @@ In this case, `R` is a reference to the implementation of Interface `X` by Insta
 
 #### Example 1
 
-Once again, the Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../../programming-reference-guide/object-oriented-programming/interfaces/interface-example)) is used to illustrate the use of Interfaces.
+Once again, the Penguin Class example (see[Programmer's Guide: "Penguin Class Example"](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md)) is used to illustrate the use of Interfaces.
 ```apl
       Pingo←⎕NEW Penguin
       ⎕CLASS Pingo

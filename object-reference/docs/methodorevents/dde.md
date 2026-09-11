@@ -9,9 +9,9 @@ This event **only** applies to the [Root](../objects/root.md) object ".", so to 
       '.' ⎕WS 'Event' 50 fn larg
 ```
 
-The first statement would cause [`⎕DQ`](../../../language-reference-guide/system-functions/dq) to terminate on receipt of a DDE event. The second would cause it to call "`fn`" each time. The third would do likewise but the value in "`larg`" would be supplied as its left argument.
+The first statement would cause [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) to terminate on receipt of a DDE event. The second would cause it to call "`fn`" each time. The third would do likewise but the value in "`larg`" would be supplied as its left argument.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function is a 2-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function is a 2-element vector as follows :
 
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|

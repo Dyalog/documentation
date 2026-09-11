@@ -45,7 +45,7 @@ Table: Configuration dialog box – Unicode Input tab (Input Method Editor Prope
 |Label|Parameter|Description|
 |---|---|---|
 |Use Ctrl+X,C,V for clipboard|[UseXCV](../configuration-parameters/usexcv.md)|Specifies whether the commonly used keystrokes for copy, cut, and paste are recognised as such|
-|Enable Backtick Keyboard introducer|&nbsp;|Enables the *Backtick* keyboard, in which the backtick character introduces APL glyphs. See [Backtick Keyboard](../../../windows-ui-guide/ime-configuration#backtick-keyboard)|
+|Enable Backtick Keyboard introducer|&nbsp;|Enables the *Backtick* keyboard, in which the backtick character introduces APL glyphs. See [Backtick Keyboard](../../windows-ui-guide/ime-configuration.md#backtick-keyboard)|
 |Enable Overstrikes|[ResolveOverstrikes](../configuration-parameters/resolveoverstrikes.md)|1 = enable overstrikes. 0 = disable overstrikes|
 |Overstrikes do not require the OS introducer key|&nbsp;|1 = IME identifies overstrike operation automatically 0 = IME requires the **&lt;OS&gt;** key (default <kbd>Ctrl</kbd>+<kbd>Bksp</kbd>) to signal an overstrike operation|
 |Use Overstrike popup|[OverstrikesPopup](../configuration-parameters/overstrikespopup.md)|1 = enable the overstrike popup. 0 = disable the overstrike popup|
@@ -113,7 +113,7 @@ Table: Configuration dialog box – Help/DMX tab
 
 |Label|Parameter|Description|
 |---|---|---|
-|DMX messages should go to|[DMXOutputOnError](../configuration-parameters/dmxoutputonerror.md)|If checked, these boxes cause APL to display [`⎕DMX`](../../../language-reference-guide/system-functions/dmx) messages in the corresponding window(s)|
+|DMX messages should go to|[DMXOutputOnError](../configuration-parameters/dmxoutputonerror.md)|If checked, these boxes cause APL to display [`⎕DMX`](../../language-reference-guide/system-functions/dmx.md) messages in the corresponding window(s)|
 |Use Microsoft's documentation centre for non-Dyalog topics|[UseExternalHelpURL](../configuration-parameters/useexternalhelpurl.md)|If this option is checked, APL will look for help for external objects at Microsoft's documentation centre, which is identified by the specified URL|
 |URL|[ExternalHelpURL](../configuration-parameters/externalhelpurl.md)|The URL for the documentation centre|
 
@@ -145,7 +145,7 @@ Table: Configuration dialog box – Windows tab (QuadSM Window panel)
 
 |Label |Parameter                                           |Description|
 |------|----------------------------------------------------|--------------------------------------------|
-|Width |[SM_Cols](../configuration-parameters/sm-cols.md)|The width of the [`⎕SM`](../../../language-reference-guide/system-functions/sm) window|
+|Width |[SM_Cols](../configuration-parameters/sm-cols.md)|The width of the [`⎕SM`](../../language-reference-guide/system-functions/sm.md) window|
 |Height|[SM_Rows](../configuration-parameters/sm-rows.md)|The height of the `⎕SM` window|
 
 ## Session Tab
@@ -156,19 +156,19 @@ Table: Configuration dialog box – Session tab
 
 |Label|Parameter|Description|
 |---|---|---|
-|[`⎕IO`](../../../language-reference-guide/system-functions/io)|[Default_IO](../configuration-parameters/default-io.md)|The default value of `⎕IO` in a `clear ws`|
-|[`⎕ML`](../../../language-reference-guide/system-functions/ml)|[Default_ML](../configuration-parameters/default-ml.md)|The default value of `⎕ML` in a `clear ws`|
-|[`⎕PP`](../../../language-reference-guide/system-functions/pp)|[Default_PP](../configuration-parameters/default-pp.md)|The default value of `⎕PP` in a `clear ws`|
-|[`⎕RTL`](../../../language-reference-guide/system-functions/rtl)|[Default_RTL](../configuration-parameters/default-rtl.md)|The default value of `⎕RTL` in a `clear ws`|
-|[`⎕DIV`](../../../language-reference-guide/system-functions/div)|[Default_DIV](../configuration-parameters/default-div.md)|The default value of `⎕DIV` in a `clear ws`|
-|[`⎕WX`](../../../language-reference-guide/system-functions/wx)|[Default_WX](../configuration-parameters/default-wx.md)|The default value of `⎕WX` in a `clear ws`|
-|Auto PW|[Auto_PW](../configuration-parameters/auto-pw.md)|If checked, the value of [`⎕PW`](../../../language-reference-guide/system-functions/pw) is dynamic and depends on the width of the Session Window|
+|[`⎕IO`](../../language-reference-guide/system-functions/io.md)|[Default_IO](../configuration-parameters/default-io.md)|The default value of `⎕IO` in a `clear ws`|
+|[`⎕ML`](../../language-reference-guide/system-functions/ml.md)|[Default_ML](../configuration-parameters/default-ml.md)|The default value of `⎕ML` in a `clear ws`|
+|[`⎕PP`](../../language-reference-guide/system-functions/pp.md)|[Default_PP](../configuration-parameters/default-pp.md)|The default value of `⎕PP` in a `clear ws`|
+|[`⎕RTL`](../../language-reference-guide/system-functions/rtl.md)|[Default_RTL](../configuration-parameters/default-rtl.md)|The default value of `⎕RTL` in a `clear ws`|
+|[`⎕DIV`](../../language-reference-guide/system-functions/div.md)|[Default_DIV](../configuration-parameters/default-div.md)|The default value of `⎕DIV` in a `clear ws`|
+|[`⎕WX`](../../language-reference-guide/system-functions/wx.md)|[Default_WX](../configuration-parameters/default-wx.md)|The default value of `⎕WX` in a `clear ws`|
+|Auto PW|[Auto_PW](../configuration-parameters/auto-pw.md)|If checked, the value of [`⎕PW`](../../language-reference-guide/system-functions/pw.md) is dynamic and depends on the width of the Session Window|
 |Input buffer size|[Input_Size](../configuration-parameters/input-size.md)|The size of the buffer used to store marked lines (lines awaiting execution) in the Session|
 |History size|[History_Size](../configuration-parameters/history-size.md)|The size of the buffer used to store previously entered (input) lines in the Session|
-|PFKey buffer size|[PFKey_Size](../configuration-parameters/pfkey-size.md)|The size of the buffer used to store PFKey definitions ( [`⎕PFKEY`](../../../language-reference-guide/system-functions/pfkey) )|
+|PFKey buffer size|[PFKey_Size](../configuration-parameters/pfkey-size.md)|The size of the buffer used to store PFKey definitions ( [`⎕PFKEY`](../../language-reference-guide/system-functions/pfkey.md) )|
 |Confirm on Deletion from Session log|[Confirm_Session_Delete](../configuration-parameters/confirm-session-delete.md)|Specifies whether you are prompted to confirm the deletion of a line from the Session (and Session log)|
 |Session log size|[Log_Size](../configuration-parameters/log-size.md)|The size of the Session log buffer|
-|Session file|[Session_File](../configuration-parameters/session-file.md)|The name of the Session file in which the definition of your session ( [`⎕SE`](../../../language-reference-guide/system-functions/se) ) is stored|
+|Session file|[Session_File](../configuration-parameters/session-file.md)|The name of the Session file in which the definition of your session ( [`⎕SE`](../../language-reference-guide/system-functions/se.md) ) is stored|
 |Use log file|[Log_File_InUse](../configuration-parameters/log-file-inuse.md)|Specifies whether the Session log is saved in a session log file|
 |Use log file|[Log_File](../configuration-parameters/log-file.md)|The full pathname of the Session log file|
 |Multiline Input|[Dyalog_LineEditor_Mode](../configuration-parameters/dyalog-lineeditor-mode.md)|Specifies whether multi-line input is enabled in the Session|
@@ -216,7 +216,7 @@ These two actions always appear in the Editor File menu, but you can specify whi
 
 In both cases, you can select either **Only Functions** or **Everything**.
 
-The label for the corresponding items on the Editor File menu (see [The File Menu (editing a script)](../../../windows-ui-guide/editor/#the-file-menu-editing-a-script)) will change according to which behaviour applies. If you specify a keystroke for **&lt;S1&gt;** in the **Keyboard Shortcuts** tab, this will be associated with the unselected action.
+The label for the corresponding items on the Editor File menu (see [The File Menu (editing a script)](../../windows-ui-guide/editor.md#the-file-menu-editing-a-script)) will change according to which behaviour applies. If you specify a keystroke for **&lt;S1&gt;** in the **Keyboard Shortcuts** tab, this will be associated with the unselected action.
 
 ## Auto Complete Tab
 

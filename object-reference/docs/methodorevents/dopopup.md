@@ -4,7 +4,7 @@ This event is triggered when the [HTMLRenderer](../objects/htmlrenderer.md) clie
 
 By default the HTMLRenderer ignores a request for a new window, but if  the DoPoup event, is enabled, it provides the information needed to process the request in the workspace.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows:
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows:
 
 |-----|----------|---------------------------------------|
 |`[1]`|Object    |ref or character vector                |

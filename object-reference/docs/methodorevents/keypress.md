@@ -4,7 +4,7 @@ If enabled, this event is generated when the user presses and releases a key
 on the keyboard. It is reported for whichever object has the keyboard focus at
 the time.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md),
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows :
 

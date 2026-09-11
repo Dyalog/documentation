@@ -49,7 +49,7 @@ The function `Text` that generates this example is shown below. The argument `tx
 
 ```
 
-The utility function `LoadXAML` incorporates the 3 lines of code `[5-7]` used to create a WPF window from XAML that were coded in-line in the [Temperature Converter Tutorial](../temperature-converter-tutorial/#the-code-to-display-the-xaml):
+The utility function `LoadXAML` incorporates the 3 lines of code `[5-7]` used to create a WPF window from XAML that were coded in-line in the [Temperature Converter Tutorial](temperature-converter-tutorial.md#the-code-to-display-the-xaml):
 ```apl
      ∇ win←LoadXAML xaml;⎕USING;str;xml
 [1]    ⎕USING←'System.IO'
@@ -83,7 +83,7 @@ Lines `[5-6]` initialise a new global variable called `txtSource` to the value o
 [6]   txtSource←txt
 ```
 
-Line `[7]`creates a Binding Source object using [`2015⌶`](../../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source/) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
+Line `[7]`creates a Binding Source object using [`2015⌶`](../../language-reference-guide/primitive-operators/i-beam/create-data-binding-source.md) and assigns it to the `DataContext` property of the TextBox object. As it is a character vector, the exported Type for the bound variable `txtSource` is <code class="language-nonAPL">System.String</code>, which is appropriate for the <code class="language-nonAPL">Text</code> property of a <code class="language-nonAPL">TextBox</code>:
 ```apl
 
 [7]    win.txtBox.DataContext←2015⌶'txtSource'

@@ -6,7 +6,7 @@ If enabled, this event is generated when the user attempts to move the thumb in 
 2. clicking in one of the "arrow" buttons situated at the ends of the scrollbar. This is termed a small change, the size of which is defined by [Step](../properties/step.md)[1].
 3. clicking in the body of the scrollbar. This is termed a large change, the size of which is defined by [Step](../properties/step.md)[2].
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 4-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 4-element vector as follows :
 
 |-----|-----------|-----------------------|
 |`[1]`|Object     |ref or character vector|

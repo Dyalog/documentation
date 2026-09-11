@@ -1,6 +1,6 @@
 # Using .NET Classes
 
-To create a Dyalog object as an instance of a .NET class, the [`⎕NEW`](../../../language-reference-guide/system-functions/new/) system function is used. The `⎕NEW` system function is monadic. It takes a 1 or 2-element argument, the first element of which is a class.
+To create a Dyalog object as an instance of a .NET class, the [`⎕NEW`](../../language-reference-guide/system-functions/new.md) system function is used. The `⎕NEW` system function is monadic. It takes a 1 or 2-element argument, the first element of which is a class.
 
 If the argument is a scalar or a 1-element vector, an instance of the class is created using the constructor overload that takes no argument.
 
@@ -17,7 +17,7 @@ To create a <code class="language-nonAPL">DateTime</code> object whose value is 
 
 ```
 
-Alternatively, to use fully-qualified class names, one of the elements of [`⎕USING`](../../../language-reference-guide/system-functions/using/) must be an empty vector:
+Alternatively, to use fully-qualified class names, one of the elements of [`⎕USING`](../../language-reference-guide/system-functions/using.md) must be an empty vector:
 ```apl
       ⎕USING←,⊂''
       mydt←⎕NEW System.DateTime (2008 4 30)
@@ -85,7 +85,7 @@ If `⎕NEW` is called with a class as argument and a second element, then Dyalog
 
 ## Displaying a .NET Object
 
-When you display a reference to a .NET object, APL calls the object's <code class="language-nonAPL">ToString</code> method and displays the result. All objects provide a <code class="language-nonAPL">ToString</code> method because all objects ultimately inherit from the .NET class <code class="language-nonAPL">System.Object</code>, which provides a default implementation. Many .NET classes provide their own <code class="language-nonAPL">ToString</code> that overrides the one inherited from <code class="language-nonAPL">System.Object</code> and returns a useful representation of the object in question. <code class="language-nonAPL">ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code class="language-nonAPL">ToString</code> that is defined to take no calling parameters. The monadic _format_ function ([`⍕`](../../../language-reference-guide/primitive-functions/format/)) and monadic [`⎕FMT`](../../../language-reference-guide/system-functions/format-monadic/) have been extended to provide the same result and provide a shorthand method to call <code class="language-nonAPL">ToString</code>. The default <code class="language-nonAPL">ToString</code> supplied by <code class="language-nonAPL">System.Object</code> returns the name of the object's Type. For a particular object in the namespace, this can be changed using the system function [`⎕DF`](../../../language-reference-guide/system-functions/df/).
+When you display a reference to a .NET object, APL calls the object's <code class="language-nonAPL">ToString</code> method and displays the result. All objects provide a <code class="language-nonAPL">ToString</code> method because all objects ultimately inherit from the .NET class <code class="language-nonAPL">System.Object</code>, which provides a default implementation. Many .NET classes provide their own <code class="language-nonAPL">ToString</code> that overrides the one inherited from <code class="language-nonAPL">System.Object</code> and returns a useful representation of the object in question. <code class="language-nonAPL">ToString</code> usually supports a range of calling parameters, but APL always calls the version of <code class="language-nonAPL">ToString</code> that is defined to take no calling parameters. The monadic _format_ function ([`⍕`](../../language-reference-guide/primitive-functions/format.md)) and monadic [`⎕FMT`](../../language-reference-guide/system-functions/format-monadic.md) have been extended to provide the same result and provide a shorthand method to call <code class="language-nonAPL">ToString</code>. The default <code class="language-nonAPL">ToString</code> supplied by <code class="language-nonAPL">System.Object</code> returns the name of the object's Type. For a particular object in the namespace, this can be changed using the system function [`⎕DF`](../../language-reference-guide/system-functions/df.md).
 
 <h* class="example">Example</h*>
 ```apl
@@ -127,4 +127,4 @@ Furthermore, a .NET object can allocate unmanaged resources (such as window hand
 
 To allow the programmer to control the freeing of resources associated with .NET objects in a standard way, many objects implement the <code class="language-nonAPL">IDisposable</code> interface which provides a <code class="language-nonAPL">Dispose()</code> method. The C# language provides a <code class="language-nonAPL">using</code> control structure that automates the freeing of resources. Crucially, it does so irrespective of how the flow of execution exits the control structure, even as a result of error handling. This obviates the need for the programmer to call <code class="language-nonAPL">Dispose()</code> explicitly wherever it may be required.
 
-This programming convenience is provide in Dyalog by the `:Disposable ... :EndDisposable` control structure. For more information on this control structure, see [:Disposable](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable/).
+This programming convenience is provide in Dyalog by the `:Disposable ... :EndDisposable` control structure. For more information on this control structure, see [:Disposable](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable.md).

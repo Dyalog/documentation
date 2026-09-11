@@ -3,11 +3,11 @@
 If enabled, this event is reported when the user alters the text in a [Combo](../objects/combo.md) or [Edit](../objects/edit.md) object (by typing). The event is not applicable for a [Combo](../objects/combo.md) with [Style](../properties/style.md)`'Drop'` because this [Style](../properties/style.md) does not allow the user to alter data. The Change event is not reported repeatedly as the user edits the data. Instead, it is reported when the user indicates that he has finished with the field by :
 
 1. clicking on another object, **or**
-2. causing an event on another object (without altering the input focus) which will fire a callback function or cause [`⎕DQ`](../../../language-reference-guide/system-functions/dq) to terminate. This can occur if the user chooses a [MenuItem](../objects/menuitem.md), or fires a [Button](../objects/button.md) with the [Default](../properties/default.md) or [Cancel](../properties/cancel.md) property by pressing Enter or Esc, or selects an object using an accelerator key.
+2. causing an event on another object (without altering the input focus) which will fire a callback function or cause [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) to terminate. This can occur if the user chooses a [MenuItem](../objects/menuitem.md), or fires a [Button](../objects/button.md) with the [Default](../properties/default.md) or [Cancel](../properties/cancel.md) property by pressing Enter or Esc, or selects an object using an accelerator key.
 
 The purpose of the Change event is to allow the application to validate data which has been newly entered to the field, before proceeding with another action. It is for this reason that the event is fired not just when the input focus changes, but also when the user takes some action that could cause the application to do something else.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 3-element vector as follows :
 
 |-----|-----------|-----------------------------------------------------------------------------------|
 |`[1]`|Object     |ref or character vector                                                            |

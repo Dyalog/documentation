@@ -17,7 +17,7 @@ A Configure event is **not** reported when an object is moved
 using "drag & drop". See [Dragable](../properties/dragable.md) (property) and [DragDrop](./dragdrop.md) (event) for details
 of this operation.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md),
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows :
 

@@ -12,13 +12,13 @@ search:
 !!! Legacy "Legacy"
     Prior to Dyalog v13.0, `⎕PW` had a minimum value of `30`; this was increased to support 128-bit decimal values.
 
-The value of `⎕PW` in a clear workspace is defined by the [**Default_PW**](../../../windows-installation-and-configuration-guide/configuration-parameters/default-pw) configuration parameter, which is `76` on Microsoft Windows and `79` on Unix.
+The value of `⎕PW` in a clear workspace is defined by the [**Default_PW**](../../windows-installation-and-configuration-guide/configuration-parameters/default-pw.md) configuration parameter, which is `76` on Microsoft Windows and `79` on Unix.
 
 If an attempt is made to display a line wider than `⎕PW`, then the display will be folded at or before the `⎕PW` width and the folded portions indented 6 spaces.  The display of a simple numeric array may be folded at a width less than `⎕PW` so that individual numbers are not split.
 
-If the [**Auto_PW**](../../../windows-installation-and-configuration-guide/configuration-parameters/auto-pw) configuration parameter is set to `1`, `⎕PW` is automatically adjusted whenever the Session window is resized. In these circumstances, a value assigned to `⎕PW` will only apply until the Session window is next resized.
+If the [**Auto_PW**](../../windows-installation-and-configuration-guide/configuration-parameters/auto-pw.md) configuration parameter is set to `1`, `⎕PW` is automatically adjusted whenever the Session window is resized. In these circumstances, a value assigned to `⎕PW` will only apply until the Session window is next resized.
 
-`⎕PW` only affects [implicit output](../../../programming-reference-guide/introduction/output) and output through `⎕`. It does not affect the result of the function _format_ (`⍕`), of the system function `⎕FMT`, or output through the system functions `⎕ARBOUT` and `⎕ARBIN`, or output through `⍞`.
+`⎕PW` only affects [implicit output](../../programming-reference-guide/introduction/output.md) and output through `⎕`. It does not affect the result of the function _format_ (`⍕`), of the system function `⎕FMT`, or output through the system functions `⎕ARBOUT` and `⎕ARBIN`, or output through `⍞`.
 
 <h2 class="example">Examples</h2>
 ```apl

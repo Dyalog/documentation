@@ -92,7 +92,7 @@ The action codes are case-sensitive and must be specified in upper case.
 |`1007`   |`RESIZE (Dyalog APL/X, Dyalog APL/W)`          |
 |`1008`   |`DEADLOCK`                                     |
 
-See [Programmer's Guide: "Trap Statement"](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap) for an alternative 'control structured' error trapping mechanism.
+See [Programmer's Guide: "Trap Statement"](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) for an alternative 'control structured' error trapping mechanism.
 
 <h2 class="example">Examples</h2>
 ```apl

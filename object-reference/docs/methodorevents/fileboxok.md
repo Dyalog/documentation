@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when a [FileBox](../objects/filebox.md) is closed because the user has pressed the "Open" or "Save" button.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 3-element vector as follows :
 
 |-----|---------|-----------------------------------------------------------------------------------|
 |`[1]`|Object   |ref or character vector                                                            |

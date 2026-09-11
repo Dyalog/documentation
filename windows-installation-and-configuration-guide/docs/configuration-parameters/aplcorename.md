@@ -4,4 +4,4 @@ This parameter specifies the directory and name of the file in which *aplcore* s
 
 Dyalog terminates with an exit code of 3 when an aplcore file is generated.
 
-See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).
+See also [aplcore Parameters](../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters.md).

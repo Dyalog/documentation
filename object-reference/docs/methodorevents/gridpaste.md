@@ -4,7 +4,7 @@ If enabled, this event is reported when the user presses <kbd>Shift</kbd>+<kbd>I
 
 You may disable the paste facility entirely by setting the action code of the event to `¯1`. You may also disable an individual paste operation by returning 0 from a callback function.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 6-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 6-element vector as follows :
 
 |---|---|---|
 |`[1]`|Object|ref or character vector|

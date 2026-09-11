@@ -12,7 +12,7 @@ Prior to this call, the default value of the threshold is specified by an enviro
 
 `R` is the previous value.
 
-See [Parallel Execution](../../../../programming-reference-guide/introduction/parallel-execution) and [Number of Threads](number-of-threads.md).
+See [Parallel Execution](../../../programming-reference-guide/introduction/parallel-execution.md) and [Number of Threads](number-of-threads.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -145,7 +145,7 @@ Nevertheless whenever you edit the Class *when it is not suspended*, you probabl
 
 The options in the *File* menu shown above provide for these alternatives.
 
-In addition, the Configuration Dialog (see [Fixing Scripts](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/#fixing-scripts)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
+In addition, the Configuration Dialog (see [Fixing Scripts](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#fixing-scripts)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
 
 ### The Edit Menu
 
@@ -259,7 +259,7 @@ Dyalog allows you to insert leading spaces in lines of a function and (unless th
 
 ### Reformatting
 
-The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [Trace/Edit Tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/#traceedit-tab).
+The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [Trace/Edit Tab](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#traceedit-tab).
 
 ### Deleting Lines
 
@@ -308,12 +308,12 @@ When you position the caret over a name, control word, or simple text or to the 
 When you press the <AC> key, or select *Align Comments* in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:
 
 - Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.
-- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/#traceedit-tab).
+- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#traceedit-tab).
 - Comment symbols will not move further left than the end of the statement.
 
 When a comment is re-aligned, text to the right of the left-most comment symbol (including spaces and other comment symbols) will remain fixed in relation to  that symbol.
 
-There is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/#keyboard-shortcuts-tab).
+There is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab).
 
 ### Stop, Trace and Monitor Controls
 
@@ -379,7 +379,7 @@ Finally, with all the sections opened:
 
 ### Array Notation
 
-The Editor allows you to edit arbitrary arrays using [array notation](../../programming-reference-guide/introduction/arrays/array-notation).
+The Editor allows you to edit arbitrary arrays using [array notation](../programming-reference-guide/introduction/arrays/array-notation.md).
 
 Any of the following invokes it:
 
@@ -515,7 +515,7 @@ Suppose that you want to search through a function for references to the string 
 
 Now let us suppose that you wish to replace all occurrences of "Adam" with "Amanda". First select *Replace* from the *Edit* menu. This will cause the *Find Dialog* box to be replaced by the *Find/Replace* Dialog box. Enter the string "Amanda" into the box labelled *Replace* With, then click *Replace All*. All occurrences of "Adam" in the current Edit window are changed to "Amanda". To repeat the same global change in another function, simply open an edit window and click *Replace All* again. If instead you only want to change particular instances of "Adam" to "Amanda" you may use *Find Next* to locate the ones you want, and then *Replace* to make each individual alteration.
 
-Text searches are performed using PCRE. If the *Use Regular Expressions* box is checked, the full range of regular expressions provided by PCRE are available for use. See [PCRE Regular Expression Syntax Summary](../../language-reference-guide/pcre-specifications).
+Text searches are performed using PCRE. If the *Use Regular Expressions* box is checked, the full range of regular expressions provided by PCRE are available for use. See [PCRE Regular Expression Syntax Summary](../language-reference-guide/pcre-specifications.md).
 
 ### Saving and Quitting
 
@@ -556,13 +556,13 @@ When you exit the editor with *Exit and fix*,  you will be offered a number of a
 
 **Saving a Text file**
 
-If you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
+If you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../language-reference-guide/primitive-operators/i-beam/list-loaded-files.md) and [List Loaded File Objects](../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects.md).
 
 ![](img/editing-text-files-save-script-file-content.png)
 
 **Saving a Script file**
 
-If you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../../language-reference-guide/primitive-operators/i-beam/list-loaded-files) and [List Loaded File Objects](../../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects).
+If you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../language-reference-guide/primitive-operators/i-beam/list-loaded-files.md) and [List Loaded File Objects](../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects.md).
 
 ### Fix as code in the workspace
 
@@ -618,4 +618,4 @@ The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (D
 
 To ensure that they can be used by Classic Edition, the source code has been discarded from all the workspaces supplied by Dyalog as part of the distribution.
 
-See also: [Discard Source Code](../../language-reference-guide/primitive-operators/i-beam/discard-source-code) and [Discard Source Information](../../language-reference-guide/primitive-operators/i-beam/discard-source-information).
+See also: [Discard Source Code](../language-reference-guide/primitive-operators/i-beam/discard-source-code.md) and [Discard Source Information](../language-reference-guide/primitive-operators/i-beam/discard-source-information.md).

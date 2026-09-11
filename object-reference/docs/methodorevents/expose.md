@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when part or all of the object's window is exposed to view. Under normal circumstances, APL repaints the exposed region automatically. However, if you have drawn unnamed graphical objects (which are **not** managed by APL) you should use this event to redraw them when required. APL will itself repaint any **named** objects in the region before reporting the event.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 6-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 6-element vector as follows :
 
 |-----|------|-----------------------------------------------|
 |`[1]`|Object|ref or character vector                        |

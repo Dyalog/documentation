@@ -59,7 +59,7 @@ A maximum of 8 virtual memory addresses are available for shared code files; the
 
 __Cannot `)SAVE` or `⎕SAVE` a workspace that has shared code files attached__
 
-It is not possible to [`)SAVE`](../../language-reference-guide/system-commands/save.md) or [`⎕SAVE`](../../language-reference-guide/system-functions/save.md) the current workspace if any shared code files are attached (they must be [assimilated](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#assimilate-shared-code-files) or [detached](../../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#detach-shared-code-files) first).
+It is not possible to [`)SAVE`](../../language-reference-guide/system-commands/save.md) or [`⎕SAVE`](../../language-reference-guide/system-functions/save.md) the current workspace if any shared code files are attached (they must be [assimilated](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files.md#assimilate-shared-code-files) or [detached](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files.md#detach-shared-code-files) first).
 
 ### Restriction 4
 
@@ -71,7 +71,7 @@ Attaching shared code files results in data being copied from the shared code fi
 
 __Only certain content can be saved in a shared code files__
 
-The content of a shared code file is limited to namespaces, nested arrays, simple arrays, tradfns, tradops, dfns, dops and derived functions (futures and external variables are instantiated and become arrays). If other content (for example, .NET objects, shared variables and COM objects) is present in a workspace then that workspace cannot be [saved](../../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files/) as a shared code file.
+The content of a shared code file is limited to namespaces, nested arrays, simple arrays, tradfns, tradops, dfns, dops and derived functions (futures and external variables are instantiated and become arrays). If other content (for example, .NET objects, shared variables and COM objects) is present in a workspace then that workspace cannot be [saved](../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files.md) as a shared code file.
 
 ## Summary of Limitations
 

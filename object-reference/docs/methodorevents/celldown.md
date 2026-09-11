@@ -4,7 +4,7 @@ If enabled, this event is reported when the user presses a mouse button down whi
 
 The default action is to generate a [CellMove](./cellmove.md) event which will then position the user on the new cell. This action can be prevented by returning 0 from the callback function, in which case the normally ensuing [CellMove](./cellmove.md) event will not occur.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is an 9 element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is an 9 element vector as follows :
 
 |-----|-----------|-----------------------------------------------------------------------------------------------------|
 |`[1]`|Object     |ref or character vector                                                                              |

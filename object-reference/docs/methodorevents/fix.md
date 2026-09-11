@@ -28,4 +28,4 @@ For objects whose names are part of the content of the Edit window, this event i
 
 ## Application
 
-Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)
+Objects: [Editor](../../windows-ui-guide/the-session-object/session-object.md)

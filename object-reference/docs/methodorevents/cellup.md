@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when the user **releases** a mouse button down whilst over a cell in a [Grid](../objects/grid.md). This event is a companion to the [CellDown](./celldown.md) event and could be used to hide a pop-up which was displayed in response to the [CellDown](./celldown.md). The CellUp event performs no default action and may not be disabled.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 9 element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 9 element vector as follows :
 
 |-----|-----------|------------------------------------------------|
 |`[1]`|Object     |ref or character vector                         |

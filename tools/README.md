@@ -170,6 +170,20 @@ cd tools/utils && pydoc3 render
 # Or view the comprehensive docstring at the top of utils/render.py
 ```
 
+### Bare Internal Links
+
+`bare_links.py`: report internal links written without a `.md` suffix, whether bare (`../guide/page`) or directory-style (`../guide/page/`). MkDocs passes such links through unchanged, so the build never checks that the target exists, and the bare form also sends every click through a server redirect. With `--apply` the script rewrites each link as a source-tree relative `.md` path, resolved against the merged docs tree that the monorepo plugin builds, so MkDocs validates the target at build time.
+
+```bash
+# Report only (exit status 1 if any bare links are found)
+python utils/bare_links.py
+
+# Rewrite the links in place
+python utils/bare_links.py --apply
+```
+
+Raw HTML anchors (`<a href="...">`) are reported but left alone: MkDocs does not rewrite raw HTML, so a `.md` target there would render as a broken link.
+
 ### Finding Orphaned Pages
 
 `find_orphans.py`: Find truly orphaned Markdown files across ALL output formats:

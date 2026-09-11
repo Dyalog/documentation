@@ -23,9 +23,9 @@ As `R` is a monadic operator, Dyalog Ltd recommends that the evaluation of this 
 ### 632 - Generics Operator
 
 !!! Info "Information"
-    Support for `43⌶632` has been deprecated, and it is scheduled for removal in Dyalog v22.0. For information on how to identify uses of `43⌶632` in your existing codebase, see the [Release Notes](../../../../release-notes/announcements/deprecated-functionality/).
+    Support for `43⌶632` has been deprecated, and it is scheduled for removal in Dyalog v22.0. For information on how to identify uses of `43⌶632` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality.md).
 	
-The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see [Generics (.NET)](../../../../net-interface-guide/dotnet-classes/advanced-techniques/#generics) or [Generics (.NET Framework)](../../../../net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics).
+The generics operator can create concrete versions of generic classes and execute generic methods. For more information, see [Generics (.NET)](../../../net-interface-guide/dotnet-classes/advanced-techniques.md#generics) or [Generics (.NET Framework)](../../../net-framework-interface-guide/dotnet-classes/advanced-techniques.md#generics).
 
 <h3 class="example">Example</h3>
 

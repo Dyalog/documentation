@@ -2,7 +2,7 @@
 
 This event is reported when the presses one finger on an object and then taps it with a second finger.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows :
 
 |---|---|---|
 |`[1]`|Object|ref or character vector|
@@ -23,7 +23,7 @@ When the user taps with his second finger, the object generates a GesturePressAn
 
 No other event will be reported between the start and end of a series of GesturePressAndTap events.
 
-The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
 
 Returning zero from the callback disables any default handling by the operating system.
 

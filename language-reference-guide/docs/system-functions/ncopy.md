@@ -15,7 +15,7 @@ Source and destination path names can be full or relative (to the current workin
 
 If `X` specifies an existent directory, then each source in `Y` is copied into that directory, otherwise `X` specifies the name of the copy. `X` must specify an existent directory if the source contains multiple names or if the `Wildcard` option is set.
 
-The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` contains count(s) of top-level items copied. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 <h2 class="example">Examples</h2>
 
@@ -137,7 +137,7 @@ When files are copied across file systems, the different file systems might have
 
 ### Variant Option: `ProgressCallback`
 
-The `ProgressCallback` variant option is described in the [_Dyalog Programming Reference Guide_](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NCOPY`:
+The `ProgressCallback` variant option is described in the [_Dyalog Programming Reference Guide_](../../programming-reference-guide/native-files.md#progress-callbacks). The following is specific to `⎕NCOPY`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NCOPY'`.
 

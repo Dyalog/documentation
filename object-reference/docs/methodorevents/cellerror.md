@@ -4,7 +4,7 @@ If enabled, this event is reported when the user inserts invalid data into the [
 
 The default action for the CellError event is to sound the bell (beep). This action can be disabled by returning 0 from the attached callback function. Whatever the result of the callback, the user will be prevented from moving to another cell in the [Grid](../objects/grid.md) and the [CurCell](../properties/curcell.md) and [Values](../properties/values.md) properties will remain unchanged. The user is not prevented from switching to any other control or to another application. However, if and when the user returns to the [Grid](../objects/grid.md), the current cell ([CurCell](../properties/curcell.md)) remains the invalid one and the user may not select a different one until the invalid data in the cell has been corrected. If you wish to allow the user to move to another cell without correcting the data, you may do so by generating a [CellMove](./cellmove.md) event explicitly. However, the [Values](../properties/values.md) property will remain unchanged and the invalid contents of the [Edit](../objects/edit.md) object will simply be discarded.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq) or supplied as the right argument to your callback function, is an 8-element vector as follows:
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) or supplied as the right argument to your callback function, is an 8-element vector as follows:
 
 |-----|-----------------|-------------------------------------------------------------------------|
 |`[1]`|Object           |ref or character vector                                                  |

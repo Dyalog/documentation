@@ -18,7 +18,7 @@ During development, both the Dyalog Session and the Dyalog APL GUI will display 
 
 By default *Native Look and Feel* is disabled in end-user applications. There are two ways to enable it.
 
-If you use the *File/Export…* menu item on the Session MenuBar  to create a bound executable, an OLE Server (in-process or out-of-process), an ActiveX Control or a .NET Assembly, check the option box labelled *Enable Native Look and Feel* in the *create bound file* dialog box. See [Creating Executables and COM Servers](../../../windows-installation-and-configuration-guide/creating-executables).
+If you use the *File/Export…* menu item on the Session MenuBar  to create a bound executable, an OLE Server (in-process or out-of-process), an ActiveX Control or a .NET Assembly, check the option box labelled *Enable Native Look and Feel* in the *create bound file* dialog box. See [Creating Executables and COM Servers](../../windows-installation-and-configuration-guide/creating-executables.md).
 
 If not, set the **XPLookandFeel** parameter to 1, when you run the program. For example:
 ```apl

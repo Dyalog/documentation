@@ -9,7 +9,7 @@ search:
 
 This function holds component file(s) and/or external variable(s). It is used  to synchronise access to resources shared between multiple cooperating Dyalog processes. It is not intended to synchronise access between Dyalog threads; for this purpose you should use  `:Hold`.
 
-For a  multi-threaded and multi-process application, a single `⎕FHOLD` is used to synchronise inter-process access, while `:Hold` is used in multiple threads to synchronise access between  threads in the same process. See also [Hold Statement](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/hold).
+For a  multi-threaded and multi-process application, a single `⎕FHOLD` is used to synchronise inter-process access, while `:Hold` is used in multiple threads to synchronise access between  threads in the same process. See also [Hold Statement](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/hold.md).
 
 If applied to component files, then `Y` is an integer scalar, vector, or one-row matrix of file tie numbers, or a two-row matrix whose first row contains file tie numbers and whose second row contains passnumbers.
 
@@ -39,7 +39,7 @@ A hold is not released by a request for input through `⎕` or `⍞`.
 
 `⎕FHOLD` is generally useful only when called from a defined function, as holds set in immediate execution (desk calculator) mode are released immediately.
 
-If `Y` is a matrix, the [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
+If `Y` is a matrix, the [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is `Y[1;]`. Otherwise, the  shy result `R` is `Y`.
 
 <h1 class="example">Examples</h1>
 ```apl

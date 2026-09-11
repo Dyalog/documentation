@@ -1,6 +1,6 @@
 # The Co-ordinate System
 
-Each object has a Coord property that determines the units in which its Posn and Size properties are expressed. For full details, see [Coord](../../../object-reference/properties/coord).
+Each object has a Coord property that determines the units in which its Posn and Size properties are expressed. For full details, see [Coord](../../object-reference/properties/coord.md).
 
 Coord may be set to one of the following values :
 

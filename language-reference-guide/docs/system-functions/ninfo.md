@@ -215,7 +215,7 @@ The following expression will return all Microsoft Word documents (`.docx` and `
 
 ### Variant Option: `ProgressCallback`
 
-The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NINFO`:
+The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../programming-reference-guide/native-files.md#progress-callbacks). The following is specific to `⎕NINFO`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NINFO'`.
 * The third element of the right argument (the information namespace) contains an extra field named `Info`, which is a vector with the same length as the `Last` field. Each element of the `Info` vector contains the information requested by the `⎕NINFO` call for the corresponding filename in `Last`.

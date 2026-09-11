@@ -2,7 +2,7 @@
 
 Operators take one or two operands.  An operator with one operand is monadic.  The operand of a monadic operator is to the left of the operator.  An operator with two operands is dyadic.  Both operands are required for a dyadic operator.
 
-Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see [Programmer's Guide: "Operators"](../../../programming-reference-guide/introduction/operators)). A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.
+Operators have long scope to the left.  That is, the left operand is the longest function or array expression to its left (see [Programmer's Guide: "Operators"](../../programming-reference-guide/introduction/operators.md)). A dyadic operator has short scope on the right.  Right scope may be extended by the use of parentheses.
 
 An operand may be an array, a primitive function, a system function, a defined function or a derived function. An array may be the result of an array expression.
 

@@ -6,7 +6,7 @@ A common technique is to wait for the main frame to finish loading before furthe
 
 You may use the [IsLoading](../properties/isloading.md) property to check if the HTMLRenderer is still loading.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows :
 
 |-----|------|------------------------------------------------------|
 |`[1]`|Object|ref or character vector                               |

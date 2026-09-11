@@ -33,7 +33,7 @@ Table: Commonly used Variables
 |`DYALOG_NETCORE`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the .NET interface.|
 |`DYALOG_SERIAL`|This parameter contains your Dyalog serial number. This must be set to the serial number issued to you. If not set, then the software is unregistered. For the full licence terms and conditions, see [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf) .|
 |`DYALOG_SERIALFILE`|This parameter specifies the full path to the text file containing your Dyalog serial number. The default location is `$HOME/.dyalog/serial`. Setting it is useful in a multi-user environment, where a single serial number file can be shared by all users.|
-|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../../object-reference/objects/htmlrenderer)) will fail with an error message. See the information below.|
+|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../object-reference/objects/htmlrenderer.md)) will fail with an error message. See the information below.|
 |`ERRORONEXTERNALEXCEPTION`|By default, any error when calling `⎕NA` will result in APL terminating; if `ERRORONEXTERNALEXCEPTION` is set to 1, then APL will instead generate an event 91: `EXTERNAL DLL EXCEPTION` . Be aware however that the workspace may become corrupted. This is best used when developing `⎕NA` code rather than in production.|
 |`LIBPATH`|A suitable entry for the Conga libraries needs to be added to the `LIBPATH` variable if Conga is to be used. For more information see the *Conga Guide*.|
 |`MAXWS`|Defines the size of the workspace that will be presented to the user when Dyalog APL is started. A simple integer value will be treated as being in KB. K, M and G can be appended to the value to indicate KiB, MiB and GiB (binary) respectively. If unset, the default value is 256M.|
@@ -64,7 +64,7 @@ Table: Variables used to configure the Session
 
 |Variable|Notes|
 |---|---|
-|`APLAN_FOR_OUTPUT`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for session output|
+|`APLAN_FOR_OUTPUT`|Enable or disable use of [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) for session output|
 |`DYALOGLINK`|Specifies the directory for Link|
 |`DYALOGSTARTUPSE`|Specifies one or more *Session initialisation* directories that contain APL code to be installed in `⎕SE`|
 |`DYALOGSTART_X`|Specifies whether the `Run` function is executed during Session startup|
@@ -100,7 +100,7 @@ Table: Editor-related environment variables
 
 |---|---|
 |Variable|Notes|
-|`APLAN_FOR_EDITOR`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for editing arrays|
+|`APLAN_FOR_EDITOR`|Enable or disable use of [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) for editing arrays|
 |`EDITOR_COLUMNS_*`|See [Configuring the Editor](../configuring-the-editor.md). Can be one of `EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY`|
 |`DYALOG_DISCARD_FN_SOURCE`|Specifies whether source code is retained in the workspace|
 

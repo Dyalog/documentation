@@ -9,7 +9,7 @@ search:
 
 `Y` must be a simple integer scalar or 1 or 2-element vector containing the file tie number and optional passnumber. The file need not be tied exclusively.
 
-`X` is a character vector containing the name of a new file to be copied to. If no file extension is supplied, the first extension specified by the   **CFEXT** parameter will be added. See [ CFEXT](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+`X` is a character vector containing the name of a new file to be copied to. If no file extension is supplied, the first extension specified by the   **CFEXT** parameter will be added. See [ CFEXT](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md).
 
 `⎕FCOPY` creates a copy of the tied file specified by `Y`, named `X`.
 
@@ -84,7 +84,7 @@ will name a variant of `⎕FCREATE` which will create component file with level 
     Setting `('U' 0)` (no Unicode support) is discouraged as it might cause the copy to fail with a `TRANSLATION ERROR`. Similarly, using a Classic interpreter to `⎕FCOPY` files might result in `TRANSLATION ERROR`s.
 
 !!! Info "Information"
-    Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/).
+    Small-span (32-bit) component files are currently read-only; Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). This ability is scheduled for removal in a future release. For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

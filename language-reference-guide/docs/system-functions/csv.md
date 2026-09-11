@@ -9,7 +9,7 @@ This function imports and exports Comma Separated Value (CSV) data.
 
 Monadic `⎕CSV` imports data from a CSV file or converts data from CSV format to an internal format. Dyadic `⎕CSV` exports data to a CSV file or converts data from internal format to a CSV format.
 
-`⎕CSV` output is not affected by [`⎕PP`](../pp/); numeric values are always represented with full precision.
+`⎕CSV` output is not affected by [`⎕PP`](pp.md); numeric values are always represented with full precision.
 
 ## Internal Format
 
@@ -292,7 +292,7 @@ The `Overwrite` variant option (a Boolean) remains supported but is deprecated i
 - Quoting and Escaping is used as conservatively as possible.
 - If both `QuoteChar` and `EscapeChar` are set, quoting is favoured.
 
-If `Y` specifies that the CSV data is written to a file, then `R` is the number of bytes (not characters) written, and is [shy](../../../programming-reference-guide/introduction/results#shy-results).
+If `Y` specifies that the CSV data is written to a file, then `R` is the number of bytes (not characters) written, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
 
 Otherwise, `R` is the CSV data in the format specified in Y, and is not shy.
 

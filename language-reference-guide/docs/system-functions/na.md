@@ -15,13 +15,13 @@ A library, referred to here generically as a a Dynamic Link Library (DLL), is a 
 
 Instructional examples using `⎕NA` can be found in the supplied workspace `quadna`.
 
-For `⎕NA` on Linux, macOS, and AIX, see also [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
+For `⎕NA` on Linux, macOS, and AIX, see also [`⎕NA` under UNIX](../../unix-installation-and-configuration-guide/quadna.md).
 
 The DLL may be part of the standard operating system software, a library purchased from a third party supplier, or one that you have written yourself.
 
 The right argument `Y` is a character vector that identifies the name and syntax of the function to be associated. The left argument `X` is a character vector that contains the name to be associated with the external function. If the `⎕NA` is successful, a function (name class 3) is established in the active workspace with name `X`. If `X` is omitted, the name of the external function itself is used for the association.
 
-The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is a character vector containing the name of the external function that was fixed.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is a character vector containing the name of the external function that was fixed.
 
 For example, `math.dll` might be a library of mathematical functions containing a function `divide`.
 
@@ -49,7 +49,7 @@ div
 2.5
 ```
 
-It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or may even cause the workspace to become corrupted and crash. During development, you may wish to prevent this happening. See [ErrorOnExternalException](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or may even cause the workspace to become corrupted and crash. During development, you may wish to prevent this happening. See [ErrorOnExternalException](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md).
 
 The full syntax for the right argument of `⎕NA` is:
 ```
@@ -100,7 +100,7 @@ Under Microsoft Windows, if the file extension is omitted, **.dll** is assumed. 
 
 ### Linux, macOS, and AIX
 
-On Linux, macOS, and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. There are platform-specific differences when in locating the system library (**libc**) and using the Dyalog-supplied shared library; for details and examples, see [`⎕NA` under UNIX](../../../unix-installation-and-configuration-guide/quadna).
+On Linux, macOS, and AIX, `⎕NA` supports both system-supplied and user-written shared libraries. There are platform-specific differences when in locating the system library (**libc**) and using the Dyalog-supplied shared library; for details and examples, see [`⎕NA` under UNIX](../../unix-installation-and-configuration-guide/quadna.md).
 
 ## Data Type Coding Scheme
 
@@ -544,7 +544,7 @@ You should consult the documentation for the specific function that you intend t
 
 ## The Dyalog DLL
 
-The Dyalog DLL (see [Run-Time Applications and Components](../../../windows-installation-and-configuration-guide/runtime-applications-and-components)) contains three functions: `MEMCPY`, `STRNCPY` and `STRLEN`.
+The Dyalog DLL (see [Run-Time Applications and Components](../../windows-installation-and-configuration-guide/runtime-applications-and-components.md)) contains three functions: `MEMCPY`, `STRNCPY` and `STRLEN`.
 
 ### MEMCPY
 
@@ -736,7 +736,7 @@ The function works equally well in the Unicode Edition because the `<0T` specifi
 ```
 
 !!! Hint "Hints and Recommendations"
-    A simpler, portable (and safer) method for displaying a Message Box is to use Dyalog's primitive [`MsgBox`](../../../object-reference/objects/msgbox) object.
+    A simpler, portable (and safer) method for displaying a Message Box is to use Dyalog's primitive [`MsgBox`](../../object-reference/objects/msgbox.md) object.
 
 ### FindWindow()
 

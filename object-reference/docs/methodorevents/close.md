@@ -12,7 +12,7 @@ By trapping this event you can control termination of your application in many d
 
 Although all the object's child GUI objects will also be destroyed, none of the child objects will generate a Close event.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function is a 2-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function is a 2-element vector as follows :
 
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|

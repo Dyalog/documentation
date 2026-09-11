@@ -4,7 +4,7 @@
 
 This command brings all or selected global objects `nms` from a stored workspace (or session file) with the given name.  A stored workspace is one which has previously been saved with the system command [`)SAVE`](save.md) or the system function [`⎕SAVE`](../system-functions/save.md).
 
-See [Programmer's Guide: "Workspaces"](../../../programming-reference-guide/introduction/workspaces) for the rules for specifying a workspace name.
+See [Programmer's Guide: "Workspaces"](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
 
 If the list of names is excluded, all defined objects (including namespaces) are copied.
 

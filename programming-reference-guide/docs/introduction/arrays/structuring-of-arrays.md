@@ -4,16 +4,16 @@ Primitive functions that restructure arrays:
 
 |symbol|monadic|dyadic|
 |----|---|---|
-|`⍴` ||[reshape](../../../../language-reference-guide/primitive-functions/reshape)|
-|`,` |[ravel](../../../../language-reference-guide/primitive-functions/ravel)|[laminate and catenate](../../../../language-reference-guide/primitive-functions/catenate-laminate)|
-|`⍪` |[table](../../../../language-reference-guide/primitive-functions/table)|[catenate first](../../../../language-reference-guide/primitive-functions/catenate-first)|
-|`⌽⍟`|[reverse](../../../../language-reference-guide/primitive-functions/reverse)|[rotate](../../../../language-reference-guide/primitive-functions/rotate)|
-|`⍉` |[transpose](../../../../language-reference-guide/primitive-functions/transpose)||
-|`↑` |[mix](../../../../language-reference-guide/primitive-functions/mix)|[take](../../../../language-reference-guide/primitive-functions/take)|
-|`↓` |[split](../../../../language-reference-guide/primitive-functions/split)|[drop](../../../../language-reference-guide/primitive-functions/drop)|
-|`∊` |[enlist](../../../../language-reference-guide/primitive-functions/enlist)| |
-|`⊂` |[enclose](../../../../language-reference-guide/primitive-functions/enclose)|[partitioned enclose](../../../../language-reference-guide/primitive-functions/partitioned-enclose)|
-|`⊆` |[nest](../../../../language-reference-guide/primitive-functions/nest)|[partition](../../../../language-reference-guide/primitive-functions/partition)|
+|`⍴` ||[reshape](../../../language-reference-guide/primitive-functions/reshape.md)|
+|`,` |[ravel](../../../language-reference-guide/primitive-functions/ravel/index.md)|[laminate and catenate](../../../language-reference-guide/primitive-functions/catenate-laminate.md)|
+|`⍪` |[table](../../../language-reference-guide/primitive-functions/table.md)|[catenate first](../../../language-reference-guide/primitive-functions/catenate-first.md)|
+|`⌽⍟`|[reverse](../../../language-reference-guide/primitive-functions/reverse.md)|[rotate](../../../language-reference-guide/primitive-functions/rotate.md)|
+|`⍉` |[transpose](../../../language-reference-guide/primitive-functions/transpose.md)||
+|`↑` |[mix](../../../language-reference-guide/primitive-functions/mix.md)|[take](../../../language-reference-guide/primitive-functions/take/index.md)|
+|`↓` |[split](../../../language-reference-guide/primitive-functions/split.md)|[drop](../../../language-reference-guide/primitive-functions/drop/index.md)|
+|`∊` |[enlist](../../../language-reference-guide/primitive-functions/enlist.md)| |
+|`⊂` |[enclose](../../../language-reference-guide/primitive-functions/enclose/index.md)|[partitioned enclose](../../../language-reference-guide/primitive-functions/partitioned-enclose.md)|
+|`⊆` |[nest](../../../language-reference-guide/primitive-functions/nest.md)|[partition](../../../language-reference-guide/primitive-functions/partition.md)|
 
 <h2 class="example">Examples</h2>
 ```apl

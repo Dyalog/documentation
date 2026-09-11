@@ -21,7 +21,7 @@ If a Class has a Base Class, it automatically acquires all of the **Public** Pro
 
 ## Copying Classes
 
-See [Dependent Objects](../../../../language-reference-guide/system-commands/copy) and [Referenced Objects](../../../../language-reference-guide/system-commands/copy).
+See [Dependent Objects](../../../language-reference-guide/system-commands/copy.md) and [Referenced Objects](../../../language-reference-guide/system-commands/copy.md).
 
 ## Classes that derive from .NET Types
 

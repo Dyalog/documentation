@@ -10,7 +10,7 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 A callback function may prevent the docking operation from starting by returning 0.
 
-The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
 
 ## Application
 

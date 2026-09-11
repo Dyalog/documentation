@@ -10,10 +10,10 @@ down when the user chooses an option (by selecting a [MenuItem](menuitem.md))
 or cancels the operation (by clicking elsewhere).
 
 If a Menu belongs to a [Form](form.md), [SubForm](subform.md) or is a top-level object, it must be popped up by the application. This is
-commonly done in response to a [MouseDown](../methodorevents/mousedown.md) event. A Menu is popped-up by calling [`⎕DQ`](../../../language-reference-guide/system-functions/dq) with only the name of the Menu as its argument. The user may therefore not
+commonly done in response to a [MouseDown](../methodorevents/mousedown.md) event. A Menu is popped-up by calling [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) with only the name of the Menu as its argument. The user may therefore not
 interact with any other object until a selection is made or until the operation
 is cancelled. When either occurs, the Menu is automatically popped down and
-de-activated, and its [`⎕DQ`](../../../language-reference-guide/system-functions/dq) terminates.
+de-activated, and its [`⎕DQ`](../../language-reference-guide/system-functions/dq.md) terminates.
 
 The Menu object does not have a [Size](../properties/size.md) property. Instead, its size is determined automatically by its contents.
 
