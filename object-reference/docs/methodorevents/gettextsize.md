@@ -10,7 +10,7 @@ The argument to GetTextSize is a 1 or 2-element array as follows:
 |`[1]`|Text item|character array |
 |`[2]`|Font|character vector naming a [Font](../objects/font.md) object, or a reference to one|
 
-When you invoke GetTextSize you give the text item in whose size you are interested and, optionally, a Font object. The Font can be given either by name or as a reference, as the second and third examples below show. The text item may be a simple scalar, a vector or a matrix. If the Font is omitted, the result is given using the current font for the object in question.
+When you invoke GetTextSize you give the text item in whose size you are interested and, optionally, a Font object. The Font can be given either by name or as a reference, as shown in the second and third examples below respectively. The text item can be a simple scalar, a vector, or a matrix. If the Font is omitted, the result is given using the current font for the object in question.
 
 <h2 class="example">Examples</h2>
 ```apl
