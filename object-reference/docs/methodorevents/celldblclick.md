@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when the user double-clicks a mouse button whilst over a cell in a [Grid](../objects/grid.md). The purpose of this event is to allow an application to enable some special action on double-click. This event may not be disabled.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 9 element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 9 element vector as follows :
 
 |-----|-----------|-----------------------------------------------------------------------------------------------------|
 |`[1]`|Object     |ref or character vector                                                                              |

@@ -10,7 +10,7 @@ For a [MenuItem](../objects/menuitem.md), a Select event is generated when the u
 
 For all other objects, this event is generated when the user presses the keys associated with the object's [Accelerator](../properties/accelerator.md) property.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 2-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 2-element vector as follows :
 
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|

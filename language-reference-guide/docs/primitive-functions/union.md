@@ -20,7 +20,7 @@ WASHOUT
  ONE  TWO  THREE
 ```
 
-For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../programming-reference-guide/introduction/search-functions-and-hash.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

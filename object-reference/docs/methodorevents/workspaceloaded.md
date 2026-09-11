@@ -19,4 +19,4 @@ The callback function you attach should be defined in `⎕SE`.
 
 ## Application
 
-Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)
+Objects: [Session](../../windows-ui-guide/the-session-object/session-object.md)

@@ -8,7 +8,7 @@ If you wish to prevent the user from terminating your application from the Windo
 
 This event only provides for termination via the Windows Task List. See also the [ExitWindows](./exitwindows.md) event.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 2-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 2-element vector as follows :
 
 |-----|------|-----------------------|
 |`[1]`|Object|ref or character vector|

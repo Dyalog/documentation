@@ -14,7 +14,7 @@ search:
 
 If `X` is specified it is a simple or nested character vector defining the new setting of the key.  The value of `X` is returned in the result `R`.
 
-The elements of `X` are either character scalars or 2-element character vectors which specify keycodes. See [Keyboard Shortcuts](../../../windows-ui-guide/keyboard-shortcuts).
+The elements of `X` are either character scalars or 2-element character vectors which specify keycodes. See [Keyboard Shortcuts](../../windows-ui-guide/keyboard-shortcuts.md).
 
 Programmable function keys are recognised in any of the three types of window (SESSION, EDIT and TRACE) provided by the Dyalog APL development environment. `⎕SR` operates with the 'raw' function keys and ignores programmed settings.
 

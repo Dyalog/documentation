@@ -6,7 +6,7 @@ The purpose of this event is to give the application the opportunity to perform 
 
 The default action for the CellChange event is to update the appropriate element of the [Values](../properties/values.md) property with the new data. This action can be disabled by returning 0 from the attached callback function. However, the user is not prevented from moving away from the cell. If you are using this event to perform additional validation and you require the user to correct the data before moving away, you may force the user back to the cell in question using the  [CellMove](./cellmove.md) method.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is an 8-element vector as follows:
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is an 8-element vector as follows:
 
 |-----|-----------------|-------------------------------------------------------------------------|
 |`[1]`|Object           |ref or character vector                                                  |

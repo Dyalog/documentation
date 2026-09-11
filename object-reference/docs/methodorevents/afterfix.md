@@ -22,4 +22,4 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 ## Application
 
-Objects: [Editor](../../../windows-ui-guide/the-session-object/session-object)
+Objects: [Editor](../../windows-ui-guide/the-session-object/session-object.md)

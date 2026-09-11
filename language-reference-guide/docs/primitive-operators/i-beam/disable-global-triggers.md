@@ -6,7 +6,7 @@ search:
 
 # <span>Disable Global Triggers</span> `R←2007⌶Y`{{key}}
 
-This function is used to temporarily disable and re-enable [Global Triggers](../../../../programming-reference-guide/triggers/global-triggers).
+This function is used to temporarily disable and re-enable [Global Triggers](../../../programming-reference-guide/triggers/global-triggers.md).
 
 `Y` is Boolean.
 

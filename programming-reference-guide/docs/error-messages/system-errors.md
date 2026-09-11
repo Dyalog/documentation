@@ -11,13 +11,13 @@ On Windows, if the **DYALOG_NOPOPUPS** parameter is 0 (the default), it will di
 
 ## aplcore file
 
-When a system error occurs, APL normally saves an *aplcore* file which may be sent to Dyalog for diagnosis. The name and location of the *aplcore* file may be specified by the [**AplCoreName**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) parameter. If this parameter is not specified, the *aplcore* file is named `aplcore` and is saved in the current working directory.
+When a system error occurs, APL normally saves an *aplcore* file which may be sent to Dyalog for diagnosis. The name and location of the *aplcore* file may be specified by the [**AplCoreName**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) parameter. If this parameter is not specified, the *aplcore* file is named `aplcore` and is saved in the current working directory.
 
-Normally a new *aplcore* will replace a file of the same name. However, if [**AplCoreName**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) contains an asterisk (*), the system will create a new file,  replacing the asterisk with a number incremented from the largest numbered file present.
+Normally a new *aplcore* will replace a file of the same name. However, if [**AplCoreName**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) contains an asterisk (*), the system will create a new file,  replacing the asterisk with a number incremented from the largest numbered file present.
 
-The number of *aplcore* files retained by the system is specified by the [**MaxAplCores**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) parameter. If [**MaxAplCores**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) is 0, the system will not save an *aplcore*. However, under Windows, if **DYALOG_NOPOPUPS** is 0, and the user checks the *Create an aplcore file* checkbox when the *System Error* dialog box is displayed, an *aplcore* will be saved regardless of the value of [**MaxAplCores**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters). See **System Error Dialog Box**.
+The number of *aplcore* files retained by the system is specified by the [**MaxAplCores**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) parameter. If [**MaxAplCores**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) is 0, the system will not save an *aplcore*. However, under Windows, if **DYALOG_NOPOPUPS** is 0, and the user checks the *Create an aplcore file* checkbox when the *System Error* dialog box is displayed, an *aplcore* will be saved regardless of the value of [**MaxAplCores**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md). See **System Error Dialog Box**.
 
-Be aware that if your application contains any secure data, this data may be present in an *aplcore* file, and it may be appropriate to set both [**MaxAplCores**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) and **DYALOG_NOPOPUPS** to 0 to prevent such data being saved on disk.
+Be aware that if your application contains any secure data, this data may be present in an *aplcore* file, and it may be appropriate to set both [**MaxAplCores**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) and **DYALOG_NOPOPUPS** to 0 to prevent such data being saved on disk.
 
 Information that may prove useful in debugging the problem, including (where possible) the SI stack at the point where the *aplcore* was generated, is by default written to the end of *aplcore* files; the section begins with the string
 
@@ -27,7 +27,7 @@ Under UNIX, this interesting information section can be extracted from the *aplc
 
 `sed -n '/======== Interesting Information/,$p' aplcore`
 
-To prevent this information from being written to the *aplcore* file, the [**APL_TextInAplCore**](../../../windows-installation-and-configuration-guide/configuration-parameters/apl-textinaplcore) parameter should be set to 0.
+To prevent this information from being written to the *aplcore* file, the [**APL_TextInAplCore**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-textinaplcore.md) parameter should be set to 0.
 
 ## Workspace Integrity
 
@@ -121,7 +121,7 @@ After debugging, the System Exception dialog box appears again. Click on *Don't 
 
 ## ErrorOnExternalException Parameter
 
-This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the [**ErrorOnExternalException**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) parameter set to 1.
+This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) parameter set to 1.
 ```apl
    ⎕←2 ⎕NQ'.' 'GetEnvironment' 'ErrorOnExternalException'
 1
@@ -139,7 +139,7 @@ foo[1]
 ```
 
 !!! Hint "Hints and Recommendations"
-    Dyalog Ltd recommends that you only enable [**ErrorOnExternalException**](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) while developing or debugging an application; ignoring such errors might result in corruption in the workspace, which could lead to unexpected errors later in the application.
+    Dyalog Ltd recommends that you only enable [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) while developing or debugging an application; ignoring such errors might result in corruption in the workspace, which could lead to unexpected errors later in the application.
 
 ## What should I do if Dyalog hangs?
 

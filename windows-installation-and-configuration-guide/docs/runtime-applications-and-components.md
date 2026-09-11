@@ -92,7 +92,7 @@ To make an out-of-process COM Server, you must:
 
 The command-line for your COM Server must be specified in the field labelled *Command Line* in the *Export* dialog box. The field is initialised to invoke the Run-Time EXE with the name of your workspace in the same fashion as the workspace-based run-time discussed above. This command-line is recorded in the Windows Registry to be invoked when a client application requests it.
 
-You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../../interface-guide/ole-server/the-loan-workspace).
+You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../interface-guide/ole-server/the-loan-workspace.md).
 
 <h2 class="example">Example</h2>
 ```apl
@@ -163,7 +163,7 @@ you may enter configuration parameters or specify a Configuration file for your 
 
 For the other isolation modes, this is not appropriate because only the command line from the first assembly loaded into the interpreter could be honoured, and the order in which assemblies are loaded is unpredictable. However, configuration files may be specified using the **ConfigFile** parameter and/or the **UserConfigFile** parameter specified as an environment variable or in the registry.
 
-For more information, see [Isolation Mode](../../net-framework-interface-guide/implementation-details/isolation-mode/).
+For more information, see [Isolation Mode](../net-framework-interface-guide/implementation-details/isolation-mode.md).
 
 To distribute your .NET Classes, you need to supply and install
 

@@ -1,6 +1,6 @@
 # Stack Considerations
 
-When you start a thread, it begins with the SI stack of the calling function and sees all of the local variables defined in all the functions down the stack. However, unless the calling function specifically waits for the new thread to terminate (see [Language Reference: Wait for Threads to Terminate](../../../language-reference-guide/system-functions/tsync)), the calling functions will (bit by bit, in their turn) continue to execute. The new thread's view of its calling environment may then change. Consider the following example:
+When you start a thread, it begins with the SI stack of the calling function and sees all of the local variables defined in all the functions down the stack. However, unless the calling function specifically waits for the new thread to terminate (see [Language Reference: Wait for Threads to Terminate](../../language-reference-guide/system-functions/tsync.md)), the calling functions will (bit by bit, in their turn) continue to execute. The new thread's view of its calling environment may then change. Consider the following example:
 
 Suppose that you had the following functions: `RUN[3]` calls `INIT` which in turn calls `GETDATA` but as 3 separate threads with 3 different arguments:
 ```apl

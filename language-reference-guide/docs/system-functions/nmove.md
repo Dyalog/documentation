@@ -17,7 +17,7 @@ Sources and destinations can be full or relative (to the current working directo
 
 If `Y` specifies more than one source, `X` must be a character vector  that specifies an existent directory to which each of the sources in `Y` is to be moved.
 
-The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` contains count(s) of top-level items moved. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` contains count(s) of top-level items moved. If `Y` is a single source name, `R` is a scalar otherwise it is a vector of the same length as `Y`.
 
 <h2 class="example">Examples</h2>
 
@@ -142,7 +142,7 @@ The `RenameOnly` variant option (a Boolean) determines what happens when it is n
 
 ### Variant Option: `ProgressCallback`
 
-The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../../programming-reference-guide/native-files#progress-callbacks). The following is specific to `⎕NMOVE`:
+The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../programming-reference-guide/native-files.md#progress-callbacks). The following is specific to `⎕NMOVE`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NMOVE'`.
 

@@ -4,7 +4,7 @@ If enabled, this event is reported after the user has changed the contents of a 
 
 This event is reported **after** the change has taken place, and after the [Values](../properties/values.md) property has been updated. Furthermore, neither setting the event action code to `¯1` nor returning 0 from a callback function has any effect. If you wish to *validate* the new data you should use the [CellChange](./cellchange.md) (150) event instead.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is an 5-element vector as follows:
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is an 5-element vector as follows:
 
 |-----|-----------|-------------------------|
 |`[1]`|Object     |ref or character vector  |

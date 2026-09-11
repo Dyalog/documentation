@@ -1,6 +1,6 @@
 # <span>SetServiceState</span> <span>Method 93</span>
 
-This method is used to set the state of a Dyalog APL service running under Windows. See [APL Application as a Service](../../../windows-installation-and-configuration-guide/apl-application-as-a-service).
+This method is used to set the state of a Dyalog APL service running under Windows. See [APL Application as a Service](../../windows-installation-and-configuration-guide/apl-application-as-a-service.md).
 
 The argument to the SetServiceState method is the desired state of the service. This should be one of the following numeric values:
 

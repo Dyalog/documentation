@@ -6,7 +6,7 @@ action is to append a new row to the contents of the [Grid](../objects/grid.md).
 If you attach a callback function to this event and have it return a value of 0,
 a new row will not be appended to the [Grid](../objects/grid.md).
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md),
 or supplied as the right argument to your callback function, is a 3 element
 vector as follows :
 

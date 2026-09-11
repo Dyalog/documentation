@@ -4,18 +4,18 @@
 
 The operations that comprise the shared code file mechanism are implemented using three _I-beams_:
 
-- [`8659⌶`](../../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names) – List Shared Code Files/Attached Names
+- [`8659⌶`](../language-reference-guide/primitive-operators/i-beam/list-shared-code-files-attached-names.md) – List Shared Code Files/Attached Names
 	- syntax: `{R}←{X}(8659⌶)Y`
 	- options: 
 	    - list shared code files: `(8659⌶) ncs `
 	    - list attached names: `{slot} (8659⌶) ncs `
-- [`8666⌶`](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files) – Attach/Assimilate/Detach Shared Code Files
+- [`8666⌶`](../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files.md) – Attach/Assimilate/Detach Shared Code Files
     - syntax: `{R}←{X}(8666⌶)Y`
 	- options:
 	    - attach shared code file: `{nameclasses} (8666⌶) file `
         - assimilate shared code files: `(8666⌶) ⎕NULL`
         - detach shared code files: `(8666⌶) 0⍴⊂''`
-- [`8667⌶`](../../language-reference-guide/primitive-operators/i-beam/save-shared-code-files) – Save Shared Code Files
+- [`8667⌶`](../language-reference-guide/primitive-operators/i-beam/save-shared-code-files.md) – Save Shared Code Files
     - syntax: `{R}←{X}(8667⌶)Y`
     - options:
 	    - save shared code file: `{names} (8667⌶) slot file`
@@ -50,7 +50,7 @@ Consider these cases where item `A` is modified:
     - `B←A` will introduce a new name B into the main workspace but no new data.
     - `A[1]←⊂'XY'` will introduce some new data into the main workspace.
 
-In each of these cases, the content of the attached shared code file remains unaltered. This means that, if names of items in a shared code file are expunged using [`⎕EX`](../../language-reference-guide/system-functions/ex) and the shared code file(s) are detached and reattached, then the items in the shared code file will be restored to their original values. The only way to change the values in a shared code file is to recreate the entire file.
+In each of these cases, the content of the attached shared code file remains unaltered. This means that, if names of items in a shared code file are expunged using [`⎕EX`](../language-reference-guide/system-functions/ex.md) and the shared code file(s) are detached and reattached, then the items in the shared code file will be restored to their original values. The only way to change the values in a shared code file is to recreate the entire file.
 
 Although a shared code files can contain data, these values should either be constants or initial values for structures that will be copied into the workspace as soon as the application modifies them.
 
@@ -60,7 +60,7 @@ When one or more shared code files is attached, the following rules apply:
 
 - When items with the same name exist in multiple workspaces, the one that is used in the active workspace is the first one found when going through the workspaces in the following order:
     1. the active workspace
-    2. the shared code file specified first when [attaching](../../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files/#attach-shared-code-files)
+    2. the shared code file specified first when [attaching](../language-reference-guide/primitive-operators/i-beam/attach-assimilate-detach-shared-code-files.md#attach-shared-code-files)
     3. the shared code file specified second when attaching, and so so
 - When the shared code files are assimilated:
     - all references to each shared code file are resolved by copying data from the shared code file to the active workspace as required.

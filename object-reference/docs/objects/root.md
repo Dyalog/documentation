@@ -2,13 +2,13 @@
 
 This is an invisible "system" object that acts as the parent of all other objects.
 
-There is a single Root object called `'.'` which is always present. It cannot be created using [`⎕WC`](../../../language-reference-guide/system-functions/wc) nor can it be destroyed.
+There is a single Root object called `'.'` which is always present. It cannot be created using [`⎕WC`](../../language-reference-guide/system-functions/wc.md) nor can it be destroyed.
 
 The [Caption](../properties/caption.md) and [IconObj](../properties/iconobj.md) properties of `'.'` are used to identify a Dyalog APL/W application as distinct from the APL Session. The [Caption](../properties/caption.md) property specifies the application name that is displayed when you cycle through running applications using Alt+Tab and by the Windows Task List. The [IconObj](../properties/iconobj.md) property specifies the name of an [Icon](icon.md) object that is displayed alongside the application name in the box displayed by Alt+Tab. For these to take effect, your application must have at least one visible and active [Form](form.md).
 
 For the Root object, the value of [Posn](../properties/posn.md) is (0,0). The value of [Size](../properties/size.md) is either (100,100) if [Coord](../properties/coord.md) is `'Prop'`, or the size of the screen in pixels if [Coord](../properties/coord.md) is `'Pixel'`. [XRange](../properties/xrange.md) and [YRange](../properties/yrange.md) both have the value (0,100). The [DevCaps](../properties/devcaps.md) property reports the physical size of the screen in terms of both pixels and millimetres. It also reports the number of colours available.
 
-The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and may not be changed using [`⎕WS`](../../../language-reference-guide/system-functions/ws)
+The [FontList](../properties/fontlist.md) property provides a list of all the character fonts that are available. The [PrintList](../properties/printlist.md) property provides a list of all the installed printers. These properties are *read-only* and may not be changed using [`⎕WS`](../../language-reference-guide/system-functions/ws.md)
 
 As the default value of [Coord](../properties/coord.md) is `'Inherit'` for all other objects, the value of [Coord](../properties/coord.md) for `'.'` defines the default co-ordinate system. It may be either `'Prop'` (the default) or `'Pixel'`. `'Inherit'` and `'User'` are not allowed.
 
@@ -45,7 +45,7 @@ There are a number of elements that control whether or not Root members are expo
 2. This flag may be changed dynamically using the *Options/Object Syntax/Expose Root Properties* menu item on the Session or using `2401⌶`.  If the workspace is subsequently saved, the current value of the flag is saved with it.
 3. The value of the flag in a `CLEAR WS` is determined by the **PropertyExposeRoot** parameter. Under Windows, this parameter is associated with the *Expose properties of Root* checkbox on the *Object Syntax* Tab of the *Configuration* dialog box. When you change the value of this checkbox and close the *Configuration* dialog by clicking *OK*, the value of the **PropertyExposeRoot** parameter is immediately updated in the user's section of the Registry. However, the value of the flag *in the current workspace* is not changed. The **PropertyExposeRoot** parameter only defines the value of the flag in a `CLEAR WS`, so if you subsequently type `)CLEAR`, the current value of the parameter in the Registry determines whether or not Root members are exposed and sets the flag in the workspace accordingly.
 
-For further information, see [The Options Menu](../../../windows-ui-guide/session-menubar), [ PropertyExposeRoot](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters), and [Expose Root Properties](../../../language-reference-guide/primitive-operators/i-beam/expose-root-properties).
+For further information, see [The Options Menu](../../windows-ui-guide/session-menubar.md), [ PropertyExposeRoot](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md), and [Expose Root Properties](../../language-reference-guide/primitive-operators/i-beam/expose-root-properties.md).
 
 ## Notes
 

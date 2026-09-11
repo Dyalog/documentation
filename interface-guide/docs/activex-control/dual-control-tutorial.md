@@ -54,7 +54,7 @@ The directory is required to store the workspace and ActiveXControl, `Dual.ocx` 
 
 A Dyalog ActiveXControl uses  the dynamic-link library version of the Dyalog interpreter  which must be present in the same directory as the `.ocx` file, so you must copy the appropriate version here before you can start the tutorial. You may use either the Development DLL or the Run-Time DLL. If you choose to use the Development DLL, you will also need to copy the DyaRes DLL which it uses.
 
-For the names of these files corresponding to the version of Dyalog that you are using, see [Files and Directories](../../../windows-installation-and-configuration-guide/files-and-directories).
+For the names of these files corresponding to the version of Dyalog that you are using, see [Files and Directories](../../windows-installation-and-configuration-guide/files-and-directories.md).
 
 !!! Info "Information"
     Under Microsoft Windows 7 and later, you have to have administrator privileges to register a COM component. Therefore, you must run Dyalog as administrator. If you fail to do this, the registration process will fail. If so, you can continue the process where you left off by closing Dyalog, restarting as administrator, and reloading the workspace.

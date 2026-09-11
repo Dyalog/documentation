@@ -44,7 +44,7 @@ Some examples of different kinds of arrays defined with array notation.
 ```
 
 Short items are padded.
-(See [Mix](../../../../language-reference-guide/primitive-functions/mix) for details.)
+(See [Mix](../../../language-reference-guide/primitive-functions/mix.md) for details.)
 
 ```apl
       ⍴mice←['Three'

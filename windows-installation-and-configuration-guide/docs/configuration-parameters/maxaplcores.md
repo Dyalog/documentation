@@ -8,4 +8,4 @@ This parameter is used in conjunction with the **AplCoreName** parameter to cont
 
 See also: [AplCoreName](aplcorename.md).
 
-See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).
+See also [aplcore Parameters](../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters.md).

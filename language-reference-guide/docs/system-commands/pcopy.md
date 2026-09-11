@@ -8,7 +8,7 @@ This command brings all or selected global objects from a stored workspace with 
 
 If the workspace name is not valid or does not exist or if access to the workspace is not authorised, the system reports "`ws not found`".  If the workspace name identifies a file that is not a workspace, or is a workspace with an invalid version number (one that is greater than the version of the current APL) the system reports "`bad ws`".
 
-See [Programmer's Guide: "Workspaces"](../../../programming-reference-guide/introduction/workspaces) for the rules for specifying a workspace name.
+See [Programmer's Guide: "Workspaces"](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
 
 If the workspace name is the name of a valid, readable workspace, the system reports the workspace name, "`saved`", and the date and time that the workspace was last saved.
 

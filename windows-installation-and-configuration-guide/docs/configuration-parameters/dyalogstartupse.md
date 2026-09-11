@@ -33,4 +33,4 @@ If unset or extended (that is, starts with a : separator):
 - the StartupSession directory in the version-agnostic directory is available as `⎕SE.Dyalog.StartupSession.VerAgno`.
 - the StartupSession directory in the version-specific directory is available as `⎕SE.Dyalog.StartupSession.VerSpec`.
 
-See also [Implementation](../../../windows-ui-guide/the-session-object/session-initialisation).
+See also [Implementation](../../windows-ui-guide/the-session-object/session-initialisation.md).

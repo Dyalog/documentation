@@ -17,7 +17,7 @@ The text can be set to a character array of rank 2 or less.
 
 The default processing for the event is to display the default tip (if there is one).
 
-The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
 
 ## Application
 

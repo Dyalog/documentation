@@ -23,7 +23,7 @@ Assignment is an operation that returns a result: the *pass-through* value, that
 43
 ```
 
-Shy results suit functions whose main purpose is a side effect, such as updating a file or fixing a function, but which still have a useful value to offer a caller that wants it. The system function [`⎕FX`](../../../language-reference-guide/system-functions/fx) is an example: it fixes a function and returns that function's name as a shy result.
+Shy results suit functions whose main purpose is a side effect, such as updating a file or fixing a function, but which still have a useful value to offer a caller that wants it. The system function [`⎕FX`](../../language-reference-guide/system-functions/fx.md) is an example: it fixes a function and returns that function's name as a shy result.
 ```apl
       ⎕FX 'r←f x' 'r←x+1'
       ⎕←⎕FX 'r←g x' 'r←x-1'
@@ -77,7 +77,7 @@ If the result is declared as a [namelist](../defined-functions-and-operators/tra
 
 ## System Functions
 
-Many system functions return shy results so that they can be used without cluttering the Session while still providing a value when one is wanted. Some are shy only in certain cases. For example, [`⎕FX`](../../../language-reference-guide/system-functions/fx) returns a shy result on success but an explicit result (the index of the offending line) on failure, and [`⎕NS`](../../../language-reference-guide/system-functions/ns) returns a shy result only when called dyadically.
+Many system functions return shy results so that they can be used without cluttering the Session while still providing a value when one is wanted. Some are shy only in certain cases. For example, [`⎕FX`](../../language-reference-guide/system-functions/fx.md) returns a shy result on success but an explicit result (the index of the offending line) on failure, and [`⎕NS`](../../language-reference-guide/system-functions/ns.md) returns a shy result only when called dyadically.
 
 ## Primitive Operators
 
@@ -87,8 +87,8 @@ A primitive operator applies to one or two operand functions and produces a deri
 2 3 4
       {1:r←⍵+1}¨1 2 3       ⍝ shy operand, shy derived result (not displayed)
 ```
-With _each_ ([`¨`](../../../language-reference-guide/primitive-operators/each/each-with-monadic-operand)), the derived result matches its operand. With a composition such as _beside_ ([`∘`](../../../language-reference-guide/primitive-operators/beside)), the outermost function determines the form of the result, for example, `f∘g` returns whatever the same form of result as `f` returns.
+With _each_ ([`¨`](../../language-reference-guide/primitive-operators/each/each-with-monadic-operand.md)), the derived result matches its operand. With a composition such as _beside_ ([`∘`](../../language-reference-guide/primitive-operators/beside.md)), the outermost function determines the form of the result, for example, `f∘g` returns whatever the same form of result as `f` returns.
 
 Where an operator assembles several partial results, one for each item, the forms combine by precedence: if any partial result is missing, there is no overall result; otherwise, if any is shy, the whole result is shy; otherwise, the result is explicit.
 
-A few primitive operators return a shy result irrespective of their operand. For example, the _spawn_ ([`&`](../../../language-reference-guide/primitive-operators/spawn)) operator returns the number of the newly created thread as a shy result.
+A few primitive operators return a shy result irrespective of their operand. For example, the _spawn_ ([`&`](../../language-reference-guide/primitive-operators/spawn.md)) operator returns the number of the newly created thread as a shy result.

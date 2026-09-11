@@ -2,7 +2,7 @@
 
 This event is reported when the user touches one or two fingers on an object and drags them .
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows :
 
 |---|---|---|
 |`[1]`|Object|ref or character vector|
@@ -28,7 +28,7 @@ If  the user *flicks* an object, the system typically continues to generate Gest
 
 No other event will be reported between the start and end of a series of GesturePan events.
 
-The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
 
 Returning zero from the callback disables any default handling by the operating system.
 

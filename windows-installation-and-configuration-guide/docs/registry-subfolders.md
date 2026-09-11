@@ -31,7 +31,7 @@ The Event Viewer.
 
 ### Explorer
 
-This contains entries that describe your settings for the [Workspace Explorer](../../windows-ui-guide/workspace-explorer/).
+This contains entries that describe your settings for the [Workspace Explorer](../windows-ui-guide/workspace-explorer.md).
 
 ### files
 
@@ -43,7 +43,7 @@ This contains the definitions of your Keyboard Shortcuts (Unicode Edition only).
 
 ### KeyboardShortcuts/chars
 
-This contains the Registry Keyboard mappings between keystrokes and APL characters (Unicode Edition only). See [Unicode Edition and the Registry Keyboard](../../windows-ui-guide/apl-keyboards).
+This contains the Registry Keyboard mappings between keystrokes and APL characters (Unicode Edition only). See [Unicode Edition and the Registry Keyboard](../windows-ui-guide/apl-keyboards.md).
 
 ### LanguageBar
 

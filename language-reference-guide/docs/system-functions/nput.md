@@ -41,7 +41,7 @@ If content contains anything other than a character vector or scalar (or these, 
 
 If both `encoding` and `newline` are omitted `X` specifies only `content` and can be a simple character vector, a character matrix, or a vector of character vectors.
 
-The [shy](../../../programming-reference-guide/introduction/results#shy-results) result `R` is the number of bytes written to the file.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is the number of bytes written to the file.
 
 <h2 class="example">Examples</h2>
 ```apl

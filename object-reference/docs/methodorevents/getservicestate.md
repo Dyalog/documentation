@@ -1,6 +1,6 @@
 # <span>GetServiceState</span> <span>Method 92</span>
 
-This method is used to obtain the current state of a Dyalog APL service running under Windows. See [APL Application as a Service](../../../windows-installation-and-configuration-guide/apl-application-as-a-service).
+This method is used to obtain the current state of a Dyalog APL service running under Windows. See [APL Application as a Service](../../windows-installation-and-configuration-guide/apl-application-as-a-service.md).
 
 The GetServiceState method is niladic.
 

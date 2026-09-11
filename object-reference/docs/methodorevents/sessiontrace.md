@@ -5,11 +5,11 @@ search:
 
 # <span>SessionTrace</span> <span>Event 527</span>
 
-**Applies To:** [Session](../../../windows-ui-guide/the-session-object/session-object)
+**Applies To:** [Session](../../windows-ui-guide/the-session-object/session-object.md)
 
-|[Session](../../../windows-ui-guide/the-session-object/session-object)|&nbsp;|&nbsp;|||
+|[Session](../../windows-ui-guide/the-session-object/session-object.md)|&nbsp;|&nbsp;|||
 
-If enabled, this event is reported when an expression is executed with trace control. See [Set Trace ](../../../language-reference-guide/system-functions/set-trace). Error messages and output from system commands do not generate this event.
+If enabled, this event is reported when an expression is executed with trace control. See [Set Trace ](../../language-reference-guide/system-functions/set-trace.md). Error messages and output from system commands do not generate this event.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows :
 
@@ -24,7 +24,7 @@ The attachment of a callback function intercepts and annuls the normal display o
 !!! Hint "Hints and Recommendations"
     This event might be extended in future; in particular, the number of elements in the event message might be increased. You should, therefore, allow for such extensions in any code that refers to SessionTrace.
 
-When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using [implicit output](../../../programming-reference-guide/introduction/output) or by assignment to `⎕`. If so, this output will be processed normally, without generating any SessionTrace or [SessionPrint](sessionprint.md) events. If the callback fails to explicitly display anything, nothing will appear in the Session.
+When the event is generated, the left argument of the callback function contains the result value of the expression, if any. The callback function may display this or any other value, using [implicit output](../../programming-reference-guide/introduction/output.md) or by assignment to `⎕`. If so, this output will be processed normally, without generating any SessionTrace or [SessionPrint](sessionprint.md) events. If the callback fails to explicitly display anything, nothing will appear in the Session.
 
 If the expression has no value, then the callback function will be called monadically. It is therefore required that the callback function is ambivalent (can be called both monadically and dyadically).
 
@@ -62,4 +62,4 @@ You may not disable the event (by setting its action to `¯1`), nor generate the
 
 ## Application
 
-Objects: [Session](../../../windows-ui-guide/the-session-object/session-object)
+Objects: [Session](../../windows-ui-guide/the-session-object/session-object.md)

@@ -2,7 +2,7 @@
 
 If enabled, this event is reported when the user presses Ctrl+Insert and there is more than one block of selected cells in the [Grid](../objects/grid.md) and the blocks are non-conformable. The default action of the event is to generate a Beep. Setting the action code of this event to `¯1`, or returning a 0 from a callback function attached to it, disables the Beep.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows:
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows:
 
 |-----|------|----------------------------------------------------------------------------------------------------------------------------------|
 |`[1]`|Object|ref or character vector                                                                                                           |

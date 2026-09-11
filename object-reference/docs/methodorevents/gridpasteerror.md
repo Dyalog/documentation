@@ -8,7 +8,7 @@ clipboard. It also occurs if there is no selected block of cells, and pasting
 the data in starting at the current cell (CurCell) would overflow the [Grid](../objects/grid.md).
 Setting the action code of this event to `¯1`, or returning a 0 from a callback function attached to it, has no effect.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md),
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows:
 

@@ -2,7 +2,7 @@
 
 This event is reported when the user taps two fingers at the same time on an object
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 5-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 5-element vector as follows :
 
 |---|---|---|
 |`[1]`|Object|ref or character vector|
@@ -18,7 +18,7 @@ The Flags parameter [3] which reports the state of the Gesture, is always an int
 |`GF_BEGIN`|1    |A gesture is starting. |
 |`GF_END`  |4    |A gesture has finished.|
 
-The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../../interface-guide/introduction/high-priority-callbacks).
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
 
 Returning zero from the callback disables any default handling by the operating system.
 

@@ -17,7 +17,7 @@ Otherwise, if `Y` is an array, `Y` is returned.
 
 <h2 class="example">Example</h2>
 
-The following example uses the sample [ComponentFile Class](../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example).
+The following example uses the sample [ComponentFile Class](../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example.md).
 ```apl
      )LOAD ComponentFile
 ...\Samples\OO4APL\ComponentFile.dws saved ...
@@ -53,7 +53,7 @@ The following example shows how `⌷`obtains the items in an Excel Sheets collec
 
 The *values* of the index set are obtained or assigned by calls to the corresponding PropertyGet and PropertySet functions. Furthermore, if there is a sequence of primitive functions to the left of the _index_ function, that operate on the index set itself (functions such as dyadic `⍴,↑,↓,⊃`) as opposed to functions that operate on the *values* of the index set (functions such as `+,⌈,⌊,⍴¨`), calls to the PropertyGet and PropertySet functions are deferred until the required index set has been completely determined. The full set of functions that cause deferral of calls to the PropertyGet and PropertySet functions is the same as the set of functions that applies to selective specification.
 
-If for example, `CompFile` is an Instance of the [ComponentFile Class](../../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example):
+If for example, `CompFile` is an Instance of the [ComponentFile Class](../../programming-reference-guide/object-oriented-programming/class-members/properties/component-file-class-example.md):
 ```apl
        1↑⌽⌷CompFile
 ```

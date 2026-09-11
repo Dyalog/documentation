@@ -118,7 +118,7 @@ The interpreter's full version number as three integers indicating the major rel
 
 A six-character shorthand for the `Version`'s first two elements together with `Unicode` and `Bits`, for example `210U64`.
 
-This is particularly useful to find out where the [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation/) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
+This is particularly useful to find out where the [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation.md) looks for a **StartupSession** directory on Unix, namely in `'dyalog.',Executable.VersionMoniker,'.files'` inside the user's home directory (<code class="language-nonAPL">$HOME</code>).
 
 <h4 id="executableversionnumber">Executable.VersionNumber</h4>
 
@@ -139,7 +139,7 @@ This namespace provides information about optional or versioned functionality in
 
 <h4 id="featuresdde">Features.DDE</h4>
 
-Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../../interface-guide/dde/introduction/) is available.
+Boolean indicating whether (`1`) or not (`0`) [Dynamic Data Exchange](../../interface-guide/dde/introduction.md) is available.
 
 <h4 id="featuresdotnet">Features.DotNet</h4>
 
@@ -159,11 +159,11 @@ Examples of non-interactive interpreters include the runtime and shell script in
 
 <h4 id="featuresole">Features.OLE</h4>
 
-Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../../../interface-guide/ole-client/introduction/) is available.
+Boolean indicating whether (`1`) or not (`0`) [Object Linking and Embedding](../../interface-guide/ole-client/introduction.md) is available.
 
 <h4 id="featurespcre">Features.PCRE</h4>
 
-Full version of the built-in [Perl Compatible Regular Expressions](../../pcre-specifications/) engine, for example `10 47`.
+Full version of the built-in [Perl Compatible Regular Expressions](../pcre-specifications.md) engine, for example `10 47`.
 
 ### Host
 This namespace provides information about network identity.
@@ -291,7 +291,7 @@ Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_
 
 <h4 id="processlaunchtarget">Process.LaunchTarget</h4>
 
-The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../../windows-installation-and-configuration-guide/apl-command-line/) or using the [LOAD configuration parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/load/).
+The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line.md) or using the [LOAD configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load.md).
 
 <h4 id="processparentid">Process.ParentId</h4>
 

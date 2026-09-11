@@ -1,8 +1,8 @@
 # <span>ServiceNotification</span> <span>Event 94</span>
 
-This event is generated in an APL service whenever the Windows Service Control Manager (SCM) requests a change of state. See [APL Application as a Service](../../../windows-installation-and-configuration-guide/apl-application-as-a-service).
+This event is generated in an APL service whenever the Windows Service Control Manager (SCM) requests a change of state. See [APL Application as a Service](../../windows-installation-and-configuration-guide/apl-application-as-a-service.md).
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 4-element vector as follows :
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 4-element vector as follows :
 
 |-----|------|-----------------------------|
 |`[1]`|Object|ref or character vector      |

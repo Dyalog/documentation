@@ -8,7 +8,7 @@ string with one of the following values; `'Inherit'`,
 If Coord is `'Inherit'`, the co-ordinate
 system for the object is **inherited** from its parent. The default
 value of Coord for the system object `'.'` is `'Prop'`, so by default all objects
-created by [`⎕WC`](../../../language-reference-guide/system-functions/wc) inherit `'Prop'`.
+created by [`⎕WC`](../../language-reference-guide/system-functions/wc.md) inherit `'Prop'`.
 
 If Coord is `'Prop'`, the origin of the
 object's parent is deemed to be at its top left interior corner, and the scale
@@ -27,7 +27,7 @@ to (Size -1).
 
 If Coord is `'ScaledPixel'`  the number of pixels specified for [Posn](posn.md), [Size](size.md),  and other such properties will be automatically scaled by Dyalog APL according to the user's chosen display scaling factor. So if you specify an Edit object to be 80 pixels wide and 20 pixels high, and the user's scaling factor is 150%, Dyalog will automatically draw it 120 pixels wide and 30 pixels high. Dyalog will also de-scale coordinate values reported by `⎕WG` and  event messages.
 
-If Coord is `'Pixel'`, it is interpreted as either `'RealPixel'` or `'ScaledPixel'` according to the value of the **Dyalog_Pixel_Type** parameter, which is either ScaledPixel or RealPixel. See [Dyalog_Pixel_Type](../../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type).
+If Coord is `'Pixel'`, it is interpreted as either `'RealPixel'` or `'ScaledPixel'` according to the value of the **Dyalog_Pixel_Type** parameter, which is either ScaledPixel or RealPixel. See [Dyalog_Pixel_Type](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-pixel-type.md).
 
 **If this parameter is not specified, the default is RealPixel. So by default, when you set Coord to Pixel, it will be treated as RealPixel.**
 

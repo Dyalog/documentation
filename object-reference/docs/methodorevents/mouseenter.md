@@ -1,6 +1,6 @@
 # <span>MouseEnter</span> <span>Event 6</span>
 
-If enabled, this event is reported when the user moves the mouse pointer into (over) an object. The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq), or supplied as the right argument to your callback function, is a 3-element vector as follows :
+If enabled, this event is reported when the user moves the mouse pointer into (over) an object. The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md), or supplied as the right argument to your callback function, is a 3-element vector as follows :
 
 |-----|-----------|------------------------------------------|
 |`[1]`|Object     |ref or character vector                   |

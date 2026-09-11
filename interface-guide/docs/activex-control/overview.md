@@ -26,7 +26,7 @@ The Dyalog dll  copies the appropriate parts of the workspace from the .OCX. If 
 
 ## The Dyalog APL DLL
 
-ActiveXControls are hosted (executed) by the Dyalog APL DLL. For further details, see [COM Objects and the Dyalog APL DLL](../../../windows-installation-and-configuration-guide/com-objects-and-the-dyalog-dll).
+ActiveXControls are hosted (executed) by the Dyalog APL DLL. For further details, see [COM Objects and the Dyalog APL DLL](../../windows-installation-and-configuration-guide/com-objects-and-the-dyalog-dll.md).
 
 ## Instance Creation
 

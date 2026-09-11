@@ -15,7 +15,7 @@ CalendarCols is a 6-element integer vector whose elements specify the colours as
 Each element of CalendarCols can be 0 (which means default colour), a negative singleton that specifies a particular Windows colour, or a 3-element integer vector of RGB values.
 
 !!! Legacy "Legacy"
-    CalendarCols is ignored unless [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is disabled, that is, unless the [**XPLookAndFeel**](../../../windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel/) configuration parameter is set to `0`. Because the default value of that parameter is `1`, the property has no effect unless you change it.
+    CalendarCols is ignored unless [Native Look and Feel](../miscellaneous/windows-xp-look-and-feel.md) is disabled, that is, unless the [**XPLookAndFeel**](../../windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel.md) configuration parameter is set to `0`. Because the default value of that parameter is `1`, the property has no effect unless you change it.
 
 !!! Info "Information"
     Setting the first element of CalendarCols currently has no effect. Dyalog Ltd believes this to be a Microsoft Windows problem that might be corrected in due course.
