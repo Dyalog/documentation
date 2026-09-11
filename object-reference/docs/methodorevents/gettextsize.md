@@ -8,24 +8,28 @@ The argument to GetTextSize is a 1 or 2-element array as follows:
 
 |-----|---------|----------------|
 |`[1]`|Text item|character array |
-|`[2]`|Font name|character vector|
+|`[2]`|Font|character vector naming a [Font](../objects/font.md) object, or a reference to one|
 
-When you invoke GetTextSize you give the text item in whose size you are interested and, optionally, the name of a Font object. The text item may be a simple scalar, a vector or a matrix. If the Font is omitted, the result is given using the current font for the object in question.
+When you invoke GetTextSize you give the text item in whose size you are interested and, optionally, a Font object. The Font can be given either by name or as a reference, as shown in the second and third examples below respectively. The text item can be a simple scalar, a vector, or a matrix. If the Font is omitted, the result is given using the current font for the object in question.
 
 <h2 class="example">Examples</h2>
 ```apl
       'F'⎕WC'Form'
       F.GetTextSize'Hello World'
-3.385416667 10.7421875
+2.407407407 5.729166667
 
-      'FNT1' ⎕WC 'Font' 'Arial' 72
-      F.GetTextSize'Hello World'  '#.FNT1'
-18.75 65.4296875
+      'FNT1'⎕WC'Font' 'Arial' 72
+      F.GetTextSize'Hello World' 'FNT1'
+2.962962963 8.020833333
+
+      'FNT2'⎕WC'Font' 'Arial' 16 0 0 0 400 0
+      F.GetTextSize'Hello World'FNT2
+2.962962963 6.979166667
 
       F.Coord←'Pixel'
       F.FontObj←'FNT1'
       F.GetTextSize'Hello World'
-16 77
+72 335
 ```
 
 ## Application
