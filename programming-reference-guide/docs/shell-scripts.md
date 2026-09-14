@@ -54,6 +54,10 @@ plus←{
 ⎕←2 plus 2
 ```
 
+## Session Initialisation
+
+By default, an executable shell script does not perform Session initialisation, so features that depend on it, such as Link and SALT, are not available. To enable Session initialisation, and thereby make those features available, set the [**DYALOG_INITSESSION**](../windows-installation-and-configuration-guide/configuration-parameters/dyalog-initsession.md) configuration parameter to `1`, as described in [Configuration Parameters](#configuration-parameters).
+
 ## Errors
 
 Untrapped errors in a script will cause the termination of the process, further lines in the script will NOT be processed.
