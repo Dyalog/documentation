@@ -3,7 +3,7 @@
 !!! Info "Information"
     This configuration parameter is only relevant on the Microsoft Windows operating system.
 
-How the value `'Pixel'` of the [`Coord`](../../../object-reference/properties/coord) property is interpreted.
+How the value `'Pixel'` of the [`Coord`](../../object-reference/properties/coord.md) property is interpreted.
 
 Valid values are:
 
@@ -12,4 +12,4 @@ Valid values are:
 
 Default is `RealPixel`.
 
-See also the [General tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab) of the Windows Configuration Dialog.
+See also the [General tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) of the Windows Configuration Dialog.

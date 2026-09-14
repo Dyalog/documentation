@@ -11,4 +11,4 @@ Valid values are an event log name or event source name.
 
 Related parameters: [DYALOG_EVENTLOGGINGLEVEL](dyalog-eventlogginglevel.md).
 
-For more information, see [Handling Unexpected Application Errors in Windows](../../../programming-reference-guide/error-trapping/handling-unexpected-errors).
+For more information, see [Handling Unexpected Application Errors in Windows](../../programming-reference-guide/error-trapping/handling-unexpected-errors.md).

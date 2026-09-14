@@ -1,11 +1,11 @@
 # APLAN_FOR_EDITOR
 
-Whether new **Edit** windows containing arrays open using [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) when possible.
+Whether new **Edit** windows containing arrays open using [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) when possible.
 
 Valid values are:
 
 - `0` : arrays open in the usual display form
-- `1` : arrays open using array notation; [`⎕PP`](../../../language-reference-guide/system-functions/pp) does not then apply to numbers shown in the editor
+- `1` : arrays open using array notation; [`⎕PP`](../../language-reference-guide/system-functions/pp.md) does not then apply to numbers shown in the editor
 
 Default is `0`.
 

@@ -15,7 +15,7 @@ Table: File Menu Operations {: #file-menu-operations }
 |Copy|`[WSCopy]`|Prompts for a workspace file name, then copies it|
 |Save|`[WSSave]`|Saves the active workspace|
 |Save As|`[WSSaveas]`|Prompts for a workspace file name, then saves it|
-|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../../windows-installation-and-configuration-guide/creating-executables)|
+|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../windows-installation-and-configuration-guide/creating-executables.md)|
 |Export to Memory|`[MakeMemoryAssembly]`|Creates an *in-memory* .NET Assembly|
 |Close AppDomain|`[CloseAppDomain]`|Closes .NET App Domain|
 |Drop|`[WSDrop]`|Prompts for a workspace file name, then erases it|

@@ -12,4 +12,4 @@ Valid values are:
 
 <!-- REVIEW(default): default value not present in the migrated source; confirm. -->
 
-For more information, see [Handling Unexpected Application Errors in Windows](../../../programming-reference-guide/error-trapping/handling-unexpected-errors).
+For more information, see [Handling Unexpected Application Errors in Windows](../../programming-reference-guide/error-trapping/handling-unexpected-errors.md).

@@ -19,7 +19,7 @@ Sets the aplcore parameters **AplCoreName** and/or **MaxAplCores** for the curre
 
 If `Y` is empty, the function simply returns the values of these parameters without changing them.
 
-See also: [AplCoreName](../../../../dyalog-configuration-guide/configuration-parameters/aplcorename) and [MaxAplCores.](../../../../dyalog-configuration-guide/configuration-parameters/maxaplcores)
+See also: [AplCoreName](../../../dyalog-configuration-guide/configuration-parameters/aplcorename.md) and [MaxAplCores.](../../../dyalog-configuration-guide/configuration-parameters/maxaplcores.md)
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

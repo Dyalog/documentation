@@ -9,4 +9,4 @@ Valid values are:
 
 Default is `0`.
 
-For more information, see [Discard Source Information](../../../language-reference-guide/primitive-operators/i-beam/discard-source-information) and [Source as Typed](../../../earlier-release-notes/release-notes-v19-0/introduction/source-as-typed).
+For more information, see [Discard Source Information](../../language-reference-guide/primitive-operators/i-beam/discard-source-information.md) and [Source as Typed](../../earlier-release-notes/release-notes-v19-0/introduction/source-as-typed.md).

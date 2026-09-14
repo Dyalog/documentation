@@ -14,4 +14,4 @@ Default is `0`.
 
 Related parameters: [DYALOG_EVENTLOGNAME](dyalog-eventlogname.md).
 
-For more information, see [Handling Unexpected Application Errors in Windows](../../../programming-reference-guide/error-trapping/handling-unexpected-errors).
+For more information, see [Handling Unexpected Application Errors in Windows](../../programming-reference-guide/error-trapping/handling-unexpected-errors.md).

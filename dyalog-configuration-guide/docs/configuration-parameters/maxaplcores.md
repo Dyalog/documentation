@@ -8,4 +8,4 @@ Valid values are a positive integer.
 
 Related parameters: [AplCoreName](aplcorename.md).
 
-See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).
+See also [aplcore Parameters](../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters.md).

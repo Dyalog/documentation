@@ -1,6 +1,6 @@
 # DYALOG_INITSESSION
 
-Whether Dyalog performs [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation) on start-up. Session initialisation makes Link, SALT, and other features available.
+Whether Dyalog performs [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation.md) on start-up. Session initialisation makes Link, SALT, and other features available.
 
 Valid values are:
 

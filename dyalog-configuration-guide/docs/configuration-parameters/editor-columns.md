@@ -13,4 +13,4 @@ The columns shown in the Editor, set separately for each type of object. There i
 
 Valid values are a list of column names.
 
-See also [Configuring the Editor](../../../unix-installation-and-configuration-guide/configuring-the-editor).
+See also [Configuring the Editor](../../unix-installation-and-configuration-guide/configuring-the-editor.md).

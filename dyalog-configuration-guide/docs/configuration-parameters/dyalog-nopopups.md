@@ -12,4 +12,4 @@ Valid values are:
 
 Default is `0`.
 
-For more information, see [Handling Unexpected Application Errors in Windows](../../../programming-reference-guide/error-trapping/handling-unexpected-errors).
+For more information, see [Handling Unexpected Application Errors in Windows](../../programming-reference-guide/error-trapping/handling-unexpected-errors.md).

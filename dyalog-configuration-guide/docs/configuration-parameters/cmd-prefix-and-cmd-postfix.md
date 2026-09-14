@@ -7,4 +7,4 @@ Strings within which operating-system commands given as the arguments to `⎕CMD
 
 Valid values are a string.
 
-For implementation details, see [Windows Command (`⎕CMD`)](../../../language-reference-guide/system-functions/cmd).
+For implementation details, see [Windows Command (`⎕CMD`)](../../language-reference-guide/system-functions/cmd.md).

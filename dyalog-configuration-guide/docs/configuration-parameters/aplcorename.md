@@ -8,4 +8,4 @@ Valid values are a file path, optionally containing a single `*`.
 
 Related parameters: [MaxAplCores](maxaplcores.md) (including how to prevent aplcore files being generated).
 
-See also [aplcore Parameters](../../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters).
+See also [aplcore Parameters](../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters.md).

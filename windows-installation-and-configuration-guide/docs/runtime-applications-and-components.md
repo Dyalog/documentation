@@ -18,7 +18,7 @@ All but the first of these are made using the *Export* dialog box accessed from 
 
 ## Configuration Parameters
 
-Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, can be specified in a number of ways. See [Configuration Parameters](../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
+Configuration parameters for these run-time applications, both for the Dyalog engine and for your own application settings, can be specified in a number of ways. See [Configuration Parameters](../dyalog-configuration-guide/configuration-parameters/configuration-parameters.md).
 
 Nevertheless, it is strongly recommended that you use Configuration files. In this section we will discuss only Application Configuration files, although User Configuration files may be used as well.
 
@@ -54,7 +54,7 @@ The application starts by running `⎕LX` in `myapp.dws`. If a configuration fil
      dyalogrt.exe Load=myfn.aplf
 ```
 
-The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [Load](../../dyalog-configuration-guide/configuration-parameters/load)). If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
+The application loads the file named `myfn.aplf` which contains the source code for a function, and executes the expression `(myfn 0⍴⊂'')` (see [Load](../dyalog-configuration-guide/configuration-parameters/load.md)). If a configuration file named `myfn.dcfg` in the same directory, it is loaded and applied.
 
 If your application uses any component of the Microsoft .NET Framework, you must distribute the Bridge DLL and DyalogNet DLLs. These DLLs must be placed in the same directory as your EXE.
 
@@ -89,7 +89,7 @@ To make an out-of-process COM Server, you must:
 
 The command-line for your COM Server must be specified in the field labelled *Command Line* in the *Export* dialog box. The field is initialised to invoke the Run-Time EXE with the name of your workspace in the same fashion as the workspace-based run-time discussed above. This command-line is recorded in the Windows Registry to be invoked when a client application requests it.
 
-You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../../interface-guide/ole-server/the-loan-workspace).
+You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../interface-guide/ole-server/the-loan-workspace.md).
 
 <h2 class="example">Example</h2>
 ```apl

@@ -4,8 +4,8 @@ A configuration file is a text file, in JSON5 syntax, that holds configuration p
 
 Configuration files and their structure are documented, for all platforms, in the Dyalog Configuration Guide:
 
-- [Application Configuration Files](../../../dyalog-configuration-guide/how-to-set/application-configuration-files)
-- [User Configuration Files](../../../dyalog-configuration-guide/how-to-set/user-configuration-files)
-- [Configuration File Structure](../../../dyalog-configuration-guide/how-to-set/configuration-file-structure)
+- [Application Configuration Files](../../dyalog-configuration-guide/how-to-set/application-configuration-files.md)
+- [User Configuration Files](../../dyalog-configuration-guide/how-to-set/user-configuration-files.md)
+- [Configuration File Structure](../../dyalog-configuration-guide/how-to-set/configuration-file-structure.md)
 
 On Unix, user configuration files are held in `$HOME/.dyalog/`.

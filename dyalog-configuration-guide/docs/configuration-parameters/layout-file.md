@@ -5,7 +5,7 @@
 
 The path (absolute, or relative to the working directory) and name of the Session layout file. The Session layout file records the docking layout of the Session, that is, the position of the Editor, the Debugger, and the other tools that can be docked in the Session window.
 
-The file is read when Dyalog starts, and the current layout is written back to it when Dyalog exits, so a layout chosen from the [Layout menu](../../../windows-ui-guide/session-menubar#the-layout-menu) is still in effect the next time Dyalog starts, without the session file having to be saved. A layout file contains no APL code.
+The file is read when Dyalog starts, and the current layout is written back to it when Dyalog exits, so a layout chosen from the [Layout menu](../../windows-ui-guide/session-menubar.md#the-layout-menu) is still in effect the next time Dyalog starts, without the session file having to be saved. A layout file contains no APL code.
 
 Valid values are a file path including the `.layout` extension, which is not assumed.
 

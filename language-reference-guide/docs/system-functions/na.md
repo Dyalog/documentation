@@ -47,7 +47,7 @@ div
 2.5
 ```
 
-It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or might even cause the workspace to become corrupted and crash. During development, you might want to prevent this happening. See [ErrorOnExternalException](../../../dyalog-configuration-guide/configuration-parameters/configuration-parameters).
+It is imperative that care be taken when coding type declarations. A DLL *cannot* check types of data passed from APL. A wrong type declaration will lead to erroneous results or might even cause the workspace to become corrupted and crash. During development, you might want to prevent this happening. See [ErrorOnExternalException](../../dyalog-configuration-guide/configuration-parameters/configuration-parameters.md).
 
 The full syntax for the right argument of `⎕NA` is:
 ```
@@ -542,7 +542,7 @@ You should consult the documentation for the specific function that you intend t
 
 ## The Dyalog DLL
 
-The Dyalog DLL (see [Run-Time Applications and Components](../../../windows-installation-and-configuration-guide/runtime-applications-and-components)) contains three functions: `MEMCPY`, `STRNCPY` and `STRLEN`.
+The Dyalog DLL (see [Run-Time Applications and Components](../../windows-installation-and-configuration-guide/runtime-applications-and-components.md)) contains three functions: `MEMCPY`, `STRNCPY` and `STRLEN`.
 
 ### MEMCPY
 

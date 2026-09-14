@@ -1,6 +1,6 @@
 # Auto_PW
 
-Whether the value of [`⎕PW`](../../../language-reference-guide/system-functions/pw) is derived automatically from the current width of the Session (Windows) or terminal (Unix) window.
+Whether the value of [`⎕PW`](../../language-reference-guide/system-functions/pw.md) is derived automatically from the current width of the Session (Windows) or terminal (Unix) window.
 
 Valid values are:
 
@@ -14,4 +14,4 @@ Default depends on operating system:
 
 Related parameters: [Default_PW](default-pw.md).
 
-See also the [Session tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab) of the Windows Configuration Dialog.
+See also the [Session tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-session-tab.md) of the Windows Configuration Dialog.

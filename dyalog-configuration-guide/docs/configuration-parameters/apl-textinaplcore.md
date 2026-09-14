@@ -1,6 +1,6 @@
 # APL_TextInAplCore
 
-Whether certain information is written to an *aplcore* file when a [system error](../../../programming-reference-guide/error-messages/system-errors) occurs.
+Whether certain information is written to an *aplcore* file when a [system error](../../programming-reference-guide/error-messages/system-errors.md) occurs.
 
 Valid values are:
 

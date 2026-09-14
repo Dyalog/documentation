@@ -10,4 +10,4 @@ Valid values are:
 Default is `0`.
 
 
-See also [Set External Variable](../../../language-reference-guide/system-functions/set-external-variable) and [Query External Variable](../../../language-reference-guide/system-functions/query-external-variable).
+See also [Set External Variable](../../language-reference-guide/system-functions/set-external-variable.md) and [Query External Variable](../../language-reference-guide/system-functions/query-external-variable.md).

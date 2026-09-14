@@ -8,7 +8,7 @@ The name of a workspace, or of a directory or text file containing APL source co
 Having loaded the workspace or fixed the code, Dyalog executes the expression given by [`LX`](lx.md) if it is set. If `LX` is not set and the `-x` command-line option was given, no further action is taken. Otherwise Dyalog derives an expression to execute:
 
 - if **Load** is a directory, `Run ,⊂<Load>`;
-- if **Load** is a workspace (determined by its internal signature), the expression given by its [`⎕LX`](../../../language-reference-guide/system-functions/lx);
+- if **Load** is a workspace (determined by its internal signature), the expression given by its [`⎕LX`](../../language-reference-guide/system-functions/lx.md);
 - otherwise, for a source file, according to its extension:
 
 |File Extension|Type|Expression|

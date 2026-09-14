@@ -1,6 +1,6 @@
 # SM_Cols
 
-The width, in characters, of the window used to display [`⎕SM`](../../../language-reference-guide/system-functions/sm) when it is used stand-alone. It is not used when the window is specified through the SM object.
+The width, in characters, of the window used to display [`⎕SM`](../../language-reference-guide/system-functions/sm.md) when it is used stand-alone. It is not used when the window is specified through the SM object.
 
 Valid values are a positive integer number of characters.
 

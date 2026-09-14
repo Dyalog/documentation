@@ -1,6 +1,6 @@
 # Enable_CEF
 
-Whether the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) is enabled. When disabled, an attempt to create an [HTMLRenderer](../../../object-reference/objects/htmlrenderer) object fails with an error message.
+Whether the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) is enabled. When disabled, an attempt to create an [HTMLRenderer](../../object-reference/objects/htmlrenderer.md) object fails with an error message.
 
 Valid values are:
 

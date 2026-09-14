@@ -16,4 +16,4 @@ The effective sequence of directories is stored as a vector of character vectors
 
 Related parameters: [DyalogStartup_X](dyalogstartup-x.md).
 
-For more information, see [Session Initialisation](../../../windows-ui-guide/the-session-object/session-initialisation).
+For more information, see [Session Initialisation](../../windows-ui-guide/the-session-object/session-initialisation.md).

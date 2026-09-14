@@ -1,11 +1,11 @@
 # APLAN_FOR_OUTPUT
 
-Whether Session output uses [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) when possible.
+Whether Session output uses [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) when possible.
 
 Valid values are:
 
 - `0` : Session output uses the usual display form
-- `1` : Session output uses array notation; [`⎕PP`](../../../language-reference-guide/system-functions/pp) does not then apply to numeric Session output
+- `1` : Session output uses array notation; [`⎕PP`](../../language-reference-guide/system-functions/pp.md) does not then apply to numeric Session output
 
 Default is `0`.
 
