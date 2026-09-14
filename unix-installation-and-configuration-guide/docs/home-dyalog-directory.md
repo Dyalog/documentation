@@ -13,4 +13,4 @@ This directory now contains:
 - the user command cache file, which by default is called *UserCommand20.cache*
 - the file containing the SALT settings which is called *SALT.settings*
 
-Note that many of the default names and locations can be altered. Remember that earlier versions of Dyalog will generate/use copies of these files in other locations: you may need to move or delete earlier versions of these files, or change the default values of their names and/or locations in earlier versions of Dyalog APL.
+Many of the default names and locations can be altered. Remember that earlier versions of Dyalog will generate/use copies of these files in other locations: you may need to move or delete earlier versions of these files, or change the default values of their names and/or locations in earlier versions of Dyalog APL.

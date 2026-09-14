@@ -1,7 +1,5 @@
 # <span>ShowBalloonTip</span> <span>Method 860</span>
 
-**Description**
-
 The ShowBalloonTip method displays a BalloonTip in a [SysTrayItem](../objects/systrayitem.md) object.
 
 The argument to ShowBalloonTip is a  1, 2, 3 or 4-element array as follows:
@@ -28,6 +26,6 @@ Other values represent the name or a ref to an [Icon](../objects/icon.md) object
 
 If the *Icon* parameter specifies a *large* Icon object (32 x 32 bits) the Flags parameter must be 32. Otherwise this parameter is not used.
 
-**Application**
+## Application
 
 Objects: [SysTrayItem](../objects/systrayitem.md)

@@ -23,7 +23,7 @@ On the computer upon which you want the OLEServer to be run, you must add the fo
     RunAs=Interactive User
     ```
    
-1. An AppID entry to the `HKEY_CLASSES_ROOT**\**CLSID` key. (Note that this key will itself have been created by Dyalog APL/W when you saved the workspace) Once again, CLSID refers to the value of your OLEServer's `ClassID` property. The value of the AppID entry is the (same) CLSID. Using the same example as above, the entry would be:
+1. An AppID entry to the `HKEY_CLASSES_ROOT**\**CLSID` key. (This key will itself have been created by Dyalog when you saved the workspace.) Once again, CLSID refers to the value of your OLEServer's `ClassID` property. The value of the AppID entry is the (same) CLSID. Using the same example as above, the entry would be:
     ```
     HKEY_CLASSES_ROOT\{B80E9D40-2090-11D1-8F93-0020AFABD95D}
     AppID={B80E9D40-2090-11D1-8F93-0020AFABD95D}
@@ -33,7 +33,7 @@ On the computer upon which you want the OLEServer to be run, you must add the fo
 
 On each of the computers from which you wish to call the OLEServer object as a client, you must add the following entries.
 
-1. Two keys under `HKEY_CLASSES_ROOT` that identify the object (locally) and associate it with your OLEServer Note that the local name of the object is arbitrary and may be different on each client.
+1. Two keys under `HKEY_CLASSES_ROOT` that identify the object (locally) and associate it with your OLEServer. The local name of the object is arbitrary and might be different on each client.
     ```
     HKEY_CLASSES_ROOT\dyalog.ServerName</p>
     HKEY_CLASSES_ROOT\dyalog.ServerName\CLSID

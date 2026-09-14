@@ -16,9 +16,6 @@ extra_css:
   - documentation-assets/css/extra.css
   - documentation-assets/css/admonition-ucmdhelp.css
   - documentation-assets/css/windows-ui-guide.css
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - privacy
   - search
@@ -41,8 +38,6 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       pygments_lang_class: true
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       use_pygments: false
   - attr_list
@@ -81,14 +76,9 @@ nav:
   - Browsing Type Libraries: browsing-type-libraries.md
   - Browsing .NET Classes: browsing-net-classes.md
   - Find Objects Tool: find-objects-tool.md
-  - Object Properties Dialog: object-properties-dialog.md
-  - Editor: editor.md
-  - Find and Replace Dialogs: find-and-replace-dialogs.md
-  - Editing Scripts and Text Files: editing-scripts-and-text-files.md
-  - Source as Typed: source-as-typed.md
-  - The Tracer: 
-      - tracer/index.md
-      - Inline Tracing: tracer/inline-tracing.md
+  - Object Properties Dialog Box: object-properties-dialog.md
+  - The Editor: editor.md
+  - The Tracer: tracer.md
   - The Threads Tool: threads-tool.md
   - Debugging Threads: debugging-threads.md
   - The Event Viewer: event-viewer.md

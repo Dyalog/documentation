@@ -34,7 +34,7 @@ Indexing may now be applied directly to the Instance `F1`. In essence, `F1[n]` i
  World
 ```
 
-Note however that this feature applies only to indexing.
+However, this feature applies only to indexing.
 ```apl
       4⊃F1
 DOMAIN ERROR

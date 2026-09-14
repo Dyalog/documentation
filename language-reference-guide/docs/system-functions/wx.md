@@ -20,19 +20,19 @@ If `⎕WX` is 3 (2<sup>nd</sup> bit is also set) COM and .NET objects adopt the 
 
 Any attempt to set `⎕WX` to 2 generates a `DOMAIN ERROR`.
 
-Note that it is the value of `⎕WX` in the object itself, rather than the value of `⎕WX` in the calling environment, that determines its behaviour.
+It is the value of `⎕WX` in the object itself, rather than the value of `⎕WX` in the calling environment, that determines its behaviour.
 
 When you create an object, its `⎕WX` (like any other system variable) is initially inherited from its parent.
 
 If the value of `⎕WX` of a GUI object is initially 0, it will not expose its members. If you subsequently change it from 0 to 1, it will expose them. If you change its `⎕WX` back to 0, it will not expose any yet-unexposed members, although already-exposed members will continue to be exposed.
 
-The value of `⎕WX` in a clear workspace is defined by the default_wx parameter (see [ default_wx](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters)) which itself defaults to 3.
+The value of `⎕WX` in a clear workspace is defined by the default_wx parameter (see [ default_wx](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md)) which itself defaults to 3.
 
 `⎕WX` has namespace scope and may be localised in a function header. This allows you to create a utility namespace or utility function in which the exposure of objects is known and determined, regardless of its global value in the workspace.
 
 ## Notes
 
-- The visibility of the properties and methods of the Root object are not controlled by `⎕WX` but by the **PropertyExposeRoot** parameter. For further information, see [ PropertyExposeRoot](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters).
+- The visibility of the properties and methods of the Root object are not controlled by `⎕WX` but by the **PropertyExposeRoot** parameter. For further information, see [ PropertyExposeRoot](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md).
 - `⎕WX` is retained for backwards compatibility and should be considered as deprecated. Dyalog recommends  `⎕WX` be set to 3 and never changed.
 
 <!-- Hidden search keywords -->

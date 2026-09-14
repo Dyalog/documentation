@@ -21,7 +21,7 @@ For example, suppose that you want the user to close the dialog box by clicking 
      ∇
 ```
 
-Note that this function is fairly general, as it gets the name of the Form from the name of the object that generated the event.
+This function is fairly general, as it gets the name of the Form from the name of the object that generated the event.
 
 ## The MsgBox and FileBox Objects
 
@@ -43,6 +43,6 @@ creates an invisible MsgBox with the title (Caption) `'Input Error'`, no text, a
      ∇
 ```
 
-Note that `⎕DQ` will terminate automatically when the user clicks one of the buttons in the MsgBox object.
+`⎕DQ` will terminate automatically when the user clicks one of the buttons in the MsgBox object.
 
 In this case we were not interested in the particular button that the user pressed. If you are interested in this information, you can enable special events associated with these buttons. For details, see the description of the MsgBox and FileBox objects in the Object Reference.

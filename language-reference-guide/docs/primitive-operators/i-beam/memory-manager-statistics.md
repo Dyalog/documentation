@@ -6,7 +6,7 @@ search:
 
 # <span>Memory Manager Statistics</span> `R←{X}(2000⌶)Y`{{key}}
 
-This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This I-Beam is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](../../../../windows-installation-and-configuration-guide/workspace-management).
+This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This _I-beam_ is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](../../../windows-installation-and-configuration-guide/workspace-management.md).
 
 `Y` is a simple integer scalar or vector containing values listed in the table below.
 
@@ -33,7 +33,7 @@ If `X` is omitted, the result `R` is an array with the same structure as `Y`, bu
 |23   |The total number of `WS FULL` errors that have occurred.                                                                                                         |
 |24   |The total number of `WS FULL` errors that have been trapped.                                                                                                     |
 
-Note: While all other operations are relatively fast, the operation to count the number of garbage pockets (4) may take a noticeable amount of time, depending upon the size and state of the workspace.
+While all other operations are relatively fast, the operation to count the number of garbage pockets (4) can take a noticeable amount of time, depending upon the size and state of the workspace.
 
 See also [Specify Workspace Available](specify-workspace-available.md).
 
@@ -110,7 +110,7 @@ To alleviate the problem,. Dyalog reserves a special *WS Full Buffer* for handli
 
 In simple terms, when a `WS FULL` error occurs that triggers a handler, that is, an expression executed via `⎕TRAP` or `:Trap`,  the reserved workspace in the *WS Full Buffer* is released to provide additional memory space for that expression to execute. When the expression terminates, the system removes the memory that it had previously released, reserving it once more for another potential `WS FULL`.
 
-Note that until a `WS FULL` handler starts, the memory allocated to the *WS Full Buffer* is unavailable and inaccessible for any other purpose, thereby reducing the amount of active workspace available (`⎕WA`).
+Until a `WS FULL` handler starts, the memory allocated to the *WS Full Buffer* is unavailable and inaccessible for any other purpose, thereby reducing the amount of active workspace available (`⎕WA`).
 
 Further considerations are:
 

@@ -1,6 +1,8 @@
 # Dfns & Dops
 
-A *dfn* (*dop*)[^1] is an alternative function definition style suitable for defining small to medium sized functions. It bridges the gap between operator expressions: `rank←⍴∘⍴` and full "header style" definitions such as:
+The terms *dfn* and *dop* refer to a special type of function (or operator) unique to Dyalog. They were originally named dynamic functions and dynamic operators, later abbreviated to Dfns and Dops or D-Fns and D-Ops, but all these terms have been dropped in favour of the current ones.
+
+A *dfn* (*dop*) is an alternative function definition style suitable for defining small to medium sized functions. It bridges the gap between operator expressions: `rank←⍴∘⍴` and full "header style" definitions such as:
 ```apl
     ∇ rslt←larg func rarg;local...
 ```
@@ -24,8 +26,10 @@ dfns can be defined and used in any context where an APL function may be found, 
 
 - In immediate execution mode as in the examples above.
 - Within a defined function or operator.
-- As the operand of an operator such as each (`¨`).
+- As the operand of an operator such as _each_ (`¨`).
 - Within another dfn.
 - The last point means that it is easy to define nested local functions.
 
-[^1]: The terms dfn and dop refer to a special type of function (or operator) unique to Dyalog. They were originally named dynamic functions and dynamic operators, later abbreviated to Dfns and Dops or D-Fns and D-Ops, but all these terms have been dropped in favour of the current ones.
+## Supplied Workspaces
+
+There are many samples of dfns and dops in **[DYALOG]/ws/**, for example, in the workspaces **min.dws**, **max.dws**, **tube.dws**, and **eval.dws**.

@@ -4,7 +4,7 @@ The Threads Tool is used to monitor and debug multi-threaded applications. To di
 
 ![](img/threads-tool.png)
 
-The above picture illustrates a situation using the `lift.dws` workspace after executing the function `RUN`. The *Pause on Error* option was enabled and a Stop was set on `RUN[63]`. When `RUN` suspended at this point, all other threads (1-8) were automatically Paused. Note that all other threads happen to be Paused in the middle of calls to system functions
+The above picture illustrates a situation using the `lift.dws` workspace after executing the function `RUN`. The *Pause on Error* option was enabled and a Stop was set on `RUN[63]`. When `RUN` suspended at this point, all other threads (1-8) were automatically Paused. They all happen to be Paused in the middle of calls to system functions.
 
 The columns of the Threads Tool display the following information.
 

@@ -1,7 +1,5 @@
 # <span>TabObj</span> <span>Property</span>
 
-**Description**
-
 TabObj is a ref or a character vector.
 
 TabObj associates a [SubForm](../objects/subform.md) with a [TabBtn](../objects/tabbtn.md) or a [TabButton](../objects/tabbutton.md) object. Selecting the associated [TabBtn](../objects/tabbtn.md) or [TabButton](../objects/tabbutton.md) causes the [SubForm](../objects/subform.md) to be given the input focus.
@@ -12,6 +10,6 @@ For [TabBtn](../objects/tabbtn.md) and [TabButton](../objects/tabbutton.md) obje
 
 For a [TabBar](../objects/tabbar.md) or [TabControl](../objects/tabcontrol.md), TabObj is a read-only property that contains a ref to the currently selected [TabBtn](../objects/tabbtn.md) or [TabButton](../objects/tabbutton.md).
 
-**Application**
+## Application
 
 Objects: [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TabBtn](../objects/tabbtn.md), [TabButton](../objects/tabbutton.md), [TabControl](../objects/tabcontrol.md)

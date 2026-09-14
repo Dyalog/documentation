@@ -4,7 +4,7 @@ This command allows Windows Command Processor or UNIX shell commands to be given
 
 The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/execute-windows-command.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute (UNIX) Command](../system-functions/execute-unix-command.md) and [Execute Windows Command: ](../system-functions/execute-windows-command.md).
 
-Note that under Windows, you may not execute `)CMD` without a command.  If you wish to, you can easily open a new Command Prompt window outside APL.
+Under Microsoft Windows, you cannot execute `)CMD` without a command. If you want to, you can easily open a new Command Prompt window outside APL.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -47,5 +47,5 @@ By default, `)CMD` will execute the string `('cmd.exe /c',Y)` where `Y` is the a
 
 Before execution, the argument is prefixed and postfixed with strings defined by the APL parameters CMD_PREFIX and CMD_POSTFIX. The former specifies the name of your command processor and any parameters that it requires. The latter specifies a string which may be required. If CMD_PREFIX is not defined, it defaults to the name defined by the environment variable COMSPEC followed by "\c".  If COMSPEC is not defined, it defaults to COMMAND.COM or CMD.EXE as appropriate. If CMD_POSTFIX is not defined, it defaults to an empty vector.
 
-!!! note
-    note This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+!!! Info "Information"
+    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).

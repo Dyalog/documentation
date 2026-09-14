@@ -22,7 +22,7 @@ The functions `⎕SRC` and `62 ⎕ATX` (most precise available source) use the s
 
 Source code saved in the workspace is compressed to minimise space usage.
 
-Note that the white space in comment statements is retained in both the compiled form and compiled form of a function.
+Note that the white space in comment statements is retained in both the tokenised form and source code form of a function.
 
 The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (Discard Source Information) allow the user to enable or disable this feature for functions and operators. The *AutoFormat Functions* option is automatically disabled if the **DYALOG_DISCARD_FN_SOURCE** parameter is 1. Note that the user can format code on demand).
 

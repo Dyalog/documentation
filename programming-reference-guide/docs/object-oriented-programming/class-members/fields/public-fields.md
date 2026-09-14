@@ -1,6 +1,6 @@
 # Public Fields
 
-A *Public* Field may be accessed from outside an Instance or a Class. Note that the default is *Private*.
+A *Public* Field may be accessed from outside an Instance or a Class. The default is *Private*.
 
 Class `DomesticParrot` has a `Name` Field which is defined to be Public and Instance (by default).
 ```apl

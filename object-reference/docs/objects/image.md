@@ -1,8 +1,6 @@
 # <span>Image</span> <span>Object</span>
 
-**Purpose:** Positions bitmaps and icons within an object.
-
-**Description**
+Positions bitmaps and icons within an object.
 
 The [Points](../properties/points.md) property specifies the co-ordinates of one or more points at which the specified graphical objects are to be drawn.
 
@@ -48,13 +46,15 @@ Display the "YES" [Bitmap](bitmap.md) at (20,10) and the "NO" [Bitmap](bitmap.md
       'F.I' ⎕WC'Image'(20(10 50))('Picture' 'YES' 'NO')
 ```
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Metafile](../objects/metafile.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [SubForm](../objects/subform.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [AutoConf](../properties/autoconf.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
+Properties (default order): [Type](../properties/type.md), [Points](../properties/points.md), [Coord](../properties/coord.md), [Visible](../properties/visible.md), [Event](../properties/event.md), [Dragable](../properties/dragable.md), [Picture](../properties/picture.md), [OnTop](../properties/ontop.md), [AutoConf](../properties/autoconf.md), [Data](../properties/data.md), [EdgeStyle](../properties/edgestyle.md), [Size](../properties/size.md), [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [AcceptFiles](../properties/acceptfiles.md), [AutoConf](../properties/autoconf.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Dragable](../properties/dragable.md), [EdgeStyle](../properties/edgestyle.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [OnTop](../properties/ontop.md), [Picture](../properties/picture.md), [Points](../properties/points.md), [PropList](../properties/proplist.md), [Size](../properties/size.md), [Type](../properties/type.md), [Visible](../properties/visible.md)
 
 Methods: [Detach](../methodorevents/detach.md)
 

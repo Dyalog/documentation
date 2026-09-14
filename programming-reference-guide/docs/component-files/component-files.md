@@ -12,7 +12,7 @@ To access an existing component file it must be **tied**, that is, opened for us
 
 ## Tie Numbers
 
-A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647 and, you can supply one explicitly, or have the interpreter allocate the next available one by specifying 0. The system functions which tie files return the tie number as a "shy" result.
+A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647; you can supply one explicitly, or have the interpreter allocate the next available one by specifying `0`. The system functions that tie files return the tie number as a [shy](../introduction/results.md#shy-results) result.
 
 ## Creating and Removing Files
 
@@ -72,7 +72,7 @@ This is an integer representation of a Boolean mask. Each bit in the mask indica
 
 For example, if bits 1, 4 and 6 are set and all other relevant bits are zero only `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP` are permitted. A convenient way to set up the mask is to sum the access codes associated with each operation.
 
-For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. Thus by subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. Note that the value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES` and `⎕FNUMS` are not subject to access control. Passnumbers may also be used to establish different levels of access for the same user.
+For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND`, and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. By subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. The value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES`, and `⎕FNUMS` are not subject to access control. Passnumbers can also be used to establish different levels of access for the same user.
 
 When the user attempts to tie a file using `⎕FTIE` or `⎕FSTIE` a row of the access matrix is selected to control this and subsequent operations.
 
@@ -193,7 +193,7 @@ Create a new file, giving the file name, and the number you wish to use to ident
 
 If the file already exists, or you have already used this tie number, then APL will respond with the appropriate error message.
 
-Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use each (`¨`).
+Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use _each_ (`¨`).
 ```apl
       DATA ⎕FAPPEND¨ 1
 ```

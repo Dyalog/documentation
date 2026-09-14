@@ -60,6 +60,18 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
 |[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
 
+### Top-level Namespaces
+
+These are namespaces that are equal to their parent namespace (`##`), that is, for a namespace `ns`, `ns=ns.##`.
+
+|Name      |Description             |Form|
+|----------|------------------------|-----|
+|[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
+|[`⎕SE`](se.md)    |Session Namespace          |Reference|
+|[`⎕SYSTEM`](system.md) |System Information         |Reference|
+
+The workspace root namespace, `#`, is also its own parent.
+
 ### Namespaces and Objects
 
 These are facilities to create, manipulate, and navigate namespaces and other objects, and for object oriented programming.
@@ -114,25 +126,25 @@ Table: Implicit Arguments {: #Implicit_Arguments }
 
 |System Variable|Monadic Functions|Dyadic Functions|Other|
 |---|---|---|---|
-|`⎕CT`, `⎕DCT`|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷` `|` `∨` `∧` `⎕FMT`|`⌸`|
+|`⎕CT`, `⎕DCT`|`⌈` `⌊` `∪` `≠`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷` `|` `∨` `∧` `⎕FMT`|`⌸`|
 |`⎕DIV`|`÷`|`÷`|&nbsp;|
-|`⎕FR`<sup>1</sup>|`÷` `*` `⍟` `!` `○` `⌹`|`+` `-` `×` `÷` `*` `⍟` `|` `!` `○` `∨` `∧` `⊥` `⊤` `⌹`|&nbsp;|
-|`⎕FR`<sup>2</sup>|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷`|`⌸`|
-|`⎕FR`<sup>3</sup>|`⍒` `⍋`|`⌈` `⌊` `⍒` `⍋` `⍸` `⎕FX`|&nbsp;|
-|`⎕IO`|`⍳` `?` `⍒` `⍋` `⍸`|`⍳` `?` `⍒` `⍋` `⍉` `⊃` `⌷` `⍸` `⎕FX`|`⌸` `@` `[]`<sup>4</sup> `⎕DMX`<sup>5</sup>
+|`⎕FR`[^1]|`÷` `*` `⍟` `!` `○` `⌹`|`+` `-` `×` `÷` `*` `⍟` `|` `!` `○` `∨` `∧` `⊥` `⊤` `⌹`|&nbsp;|
+|`⎕FR`[^2]|`⌈` `⌊` `∪`|`~` `<` `≤` `=` `≥` `>` `≠` `≡` `≢` `⍳` `∊` `∪` `∩` `⍷`|`⌸`|
+|`⎕FR`[^3]|`⍒` `⍋`|`⌈` `⌊` `⍒` `⍋` `⍸` `⎕FX`|&nbsp;|
+|`⎕IO`|`⍳` `?` `⍒` `⍋` `⍸`|`⍳` `?` `⍒` `⍋` `⍉` `⊃` `⌷` `⍸` `⎕FX`|`⌸` `@` `[]`[^4] `⎕DMX`[^5]
 |`⎕ML`|`∊` `↑` `⊃` `≡`|&nbsp;|`⎕TC`|
 |`⎕PP`|`⍕` `⎕FMT`|&nbsp;|`⎕←` `⍞←`|
 |`⎕RL`|`?`|`?`|&nbsp;|
 
-<sup>1</sup> functions that compute real numbers and whose precision depends on `⎕FR`
+[^1]: functions that compute real numbers and whose precision depends on `⎕FR`
 
-<sup>2</sup> functions that perform tolerant comparisons (intolerant if `⎕CT`/`⎕DCT` is `0`)
+[^2]: functions that perform tolerant comparisons (intolerant if `⎕CT`/`⎕DCT` is `0`)
 
-<sup>3</sup> functions that perform intolerant comparisons (as if `⎕CT`/`⎕DCT` was `0`)
+[^3]: functions that perform intolerant comparisons (as if `⎕CT`/`⎕DCT` was `0`)
 
-<sup>4</sup> that is, bracket indexing and bracket axis
+[^4]: that is, bracket indexing and bracket axis
 
-<sup>5</sup> that is, some extended error messages take `⎕IO` into account
+[^5]: that is, some extended error messages take `⎕IO` into account
 
 Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
 
@@ -355,8 +367,8 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 |[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|`⎕UCS 8`, `⎕UCS 10`, and `⎕UCS 13`|
 |[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
-|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|`⎕MAP` or [component files](../../../programming-reference-guide/introduction/component-files/)|
+|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|`⎕MAP` or [component files](../../programming-reference-guide/introduction/component-files.md)|
+|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|`⎕MAP` or [component files](../../programming-reference-guide/introduction/component-files.md)|
 
 ## System Variables
 
@@ -390,7 +402,7 @@ A system variable can never be undefined. Default values are assigned to all sys
 |[`⎕WSID`](wsid.md)|Workspace ID                        |Workspace  |
 |[`⎕WX`](wx.md)    |Window Expose                       |Namespace  |
 
-Note that the value assigned to a system variable must be appropriate, otherwise an error will be reported immediately.
+The value assigned to a system variable must be appropriate, otherwise an error is reported immediately.
 
 <h2 class="example">Example</h2>
 

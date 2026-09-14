@@ -11,7 +11,7 @@ APL objects may be given names. A name may be any sequence of characters, starti
 | `∆⍙` |
 | `ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ` |
 
-Note that using a standard Unicode font (rather than APL385 Unicode used in the table above), the last row above would appear as the circled alphabet, Ⓐ to Ⓩ.
+Using a standard Unicode font (rather than APL385 Unicode used in the table above), the last row above would appear as the circled alphabet, Ⓐ to Ⓩ.
 
 **Examples**
 

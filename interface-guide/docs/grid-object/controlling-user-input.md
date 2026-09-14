@@ -38,7 +38,7 @@ To update an entire row or column of data you can use the RowChange and ColChang
 
 ## Deleting Rows and Columns
 
-You can delete a row or column by using `⎕NQ` to send a DelRow or DelCol message to the Grid object. For example, the following statement deletes the 123rd row from the Grid object `Test.G`. Note that if you have specified it, the corresponding element of RowTitles is removed too.
+You can delete a row or column by using `⎕NQ` to send a DelRow or DelCol message to the Grid object. For example, the following statement deletes the 123rd row from the Grid object `Test.G`. If you have specified it, the corresponding element of RowTitles is removed too.
 ```apl
       ⎕NQ 'Test.G' 'DelRow' 123
 ```
@@ -60,7 +60,7 @@ The event message must specify the number of the row or column you wish to inser
 
 If you have specified RowTitles or ColTitles, the message may include a title for the new row or column and this will be inserted in RowTitles or ColTitles as appropriate. If you fail to supply a new title, an empty vector will be inserted in RowTitles or ColTitles for you. If you are using default row and column headers and you have not specified RowTitles or ColTitles, any title you supply will be ignored. In this case the rows and columns will be re-labelled automatically.
 
-If you have set CellHeights or CellWidths to a vector, the AddRow or AddCol event message may include the height or width of the new row or column being inserted. If you fail to supply one or you specify a value of `¯1` the default value will apply. Note that setting the height or width to 0 *is* allowed and will cause the new row or column to be invisible. If CellHeights or CellWidths has not been specified or is a scalar, the new row or column will be given the same height or width as the others and any value that you specify is ignored.
+If you have set CellHeights or CellWidths to a vector, the AddRow or AddCol event message may include the height or width of the new row or column being inserted. If you fail to supply one or you specify a value of `¯1` the default value will apply. Setting the height or width to 0 *is* allowed and will cause the new row or column to be invisible. If CellHeights or CellWidths has not been specified or is a scalar, the new row or column will be given the same height or width as the others and any value that you specify is ignored.
 
 The undo flag indicates whether or not the insertion will be added to the undo stack and may therefore be subsequently undone. Its default value is 1.
 

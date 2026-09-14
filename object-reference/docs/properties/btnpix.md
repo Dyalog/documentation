@@ -1,7 +1,5 @@
 # <span>BtnPix</span> <span>Property</span>
 
-**Description**
-
 This property is used to customise the appearance of a [Button](../objects/button.md), [Menu](../objects/menu.md) or [MenuItem](../objects/menuitem.md). It specifies the names of or refs to up to 3 [Bitmap](../objects/bitmap.md) objects to be used to display the object under different circumstances. In general, BtnPix is a 3-element vector of character vectors or refs. However, if it defines a single [Bitmap](../objects/bitmap.md), it may be a single ref, a simple character scalar or vector, or an enclosed character vector.
 
 The first [Bitmap](../objects/bitmap.md) is displayed when the object is shown in its normal state. For a [Button](../objects/button.md), this is when its [State](state.md) is 0. The second [Bitmap](../objects/bitmap.md) is used for a [Menu](../objects/menu.md) or [MenuItem](../objects/menuitem.md), when the object is selected (highlighted), or for a [Button](../objects/button.md) when its [State](state.md) is 1. The third [Bitmap](../objects/bitmap.md) is used when the object is disabled by having its [Active](active.md) property set to 0.
@@ -16,6 +14,6 @@ For example, to have a [Button](../objects/button.md) that displays a "Tick" or 
                           ('BtnPix' 'YES' 'NO')
 ```
 
-**Application**
+## Application
 
 Objects: [Button](../objects/button.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md)

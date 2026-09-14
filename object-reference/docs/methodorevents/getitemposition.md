@@ -1,7 +1,5 @@
 # <span>GetItemPosition</span> <span>Method 323</span>
 
-**Description**
-
 This method is used to obtain the position of a particular item in a [ListView](../objects/listview.md) object.
 
 The argument for GetItemPosition is a single item as follows:
@@ -13,6 +11,6 @@ The argument for GetItemPosition is a single item as follows:
 
 The result is a 2-element vector containing the position of the item.
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md)

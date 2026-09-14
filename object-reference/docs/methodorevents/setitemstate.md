@@ -1,7 +1,5 @@
 # <span>SetItemState</span> <span>Method 307</span>
 
-**Description**
-
 This method is used to set the status of a particular item in a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md) object.
 
 The argument to SetItemState is a 2-element array as follows:
@@ -22,6 +20,6 @@ The status of an item is calculated as the sum of one or more of the following s
 |64  |Item is or has been expanded                                    |
 |4096|Item is checked. See [CheckBoxes](../properties/checkboxes.md)  |
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

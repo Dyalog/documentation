@@ -5,7 +5,7 @@ search:
 
 # <span>Abort</span> `→`
 
-This is a special case of the Branch function used in the niladic sense.  If it occurs in a statement it must be the only symbol in an expression or the only symbol forming an expression in a text string to be executed by `⍎`.  It clears the most recently suspended statement and all of its pendent statements from the state indicator.
+This is a special case of the _branch_ function used in the niladic sense.  If it occurs in a statement it must be the only symbol in an expression or the only symbol forming an expression in a text string to be executed by `⍎`.  It clears the most recently suspended statement and all of its pendent statements from the state indicator.
 
 The Abort function has no explicit result.  The function is not in the function domain of operators.
 

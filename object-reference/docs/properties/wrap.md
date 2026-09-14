@@ -1,7 +1,5 @@
 # <span>Wrap</span> <span>Property</span>
 
-**Description**
-
 The Wrap property is Boolean and has a default value of 1.
 
 For a [ListView](../objects/listview.md) it specifies whether or not long labels (specified by the Items property) may be wrapped or not.
@@ -10,6 +8,6 @@ For a [ProgressBar](../objects/progressbar.md) object it determines whether or n
 
 For a [Spinner](../objects/spinner.md), Wrap determines what happens when the value in the [Spinner](../objects/spinner.md) reaches its upper or lower limit. If Wrap is 1 the [Spinner](../objects/spinner.md) will wrap around to its opposite limit. Otherwise it will stick.
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md), [ProgressBar](../objects/progressbar.md), [Spinner](../objects/spinner.md), [UpDown](../objects/updown.md)

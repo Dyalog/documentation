@@ -31,7 +31,7 @@ On UNIX systems, the second column has no meaning and only the first code (`16|m
 !!! Legacy "Legacy"
     The original objective of value 0 from existing users (granting subsequent users a value of 0) is no longer relevant, and 0 now means the same as 16. The option remains for backwards compatibility purposes.
 
-`R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a shy result; if `Y[1]` is 0, `R` is an explicit result.
+`R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a [shy](../../programming-reference-guide/introduction/results.md#shy-results) result; if `Y[1]` is 0, `R` is an explicit result.
 
 ## Automatic Tie Number Allocation
 
@@ -56,8 +56,7 @@ ntie←{                  ⍝ tie file and return tie no.
 }
 ```
 
-!!! note
-    If the native file is already tied, executing `⎕NTIE` with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature can be used to re-tie the file using a different mode.
+If the native file is already tied, executing `⎕NTIE` with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature can be used to re-tie the file using a different mode.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

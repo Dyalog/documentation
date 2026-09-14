@@ -6,8 +6,8 @@ search:
 
 # <span>Close .NET AppDomain</span> `R←2101⌶Y`{{key}}
 
-!!! note
-    **.NET Framework only**
+!!! Info "Information"
+    This function is available only in the .NET Framework interface.
 
 This function closes the current .NET AppDomain.
 
@@ -15,7 +15,7 @@ This function closes the current .NET AppDomain.
 
 The result `R` is 0 if the operation succeeded or a non-zero integer if it failed.
 
-This I-Beam is very likely to be changed in future.
+This _I-beam_ is very likely to be changed in future.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

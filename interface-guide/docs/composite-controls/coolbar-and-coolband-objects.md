@@ -142,7 +142,7 @@ The picture is defined by an image in an ImageList object whose name is referenc
 
 ![](../img/coolband-caption-imageindex0.png)
 
-Note that the Caption and image are displayed when the CoolBand is minimised as shown below:
+The Caption and image are displayed when the CoolBand is minimised as shown below:
 
 ![](../img/coolband-caption-imageindex1.png)
 
@@ -164,7 +164,7 @@ If you wish to remember the user's chosen layout when your application terminate
 
 The CoolBand object itself may contain only a single child object. However, if that child is a SubForm containing other objects, the CoolBand can appear to manage a group of objects. A similar effect can be obtained using a ToolBar or ToolControl.
 
-The following example illustrates this technique. Note that the SubForms are disguised by setting their EdgeStyle and BCol properties. In addition, their AutoConf properties are set to 0 to prevent resizing of the child controls when the CoolBands are resized.
+The following example illustrates this technique. The SubForms are disguised by setting their EdgeStyle and BCol properties. In addition, their AutoConf properties are set to 0 to prevent resizing of the child controls when the CoolBands are resized.
 
 ```apl
  

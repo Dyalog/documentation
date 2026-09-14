@@ -7,7 +7,7 @@ search:
 
 ## Case 1: Greatest Common Divisor – `X` and `Y` are numeric (non-Boolean)
 
-R is the Greatest Common Divisor of `X` and `Y`. Note that in this case, `⎕CT` and `⎕DCT` are implicit arguments.
+R is the Greatest Common Divisor of `X` and `Y`. In this case, `⎕CT` and `⎕DCT` are implicit arguments.
 
 <h2 class="example">Examples</h2>
 ```apl

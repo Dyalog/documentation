@@ -49,4 +49,4 @@ DOMAIN ERROR: Namespace is not self contained
 
 ```
 
-Note that a successful `0(220⌶)` does not mean that a `1(220⌶)` on the result will succeed. If the original reference was to, say, the MenuBar of `⎕SE` you cannot reconstitute that in `#`.
+A successful `0(220⌶)` does not mean that a `1(220⌶)` on the result will succeed. If the original reference was to, say, the MenuBar of `⎕SE` you cannot reconstitute that in `#`.

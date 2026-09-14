@@ -9,7 +9,7 @@ search:
 
 If `Y` refers to an undefined error code "`n`", the event message returned is "`ERROR NUMBER n`".
 
-See [APL Error Messages](../../../programming-reference-guide/error-messages/apl-errors).
+See [APL Error Messages](../../programming-reference-guide/error-messages/apl-errors.md).
 
 <h2 class="example">Example</h2>
 ```apl

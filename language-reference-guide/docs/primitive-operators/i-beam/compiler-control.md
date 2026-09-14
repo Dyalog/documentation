@@ -6,7 +6,7 @@ search:
 
 # <span>Compiler Control</span> `R←{X}(400⌶)Y`{{key}}
 
-Controls the actions of the Compiler (for more information on the Compiler, see the [_Compiler User Guide_](../../../../compiler-user-guide/)).
+Controls the actions of the Compiler (for more information on the Compiler, see the [_Compiler User Guide_](../../../compiler-user-guide/index.md)).
 
 The optional left-argument `X` must be one of the following:
 

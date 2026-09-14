@@ -91,9 +91,9 @@ A Dyalog APL process is restricted to starting an AP of exactly the same archite
 
 ## Session Files
 
-Session (.dse) files can only be used on the platform on which they were created and
+Session (**.dse**) files can only be used on the platform on which they were created and
 saved. Under Microsoft Windows, Session files may only be used by the  architecture (32-bit-or 64-bit) of the Version of Dyalog that saved them.
 
 ## Log Files
 
-Log (.dlf) files can only be used by the version and edition with which they were created and saved.
+Log (**.dlfx**) files can only be used by the version and edition with which they were created and saved.

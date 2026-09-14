@@ -1,7 +1,5 @@
 # <span>WebSocketSend</span> <span>Method 847</span>
 
-**Description**
-
 This method is used to send data to a WebSocket. The argument to WebSocketSend is a 2, 3 or 4-element vector as follows:
 
 |-----|------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -18,6 +16,6 @@ The result is 0.
 0
 ```
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

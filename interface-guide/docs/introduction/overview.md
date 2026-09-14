@@ -16,4 +16,4 @@ Chapters 7 and 8 describe the Multiple Document Interface (MDI) and docking. Fur
 
 Chapters 9-11 describe the various ways in which Dyalog APL may communicate with other Windows applications using  Component Object Model (COM) interfaces. These interfaces allow APL to act as an OLE Automation server and client, and allow you to write ActiveX controls in Dyalog APL.
 
-Chapter 12 describes the DDE interface which is implemented using (traditional) APL shared variables. However, please note that DDE has all but been replaced by COM, and is no longer promoted as a major technology by Microsoft.
+Chapter 12 describes the DDE interface which is implemented using (traditional) APL shared variables. However, DDE has all but been replaced by COM, and is no longer promoted as a major technology by Microsoft.

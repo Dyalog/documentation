@@ -14,7 +14,7 @@ To implement a multiple page tabbed dialog, illustrated below, you should create
 
 Individual tabs or buttons are represented by TabButton objects which should be created as children of the TabControl object. Optional captions and pictures are specified by the Caption and ImageIndex properties of the individual TabButton objects themselves.
 
-Note that the icons used in these examples are provided in the `ws` sub-directory.
+The icons used in these examples are provided in the `ws` sub-directory.
 ```apl
 icodir←(2 ⎕NQ'.' 'GetEnvironment' 'Dyalog'),'\ws\'
 
@@ -104,7 +104,7 @@ If the TabControl has Style `'Buttons'` and MultiLine is set to 1, the buttons a
 
 The ScrollOpposite property specifies that unneeded tabs scroll to the opposite side of a TabControl, when a tab is selected. This only applies when MultiLine is 1.
 
-The following example illustrates a TabControl with ScrollOpposite set to 1, after the user has clicked *Third Tab*. Notice that, in this example, the SubForms have been created as children of the TabControl. This is necessary to ensure that they are managed correctly in this case.
+The following example illustrates a TabControl with ScrollOpposite set to 1, after the user has clicked *Third Tab*. In this example, the SubForms have been created as children of the TabControl. This is necessary to ensure that they are managed correctly in this case.
 
 ```apl
 'F'⎕WC'Form' 'TabControl: ScrollOpposite'

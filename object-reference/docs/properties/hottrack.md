@@ -1,7 +1,5 @@
 # <span>HotTrack</span> <span>Property</span>
 
-**Description**
-
 The HotTrack property specifies whether or not the tabs or buttons in a [TabControl](../objects/tabcontrol.md) object ( which are represented by [TabButton](../objects/tabbutton.md) objects), are automatically highlighted by the mouse pointer.
 
 HotTrack is a single number with the value 0 (no highlighting) or 1. The default is 0.
@@ -10,6 +8,6 @@ If HotTrack is 1 and the Style property of the [TabControl](../objects/tabcontro
 
 The value of HotTrack is effective only when the object is created with `⎕WC`.
 
-**Application**
+## Application
 
 Objects: [TabControl](../objects/tabcontrol.md)

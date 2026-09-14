@@ -45,7 +45,7 @@ Because the ToolControl is dockable, the user may pick it up and drag it out of 
 
 ![](../img/docking-toolcontrol-1.png)
 
-When the user drops the ToolControl outside the `Host` Form, it (the ToolControl) generates a DockRequest event which is attached to the `UNDOCK` callback function. This function, creates a new Form called `Floater`, makes a copy of the ToolControl as a child of `Floater`, and then expunges the original ToolControl from the `Host` Form. The function, and the results of the operation, are shown below. The following points should be noted.
+When the user drops the ToolControl outside the `Host` Form, it (the ToolControl) generates a DockRequest event which is attached to the `UNDOCK` callback function. This function creates a new Form called `Floater`, makes a copy of the ToolControl as a child of `Floater`, and then expunges the original ToolControl from the `Host` Form. The function, and the results of the operation, are shown below. The following points apply:
 
 - The `UNDOCK` callback returns 0 to prevent APL from taking any further action (the default action after a successful DockRequest is to generate a DockAccept event, which in this case is undesirable).
 - The `Floater` Form is created as a child of the `Host` Form so that it always floats above it in the window stacking order.

@@ -27,6 +27,8 @@ Table: Trappable Event Codes {: #TrapEvents }
 |`N`|Next|The event is excluded from the current `⎕TRAP` definition.  The search will continue through further localised definitions of `⎕TRAP` .|
 |`S`|Stop|Stops the search and causes the normal APL action to be taken in the environment in which the event occurred.|
 
+The action codes are case-sensitive and must be specified in upper case.
+
 |Code     |Event                                          |
 |---------|-----------------------------------------------|
 |`0`      |`Any event in range 1-999`                     |
@@ -90,7 +92,7 @@ Table: Trappable Event Codes {: #TrapEvents }
 |`1007`   |`RESIZE (Dyalog APL/X, Dyalog APL/W)`          |
 |`1008`   |`DEADLOCK`                                     |
 
-See [Programmer's Guide: "Trap Statement"](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap) for an alternative 'control structured' error trapping mechanism.
+See [Programmer's Guide: "Trap Statement"](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) for an alternative 'control structured' error trapping mechanism.
 
 <h2 class="example">Examples</h2>
 ```apl

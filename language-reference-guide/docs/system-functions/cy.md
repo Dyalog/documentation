@@ -11,7 +11,7 @@ Each name in `X` is taken to be the name of an active object in the workspace id
 
 Each object named in `X` (or implied) is copied from the workspace identified by `Y` to become the active object referenced by that name in the active workspace if the object can be copied.  A copied label is re-defined to be a variable of numeric type.  If the name of the copied object has an active referent in the active workspace, the name is disassociated from its value and the copied object becomes the active referent to that name.  In particular, a function in the state indicator which is disassociated may be executed whilst it remains in the state indicator, but it ceases to exist for other purposes, such as editing.
 
-The shy result `R` is `0⍴⊂''`.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is `0⍴⊂''`.
 
 You may copy an object from a namespace by specifying its full pathname.  The object will be copied to the current namespace in the active workspace, losing its original parent and gaining a new one in the process.  You may only copy a GUI object into a namespace that is a suitable parent for that object.  For example, you could only copy a Group object from a saved workspace if the current namespace in the active workspace is itself a Form, SubForm or Group.
 
@@ -25,7 +25,7 @@ A `DOMAIN ERROR` is reported in any of the following cases:
 
 An object being copied has the same name as an active label.
 
-When copying data between Classic and Unicode Editions, `⎕CY` will fail and a `TRANSLATION ERROR` will be reported if *any* object in workspace `Y` fails conversion between Unicode and `⎕AV` indices, whether or not that object is specified by `X`. See [Note](avu.md#note) for further details.
+When copying data between Classic and Unicode Editions, `⎕CY` will fail and a `TRANSLATION ERROR` will be reported if *any* object in workspace `Y` fails conversion between Unicode and `⎕AV` indices, whether or not that object is specified by `X`. See [Character Representation](avu.md#character-representation) for further details.
 
 A `WS FULL` is reported if the active workspace becomes full during the copying process.
 

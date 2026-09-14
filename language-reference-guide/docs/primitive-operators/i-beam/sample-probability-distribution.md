@@ -6,7 +6,10 @@ search:
 
 # <span>Sample Probability Distribution</span> `R←X(16808⌶)Y`{{key}}
 
-This function generates an array of random numbers from a named probability distribution.  Note that this is not currently implemented for AIX.
+This function generates an array of random numbers from a named probability distribution.
+
+!!! unix "Dyalog on AIX"
+    This function is not currently implemented for AIX.
 
 `Y` is a 2-item vector containing the name of the probability distribution from those listed in the table below, and the shape of the result.
 

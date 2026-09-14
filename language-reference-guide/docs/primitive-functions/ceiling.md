@@ -5,7 +5,7 @@ search:
 
 # <span>Ceiling</span> `R←⌈Y`{{key}}
 
-Ceiling is defined in terms of Floor as `⌈Y←→-⌊-Y`
+_Ceiling_ is defined in terms of _floor_ as `⌈Y←→-⌊-Y`
 
 `Y` must be numeric.
 
@@ -24,7 +24,7 @@ If an element of `Y` is complex, the corresponding element of `R` depends on the
 
 For further explanation, see [Floor](floor.md).
 
-`⎕CT` is an implied argument of Ceiling.
+`⎕CT` is an implied argument of _ceiling_.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -11,7 +11,7 @@ Simple scalars and vectors are displayed in a single line beginning at the left 
 
 ## Print Precision
 
-The [`⎕PP`](../../../../language-reference-guide/system-functions/pp/) system variable determines the number of significant digits to be printed. The fractional part of the number is rounded in the last digit if it cannot be represented within the print precision. Leading zeros, and trailing zeros after a decimal point, are omitted, as are decimal points for integers.
+The [`⎕PP`](../../../language-reference-guide/system-functions/pp.md) system variable determines the number of significant digits to be printed. The fractional part of the number is rounded in the last digit if it cannot be represented within the print precision. Leading zeros, and trailing zeros after a decimal point, are omitted, as are decimal points for integers.
 
 ```apl
       0.1 1.0 1.12
@@ -132,7 +132,7 @@ The power of this form of display is made apparent when formatting informal repo
 
 ## Array Notation
 
-Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command. When array notation output is active, [`⎕PP`](../../../../language-reference-guide/system-functions/pp/) does not apply to numeric output. For example:
+Arrays (including namespaces) can be displayed in the session using [array notation](array-notation.md). This mode is enabled using the `]APLAN.Output` user command. When array notation output is active, [`⎕PP`](../../../language-reference-guide/system-functions/pp.md) does not apply to numeric output. For example:
 ```apl
       SALES
   50  5.25   75
@@ -149,24 +149,24 @@ Arrays (including namespaces) can be displayed in the session using [array notat
  1000 90.03 1200
 ]               
 ```
-In the [Microsoft Windows IDE](../../../../windows-ui-guide) it can also be toggled on and off using the ![](../../img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
+In the [Microsoft Windows IDE](../../../windows-ui-guide/index.md) it can also be toggled on and off using the ![](../../img/session_arraynotation.png){width=20 height=20 vertical-align:text-bottom} icon on the Session toolbar.
 
-To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output) configuration parameter to `1`.
+To enable the display of output using array notation when starting a Dyalog session, set the [APLAN_FOR_OUTPUT](../../../windows-installation-and-configuration-guide/configuration-parameters/aplan-for-output.md) configuration parameter to `1`.
 
 ## Obtaining Textual Representations
 
 The following approaches produce character data from an array rather than displaying it in the session:
 
-| Method | Description | [`⎕PP`](../../../../language-reference-guide/system-functions/pp/) applies? |
+| Method | Description | [`⎕PP`](../../../language-reference-guide/system-functions/pp.md) applies? |
 |--------|-------------|------------------------|
-| [`⍕`](../../../../language-reference-guide/primitive-functions/format/) | Character array identical to normal session display using `⎕←` | Yes |
-| ([`⎕FMT`](../../../../language-reference-guide/system-functions/format-monadic/)) | Character matrix similar to session display using `⍞←` | Yes |
-| [`⎕JSON`](../../../../language-reference-guide/system-functions/json/) export | Conversion to a JSON character vector | No |
-| [`⎕CSV`](../../../../language-reference-guide/system-functions/csv/) export | Conversion to a CSV array or file | No |
+| [`⍕`](../../../language-reference-guide/primitive-functions/format.md) | Character array identical to normal session display using `⎕←` | Yes |
+| ([`⎕FMT`](../../../language-reference-guide/system-functions/format-monadic.md)) | Character matrix similar to session display using `⍞←` | Yes |
+| [`⎕JSON`](../../../language-reference-guide/system-functions/json.md) export | Conversion to a JSON character vector | No |
+| [`⎕CSV`](../../../language-reference-guide/system-functions/csv.md) export | Conversion to a CSV array or file | No |
 
 ## Print Width
 
-If the display of an array is wider than the print width, as defined by the [`⎕PW`](../../../../language-reference-guide/system-functions/pw/) system variable, it will be folded at or before `⎕PW` and the folded portions indented six spaces.  The display of a simple numeric or mixed array may be folded at a width less than `⎕PW` so that individual numbers are not split across a page boundary.
+If the display of an array is wider than the print width, as defined by the [`⎕PW`](../../../language-reference-guide/system-functions/pw.md) system variable, it will be folded at or before `⎕PW` and the folded portions indented six spaces.  The display of a simple numeric or mixed array may be folded at a width less than `⎕PW` so that individual numbers are not split across a page boundary.
 
 ```apl
       ⎕PW←40

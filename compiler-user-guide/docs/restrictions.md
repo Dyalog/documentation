@@ -60,13 +60,13 @@ __A function that includes certain control structures cannot be compiled.__
 
 The following control structures prevent a function from being compiled:
 
-- [`:Trap`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap)
+- [`:Trap`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md)
 
-- [`:Hold`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/hold)
+- [`:Hold`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/hold.md)
 
-- [`:With`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/with)
+- [`:With`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/with.md)
 
-- [`:Disposable`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable)
+- [`:Disposable`](../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/disposable.md)
 
 ## Restriction 5
 
@@ -75,14 +75,14 @@ __A function cannot be compiled if it includes certain language features.__
 The following language features prevent a function from being compiled:
 
 - dfn error guards
-- localised [`⎕TRAP`](../../language-reference-guide/system-functions/trap)
+- localised [`⎕TRAP`](../language-reference-guide/system-functions/trap.md)
 - function trains
 
 ## Restriction 6
 
 __A function that includes the Execute function (`⍎`) cannot be compiled.__
 
-The compiler prohibits the use of _execute_ ([`⍎`](../../language-reference-guide/primitive-functions/execute)) because it could have arbitrary side effects unknown to the compiler.
+The compiler prohibits the use of _execute_ ([`⍎`](../language-reference-guide/primitive-functions/execute.md)) because it could have arbitrary side effects unknown to the compiler.
 
 ## Summary
 

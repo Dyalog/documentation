@@ -1,17 +1,15 @@
 # <span>Metafile</span> <span>Object</span>
 
-**Purpose:** This object represents a picture in Windows Metafile format.
-
-**Description**
+This object represents a picture in Windows Metafile format.
 
 The Windows Metafile is a mechanism for representing a picture in terms of a collection of graphical components. Windows Metafiles are distributed in special files (.WMF) from which they are loaded into memory for use by an application. Once loaded a Metafile is a Windows "resource" that can be used in a variety of ways. The Metafile object represents this resource.
 
-The [File](../properties/file.md) property specifies the name of a .WMF file from which the Metafile is to be loaded or to which it is to be saved. If you specify [File](../properties/file.md) with [`⎕WC`](../../../language-reference-guide/system-functions/wc) the Metafile object is loaded from it. If you specify [File](../properties/file.md) with [`⎕WS`](../../../language-reference-guide/system-functions/ws) no action takes place until you instruct the Metafile object to re-initialise itself from the file or to save itself to the file. These operations are performed using the [FileRead](../methodorevents/fileread.md) and [FileWrite](../methodorevents/filewrite.md) methods. If you omit the [File](../properties/file.md) property in the argument to [`⎕WC`](../../../language-reference-guide/system-functions/wc) or if you specify a null vector, the Metafile object is initially empty. The following example loads the picture defined by the GOLF.WMF Metafile that is distributed with Microsoft Office.
+The [File](../properties/file.md) property specifies the name of a .WMF file from which the Metafile is to be loaded or to which it is to be saved. If you specify [File](../properties/file.md) with [`⎕WC`](../../language-reference-guide/system-functions/wc.md) the Metafile object is loaded from it. If you specify [File](../properties/file.md) with [`⎕WS`](../../language-reference-guide/system-functions/ws.md) no action takes place until you instruct the Metafile object to re-initialise itself from the file or to save itself to the file. These operations are performed using the [FileRead](../methodorevents/fileread.md) and [FileWrite](../methodorevents/filewrite.md) methods. If you omit the [File](../properties/file.md) property in the argument to [`⎕WC`](../../language-reference-guide/system-functions/wc.md) or if you specify a null vector, the Metafile object is initially empty. The following example loads the picture defined by the GOLF.WMF Metafile that is distributed with Microsoft Office.
 ```apl
       'GOLF' ⎕WC 'Metafile' 'C:\MSOFFICE\CLIPART\GOLF'
 ```
 
-Whether or not the Metafile object is initialised from a file, you can add graphical components to it by creating child objects. However the Metafile behaves like a [Bitmap](bitmap.md) object in that its children cannot be modified using [`⎕WS`](../../../language-reference-guide/system-functions/ws) nor can they be removed using `⎕EX`. The components of a Metafile that has been initialised from a .WMF file also cannot be referenced in any way. It is therefore recommended that you use unnamed objects when you create the graphical components of a Metafile.
+Whether or not the Metafile object is initialised from a file, you can add graphical components to it by creating child objects. However the Metafile behaves like a [Bitmap](bitmap.md) object in that its children cannot be modified using [`⎕WS`](../../language-reference-guide/system-functions/ws.md) nor can they be removed using `⎕EX`. The components of a Metafile that has been initialised from a .WMF file also cannot be referenced in any way. It is therefore recommended that you use unnamed objects when you create the graphical components of a Metafile.
 
 The following statements create an empty Metafile called `MF` and then draw a line and circle in it.
 ```apl
@@ -41,13 +39,15 @@ The [Size](../properties/size.md) property determines the granularity of  the Me
 
 The [RealSize](../properties/realsize.md) property specifies the suggested size of a Metafile in units of 0.01mm. Setting [RealSize](../properties/realsize.md) has the effect of making the Metafile *placeable*. Certain programs (such as Word for Windows) only support placeable metafiles.
 
-**Application**
+## Application
 
 Parents: [ActiveXControl](../objects/activexcontrol.md), [Bitmap](../objects/bitmap.md), [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [Group](../objects/group.md), [OLEServer](../objects/oleserver.md), [Printer](../objects/printer.md), [PropertyPage](../objects/propertypage.md), [PropertySheet](../objects/propertysheet.md), [Root](../objects/root.md), [Static](../objects/static.md), [SubForm](../objects/subform.md), [TCPSocket](../objects/tcpsocket.md), [ToolBar](../objects/toolbar.md), [ToolControl](../objects/toolcontrol.md)
 
 Children: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Font](../objects/font.md), [Image](../objects/image.md), [Marker](../objects/marker.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md), [Text](../objects/text.md), [Timer](../objects/timer.md)
 
-Properties: [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RealSize](../properties/realsize.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
+Properties (default order): [Type](../properties/type.md), [File](../properties/file.md), [Size](../properties/size.md), [Coord](../properties/coord.md), [RealSize](../properties/realsize.md), [Event](../properties/event.md), [YRange](../properties/yrange.md), [XRange](../properties/xrange.md), [Data](../properties/data.md), [Handle](../properties/handle.md), [Translate](../properties/translate.md), [Accelerator](../properties/accelerator.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [ChildList](../properties/childlist.md), [EventList](../properties/eventlist.md), [PropList](../properties/proplist.md)
+
+Properties (alphabetical order): [Accelerator](../properties/accelerator.md), [ChildList](../properties/childlist.md), [Coord](../properties/coord.md), [Data](../properties/data.md), [Event](../properties/event.md), [EventList](../properties/eventlist.md), [File](../properties/file.md), [Handle](../properties/handle.md), [KeepOnClose](../properties/keeponclose.md), [MethodList](../properties/methodlist.md), [PropList](../properties/proplist.md), [RealSize](../properties/realsize.md), [Size](../properties/size.md), [Translate](../properties/translate.md), [Type](../properties/type.md), [XRange](../properties/xrange.md), [YRange](../properties/yrange.md)
 
 Methods: [Detach](../methodorevents/detach.md), [FileRead](../methodorevents/fileread.md), [FileWrite](../methodorevents/filewrite.md)
 

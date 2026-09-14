@@ -5,9 +5,17 @@ search:
 
 # <span>Print Precision</span> `⎕PP`
 
-`⎕PP` is the number of significant digits in the display of numeric output. `⎕PP` may be assigned any integer value in the range 1 to 34. `⎕PP` has Namespace scope.
+`⎕PP` is the number of significant digits in the display of numeric output.
 
-`⎕PP` is used to format numbers displayed directly. It is an implicit argument of monadic function [Format (`⍕`)](format), [monadic `⎕FMT`](format-monadic), and for display of numbers using [`⎕`](../system-functions/evaluated-input-output) and [`⍞`](../system-functions/character-input-output) output. `⎕PP` is ignored for the display of integers.
+`⎕PP` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
+
+- monadic functions: [`⍕`](../primitive-functions/format.md)
+- system functions: [`⎕FMT`](format-monadic.md)
+- other syntax: [`⎕`](evaluated-input-output.md) and [`⍞`](character-input-output.md) output
+
+`⎕PP` is ignored for the display of integers.
+
+`⎕PP` may be assigned any integer value in the range 1 to 34. `⎕PP` has Namespace scope.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -27,7 +35,7 @@ If `⎕PP` is set to a value `≥17` (when `⎕FR` is 645) or 34 (when `⎕FR` i
 
 `⎕PP` does **not** apply in the following contexts:
 
-- [Array notation output](display-of-arrays.md#array-notation) (when `]APLAN.Output` is on)
+- [Array notation output](../../programming-reference-guide/introduction/arrays/display-of-arrays.md#array-notation) (when `]APLAN.Output` is on)
 - [`⎕JSON`](json.md) export
 - [`⎕CSV`](csv.md) export
 

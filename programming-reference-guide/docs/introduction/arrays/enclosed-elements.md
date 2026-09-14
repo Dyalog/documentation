@@ -2,7 +2,7 @@
 
 An array may be enclosed to form a scalar element through any of the following means:
 
-- by the enclose function (`⊂`)
+- by the _enclose_ function (`⊂`)
 - by inclusion in vector notation
 - as the result of certain functions when applied to arrays
 

@@ -6,8 +6,8 @@ search:
 
 # <span>Signal Counts</span> `R←4007⌶Y`{{key}}
 
-!!! note
-    **UNIX, Linux and macOS only.**
+!!! unix "Dyalog on Unix"
+    This function is available only under Unix.
 
 `Y` must be a simple empty vector but is ignored.
 

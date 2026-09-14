@@ -25,7 +25,7 @@ The parameter is a string containing the list of directory names separated by ";
 
 If DyalogStartupSE begins with the specified separator, the default list is *extended* rather than *replaced*.
 
-Note that the effective sequence of directories specified by this parameter is converted to a vector of character vectors and stored in  `⎕SE.Dyalog.StartupSession.AllPaths`.
+The effective sequence of directories specified by this parameter is converted to a vector of character vectors and stored in  `⎕SE.Dyalog.StartupSession.AllPaths`.
 
 If unset or extended (that is, starts with a : separator):
 
@@ -33,4 +33,4 @@ If unset or extended (that is, starts with a : separator):
 - the StartupSession directory in the version-agnostic directory is available as `⎕SE.Dyalog.StartupSession.VerAgno`.
 - the StartupSession directory in the version-specific directory is available as `⎕SE.Dyalog.StartupSession.VerSpec`.
 
-See also [Implementation](../../../windows-ui-guide/the-session-object/session-initialisation).
+See also [Implementation](../../windows-ui-guide/the-session-object/session-initialisation.md).

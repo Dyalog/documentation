@@ -12,7 +12,7 @@ In-process OLEServers are hosted (executed) by the Dyalog APL DLL. If you export
 
 If an in-process OLE Server, that is bound with the run-time Dyalog APL DLL generates an untrapped error, an OLE Automation error will be reported.
 
-If an in-process OLE Server, that is bound with the development Dyalog APL DLL generates an untrapped error, the APL Session will appear and you can use it to debug the problem and continue. Note that at this point, the development DLL will load your Session file so that all of your session tools are available during debugging. If your Session file runs any initialisation code that references external files, remember that this code will be executed in the current working directory of the host process.
+If an in-process OLE Server, that is bound with the development Dyalog APL DLL generates an untrapped error, the APL Session will appear and you can use it to debug the problem and continue. At this point, the development DLL will load your Session file so that all of your session tools are available during debugging. If your Session file runs any initialisation code that references external files, remember that this code will be executed in the current working directory of the host process.
 
 For further details, see Dyalog for Microsoft Windows Installation and Configuration Guide.
 
@@ -32,4 +32,4 @@ regsvr32 should also be used (with the */u* flag) to unregister an in-process OL
 C:\WINDOWS\System32>regsvr32 /u c:\MyWS\mysvr.dll
 ```
 
-Note that in both cases, regsvr32 actually starts the OLE Server. This in turn loads the appropriate Dyalog APL DLL. If you are using the development DLL, note that if your session start-up code fails for any reason, the regsvr32 process will hang and have to be terminated using the Task Manager.
+In both cases, regsvr32 starts the OLE Server. This loads the appropriate Dyalog DLL. If you are using the development DLL and your session start-up code fails for any reason, the regsvr32 process will hang and need to be terminated using the Task Manager.

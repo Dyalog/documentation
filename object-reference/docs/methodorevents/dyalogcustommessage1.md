@@ -1,7 +1,5 @@
 # <span>DyalogCustomMessage1</span> <span>Event 95</span>
 
-**Description**
-
 This event allows external applications and dynamic link libraries to insert
 events into the Dyalog APL/W message queue.
 
@@ -19,8 +17,8 @@ as an argument to a function.
 The parameters wParam and lParam are reported as
 numeric arguments to the APL callback function.
 
-NOTE: It is not possible to pass pointers to data in wParam or lParam.
-When the APL callback executes the pointers may not be valid.
+It is not possible to pass pointers to data in wParam or lParam.
+When the APL callback executes, the pointers might not be valid.
 
 If a callback function is attached to the event, the callback function will
 be run when the event reaches the top of the queue.
@@ -41,6 +39,6 @@ vector as follows :
 |`[3]`|wparam|integer                       |
 |`[4]`|lparam|integer                       |
 
-**Application**
+## Application
 
 Objects: [Form](../objects/form.md)

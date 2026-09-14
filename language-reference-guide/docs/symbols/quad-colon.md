@@ -4,7 +4,7 @@ search:
 ---
 # <span>Quad Colon</span> `⍠`
 
-The Variant operator specifies the value of an option to be used by its left operand function.
+The _variant_ operator specifies the value of an option to be used by its left operand function.
 
 <h2 class="example">Examples</h2>
 ```apl

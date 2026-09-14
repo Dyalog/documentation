@@ -1,7 +1,5 @@
 # <span>Encoding</span> <span>Property</span>
 
-**Description**
-
 The Encoding property is a character vector that specifies how character data
 are encoded or translated.
 
@@ -45,6 +43,6 @@ Char  None
 Apl  Classic
 ```
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

@@ -1,7 +1,5 @@
 # <span>Depth</span> <span>Property</span>
 
-**Description**
-
 The Depth property specifies the structure of the items in a [TreeView](../objects/treeview.md) object. It is either a scalar 0 or an integer vector of the same length as the Items property.
 
 A value of 0 indicates that the corresponding item is a top-level item. A value of 1 indicates that the corresponding item is a child of the most recent item whose Depth is 0; a value of 2 indicates that the corresponding item is a child of the most recent item whose Depth is 1, and so forth.
@@ -34,6 +32,6 @@ For example:
 
 ![](../img/tv1.gif)
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

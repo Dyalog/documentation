@@ -61,7 +61,7 @@ The **[DYALOG]/Samples** directory contains several sub-directories relating to 
 - **aplclasses** – a sub-directory that contains examples of .NET classes written in APL.
 - **bound_exe** – a sub-directory that contains APL source file examples.
 - **asp.net** – a sub-directory that is mapped to the IIS Virtual Directory **dyalog.net** and contains various sample APL web applications, as well as: 
-    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](/implementation-details/the-webconfig-file/)).
+    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](implementation-details/the-webconfig-file.md)).
 - **winforms** – a sub-directory that contains sample applications that use the <code class="language-nonAPL">System.Windows.Forms</code> GUI classes.
 
 ## Enabling the .NET Framework Interface
@@ -87,7 +87,7 @@ VALUE ERROR: Undefined name: DateTime
 
 ```
 
-In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying)).
+In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying-the-installation)).
 
 If everything has been installed and enabled correctly, then the version of .NET Framework in use will be returned by the following statement:
 ```apl

@@ -1,6 +1,9 @@
 # Run-Time Applications and Components
 
-Using Dyalog APL you may create different types of run-time applications and components. Note that the distribution of run-time applications and components requires a Dyalog APL Run-Time Agreement. Please contact Dyalog or your distributor, or see the Dyalog web page for more information.
+You can use Dyalog to create different types of run-time applications and components.
+
+!!! Warning "Warning"
+    The distribution of run-time applications and components requires a Dyalog Run-Time Licence. Please contact Dyalog Ltd or your distributor, or see the Dyalog website for more information.
 
 For a list of the distributable components and their corresponding file names, for the different versions of Dyalog, see [Files](files-and-directories.md). These components are referred to in hereafter by the name shown in the first column of the table. It is essential that you distribute the components that are appropriate for the Edition you are using.
 
@@ -76,7 +79,7 @@ To distribute your application, you need to supply and install:
 
 When you build your .EXE using the Export dialog, you may specify the name(s) of the configuration file(s) using the **ConfigFile** and/or **UserConfigFile** parameters in the field labelled *Command Line*.
 
-An alternative is to specify these parameters in the command-line that you use to run your .EXE (note that this is not the same as the *Command Line* in the *Export* dialog box). If so, the Dyalog parameter(s) must be preceded by the **-apl** option.
+An alternative is to specify these parameters in the command-line that you use to run your .EXE (this is not the same as the *Command Line* in the *Export* dialog box). If so, the Dyalog parameter(s) must be preceded by the **-apl** option.
 
 If your application uses any component of the Microsoft .NET Framework, you must distribute the Bridge DLL and DyalogNet DLLs. These DLLs must be placed in the same directory as your EXE.
 
@@ -89,7 +92,7 @@ To make an out-of-process COM Server, you must:
 
 The command-line for your COM Server must be specified in the field labelled *Command Line* in the *Export* dialog box. The field is initialised to invoke the Run-Time EXE with the name of your workspace in the same fashion as the workspace-based run-time discussed above. This command-line is recorded in the Windows Registry to be invoked when a client application requests it.
 
-You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../../interface-guide/ole-server/the-loan-workspace).
+You may change the contents of the *Command Line* field to use a configuration file, in the same way as for a workspace-based runtime. The following example uses the Loan COM Server. See [The LOAN Workspace](../interface-guide/ole-server/the-loan-workspace.md).
 
 <h2 class="example">Example</h2>
 ```apl
@@ -124,7 +127,7 @@ To distribute your component, you need to supply and install
 3. a configuration file (optional) and the means to define **ConfigFile** and/or **UserConfigFile**
 4. whatever additional files that may be required by your COM Server.
 
-Note that you must register your COM Server on the target computer using the `regsvr32.exe` utility.
+You must register your COM Server on the target computer using the `regsvr32.exe` utility.
 
 ### ActiveX Control
 
@@ -142,7 +145,7 @@ To distribute your component, you need to supply and install
 3. a configuration file (optional) and the means to define **ConfigFile** and/or **UserConfigFile**
 4. whatever additional files that may be required by your ActiveX Control.
 
-Note that you must register your ActiveX Control on the target computer using the `regsvr32.exe` utility.
+You must register your ActiveX Control on the target computer using the `regsvr32.exe` utility.
 
 ### Microsoft .NET Assembly
 
@@ -160,7 +163,7 @@ you may enter configuration parameters or specify a Configuration file for your 
 
 For the other isolation modes, this is not appropriate because only the command line from the first assembly loaded into the interpreter could be honoured, and the order in which assemblies are loaded is unpredictable. However, configuration files may be specified using the **ConfigFile** parameter and/or the **UserConfigFile** parameter specified as an environment variable or in the registry.
 
-For more information, see [Isolation Mode](../../dotnet-framework-interface-guide/implementation-details/isolation-mode).
+For more information, see [Isolation Mode](../net-framework-interface-guide/implementation-details/isolation-mode.md).
 
 To distribute your .NET Classes, you need to supply and install
 

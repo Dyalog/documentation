@@ -21,7 +21,7 @@ These fields are empty if not applicable (which will appear in the CSV file as t
 
 <h2 class="example">Example</h2>
 
-In the following example, APLMON is used to analyse the execution of the expression `10 foo 20 30`. Note that expressions executed in the Session when APLMON is enabled also contribute to the analysis.
+In the following example, APLMON is used to analyse the execution of the expression `10 foo 20 30`. Expressions executed in the Session when APLMON is enabled also contribute to the analysis.
 ```apl
       ∇foo∇
      ∇ r←a foo b
@@ -62,7 +62,7 @@ APLMON measures time only for the atomic calls (that is, not complex expressions
       foo←{1+⍵} ⋄ foo¨(N⍴1)
 ```
 
-The each will not appear in the log, but only the primitives called by `foo`, meaning that `+` will appear as being called `N` times
+The _each_ will not appear in the log, but only the primitives called by `foo`, meaning that `+` will appear as being called `N` times
 ```apl
       +.×/(N⍴1
 ```

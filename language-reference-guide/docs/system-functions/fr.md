@@ -7,11 +7,22 @@ search:
 
 The value of `⎕FR` determines the way that floating-point operations are performed.
 
+`⎕FR` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
+
+- monadic functions that compute real numbers: [`÷`](../primitive-functions/reciprocal.md), [`*`](../primitive-functions/exponential.md), [`⍟`](../primitive-functions/natural-logarithm.md), [`!`](../primitive-functions/factorial.md), [`○`](../primitive-functions/pi-times.md), [`⌹`](../primitive-functions/matrix-inverse.md)
+- dyadic functions that compute real numbers: [`+`](../primitive-functions/plus.md), [`-`](../primitive-functions/minus.md), [`×`](../primitive-functions/times.md), [`÷`](../primitive-functions/divide.md), [`*`](../primitive-functions/power.md), [`⍟`](../primitive-functions/logarithm.md), [`|`](../primitive-functions/magnitude.md), [`!`](../primitive-functions/binomial.md), [`○`](../primitive-functions/circular-functions.md), [`∨`](../primitive-functions/greatest-common-divisor-or.md), [`∧`](../primitive-functions/lowest-common-multiple-and.md), [`⊥`](../primitive-functions/decode.md), [`⊤`](../primitive-functions/encode.md), [`⌹`](../primitive-functions/matrix-divide.md)
+- monadic functions that perform tolerant comparisons: [`⌈`](../primitive-functions/ceiling.md), [`⌊`](../primitive-functions/floor.md), [`∪`](../primitive-functions/unique.md)
+- dyadic functions that perform tolerant comparisons: [`~`](../primitive-functions/without.md), [`<`](../primitive-functions/less-than.md), [`≤`](../primitive-functions/less-than-or-equal-to.md), [`=`](../primitive-functions/equal-to.md), [`≥`](../primitive-functions/greater-than-or-equal-to.md), [`>`](../primitive-functions/greater-than.md), [`≠`](../primitive-functions/not-equal-to.md), [`≡`](../primitive-functions/match.md), [`≢`](../primitive-functions/not-match.md), [`⍳`](../primitive-functions/index-of.md), [`∊`](../primitive-functions/membership.md), [`∪`](../primitive-functions/union.md), [`∩`](../primitive-functions/intersection.md), [`⍷`](../primitive-functions/find.md)
+- monadic functions that perform intolerant comparisons: [`⍒`](../primitive-functions/grade-down.md), [`⍋`](../primitive-functions/grade-up.md)
+- dyadic functions that perform intolerant comparisons: [`⌈`](../primitive-functions/maximum.md), [`⌊`](../primitive-functions/minimum.md), [`⍒`](../primitive-functions/dyadic-grade-down.md), [`⍋`](../primitive-functions/dyadic-grade-up.md), [`⍸`](../primitive-functions/interval-index.md)
+- operators: [`⌸`](../primitive-operators/key.md)
+- system functions: [`⎕FX`](fx.md)
+
 If `⎕FR` is 645, all floating-point calculations are performed using IEEE 754 64-bit floating-point operations and the results of these operations are represented internally using [*binary64*](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) floating-point format.
 
 If `⎕FR` is 1287, all floating-point calculations are performed using IEEE 754-2008 128-bit decimal floating-point operations and the results of these operations are represented internally using [*decimal128*](https://en.wikipedia.org/wiki/Decimal128_floating-point_format) format.
 
-Note that when you change `⎕FR`, its new value only affects subsequent floating-point operations and results. Existing floating-point values stored in the workspace remain unchanged.
+When you change `⎕FR`, its new value only affects subsequent floating-point operations and results. Existing floating-point values stored in the workspace remain unchanged.
 
 The default value of `⎕FR` (its value in a `clear ws`) is configurable.
 
@@ -19,7 +30,7 @@ The default value of `⎕FR` (its value in a `clear ws`) is configurable.
 
 **However:** Although `⎕FR` *can* vary, the system is *not designed* to allow "seamless" modification during the running of an application and the dynamic alteration of is not recommended.  Strange effects may occur. For example, the type of a constant contained in a line of code (in a function or class), will depend on the value of `⎕FR` *when the function is fixed*.
 
-Also note:
+Consider also:
 ```apl
       ⎕FR←1287
       x←1÷3
@@ -60,7 +71,7 @@ Structural functions generally do NOT change the type, for example:
 DOMAIN ERROR
 ```
 
-When experimenting with `⎕FR` it is important to note that numeric constants entered into the Session are evaluated (and assigned a data type) before the line is actually executed. This means that constants are evaluated according to the value of `⎕FR` that pertained before the line was entered. For example:
+When experimenting with `⎕FR`, it is important to remember that numeric constants entered into the Session are evaluated (and assigned a data type) before the line is actually executed. This means that constants are evaluated according to the value of `⎕FR` that pertained before the line was entered. For example:
 ```apl
       ⎕FR←645
       ⎕FR
@@ -72,10 +83,11 @@ When experimenting with `⎕FR` it is important to note that numeric constants e
 1287
 ```
 
-WARNING: The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, because:
+!!! Warning "Warning"
+    The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, because:
 
-- any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision.
-- All comparisons are done using `⎕DCT` when `⎕FR` is 1287, and the default value of `1E¯28` is equivalent to 0 for complex numbers.
+    - any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision.
+    - All comparisons are done using `⎕DCT` when `⎕FR` is 1287, and the default value of `1E¯28` is equivalent to 0 for complex numbers.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

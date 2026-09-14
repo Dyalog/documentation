@@ -40,7 +40,7 @@ A Combo object is used to present a list of choices for a cell. Although you *ma
 
 If you use a floating Combo, the appearance of the non-current cells depends upon the value of the ShowInput property. If ShowInput is 0 (the default), the non-current cells are drawn in the standard way as if there were no associated input object. If ShowInput is 1, the non-current cells are given the *appearance* of a Combo, although the system does not actually use Combos to do so. Furthermore, there is a subtle difference in behaviour. If ShowInput is 0, the user must click twice to change a value; once to position the Combo on the new cell and again to drop its list box. If ShowInput is 1, the user may drop the list box with a single click on the cell.
 
-Note that ShowInput may be a scalar that applies to the whole Grid, or a vector whose elements applies to different cells through the CellType property.
+ShowInput can be a scalar that applies to the whole Grid, or a vector whose elements apply to different cells through the CellType property.
 
 The following Grid uses two internal Combo objects for the *Job Title* and *Region* columns, but with ShowInput set to 0. Only the current cell has Combo appearance.
 ```apl
@@ -83,7 +83,7 @@ The same Grid with ShowInput set to 1 is illustrated below. In this case, all of
 
 Radio and Check Buttons behave in a similar way to Combo objects except that they may only be used internally. The value in the cell associated with the Button must be 0 or 1 and corresponds to the Button's State property. The value is toggled by clicking the Button.
 
-If ShowInput is 0, the user must click twice to change a value; once to position the (floating) Button on the cell, and a second time to toggle its state. If ShowInput is 1, the user may change cell values directly with a single click. Note that this may be undesirable in certain applications because the user cannot click on a cell without changing its value.
+If ShowInput is 0, the user must click twice to change a value; once to position the (floating) Button on the cell, and a second time to toggle its state. If ShowInput is 1, the user may change cell values directly with a single click. This might be undesirable in certain applications because the user cannot click on a cell without changing its value.
 
 By default, the value of the EdgeStyle property for a Radio or Check Button which is created as the child of a Grid is `'None'`, so you must set EdgeStyle explicitly to `'Plinth'` if a 3-dimensional appearance is required.
 

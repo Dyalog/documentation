@@ -7,7 +7,7 @@ To create a GUI object using `⎕NEW`, the Class is given as the GUI Object name
       F1←⎕NEW 'Form' (⊂'Caption' 'Hello World')
 ```
 
-Notice however that only perfectly formed name/value pairs are accepted. The highly flexible syntax for specifying Properties by position and omitting levels of enclosure, that is supported by `⎕WC` and `⎕WS`, is not provided with `⎕NEW`.
+However, only perfectly formed name/value pairs are accepted. The highly flexible syntax for specifying Properties by position and omitting levels of enclosure, that is supported by `⎕WC` and `⎕WS`, is not provided with `⎕NEW`.
 
 Naturally, you may reference and assign Properties in the same way as for objects created using `⎕WC`:
 ```apl
@@ -26,7 +26,7 @@ Callbacks to regular defined functions in the Root or in another space, work in 
 #.[Form]  MouseUp  78.57142639 44.62540...
 ```
 
-Note that the first item in the event message is a ref to the Instance of the Form.
+The first item in the event message is a ref to the Instance of the Form.
 
 To create a control such as a Button, it is only necessary to run `⎕NEW` inside a ref to the appropriate parent object. For example:
 ```apl
@@ -43,7 +43,7 @@ Or perhaps better still,
  F1.(B1←⎕NEW 'Button'(('Caption' '&OK')('Size' (10 10))))
 ```
 
-Note that as `⎕NEW` provides no facility to *name* a GUI object, the Event property should use the *onEvent* syntax so that a callback function (or the result of `⎕DQ`) receives a ref to the object. Otherwise, without the *onEvent* syntax, the first element of the argument to a callback function will contain a character vector such as `'[Form].[Button]'` which merely describes the type of the object but does not identify the object itself.
+As `⎕NEW` provides no facility to *name* a GUI object, the Event property should use the *onEvent* syntax so that a callback function (or the result of `⎕DQ`) receives a ref to the object. Otherwise, without the *onEvent* syntax, the first element of the argument to a callback function will contain a character vector such as `'[Form].[Button]'` which merely describes the type of the object but does not identify the object itself.
 ```apl
       cap←'Caption' 'Push Me'
       ev← 'Event' ('onSelect' 'foo')

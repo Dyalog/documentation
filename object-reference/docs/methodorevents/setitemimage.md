@@ -1,7 +1,5 @@
 # <span>SetItemImage</span> <span>Method 315</span>
 
-**Description**
-
 This method is used to allocate a picture icon to a particular item in a [TreeView](../objects/treeview.md) object.
 
 The argument to SetItemImage is a 2-element array as follows:
@@ -14,6 +12,6 @@ The argument to SetItemImage is a 2-element array as follows:
 
 *Picture index* is an index into the array of bitmapped images in the corresponding ImageList object which is referenced via the ImageListObj property.
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

@@ -1,0 +1,15 @@
+(
+ 'Detach'
+ 'GetPropertyInfo'
+ 'GetEventInfo'
+ 'GetMethodInfo'
+ 'GetTypeInfo'
+ 'SetPropertyInfo'
+ 'SetMethodInfo'
+ 'ShowHelp'
+ 'ShowProperties'
+ 'Browse'
+ 'OLEAddEventSink'
+ 'OLEDeleteEventSink'
+ 'OLEListEventSinks'
+)

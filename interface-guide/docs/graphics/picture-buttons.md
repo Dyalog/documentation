@@ -17,7 +17,7 @@ The Picture property overlays a Bitmap, Icon or Metafile on top of a standard pu
 
 ![](../img/spider-button.png)
 
-Notice that (by definition) an icon is 32 x 32 pixels in size. To allow space for the button borders you have to make the Button at least 40 x 40 pixels. The "3" means put the `'spider'` in the **centre** of the button.
+By definition, an icon is 32 x 32 pixels in size. To allow space for the button borders you have to make the Button at least 40 x 40 pixels. The "3" means put the `'spider'` in the **centre** of the button.
 
 When you press a Button which has its Picture property set like this, APL automatically shifts the overlaid image down and to the right by 1 pixel. This complements the change in appearance of the button borders and achieves a "pressed-in" look. When you release the button, APL shifts the image back again.
 
@@ -25,7 +25,7 @@ The Picture property therefore provides a very simple mechanism for implementing
 
 However, the Picture property has certain limitations. Firstly, you cannot alter the "pressed-in" look of the Button which is determined automatically for you. You might want the Button to change colour when you press it, and you cannot achieve this with the Picture property. Secondly, the appearance of the Button is unchanged when you make it inactive (by setting its Active property to 0).
 
-Note that if you use the Picture property on Radio or Check buttons, the buttons assume pushbutton appearance although their radio/check behaviour is unaffected.
+If you use the Picture property on Radio or Check buttons, the buttons assume pushbutton appearance although their radio/check behaviour is unaffected.
 
 ## Using the BtnPix Property
 
@@ -69,7 +69,7 @@ Now make a second Bitmap:
       'T2'⎕WC'Bitmap'('CBits'T2.CBits)
 ```
 
-Now define the Button. Notice that the third (inactive) bitmap is optional.
+Now define the Button. The third (inactive) bitmap is optional.
 ```apl
       'F.B' ⎕WC 'Button' ('BtnPix' 'T1' 'T2')
 ```

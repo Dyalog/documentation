@@ -12,7 +12,7 @@ search:
 |[AddCol](../methodorevents/addcol.md)|153|appended a column to a [Grid](../objects/grid.md) object|
 |[AddRow](../methodorevents/addrow.md)|152|appended a row to a [Grid](../objects/grid.md) object|
 |[AmbientChanged](../methodorevents/ambientchanged.md)|533|reported when any of the ambient properties change in an application hosting an [ActiveXControl](../objects/activexcontrol.md) object|
-|[AnimStarted](../methodorevents/animplay.md)|294|reported  just before an AVI clip starts playing in an [Animation](../objects/animation.md) object.|
+|[AnimStarted](../methodorevents/animstarted.md)|294|reported  just before an AVI clip starts playing in an [Animation](../objects/animation.md) object.|
 |[AnimStopped](../methodorevents/animstopped.md)|295|reported  just after an AVI clip stops playing in an [Animation](../objects/animation.md) object.|
 |[BadValue](../methodorevents/badvalue.md)|180|attempted to leave [Edit](../objects/edit.md) object with invalid text|
 |[BalloonHide](../methodorevents/balloonhide.md)|862|reported when a BalloonTip is displayed|
@@ -36,7 +36,7 @@ search:
 |[ClickComment](../methodorevents/clickcomment.md)|225|user has clicked the mouse in a comment window of a [Grid](../objects/grid.md)|
 |[ClipChange](../methodorevents/clipchange.md)|120|data in the clipboard has changed|
 |[Close](../methodorevents/close.md)|33|[Form](../objects/form.md) is about to be closed|
-|[CloseUp](../methodorevents/clickcomment.md)|46|reported by a [DateTimePicker](../objects/datetimepicker.md) object just before the drop-down calendar is hidden|
+|[CloseUp](../methodorevents/closeup.md)|46|reported by a [DateTimePicker](../objects/datetimepicker.md) object just before the drop-down calendar is hidden|
 |[ColorChange](../methodorevents/colorchange.md)|430|user has selected a colour in a [ColorButton](../objects/colorbutton.md)|
 |[ColumnClick](../methodorevents/columnclick.md)|320|user has clicked on a heading in a [ListView](../objects/listview.md)|
 |[Configure](../methodorevents/configure.md)|31|position and/or size of an object is about to change|
@@ -53,7 +53,7 @@ search:
 |[DockStart](../methodorevents/dockstart.md)|480|reported by a client object when the user starts to drag it using the mouse|
 |[DoPopup](../methodorevents/dopopup.md)|846|triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client attempts to open a new window.|
 |[DragDrop](../methodorevents/dragdrop.md)|11|moved an object using drag & drop operation|
-|[DropDown](../methodorevents/dragdrop.md)|45|user has clicked the drop-down button in an   object, just before the drop-down part is displayed|
+|[DropDown](../methodorevents/dropdown.md)|45|user has clicked the drop-down button in an   object, just before the drop-down part is displayed|
 |[DropFiles](../methodorevents/dropfiles.md)|450|user has drag/dropped a file icon onto an object|
 |[DropObjects](../methodorevents/dropobjects.md)|455|user has drag/dropped an object icon from the Workspace Explorer or Find Objects tool onto an object|
 |[DyalogCustomMessage1](../methodorevents/dyalogcustommessage1.md)|95|allows external applications and dynamic link libraries to insert events into the Dyalog APL/W message queue|
@@ -81,7 +81,7 @@ search:
 |[GridCut](../methodorevents/gridcut.md)|190|the user has pressed Shift+Delete and there are selected cells in the [Grid](../objects/grid.md)|
 |[GridDelete](../methodorevents/griddelete.md)|193|the user has pressed Delete and there are selected cells in the [Grid](../objects/grid.md)|
 |[GridDropSel](../methodorevents/griddropsel.md)|195|the user has drag/dropped a selected block of cells in the [Grid](../objects/grid.md)|
-|[GridKeyPress](../methodorevents/griddropsel.md)|24|user has pressed  a key in a [Grid](../objects/grid.md) cell|
+|[GridKeyPress](../methodorevents/gridkeypress.md)|24|user has pressed  a key in a [Grid](../objects/grid.md) cell|
 |[GridPaste](../methodorevents/gridpaste.md)|192|the user has pressed Shift+Insert and there is data in the clipboard that is in a suitable format for the [Grid](../objects/grid.md)|
 |[GridPasteError](../methodorevents/gridpasteerror.md)|194|the user has pressed Shift+Insert and there is data in the clipboard, but the system is unable to paste the data into the [Grid](../objects/grid.md)|
 |[GridSelect](../methodorevents/gridselect.md)|165|user has changed the selection in a [Grid](../objects/grid.md)|
@@ -97,6 +97,7 @@ search:
 |[ItemUp](../methodorevents/itemup.md)|341|user has released the left mouse button over an item in a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md) object|
 |[KeyError](../methodorevents/keyerror.md)|23|pressed an invalid key on the keyboard|
 |[KeyPress](../methodorevents/keypress.md)|22|pressed a key on the keyboard|
+|[LoadEnd](../methodorevents/loadend.md)|836|reported when a frame has finished loading in an [HTMLRenderer](../objects/htmlrenderer.md)|
 |[Locator](../methodorevents/locator.md)|80|terminated interaction with a [Locator](../objects/locator.md) object|
 |[LostFocus](../methodorevents/lostfocus.md)|41|object has lost the input focus|
 |[MDIActivate](../methodorevents/mdiactivate.md)|42|MDI [SubForm](../objects/subform.md) becomes the active one|
@@ -132,7 +133,6 @@ search:
 |[SetItemPosition](../methodorevents/setitemposition.md)|322|generated when the user drag-drops an item in a [ListView](../objects/listview.md)|
 |[SetRowSize](../methodorevents/setrowsize.md)|175|generated when row height changes in a [Grid](../objects/grid.md)|
 |[SetSpinnerText](../methodorevents/setspinnertext.md)|421|user has clicked a spin button in a [Spinner](../objects/spinner.md) object|
-|[SetWizard](../methodorevents/setwizard.md)|365|user has clicked Next or Back in a [PropertySheet](../objects/propertysheet.md)|
 |[ShowComment](../methodorevents/showcomment.md)|223|generated when the user rests the mouse pointer over a commented cell|
 |[Spin](../methodorevents/spin.md)|420|user has clicked a spin button in a [Spinner](../objects/spinner.md) object|
 |[Splitting](../methodorevents/splitting.md)|281|reported while a [Splitter](../objects/splitter.md) object is being dragged, between a [StartSplit](../methodorevents/startsplit.md) and an [EndSplit](../methodorevents/endsplit.md)|
@@ -151,7 +151,6 @@ search:
 |[Timer](../methodorevents/timer.md)|140|event generated by a [Timer](../objects/timer.md) object|
 |[VScroll](../methodorevents/vscroll.md)|38|requested movement in vertical scrollbar of [Form](../objects/form.md)|
 |[VThumbDrag](../methodorevents/vthumbdrag.md)|441|user has dragged the thumb of the vertical scrollbar of a [Form](../objects/form.md) or [SubForm](../objects/subform.md)|
-|[WebSocketClose](../methodorevents/websocketclose.md)|843|triggered when the [HTMLRenderer](../objects/htmlrenderer.md) client closes a WebSocket|
 |[WebSocketError](../methodorevents/websocketerror.md)|844|triggered when an error occurs on a WebSocket|
 |[WebSocketReceive](../methodorevents/websocketreceive.md)|842|triggered when data is received over a WebSocket|
 |[WebSocketUpgrade](../methodorevents/websocketupgrade.md)|841|reported when the client component of an [HTMLRenderer](../objects/htmlrenderer.md) object opens a WebSocket|

@@ -6,7 +6,7 @@ search:
 
 # <span>Inverted Table Index-of</span> `R←X(8⌶)Y`{{key}}
 
-This function computes `X` index-of `Y` (viz. `X⍳Y`) where `X` and `Y` are compatible inverted tables. `R` is the indices of `Y` in `X`.
+This function computes `X` _index-of_ `Y` (viz. `X⍳Y`) where `X` and `Y` are compatible inverted tables. `R` is the indices of `Y` in `X`.
 
 An inverted table is a (nested) vector all of whose items have the same number of major cells. That is, `1=⍴⍴⍵` and `(≢⊃⍵)=≢¨⍵`. An inverted table representation of relational data is more efficient in time and space than other representations.
 

@@ -11,7 +11,7 @@ If the rank of `X` is smaller than the rank of `Y`, `X` is treated as if it were
 
 If the rank of `X` is larger than the rank of `Y`, no occurrences of `X` are found in `Y`.
 
-`⎕CT` and `⎕DCT` are implicit arguments of Find.
+`⎕CT` and `⎕DCT` are implicit arguments of _find_.
 
 <h2 class="example">Examples</h2>
 ```apl

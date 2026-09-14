@@ -4,7 +4,7 @@ The Print Configuration dialog box is displayed by the system operation `[PrintS
 
 There are four separate tabs namely *Setup*, *Margins*, *Header/Footer* and *Printer*.
 
-Note that the printing parameters are stored in the Registry in the Printing sub-folder
+The printing parameters are stored in the Registry in the Printing sub-folder.
 
 ## Setup Tab
 
@@ -14,7 +14,7 @@ Table: Print Configuration dialog: Setup
 
 |Label                    |Parameter     |Description                                                                                                                                   |
 |-------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|Color scheme             |InColour      |Check this box if you want to print functions with syntax colouring. Note that that printing in colour is slower than printing without colour.|
+|Color scheme             |InColour      |Check this box if you want to print functions with syntax colouring. Printing in colour is slower than printing without colour.|
 |Color scheme             |SchemeName    |Select the colour scheme to be used for printing.                                                                                             |
 |This text                |WrapWithText  |Check this option button if you wish to prefix wrapped lines (lines that exceed the width of the paper) with a particular text string         |
 |This text                |WrapLeadText  |Specifies the text for prefixing wrapped lines                                                                                                |
@@ -22,7 +22,7 @@ Table: Print Configuration dialog: Setup
 |This many spaces         |WrapLeadSpaces|Specifies the number of spaces to be inserted at the beginning of wrapped lines.                                                              |
 |Line numbers on functions|LineNumsFns   |Check this box if you want line numbers to be printed in defined functions.                                                                   |
 |Line numbers on variables|LineNumsVars  |Check this box if you want line numbers to be printed in variables. If you choose this option, line numbering starts at `⎕IO` .               |
-|Font                     |Font          |Click to select the font to be used for printing. Note that only fixed-pitch fonts are supported.                                             |
+|Font                     |Font          |Click to select the font to be used for printing. Only fixed-pitch fonts are supported.                                             |
 
 ## Margins Tab
 
@@ -97,4 +97,4 @@ Table: Print Configuration dialog: Print
 |Name|PrinterField|The name of the printer to be used for printing from Dyalog.|
 |Properties|&nbsp;|Click this to set Printer options.|
 |Where|&nbsp;|Reports the printer device|
-|Print|&nbsp;|Allows you to choose between printing all of the current object or just the selection. Note that this option is present only when the dialog box is displayed in response to selecting Print.|
+|Print|&nbsp;|Allows you to choose between printing all of the current object or just the selection. This option is present only when the dialog box is displayed in response to selecting Print.|

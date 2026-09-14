@@ -98,7 +98,7 @@ The HTML that is transmitted to the browser is:
 
 ```
 
-Returning to the `Reverse` function, note that the declaration statements at the top of the function are essential to make it callable in this context:
+Returning to the `Reverse` function, the declaration statements at the top of the function are essential to make it callable in this context:
 ```apl
 ∇Reverse args
 :Access public

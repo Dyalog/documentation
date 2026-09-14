@@ -1,7 +1,5 @@
 # <span>RowChange</span> <span>Method 158</span>
 
-**Description**
-
 This method is used to change the data in a row of a [Grid](../objects/grid.md) object.
 
 The argument to RowChange is a 2-element array as follows.
@@ -12,6 +10,6 @@ The argument to RowChange is a 2-element array as follows.
 
 *Row data* must be a scalar or a vector whose length is equal to the number of columns in the Grid. Its elements may be scalar numbers, character vectors or matrices.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

@@ -84,7 +84,7 @@ For example: `NV`: numeric vector, `CM`: character matrix, `PV`: nested vector.
 
 `↓⍉↑` is special-cased only for a vector of nested vectors, each of whose items is of the same length.
 
-`{(↓⍺)⍳↓⍵}` can accommodate much larger matrices than its constituent primitives. It is particularly effective when bound with a left argument using the compose operator:
+`{(↓⍺)⍳↓⍵}` can accommodate much larger matrices than its constituent primitives. It is particularly effective when bound with a left argument using the _compose_ operator:
 ```apl
       find←mat∘{(↓⍺)⍳↓⍵}     ⍝ find rows in mat table
 ```
@@ -120,7 +120,7 @@ Among other examples, this idiom optimises repeated catenation of a scalar or ve
       vector,←2+4
 ```
 
-Note that the idiom is not applied if the value of vector `V` is shared with another symbol in the workspace, as illustrated in the following examples:
+The idiom is not applied if the value of vector `V` is shared with another symbol in the workspace, as illustrated in the following examples:
 
 Example 1: the idiom is used to perform the catenation to `V1`.
 ```apl

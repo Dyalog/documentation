@@ -9,7 +9,7 @@ search:
 
 For an alternative method of indexing, see [Index](../primitive-functions/index-function/index.md).
 
-`⎕IO` is an implicit argument of Indexing.
+`⎕IO` is an implicit argument of _indexing_.
 
 Three forms of indexing are permitted. The form used is determined by context.
 

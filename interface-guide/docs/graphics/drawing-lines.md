@@ -15,7 +15,7 @@ In the previous example, the points are specified as a 2-element nested vector c
 
 ![](../img/drawing-lines-2.png)
 
-Notice that because the second example **replaced** the object `F.Line`, the original line drawn in the first example has been erased.
+Because the second example **replaced** the object `F.Line`, the original line drawn in the first example has been erased.
 
 In common with the position and size of other GUI objects, y-coordinates precede x-coordinates. Graphical software typically uses (x,y) rather than (y,x) but the latter is consistent with the order in which coordinates are specified and reported for all other objects and events. The Dyalog APL GUI support allows you to freely mix graphical objects with other GUI components (for example, you can use the graphical Text object in place of a Label) and this (y,x) consistency serves to avoid confusion.
 

@@ -17,7 +17,7 @@ Furthermore, you are not limited to the set of parameters employed by APL itself
 
 Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under UNIX and Linux, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
 
-Note that the value of a parameter obtained by the GetEnvironment method (see [GetEnvironment](../../../object-reference/methodorevents/getenvironment)) uses exactly the same set of rules.
+The value of a parameter obtained by the [GetEnvironment](../../object-reference/methodorevents/getenvironment.md) method uses exactly the same set of rules.
 
 The following section details those parameters that are implemented by Registry Values in the top-level folder identified by **IniFile**. Values that are implemented in sub-folders are *mainly* internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.
 
@@ -37,5 +37,21 @@ Specifying an invalid value will prevent Dyalog APL from starting.
 
 You can change parameters in the Registry in one of two ways:
 
-- Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See ["The Configuration Dialog Box"](../configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md) for details.
+- Using the Configuration dialog box that is obtained by selecting *Configure* from the *Options* menu on the Dyalog APL/W session. See [The Configuration Dialog Box](../configuring-the-ide/configuration-dialog.md) for details.
 - By directly editing the Windows Registry using `REGEDIT.EXE` or `REGEDIT32.EXE`. This is necessary for parameters that are not editable via the Configuration dialog box.
+
+## References to Other Configuration Parameters
+
+Configuration parameters can include references to other configuration parameters using square bracket delimiters. For example:
+```apl
+MySetting: "[DYALOG]/MyFile"
+```
+
+will replace `[DYALOG]` with the value of the **DYALOG** configuration parameter.
+
+In addition:
+
+- If the referenced configuration parameter is not defined then no substitution will take place; the reference, including square bracket delimiters, will remain in place.
+- To include square brackets in a string, prefix the `[` with a `\` character.
+
+`[=DOCUMENTS]` is a pre-defined substitution parameter that is replaced with the location of the user's Documents folder (for example, `C:\Users\Bob\Documents`).

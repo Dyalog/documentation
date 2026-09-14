@@ -5,7 +5,14 @@ search:
 
 # <span>Random Link</span> `⎕RL`
 
-`⎕RL` is a 2-element vector. Its first element contains the  base or *random number seed* and its second element is an integer that identifies the random number generator that is currently  in use. Together these items define how the system generates random numbers using [Roll](../primitive-functions/roll.md) and [Deal](../primitive-functions/deal.md).
+`⎕RL` defines how the system generates random numbers.
+
+`⎕RL` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
+
+- monadic functions: [`?`](../primitive-functions/roll.md)
+- dyadic functions: [`?`](../primitive-functions/deal.md)
+
+`⎕RL` is a 2-element vector. Its first element contains the  base or *random number seed* and its second element is an integer that identifies the random number generator that is currently  in use.
 
 In a `clear ws` `⎕RL` is `(⍬ 1)`. `⎕RL` has Namespace scope.
 
@@ -27,7 +34,7 @@ The 3 random number generators are listed in the table below. The 4th column of 
 |1  |RNG1|Mersenne Twister.                        |`0` , `⍬` , an integer in the range 1 to `¯1+2*63` or a 625-element integer vector|
 |2  |RNG2|Operating System random number generator.|`⍬`                                                                               |
 
-Note that assigning an invalid value to the seed will cause `DOMAIN ERROR`.
+Assigning an invalid value to the seed causes `DOMAIN ERROR`.
 
 The default random number generator in a `CLEAR WS` is 1 (Mersenne Twister). This algorithm *RNG1* produces 64-bit values with good distribution.
 
@@ -60,7 +67,7 @@ If  `⎕RL[1]` is set to `⍬`,  `⎕RL[1]`always reports `⍬`.
 Otherwise if the seed `⎕RL[1]` is set to a value other than `⍬`:
 
 - using *RNG0*, `⎕RL[1]` is an integer which  represents the *seed* for the next random number in the sequence.
-- using *RNG1*, the system internally retains a block of 312 64-bit numbers which are used one by one to generate the results of roll and deal. When the first block of 312 have been used up, the system generates a second block. In this case, `⎕RL[1]` is an integer vector of 32-bit numbers of length 625 (the first is an index into the block of 312) which represents the internal state of the random number generator. This means that, as with *RNG0*, you may save the value of  `⎕RL` in a variable and reassign it later.
+- using *RNG1*, the system internally retains a block of 312 64-bit numbers which are used one by one to generate the results of _roll_ and _deal_. When the first block of 312 have been used up, the system generates a second block. In this case, `⎕RL[1]` is an integer vector of 32-bit numbers of length 625 (the first is an index into the block of 312) which represents the internal state of the random number generator. This means that, as with *RNG0*, you may save the value of  `⎕RL` in a variable and reassign it later.
 - Using *RNG2*, the seed is purely internal and `⎕RL[1]` is always zilde.
 
 ### Assignment

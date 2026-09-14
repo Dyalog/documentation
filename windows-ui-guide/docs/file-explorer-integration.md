@@ -14,7 +14,7 @@ During installation, Dyalog establishes the following file associations:
 
 When you double-click on a file with one of the above extensions, the file is opened with the corresponding application.
 
-In addition, two items are added to the Windows Explorer context menu for directories, namely *Load with Dyalog* and *Run with Dyalog*. Both these items start Dyalog and attempt to import code from the corresponding directory using Link. The *Run with Dyalog* option also calls the function named `Run` if it exists. See [Load Parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load).
+In addition, two items are added to the Windows Explorer context menu for directories, namely *Load with Dyalog* and *Run with Dyalog*. Both these items start Dyalog and attempt to import code from the corresponding directory using Link. The *Run with Dyalog* option also calls the function named `Run` if it exists. See [Load Parameter](../windows-installation-and-configuration-guide/configuration-parameters/load.md).
 
 For more information about Link, see [https://dyalog.github.io/link/](https://dyalog.github.io/link/).
 
@@ -43,7 +43,7 @@ You can also browse Dyalog source files. The following picture shows what you se
 
 ![](img/file-explorer-dyalog-1.png)
 
-Note that you may only *view*  workspace objects and scripts in the preview pane, it is not possible to *edit* them in the preview pane.
+You can only *view* workspace objects and scripts in the preview pane; it is not possible to *edit* them in the preview pane.
 
 ### Editing Dyalog Source Files
 

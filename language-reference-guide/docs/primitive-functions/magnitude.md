@@ -7,7 +7,7 @@ search:
 
 `Y` may be any numeric array. `R` is numeric composed of the absolute (unsigned) values of `Y`.
 
-Note that the magnitude of a complex number <math xmlns="http://www.w3.org/1998/Math/MathML">
+The magnitude of a complex number <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mi>z</mi>
 <mo>=</mo>
 <mi>a</mi>

@@ -103,7 +103,7 @@ It returns an instance of the `File` namespace that is associated with the file 
 
 `OpenFile[6]`creates an instance of the `File` namespace using `⎕OR` and returns it as the result.
 
-Note that there is a separate instance of `File` for every file opened by every OLE Client that is connected. Each knows its own `TieNumber` and `Name`.
+There is a separate instance of `File` for every file opened by every OLE Client that is connected. Each knows its own `TieNumber` and `Name`.
 
 The COM Properties dialog box for `OpenFile` is shown below. The function is declared to take a single parameter called *FileName* whose data type is VT_BSTR (a string). The result of the function is of data type VT_DISPATCH. This data type is used to represent an object.
 
@@ -166,7 +166,7 @@ The COM Properties dialog box for `FREPLACE` is shown below. The function is dec
 
 Start Excel and load the spreadsheet `cfiles.xlsm` from the Dyalog APL sub-directory `samples\ole`.
 
-Please note that to simplify the Excel code, only components containing matrices (such as those contained in samples\ole\test.dcf) are handled. Components containing scalars, vectors, higher-rank arrays and complex nested arrays are not supported.
+To simplify the Excel code, only components containing matrices (such as those contained in samples\ole\test.dcf) are handled. Components containing scalars, vectors, higher-rank arrays, and complex nested arrays are not supported.
 
 ![](../img/cfiles-excel-example-1.png)
 
@@ -178,7 +178,7 @@ The next step is to enter the name of your component file. A sample file named `
 
 ![](../img/cfiles-excel-example-3.png)
 
-The next step is to open the file by clicking the *Open* button. This runs the FOpen procedure. Note that if this step is critical; otherwise any attempt to read or write to the file will fail. When the file is opened, the size of the file is displayed as shown below.
+The next step is to open the file by clicking the *Open* button. This runs the FOpen procedure. This step is critical; otherwise any attempt to read or write to the file will fail. When the file is opened, the size of the file is displayed as shown below.
 
 ![](../img/cfiles-excel-example-4.png)
 

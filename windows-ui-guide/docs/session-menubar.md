@@ -1,6 +1,6 @@
 # The Session MenuBar
 
-The Session MenuBar  (`⎕SE.mb`) contains a set of menus as follows. Note that, unless specified, the descriptions refer to the Unicode Edition and the keyboard short-cuts will be different in Classic Edition.
+The Session MenuBar (`⎕SE.mb`) contains a set of menus as follows. Unless specified, the descriptions refer to the Unicode Edition; the keyboard shortcuts are different in the Classic Edition.
 
 ## The File Menu
 
@@ -15,11 +15,11 @@ Table: File Menu Operations {: #file-menu-operations }
 |Copy|`[WSCopy]`|Prompts for a workspace file name, then copies it|
 |Save|`[WSSave]`|Saves the active workspace|
 |Save As|`[WSSaveas]`|Prompts for a workspace file name, then saves it|
-|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../../windows-installation-and-configuration-guide/creating-executables)|
+|Export|`[Makeexe]`|Creates a bound executable, an OLE Server, an ActiveX Control, or a .NET Assembly. See [Creating Executables and COM Servers](../windows-installation-and-configuration-guide/creating-executables.md)|
 |Export to Memory|`[MakeMemoryAssembly]`|Creates an *in-memory* .NET Assembly|
 |Close AppDomain|`[CloseAppDomain]`|Closes .NET App Domain|
 |Drop|`[WSDrop]`|Prompts for a workspace file name, then erases it|
-|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editing-scripts-and-text-files.md)|
+|Edit Text File|`[EditTextFile]`|Displays the *Open Source File* dialog to select Dyalog script file (*.dyalog*) or an arbitrary text file to open in the Editor. See [Editing Scripts and Text Files](editor.md#editing-scripts-and-text-files)|
 |Print|`[PrintFnsInNS]`|Prints functions and operators in current namespace|
 |Print Setup|`[PrintSetup]`|Invokes the print set-up dialog box|
 |Continue|`[Continue]`|Saves the active workspace in CONTINUE.DWS and exits APL|
@@ -65,7 +65,7 @@ Table: Window menu operations {: #window-menu-operations }
 |-----------------|------------|---------------------------------|
 |Close all Windows|`[CloseAll]`|Closes all Edit and Trace windows|
 
-Note that `[CloseAll]` removes all Trace windows but does *not* reset the state indicator.
+`[CloseAll]` removes all Trace windows but does not reset the state indicator.
 
 In addition, the *Window* menu will contain options to switch the focus to any subsidiary windows that are docked in the Session as illustrated above.
 
@@ -108,7 +108,7 @@ Table: Action menu operations {: #actions-menu-operations }
 |Execute     |`[Execute]`  |Executes the current line                                                                                                             |
 |Copy Object |`[ObjCopy]`  |Copies the contents of the current object to the clipboard                                                                            |
 |Paste Object|`[ObjPaste]` |Pastes the contents of the clipboard into the current object, replacing its previous value                                            |
-|Print Object|`[ObjPrint]` |Prints the current object. Note that if the object is being edited, the version of the object displayed in the edit window is printed |
+|Print Object|`[ObjPrint]` |Prints the current object. If the object is being edited, the version of the object displayed in the edit window is printed           |
 |Clear Stops |`[ClearTSM]` |Clears all `⎕STOP` , `⎕MONITOR` and `⎕TRACE` settings                                                                                 |
 |Interrupt   |`[Interrupt]`|Generates a weak interrupt                                                                                                            |
 |Reset       |`[Reset]`    |Performs `)RESET`                                                                                                                     |
@@ -163,17 +163,18 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 
 ## The Layout Menu
 
-The *Layout* menu (`⎕SE.mb.layout`) provides layout options for the Debugger.
+The *Layout* menu (`⎕SE.mb.layout`) selects the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger.
 
 Table: Layout Menu Operations {: #debugger-layout-menu-operations }
 
-|Item                   |Action             |Description                                        |
-|-----------------------|-------------------|---------------------------------------------------|
-|Classic                |APL callback       |Detaches the Debugger window                       |
-|Debugger at the bottom |APL callback       |Docks the Debugger at the bottom (default)         |
-|Debugger on the left   |APL callback       |Docks the Debugger on the left                     |
+|Item                                |Action      |Description                                                                                                                                              |
+|------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Open…                               |&nbsp;      |Displays the *Open Session layout* dialog box, from which a Session layout file (*.layout*) can be selected                                                 |
+|Classic                             |&nbsp;      |Selects Classic Dyalog mode, in which the Debugger is a separate window containing the Tracer, with the Left Argument pane docked to its left and the Right Argument pane docked to its right|
+|Debugger at the bottom              |&nbsp;      |Docks the Debugger at the bottom of the Session window (default)                                                                                          |
+|Classic with Vertical Inline Tracing|&nbsp;      |As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
 
-The selected option does *not* persist if you restart the session.
+The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../windows-installation-and-configuration-guide/configuration-parameters/layout-file.md) parameter.
 
 ## The Help Menu
 
@@ -191,6 +192,6 @@ Table: Help menu operations {: #help-menu-operations }
 |Dyalog Web Site|`[DyalogWeb]`|Opens your web browser on the Dyalog home page|
 |Email Dyalog|`[DyalogEmail]`|Opens your email client and creates a new message to Dyalog Support|
 |Latest Enhancements|`[RelNotes]`|Opens `help\dyalog.chm` , starting at the first topic in the Version {{ version_majmin }} Release Notes section. Previous Release Notes are also included for your convenience.|
-|Read Me|`[ReadMe]`|Opens `help\dyalog_readme.htm` in your default web browser. Note that setup_readme.htm is also included in this directory|
+|Read Me|`[ReadMe]`|Opens **help\dyalog_readme.htm** in your default web browser. **setup_readme.htm** is also included in this directory|
 |Third Party Licences|`[LicenceHelp]`|Opens `help\dyalog.chm` , starting at the first topic in the Licences for third-party components|
 |About|`[About]`|Displays an *About* dialog box|

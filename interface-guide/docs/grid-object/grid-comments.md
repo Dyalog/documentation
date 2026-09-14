@@ -32,7 +32,7 @@ This method is used to add a new comment. For example, the following statement a
 
 The height and width of the comment window, specified by the last 2 elements of the right argument to `⎕NQ` are both optional. If the cell already has an associated comment, the new comment replaces it.
 
-Note that just before the comment is displayed, the Grid generates a ShowComment event which gives you the opportunity to (temporarily) change the text and/or window size of a comment dynamically.
+Immediately before the comment is displayed, the Grid generates a ShowComment event; this gives you the opportunity to (temporarily) change the text and/or window size of a comment dynamically.
 
 ## DelComment Method
 
@@ -59,7 +59,7 @@ If enabled, a Grid will generate a ShowComment event when the user rests the mou
 
 You may display the comment associated with a particular cell under program control by generating a ShowComment event using `⎕NQ`. By default, a comment displayed under program control does not exhibit tip behaviour but remains visible until it is explicitly removed using the HideComment method.
 
-Note that a comment will only be displayed if the specified cell is marked as a commented cell.
+A comment will only be displayed if the specified cell is marked as a commented cell.
 
 ## HideComment Event/Method
 

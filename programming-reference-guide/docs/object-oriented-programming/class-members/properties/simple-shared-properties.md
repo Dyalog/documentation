@@ -15,7 +15,7 @@ A Shared property may be used to handle information that is relevant to the Clas
     :EndProperty
 ```
 
-Note that `⎕FLIB` (invoked by the `Files` `get` function) does not report the names of *tied* files.
+`⎕FLIB` (invoked by the `Files` `get` function) does not report the names of *tied* files.
 ```apl
 
       F1←⎕NEW ComponentFile 'test1'
@@ -26,7 +26,7 @@ test1
       ⎕EX'F2'
 ```
 
-Note that a Shared Property may be accessed from the Class itself. It is not necessary to create an Instance first.
+A Shared Property can be accessed from the Class itself. It is not necessary to create an Instance first.
 ```apl
       ComponentFile.Files
 test1

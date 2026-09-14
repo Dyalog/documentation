@@ -6,7 +6,7 @@ The editor may be invoked in several ways. From the session, you can use the sys
 
 ![](img/editor-1.png)
 
-In addition, there is a general *point-and-edit* facility which works in edit and trace windows too. Simply position the input cursor over a name and double-click the left mouse button. Alternatively, you can press Shift+Enter or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. Note that, in the Session, typing a name and pressing Shift+Enter is actually a special case of *point-and-edit*. Note also that a *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
+In addition, there is a general *point-and-edit* facility that works in edit and trace windows too. Position the input cursor over a name and double-click the left mouse button. Alternatively, you can press <kbd>Shift</kbd>+<kbd>Enter</kbd> or select *Edit* from the *File* menu. The name can appear in the Session, in an Edit window, or in a Trace window; the effect is the same. In the Session, typing a name and pressing <kbd>Shift</kbd>+<kbd>Enter</kbd> is a special case of *point-and-edit*. A *naked edit* can be invoked by double-clicking the left mouse button in the empty input line.
 
 The type of a new object defaults to function/operator unless the object is shadowed, in which case it defaults to a variable (vector of character vectors). You can however specify the type of a new object explicitly using `)ED` or `⎕ED`. For example, typing "`)ED ∊LIST -MAT`" in a `CLEAR WS` would create Edit windows for a vector of character vectors named `LIST` and a character matrix called `MAT`. See `)ED` or `⎕ED` for details.
 
@@ -16,34 +16,35 @@ If the name is followed by a line-number in square brackets, for example, `MyFn[
 
 ## Window Management
 
-By default, the Session has an Editor window that is docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
+By default, the Session has an Editor window docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
 
 ![](img/editor-3.png)
 
-A functionally identical interface, especially suitable for wide screens, can be configured via **Layout**>**Debugger on the left**. As an alternative, **Layout**>**Classic** removes the Editor window, instead opening objects in individual edit windows. The default configuration can be restored via **Layout**>**Debugger at the bottom**. See below for details on the different configurations.
+The arrangement is chosen from the [Layout menu](session-menubar.md#the-layout-menu). **Layout**>**Classic** removes the Editor window and opens each object in its own window instead; **Layout**>**Debugger at the bottom** restores the default. The Session must be saved for the choice to persist.
 
-Independently of the editing configuration, the first edited object opens in an edit window at the position specified by the **edit_first_y** and **edit_first_x** parameters that are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, if this window was removed, the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
+Whichever arrangement is in use, the first edited object opens at the position specified by the **edit_first_y** and **edit_first_x** parameters, which are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, where there is none, of the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
 
 ![](img/editor-7.png)
 
-Note that a triangle at the end of a line indicates that the line is longer than can be displayed in the current edit window. Click and hold the left mouse button on such a triangle to show the full line in a pop-up.
-
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
+
+A triangle at the end of a line indicates that the line is longer than can be displayed in the current edit window. Click and hold the left mouse button on the triangle to show the whole line in a pop-up.
 
 ### Classic Layout
 
-This configuration is set via **Layout**>**Classic**. It removes the Editor window and instead displays each object in a separate window, as if they had been undocked from the Editor. Note that these edit windows cannot be docked anywhere. Each window has the full functionality of the Editor, and all settings and documentation for the Editor are also relevant for these object windows.
+**Layout**>**Classic** removes the Editor window and displays each object in a separate window, as though it had been undocked from the Editor. These windows cannot be docked anywhere. Each has the full functionality of the Editor, so every setting and everything documented for the Editor applies to them too.
 
-### Debugger at the bottom/on the left Layout
+![](img/editor-6.png)
 
-These configurations are set via **Layout**>**Debugger at the bottom** and **Layout**>**Debugger on the left**. They provide a single Editor in the form of a Multiple Document Interface (MDI) window that can be a stand-alone window, or be docked in the Session window, as seen in the pictures below. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked and redocked in the Editor window, but not directly in the Session window.
+### Docked Layout
+
+**Layout**>**Debugger at the bottom** provides a single Editor as a Multiple Document Interface (MDI) window, which can stand alone or be docked in the Session window. Each object being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked from and redocked in the Editor window, though not directly in the Session window.
 
 ![](img/editor-2.png)
 
-
 ![](img/editor-4.png)
 
-You can resize the Editor pane to view more or less of the Session itself, by dragging the border between its title bar and the Session pane.
+You can resize the Editor pane to view more or less of the Session itself, by dragging its title bar.
 
 Using the buttons in the title bar, you can instantly maximise the Editor pane to allow you to concentrate on editing, or minimise it to reveal the entire Session. In either case, the restore button quickly restores the 2-pane layout.
 
@@ -51,7 +52,7 @@ The picture below shows the effect of maximising the Editor. The `BUILD_SESSION`
 
 ![](img/editor-5.png)
 
-Note that when the Editor is docked and has the focus, the Editor menubar is displayed in place of the Session menubar.
+When the Editor is docked and has the focus, the Editor menubar is displayed in place of the Session menubar.
 
 ### Moving around an edit window
 
@@ -142,7 +143,7 @@ Nevertheless whenever you edit the Class *when it is not suspended*, you probabl
 
 The options in the *File* menu shown above provide for these alternatives.
 
-In addition, the Configuration Dialog (see [Fixing Scripts](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
+In addition, the Configuration Dialog (see [Fixing Scripts](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#fixing-scripts)) allows you to define  the behaviour of the keystrokes <EP> and <S1> for both the suspended case and the non-suspended case. This association will be displayed against the appropriate action according to the state of the script you are editing.
 
 ### The Edit Menu
 
@@ -232,7 +233,7 @@ The *View* menu provides the following actions.
 
 The *Function Line Numbers* option in the Editor menu provides an additional level of line-numbering. If selected, line numbers are displayed *independently* on each individual function (or operator) in the Class. This option is only enabled when you are editing a Class, Namespace script or Interface, and is disabled for all other types of object.
 
-Note that function line-numbering and general line-numbering are independent options and it is possible to have the entire Class numbered (from [0] to the number of lines in the Class) in addition to having line-numbering on each individual function.
+Function line-numbering and general line-numbering are independent options and it is possible to have the entire Class numbered (from [0] to the number of lines in the Class) in addition to having line-numbering on each individual function.
 
 ## Using the Editor
 
@@ -242,7 +243,7 @@ Type the name of your function and invoke the editor. To do this you may press S
 
 ### Line-Numbers on/off
 
-Try changing the line numbers setting by clicking on the *Line Numbers* option in the *Options* menu. Note that line-numbering on/off is effective for **all** edit windows.
+Try changing the line numbers setting by clicking on the *Line Numbers* option in the *Options* menu. Line-numbering on/off is effective for **all** edit windows.
 
 ### Adding Lines
 
@@ -256,7 +257,7 @@ Dyalog allows you to insert leading spaces in lines of a function and (unless th
 
 ### Reformatting
 
-The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [ Trace/Edit Tab](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab).
+The RD command (which by default is mapped to Keypad-Slash) reformats a function according to your **AutoFormat** and **TabStops** settings. See [Trace/Edit Tab](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#traceedit-tab).
 
 ### Deleting Lines
 
@@ -305,12 +306,12 @@ When you position the caret over a name, control word, or simple text or to the 
 When you press the <AC> key, or select *Align Comments* in the Editor's context menu, the alignment of the comments in every line in the function will be changed so that the left-most comment (Lamp) symbol is in the same column as the cursor, except that:
 
 - Comment symbols that are preceded only by white space, that is, comments in lines that contain no code, are ignored and are not adjusted in any way.
-- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-trace-edit-tab).
+- Comment symbols that lie between the first column and the first tab stop will remain in or be moved to the first column. For information on setting tab stops, see _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Edit/Trace Tab)](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#traceedit-tab).
 - Comment symbols will not move further left than the end of the statement.
 
 When a comment is re-aligned, text to the right of the left-most comment symbol (including spaces and other comment symbols) will remain fixed in relation to  that symbol.
 
-Note that there is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab).
+There is no keystroke associated with this command by default; you must define one. See _Dyalog for Microsoft Windows Installation and Configuration Reference Guide_: [Configuration Dialog (Keyboard Shortcuts Tab)](../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab).
 
 ### Stop, Trace and Monitor Controls
 
@@ -339,7 +340,7 @@ The picture below shows the result of opening the function `⎕SE.cbtop.TB_POPUP
 
 ![](img/editor-outlining-1.png)
 
-Notice that the various control structure blocks are delineated by a treeview diagram.
+The various control structure blocks are delineated by a treeview diagram.
 
 - When you hover the mouse pointer over one of the boxes that mark the start of a block, the line marking the extent of that block becomes highlighted, as shown above.
 - If you click on a ![](img/editor-outlining-collapse-icon.png) box, the corresponding section collapses, so that only the first line of the block is displayed, as shown below.
@@ -376,7 +377,7 @@ Finally, with all the sections opened:
 
 ### Array Notation
 
-The Editor allows you to edit arbitrary arrays using [array notation](../../programming-reference-guide/introduction/arrays/array-notation).
+The Editor allows you to edit arbitrary arrays using [array notation](../programming-reference-guide/introduction/arrays/array-notation.md).
 
 Any of the following invokes it:
 
@@ -470,7 +471,7 @@ The next picture shows the effect of opening just the `Main` section.
 
 ![](img/editor-classes-5.png)
 
-Notice that this section is delimited by the two statements:
+This section is delimited by the two statements:
 ```apl
       :Section Main
       ...
@@ -487,3 +488,132 @@ Similarly, the section called `Validation` is delimited by:
 ```
 
 ![](img/editor-classes-6.png)
+
+## Find and Replace Dialogs
+
+The *Find* and *Find/Replace* dialog boxes are used to locate and modify text in an Edit window.
+
+![](img/find-replace-dialog.png)
+
+|---|---|
+|Search For|Enter the text string that you want to find. The text from the last 10 searches is available from the drop-down list. If appropriate, the search text is copied from the Find Objects tool. This makes it easy to first search for functions containing a particular string, and then to locate the same string in the functions.|
+|Replace With|Enter the text string that you want to use as a replacement. The text from the last 10 replacements is available from the drop-down list.|
+|Match Case|Check this box if you want the search to be case-sensitive.|
+|Match Whole Word|Check this box if you want the search to only match only whole words.|
+|Use Regular Expressions|Check this box if you want to use Regular Expressions.|
+|Move Dialog if Hiding Match|If checked, the *Find* or *Find/Replace* dialog box will automatically position itself so as not to obscure a matched search string in the edit window.|
+|Find Next After Replace|If checked, following a replace operation, the selection will move to the next occurrence of the target string in the edit window.|
+|Direction|Select *Up* or *Down* to control the direction of search.|
+
+### Using Find and Replace
+
+Find and Replace work on the concept of a *current search string* and a *current replace string* which are entered using the *Find* and *Find/Replace* Dialog boxes. These boxes also contain buttons for performing search/replace operations.
+
+Suppose that you want to search through a function for references to the string "Adam". It is probably best to work from the start of the function, so first position the cursor there (by pressing Ctrl+Home). Then select *Find* from the *Edit* menu. The *Find* Dialog box will appear on your screen with the input cursor positioned in the edit box awaiting your input. Type "Adam" and click the *Find Next* button (or press Return), and the cursor will locate the first occurrence. Clicking *Find Next* again will locate the second occurrence. You can change the direction of the search by selecting *Up* instead of *Down*. You could search another function for "Adam" by opening a new Edit window for it and clicking *Find Next*. You do not have to redefine the search string.
+
+Now let us suppose that you wish to replace all occurrences of "Adam" with "Amanda". First select *Replace* from the *Edit* menu. This will cause the *Find Dialog* box to be replaced by the *Find/Replace* Dialog box. Enter the string "Amanda" into the box labelled *Replace* With, then click *Replace All*. All occurrences of "Adam" in the current Edit window are changed to "Amanda". To repeat the same global change in another function, simply open an edit window and click *Replace All* again. If instead you only want to change particular instances of "Adam" to "Amanda" you may use *Find Next* to locate the ones you want, and then *Replace* to make each individual alteration.
+
+Text searches are performed using PCRE. If the *Use Regular Expressions* box is checked, the full range of regular expressions provided by PCRE are available for use. See [PCRE Regular Expression Syntax Summary](../language-reference-guide/pcre-specifications.md).
+
+### Saving and Quitting
+
+To save the function and terminate the edit, press Esc (EP) or select Exit from the *File* menu. The new version of the function replaces the previous one (if any) and the edit window is destroyed.
+
+Alternatively, you can select *Fix* from the *File* menu. This fixes the new version of the function in the workspace, but leaves the edit window open. The history is also retained, so you can subsequently undo some changes and fix the function again.
+
+To abandon the edit, press Shift+Esc (QT) or select *Abort* from the *File* menu. This destroys the edit window but does not fix the function. The previous version (if any) is unchanged.
+
+## Editing Scripts and Text Files
+
+The Editor may also be used to edit Dyalog script files (`.dyalog` files) and general text files.
+
+There are two ways to choose the file to be edited. If the file exists, you can select it from the *Open source file* dialog by clicking *File/Edit Text File* from the Session menu bar.
+
+Alternatively, type `)ED` followed by the pathname to the file. To identify the name given as a file, it must either contain a slash character ("\" or "/") or be preceded by one.
+
+<h3 class="example">Examples</h3>
+
+```apl
+      )ED c:\myfiles\myscript.dyalog
+      )ED c:\myfiles\pete.txt
+      )ED \x.txt  ⍝ x.txt in current directory
+      )ED / x.txt ⍝ ditto
+```
+
+If the named file does not exist, you will be asked whether or not you want to create it:
+
+![](img/editing-text-files-new-text-file.png)
+
+If you edit a Dyalog script file, the editor will treat it as such and provide the same formatting and syntax colouring as if it were a script in the workspace.
+
+Otherwise, the file will be edited as if it were a character vector with embedded new-lines.
+
+When you exit the editor with *Exit and fix*,  you will be offered a number of alternatives depending upon the type of file, as shown below.
+
+![](img/editing-text-files-save-text-file-content.png)
+
+**Saving a Text file**
+
+If you choose *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../language-reference-guide/primitive-operators/i-beam/list-loaded-files.md) and [List Loaded File Objects](../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects.md).
+
+![](img/editing-text-files-save-script-file-content.png)
+
+**Saving a Script file**
+
+If you choose *Fix as code in the workspace* or *Save as text in the workspace*, information about the file and the text variable associated with it is retained in the workspace. This information  may be obtained using `5176⌶` and `5177⌶`. See [List Loaded Files](../language-reference-guide/primitive-operators/i-beam/list-loaded-files.md) and [List Loaded File Objects](../language-reference-guide/primitive-operators/i-beam/list-loaded-file-objects.md).
+
+### Fix as code in the workspace
+
+If you choose this option, the file will be updated and the script will also be fixed in the workspace. If the script refers to a base class or other external elements, it cannot be fixed unless these elements are also present in the workspace.
+
+### Save as text in the workspace
+
+If you choose this option, the file will be updated and the contents of the file will also be saved to a variable in the workspace. First you will see the following warning dialog, which may be disabled subsequently by checking *Do not ask this question again*.
+
+![](img/editing-text-files-save-text-warning.png)
+
+Then you will be prompted to supply its name, which may be a new name or the name of an existing variable:
+
+![](img/editing-text-files-variable-name.png)
+
+### Only save file to disk
+
+If you choose this option, the file will be updated but nothing will be changed in the workspace.
+
+### Discard changes
+
+If you choose this option, all changes will be discarded and nothing saved.
+
+## Source as Typed
+
+### Historical Introduction
+
+When an object containing executable code such as a function, operator, class, or namespace is defined in a workspace either by an editor or by the system function `⎕FX`, the object is tokenised into an internal form. Historically, this was the only form of the object, and both the editor and system functions like `⎕CR`, `⎕VR`, `⎕NR` reconstitute the source code from the internal form. This reconstituted source lacks extraneous white space and the precise numerical formatting that the user originally entered, for example.
+
+When classes and scripted namespaces were introduced, the source code was stored in text form for these objects, as it was typed, in addition to the tokens which were still used at runtime. The function `⎕SRC` was added to return this text, and a new function `⎕FIX` was added to define objects that also have source code.
+
+Subsequently, `⎕FIX` was extended to allow the definition of functions and operators which include source code, as well as the use of source files outside the workspace to store the source code of an object. However, unless a function or operator was defined using an external file, the editor continued to only store the tokenised form in the workspace, in order to save space.
+
+### Current Behaviour
+
+From version 19.0 onwards, the default is that the editor stores source code *as it was typed in by the user* for **all** objects, in addition to the tokenised form. When an object is defined from an external source file using `⎕FIX`, a copy of the source is also retained in the workspace.
+
+In order to maintain backwards compatibility with applications that rely on the canonical representation returned by `⎕CR`, `⎕VR` , `⎕NR`, these functions continue to reconstitute the source from tokens; and `⎕FX` continues to only store the tokenised form. If you wish to access the source as typed, you should use `⎕SRC`, or `60 ⎕ATX`, and you should use `⎕FIX`, to define not only namespaces and classes but functions and operators as well.
+
+When the user opens an object in the Editor, the saved source code is presented if it exists. If the object was defined from a file and the source held in the workspace differs from the contents of the file, the user will be asked to decide whether to use the file or break the link and use the source in the workspace. If no source code is available, it is reconstituted from the internal form.
+
+There is, however, no mechanism to reconstitute a script, as a whole, from its tokenised form. If there is no source code, the Namespace or Class appears as if it were created using `⎕NS` rather than having originated from a script. It cannot be opened in the Editor and the result of `⎕SRC` is empty. However, the source code for individual functions and operators within the Namespace or Class will be reconstituted from their individual tokenised code when required.
+
+The functions `⎕SRC` and `62 ⎕ATX` (most precise available source) use the same logic as described above to generate a result.
+
+Source code saved in the workspace is compressed to minimise space usage.
+
+The white space in comment statements is retained in both the compiled form and compiled form of a function.
+
+The Boolean parameter **DYALOG_DISCARD_FN_SOURCE**  (default 0) and `5172⌶` (Discard Source Information) allow the user to enable or disable this feature for functions and operators. The *AutoFormat Functions* option is automatically disabled if the **DYALOG_DISCARD_FN_SOURCE** parameter is 1. You can format code on demand.
+
+`5171⌶` (Discard Source Information) discards source code and file information for scripted objects, namespaces, classes, functions, and operators that is saved in the workspace.
+
+To ensure that they can be used by Classic Edition, the source code has been discarded from all the workspaces supplied by Dyalog as part of the distribution.
+
+See also: [Discard Source Code](../language-reference-guide/primitive-operators/i-beam/discard-source-code.md) and [Discard Source Information](../language-reference-guide/primitive-operators/i-beam/discard-source-information.md).

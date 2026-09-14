@@ -1,7 +1,5 @@
 # <span>File</span> <span>Property</span>
 
-**Description**
-
 Specifies the name of a file associated with an object.
 
 For an [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md) or [Icon](../objects/icon.md) object, this property is either a simple character vector or a 2-element nested vector.
@@ -14,6 +12,6 @@ For a [Metafile](../objects/metafile.md) object, File must be simple and specifi
 
 When applied to a [FileBox](../objects/filebox.md) object, File contains the name (or names) of the selected file (or files) depending upon the value of its [Style](style.md) (`'Single'` or `'Multi').`
 
-**Application**
+## Application
 
 Objects: [Animation](../objects/animation.md), [Bitmap](../objects/bitmap.md), [Cursor](../objects/cursor.md), [FileBox](../objects/filebox.md), [Icon](../objects/icon.md), [Metafile](../objects/metafile.md), [RichEdit](../objects/richedit.md)

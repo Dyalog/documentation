@@ -8,7 +8,7 @@ search:
 
 **Restriction**: 64-bit Unicode only
 
-This creates/saves a [shared code file](../../../../shared-code-files-user-guide/), optionally based on a list of names of functions, operators, or variables. Restrictions apply to the location and structure of objects that can be placed into a shared code file; most importantly, the names must all be visible in the root (`#`) of the active workspace. For a complete list of restrictions, see [Section 1.1](../../../../shared-code-files-user-guide/introduction/limitations/#restriction-4).
+This creates/saves a [shared code file](../../../shared-code-files-user-guide/index.md), optionally based on a list of names of functions, operators, or variables. Restrictions apply to the location and structure of objects that can be placed into a shared code file; most importantly, the names must all be visible in the root (`#`) of the active workspace. For a complete list of restrictions, see [Section 1.1](../../../shared-code-files-user-guide/introduction/limitations.md#restriction-4).
 
 `Y` is 2-element vector of vectors in which:
 
@@ -23,7 +23,7 @@ Optionally, `X` is a vector of character vectors or a matrix specifying the name
 ```
 
 !!! windows "Dyalog on Microsoft Windows"
-    A multi-user development team might need a strategy for creating (and [attaching](../attach-assimilate-detach-shared-code-files/#attach-shared-code-files) cycles of shared code files as shared code files could remain in use for some time by members of the development team. This should not be an issue with distributed applications.
+    A multi-user development team might need a strategy for creating (and [attaching](attach-assimilate-detach-shared-code-files.md#attach-shared-code-files) cycles of shared code files as shared code files could remain in use for some time by members of the development team. This should not be an issue with distributed applications.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

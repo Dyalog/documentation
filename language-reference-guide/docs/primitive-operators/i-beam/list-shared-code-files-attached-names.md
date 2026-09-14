@@ -8,7 +8,7 @@ search:
 
 **Restriction**: 64-bit Unicode only
 
-The value of `Y` specifies whether this returns a list of the [shared code files](../../../../shared-code-files-user-guide/) that are attached to the current workspace or the names in a specific shared code file.
+The value of `Y` specifies whether this returns a list of the [shared code files](../../../shared-code-files-user-guide/index.md) that are attached to the current workspace or the names in a specific shared code file.
 
 ## List shared code files
 
@@ -23,13 +23,13 @@ Lists the shared code files that are attached to the current workspace.
 - `[;1]` is the slot identifier for the fixed virtual memory address of the shared code file.
 - `[;2]` is the name (including the filename extension) of the shared code file that was loaded.
 
-The rows of the matrix (one row for each shared code file) are ordered to correspond to the order in which the shared code files were specified when they were originally attached, that is, in the right argument to [`8666⌶`](../attach-assimilate-detach-shared-code-files).
+The rows of the matrix (one row for each shared code file) are ordered to correspond to the order in which the shared code files were specified when they were originally attached, that is, in the right argument to [`8666⌶`](attach-assimilate-detach-shared-code-files.md).
 
 ## List attached names
 
 Lists the names in the shared code file identified by the specified memory address.
 
-`Y` is an integer vector that would be a valid right argument to [`⎕NL`](../../../system-functions/nl/); it identifies the nameclasses and subclasses for which the names should be listed.
+`Y` is an integer vector that would be a valid right argument to [`⎕NL`](../../system-functions/nl.md); it identifies the nameclasses and subclasses for which the names should be listed.
 
 `X` is the slot identifier (an integer in the range 1-8) for the unique fixed virtual memory address of the shared code file.
 

@@ -1,7 +1,5 @@
 # <span>LockRows</span> <span>Method 226</span>
 
-**Description**
-
 This method is used to lock one or more Rows of a [Grid](../objects/grid.md).
 However, LockRows is not supported in combination with hierarchical row titles
 as specified by the [RowTitleDepth](../properties/rowtitledepth.md) property.
@@ -74,6 +72,6 @@ P←R-(⊃GRID ⎕WG 'Index')-⎕IO
 Furthermore, the position of a locked row given by the result of the LockRows
 method changes (with the Index property) as the Grid is scrolled.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

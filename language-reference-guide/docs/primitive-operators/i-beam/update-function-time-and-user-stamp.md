@@ -10,13 +10,13 @@ search:
 
 `X` is an array of function attributes in the same format as the output of `⎕AT`.
 
-The shy result `R` is a vector of numeric items, one per each specified function containing the following values:
+The [shy](../../../programming-reference-guide/introduction/results.md#shy-results) result `R` is a vector of numeric items, one per each specified function containing the following values:
 
 |---|----------------------------------------------------------------------------------|
 |`0`|No change was made; the name is not that of a function, or the function was locked|
 |`1`|The time and user stamp were updated                                              |
 
-Note that the last item of the function timestamp must be set to 0 otherwise `1159 ⌶` will generate a `DOMAIN ERROR`. Additionally, the timestamp must be greater than `1970 1 1 0 0 0 0`.
+The last item of the function timestamp must be set to 0, otherwise `1159 ⌶` generates a `DOMAIN ERROR`. Additionally, the timestamp must be greater than `1970 1 1 0 0 0 0`.
 
 <h2 class="example">Example</h2>
 ```apl

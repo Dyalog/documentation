@@ -18,7 +18,7 @@ Simply put, the value of `⎕FR` decides the type of the result of any floating-
 
 `⎕FR` has workspace scope, and may be localised. If so, like most other system variables, it inherits its initial value from the global environment.
 
-However: Although `⎕FR` can vary, the system is not designed to allow "seamless" modification during the running of an application and the dynamic alteration of `⎕FR` is not recommended. Strange effects may occur. For example, the type of a constant contained in a line of code (in a function or class), will depend on the value of `⎕FR` when the function is fixed. Similarly, a constant typed into a line in the Session is evaluated using the value of `⎕FR` that pertained before the line is executed. Thus, it would be possible for the first line of code above to return 0, if it is in the body of a function. If the function was edited and while suspended and execution is resumed, the result would become 1. Also note:
+However: Although `⎕FR` can vary, the system is not designed to allow "seamless" modification during the running of an application and the dynamic alteration of `⎕FR` is not recommended. Strange effects may occur. For example, the type of a constant contained in a line of code (in a function or class), will depend on the value of `⎕FR` when the function is fixed. Similarly, a constant typed into a line in the Session is evaluated using the value of `⎕FR` that pertained before the line is executed. Thus, it would be possible for the first line of code above to return 0, if it is in the body of a function. If the function was edited and while suspended and execution is resumed, the result would become 1. Consider also:
 ```apl
       ⎕FR←1287
       x←1÷3
@@ -62,10 +62,11 @@ Structural functions generally do NOT change the type, for example:
 DOMAIN ERROR
 ```
 
-WARNING: The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, because:
+!!! Warning "Warning"
+    The use of COMPLEX numbers when `⎕FR` is 1287 is not recommended, because:
 
-- any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision
-- all comparisons are done using `⎕DCT` when `⎕FR` is 1287, and this is equivalent to 0 for complex numbers.
+    - any 128-bit decimal array into which a complex number is inserted or appended will be forced in its entirety into complex representation, potentially losing precision
+    - all comparisons are done using `⎕DCT` when `⎕FR` is 1287, and this is equivalent to 0 for complex numbers.
 
 ## Conversion between Decimal and Binary
 
@@ -93,8 +94,8 @@ The Dyalog class is modelled closely after the existing System.Decimal type, pro
 
 The "bridge" between Dyalog and .NET is able to cast floating-point numbers to or from System.Double, System.Decimal and Dyalog.Dec128 (and perform all other reasonable casts to integer types etc.). Casting a Dyalog.Dec128 to or from strings will perform a "lossless" conversion.
 
-Incoming .NET data types VT_DECIMAL (96-bit integer) and VT_CY (currency value represented by a 64-bit two's complement integer, scaled by 10,000) are converted to 126-bit decimal numbers (DECFs). This conversion is performed independently of the value of `⎕FR`.
+Incoming .NET data types VT_DECIMAL (96-bit integer) and VT_CY (currency value represented by a 64-bit two's complement integer, scaled by 10,000) are converted to 128-bit decimal numbers (DECFs). This conversion is performed independently of the value of `⎕FR`.
 
 If you want to perform arithmetic on values imported in this way, then you should set `⎕FR` to 1287, at least for the duration of the calculations.
 
-Note that the .NET interface converts System.Decimal to DECFs but does not convert System.Int64 to DECFs.
+The .NET interface converts System.Decimal to DECFs but does not convert System.Int64 to DECFs.

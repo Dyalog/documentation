@@ -93,13 +93,13 @@ Classic edition: `⎕FIX`, Link, SALT, and Editor automatically translate Unicod
 
 ### Component Files
 
-Component files have a Unicode property. When this is enabled, all characters can be written as Unicode data to the file. By default, the Unicode property is switched on for Unicode editions and off for Classic editions. This property can be changed using the [`⎕FPROPS`](../../language-reference-guide/system-functions/fprops/) system function.
+Component files have a Unicode property. When this is enabled, all characters can be written as Unicode data to the file. By default, the Unicode property is switched on for Unicode editions and off for Classic editions. This property can be changed using the [`⎕FPROPS`](../language-reference-guide/system-functions/fprops.md) system function.
 
 When a Unicode edition writes to a component file that cannot contain Unicode data, character data is mapped using `⎕AVU`; it can, therefore, be read without problems by Classic editions.
 
 A `TRANSLATION ERROR` will be generated if:  
 
-* a Unicode edition writes to a non-Unicode component file (that is, either a 32-bit file or a 64-bit file when the Unicode property is currently off) if the data being written contains characters that are not in `⎕AVU`.
+* a Unicode edition writes to a non-Unicode component file (that is, a large-span file when the Unicode property is currently off) if the data being written contains characters that are not in `⎕AVU`.
 * a Classic edition attempts to read a component containing Unicode data that is not in `⎕AVU` from a component file.
 
 ### Workspaces
@@ -110,4 +110,4 @@ A `TRANSLATION ERROR` will be generated if a Classic edition attempts to `)LOAD`
 Session files (**.dse**) can only be used on the platform on which they were created and saved. Under Microsoft Windows, Session files can only be used by an interpreter with the same architecture (32&#8209;bit/64&#8209;bit) as the interpreter that saved them.
 
 ## Log Files
-Log files (**.dlf**) can only be used by the version and edition of Dyalog with which they were created and saved. 
+Log files (**.dlfx**) can only be used by the version and edition of Dyalog with which they were created and saved. 

@@ -1,7 +1,5 @@
 # <span>BCol</span> <span>Property</span>
 
-**Description**
-
 This property defines the background colour(s) of an object.
 
 For objects with
@@ -38,7 +36,7 @@ If BCol contains a 3-element vector, it specifies the intensity of the red,
 green and blue components of the colour as values in the range 0-255. For
 example, (255 0 0) is red and (255 255 0) is yellow.
 
-Note that the colour realised depends upon the capabilities of the display
+The colour realised depends upon the capabilities of the display
 adapter and driver, and the current Windows colour map.
 
 For a [Button](../objects/button.md), BCol is only effective if the
@@ -53,6 +51,6 @@ only when a non-solid line ([LStyle](lstyle.md) 1-4) is
 used. It also specifies the colour used to fill the spaces between hatch lines
 if a hatch fill ([FStyle](fstyle.md) 1-6) is used.
 
-**Application**
+## Application
 
 Objects: [ActiveXContainer](../objects/activexcontainer.md), [ActiveXControl](../objects/activexcontrol.md), [Animation](../objects/animation.md), [Button](../objects/button.md), [ButtonEdit](../objects/buttonedit.md), [Circle](../objects/circle.md), [Combo](../objects/combo.md), [ComboEx](../objects/comboex.md), [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Edit](../objects/edit.md), [Ellipse](../objects/ellipse.md), [Form](../objects/form.md), [Grid](../objects/grid.md), [Group](../objects/group.md), [Label](../objects/label.md), [List](../objects/list.md), [ListView](../objects/listview.md), [MDIClient](../objects/mdiclient.md), [Menu](../objects/menu.md), [MenuItem](../objects/menuitem.md), [Poly](../objects/poly.md), [ProgressBar](../objects/progressbar.md), [Rect](../objects/rect.md), [RichEdit](../objects/richedit.md), [Scroll](../objects/scroll.md), [Separator](../objects/separator.md), [SM](../objects/sm.md), [Spinner](../objects/spinner.md), [Splitter](../objects/splitter.md), [Static](../objects/static.md), [StatusBar](../objects/statusbar.md), [StatusField](../objects/statusfield.md), [SubForm](../objects/subform.md), [TabBar](../objects/tabbar.md), [TabBtn](../objects/tabbtn.md), [Text](../objects/text.md), [TipField](../objects/tipfield.md), [ToolBar](../objects/toolbar.md), [TrackBar](../objects/trackbar.md), [TreeView](../objects/treeview.md), [UpDown](../objects/updown.md)

@@ -1,13 +1,11 @@
 # <span>KeyError</span> <span>Event 23</span>
 
-**Description**
-
 If enabled, this event is generated when the user presses and releases a key
 on the keyboard that is invalid for the FieldType of the object and has been
 ignored. This event is reported for information only and you may not disable it
 or modify it in any way.
 
-The event message reported as the result of [`⎕DQ`](../../../language-reference-guide/system-functions/dq),
+The event message reported as the result of [`⎕DQ`](../../language-reference-guide/system-functions/dq.md),
 or supplied as the right argument to your callback function, is a 6-element
 vector as follows :
 
@@ -40,6 +38,6 @@ Thus a Shift State of 3 indicates that the user has pressed the key in
 conjunction with both the Shift and Ctrl keys. A Shift State of 0 indicates that
 the user pressed the key on its own.
 
-**Application**
+## Application
 
 Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Spinner](../objects/spinner.md)

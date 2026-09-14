@@ -9,7 +9,7 @@ search:
 
 Items in `X` and `Y` are considered the same if `X≡Y` returns 1 for those items.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Intersection.
+`⎕CT` and `⎕DCT` are  implicit arguments of _intersection_.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -20,7 +20,7 @@ ARA
 1 2
 ```
 
-For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../programming-reference-guide/introduction/search-functions-and-hash.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -9,7 +9,7 @@ In common with `:Trap` and `⎕TRAP`, error numbers 0 and 1000 are catch-alls fo
 
 When an error is generated, the system searches dynamically through the calling functions for an error-guard that matches the error. If one is found, the execution environment is unwound to its state immediately *prior* to the error-guard's execution and the body of the error-guard is evaluated as the result of the function. This means that, during evaluation of the body, the guard is no longer in effect and so the danger of a hang caused by an infinite "trap loop", is avoided.
 
-Notice that you can provide "cascading" error trapping in the following way:
+You can provide "cascading" error trapping in the following way:
 ```apl
 
       0::try_2nd
@@ -43,7 +43,7 @@ div←{                  ⍝ Tolerant division:: ⍺÷0 → ⍺.
 }
 ```
 
-Notice that some arguments may cause `div` to recur twice:
+Some arguments can cause `div` to recur twice:
 ```apl
        6 4 2 div 3 2
 →      6 4 2 div 3 2 0
@@ -69,7 +69,7 @@ domain
 length
 ```
 
-## Note
+## Tail Calls
 
 Following the setting of an error-guard, subsequent function calls will disable tail call optimisation:
 ```apl

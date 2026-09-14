@@ -41,21 +41,21 @@ The .NET Framework interface requires version 4.0 or greater of Microsoft .NET F
  
 * Microsoft .NET Framework version 4.5 is needed for full data binding support.  
 Note: This includes support for the <code class="language-other">INotifyCollectionChanged</code> interface, which is used by Dyalog to notify a data consumer when the contents of a variable that is data bound as a list of items changes.  
-* IIS (and ASP.NET) need to be installed before installing Dyalog. If these are not present when Dyalog is installed, the **[DYALOG]/Samples/asp.net** directory will not be installed.  
+* IIS (and ASP.NET) need to be installed before installing Dyalog otherwise the **[DYALOG]/Samples/asp.net** directory will not be installed.  
 
 ## Chromium Embedded Framework (CEF)
 
-Dyalog v21.0 is supplied with CEF version 138 on all supported platforms.
+Dyalog v21.0 is supplied with CEF v144 on Microsoft Windows and v138 on all other supported platforms.
 
 In versions of CEF supplied with Dyalog v19.0 and earlier, pop-ups and light mode were enabled by default. This changed with Dyalog v20.0. To minimise differences between Dyalog v19.0 (and earlier) and Dyalog v20.0 (and later) when using CEF-based applications, two temporary environment variables (not configuration parameters) have been introduced to preserve these settings for Dyalog v20.0 (and later). These are:
 
-- DYALOG_CEF_ALLOW_POPUPS<br />Specifies whether pop-ups are disabled for CEF-based applications (the default for CEF v138 depends on the operating system). Possible values are:
+- DYALOG_CEF_ALLOW_POPUPS<br />Specifies whether pop-ups are disabled for CEF-based applications (the default for CEF depends on the operating system). Possible values are:
     - `1` : pop-ups are not disabled (equivalent to <code class="language-nonAPL">--disable-popup-blocking</code>)
 	- any other value is ignored, and CEF's default (as determined by the user's operating system preferences) is used.  
 	
 	The default is `1`.
 	
-- DYALOG_CEF_DARK_MODE<br />Specifies whether CEF-based applications are displayed in dark or light mode (the default for CEF v138 is dark mode). Possible values are:
+- DYALOG_CEF_DARK_MODE<br />Specifies whether CEF-based applications are displayed in dark or light mode (the default for CEF is dark mode). Possible values are:
     - `0` : display using light mode (equivalent to <code class="language-nonAPL">--force-light-mode</code>)
     - `1` : display using dark mode (equivalent to <code class="language-nonAPL">--force-dark-mode</code>)
 	- `2` : display using CEF's default (as determined by the user's operating system preferences)  
@@ -74,8 +74,11 @@ To see which version of CEF was used when the HTMLRenderer was built, query the 
 ```apl
       'hr' ⎕WC 'HTMLRenderer'
       hr.CEFVersion[2 3]      ⍝ CEF major version and commit number
-121 3
+144 0
 ```
 ### Auxiliary Processors
+
+!!! Legacy "Legacy"
+    Auxiliary Processors are not supported for new applications; they are available for backwards-compatibility purposes only.
 
 If the configuration parameter `ENABLE_CEF` is `1`, Auxiliary Processors cannot be used (they hang on error). By default, `ENABLE_CEF` is `1` (unless you are not running under a desktop, for example, you are running Dyalog in a PuTTY session; in this case the default is `0`).

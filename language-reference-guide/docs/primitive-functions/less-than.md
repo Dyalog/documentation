@@ -7,7 +7,7 @@ search:
 
 `Y` may be any numeric array. `X` may be any numeric array. `R` is Boolean. `R` is 1 if `X` is less than `Y` and `X=Y` is 0. Otherwise `R` is 0.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Less Than.
+`⎕CT` and `⎕DCT` are  implicit arguments of _less than_.
 
 <h2 class="example">Examples</h2>
 ```apl
