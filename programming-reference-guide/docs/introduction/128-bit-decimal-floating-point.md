@@ -94,7 +94,7 @@ The Dyalog class is modelled closely after the existing System.Decimal type, pro
 
 The "bridge" between Dyalog and .NET is able to cast floating-point numbers to or from System.Double, System.Decimal and Dyalog.Dec128 (and perform all other reasonable casts to integer types etc.). Casting a Dyalog.Dec128 to or from strings will perform a "lossless" conversion.
 
-Incoming .NET data types VT_DECIMAL (96-bit integer) and VT_CY (currency value represented by a 64-bit two's complement integer, scaled by 10,000) are converted to 126-bit decimal numbers (DECFs). This conversion is performed independently of the value of `⎕FR`.
+Incoming .NET data types VT_DECIMAL (96-bit integer) and VT_CY (currency value represented by a 64-bit two's complement integer, scaled by 10,000) are converted to 128-bit decimal numbers (DECFs). This conversion is performed independently of the value of `⎕FR`.
 
 If you want to perform arithmetic on values imported in this way, then you should set `⎕FR` to 1287, at least for the duration of the calculations.
 
