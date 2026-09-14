@@ -13,4 +13,4 @@ Which value to set depends on how you run Dyalog:
 
 - If you use a runtime interpreter to distribute your application, you do not need to change the default. If you use one on a machine that you control, and you want the affected tools, set **DYALOG_INITSESSION** to `1`; this lengthens the start-up process.
 - If you use shell scripts for deployment, you do not need to change the default. If you use shell scripts as an alternative to the interactive interface, set **DYALOG_INITSESSION** to `1`.
-- If you are developing an application that is intended to run with a runtime interpreter, set **DYALOG_INITSESSION** to `0` for the development interpreter, so that it emulates the runtime environment. This identifies any inadvertent calls to tools that a runtime interpreter does not provide.
+- If you are developing an application that is intended to run with a runtime interpreter, set **DYALOG_INITSESSION** to `0` for the development interpreter so that it emulates the runtime environment. This identifies any inadvertent calls to tools that a runtime interpreter does not provide.
