@@ -11,7 +11,7 @@ The **actfns.dws** workspace used in this example is supplied in the **[DYALOG]\
     )EDIT ○actuarial
     ```
 
-    then define [`⎕USING`](../../../language-reference-guide/system-functions/using/) as follows:
+    then define [`⎕USING`](../../language-reference-guide/system-functions/using.md) as follows:
     ```apl
     :Using System
     :Using System.Web.UI,system.web.dll
@@ -38,7 +38,7 @@ The **actfns.dws** workspace used in this example is supplied in the **[DYALOG]\
 
 ## The Page_Load Function
 
-The `Page_Load` function must be declared as [`:Access Public`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/access/). `Page_Load` must be spelt exactly as shown as it is this name that causes the function to supersede the base class <code class="language-nonAPL">Page_Load</code> method of the same name.
+The `Page_Load` function must be declared as [`:Access Public`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/access.md). `Page_Load` must be spelt exactly as shown as it is this name that causes the function to supersede the base class <code class="language-nonAPL">Page_Load</code> method of the same name.
 
 For example, the `Page_Load` function of the actuarial class in **actfns.dws** is:
 ```apl
@@ -175,7 +175,7 @@ To make the `VALIDATE_INT` function available to the calling web page, it is exp
 
 Line `[4]` assigns its (2-element) argument to `source` and `args` respectively. Both are namespace references to .NET objects. `source` is the object that fired the event (<code class="language-nonAPL">CustomValidator_INT</code>). `args` is an object that represents the event. Its <code class="language-nonAPL">Value</code> property returns the text in the control being validated, in this case the control called <code class="language-nonAPL">EINT1</code>.
 
-Line `[6]` converts the text in the <code class="language-nonAPL">EINT</code> control to a number, using the <code class="language-nonAPL">ToDouble</code> method of the <code class="language-nonAPL">System.Convert</code> class. You could use `⎕VFI`, but the <code class="language-nonAPL">Convert</code> methods automatically cater for National Language numerical formats. This statement is executed within a [`:Trap`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap/) control structure because the method will generate a .NET exception if the data in the field is not a valid number.
+Line `[6]` converts the text in the <code class="language-nonAPL">EINT</code> control to a number, using the <code class="language-nonAPL">ToDouble</code> method of the <code class="language-nonAPL">System.Convert</code> class. You could use `⎕VFI`, but the <code class="language-nonAPL">Convert</code> methods automatically cater for National Language numerical formats. This statement is executed within a [`:Trap`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) control structure because the method will generate a .NET exception if the data in the field is not a valid number.
 
 Lines `[8 11]` set the <code class="language-nonAPL">IsValid</code> property of the <code class="language-nonAPL">ServerValidateEventArgs</code> object `args` to `0` or `1` accordingly. This also sets the <code class="language-nonAPL">IsValid</code> property of the validation control represented by `source`. The system will automatically display the error message associated with any validation control whose `IsValid` property is 0. Furthermore, the page itself has an <code class="language-nonAPL">IsValid</code> property, which is the logical-AND of all the <code class="language-nonAPL">IsValid</code> properties of all the validation controls on the page. This is used later by the calculation function `CALC_FSLTAB_VALUES`.
 

@@ -66,7 +66,7 @@ R←⍳N
 
 `Primitives` contains one public method/function, called `IndexGen`.
 
-The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement. This has the following syntax:
+The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature.md) statement. This has the following syntax:
 ```apl
 :Signature [rslttype←] name [arg1type [arg1name] [,argNtype [argNname]]*]
 ```
@@ -79,7 +79,7 @@ where:
 
 - `argNtype [argNname]` are any arguments are to be supplied, each type-name pair separated from the next by a comma. In this example, the function takes a single integer as its argument.
 
-When the class is fixed, APL will try to find the .NET data types that have been specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET types, then a warning will be displayed in the status window and APL will not fix the class. If you see such a warning, you have either entered an incorrect data type name, or you have not set [`:using`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using/) correctly, or some other syntax problem has been detected (for example, the function could be missing a terminating `∇`). In this example, the only data type used is `System.Int32`; as `:using System` is included in the definition, `Int32` is correctly located.
+When the class is fixed, APL will try to find the .NET data types that have been specified for the result and for the parameters. If one or more of the data types are not recognised as available .NET types, then a warning will be displayed in the status window and APL will not fix the class. If you see such a warning, you have either entered an incorrect data type name, or you have not set [`:using`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using.md) correctly, or some other syntax problem has been detected (for example, the function could be missing a terminating `∇`). In this example, the only data type used is `System.Int32`; as `:using System` is included in the definition, `Int32` is correctly located.
 
 The assembly can now be created. This is done in one of the following ways:
 
@@ -127,7 +127,7 @@ Click **Start** to run the program. The results are displayed in a console windo
 
 ## Example 2
 
-In [Example 1](#example-1), APL supplied a default constructor, which was used to create an instance of the `Primitives` class. It was inherited from the base class (<code class="language-nonAPL">System.Object</code>) and called without arguments. This example extends that by adding a constructor that specifies the value of [`⎕IO`](../../../language-reference-guide/system-functions/io/).
+In [Example 1](#example-1), APL supplied a default constructor, which was used to create an instance of the `Primitives` class. It was inherited from the base class (<code class="language-nonAPL">System.Object</code>) and called without arguments. This example extends that by adding a constructor that specifies the value of [`⎕IO`](../../language-reference-guide/system-functions/io.md).
 
 Load the **aplclasses2.dws** workspace from **[DYALOG]\Samples\aplclasses\aplclasses2**, then view the `Primitives` class:
 ```apl
@@ -238,7 +238,7 @@ Click **Start** to run the program. As we have built the Dyalog .NET class to us
 
 ![Dyalog Session displaying the DOMAIN ERROR](../img/s-dotnet-classes-eg2a-2.png){ #eg3error }
 
-In Dyalog, the [`)SI`](../../../language-reference-guide/system-commands/si/) system command provides information about the entire calling stack, including the .NET function calls that are involved. In this example, the `CTOR` function (the constructor for this APL .NET class) is running in APL thread 1, which is associated with the system thread 3232.
+In Dyalog, the [`)SI`](../../language-reference-guide/system-commands/si.md) system command provides information about the entire calling stack, including the .NET function calls that are involved. In this example, the `CTOR` function (the constructor for this APL .NET class) is running in APL thread 1, which is associated with the system thread 3232.
 
 This simple error can be corrected by entering:
 ```apl
@@ -256,7 +256,7 @@ The correct .NET behaviour when an APL function fails with an error is to genera
 
 In the .NET Framework, exceptions are implemented as .NET classes. The base exception is implemented by the <code class="language-nonAPL">System.Exception class</code>, but there are a number of _super classes_, such as <code class="language-nonAPL">System.ArgumentException</code> and <code class="language-nonAPL">System.ArithmeticException</code> that inherit from it.
 
-[`⎕SIGNAL`](../../../language-reference-guide/system-functions/signal/) can be used to generate an exception. To do this, its right argument should be `90` and its left argument should be an object of type <code class="language-nonAPL">System.Exception</code> or an object that inherits from <code class="language-nonAPL">System.Exception</code>.
+[`⎕SIGNAL`](../../language-reference-guide/system-functions/signal.md) can be used to generate an exception. To do this, its right argument should be `90` and its left argument should be an object of type <code class="language-nonAPL">System.Exception</code> or an object that inherits from <code class="language-nonAPL">System.Exception</code>.
 
 When you create the instance of the <code class="language-nonAPL">Exception</code> class, you can specify a string (which will be its <code class="language-nonAPL">Message</code> property) containing information about the error.
 
@@ -316,7 +316,7 @@ Click **Start** to run the program. The results are displayed in a console windo
 
 This example builds on [Example 3](#example-3), and illustrates how you can implement _constructor overloading_ by establishing several different constructor functions.
 
-For this example, when a client application creates an instance of the `Primitives` class, it should be able to specify either the value of `⎕IO` or the values of both `⎕IO` and [`⎕ML`](../../../language-reference-guide/system-functions/ml/). The simplest way to implement this is to have two public constructor functions, `CTOR1` and `CTOR2`, which call a private constructor function, `CTOR`.
+For this example, when a client application creates an instance of the `Primitives` class, it should be able to specify either the value of `⎕IO` or the values of both `⎕IO` and [`⎕ML`](../../language-reference-guide/system-functions/ml.md). The simplest way to implement this is to have two public constructor functions, `CTOR1` and `CTOR2`, which call a private constructor function, `CTOR`.
 
 Load the **aplclasses4.dws** workspace from **[DYALOG]\Samples\aplclasses\aplclasses4**; the new version of the `Primitives` class includes the following additions:
 ```apl

@@ -80,7 +80,7 @@ This sample defines a class called `LoanService` that is based on `System.Web.Se
 
 `CalcPayments` takes five integer parameters (described within the code) and returns an object of type `LoanResult`.
 
-The block of code that defines the sub-class `LoanResult` must be within the [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) and `:EndClass` statements of the main class, `LoanService`. You can define any number of internal classes in this way.
+The block of code that defines the sub-class `LoanResult` must be within the [`:Class`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class.md) and `:EndClass` statements of the main class, `LoanService`. You can define any number of internal classes in this way.
 
 The `LoanResult` class only comprises fields, and it does not export any methods or properties. There are also no constructor methods defined, and it relies solely on its default constructor that is inherited from its base class, `System.Object`. The default constructor is called without any parameters and does nothing except create an instance of the class; the fields it contains initialised to zero. In this sample, that is sufficient, as all the fields will be filled in explicitly later.
 ```apl
@@ -100,7 +100,7 @@ The `Periods` field is defined to be an array of integers, and the `InterestRate
 
 `Payments` is also defined to be 1‑dimensional even though it is, more naturally, a 2‑dimensional matrix. The reason for this is that web services do not currently support multi-dimensional arrays. This is a .NET Framework restriction and not a Dyalog restriction.
 
-Line `[13]` gets a new instance of the `LoanResult` class by doing [`⎕New LoanResult`](../../../language-reference-guide/system-functions/new/). It then assigns values to each of the three fields in lines `[14]`, `[15]`, and `[18]`.
+Line `[13]` gets a new instance of the `LoanResult` class by doing [`⎕New LoanResult`](../../language-reference-guide/system-functions/new.md). It then assigns values to each of the three fields in lines `[14]`, `[15]`, and `[18]`.
 
 ### Testing from a Browser
 
@@ -561,7 +561,7 @@ In other previous webservice samples ([EG1](#sample-eg1), [LoanService](#sample-
 
 Given this instruction, ASP.NET will locate the `APLServices.Example` web service by searching the **bin** sub-directory for assemblies. Therefore, to make this work, we need to create a .NET assembly in **[DYALOG]\Samples\asp.net\webservices\bin**. The assembly should contain a .NET namespace named <code class="language-nonAPL">APLServices</code>, which in turn defines a class named <code class="language-nonAPL">Example</code>.
 
-The procedure for creating .NET classes and assemblies in Dyalog was described in [Writing .NET Classes](../../writing-dotnet-classes/) and its sub-sections. The same procedure is performed to make a web service class.
+The procedure for creating .NET classes and assemblies in Dyalog was described in [Writing .NET Classes](../writing-dotnet-classes/index.md) and its sub-sections. The same procedure is performed to make a web service class.
 
 **[DYALOG]\Samples\asp.net\webservices\bin** already contains copies of the dependent Dyalog DLLs that are required to execute the code.
 

@@ -28,7 +28,7 @@ The <code class="language-nonAPL">Render</code> method defined by the <code clas
 
 In APL terms, the argument to the `Render` function, `output`, will be a namespace reference, and the function can call its `WriteLine` method with a character vector argument. This argument can contain any valid HTML string and defines the appearance of the SimpleCtl control.
 
-Using the [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement, the `Render` function is defined to have the same syntax as the method it overrides, that is, it does not return a result <code class="language-nonAPL">void</code> and takes a single parameter of type <code class="language-nonAPL">HtmlTextWriter</code>. To successfully replace the base class method, the `Render` function must have exactly this `:Signature`.
+Using the [`:Signature`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature.md) statement, the `Render` function is defined to have the same syntax as the method it overrides, that is, it does not return a result <code class="language-nonAPL">void</code> and takes a single parameter of type <code class="language-nonAPL">HtmlTextWriter</code>. To successfully replace the base class method, the `Render` function must have exactly this `:Signature`.
 
 See [Using the SimpleCtl Control](#using-the-simplectl-control) for information on including the SimpleCtl control in any .NET Framework web page.
 

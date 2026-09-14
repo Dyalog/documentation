@@ -531,7 +531,7 @@ Although this approach appears to be more verbose than when using XAML (a 120‑
 
 This code can be examined line-by-line.
 
-Lines `[2 5]` define [`⎕USING`](../../../language-reference-guide/system-functions/using/) so that the appropriate .NET Framework assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
+Lines `[2 5]` define [`⎕USING`](../../language-reference-guide/system-functions/using.md) so that the appropriate .NET Framework assemblies are on the search-path. The <code class="language-nonAPL">ScrollBar</code> control is in <code class="language-nonAPL">System.Windows.Controls.Primitives</code> and not <code class="language-nonAPL">System.Windows.Controls</code> like the others.
 ```apl
 
 [2]    ⎕USING←,⊂'System.Windows.Controls,WPF/PresentationFramework.dll'

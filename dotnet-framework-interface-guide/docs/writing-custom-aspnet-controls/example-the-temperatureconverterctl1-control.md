@@ -8,7 +8,7 @@ In this example, the `TemperatureConverterCtl1` control gathers together two tex
 
 The `TemperatureConverterCtl1` control contains other standard controls as child controls. A control that acts as a container must implement an interface called <code class="language-nonAPL">INamingContainer</code>.
 
-This interface does not require any methods; it merely acts as a marker. So the [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement specifies that it provides this interface:
+This interface does not require any methods; it merely acts as a marker. So the [`:Class`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class.md) statement specifies that it provides this interface:
 ```apl
 :Class TemperatureConverterCtl1: Control, System.Web.UI.INamingContainer
 ```

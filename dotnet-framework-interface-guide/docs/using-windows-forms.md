@@ -109,9 +109,9 @@ Function `EG1` illustrates how to create and use a simple modal dialog box:
 
 Much of the function is self-explanatory, but some points are noteworthy:
 
-- Lines `[1-2]` set [`⎕USING`](../../language-reference-guide/system-functions/using/) to include the .NET namespaces <code class="language-nonAPL">System.Windows.Forms</code> and <code class="language-nonAPL">System.Drawing</code>.
+- Lines `[1-2]` set [`⎕USING`](../language-reference-guide/system-functions/using.md) to include the .NET namespaces <code class="language-nonAPL">System.Windows.Forms</code> and <code class="language-nonAPL">System.Drawing</code>.
 
-- Lines `[6,8,9]` create a `Form` and two `Button` objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the [`⎕NEW`](../../language-reference-guide/system-functions/new/) system function is only called with a class argument.
+- Lines `[6,8,9]` create a `Form` and two `Button` objects. As yet, they are unconnected. The constructor for both classes is defined to take no arguments, so the [`⎕NEW`](../language-reference-guide/system-functions/new.md) system function is only called with a class argument.
 
 - Line `[14]` shows how the `Location` property is set by first creating a new `Point` object with a specific pair of (`x` and `y`) values.
 
@@ -197,7 +197,7 @@ In `EG2A` (an "improved" version of `EG2`), line `[7]` takes advantage of the fa
 
 ## Non-Modal Forms
 
-Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ ([`&`](../../language-reference-guide/primitive-operators/spawn/)) see [Threading](implementation-details/threading.md) for further details.
+Non-modal forms are displayed using the <code class="language-nonAPL">Run</code> method of the <code class="language-nonAPL">System.Windows.Forms.Application</code> object. This method is designed to be called once, and only once, during the life of an application, which seems problematic for during APL development. Fortunately, in practice the restriction is that <code class="language-nonAPL">Application.Run</code> can only be run once on a single system thread but it can be run successively on different system threads. During development, you can, therefore, test a function that calls <code class="language-nonAPL">Application.Run</code> by running it on a new APL thread using _spawn_ ([`&`](../language-reference-guide/primitive-operators/spawn.md)) see [Threading](implementation-details/threading.md) for further details.
 
 There are several examples of non-modal forms in **[DYALOG]\Samples**:
 
@@ -220,7 +220,7 @@ There are several examples of non-modal forms in **[DYALOG]\Samples**:
 
 - tetris workspace<br />The **[DYALOG]\Samples\winforms\tetris.dws** workspace contains a sample that demonstrates the use of graphics. It is a direct translation into APL from a C# sample (WinForms-Graphics-Tetris) that was distributed on the Visual Studio .NET Beta 2 Resource CD.
 
-- webservices workspace<br />The `WFGOLF` function in the **[DYALOG]\Samples\asp.net\webservices\webservices.dws** workspace performs the same task as the `GOLF` function in the same workspace, but it uses <code class="language-nonAPL">Windows.Forms</code> instead of the built-in Dyalog GUI.<br />`WFGOLF` and its callback functions `WFBOOK` and `WFSS` perform exactly the same task, with almost identical dialog box appearance, as `GOLF` and its callbacks `BOOK` and `SS` (described in [Using GolfService from Dyalog](../calling-web-services/#using-golfservice-from-dyalog)).
+- webservices workspace<br />The `WFGOLF` function in the **[DYALOG]\Samples\asp.net\webservices\webservices.dws** workspace performs the same task as the `GOLF` function in the same workspace, but it uses <code class="language-nonAPL">Windows.Forms</code> instead of the built-in Dyalog GUI.<br />`WFGOLF` and its callback functions `WFBOOK` and `WFSS` perform exactly the same task, with almost identical dialog box appearance, as `GOLF` and its callbacks `BOOK` and `SS` (described in [Using GolfService from Dyalog](calling-web-services.md#using-golfservice-from-dyalog)).
 
     !!! Info "Information"
         When you run `WFGOLF` or `GOLF` for the first time, you must supply an argument of `1` to force the creation of the proxy class for the <code class="language-nonAPL">GolfService</code> web service.

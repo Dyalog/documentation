@@ -28,7 +28,7 @@ The first line in a web service script must be a declaration statement such as:
 
 where `ServiceName` is an arbitrary name that identifies your web service.
 
-The next statement must be a [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement that declares the name of the web service and the base class from which it inherits. The base class will normally be <code class="language-nonAPL">System.Web.Services.WebService</code>. For example:
+The next statement must be a [`:Class`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class.md) statement that declares the name of the web service and the base class from which it inherits. The base class will normally be <code class="language-nonAPL">System.Web.Services.WebService</code>. For example:
 ```apl
 :Class ServiceName: System.Web.Services.WebService
 ```

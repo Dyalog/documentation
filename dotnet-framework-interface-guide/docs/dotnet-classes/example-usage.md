@@ -82,7 +82,7 @@ For more information on overloading, see [Overload Constructors](advanced-techni
 
 The .NET Framework provides a range of classes for accessing the internet from a program. This section works through an example that shows how to read the contents of a web page. It is complicated, but realistic (for example, it includes code to cater for a firewall/proxy connection to the internet). It is only 9 lines of APL code, but each line requires careful explanation.
 
-Start by defining [`⎕USING`](../../../language-reference-guide/system-functions/using/) so that it specifies all of the necessary .NET namespaces and assemblies:
+Start by defining [`⎕USING`](../../language-reference-guide/system-functions/using.md) so that it specifies all of the necessary .NET namespaces and assemblies:
 ```apl
       ⎕USING←'System,System.dll' 'System.Net' 'System.IO'
 ```

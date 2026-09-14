@@ -4,7 +4,7 @@
 
 For TemperatureConverterCtl1, all the data transfers between the browser and the server, relating to the standard child controls that it contains, are handled automatically by the controls themselves. Rendered controls require more programming as it is the responsibility of the control developer to do the data transfer. The data transfer is managed through two interfaces, called <code class="language-nonAPL">IPostBackDataHandler</code> and <code class="language-nonAPL">IPostBackEventHandler</code>.
 
-The [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement for TemperatureConverterCtl2 specifies that it provides these interfaces:
+The [`:Class`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class.md) statement for TemperatureConverterCtl2 specifies that it provides these interfaces:
 ```apl
 :Class TemperatureConverterCtl2: Control, System.Web.UI.IPostBackDataHandler, System.Web.UI.IPostBackEventHandler
 ```
@@ -38,7 +38,7 @@ The `CentigradeValue`'s `set` function resets the value of `_CentigradeValue` to
        ∇
 ```
 
-The _property get_ and _property set_ functions for the `FahrenheitValue` property are similarly defined. The [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/)s for these functions are similar to those for the `CentigradeValue` functions.
+The _property get_ and _property set_ functions for the `FahrenheitValue` property are similarly defined. The [`:Signature`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature.md)s for these functions are similar to those for the `CentigradeValue` functions.
 
 ## Rendering the Control
 

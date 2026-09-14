@@ -111,7 +111,7 @@ The monadic forms of the _grade up_ (`⍋`), _grade down_ (`⍒`), _minimum_ (`�
 
 When a .NET object generates an error, it does so by throwing an _exception_. An exception is a .NET class whose ultimate base class is <code class="language-nonAPL">System.Exception</code>.
 
-The system constant [`⎕EXCEPTION`](../../../language-reference-guide/system-functions/exception/) returns a reference to the most recently generated exception object.
+The system constant [`⎕EXCEPTION`](../../language-reference-guide/system-functions/exception.md) returns a reference to the most recently generated exception object.
 
 For example, if you attempt to create an instance of a <code class="language-nonAPL">DateTime</code> object with a year that is outside its range, the constructor throws an exception. This causes APL to report a (trappable) `EXCEPTION` error (error number `90`) and access to the exception object is provided by `⎕EXCEPTION`.
 ```apl
@@ -133,7 +133,7 @@ If a .NET function is overloaded in terms of the types of arguments that it acce
 
 Occasionally it might be desirable to override this mechanism and explicitly specify which overload to use or the .NET types that APL should map arrays to before calling a .NET function. For example, if a parameter to a .NET function is declared as type <code class="language-nonAPL">System.Object</code>, it might be necessary to force the APL argument to be cast to a particular type of <code class="language-nonAPL">Object</code> before the function is called.
 
-These requirements can be met by calling the function and specifying the _variant_ operator ([`⍠`](../../../language-reference-guide/primitive-operators/variant/)) with the `OverloadTypes` or the `CastToTypes` option respectively. Each option takes an array of references to .NET types, of the same length as the number of parameters to the function.
+These requirements can be met by calling the function and specifying the _variant_ operator ([`⍠`](../../language-reference-guide/primitive-operators/variant.md)) with the `OverloadTypes` or the `CastToTypes` option respectively. Each option takes an array of references to .NET types, of the same length as the number of parameters to the function.
 
 <h4 class="example">Example (using OverloadTypes option)</h4>
 
@@ -205,7 +205,7 @@ To rectify the situation, APL must be told to cast the argument to a Boolean:
 
 ### Overloaded Constructors
 
-If a class provides constructor overloads, then a similar mechanism is used to specify which of the constructors is to be used when an instance of the class is created using [`⎕NEW`](../../../language-reference-guide/system-functions/new/).
+If a class provides constructor overloads, then a similar mechanism is used to specify which of the constructors is to be used when an instance of the class is created using [`⎕NEW`](../../language-reference-guide/system-functions/new.md).
 
 For example, if <code class="language-nonAPL">MyClass</code> is a .NET class with an overloaded constructor, and one of its constructors is defined to take two parameters; a <code class="language-nonAPL">double</code> and an <code class="language-nonAPL">int</code>, then the following statement would create an instance of the class by calling that specific constructor overload:
 ```apl

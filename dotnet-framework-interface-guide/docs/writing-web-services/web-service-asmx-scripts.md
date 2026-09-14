@@ -1,6 +1,6 @@
 # Web Service (.asmx) Scripts
 
-Web services can be written in a variety of languages, including the scripting version of Dyalog APL. For more information on APL source files, see [APL Source Files](../../apl-source-files/).
+Web services can be written in a variety of languages, including the scripting version of Dyalog APL. For more information on APL source files, see [APL Source Files](../apl-source-files/index.md).
 
 The first statement in the script file declares the language and the name of the service. For example, the following statement declares a Dyalog web service named <code class="language-nonAPL">GolfService</code>.
 ```nonAPL
@@ -14,7 +14,7 @@ The first statement in the script file declares the language and the name of the
 
 The syntax of this first line is common to all web services, irrespective of the language in which they are written.
 
-A Dyalog web service script starts with a [`:Class`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class/) statement and ends with an `:EndClass` statement. These statements are directives used by the Dyalog .NET Compiler and are specific to Dyalog.
+A Dyalog web service script starts with a [`:Class`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/class.md) statement and ends with an `:EndClass` statement. These statements are directives used by the Dyalog .NET Compiler and are specific to Dyalog.
 
 The `:Class` statement declares the name of the class (which must be the same as the name declared in the `WebService` statement) and the _base_ class from which it inherits, which is normally <code class="language-nonAPL">System.Web.Services.WebService</code>.
 ```apl
@@ -23,4 +23,4 @@ The `:Class` statement declares the name of the class (which must be the same as
 
 Following the `:Class` statement can be any number of APL expressions and function bodies, at the end of which must be an `:EndClass` statement. Internal sub-classes (nested classes) can be included within the main `:Class ... :EndClass` block.
 
-Functions usually take arguments and return results whose types must be known, therefore the statement [`:Using System`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using/) must almost always appear immediately after the `:Class` statement to locate them.
+Functions usually take arguments and return results whose types must be known, therefore the statement [`:Using System`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/using.md) must almost always appear immediately after the `:Class` statement to locate them.
