@@ -1,13 +1,13 @@
 # Environment Variables
 
-Environment variables are used to configure various aspects of Dyalog APL. The [complete list](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
+Environment variables are used to configure various aspects of Dyalog APL. The [complete list](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide*; this section discusses those variables which are of particular importance to the Non-GUI versions of Dyalog APL, and lists those that have meaning to the UNIX versions. Additionally there some non-GUI-specific variables which are described below and some which either do not apply, or may not work as the user might at first expect.
 
 Under UNIX, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```
 
-If a [configuration parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
+If a [configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
 
 Many of these environment variables are set in the mapl script; their values are either appropriate for the installation location of Dyalog APL, or are set to define reasonable default values.
 
@@ -33,7 +33,7 @@ Table: Commonly used Variables
 |`DYALOG_NETCORE`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the .NET interface.|
 |`DYALOG_SERIAL`|This parameter contains your Dyalog serial number. This must be set to the serial number issued to you. If not set, then the software is unregistered. For the full licence terms and conditions, see [https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf](https://www.dyalog.com/uploads/documents/Terms_and_Conditions.pdf) .|
 |`DYALOG_SERIALFILE`|This parameter specifies the full path to the text file containing your Dyalog serial number.|
-|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../../object-reference/objects/htmlrenderer)) will fail with an error message. See Note (below).|
+|`ENABLE_CEF`|This parameter is a Boolean value with a default value of 1. If set to 0, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../object-reference/objects/htmlrenderer.md)) will fail with an error message. See Note (below).|
 |`ERRORONEXTERNALEXCEPTION`|By default, any error when calling `⎕NA` will result in APL terminating; if `ERRORONEXTERNALEXCEPTION` is set to 1, then APL will instead generate an event 91: `EXTERNAL DLL EXCEPTION` . Be aware however that the workspace may become corrupted. This is best used when developing `⎕NA` code rather than in production.|
 |`LIBPATH`|A suitable entry for the Conga libraries needs to be added to the `LIBPATH` variable if Conga is to be used. For more information see the *Conga Guide*.|
 |`MAXWS`|Defines the size of the workspace that will be presented to the user when Dyalog APL is started. A simple integer value will be treated as being in KB. K, M and G can be appended to the value to indicate KiB, MiB and GiB (binary) respectively. If unset, the default value is 256M.|
@@ -68,7 +68,7 @@ Table: Variables used to configure the Session
 
 |Variable|Notes|
 |---|---|
-|`APLAN_FOR_OUTPUT`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for session output|
+|`APLAN_FOR_OUTPUT`|Enable or disable use of [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) for session output|
 |`DYALOGLINK`|Specifies the directory for Link|
 |`DYALOGSTARTUPSE`|Specifies one or more *Session initialisation* directories that contain APL code to be installed in `⎕SE`|
 |`DYALOGSTART_X`|Specifies whether the `Run` function is executed during Session startup|
@@ -98,13 +98,13 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL
 |`DYALOG_EXTVAR_SUPPORTED`|This parameter is a Boolean value with a default value of `0`. If set to `1`, support for external variables is reinstated.|
 |`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is `1` (the default on AIX), the interpreter starts a (small) child process that handles calls to `⎕SHELL`.|
 
-These are the [remaining variables listed](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
+These are the [remaining variables listed](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) in the *Dyalog for Microsoft Windows Installation and Configuration Guide* which are effective in the non-GUI UNIX versions of Dyalog APL
 
 Table: Editor-related environment variables
 
 |---|---|
 |Variable|Notes|
-|`APLAN_FOR_EDITOR`|Enable or disable use of [array notation](../../../programming-reference-guide/introduction/arrays/array-notation/) for editing arrays|
+|`APLAN_FOR_EDITOR`|Enable or disable use of [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md) for editing arrays|
 |`EDITOR_COLUMNS_*`|See [Configuring the Editor](../configuring-the-editor.md). Can be one of `EDITOR_COLUMNS_CHARACTER_ARRAY EDITOR_COLUMNS_CLASS EDITOR_COLUMNS_FUNCTION EDITOR_COLUMNS_NAMESPACE EDITOR_COLUMNS_NUMERIC_ARRAY`|
 |`DYALOG_DISCARD_FN_SOURCE`|Specifies whether source code is retained in the workspace|
 

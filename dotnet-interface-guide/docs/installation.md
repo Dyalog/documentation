@@ -85,12 +85,12 @@ The components used to support the .NET interface are summarised below. Differen
 
 ## Enabling the .NET Interface
 
-The .NET interface is enabled when the DYALOG_NETCORE configuration parameter is set to `1`; this is the default setting on Linux (including the Raspberry Pi) and macOS. On Microsoft Windows the default setting is `0` for backwards compatibility (a setting of `0` enables the [.NET Framework interface](../../net-framework-interface-guide/)).
+The .NET interface is enabled when the DYALOG_NETCORE configuration parameter is set to `1`; this is the default setting on Linux (including the Raspberry Pi) and macOS. On Microsoft Windows the default setting is `0` for backwards compatibility (a setting of `0` enables the [.NET Framework interface](../net-framework-interface-guide/index.md)).
 
 !!! Info "Information"
     The .NET interface and the .NET Framework interface cannot be enabled simultaneously.
 
-For information on how to set configuration parameters, see the appropriate [Windows](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters/) or [UNIX](../../unix-installation-and-configuration-guide/configuration-parameters/configuration-parameters/) _Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
+For information on how to set configuration parameters, see the appropriate [Windows](../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) or [UNIX](../unix-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) _Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
 ```apl
 +2 ⎕NQ'.' 'GetEnvironment' 'DYALOG_NETCORE'
 ```
@@ -104,7 +104,7 @@ Dyalog Ltd recommends that the following command is run at the start of any appl
       r←2250⌶⍬
 ```
 
-This command identifies the state of the .NET interface while attempting to suppress all associated error messages (for more information, see [`2250⌶`](../../language-reference-guide/primitive-operators/i-beam/verify-net-interface/)):
+This command identifies the state of the .NET interface while attempting to suppress all associated error messages (for more information, see [`2250⌶`](../language-reference-guide/primitive-operators/i-beam/verify-net-interface.md)):
 
 - If `r≡1 1 ''` then the .NET interface should work
 - If `r≡2 1 ''` then the .NET Framework interface should work

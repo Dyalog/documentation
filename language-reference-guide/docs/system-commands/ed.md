@@ -4,7 +4,7 @@
 
 `)ED` invokes the Dyalog editor and opens an Edit window for each of the objects specified in `nms`.
 
-If a name includes the slash character  (`\` or `/`) it is taken to be the name of a file. See [Editing Scripts and Text Files](../../../windows-ui-guide/editing-scripts-and-text-files).
+If a name includes the slash character  (`\` or `/`) it is taken to be the name of a file. See [Editing Scripts and Text Files](../../windows-ui-guide/editing-scripts-and-text-files.md).
 
 If a name is followed by a line number specified in square brackets, the Editor positions the cursor in the corresponding line. There must not be a space between the last character of the name and the `[`.
 
@@ -28,7 +28,7 @@ If the type is `⋄` and the name is either undefined or of an array, the Editor
 The resulting array can be of any type or structure.
 
 The first object named becomes the top window on the stack.
-For details, see the Editor descriptions for [Windows](../../../windows-ui-guide/editor) and [UNIX](../../../unix-user-guide/configuring-the-editor).
+For details, see the Editor descriptions for [Windows](../../windows-ui-guide/editor.md) and [UNIX](../../unix-user-guide/configuring-the-editor.md).
 
 <h2 class="example">Examples</h2>
 ```apl

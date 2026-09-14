@@ -47,11 +47,11 @@ Enabling journaling on a component file will reduce performance of file updates;
 
 Journaling levels 2 and 3 cannot be set unless the checksum option is also enabled.
 
-The default level of journaling may be changed using the [**APL_FCREATE_PROPS_J**](../../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-j) parameter.
+The default level of journaling may be changed using the [**APL_FCREATE_PROPS_J**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-j.md) parameter.
 
 ## Checksum Option
 
-The checksum option is enabled by default. This  enables a damaged file to be repaired using `⎕FCHK`. It will however  reduce the performance of file updates slightly and result in larger component files. The default may be changed using the [**APL_FCREATE_PROPS_C**](../../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-c) parameter.
+The checksum option is enabled by default. This  enables a damaged file to be repaired using `⎕FCHK`. It will however  reduce the performance of file updates slightly and result in larger component files. The default may be changed using the [**APL_FCREATE_PROPS_C**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-c.md) parameter.
 
 Enabling the checksum option on an existing non-empty component file will result in all previously written components without a checksum  being check-summed and converted. This operation which will take place when `⎕FPROPS` is changed, may not therefore be instantaneous.
 
@@ -117,7 +117,7 @@ An exclusive tie is not needed to change the file property.
 Compression is not supported for files in which both Journalling and Checksum are disabled.
 
 !!! Info "Information"
-    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. Existing files with this combination are read-only, except that their properties can still be changed. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../../release-notes/announcements/deprecated-functionality/). Be aware that converting from non-checksummed components to checksummed components can take a significant amount of time.
+    Component files that have both journalling and checksum properties set to `0` have been deprecated, and it is no longer possible to create files with this combination of properties. Existing files with this combination are read-only, except that their properties can still be changed. Dyalog Ltd recommends using `⎕FPROPS` to convert any such files to have different properties. For information on how to identify component files that have both journalling and checksum properties set to `0` in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md). Be aware that converting from non-checksummed components to checksummed components can take a significant amount of time.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

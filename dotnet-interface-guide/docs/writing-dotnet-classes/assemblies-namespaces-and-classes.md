@@ -14,7 +14,7 @@ Once you have defined the functionality of your .NET classes, you can save them 
 - !!! windows "Dyalog on Microsoft Windows"
       Select **Export...** from the Session's **File** menu. You will be prompted to specify the directory and name of the assembly (DLL), and it will then be created and saved.
 - Use the [Bind method](#the-bind-method).
-- Use the [Dyalog .NET Compiler](../../apl-source-files/#the-dyalog-net-compiler).
+- Use the [Dyalog .NET Compiler](../apl-source-files.md#the-dyalog-net-compiler).
 
 Your .NET class is now ready for use by any .NET development environment, including APL.
 

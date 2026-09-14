@@ -18,7 +18,7 @@ First, copy the requisite Dyalog DLLs to the **bin\Debug** sub-directory. These 
 - Bridge DLL
 - DyalogNet DLL
 
-For the [names of these files](../../../windows-installation-and-configuration-guide/files-and-directories/#files) corresponding to the version of Dyalog that you are using, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
+For the [names of these files](../../windows-installation-and-configuration-guide/files-and-directories.md#files) corresponding to the version of Dyalog that you are using, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
 If you are running the 64-bit version of Dyalog, you must ensure that the **Platform target** is set to x64 in VS. To do this, select **Project** > **DyApp Properties**, go to the **Build** section, choose _x64_ from the **Platform target** drop-down list, and **Save** your changes.
 
@@ -66,7 +66,7 @@ R←⍳N
 
 `Primitives` contains one public method/function, called `IndexGen`.
 
-The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature/) statement. This has the following syntax:
+The public characteristics for the exported method are included in the definition of the class and its functions, as specified in the [`:Signature`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/function-declaration-statements/signature.md) statement. This has the following syntax:
 ```apl
 :Signature [rslttype←] name [arg1type [arg1name] [,argNtype [argNname]]*]
 ```
@@ -85,7 +85,7 @@ The assembly can now be created. This is done in one of the following ways:
 
 - Select **File** > **Export…** – this displays the **Create bound file** dialog box.<br />For this example, set the **File name** to _aplclasses_. The **Runtime application** checkbox allows you to choose to which of the two versions of the Dyalog dynamic link library the assembly will be bound – this example will use the Development version, so the checkbox should be cleared. The **Isolation Mode** drop-down list allows you to choose the [isolation mode](../implementation-details/isolation-mode.md)) – in this example, each host process will have a single workspace. Click **Save**. APL now makes the assembly; as it does this, information is displayed in the **Status** window. If any errors occur during this process, they will be reported in the **Status** window.
 
-- Use the [Bind method](../assemblies-namespaces-and-classes/#the-bind-method).
+- Use the [Bind method](assemblies-namespaces-and-classes.md#the-bind-method).
 
 ### aplclasses1.cs
 
