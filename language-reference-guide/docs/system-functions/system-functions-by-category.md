@@ -244,7 +244,7 @@ These create and manipulate files of any type as well as directories.
 
 |Name       |Description                                                  |Form|
 |-----------|-------------------------------------------------------------|----|
-|[`⎕MKDIR`](mkdir.md)   |Create a directory                                           |Ambivalent function|
+|[`⎕MKDIR`](mkdir.md)   |Create Directory                                           |Ambivalent function|
 |[`⎕NAPPEND`](nappend.md) |Append to File                                               |Dyadic function|
 |[`⎕NCOPY`](ncopy.md)   |Copy files and directories                                   |Dyadic function|
 |[`⎕NCREATE`](ncreate.md) |Create a File                                                |Dyadic function|
