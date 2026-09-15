@@ -292,8 +292,10 @@ nav:
       - System Functions (by Category): system-functions/system-functions-by-category.md
       - System Functions (A-Z):
           - System Functions (A-Z): system-functions/system-functions-a-z/index.md
-          - Character Input Output: system-functions/character-input-output.md
-          - Evaluated Input Output: system-functions/evaluated-input-output.md
+          - Character Input: system-functions/quotequad-input.md
+          - Message Output: system-functions/quotequad-output.md
+          - Evaluated Input: system-functions/quad-input.md
+          - Standard Output: system-functions/quad-output.md
           - Underscored Alphabetic Characters: system-functions/underscored-alphabetic-characters.md
           - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
           - '<code>⎕AI</code>: Account Information': system-functions/ai.md
