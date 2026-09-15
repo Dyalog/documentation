@@ -6,8 +6,10 @@ search:
 
 |Name                   |Description                |Form|
 |-----------------------|---------------------------|----|
-|[`⎕`](../evaluated-input-output.md)      |Evaluated Input/Output|Variable|
-|[`⍞`](../character-input-output.md)      |Character Input/Output|Variable|
+|[`⎕`](../quad-input.md)|Evaluated Input|Variable|
+|[`⎕`](../quad-output.md)|Standard Output|Variable|
+|[`⍞`](../quotequad-input.md)|Character Input|Variable|
+|[`⍞`](../quotequad-output.md)|Message Output|Variable|
 |[`⎕A`](../a.md)   |Alphabetic uppercase characters|Variable|
 |[`⎕Ⓐ` or `⎕Á`](../underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
 |[`⎕AI`](../ai.md)      |Account Information        |Constant|
