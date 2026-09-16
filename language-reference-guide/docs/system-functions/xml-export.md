@@ -67,14 +67,12 @@ Errors detected in the input array or options all cause `DOMAIN ERROR`.
 
 ```apl
       (⎕XML⍠'Whitespace' 'Strip')v
-      ⍝      'whitespace' 'strip' ⎕XML v
 <xml>
   <a>one</a>
   <b>two</b>
 </xml>
 
       (⎕XML⍠'Whitespace' 'Preserve')v
-      ⍝         'whitespace' 'preserve' ⎕XML v
 <xml><a>one</a><b>two</b></xml>
 ```
 

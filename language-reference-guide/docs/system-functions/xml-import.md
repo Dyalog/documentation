@@ -119,7 +119,6 @@ The examples below all use this XML:
 
 ```apl
       ]Display (⎕XML⍠'Whitespace' 'Strip')eg
-      ⍝      'whitespace' 'strip' ⎕XML eg
 ┌→────────────────────────────────────────┐
 ↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
 │ 0 │xml│ │ │           ⌽ ┌⊖┐ ┌⊖┐ │     3 │
@@ -156,7 +155,6 @@ The examples below all use this XML:
 
 ```apl
       ]Display (⎕XML⍠'Whitespace' 'Preserve')eg
-      ⍝         'whitespace' 'preserve' ⎕XML eg
 ┌→──────────────────────────────────────┐
 ↓   ┌→──┐ ┌⊖┐         ┌→────────┐       │
 │ 0 │xml│ │ │         ⌽ ┌⊖┐ ┌⊖┐ │     7 │
@@ -216,7 +214,6 @@ The examples below all use this XML:
 
 ```apl
       ]Display (⎕XML⍠'Markup' 'Preserve')eg
-      ⍝         'markup' 'preserve' ⎕XML eg
 ┌→──────────────────────────────────────────────┐
 ↓   ┌→──┐            ┌⊖┐     ┌→────────┐        │
 │ 0 │xml│            │ │     ⌽ ┌⊖┐ ┌⊖┐ │     3  │

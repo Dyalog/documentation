@@ -1,30 +1,21 @@
 # <span>XML Convert</span> `⎕XML`
 
-`⎕XML` converts between XML text and APL arrays. The right argument chooses the direction.
+`⎕XML` converts between XML text and APL arrays. It imports when the right argument is a simple character vector, and exports otherwise.
 
 ## [Import XML](xml-import.md)
 
 A character vector holding XML is converted to a five-column matrix describing it:
 
 ```apl
-      ]Display v←⎕XML'<xml><a>one</a><b>two</b></xml>'
-┌→────────────────────────────┐
-↓   ┌→──┐ ┌⊖┐   ┌→────────┐   │
-│ 0 │xml│ │ │   ⌽ ┌⊖┐ ┌⊖┐ │ 3 │
-│   └───┘ └─┘   │ │ │ │ │ │   │
-│               │ └─┘ └─┘ │   │
-│               └∊────────┘   │
-│   ┌→┐   ┌→──┐ ┌→────────┐   │
-│ 1 │a│   │one│ ⌽ ┌⊖┐ ┌⊖┐ │ 5 │
-│   └─┘   └───┘ │ │ │ │ │ │   │
-│               │ └─┘ └─┘ │   │
-│               └∊────────┘   │
-│   ┌→┐   ┌→──┐ ┌→────────┐   │
-│ 1 │b│   │two│ ⌽ ┌⊖┐ ┌⊖┐ │ 5 │
-│   └─┘   └───┘ │ │ │ │ │ │   │
-│               │ └─┘ └─┘ │   │
-│               └∊────────┘   │
-└∊────────────────────────────┘
+      v←⎕XML'<xml><t a="s">c</t></xml>'
+      v
+┌─┬───┬─┬─────┬─┐
+│0│xml│ │     │3│
+├─┼───┼─┼─────┼─┤
+│1│t  │c│┌─┬─┐│5│
+│ │   │ ││a│s││ │
+│ │   │ │└─┴─┘│ │
+└─┴───┴─┴─────┴─┘
 ```
 
 ## [Export XML](xml-export.md)
@@ -34,8 +25,7 @@ Such a matrix is converted back to XML text:
 ```apl
       ⎕XML v
 <xml>
-  <a>one</a>
-  <b>two</b>
+  <t a="s">c</t>
 </xml>
 ```
 
