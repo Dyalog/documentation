@@ -97,7 +97,7 @@ The above name translations are verified using `7162⌶`:
 
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). The principal option is `Format`. All six affect export.
+`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). The principal option is `Format`.
 
 Table: Variant options { #variant-table }
 
