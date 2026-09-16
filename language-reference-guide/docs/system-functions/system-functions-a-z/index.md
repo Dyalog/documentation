@@ -78,7 +78,8 @@ search:
 |[`⎕FX`](../fx.md)     |Fix definition          |Monadic function|
 |[`⎕INSTANCES`](../instances.md)|Instances|Monadic function|
 |[`⎕IO`](../io.md) |Index Origin                 |Variable|
-|[`⎕JSON`](../json.md) |JSON Convert                                        |Ambivalent function|
+|[`⎕JSON`](../json-import.md) |Import JSON                                         |Ambivalent function|
+|[`⎕JSON`](../json-export.md) |Export JSON                                         |Ambivalent function|
 |[`⎕KL`](../kl.md)   |Key Labels                       |Monadic function|
 |[`⎕LC`](../lc.md)    |Line Count               |Constant|
 |[`⎕LOAD`](../load.md)  |Load a saved WS            |Function|
