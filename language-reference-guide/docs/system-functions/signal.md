@@ -7,7 +7,7 @@ search:
 
 `⎕SIGNAL` generates an event under program control, or clears the information left behind by the most recent event.
 
-The right argument must be a scalar or vector, otherwise `⎕SIGNAL` signals `RANK ERROR`. Only its first element is used; any further elements are ignored. An empty right argument does nothing. That first element chooses which action `⎕SIGNAL` performs.
+The first element of the right argument chooses which action `⎕SIGNAL` performs (an empty right argument does nothing).
 
 ## [Reset Event Constants](signal-reset.md)
 
@@ -23,6 +23,11 @@ The right argument must be a scalar or vector, otherwise `⎕SIGNAL` signals `RA
 An event number generates that event with its standard event message, which an optional left argument can replace:
 
 ```apl
+      ⎕SIGNAL 200
+ERROR 200
+      ⎕SIGNAL 200
+      ∧
+
       'Hello'⎕SIGNAL 200
 Hello
       'Hello'⎕SIGNAL 200

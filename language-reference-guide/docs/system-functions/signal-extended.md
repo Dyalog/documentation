@@ -5,7 +5,7 @@ search:
 
 # <span>Signal Extended Event</span> `{R}←⎕SIGNAL Y`{{key}}
 
-This form of `⎕SIGNAL` generates an event whose reported details are chosen rather than taken from the event number. To generate one of Dyalog's own events instead, see [Signal Default Event](signal-default.md).
+[`⎕SIGNAL`](signal.md) with a set of name/value pairs generates an event with additional information added to the [default event](signal-default.md).
 
 <h2 class="example">Example</h2>
 
@@ -26,7 +26,7 @@ ERROR 200: My error
 
 ## Right Argument
 
-The first element of `Y` is a set of name/value pairs, given either as a vector of two-element vectors or as a two-column matrix. Each pair names a member of [`⎕DMX`](dmx.md) and the value to report for it; members not named keep the value they would have had.
+`Y` is a scalar or vector whose first element is a set of name/value pairs, given either as a vector of two-element vectors or as a two-column matrix; any further elements of `Y` are ignored. A `Y` of higher rank signals `RANK ERROR`.
 
 ```apl
       ⎕SIGNAL⊂2 2⍴'EN' 200 'Message' 'My error'
@@ -35,14 +35,7 @@ ERROR 200: My error
       ∧
 ```
 
-`EN` must be among the names, and its value must be a permitted [event number](signal-default.md#right-argument):
-
-```apl
-      ⎕SIGNAL⊂⊂('Message' 'My error')
-DOMAIN ERROR: Invalid error number for signal
-      ⎕SIGNAL⊂⊂('Message' 'My error')
-      ∧
-```
+Each pair names a member of [`⎕DMX`](dmx.md) and the value to report for it; members not named keep their default value. `EN` must be among the names, and its value must be a permitted [event number](signal-default.md#right-argument), otherwise `⎕SIGNAL` signals `DOMAIN ERROR`.
 
 The names that can be given are `Category`, `EM`, `EN`, `ENX`, `HelpURL`, `Message`, `OSError`, and `Vendor`. The remaining members of `⎕DMX`, `DM` and `InternalLocation`, are always derived by the interpreter and cannot be set:
 
@@ -53,7 +46,7 @@ DOMAIN ERROR: Unexpected name in signalled ⎕DMX specification
       ∧
 ```
 
-Each value must suit its name, so `ENX` and `OSError` take numbers rather than text.
+Each value must suit its name: `ENX` takes an integer, and `OSError` a three-element vector of an integer, an integer, and a character vector.
 
 !!! Info "Information"
     Dyalog might extend `⎕DMX` in a future release, which would change the names that can be given here.
@@ -72,33 +65,45 @@ Each value must suit its name, so `ENX` and `OSError` take numbers rather than t
           ∧
     ```
 
-## Left Argument
-
-There is no left argument:
-
-```apl
-      'msg'⎕SIGNAL⊂⊂('EN' 200)
-DOMAIN ERROR: Cannot provide a left argument with the given right argument
-      'msg'⎕SIGNAL⊂⊂('EN' 200)
-           ∧
-```
-
-The event message that a [default event](signal-default.md) takes as its left argument is given as the `EM` pair here:
-
-```apl
-      ⎕SIGNAL⊂('EN' 200)('EM' 'My message')
-My message
-      ⎕SIGNAL⊂('EN' 200)('EM' 'My message')
-      ∧
-```
-
 ## Result
 
 `R` is `Y`, and is shy. An event is generated, so `R` is only of interest when nothing is signalled, which happens when `Y` is empty.
 
 ## Effect on Execution
 
-The effect on the state indicator and on error trapping is the same as for a [default event](signal-default.md#effect-on-execution).
+Generating an event interrupts execution. The state indicator is cut back to exit the function, operator, or dfn capsule containing the line that invoked `⎕SIGNAL`, or to exit the [`⍎`](../primitive-functions/execute.md) expression that invoked it. The event is then generated in the environment that is left.
+
+Because the state indicator is cut back past the function that invoked `⎕SIGNAL`, a [`:Trap`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) or [`⎕TRAP`](trap.md) in that same function does not intercept the event; one in a calling function does.
+
+!!! Hint "Hints and Recommendations"
+    To let a function trap an event that it signals itself, invoke `⎕SIGNAL` from a dfn, which is then the capsule that the state indicator is cut back to:
+
+    ```apl
+          ⎕VR'Trapped'
+         ∇ r←Trapped
+    [1]    :Trap 0 ⋄ {⎕SIGNAL⊂⊂('EN' 200)}0 ⋄ r←'not signalled'
+    [2]    :Else ⋄ r←'caught here'
+    [3]    :EndTrap
+         ∇
+
+          Trapped
+    caught here
+    ```
+
+## .NET Exceptions
+
+`EN` `90` throws a .NET exception. There is no left argument to carry an exception object, so the exception thrown is always a plain `System.Exception`:
+
+```apl
+      ⎕SIGNAL⊂⊂('EN' 90)
+EXCEPTION: Exception of type 'System.Exception' was thrown.
+      ⎕SIGNAL⊂⊂('EN' 90)
+      ∧
+      ⎕EXCEPTION
+System.Exception: Exception of type 'System.Exception' was thrown.
+```
+
+To throw an exception object of your own, use a [default event](signal-default.md#net-exceptions).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

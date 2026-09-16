@@ -5,7 +5,7 @@ search:
 
 # <span>Signal Default Event</span> `{R}←{X} ⎕SIGNAL Y`{{key}}
 
-This form of `⎕SIGNAL` generates one of the events that Dyalog itself generates, identified by its event number. To choose the values reported in [`⎕DMX`](dmx.md) instead, see [Signal Extended Event](signal-extended.md).
+[`⎕SIGNAL`](signal.md) with an event number generates that event, without [adding further information](signal-extended.md) about it.
 
 <h2 class="example">Example</h2>
 
@@ -21,14 +21,9 @@ Hello
 
 ## Right Argument
 
-The first element of `Y` is a simple integer event number. Permitted values are `0`, `1` to `999`, and `1006`; `0` [resets the event constants](signal-reset.md) rather than generating an event. Any other value signals `DOMAIN ERROR`:
+`Y` is a scalar or vector whose first element is a simple integer event number; any further elements are ignored. A `Y` of higher rank signals `RANK ERROR`.
 
-```apl
-      ⎕SIGNAL 1007
-DOMAIN ERROR: Invalid error number for signal
-      ⎕SIGNAL 1007
-      ∧
-```
+Permitted event numbers are `0` to `999` and `1006`. `0` [resets the event constants](signal-reset.md) rather than generating an event, and any other value signals `DOMAIN ERROR`.
 
 The numbers Dyalog uses are listed under [`⎕TRAP`](trap.md#TrapEvents); `500` to `999` are reserved for events of your own. An event number with no standard message gets one of the form `ERROR n`:
 
@@ -41,25 +36,22 @@ ERROR 500
 
 ## Left Argument
 
-`X` is the event message, replacing the standard one. It is optional: omitting it, or supplying an empty vector, uses the standard message for the event number in `Y`. See [APL Error Messages](../../programming-reference-guide/error-messages/apl-errors.md) for the standard messages.
+`X` is the event message, replacing the standard one. It is optional: omitting it, or supplying an empty vector, uses the standard [event message](em.md) for the event number in `Y`. See [APL Error Messages](../../programming-reference-guide/error-messages/apl-errors.md) for the standard messages.
 
-`X` must be a simple character scalar or vector, or an object reference.
+`X` must be a simple character scalar or vector, or a [reference to an exception object](#net-exceptions).
 
 <h2 class="example">Example</h2>
 
-`DIVIDE` traps `DOMAIN ERROR` itself, then re-signals event `11` with a message of its own:
+`Divide` traps `DOMAIN ERROR` itself, then re-signals event `11` with a message of its own:
 
 ```apl
-      ⎕VR'DIVIDE'
-     ∇ R←A DIVIDE B;⎕TRAP
-[1]    ⎕TRAP←11 'E' '→ERR'
-[2]    R←A÷B ⋄ →0
-[3]   ERR:'DIVISION ERROR'⎕SIGNAL 11
-     ∇
-
-      2 4 6 DIVIDE 0
+      Divide←{
+          11::'DIVISION ERROR'⎕SIGNAL 11
+          ⍺÷⍵
+      }
+      2 4 6 Divide 0
 DIVISION ERROR
-      2 4 6 DIVIDE 0
+      2 4 6 Divide 0
             ∧
 ```
 
@@ -69,25 +61,40 @@ DIVISION ERROR
 
 ## Effect on Execution
 
-Generating an event interrupts execution. The state indicator is cut back to exit the function or operator containing the line that invoked `⎕SIGNAL`, or to exit the [`⍎`](../primitive-functions/execute.md) expression that invoked it. Within a dfn, it is cut back to exit the containing [capsule](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/capsules.md). The event is then generated in the environment that is left.
+Generating an event interrupts execution. The state indicator is cut back to exit the function, operator, or dfn [capsule](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/capsules.md) containing the line that invoked `⎕SIGNAL`, or to exit the [`⍎`](../primitive-functions/execute.md) expression that invoked it. The event is then generated in the environment that is left.
 
 Because the state indicator is cut back past the function that invoked `⎕SIGNAL`, a [`:Trap`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) or [`⎕TRAP`](trap.md) in that same function does not intercept the event; one in a calling function does.
 
-If [`⎕TRAP`](trap.md) is set to intercept the event, the trap is taken. Otherwise the standard system action follows, which can cut the state indicator back further if it holds locked functions or operators.
+!!! Hint "Hints and Recommendations"
+    To let a function trap an event that it signals itself, invoke `⎕SIGNAL` from a dfn, which is then the capsule that the state indicator is cut back to:
+
+    ```apl
+          ⎕VR'Trapped'
+         ∇ r←Trapped
+    [1]    :Trap 0 ⋄ {⎕SIGNAL ⍵}200 ⋄ r←'not signalled'
+    [2]    :Else ⋄ r←'caught here'
+    [3]    :EndTrap
+         ∇
+
+          Trapped
+    caught here
+    ```
 
 ## .NET Exceptions
 
-Event `90` throws a .NET exception. `X` is then a reference to an object that is, or derives from, the .NET class `System.Exception`. This constructor `CTOR` expects a value for [`⎕IO`](io.md):
+Event `90` throws a .NET exception. `X` is then a reference to an object that is, or derives from, the .NET class `System.Exception`:
 
 ```apl
-     ∇ CTOR IO;EX
-[1]    :If IO∊0 1
-[2]        ⎕IO←IO
-[3]    :Else
-[4]        EX←ArgumentException.New'IO must be 0 or 1'
-[5]        EX ⎕SIGNAL 90
-[6]    :EndIf
-     ∇
+      ⎕USING←'System'
+      Ctor←{
+          ⍵∊0 1:⎕IO⊢←⍵
+          ex←⎕NEW ArgumentException(⊂'IO must be 0 or 1')
+          ex ⎕SIGNAL 90
+      }
+      Ctor 2
+EXCEPTION: IO must be 0 or 1
+      Ctor 2
+      ∧
 ```
 
 <!-- Hidden search keywords -->
