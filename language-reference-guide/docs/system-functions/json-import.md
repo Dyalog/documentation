@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Import JSON</span> `R←{X} ⎕JSON Y`{{key}}
+# <span>Import JSON</span> `R←{0} ⎕JSON Y`{{key}}
 
 This function converts a JSON document to APL data. To convert APL data to JSON instead, see [Export JSON](json-export.md).
 
@@ -20,10 +20,10 @@ This function converts a JSON document to APL data. To convert APL data to JSON 
 
 ## Left Argument
 
-`X` is `0`. It can be omitted when `Y` is a simple character array, which is what identifies the call as an import.
+The left argument `0` can be omitted when `Y` is a simple character array, which is what identifies the call as an import.
 
 !!! Warning "Warning"
-    Dyalog Ltd strongly recommends that `X` should always be specified to avoid code that seemingly works, only to fail on specific values.
+    Dyalog Ltd strongly recommends that the left argument should always be specified to avoid code that seemingly works, only to fail on specific values.
 
 ## Result
 
@@ -50,30 +50,29 @@ When `⎕JSON` converts a JSON document to APL data and a member of a JSON objec
 <h3 class="example">Example</h3>
 
 In this example, the JSON document describes an object containing two numeric items, one named `a` (which is a valid APL name) and the other named `2a` (which is not a valid APL name):
+
 ```json
 {"a": 1, "2a": 2}
 ```
 
 When the object is imported (as a namespace), `⎕JSON` renames `2a` to a valid APL name:
+
 ```apl
       (0 ⎕JSON'{"a": 1, "2a": 2}').⎕NL 2
 a  
 ⍙2a
 ```
 
-When the namespace is exported, `⎕JSON` reverses the mangling:
-```apl
-      1 ⎕JSON (a:1 ⋄ ⍙2a:2)
-{"a":1,"2a":2}
-```
-
 <h3 class="example">Example</h3>
 
 This object has a member name with a character (`ý`; `⎕UCS 253`) that is not allowed in APL names:
+
 ```json
 {"sýn":"vision"}
 ```
+
 The `ý` is replaced with `⍙253⍙` ("253" is the Unicode decimal character code for this character):
+
 ```apl
       (0 ⎕JSON'{"sýn":"vision"}').⎕NL 2
 ⍙s⍙253⍙n
@@ -86,6 +85,7 @@ The `ý` is replaced with `⍙253⍙` ("253" is the Unicode decimal character co
 <h3 class="example">Example</h3>
 
 The above name translations are verified using `7162⌶`:
+
 ```apl
       0(7162⌶)'2a' 'sýn'
 ┌───┬────────┐
@@ -99,19 +99,19 @@ The above name translations are verified using `7162⌶`:
 
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsforjsonimport). The principal option is `Format`. Options that affect only [export](json-export.md) are tolerated here, and have no effect.
+`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). The principal option is `Format`. The three options that affect only export are tolerated here, but have no effect.
 
-Table: Variant options for importing with `⎕JSON` { #variantoptionsforjsonimport }
+Table: Variant options { #variant-table }
 
-| Variant Option | Valid Values | Default | Effect |
-|---|:---:|:---:|---|
-| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'` | `'D'` | `R` is APL data corresponding to `Y` |
-|_-  -_| `'M'` |  | `R` is an APL matrix encoding of `Y` |
-| [`Dialect`](#variant-option-dialect) | `'JSON'` | `'JSON'` | Only strict JSON syntax is accepted |
-|_-  -_| `'JSON5'` |  | [JSON5](https://json5.org/) extensions are accepted |
-| [`Null`](#variant-option-null) | `⊂'null'` | `⊂'null'` | JSON <code class="language-nonAPL">null</code> becomes APL `⊂'null'` |
-|_-  -_| `⎕NULL` |  | JSON <code class="language-nonAPL">null</code> becomes APL `⎕NULL` |
-| `Compact`, `Charset`, `HighRank` | | | No effect on import; see [Export JSON](json-export.md#variant-options) |
+| Variant Option | Value | Effect |
+|---|:---:|---|
+| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'`<br><small>(default)</small> | `R` is APL data corresponding to `Y` |
+|_-  -_| `'M'` | `R` is an APL matrix encoding of `Y` |
+| [`Dialect`](#variant-option-dialect) | `'JSON'`<br><small>(default)</small> | Only strict JSON syntax is accepted |
+|_-  -_| `'JSON5'` | [JSON5](https://json5.org/) extensions are accepted |
+| [`Null`](#variant-option-null) | `⊂'null'`<br><small>(default)</small> | JSON <code class="language-nonAPL">null</code> becomes APL `⊂'null'` |
+|_-  -_| `⎕NULL` | JSON <code class="language-nonAPL">null</code> becomes APL `⎕NULL` |
+| `Compact`, `Charset`, `HighRank` | | Only affect [export](json-export.md#variant-options) |
 
 ### Variant Option: `Format`
 
@@ -128,9 +128,10 @@ If `Format` is `'D'` (which stands for "Data", the default), the JSON document i
 - If the JSON source contains object member names that are not valid APL names, they are converted to APL namespace members with [mangled names](#name-mangling). The original names can be obtained using [`7162⌶`](../primitive-operators/i-beam/json-translate-name.md).
 - If duplicate names are found, the last member encountered is used and all previous members with the same name are discarded.
 
-<h5 class="example">Examples</h5>
+<h5 class="example" id="json-document">Examples</h5>
 
 The following JSON document is stored as the character vector `json`:
+
 ```json
 {
   "a": {
@@ -151,13 +152,17 @@ The following JSON document is stored as the character vector `json`:
   }
 }
 ```
+
 The JSON document is converted to APL data as a namespace:
+
 ```apl
       j←0 ⎕JSON json
       j
 #.[JSON object]
 ```
+
 Listing the sub-namespace and its members:
+
 ```apl
       j.⎕NL 9
 a
@@ -175,7 +180,9 @@ c
       j.a.⎕NL 9
 d
 ```
+
 `f⍺` is an invalid APL name:
+
 ```apl
       j.a.d.⎕NL 2
 e       
@@ -187,7 +194,9 @@ e
 │        │   │      │└────┘│
 └────────┴───┴──────┴──────┘
 ```
+
 The two ways to represent JSON <code class="language-nonAPL">null</code>s:
+
 ```apl
       0 ⎕JSON'[null,2,3]'
 ┌──────┬─┬─┐
@@ -233,28 +242,10 @@ In addition:
 - If duplicate names are found, all duplicate members are recorded in the result matrix.
 
 <h5 class="example">Example</h5>
-This example uses the character vector `json` from the previous example:
+
+This example uses the character vector `json` from [the previous example](#json-document):
 
 ```apl
-      json
-{                  
-  "a": {           
-    "b": [         
-      "string 1",  
-      "string 2"   
-    ],             
-    "c": true,     
-    "d": {         
-      "e": false,  
-      "f⍺": [      
-        "string 3",
-        123,       
-        1000.2,    
-        null       
-      ]            
-    }              
-  }                
-}                  
       0(⎕JSON⍠'M')json
 ┌─┬──┬────────┬─┐
 │0│  │        │1│
@@ -293,7 +284,7 @@ This example uses the character vector `json` from the previous example:
 
 ### Variant Option: `Dialect`
 
-If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, all [JSON5](https://json5.org/) extensions are accepted. `Dialect` also affects [export](json-export.md#variant-option-dialect).
+If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, all [JSON5](https://json5.org/) extensions are accepted.
 
 <h4 class="example">Example</h4>
 
@@ -325,8 +316,6 @@ The `Null` variant option selects how JSON <code class="language-nonAPL">null</c
       0(⎕JSON⍠'Null'⎕NULL)'[null,null]'
  [Null]  [Null] 
 ```
-
-The same representation is used when [exporting](json-export.md#variant-option-null).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

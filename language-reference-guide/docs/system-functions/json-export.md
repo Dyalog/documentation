@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Export JSON</span> `R←{X} ⎕JSON Y`{{key}}
+# <span>Export JSON</span> `R←{1} ⎕JSON Y`{{key}}
 
 This function converts APL data to a JSON document. To convert a JSON document to APL data instead, see [Import JSON](json-import.md).
 
@@ -22,10 +22,10 @@ This function converts APL data to a JSON document. To convert a JSON document t
 
 ## Left Argument
 
-`X` is `1`. It can be omitted when `Y` is not a simple character array, which is what identifies the call as an export.
+The left argument `1` can be omitted when `Y` is not a simple character array, which is what identifies the call as an export.
 
 !!! Warning "Warning"
-    Dyalog Ltd strongly recommends that `X` should always be specified to avoid code that seemingly works, only to fail on specific values.
+    Dyalog Ltd strongly recommends that the left argument should always be specified to avoid code that seemingly works, only to fail on specific values.
 
 ## Result
 
@@ -49,33 +49,72 @@ These differences are catered for in various ways as discussed below.
 
 ## Name Mangling
 
-A name that [import](json-import.md#name-mangling) mangled because it is not a valid APL name is restored on export:
+When `⎕JSON` converts APL data to a JSON document, a namespace member whose name begins with `⍙` is assumed to carry a name that [import](json-import.md#name-mangling) mangled, and the mangling is reversed: the leading `⍙` is dropped and each `⍙NNN⍙` group is replaced by the character with [decimal Unicode code point](ucs.md#monadic-ucs) `NNN`.
+
+<h3 class="example">Example</h3>
+
+The member named `⍙2a` is exported under its original name `2a`, which is not a valid APL name:
 
 ```apl
       1 ⎕JSON (a:1 ⋄ ⍙2a:2)
 {"a":1,"2a":2}
 ```
 
+<h3 class="example">Example</h3>
+
+`⍙253⍙` is restored to `ý` (`⎕UCS 253`):
+
+```apl
+      1 ⎕JSON (⍙s⍙253⍙n:'vision')
+{"sýn":"vision"}
+```
+
+A name is only un-mangled when doing so yields a name that is not valid in APL, because only such names are mangled in the first place. Any other name is exported as it stands, so a member name that genuinely begins with `⍙` survives:
+
+```apl
+      1 ⎕JSON (⍙abc:1)
+{"⍙abc":1}
+```
+
+### Name Mangling Algorithm
+
+[`7162⌶`](../primitive-operators/i-beam/json-translate-name.md) provides direct access to the name mangling algorithm.
+
+<h3 class="example">Example</h3>
+
+The above name translations are verified using `7162⌶`:
+
+```apl
+      1(7162⌶)'⍙2a' '⍙s⍙253⍙n' '⍙abc'
+┌──┬───┬────┐
+│2a│sýn│⍙abc│
+└──┴───┴────┘
+      0(7162⌶)'2a' 'sýn' '⍙abc'
+┌───┬────────┬──────────┐
+│⍙2a│⍙s⍙253⍙n│⍙⍙9049⍙abc│
+└───┴────────┴──────────┘
+```
+
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variantoptionsforjsonexport). The principal option is `Format`. Options that affect only [import](json-import.md) are tolerated here, and have no effect.
+`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). The principal option is `Format`. All six affect export.
 
-Table: Variant options for exporting with `⎕JSON` { #variantoptionsforjsonexport }
+Table: Variant options { #variant-table }
 
-| Variant Option | Valid Values | Default | Effect |
-|---|:---:|:---:|---|
-| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'` | `'D'` | `Y` is APL data |
-|_-  -_| `'M'` |  | `Y` is a 4-column APL matrix as from import with `'M'` |
-| [`Dialect`](#variant-option-dialect) | `'JSON'` | `'JSON'` | Only strict JSON syntax is produced |
-|_-  -_| `'JSON5'` |  | JSON5 features are used to improve readability and editability, and/or shorten output |
-| [`Null`](#variant-option-null) | `⊂'null'` | `⊂'null'` | APL `⊂'null'` becomes JSON <code class="language-nonAPL">null</code> |
-|_-  -_| `⎕NULL` |  | APL `⎕NULL` becomes JSON <code class="language-nonAPL">null</code> |
-| [`Compact`](#variant-option-compact) | `1` | `1` | `R` has no whitespace outside quotes |
-|_-  -_| `0` |  | `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
-| [`Charset`](#variant-option-charset) | `'Unicode'` | `'Unicode'` | Unicode characters in `Y` are used when JSON standard allows |
-|_-  -_| `'ASCII'` |  | Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
-| [`HighRank`](#variant-option-highrank) | `'Error'` | `'Error'` | High-rank arrays are rejected |
-|_-  -_| `'Split'` |  | High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
+| Variant Option | Value | Effect |
+|---|:---:|---|
+| [`Format`](#variant-option-format)<br><small>principal</small> | `'D'`<br><small>(default)</small> | `Y` is APL data |
+|_-  -_| `'M'` | `Y` is a 4-column APL matrix as from import with `'M'` |
+| [`Dialect`](#variant-option-dialect) | `'JSON'`<br><small>(default)</small> | Only strict JSON syntax is produced |
+|_-  -_| `'JSON5'` | JSON5 features are used to improve readability and editability, and/or shorten output |
+| [`Null`](#variant-option-null) | `⊂'null'`<br><small>(default)</small> | APL `⊂'null'` becomes JSON <code class="language-nonAPL">null</code> |
+|_-  -_| `⎕NULL` | APL `⎕NULL` becomes JSON <code class="language-nonAPL">null</code> |
+| [`Compact`](#variant-option-compact) | `1`<br><small>(default)</small> | `R` has no whitespace outside quotes |
+|_-  -_| `0` | `R` has whitespace for readability and, if `Dialect` is `'JSON5'`, trailing commas after final elements and members |
+| [`Charset`](#variant-option-charset) | `'Unicode'`<br><small>(default)</small> | Unicode characters in `Y` are used when JSON standard allows |
+|_-  -_| `'ASCII'` | Non-ASCII characters are converted to the hexadecimal form `\uNNNN`, and if `Dialect` is `'JSON5'`, also `\xNN` |
+| [`HighRank`](#variant-option-highrank) | `'Error'`<br><small>(default)</small> | High-rank arrays are rejected |
+|_-  -_| `'Split'` | High-rank arrays are split and [inverted table wrappers](#dataset-wrappers) accept text columns as matrices |
 
 ### Variant Option: `Format`
 
@@ -162,7 +201,9 @@ If there are any mismatches between the values in `Y[;3]` and the types in `Y[;4
 │2│      │300│3│
 └─┴──────┴───┴─┘
 ```
+
 To illustrate type mismatches, the above matrix is modified by replacing one number with a character vector that looks the same:
+
 ```apl
       m[3;3]←⊂'75'
       m
@@ -183,7 +224,7 @@ DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕
 
 ### Variant Option: `Dialect`
 
-If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, [JSON5](https://json5.org/) extensions are used: the result is shortened by usage of identifiers without quotes, single quotes (`'`), and character escapes `\v` and of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`). If [`Compact`](#variant-option-compact) is `0`, a trailing comma (`,`) is added after the last array element and object member. `Dialect` also affects [import](json-import.md#variant-option-dialect).
+If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, [JSON5](https://json5.org/) extensions are used: the result is shortened by usage of identifiers without quotes, single quotes (`'`), and character escapes `\v` and of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`). If [`Compact`](#variant-option-compact) is `0`, a trailing comma (`,`) is added after the last array element and object member.
 
 <h4 class="example">Examples</h4>
 
@@ -221,8 +262,6 @@ DOMAIN ERROR: JSON export: item "[1]" of the right argument (⎕IO=1) cannot be 
 [null,null]
 ```
 
-The same representations apply when [importing](json-import.md#variant-option-null).
-
 ### Variant Option: `Compact`
 
 The `Compact` variant option can be used to generate JSON that is either dense (`1`, the default) or optimised for humans to read and edit (`0`).
@@ -237,6 +276,7 @@ If `Compact` is `0`:
 <h4 class="example">Example</h4>
 
 The following examples use this namespace as APL data:
+
 ```apl
       ns←(
           a:(
@@ -257,14 +297,18 @@ The following examples use this namespace as APL data:
           )
       )
 ```
+
 Conversion to compact JSON:
+
 ```apl
       ⍴json←1 ⎕JSON ns
 97
       json
 {"a":{"b":["charvec 1","charvec 2"],"c":true,"d":{"e":false,"f⍺":["charvec 3",123,1000.2,null]}}}
 ```
+
 Non-compact JSON takes more than twice as much space, but is more readable, and easier for humans to edit:
+
 ```apl
       ⍴json←1(⎕JSON⍠'Compact' 0)ns
 208
@@ -394,7 +438,9 @@ Special JSON values such as <code class="language-nonAPL">null</code>, <code cla
       1 ⎕JSON 42 'text'(⊂1 'null')(⊂1 'true')(⊂1 'false')
 [42,"text",null,true,false]
 ```
+
 As `1` is the default code number, it can be omitted:
+
 ```apl
       1 ⎕JSON 42 'text'(⊂'null')(⊂'true')(⊂'false')
 [42,"text",null,true,false]
