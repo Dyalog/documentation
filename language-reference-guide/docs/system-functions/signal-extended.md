@@ -37,14 +37,7 @@ ERROR 200: My error
 
 Each pair names a member of [`⎕DMX`](dmx.md) and the value to report for it; members not named keep their default value. `EN` must be among the names, and its value must be a permitted [event number](signal-default.md#right-argument), otherwise `⎕SIGNAL` signals `DOMAIN ERROR`.
 
-The names that can be given are `Category`, `EM`, `EN`, `ENX`, `HelpURL`, `Message`, `OSError`, and `Vendor`. The remaining members of `⎕DMX`, `DM` and `InternalLocation`, are always derived by the interpreter and cannot be set:
-
-```apl
-      ⎕SIGNAL⊂('EN' 200)('InternalLocation' 'here')
-DOMAIN ERROR: Unexpected name in signalled ⎕DMX specification
-      ⎕SIGNAL⊂('EN' 200)('InternalLocation' 'here')
-      ∧
-```
+The names that can be given are `Category`, `EM`, `EN`, `ENX`, `HelpURL`, `Message`, `OSError`, and `Vendor`. The remaining members of `⎕DMX`, `DM` and `InternalLocation`, are always derived by the interpreter and cannot be set.
 
 Each value must suit its name: `ENX` takes an integer, and `OSError` a three-element vector of an integer, an integer, and a character vector.
 
