@@ -41,7 +41,7 @@ The XML definition uses specific terminology to describe its component parts. Th
 
 ### Character Data
 
-Character data consists of free-form text. The free-form text should not include the characters '>', '<' or '&', so these must be represented by their entity references (`&gt;`, `&lt;`, and `&amp;` respectively), or numeric character references.
+Character data consists of free-form text. The free-form text should not include the characters `>`, `<` or `&`, so these must be represented by their entity references (`&gt;`, `&lt;`, and `&amp;` respectively), or numeric character references.
 
 ### Entity References and Character References
 
@@ -71,7 +71,7 @@ Tags can be given zero or more attributes, which are specified as name/value pai
 
 `<TagName AttName="AttValue">`
 
-Attribute values can be delimited by either double quotes as shown or single quotes (apostrophes); they cannot contain certain characters (the delimiting quote, '&' or '<') and these must be represented by entity or character references.
+Attribute values can be delimited by either double quotes as shown or single quotes (apostrophes); they cannot contain certain characters (the delimiting quote, `&` or `<`) and these must be represented by entity or character references.
 
 The content of elements can be zero or more mixed occurrences of character data and nested elements. Tags and attribute names *describe* data, attribute values and the content within tags contain the data itself. Nesting of elements allows structure to be defined.
 
@@ -87,19 +87,19 @@ Regardless of whether the attribute name and value have a recognised meaning, th
 
 ### Comments
 
-Comments are fully supported markup. They are delimited by '<!--' and '-->' and all text between these delimiters is ignored. This text is included in the APL array if markup is being preserved, or discarded otherwise.
+Comments are fully supported markup. They are delimited by `<!--` and `-->` and all text between these delimiters is ignored. This text is included in the APL array if markup is being preserved, or discarded otherwise.
 
 ### CDATA Sections
 
-CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They and are delimited by '<![CDATA[' and ']]>'. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
+CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They and are delimited by `<![CDATA[` and `]]>`. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
 
 ### Processing Instructions
 
-Processing Instructions are delimited by '<&' and '&>' but are otherwise treated as other markup, below.
+Processing Instructions are delimited by `<&` and `&>` but are otherwise treated as other markup, below.
 
 ### Other Markup
 
-The remainder of XML markup, including document type declarations,  XML declarations and text declarations are all delimited by '<!' and '>', and can contain nested markup. If markup is being preserved the text, including nested markup, will appear as a single row in the APL array.  `⎕XML` does not process the contents of such markup. This has varying effects, including but not limited to the following:
+The remainder of XML markup, including document type declarations,  XML declarations and text declarations are all delimited by `<!` and `>`, and can contain nested markup. If markup is being preserved the text, including nested markup, will appear as a single row in the APL array.  `⎕XML` does not process the contents of such markup. This has varying effects, including but not limited to the following:
 
 - No validation is performed.
 - Constraints specified in markup such element type declarations will be ignored and therefore syntactically correct elements which fall outside their constraint will not be rejected.

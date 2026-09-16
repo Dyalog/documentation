@@ -61,7 +61,7 @@ Errors detected in the input array or options all cause `DOMAIN ERROR`.
 
 ### Variant Option: `Whitespace`
 
-`Whitespace` specifies the formatting of the generated XML. Attribute values are not character data, so whitespace in attribute values is always preserved.
+`Whitespace` specifies the default formatting of the generated XML, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved.
 
 <h4 class="example">Examples</h4>
 

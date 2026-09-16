@@ -64,8 +64,8 @@ These values are additive. For example, a value of 5 in column 5 means that the 
 ## How the Result is Built
 
 - The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for "&lt;xml>&lt;document id="001">An introduction to XML &lt;/document>&lt;/xml>&lt;/code>" the _xml_ element is at level 0 and the _document id_ element is at level 1. The text within the _document id_ element is at level 2.
-- Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by '<' and '>' characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
-- All XML markup other than tags are delimited by either '<!' and '>', or '<?' and '>' characters. By default these are not stored in the result matrix but the `Markup` option can be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing '<' and '>' characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing '<' and '>' characters are stripped, such entries will always have either '!' or '&' as the first character.
+- Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by `<` and `>` characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
+- All XML markup other than tags are delimited by either `<!` and `>`, or `<?` and `>` characters. By default these are not stored in the result matrix but the `Markup` option can be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing `<` and `>` characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing `<` and `>` characters are stripped, such entries will always have either `!` or `&` as the first character.
 - Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element it is included with its parent rather than as a separate row in the result. When this happens, the level number stored is that of the parent; the data itself implicitly has a level one number greater.
 - Attribute name and value pairs associated with the element name are stored in the fourth column, in an (*n x 2*) matrix of character values, for the *n* (including zero) pairs.
 - Each row is further described in the fifth column as a convenience to simplify processing of the array (although this information could be deduced). Any given row can contain an entry for an element, character data, markup not otherwise defined, a comment or a processing instruction. Furthermore, an element will have zero or more of these as children. For all types except elements, the value in the fifth column is as shown above. For elements, the value is computed by adding together the value of the row itself (1) and those of its children. For example, the value for a row for an element which contains one or more sub-elements and character data is 7 – that is 1 (element) + 2 (child element) + 4 (character data). In addition:
@@ -113,7 +113,7 @@ The examples below all use this XML:
 
 ### Variant Option: `Whitespace`
 
-`Whitespace` specifies the handling of whitespace surrounding and within character data. Attribute values are not character data, so whitespace in attribute values is always preserved.
+`Whitespace` specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved.
 
 <h4 class="example">Examples</h4>
 
@@ -210,7 +210,44 @@ The examples below all use this XML:
 
 `Markup` determines whether markup, other than entity tags, appears in `R`. It has no effect on [export](xml-export.md#variant-options).
 
-<h4 class="example">Example</h4>
+<h4 class="example">Examples</h4>
+
+```apl
+
+      ]Display (⎕XML⍠'Markup' 'Strip')eg
+┌→────────────────────────────────────────┐
+↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
+│ 0 │xml│ │ │           ⌽ ┌⊖┐ ┌⊖┐ │     3 │
+│   └───┘ └─┘           │ │ │ │ │ │       │
+│                       │ └─┘ └─┘ │       │
+│                       └∊────────┘       │
+│   ┌→┐   ┌⊖┐           ┌→────────┐       │
+│ 1 │a│   │ │           ⌽ ┌⊖┐ ┌⊖┐ │     7 │
+│   └─┘   └─┘           │ │ │ │ │ │       │
+│                       │ └─┘ └─┘ │       │
+│                       └∊────────┘       │
+│   ┌⊖┐   ┌→──────────┐ ┌→────────┐       │
+│ 2 │ │   │Data1 Data2│ ⌽ ┌⊖┐ ┌⊖┐ │     4 │
+│   └─┘   └───────────┘ │ │ │ │ │ │       │
+│                       │ └─┘ └─┘ │       │
+│                       └∊────────┘       │
+│   ┌→┐   ┌→────┐       ┌→────────┐       │
+│ 2 │b│   │Data3│       ⌽ ┌⊖┐ ┌⊖┐ │     5 │
+│   └─┘   └─────┘       │ │ │ │ │ │       │
+│                       │ └─┘ └─┘ │       │
+│                       └∊────────┘       │
+│   ┌⊖┐   ┌→────┐       ┌→────────┐       │
+│ 2 │ │   │Data4│       ⌽ ┌⊖┐ ┌⊖┐ │     4 │
+│   └─┘   └─────┘       │ │ │ │ │ │       │
+│                       │ └─┘ └─┘ │       │
+│                       └∊────────┘       │
+│   ┌→┐   ┌⊖┐           ┌→────────────┐   │
+│ 2 │c│   │ │           ↓ ┌→──┐ ┌→──┐ │ 1 │
+│   └─┘   └─┘           │ │att│ │val│ │   │
+│                       │ └───┘ └───┘ │   │
+│                       └∊────────────┘   │
+└∊────────────────────────────────────────┘
+```
 
 ```apl
       ]Display (⎕XML⍠'Markup' 'Preserve')eg
