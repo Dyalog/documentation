@@ -29,13 +29,15 @@ Such a matrix is converted back to XML text:
 </xml>
 ```
 
-## Introduction to XML and Glossary of Terms
+## Introduction to XML
 
 XML is an open standard, designed to allow exchange of data between applications. The [full specification](http://www.w3.org/TR/2008/REC-xml-20081126/) describes functionality, including processing directives and other directives, which can transform XML data as it is read, and which a full XML processor would be expected to handle.
 
 The `⎕XML` function is designed to handle XML to the extent required to import and export APL data. It favours speed over complexity - some markup is tolerated but largely ignored, and there are no XML query or validation features. APL applications which require processing, querying or validation will need to call external tools for this, and finally call `⎕XML` on the resulting XML to perform the transformation into APL arrays.
 
 XML grammar such as processing instructions and document type declarations can optionally be stored in the APL array, but will not be processed or validated. This is principally to allow regeneration of XML from XML input which contains such structures, but an APL application could process the data if it chose to do so.
+
+## Glossary of Terms
 
 The XML definition uses specific terminology to describe its component parts. The following is a summary of the terms used in this section:
 
@@ -59,17 +61,9 @@ Whitespace sequences consist of one or more spaces, tabs or line-endings. Within
 
 An element consists of a balanced pair of tags or a single empty element tag. Tags are given names, and start and end tag names must match.
 
-An example pair of tags, named TagName is
+An example pair of tags, named TagName, is `<TagName></TagName>`. This pair is shown with no content between the tags; this can be abbreviated as an empty element tag, `<TagName/>`.
 
-`<TagName></TagName>`
-
-This pair is shown with no content between the tags; this can be abbreviated as an empty element tag as
-
-`<TagName/>`
-
-Tags can be given zero or more attributes, which are specified as name/value pairs; for example
-
-`<TagName AttName="AttValue">`
+Tags can be given zero or more attributes, which are specified as name/value pairs, for example `<TagName AttName="AttValue">`.
 
 Attribute values can be delimited by either double quotes as shown or single quotes (apostrophes); they cannot contain certain characters (the delimiting quote, `&` or `<`) and these must be represented by entity or character references.
 
@@ -83,7 +77,7 @@ Attributes with names beginning **xml:** are reserved. Only **xml:space** is tre
 - **preserve** - space normalization is disabled – all whitespace is preserved as given.
 - **any other value** – rejected.
 
-Regardless of whether the attribute name and value have a recognised meaning, the attribute will be included in the APL array / generated XML. When the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
+Regardless of whether the attribute name and value have a recognised meaning, the attribute will be included in the APL array or generated XML. When the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
 
 ### Comments
 

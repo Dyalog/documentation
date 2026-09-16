@@ -10,22 +10,15 @@ This function converts XML text to an APL array. To convert an APL array to XML 
 <h2 class="example">Example</h2>
 
 ```apl
-      x←'<xml><document id="001">An introduction to XML'
-      x,←'</document></xml>'
-
-      ]Display v←⎕XML x
-┌→───────────────────────────────────────────────────────┐
-↓   ┌→──┐      ┌⊖┐                      ┌→────────┐      │
-│ 0 │xml│      │ │                      ⌽ ┌⊖┐ ┌⊖┐ │    3 │
-│   └───┘      └─┘                      │ │ │ │ │ │      │
-│                                       │ └─┘ └─┘ │      │
-│                                       └∊────────┘      │
-│   ┌→───────┐ ┌→─────────────────────┐ ┌→───────────┐   │
-│ 1 │document│ │An introduction to XML│ ↓ ┌→─┐ ┌→──┐ │ 5 │
-│   └────────┘ └──────────────────────┘ │ │id│ │001│ │   │
-│                                       │ └──┘ └───┘ │   │
-│                                       └∊───────────┘   │
-└∊───────────────────────────────────────────────────────┘
+      v←⎕XML'<xml><t a="s">c</t></xml>'
+      v
+┌─┬───┬─┬─────┬─┐
+│0│xml│ │     │3│
+├─┼───┼─┼─────┼─┤
+│1│t  │c│┌─┬─┐│5│
+│ │   │ ││a│s││ │
+│ │   │ │└─┴─┘│ │
+└─┴───┴─┴─────┴─┘
 ```
 
 ## Right Argument
@@ -35,6 +28,8 @@ This function converts XML text to an APL array. To convert an APL array to XML 
 ## Left Argument
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
+
+An option name or value is spelled differently here than for `⍠`: lower case throughout, with a dash inserted before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 
@@ -76,39 +71,37 @@ These values are additive. For example, a value of 5 in column 5 means that the 
 
 ## Variant Options
 
-`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table), or through the optional [left argument](#left-argument) using the alternative name shown in the table. There is no principal option. The names and values are case-sensitive and must be written exactly as shown.
+`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table). There is no principal option.
 
 Table: Variant options { #variant-table }
 
-|Variant Option|Left-argument name|Value|Effect|
-|---|---|:---:|---|
-|[`Whitespace`](#variant-option-whitespace)|`whitespace`|`'Strip'`<br><small>(default)</small>|Leading and trailing whitespace sequences are removed; remaining whitespace sequences are replaced by a single space|
-|_-  -_||`'Trim'`|Leading and trailing whitespace sequences are removed; all remaining whitespace sequences are handled as for `'Preserve'`|
-|_-  -_||`'Preserve'`|Whitespace is preserved as given, except that line endings are represented by Linefeed (`⎕UCS 10`)|
-|[`Markup`](#variant-option-markup)|`markup`|`'Strip'`<br><small>(default)</small>|Markup data is not included in `R`|
-|_-  -_||`'Preserve'`|Markup text appears in `R`, without the leading `<` and trailing `>` of the tag, in the second column|
-|[`UnknownEntity`](#variant-option-unknownentity)|`unknown-entity`|`'Replace'`<br><small>(default)</small>|The reference is replaced by a single `?` character|
-|_-  -_||`'Preserve'`|The reference is included in the data as given, but with the leading `&` replaced by Esc (`⎕UCS 27`)|
+|Variant Option|Value|Effect|
+|---|:---:|---|
+|[`Whitespace`](#variant-option-whitespace)|`'Strip'`<br><small>(default)</small>|Leading and trailing whitespace sequences are removed; remaining whitespace sequences are replaced by a single space|
+||`'Trim'`|Leading and trailing whitespace sequences are removed; all remaining whitespace sequences are handled as for `'Preserve'`|
+|_-  -_|`'Preserve'`|Whitespace is preserved as given, except that line endings are represented by Linefeed (`⎕UCS 10`)|
+|[`Markup`](#variant-option-markup)|`'Strip'`<br><small>(default)</small>|Markup data is not included in `R`|
+|_-  -_|`'Preserve'`|Markup text appears in `R`, without the leading `<` and trailing `>` of the tag, in the second column|
+|[`UnknownEntity`](#variant-option-unknownentity)|`'Replace'`<br><small>(default)</small>|The reference is replaced by a single `?` character|
+|_-  -_|`'Preserve'`|The reference is included in the data as given, but with the leading `&` replaced by Esc (`⎕UCS 27`)|
 
-Errors detected in the input array or options all cause `DOMAIN ERROR`.
+Errors detected in the right argument or the options all cause `DOMAIN ERROR`.
 
 The examples below all use this XML:
 
 ```apl
-      eg←¯1↓∊{⍵,⎕UCS 10}¨'<xml>' '  <a>' '    Data1' '    <!-- Comment -->' '    Data2' '    <b> Data3 </b>' '    Data4' '    <c att="val"/>' '  </a>' '</xml>'
-      ]Display eg
-┌→───────────────────┐
-│<xml>               │
-│  <a>               │
-│    Data1           │
-│    <!-- Comment -->│
-│    Data2           │
-│    <b> Data3 </b>  │
-│    Data4           │
-│    <c att="val"/>  │
-│  </a>              │
-│</xml>              │
-└────────────────────┘
+      eg←∊(
+          '<xml>'
+          '  <a>'
+          '    Data1'
+          '    <!-- Comment -->'
+          '    Data2'
+          '    <b> Data3 </b>'
+          '    Data4'
+          '    <c att="val"/>'
+          '  </a>'
+          '</xml>'
+      ),¨⎕UCS 10
 ```
 
 ### Variant Option: `Whitespace`
@@ -118,92 +111,56 @@ The examples below all use this XML:
 <h4 class="example">Examples</h4>
 
 ```apl
-      ]Display (⎕XML⍠'Whitespace' 'Strip')eg
-┌→────────────────────────────────────────┐
-↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
-│ 0 │xml│ │ │           ⌽ ┌⊖┐ ┌⊖┐ │     3 │
-│   └───┘ └─┘           │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌⊖┐           ┌→────────┐       │
-│ 1 │a│   │ │           ⌽ ┌⊖┐ ┌⊖┐ │     7 │
-│   └─┘   └─┘           │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌⊖┐   ┌→──────────┐ ┌→────────┐       │
-│ 2 │ │   │Data1 Data2│ ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   └───────────┘ │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌→────┐       ┌→────────┐       │
-│ 2 │b│   │Data3│       ⌽ ┌⊖┐ ┌⊖┐ │     5 │
-│   └─┘   └─────┘       │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌⊖┐   ┌→────┐       ┌→────────┐       │
-│ 2 │ │   │Data4│       ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   └─────┘       │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌⊖┐           ┌→────────────┐   │
-│ 2 │c│   │ │           ↓ ┌→──┐ ┌→──┐ │ 1 │
-│   └─┘   └─┘           │ │att│ │val│ │   │
-│                       │ └───┘ └───┘ │   │
-│                       └∊────────────┘   │
-└∊────────────────────────────────────────┘
+      (⎕XML⍠'Whitespace' 'Strip')eg
+┌─┬───┬───────────┬─────────┬─┐
+│0│xml│           │         │3│
+├─┼───┼───────────┼─────────┼─┤
+│1│a  │           │         │7│
+├─┼───┼───────────┼─────────┼─┤
+│2│   │Data1 Data2│         │4│
+├─┼───┼───────────┼─────────┼─┤
+│2│b  │Data3      │         │5│
+├─┼───┼───────────┼─────────┼─┤
+│2│   │Data4      │         │4│
+├─┼───┼───────────┼─────────┼─┤
+│2│c  │           │┌───┬───┐│1│
+│ │   │           ││att│val││ │
+│ │   │           │└───┴───┘│ │
+└─┴───┴───────────┴─────────┴─┘
 ```
 
 ```apl
-      ]Display (⎕XML⍠'Whitespace' 'Preserve')eg
-┌→──────────────────────────────────────┐
-↓   ┌→──┐ ┌⊖┐         ┌→────────┐       │
-│ 0 │xml│ │ │         ⌽ ┌⊖┐ ┌⊖┐ │     7 │
-│   └───┘ └─┘         │ │ │ │ │ │       │
-│                     │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-│   ┌⊖┐   ┌→─┐        ┌→────────┐       │
-│ 1 │ │   │  │        ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   │  │        │ │ │ │ │ │       │
-│         └──┘        │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-│   ┌→┐   ┌⊖┐         ┌→────────┐       │
-│ 1 │a│   │ │         ⌽ ┌⊖┐ ┌⊖┐ │     7 │
-│   └─┘   └─┘         │ │ │ │ │ │       │
-│                     │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-│   ┌⊖┐   ┌→────────┐ ┌→────────┐       │
-│ 2 │ │   │         │ ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   │    Data1│ │ │ │ │ │ │       │
-│         │         │ │ └─┘ └─┘ │       │
-│         │    Data2│ └∊────────┘       │
-│         │         │                   │
-│         └─────────┘                   │
-│   ┌→┐   ┌→──────┐   ┌→────────┐       │
-│ 2 │b│   │ Data3 │   ⌽ ┌⊖┐ ┌⊖┐ │     5 │
-│   └─┘   └───────┘   │ │ │ │ │ │       │
-│                     │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-│   ┌⊖┐   ┌→────────┐ ┌→────────┐       │
-│ 2 │ │   │         │ ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   │    Data4│ │ │ │ │ │ │       │
-│         │         │ │ └─┘ └─┘ │       │
-│         └─────────┘ └∊────────┘       │
-│   ┌→┐   ┌⊖┐         ┌→────────────┐   │
-│ 2 │c│   │ │         ↓ ┌→──┐ ┌→──┐ │ 1 │
-│   └─┘   └─┘         │ │att│ │val│ │   │
-│                     │ └───┘ └───┘ │   │
-│                     └∊────────────┘   │
-│   ┌⊖┐   ┌→─┐        ┌→────────┐       │
-│ 2 │ │   │  │        ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   │  │        │ │ │ │ │ │       │
-│         └──┘        │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-│   ┌⊖┐   ┌→┐         ┌→────────┐       │
-│ 1 │ │   │ │         ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   │ │         │ │ │ │ │ │       │
-│         └─┘         │ └─┘ └─┘ │       │
-│                     └∊────────┘       │
-└∊──────────────────────────────────────┘
+      (⎕XML⍠'Whitespace' 'Preserve')eg
+┌─┬───┬─────────┬─────────┬─┐
+│0│xml│         │         │7│
+├─┼───┼─────────┼─────────┼─┤
+│1│   │         │         │4│
+│ │   │         │         │ │
+├─┼───┼─────────┼─────────┼─┤
+│1│a  │         │         │7│
+├─┼───┼─────────┼─────────┼─┤
+│2│   │         │         │4│
+│ │   │    Data1│         │ │
+│ │   │         │         │ │
+│ │   │    Data2│         │ │
+│ │   │         │         │ │
+├─┼───┼─────────┼─────────┼─┤
+│2│b  │ Data3   │         │5│
+├─┼───┼─────────┼─────────┼─┤
+│2│   │         │         │4│
+│ │   │    Data4│         │ │
+│ │   │         │         │ │
+├─┼───┼─────────┼─────────┼─┤
+│2│c  │         │┌───┬───┐│1│
+│ │   │         ││att│val││ │
+│ │   │         │└───┴───┘│ │
+├─┼───┼─────────┼─────────┼─┤
+│2│   │         │         │4│
+│ │   │         │         │ │
+├─┼───┼─────────┼─────────┼─┤
+│1│   │         │         │4│
+│ │   │         │         │ │
+└─┴───┴─────────┴─────────┴─┘
 ```
 
 ### Variant Option: `Markup`
@@ -213,86 +170,45 @@ The examples below all use this XML:
 <h4 class="example">Examples</h4>
 
 ```apl
-
-      ]Display (⎕XML⍠'Markup' 'Strip')eg
-┌→────────────────────────────────────────┐
-↓   ┌→──┐ ┌⊖┐           ┌→────────┐       │
-│ 0 │xml│ │ │           ⌽ ┌⊖┐ ┌⊖┐ │     3 │
-│   └───┘ └─┘           │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌⊖┐           ┌→────────┐       │
-│ 1 │a│   │ │           ⌽ ┌⊖┐ ┌⊖┐ │     7 │
-│   └─┘   └─┘           │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌⊖┐   ┌→──────────┐ ┌→────────┐       │
-│ 2 │ │   │Data1 Data2│ ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   └───────────┘ │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌→────┐       ┌→────────┐       │
-│ 2 │b│   │Data3│       ⌽ ┌⊖┐ ┌⊖┐ │     5 │
-│   └─┘   └─────┘       │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌⊖┐   ┌→────┐       ┌→────────┐       │
-│ 2 │ │   │Data4│       ⌽ ┌⊖┐ ┌⊖┐ │     4 │
-│   └─┘   └─────┘       │ │ │ │ │ │       │
-│                       │ └─┘ └─┘ │       │
-│                       └∊────────┘       │
-│   ┌→┐   ┌⊖┐           ┌→────────────┐   │
-│ 2 │c│   │ │           ↓ ┌→──┐ ┌→──┐ │ 1 │
-│   └─┘   └─┘           │ │att│ │val│ │   │
-│                       │ └───┘ └───┘ │   │
-│                       └∊────────────┘   │
-└∊────────────────────────────────────────┘
+      (⎕XML⍠'Markup' 'Strip')eg
+┌─┬───┬───────────┬─────────┬─┐
+│0│xml│           │         │3│
+├─┼───┼───────────┼─────────┼─┤
+│1│a  │           │         │7│
+├─┼───┼───────────┼─────────┼─┤
+│2│   │Data1 Data2│         │4│
+├─┼───┼───────────┼─────────┼─┤
+│2│b  │Data3      │         │5│
+├─┼───┼───────────┼─────────┼─┤
+│2│   │Data4      │         │4│
+├─┼───┼───────────┼─────────┼─┤
+│2│c  │           │┌───┬───┐│1│
+│ │   │           ││att│val││ │
+│ │   │           │└───┴───┘│ │
+└─┴───┴───────────┴─────────┴─┘
 ```
 
 ```apl
-      ]Display (⎕XML⍠'Markup' 'Preserve')eg
-┌→──────────────────────────────────────────────┐
-↓   ┌→──┐            ┌⊖┐     ┌→────────┐        │
-│ 0 │xml│            │ │     ⌽ ┌⊖┐ ┌⊖┐ │     3  │
-│   └───┘            └─┘     │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌→┐              ┌⊖┐     ┌→────────┐        │
-│ 1 │a│              │ │     ⌽ ┌⊖┐ ┌⊖┐ │     23 │
-│   └─┘              └─┘     │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌⊖┐              ┌→────┐ ┌→────────┐        │
-│ 2 │ │              │Data1│ ⌽ ┌⊖┐ ┌⊖┐ │     4  │
-│   └─┘              └─────┘ │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌→─────────────┐ ┌⊖┐     ┌→────────┐        │
-│ 2 │!-- Comment --│ │ │     ⌽ ┌⊖┐ ┌⊖┐ │     16 │
-│   └──────────────┘ └─┘     │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌⊖┐              ┌→────┐ ┌→────────┐        │
-│ 2 │ │              │Data2│ ⌽ ┌⊖┐ ┌⊖┐ │     4  │
-│   └─┘              └─────┘ │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌→┐              ┌→────┐ ┌→────────┐        │
-│ 2 │b│              │Data3│ ⌽ ┌⊖┐ ┌⊖┐ │     5  │
-│   └─┘              └─────┘ │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌⊖┐              ┌→────┐ ┌→────────┐        │
-│ 2 │ │              │Data4│ ⌽ ┌⊖┐ ┌⊖┐ │     4  │
-│   └─┘              └─────┘ │ │ │ │ │ │        │
-│                            │ └─┘ └─┘ │        │
-│                            └∊────────┘        │
-│   ┌→┐              ┌⊖┐     ┌→────────────┐    │
-│ 2 │c│              │ │     ↓ ┌→──┐ ┌→──┐ │ 1  │
-│   └─┘              └─┘     │ │att│ │val│ │    │
-│                            │ └───┘ └───┘ │    │
-│                            └∊────────────┘    │
-└∊──────────────────────────────────────────────┘
+      (⎕XML⍠'Markup' 'Preserve')eg
+┌─┬──────────────┬─────┬─────────┬──┐
+│0│xml           │     │         │3 │
+├─┼──────────────┼─────┼─────────┼──┤
+│1│a             │     │         │23│
+├─┼──────────────┼─────┼─────────┼──┤
+│2│              │Data1│         │4 │
+├─┼──────────────┼─────┼─────────┼──┤
+│2│!-- Comment --│     │         │16│
+├─┼──────────────┼─────┼─────────┼──┤
+│2│              │Data2│         │4 │
+├─┼──────────────┼─────┼─────────┼──┤
+│2│b             │Data3│         │5 │
+├─┼──────────────┼─────┼─────────┼──┤
+│2│              │Data4│         │4 │
+├─┼──────────────┼─────┼─────────┼──┤
+│2│c             │     │┌───┬───┐│1 │
+│ │              │     ││att│val││  │
+│ │              │     │└───┴───┘│  │
+└─┴──────────────┴─────┴─────────┴──┘
 ```
 
 ### Variant Option: `UnknownEntity`
@@ -302,14 +218,10 @@ The examples below all use this XML:
 <h4 class="example">Examples</h4>
 
 ```apl
-      ]Display (⎕XML⍠'UnknownEntity' 'Replace')'<a>&unknown;</a>'
-┌→────────────────────────┐
-↓   ┌→┐ ┌→┐ ┌→────────┐   │
-│ 0 │a│ │?│ ⌽ ┌⊖┐ ┌⊖┐ │ 5 │
-│   └─┘ └─┘ │ │ │ │ │ │   │
-│           │ └─┘ └─┘ │   │
-│           └∊────────┘   │
-└∊────────────────────────┘
+      (⎕XML⍠'UnknownEntity' 'Replace')'<a>&unknown;</a>'
+┌─┬─┬─┬───┬─┐
+│0│a│?│   │5│
+└─┴─┴─┴───┴─┘
 ```
 
 With `'Preserve'`, the reference survives as given, with Esc in place of the leading `&`:
