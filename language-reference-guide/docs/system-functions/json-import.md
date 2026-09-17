@@ -99,9 +99,9 @@ The above name translations are verified using `7162⌶`:
 
 ## Variant Options
 
-`⎕JSON` is controlled by six variant options, specified using [`⍠`](../primitive-operators/variant.md) and summarised in [](#variant-table). The principal option is `Format`. The three options that affect only export are tolerated here, but have no effect.
+`⎕JSON` supports six variant options, `Format`, `Dialect`, `Null`, `Compact`, `Charset`, and `HighRank`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforjson), and described in detail beneath it. The principal option is `Format`. The three options that affect only export are tolerated here, but have no effect.
 
-Table: Variant options { #variant-table }
+Table: Variant options for `⎕JSON` { #variantoptionsforjson }
 
 | Variant Option | Value | Effect |
 |---|:---:|---|
