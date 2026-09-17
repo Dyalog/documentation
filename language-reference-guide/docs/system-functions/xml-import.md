@@ -73,6 +73,20 @@ Column 5 describes each row as a convenience to simplify processing of the array
 - Only immediate children are considered when computing the value. For example, an element that contains a sub-element that in turn contains character data does not itself contain the character data.
 - The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element that contains a comment, but comments are being discarded, there is no entry for the comment in the array, and column 5 for the element does not indicate that it has a child comment.
 
+## Limitations
+
+`⎕XML` does not process the contents of markup other than tags, so no validation takes place. This has varying effects, including but not limited to the following:
+
+- Constraints specified in markup such as element type declarations are ignored, so syntactically correct elements that fall outside their constraint are not rejected.
+- Default attributes in attribute-list declarations are not automatically added to elements.
+- Conditional sections are always ignored.
+- Only standard, predefined entity references are recognised; entity declarations that define other entity references have no effect, so `⎕XML` converts only the predefined types.
+- External entities are not processed.
+
+Because markup that describes the format of allowable data is not processed, no error is reported if element contents and attributes do not conform to their restricted declarations.
+
+A [CDATA section](xml.md#cdata-sections) is never recorded as markup: its content appears as character data instead. XML imported to an APL array and exported again therefore has no CDATA sections, although [Export XML](xml-export.md#result) can generate them from markup.
+
 ## Variant Options
 
 `⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variant-table), and described in detail beneath it. There is no principal option.
@@ -109,6 +123,8 @@ The examples below all use this XML:
 ### Variant Option: `Whitespace`
 
 The `Whitespace` variant option specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved. The default is `'Strip'`.
+
+Line endings are normalised to `0x0A` before the XML is parsed, whatever `Whitespace` is set to.
 
 <h4 class="example">Examples</h4>
 
@@ -167,7 +183,7 @@ The `Whitespace` variant option specifies the default handling of whitespace sur
 
 ### Variant Option: `Markup`
 
-The `Markup` variant option determines whether markup, other than entity tags, appears in `R`. The default is `'Strip'`.
+The `Markup` variant option determines whether markup, other than entity tags, appears in `R`. The text of a [comment](xml.md#comments) is therefore kept when `Markup` is `'Preserve'`, and discarded otherwise. The default is `'Strip'`.
 
 <h4 class="example">Examples</h4>
 
