@@ -224,7 +224,7 @@ DOMAIN ERROR: JSON export: value does not match the specified type in row 3 (⎕
 
 ### Variant Option: `Dialect`
 
-If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, [JSON5](https://json5.org/) extensions are used: the result is shortened by usage of identifiers without quotes, single quotes (`'`), and character escapes `\v` and of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`). If [`Compact`](#variant-option-compact) is `0`, a trailing comma (`,`) is added after the last array element and object member.
+The `Dialect` variant option selects which syntax is produced, and must be either `'JSON'` or `'JSON5'`. With `'JSON5'`, the result is shortened by usage of identifiers without quotes, single quotes (`'`), and character escapes `\v` and of the form `\xNN` (for values less than hexadecimal 100, that is, `⎕UCS 256`). If [`Compact`](#variant-option-compact) is `0`, a trailing comma (`,`) is added after the last array element and object member. The default is `'JSON'`.
 
 <h4 class="example">Examples</h4>
 
@@ -351,7 +351,7 @@ DÉ
 
 ### Variant Option: `HighRank`
 
-If `HighRank` is `'Error'` (the default), `⎕JSON` signals a `DOMAIN ERROR` upon encountering any arrays in `Y` of rank higher than 1. If `HighRank` is `'Split'`, `⎕JSON` recursively splits any such arrays as necessary; in addition, [datasets](#dataset-wrappers) as inverted tables can have text columns represented as matrices.
+The `HighRank` variant option selects how arrays in `Y` of rank higher than 1 are treated, and must be either `'Error'` or `'Split'`. With `'Error'`, `⎕JSON` signals a `DOMAIN ERROR` upon encountering one. With `'Split'`, `⎕JSON` recursively splits any such arrays as necessary; in addition, [datasets](#dataset-wrappers) as inverted tables can have text columns represented as matrices. The default is `'Error'`.
 
 <h4 class="example">Example</h4>
 

@@ -284,7 +284,7 @@ This example uses the character vector `json` from [the previous example](#json-
 
 ### Variant Option: `Dialect`
 
-If the `Dialect` variant option (default: `'JSON'`) is `'JSON5'`, all [JSON5](https://json5.org/) extensions are accepted.
+The `Dialect` variant option selects which syntax is accepted, and must be either `'JSON'` or `'JSON5'`. With `'JSON5'`, all [JSON5](https://json5.org/) extensions are accepted. The default is `'JSON'`.
 
 <h4 class="example">Example</h4>
 
