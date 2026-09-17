@@ -89,9 +89,9 @@ A [CDATA section](xml.md#cdata-sections) is never recorded as markup: its conten
 
 ## Variant Options
 
-`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variant-table), and described in detail beneath it. There is no principal option.
+`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforxml), and described in detail beneath it. There is no principal option.
 
-Table: Variant options { #variant-table }
+Table: Variant options for `⎕XML` { #variantoptionsforxml }
 
 |Variant Option|Value|Effect|
 |---|:---:|---|

@@ -58,9 +58,9 @@ Markup, if present, is *not* validated, so it is possible to generate invalid XM
 
 ## Variant Options
 
-`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variant-table), and described in detail beneath it. There is no principal option. `Markup`, which affects only import, is tolerated here, but has no effect.
+`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variantoptionsforxml), and described in detail beneath it. There is no principal option. `Markup`, which affects only import, is tolerated here, but has no effect.
 
-Table: Variant options { #variant-table }
+Table: Variant options for `⎕XML` { #variantoptionsforxml }
 
 |Variant Option|Value|Effect|
 |---|:---:|---|
