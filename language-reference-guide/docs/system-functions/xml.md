@@ -85,21 +85,21 @@ Comments are fully supported markup. They are delimited by `<!--` and `-->` and 
 
 ### CDATA Sections
 
-CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They and are delimited by `<![CDATA[` and `]]>`. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
+CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They are delimited by `<![CDATA[` and `]]>`. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
 
 ### Processing Instructions
 
-Processing Instructions are delimited by `<&` and `&>` but are otherwise treated as other markup, below.
+Processing Instructions are delimited by `<?` and `?>` but are otherwise treated as [other markup](#other-markup).
 
 ### Other Markup
 
 The remainder of XML markup, including document type declarations,  XML declarations and text declarations are all delimited by `<!` and `>`, and can contain nested markup. If markup is being preserved the text, including nested markup, will appear as a single row in the APL array.  `⎕XML` does not process the contents of such markup. This has varying effects, including but not limited to the following:
 
 - No validation is performed.
-- Constraints specified in markup such element type declarations will be ignored and therefore syntactically correct elements which fall outside their constraint will not be rejected.
+- Constraints specified in markup such as element type declarations will be ignored and therefore syntactically correct elements which fall outside their constraint will not be rejected.
 - Default attributes in attribute-list declarations will not be automatically added to elements.
 - Conditional sections will always be ignored.
-- Only standard, predefined, entity references will be recognized; entity declarations which define others entity references will have no effect.
+- Only standard, predefined, entity references will be recognized; entity declarations which define other entity references will have no effect.
 - External entities are not processed.
 
 <!-- Hidden search keywords -->
