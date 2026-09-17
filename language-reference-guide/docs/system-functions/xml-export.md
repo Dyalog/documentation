@@ -20,15 +20,15 @@ This function converts an APL array to XML text. To convert XML to an APL array 
 
 ## Right Argument
 
-`Y` is a 3, 4, or 5 column matrix, one row per node, whose columns are:
+`Y` is a 3-, 4-, or 5-column matrix, one row per node, whose columns are:
 
 |Column|Description                                                          |
 |------|---------------------------------------------------------------------|
-|1     |Numeric value which indicates the level of nesting                   |
+|1     |Numeric value that indicates the level of nesting                    |
 |2     |Element name, other markup text, or empty character vector when empty|
 |3     |Character data or empty character vector when empty                  |
 |4     |Attribute name and value pairs, ( `0 2⍴⊂''` ) when empty             |
-|5     |A numeric value which indicates what the row contains                |
+|5     |A numeric value that indicates what the row contains                 |
 
 This is the form that [importing](xml-import.md#result) produces, so XML can be imported, edited as an array, and exported again. Some simplifications to the array are accepted:
 
@@ -39,14 +39,14 @@ This is the form that [importing](xml-import.md#result) produces, so XML can be 
 The following validations are performed on the data in the array:
 
 - All elements within the array are checked for type.
-- Values in column 1 must be non-negative and start from level 0, and the increment from one row to the next must be `≤` +1.
+- Values in column 1 must be non-negative and start from level `0`, and the increment from one row to the next must be at most `1`.
 - Tag names in column 2 and attribute names in column 4 (if present) must conform to the XML name definition.
 
 ## Left Argument
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
 
-An option name or value is spelled differently here than for `⍠`: lower case throughout, with a dash inserted before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
+An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 
@@ -54,7 +54,7 @@ An option name or value is spelled differently here than for `⍠`: lower case t
 
 ## Variant Options
 
-`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table). There is no principal option. `Markup`, which affects only import, is tolerated here, but has no effect.
+`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variant-table), and described in detail beneath it. There is no principal option. `Markup`, which affects only import, is tolerated here, but has no effect.
 
 Table: Variant options { #variant-table }
 
@@ -69,7 +69,7 @@ Table: Variant options { #variant-table }
 
 ### Variant Option: `Whitespace`
 
-`Whitespace` specifies the default formatting of the generated XML, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved.
+The `Whitespace` variant option specifies the default formatting of the generated XML, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved. The default is `'Strip'`.
 
 <h4 class="example">Examples</h4>
 
@@ -85,7 +85,7 @@ Table: Variant options { #variant-table }
 
 ### Variant Option: `UnknownEntity`
 
-`UnknownEntity` determines what happens to Esc characters (`⎕UCS 27`) in data, which [import](xml-import.md#variant-option-unknownentity) puts there in place of the leading `&` of an unknown entity reference.
+The `UnknownEntity` variant option determines what happens to Esc characters (`⎕UCS 27`) in data, which [import](xml-import.md#variant-option-unknownentity) puts there in place of the leading `&` of an unknown entity reference. The default is `'Replace'`.
 
 <h4 class="example">Examples</h4>
 

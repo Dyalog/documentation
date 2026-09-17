@@ -29,21 +29,21 @@ This function converts XML text to an APL array. To convert an APL array to XML 
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
 
-An option name or value is spelled differently here than for `⍠`: lower case throughout, with a dash inserted before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
+An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 
-`R` is a 5 column matrix whose columns are made up as follows:
+`R` is a 5-column matrix, one row per node, whose columns are:
 
 |Column|Description                                                          |
 |------|---------------------------------------------------------------------|
-|1     |Numeric value which indicates the level of nesting                   |
+|1     |Numeric value that indicates the level of nesting                    |
 |2     |Element name, other markup text, or empty character vector when empty|
 |3     |Character data or empty character vector when empty                  |
 |4     |Attribute name and value pairs, ( `0 2⍴⊂''` ) when empty             |
-|5     |A numeric value which indicates what the row contains                |
+|5     |A numeric value that indicates what the row contains                 |
 
-The values in column 5  have the following meanings:
+The values in column 5 have the following meanings:
 
 |Value|Description                  |
 |-----|-----------------------------|
@@ -58,20 +58,24 @@ These values are additive. For example, a value of 5 in column 5 means that the 
 
 ### How the Result is Built
 
-- The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for `<xml><document id="001">An introduction to XML</document></xml>` the _xml_ element is at level 0 and the _document id_ element is at level 1. The text within the _document id_ element is at level 2.
-- Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by `<` and `>` characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
-- All XML markup other than tags are delimited by either `<!` and `>`, or `<?` and `>` characters. By default these are not stored in the result matrix but the `Markup` option can be used to specify that they are. The elements are stored in their entirety, except for the leading and trailing `<` and `>` characters, in column 2. Nested constructs are treated as a single block. Because the leading and trailing `<` and `>` characters are stripped, such entries always have either `!` or `?` as the first character.
-- Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element it is included with its parent rather than as a separate row in the result. When this happens, the level number stored is that of the parent; the data itself implicitly has a level number one greater.
-- Attribute name and value pairs associated with the element name are stored in the fourth column, in an (*n x 2*) matrix of character values, for the *n* (including zero) pairs.
-- Each row is further described in the fifth column as a convenience to simplify processing of the array (although this information could be deduced). Any given row can contain an entry for an element, character data, markup not otherwise defined, a comment or a processing instruction. Furthermore, an element will have zero or more of these as children. For all types except elements, the value in the fifth column is as shown above. For elements, the value is computed by adding together the value of the row itself (1) and those of its children. For example, the value for a row for an element which contains one or more sub-elements and character data is 7 – that is 1 (element) + 2 (child element) + 4 (character data). In addition:
-- Odd values always represent elements. Odd values other than 1 indicate that there are children.
-- Elements which contain just character data (5) are combined into a single row as noted previously.
-- Only immediate children are considered when computing the value. For example, an element which contains a sub-element which in turn contains character data does not itself contain the character data.
-- The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element which contains a comment, but comments are being discarded, there will be no entry for the comment in the array and the fifth column for the element will not indicate that it has a child comment.
+The level number in column 1 is `0` for the outermost level, and each subsequent level is one greater. Thus, for `<xml><document id="001">An introduction to XML</document></xml>` the _xml_ element is at level `0`, the _document id_ element at level `1`, and the text within the _document id_ element at level `2`.
+
+Each tag contains an element name and zero or more attribute name and value pairs, delimited by `<` and `>` characters. The delimiters are not included in the result. The element name is stored in column 2, and the attributes in column 4 as an *n*×2 matrix of character values for the *n* (including zero) pairs.
+
+All XML markup other than tags is delimited by either `<!` and `>`, or `<?` and `>` characters. By default these are not stored in the result, but the [`Markup`](#variant-option-markup) variant option can be used to specify that they are. Such markup is stored in column 2 in its entirety, except for the leading and trailing `<` and `>` characters, and nested constructs are treated as a single block. Because those characters are stripped, such entries always have either `!` or `?` as the first character.
+
+Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element it is included with its parent rather than as a separate row. The level number stored is then that of the parent; the data itself implicitly has a level number one greater.
+
+Column 5 describes each row as a convenience to simplify processing of the array, although this information could be deduced. A row can contain an entry for an element, character data, markup not otherwise defined, a comment, or a processing instruction, and an element has zero or more of these as children. For all types except elements the value is as shown above; for an element it is the value of the row itself (`1`) added to those of its children, so an element containing one or more sub-elements and character data is `7`, that is `1` (element) + `2` (child element) + `4` (character data). In addition:
+
+- Odd values always represent elements. Odd values other than `1` indicate that there are children.
+- Elements that contain just character data (`5`) are combined into a single row, as noted above.
+- Only immediate children are considered when computing the value. For example, an element that contains a sub-element that in turn contains character data does not itself contain the character data.
+- The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element that contains a comment, but comments are being discarded, there is no entry for the comment in the array, and column 5 for the element does not indicate that it has a child comment.
 
 ## Variant Options
 
-`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table). There is no principal option.
+`⎕XML` supports three variant options, `Whitespace`, `Markup`, and `UnknownEntity`, specified using the _variant_ operator [`⍠`](../primitive-operators/variant.md), summarised in [](#variant-table), and described in detail beneath it. There is no principal option.
 
 Table: Variant options { #variant-table }
 
@@ -104,7 +108,7 @@ The examples below all use this XML:
 
 ### Variant Option: `Whitespace`
 
-`Whitespace` specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved.
+The `Whitespace` variant option specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved. The default is `'Strip'`.
 
 <h4 class="example">Examples</h4>
 
@@ -163,7 +167,7 @@ The examples below all use this XML:
 
 ### Variant Option: `Markup`
 
-`Markup` determines whether markup, other than entity tags, appears in `R`.
+The `Markup` variant option determines whether markup, other than entity tags, appears in `R`. The default is `'Strip'`.
 
 <h4 class="example">Examples</h4>
 
@@ -211,7 +215,7 @@ The examples below all use this XML:
 
 ### Variant Option: `UnknownEntity`
 
-`UnknownEntity` determines what happens when an unknown entity reference, or a character reference for a Unicode character that cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL this is any Unicode character that does not appear in [`⎕AVU`](avu.md).
+The `UnknownEntity` variant option determines what happens when an unknown entity reference, or a character reference for a Unicode character that cannot be represented as an APL character, is encountered. In Classic versions of Dyalog APL this is any Unicode character that does not appear in [`⎕AVU`](avu.md). The default is `'Replace'`.
 
 <h4 class="example">Examples</h4>
 

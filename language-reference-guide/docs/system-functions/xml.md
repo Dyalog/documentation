@@ -33,9 +33,9 @@ Such a matrix is converted back to XML text:
 
 XML is an open standard, designed to allow exchange of data between applications. The [full specification](http://www.w3.org/TR/2008/REC-xml-20081126/) describes functionality, including processing directives and other directives, which can transform XML data as it is read, and which a full XML processor would be expected to handle.
 
-The `⎕XML` function is designed to handle XML to the extent required to import and export APL data. It favours speed over complexity - some markup is tolerated but largely ignored, and there are no XML query or validation features. APL applications which require processing, querying or validation will need to call external tools for this, and finally call `⎕XML` on the resulting XML to perform the transformation into APL arrays.
+The `⎕XML` function is designed to handle XML to the extent required to import and export APL data. It favours speed over complexity – some markup is tolerated but largely ignored, and there are no XML query or validation features. An APL application that requires processing, querying, or validation calls an external tool for that, and then calls `⎕XML` on the resulting XML to transform it into APL arrays.
 
-XML grammar such as processing instructions and document type declarations can optionally be stored in the APL array, but will not be processed or validated. This is principally to allow regeneration of XML from XML input which contains such structures, but an APL application could process the data if it chose to do so.
+XML grammar such as processing instructions and document type declarations can optionally be stored in the APL array, but is not processed or validated. This is principally to allow regeneration of XML from XML input that contains such structures, although an APL application can process the data itself.
 
 ## Glossary of Terms
 
@@ -49,13 +49,13 @@ Character data consists of free-form text. The free-form text should not include
 
 Entity references are named representations of single characters that cannot normally be used in character data because they are used to delimit markup, such as `&gt;` for `>`. Character references are numeric representations of any character, such as `&#32;` for a space. Character references always take values in the Unicode code space, regardless of the encoding of the XML text itself.
 
-`⎕XML` converts entity references and all character references which the APL character set is able to represent into their character equivalent when generating APL array data; when generating XML it converts any or all characters to entity references as needed.
+`⎕XML` converts entity references, and every character reference that the APL character set can represent, into their character equivalent when generating APL array data; when generating XML it converts any or all characters to entity references as needed.
 
-There is a predefined set of entity references, and the XML specification allows others to be defined within the XML using the `<!ENTITY >` markup. `⎕XML` does not process these additional declarations and therefore will only convert the predefined types.
+There is a predefined set of entity references, and the XML specification allows others to be defined within the XML using the `<!ENTITY >` markup. `⎕XML` does not process these additional declarations, and therefore converts only the predefined types.
 
 ### Whitespace
 
-Whitespace sequences consist of one or more spaces, tabs or line-endings. Within character data, sequences of one or more whitespace characters are replaced with a single space when this is enabled by the whitespace option. Line endings are represented differently on different systems (0x0D 0x0A, 0x0A and 0x0D are all used) but are normalized by converting them all to 0x0A before the XML is parsed, regardless of the setting of the whitespace option.
+Whitespace sequences consist of one or more spaces, tabs, or line endings. Within character data, sequences of one or more whitespace characters are replaced with a single space when the `Whitespace` variant option enables this. Line endings are represented differently on different systems (`0x0D 0x0A`, `0x0A`, and `0x0D` are all used) but are normalised by converting them all to `0x0A` before the XML is parsed, whatever `Whitespace` is set to.
 
 ### Elements
 
@@ -69,15 +69,15 @@ Attribute values can be delimited by either double quotes as shown or single quo
 
 The content of elements can be zero or more mixed occurrences of character data and nested elements. Tags and attribute names *describe* data, attribute values and the content within tags contain the data itself. Nesting of elements allows structure to be defined.
 
-Because certain markup which describes the format of allowable data (such as element type declarations and attribute-list declarations) is not processed, no error will be reported if element contents and attributes do not conform to their restricted declarations, nor are attributes automatically added to tags if not explicitly given.
+Because certain markup that describes the format of allowable data (such as element type declarations and attribute-list declarations) is not processed, no error is reported if element contents and attributes do not conform to their restricted declarations, nor are attributes automatically added to tags if not explicitly given.
 
-Attributes with names beginning **xml:** are reserved. Only **xml:space** is treated specially by `⎕XML`. When converting both from and to XML, the value for this attribute has the following effects on space normalization for the character data within this element and child elements within it (unless subsequently overridden):
+Attributes with names beginning `xml:` are reserved. Only `xml:space` is treated specially by `⎕XML`. When converting both from and to XML, the value of this attribute has the following effects on space normalisation for the character data within this element and child elements within it, unless subsequently overridden:
 
-- **default** – space normalisation is as determined by the `Whitespace` variant option. 
-- **preserve** - space normalization is disabled – all whitespace is preserved as given.
-- **any other value** – rejected.
+- `default` – space normalisation is as determined by the `Whitespace` variant option.
+- `preserve` – space normalisation is disabled; all whitespace is preserved as given.
+- any other value – rejected.
 
-Regardless of whether the attribute name and value have a recognised meaning, the attribute will be included in the APL array or generated XML. When the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
+Regardless of whether the attribute name and value have a recognised meaning, the attribute is included in the APL array or generated XML. When the names and values of attributes are examined, the comparisons are case-sensitive and take place after entity references and character references have been expanded.
 
 ### Comments
 
@@ -85,7 +85,7 @@ Comments are fully supported markup. They are delimited by `<!--` and `-->` and 
 
 ### CDATA Sections
 
-CDATA Sections are fully supported markup. They are used to delimit text within character data which has, or might have, markup text in it which is not to be processed as such. They are delimited by `<![CDATA[` and `]]>`. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
+CDATA Sections are fully supported markup. They are used to delimit text within character data that has, or might have, markup text in it that is not to be processed as such. They are delimited by `<![CDATA[` and `]]>`. CDATA sections are never recorded in the APL array as markup when XML is processed – instead, that data appears as character data. This means that if you convert XML to an APL array and then convert this back to XML, CDATA sections are not regenerated. It is, however, possible to generate CDATA sections in XML by presenting them as markup.
 
 ### Processing Instructions
 
@@ -93,13 +93,13 @@ Processing Instructions are delimited by `<?` and `?>` but are otherwise treated
 
 ### Other Markup
 
-The remainder of XML markup, including document type declarations,  XML declarations and text declarations are all delimited by `<!` and `>`, and can contain nested markup. If markup is being preserved the text, including nested markup, will appear as a single row in the APL array.  `⎕XML` does not process the contents of such markup. This has varying effects, including but not limited to the following:
+The remainder of XML markup, including document type declarations, XML declarations, and text declarations, is delimited by `<!` and `>`, and can contain nested markup. If markup is being preserved, the text, including nested markup, appears as a single row in the APL array. `⎕XML` does not process the contents of such markup. This has varying effects, including but not limited to the following:
 
 - No validation is performed.
-- Constraints specified in markup such as element type declarations will be ignored and therefore syntactically correct elements which fall outside their constraint will not be rejected.
-- Default attributes in attribute-list declarations will not be automatically added to elements.
-- Conditional sections will always be ignored.
-- Only standard, predefined, entity references will be recognized; entity declarations which define other entity references will have no effect.
+- Constraints specified in markup such as element type declarations are ignored, so syntactically correct elements that fall outside their constraint are not rejected.
+- Default attributes in attribute-list declarations are not automatically added to elements.
+- Conditional sections are always ignored.
+- Only standard, predefined entity references are recognised; entity declarations that define other entity references have no effect.
 - External entities are not processed.
 
 <!-- Hidden search keywords -->
