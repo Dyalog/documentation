@@ -1,6 +1,6 @@
 # <span>XML Convert</span> `⎕XML`
 
-`⎕XML` converts between XML text and APL arrays. It imports when the right argument is a simple character vector, and exports otherwise.
+`⎕XML` converts between XML text and APL arrays. It imports when the right argument is a simple character vector, and exports when it is a matrix.
 
 ## [Import XML](xml-import.md)
 

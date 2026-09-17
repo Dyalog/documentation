@@ -56,7 +56,7 @@ The values in column 5  have the following meanings:
 
 These values are additive. For example, a value of 5 in column 5 means that the row contains both an element (value 1) and character data (value 4).
 
-## How the Result is Built
+### How the Result is Built
 
 - The level number in the first column of the result `R` is 0 for the outermost level and subsequent levels are represented by an increase of 1 for each level. Thus, for "&lt;xml>&lt;document id="001">An introduction to XML &lt;/document>&lt;/xml>&lt;/code>" the _xml_ element is at level 0 and the _document id_ element is at level 1. The text within the _document id_ element is at level 2.
 - Each tag in the XML contains an element name and zero or more attribute name and value pairs, delimited by `<` and `>` characters. The delimiters are not included in the result matrix. The element name of a tag is stored in column 2 and the attribute(s) in column 4.
@@ -84,8 +84,6 @@ Table: Variant options { #variant-table }
 |_-  -_|`'Preserve'`|Markup text appears in `R`, without the leading `<` and trailing `>` of the tag, in the second column|
 |[`UnknownEntity`](#variant-option-unknownentity)|`'Replace'`<br><small>(default)</small>|The reference is replaced by a single `?` character|
 |_-  -_|`'Preserve'`|The reference is included in the data as given, but with the leading `&` replaced by Esc (`⎕UCS 27`)|
-
-Errors detected in the right argument or the options all cause `DOMAIN ERROR`.
 
 The examples below all use this XML:
 
@@ -165,7 +163,7 @@ The examples below all use this XML:
 
 ### Variant Option: `Markup`
 
-`Markup` determines whether markup, other than entity tags, appears in `R`. It has no effect on [export](xml-export.md#variant-options).
+`Markup` determines whether markup, other than entity tags, appears in `R`.
 
 <h4 class="example">Examples</h4>
 

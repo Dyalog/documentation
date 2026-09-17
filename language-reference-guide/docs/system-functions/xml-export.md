@@ -54,7 +54,7 @@ An option name or value is spelled differently here than for `⍠`: lower case t
 
 ## Variant Options
 
-`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table). There is no principal option.
+`⎕XML` supports three variant options, specified using the [`⍠`](../primitive-operators/variant.md) operator and summarised in [](#variant-table). There is no principal option. `Markup`, which affects only import, is tolerated here, but has no effect.
 
 Table: Variant options { #variant-table }
 
@@ -65,9 +65,7 @@ Table: Variant options { #variant-table }
 |_-  -_|`'Preserve'`|Whitespace in the data is preserved as given, except that line endings are represented by Linefeed (`⎕UCS 10`). `R` has no formatting or indentation other than that contained within the data|
 |[`UnknownEntity`](#variant-option-unknownentity)|`'Replace'`<br><small>(default)</small>|Esc (`⎕UCS 27`) in data is rejected|
 |_-  -_|`'Preserve'`|Esc (`⎕UCS 27`) in data is replaced by `&`|
-|`Markup`||Only affects [import](xml-import.md#variant-options)|
-
-Errors detected in the right argument or the options all cause `DOMAIN ERROR`.
+|`Markup`|&nbsp;|Only affects [import](xml-import.md#variant-options)|
 
 ### Variant Option: `Whitespace`
 
