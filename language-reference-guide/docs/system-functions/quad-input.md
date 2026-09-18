@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Evaluated Input</span> `⎕`{{key}}
+# <span>Evaluated Input</span> `R←⎕`{{key}}
 
 Referencing `⎕` displays the prompt `⎕:` in the Session or terminal and requests input. The response is evaluated, and its result is returned. To display a value there instead, [assign to `⎕`](quad-output.md).
 

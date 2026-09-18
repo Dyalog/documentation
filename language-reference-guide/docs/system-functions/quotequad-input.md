@@ -3,7 +3,7 @@ search:
   boost: 2
 ---
 
-# <span>Character Input</span> `⍞`{{key}}
+# <span>Character Input</span> `R←⍞`{{key}}
 
 Referencing `⍞` requests input from the Session or terminal and returns the response as a character vector. To display characters there instead, [assign to `⍞`](quotequad-output.md).
 
