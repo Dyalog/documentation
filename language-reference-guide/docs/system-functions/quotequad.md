@@ -7,9 +7,9 @@ search:
 
 `⍞` communicates between an APL expression and the Session or terminal. Referencing it reads characters from there; assigning to it displays characters there.
 
-## [Character Input](quotequad-input.md)
+## Character Input
 
-Referencing `⍞` requests input from standard input and returns the response as a character vector:
+[`R←⍞`](quotequad-input.md) requests input from standard input and returns the response as a character vector:
 
 ```apl
       R←⍞
@@ -18,9 +18,9 @@ INPUT
 INPUT
 ```
 
-## [Message Output](quotequad-output.md)
+## Message Output
 
-Assigning to `⍞` displays characters on standard error without a trailing new-line, so successive assignments build one line:
+[`⍞←Y`](quotequad-output.md) displays characters on standard error without a trailing new-line, so successive assignments build one line:
 
 ```apl
       ⍞←'2+2' ⋄ ⍞←'=' ⋄ ⍞←4

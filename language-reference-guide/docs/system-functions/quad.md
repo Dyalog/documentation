@@ -7,9 +7,9 @@ search:
 
 `⎕` communicates between an APL expression and the Session or terminal. Referencing it reads a value from there; assigning to it displays a value there.
 
-## [Evaluated Input](quad-input.md)
+## Evaluated Input
 
-Referencing `⎕` prompts for an expression, evaluates it, and returns the result:
+[`R←⎕`](quad-input.md) prompts for an expression, evaluates it, and returns the result:
 
 ```apl
       10×⎕+2
@@ -18,9 +18,9 @@ Referencing `⎕` prompts for an expression, evaluates it, and returns the resul
 30 40 50
 ```
 
-## [Standard Output](quad-output.md)
+## Standard Output
 
-Assigning to `⎕` displays the array in the same form as implicit output, on standard output:
+[`⎕←Y`](quad-output.md) displays the array in the same form as implicit output, on standard output:
 
 ```apl
       ⎕←2 4⍴'WINEMART'
