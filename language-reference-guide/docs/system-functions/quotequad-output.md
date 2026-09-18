@@ -5,7 +5,7 @@ search:
 
 # <span>Message Output</span> `⍞←X`{{key}}
 
-Assigning an array to `⍞` displays it in the Session or terminal without the new-line that normally ends the last line of output. Successive assignments with no intervening input or output therefore continue on the same line.
+Assigning an array to `⍞` displays it in the Session or terminal without the new-line that normally ends the last line of output. Successive assignments with no intervening input or output therefore continue on the same line. To read characters from there instead, [reference `⍞`](quotequad-input.md).
 
 <h2 class="example">Example</h2>
 

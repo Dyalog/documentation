@@ -20,7 +20,7 @@ search:
 
 ## Standard Output
 
-[`⎕←Y`](quad-output.md) displays the array in the same form as implicit output, on standard output:
+[`⎕←X`](quad-output.md) displays the array in the same form as implicit output, on standard output:
 
 ```apl
       ⎕←2 4⍴'WINEMART'

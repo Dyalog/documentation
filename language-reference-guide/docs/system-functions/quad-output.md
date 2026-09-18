@@ -5,7 +5,7 @@ search:
 
 # <span>Standard Output</span> `⎕←X`{{key}}
 
-Assigning an array to `⎕` displays it in the Session or terminal, in the same form as [implicit output](../../programming-reference-guide/introduction/output.md); see [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays.md).
+Assigning an array to `⎕` displays it in the Session or terminal, in the same form as [implicit output](../../programming-reference-guide/introduction/output.md); see [Display of Arrays](../../programming-reference-guide/introduction/arrays/display-of-arrays.md). To read a value from there instead, [reference `⎕`](quad-input.md).
 
 <h2 class="example">Example</h2>
 

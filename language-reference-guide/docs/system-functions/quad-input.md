@@ -5,7 +5,7 @@ search:
 
 # <span>Evaluated Input</span> `⎕`{{key}}
 
-Referencing `⎕` displays the prompt `⎕:` in the Session or terminal and requests input. The response is evaluated, and its result is returned.
+Referencing `⎕` displays the prompt `⎕:` in the Session or terminal and requests input. The response is evaluated, and its result is returned. To display a value there instead, [assign to `⎕`](quad-output.md).
 
 <h2 class="example">Example</h2>
 

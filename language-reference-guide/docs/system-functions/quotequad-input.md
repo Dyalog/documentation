@@ -5,7 +5,7 @@ search:
 
 # <span>Character Input</span> `⍞`{{key}}
 
-Referencing `⍞` requests input from the Session or terminal and returns the response as a character vector.
+Referencing `⍞` requests input from the Session or terminal and returns the response as a character vector. To display characters there instead, [assign to `⍞`](quotequad-output.md).
 
 <h2 class="example">Example</h2>
 
