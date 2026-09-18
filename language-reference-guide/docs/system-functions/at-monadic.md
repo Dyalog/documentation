@@ -7,8 +7,7 @@ search:
 
 This function returns information that is appropriate for Dyalog APL; the [dyadic form](at-dyadic.md) closely emulates the APL2 implementation instead.
 
-!!! Legacy "Legacy"
-    `⎕AT` reports a fixed set of attributes, and only for defined functions and operators. [`⎕ATX`](atx.md) reports those and many more, selects exactly the ones wanted, and applies to other kinds of name as well.
+A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT`, reporting many more attributes, on more kinds of name, and only the ones asked for.
 
 ## Argument
 

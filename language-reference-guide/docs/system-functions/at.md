@@ -5,10 +5,9 @@ search:
 
 # <span>Object Attributes</span> `⎕AT`
 
-`⎕AT` reports attributes of the defined functions and operators named in `Y`, such as their valences and the time they were last fixed.
+`⎕AT` reports attributes of the defined functions and operators named in the right argument, such as their valences and the time they were last fixed.
 
-!!! Legacy "Legacy"
-    `⎕AT` reports a fixed set of attributes, and only for defined functions and operators. [`⎕ATX`](atx.md) reports those and many more, selects exactly the ones wanted, and applies to other kinds of name as well.
+A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT`, reporting many more attributes, on more kinds of name, and only the ones asked for.
 
 ## Object Attributes for Dyalog
 
