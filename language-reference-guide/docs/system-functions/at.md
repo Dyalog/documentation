@@ -10,9 +10,9 @@ search:
 !!! Legacy "Legacy"
     `⎕AT` reports a fixed set of attributes, and only for defined functions and operators. [`⎕ATX`](atx.md) reports those and many more, selects exactly the ones wanted, and applies to other kinds of name as well.
 
-## [Object Attributes for Dyalog](at-monadic.md)
+## Object Attributes for Dyalog
 
-Monadic `⎕AT` reports the valences, fix time, lock state, and author of each name at once:
+[Monadic `⎕AT`](at-monadic.md) reports the valences, fix time, lock state, and author of each name at once:
 
 ```apl
       ∇ R←X plus Y
@@ -23,9 +23,9 @@ Monadic `⎕AT` reports the valences, fix time, lock state, and author of each n
 
 ```
 
-## [Object Attributes for APL2](at-dyadic.md)
+## Object Attributes for APL2
 
-Dyadic `⎕AT` reports one group of attributes, chosen by `X`, in the form that APL2 uses:
+[Dyadic `⎕AT`](at-dyadic.md) reports one group of attributes, chosen by the left argument, in the form that APL2 uses:
 
 ```apl
       ∇ R←X plus Y
