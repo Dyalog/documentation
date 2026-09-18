@@ -7,18 +7,18 @@ search:
 
 `⎕JSON` converts between APL data and [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON). The left argument chooses the direction.
 
-## [Import JSON](json-import.md)
+## Import JSON
 
-`0 ⎕JSON` converts a JSON document to APL data:
+[`0 ⎕JSON`](json-import.md) converts a JSON document to APL data:
 
 ```apl
       0 ⎕JSON'[1,-2,3]'
 1 ¯2 3
 ```
 
-## [Export JSON](json-export.md)
+## Export JSON
 
-`1 ⎕JSON` converts APL data to a JSON document:
+[`1 ⎕JSON`](json-export.md) converts APL data to a JSON document:
 
 ```apl
       1 ⎕JSON 1 ¯2 3
