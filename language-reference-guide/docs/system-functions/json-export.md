@@ -22,10 +22,7 @@ This function converts APL data to a JSON document. To convert a JSON document t
 
 ## Left Argument
 
-The left argument `1` can be omitted when `Y` is not a simple character array, which is what identifies the call as an export.
-
-!!! Warning "Warning"
-    Dyalog Ltd strongly recommends that the left argument should always be specified to avoid code that seemingly works, only to fail on specific values.
+The left argument `1` can be omitted when `Y` is not a simple character array, which is what identifies the call as an export, but Dyalog Ltd recommends specifying the left argument to avoid code that seemingly works, only to fail on specific values.
 
 ## Result
 

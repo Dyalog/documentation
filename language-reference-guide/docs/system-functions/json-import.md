@@ -20,10 +20,7 @@ This function converts a JSON document to APL data. To convert APL data to JSON 
 
 ## Left Argument
 
-The left argument `0` can be omitted when `Y` is a simple character array, which is what identifies the call as an import.
-
-!!! Warning "Warning"
-    Dyalog Ltd strongly recommends that the left argument should always be specified to avoid code that seemingly works, only to fail on specific values.
+The left argument `0` can be omitted when `Y` is a simple character array, which is what identifies the call as an import, but Dyalog Ltd recommends specifying the left argument to avoid code that seemingly works, only to fail on specific values.
 
 ## Result
 
