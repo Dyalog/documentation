@@ -7,27 +7,27 @@ search:
 
 A *token range* reserves a set of token types for one purpose, so that unrelated parts of an application can use [`⎕TPUT`](tput.md) and [`⎕TGET`](tget.md) without choosing the same types by accident. The first element of the right argument chooses which action `⎕TALLOC` performs on such ranges.
 
-## [Allocate Token Range](talloc-allocate.md)
+## Allocate Token Range
 
-`⎕TALLOC 1` reserves a range and returns the number identifying it, optionally recording a description:
+[`⎕TALLOC 1`](talloc-allocate.md) reserves a range and returns the number identifying it, optionally recording a description:
 
 ```apl
       ⎕←trg←⎕TALLOC 1 'cats'
 1
 ```
 
-## [De-allocate Token Range](talloc-deallocate.md)
+## De-allocate Token Range
 
-`⎕TALLOC ¯1` releases the range identified by the left argument, making it free for re-allocation:
+[`⎕TALLOC ¯1`](talloc-deallocate.md) releases the range identified by the left argument, making it free for re-allocation:
 
 ```apl
       ⎕←trg ⎕TALLOC ¯1
 1
 ```
 
-## [Query Allocated Token Ranges](talloc-ranges.md)
+## Query Allocated Token Ranges
 
-`⎕TALLOC 0` reports the ranges currently allocated and their descriptions, or the description of the one range identified by the left argument:
+[`⎕TALLOC 0`](talloc-ranges.md) reports the ranges currently allocated and their descriptions, or the description of the one range identified by the left argument:
 
 ```apl
       ⎕TALLOC 0
@@ -38,9 +38,9 @@ A *token range* reserves a set of token types for one purpose, so that unrelated
 └────────┘
 ```
 
-## [Query Pooled Tokens in Range](talloc-pool.md)
+## Query Pooled Tokens in Range
 
-`⎕TALLOC 2` reports the tokens in the token pool that fall within the range identified by the left argument:
+[`⎕TALLOC 2`](talloc-pool.md) reports the tokens in the token pool that fall within the range identified by the left argument:
 
 ```apl
       trg ⎕TALLOC 2
