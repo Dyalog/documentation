@@ -7,7 +7,7 @@ search:
 
 This function closely emulates the APL2 implementation; the [monadic form](at-monadic.md) returns information more appropriate to Dyalog APL instead.
 
-A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT`, reporting many more attributes, on more kinds of name, and only the ones asked for.
+A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT` that reports many more attributes, lets you choose which of them to report, and applies to any name, not only defined functions and operators.
 
 ## Left Argument
 

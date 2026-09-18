@@ -7,7 +7,7 @@ search:
 
 `⎕AT` reports attributes of the defined functions and operators named in the right argument, such as their valences and the time they were last fixed.
 
-A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT`, reporting many more attributes, on more kinds of name, and only the ones asked for.
+A newer system function, [`⎕ATX`](atx.md), can be used instead: it is a superset of `⎕AT` that reports many more attributes, lets you choose which of them to report, and applies to any name, not only defined functions and operators.
 
 ## Object Attributes for Dyalog
 
