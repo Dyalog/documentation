@@ -9,18 +9,18 @@ search:
 
 The first element of the right argument chooses which action `⎕SIGNAL` performs (an empty right argument does nothing).
 
-## [Reset Event Constants](signal-reset.md)
+## Reset Event Constants
 
-`0` resets the system constants describing the most recent event, without generating one:
+[`⎕SIGNAL 0`](signal-reset.md) resets the system constants describing the most recent event, without generating one:
 
 ```apl
       ⎕←⎕SIGNAL 0
 0
 ```
 
-## [Signal Default Event](signal-default.md)
+## Signal Default Event
 
-An event number generates that event with its standard event message, which an optional left argument can replace:
+[An event number](signal-default.md) generates that event with its standard event message, which an optional left argument can replace:
 
 ```apl
       ⎕SIGNAL 200
@@ -34,9 +34,9 @@ Hello
              ∧
 ```
 
-## [Signal Extended Event](signal-extended.md)
+## Signal Extended Event
 
-A set of name/value pairs generates an event with chosen values for the members of [`⎕DMX`](dmx.md):
+[A set of name/value pairs](signal-extended.md) generates an event with chosen values for the members of [`⎕DMX`](dmx.md):
 
 ```apl
       ⎕SIGNAL⊂('EN' 200)('Message' 'My error')
