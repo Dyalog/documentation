@@ -2,9 +2,9 @@
 
 `⎕XML` converts between XML text and APL arrays. It imports when the right argument is a simple character vector, and exports when it is a matrix.
 
-## [Import XML](xml-import.md)
+## Import XML
 
-A character vector holding XML is converted to a five-column matrix describing it:
+[`⎕XML` on a character vector](xml-import.md) converts the XML it holds to a five-column matrix describing it:
 
 ```apl
       v←⎕XML'<xml><t a="s">c</t></xml>'
@@ -18,9 +18,9 @@ A character vector holding XML is converted to a five-column matrix describing i
 └─┴───┴─┴─────┴─┘
 ```
 
-## [Export XML](xml-export.md)
+## Export XML
 
-Such a matrix is converted back to XML text:
+[`⎕XML` on such a matrix](xml-export.md) converts it back to XML text:
 
 ```apl
       ⎕XML v
