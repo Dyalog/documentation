@@ -39,13 +39,17 @@ Dyalog v20.0 was the last release to be built for 32-bit Raspberry Pis. To run D
     Dyalog Ltd strongly recommends identifying and replacing deprecated functionality at the earliest opportunity; see [Deprecated Functionality](https://docs.dyalog.com/21.0/release-notes/announcements/deprecated-functionality/) for information on how to identify deprecated functionality.
 
 ### `43⌶632` – Generics Operator
-`43⌶632` has been deprecated; the functionality that it provided is now available using a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). It is scheduled for removal in Dyalog v22.0.
+`43⌶632` has been deprecated; the functionality that it provides is now available using a new `[...]` mechanism – see [Generics (.NET)](https://docs.dyalog.com/21.0/net-interface-guide/dotnet-classes/advanced-techniques/#generics) and [Generics (.NET Framework)](https://docs.dyalog.com/21.0/net-framework-interface-guide/dotnet-classes/advanced-techniques/#generics). It is scheduled for removal in Dyalog v22.0.
 
 ### `739⌶` – Temporary Directory  
-This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
+This _I-beam_ has been deprecated; the functionality that it provides is now available using [`⎕SYSTEM`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/system/). It is scheduled for removal in 2029.
 
 ### `1200⌶` – Format Date-time  
-This _I-beam_ has been deprecated; the functionality that it provided is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
+This _I-beam_ has been deprecated; the functionality that it provides is now available using [`⎕DT`](https://docs.dyalog.com/21.0/language-reference-guide/system-functions/dt/). It is scheduled for removal in 2029.
+
+### XPLookAndFeel
+
+This configuration parameter has been deprecated; the functionality enabled by XPLookAndFeel was disabled by default in Dyalog v19.0, and the ability to re-enable it will no longer be available once this configuration parameter has been removed. It is scheduled for removal in Dyalog v22.0.
 
 ### Legacy Workspaces
 Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that Dyalog will be able to load will be v12.1.
