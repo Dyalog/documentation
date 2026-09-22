@@ -20,7 +20,8 @@ search:
 |[`⎕AVU`](../avu.md)  |Atomic Vector - Unicode         |Variable|
 |[`⎕BASE`](../base.md)     |Base Class   |Reference|
 |[`⎕C`](../c.md)    |Case Convert                                           |Ambivalent function|
-|[`⎕CLASS`](../class.md)    |Class       |Monadic function|
+|[`⎕CLASS`](../class-monadic.md)    |Class Hierarchy|Monadic function|
+|[`⎕CLASS`](../class-dyadic.md)    |Get Class/Interface Implementation|Dyadic function |
 |[`⎕CLEAR`](../clear.md)|Clear workspace (WS)       |Constant|
 |[`⎕CMD`](../execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|
 |[`⎕CMD`](../start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|
