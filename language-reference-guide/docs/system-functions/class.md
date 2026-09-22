@@ -5,7 +5,7 @@ search:
 
 # <span>Class</span> `⎕CLASS`
 
-`⎕CLASS` relates an Instance or Class to the Classes and Interfaces it derives from. The presence of a left argument chooses which of the two it does.
+`⎕CLASS` relates an instance or class to the classes and interfaces it derives from. The presence of a left argument chooses which of the two it does.
 
 ## Class Hierarchy
 
@@ -20,7 +20,7 @@ search:
 
 ## Get Class/Interface Implementation
 
-[Dyadic `⎕CLASS`](class-dyadic.md) casts an Instance to one Class or Interface in that hierarchy, reaching the members it implements:
+[Dyadic `⎕CLASS`](class-dyadic.md) casts an instance to one class or interface in that hierarchy, reaching the members it implements:
 
 ```apl
       (Bird ⎕CLASS Polly).Speak

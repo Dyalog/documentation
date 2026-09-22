@@ -5,7 +5,7 @@ search:
 
 # <span>Class Hierarchy</span> `R←⎕CLASS Y`{{key}}
 
-This function reports the Classes and Interfaces that a Class or Instance derives from. To cast an Instance to one of them instead, see [Get Class/Interface Implementation](class-dyadic.md).
+This function reports the classes and interfaces that a class or instance derives from. To cast an instance to one of them instead, see [Get Class/Interface Implementation](class-dyadic.md).
 
 <h2 class="example">Example</h2>
 
@@ -18,15 +18,15 @@ This function reports the Classes and Interfaces that a Class or Instance derive
 
 ## Right Argument
 
-`Y` is a reference to a Class or to an Instance of a Class.
+`Y` is a reference to a class or to an instance of a class.
 
 ## Result
 
-`R` is a vector of vectors whose items represent nodes in the Class hierarchy of `Y`, the Class of `Y` first and the Class it ultimately derives from last. Each item is a vector whose first item is a Class reference, and whose subsequent items, if any, are references to the Interfaces that Class supports.
+`R` is a vector of vectors whose items represent nodes in the class hierarchy of `Y`, the class of `Y` first and the class it ultimately derives from last. Each item is a vector whose first item is a class reference, and whose subsequent items, if any, are references to the interfaces that class supports.
 
 <h2 class="example">Example</h2>
 
-This inheritance tree has three Classes, each derived from the one above it:
+This inheritance tree has three classes, each derived from the one above it:
 
 ```apl
 :Class Animal
@@ -42,7 +42,7 @@ This inheritance tree has three Classes, each derived from the one above it:
 :EndClass ⍝ Parrot
 ```
 
-An Instance reports its own Class and every Class that Class derives from. A Class reports the same for itself:
+An instance reports its own class and every class that class derives from. A class reports the same for itself:
 
 ```apl
       ⎕CLASS Eeyore←⎕NEW Animal
@@ -68,7 +68,7 @@ An Instance reports its own Class and every Class that Class derives from. A Cla
 
 <h2 class="example">Example</h2>
 
-Interfaces appear alongside the Class that supports them, within the same item of `R`. In the [Penguin Class example](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md), `Penguin` derives from `Animal` but additionally supports the `BirdBehaviour` and `FishBehaviour` Interfaces, inheriting members from both. Its first node therefore holds three references, and `#.Animal` remains a node of its own:
+Interfaces appear alongside the class that supports them, within the same item of `R`. In the [Penguin Class example](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md), `Penguin` derives from `Animal` but additionally supports the `BirdBehaviour` and `FishBehaviour` interfaces, inheriting members from both. Its first node therefore holds three references, and `#.Animal` remains a node of its own:
 
 ```apl
       ⎕CLASS Pingo←⎕NEW Penguin
