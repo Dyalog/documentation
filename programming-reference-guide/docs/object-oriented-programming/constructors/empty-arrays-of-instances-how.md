@@ -47,40 +47,40 @@ First, we can create an empty array of Instances of Bird using `0⍴`.
 A reference to `Empty.Species` causes APL to create a new Instance and invoke the niladic Constructor `default`. This function sets `Species` to `'Default Bird'`*and* calls `#.DISPLAY` which displays output to the Session.
 ```apl
       DISPLAY Empty.Species
-.→-----------.
-|Default Bird|
-'------------'
+┌→───────────┐
+│Default Bird│
+└────────────┘
 ```
 
 APL then retrieves the value of `Species` (`'Default Bird'`), applies the function `{0⍴⊂⍵}` to it and returns this as the result of the expression.
 ```apl
-.⊖---------------.
-| .→-----------. |
-| |            | |
-| '------------' |
-'∊---------------'
+┌⊖───────────────┐
+│ ┌→───────────┐ │
+│ │            │ │
+│ └────────────┘ │
+└∊───────────────┘
 ```
 
 A reference to `Empty.Speak` causes APL to create a new Instance and invoke the niladic Constructor `default`. This function sets `Species` to `'Default Bird'`*and* calls `#.DISPLAY` which displays output to the Session.
 ```apl
       DISPLAY Empty.Speak
-.→-----------.
-|Default Bird|
-'------------'
+┌→───────────┐
+│Default Bird│
+└────────────┘
 ```
 
 APL then invokes function `Speak` which displays `'Tweet, Tweet, Tweet'` and returns this as the result of the function.
 ```apl
-.→------------------.
-|Tweet, Tweet, Tweet|
-'-------------------'
+┌→──────────────────┐
+│Tweet, Tweet, Tweet│
+└───────────────────┘
 ```
 
 APL then applies the function `{0⍴⊂⍵}` to it and returns this as the result of the expression.
 ```apl
-.⊖----------------------.
-| .→------------------. |
-| |                   | |
-| '-------------------' |
-'∊----------------------'
+┌⊖──────────────────────┐
+│ ┌→──────────────────┐ │
+│ │                   │ │
+│ └───────────────────┘ │
+└∊──────────────────────┘
 ```
