@@ -1,6 +1,6 @@
 # Introduction
 
-Control Structures are blocks of code in which the execution of APL statements follows certain rules and conditions.  Control structures are implemented using a set of *control words* that all start with the colon symbol (:).  Control Words are case-insensitive.
+Control Structures are blocks of code in which the execution of APL statements follows certain rules and conditions.  Control structures are implemented using a set of *control words* that all start with the colon symbol (:).  Control Words are case─insensitive.
 
 There are a number of different types of control structures defined by the control words, `:If`, `:While`, `:Repeat`, `:For` (with the supplementary control words `:In` and `:InEach`), `:Select`, `:With`, `:Trap`, `:Hold` and `:Disposable`.  Each one of these control words may occur only at the beginning of an APL statement and indicates the start of a particular type of control structure.
 
@@ -10,7 +10,7 @@ A third set of control words is used to identify the end of a particular control
 
 Finally, the `:GoTo`, `:Return`, `:Leave` and `:Continue` control words may be used to conditionally alter the flow of execution within a control structure.
 
-Control words, including qualifiers such as `:Else` and :`ElseIf`, may occur only at the beginning of a line or expression in a diamond-separated statement. The only exceptions are `:In` and `:InEach` which must appear on the same line within a `:For` expression.
+Control words, including qualifiers such as `:Else` and :`ElseIf`, may occur only at the beginning of a line or expression in a diamond─separated statement. The only exceptions are `:In` and `:InEach` which must appear on the same line within a `:For` expression.
 
 ## Key to Notation
 
@@ -38,18 +38,18 @@ The following notation is used to describe Control Structures within this sectio
     <tr>
         <td><code>andor</code></td>
         <td><i>either</i> one or more <code>:AndIf</code> statements, <i>or</i> one or more <code>:OrIf</code> statements. For further details, see below.<br /><pre>
-|
-.-----------------------.
-|                       |
-|<--------------.       |<--------------.
-|               |       |               |
-code            |       code            | 
-|               |       |               |
-|               |       |               |
-:AndIf bexp-----'       :OrIf bexp------'
-|                       |
-|<----------------------'
-|
+│
+├───────────────────────┐
+│                       │
+│←──────────────┐       │←──────────────┐
+│               │       │               │
+code            │       code            │ 
+│               │       │               │
+│               │       │               │
+:AndIf bexp─────┘       :OrIf bexp──────┘
+│                       │
+│←──────────────────────┘
+│
 </pre></td>
    </tr>
 </table>
