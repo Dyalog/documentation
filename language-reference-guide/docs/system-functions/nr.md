@@ -23,11 +23,11 @@ If `Y` is the name of a variable, a locked function or operator, an external fun
       ⍴F
 2
       ]Display F
-.→----------------------------------------.
-| .→---------------------.  .→----------. |
-| | R←MEAN X    ⍝ Average|  | R←(+/X)÷⍴X| |
-| '----------------------'  '-----------' |
-'∊----------------------------------------'
+┌→───────────────────────────────────────┐
+│ ┌→─────────────────────┐ ┌→──────────┐ │
+│ │ R←MEAN X    ⍝ Average│ │ R←(+/X)÷⍴X│ │
+│ └──────────────────────┘ └───────────┘ │
+└∊───────────────────────────────────────┘
 ```
 
 The definition of `⎕NR` has been extended to names assigned to functions by specification (`←`), and to local names of functions used as operands to defined operators.  In these cases, the result of `⎕NR` is identical to that of `⎕CR` except that the representation of defined functions and operators is as described above.

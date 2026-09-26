@@ -31,13 +31,13 @@ Assigning a simple character vector to `⎕USING` is equivalent to setting it to
 
 <h2 class="example">Examples</h2>
 ```apl
-  ⎕USING←'System'
-  ]Display ⎕USING
-.→---------.
-| .→-----. |
-| |System| |
-| '------' |
-'∊---------'
+      ⎕USING←'System'
+      ]Display ⎕USING
+┌→─────────┐
+│ ┌→─────┐ │
+│ │System│ │
+│ └──────┘ │
+└∊─────────┘
 
 ⎕USING,←⊂'System.Windows.Forms,System.Windows.Forms.dll'
 ⎕USING,←⊂'System.Drawing,System.Drawing.dll'
