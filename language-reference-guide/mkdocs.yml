@@ -444,7 +444,10 @@ nav:
           - '<code>⎕SVR</code>: Shared Variable Retract Offer': system-functions/svr.md
           - '<code>⎕SVS</code>: Shared Variable State': system-functions/svs.md
           - '<code>⎕SYSTEM</code>: System Information': system-functions/system.md
-          - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc.md
+          - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc-allocate.md
+          - '<code>⎕TALLOC</code>: De-allocate Token Range': system-functions/talloc-deallocate.md
+          - '<code>⎕TALLOC</code>: Query Allocated Token Ranges': system-functions/talloc-ranges.md
+          - '<code>⎕TALLOC</code>: Query Pooled Tokens in Range': system-functions/talloc-pool.md
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
           - '<code>⎕TCNUMS</code>: Thread Child Numbers': system-functions/tcnums.md
           - '<code>⎕TGET</code>: Get Tokens': system-functions/tget.md
