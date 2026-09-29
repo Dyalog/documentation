@@ -14,7 +14,8 @@ search:
 |[`⎕AN`](../an.md)      |Account Name               |Constant|
 |[`⎕ARBIN`](../arbin.md) |Arbitrary Input       |Dyadic function|
 |[`⎕ARBOUT`](../arbout.md)|Arbitrary Output      |Dyadic function|
-|[`⎕AT`](../at.md)     |Object Attributes       |Ambivalent function|
+|[`⎕AT`](../at-monadic.md)|Object Attributes for Dyalog|Monadic function|
+|[`⎕AT`](../at-dyadic.md)|Object Attributes for APL2|Dyadic function|
 |[`⎕ATX`](../atx.md)   |Extended Attributes     |Dyadic function|
 |[`⎕AV`](../av.md)   |Atomic Vector              |Constant|
 |[`⎕AVU`](../avu.md)  |Atomic Vector - Unicode         |Variable|
