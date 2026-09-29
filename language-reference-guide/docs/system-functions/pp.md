@@ -36,7 +36,7 @@ If `⎕PP` is set to a value `≥17` (when `⎕FR` is 645) or 34 (when `⎕FR` i
 `⎕PP` does **not** apply in the following contexts:
 
 - [Array notation output](../../programming-reference-guide/introduction/arrays/display-of-arrays.md#array-notation) (when `]APLAN.Output` is on)
-- [`⎕JSON`](json.md) export
+- [`⎕JSON`](json-export.md) export
 - [`⎕CSV`](csv.md) export
 
 ## See Also

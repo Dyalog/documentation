@@ -36,7 +36,7 @@ foo
 
 ```
 
-For further details, see [JSON Name Mangling](../../system-functions/json.md).
+For further details, see [JSON Name Mangling](../../system-functions/json-import.md#name-mangling).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
