@@ -200,9 +200,9 @@
 |Glyph|Glyph Name|Uses
 |---|---|---|
 |`⌷`|Squad|[Materialise](primitive-functions/materialise.md), [Index](primitive-functions/index-function/index.md)
-|`⎕`|Quad|[evaluated input/output](system-functions/evaluated-input-output.md)
+|`⎕`|Quad|[evaluated input](system-functions/quad-input.md) and [standard output](system-functions/quad-output.md)
 |`⎕`…|Quad|[system function](system-functions/index.md)
-|`⍞`|Quote Quad|[character input/output](system-functions/character-input-output.md)
+|`⍞`|Quote Quad|[character input](system-functions/quotequad-input.md) and [message output](system-functions/quotequad-output.md)
 |`⍠`|Variant|[Variant](primitive-operators/variant.md)
 |`⌹`|Domino|[Matrix Inverse](primitive-functions/matrix-inverse.md), [Matrix Divide](primitive-functions/matrix-divide.md)
 |`⌸`|Quad Equal|[Key](primitive-operators/key.md)

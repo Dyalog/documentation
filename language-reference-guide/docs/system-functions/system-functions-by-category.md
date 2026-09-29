@@ -183,8 +183,10 @@ These are communication facilities.
 
 |Name     |Description           |Form|
 |---------|----------------------|-----|
-|[`⎕`](evaluated-input-output.md)      |Evaluated Input/Output|Variable|
-|[`⍞`](character-input-output.md)      |Character Input/Output|Variable|
+|[`⎕`](quad-input.md)|Evaluated Input|Variable|
+|[`⎕`](quad-output.md)|Standard Output|Variable|
+|[`⍞`](quotequad-input.md)|Character Input|Variable|
+|[`⍞`](quotequad-output.md)|Message Output|Variable|
 |[`⎕ARBIN`](arbin.md) |Arbitrary Input       |Dyadic function|
 |[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |Dyadic function|
 |[`⎕KL`](kl.md)   |Key Labels                       |Monadic function|
