@@ -189,7 +189,8 @@ search:
 |[`⎕WS`](../ws.md)    |Set GUI object properties  |Ambivalent function|
 |[`⎕WSID`](../wsid.md)  |Workspace Identification|Variable|
 |[`⎕WX`](../wx.md)    |Expose GUI property names  |Variable|
-|[`⎕XML`](../xml.md)  |XML Convert                                          |Ambivalent function|
+|[`⎕XML`](../xml-import.md)  |Import XML                                           |Ambivalent function|
+|[`⎕XML`](../xml-export.md)  |Export XML                                           |Ambivalent function|
 |[`⎕XSI`](../xsi.md)   |Extended State Indicator |Constant|
 |[`⎕XT`](../query-external-variable.md)   |Query External variable  |Monadic function|
 |[`⎕XT`](../set-external-variable.md)   |Associate External variable|Dyadic function|
