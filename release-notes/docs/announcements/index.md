@@ -49,7 +49,7 @@ This _I-beam_ has been deprecated; the functionality that it provides is now ava
 
 ### XPLookAndFeel
 
-This configuration parameter has been deprecated; the functionality enabled by XPLookAndFeel was disabled by default in Dyalog v19.0, and the ability to re-enable it will no longer be available once this configuration parameter has been removed. It is scheduled for removal in Dyalog v22.0.
+This configuration parameter has been deprecated; the functionality that is impacted by XPLookAndFeel was enabled by default in Dyalog v19.0, and the ability to disable it will no longer be available once this configuration parameter has been removed. It is scheduled for removal in Dyalog v22.0.
 
 ### Legacy Workspaces
 Dyalog v21.0 is the last major version that will support workspaces saved using Dyalog v11.0 or Dyalog v12.0 (workspaces saved using earlier versions are already unsupported). From Dyalog v22.0, the minimum version of a workspace that Dyalog will be able to load will be v12.1.

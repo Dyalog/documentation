@@ -68,7 +68,7 @@ This specifies the path (absolute or relative to the working directory) and name
 The following configuration parameters have been deprecated:
 
 - [XPLookAndFeel](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/xplookandfeel/) (Microsoft Windows only)  
-The functionality enabled by XPLookAndFeel was disabled by default in Dyalog v19.0; the ability to re-enable it will no longer be available once this configuration parameter has been removed. It is scheduled for removal in Dyalog v22.0.
+The functionality that is impacted by XPLookAndFeel was enabled by default in Dyalog v19.0; the ability to disable it will no longer be available once this configuration parameter has been removed. It is scheduled for removal in Dyalog v22.0.
 
 ### Configuration Settings
 
