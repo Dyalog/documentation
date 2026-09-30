@@ -32,10 +32,22 @@ This is a simple numeric scalar that specifies the input device.
 
 ## output
 
-If specified, this is a simple numeric integer that identifies the output device.
+This is a simple numeric integer that identifies the output device. It is optional; when it is omitted, the codes in `Y` are written to standard output.
 
 - If it is positive or zero, it represents a file descriptor that must have been associated by the command that started Dyalog APL.
 - If it is negative, it represents the tie number of a file opened by `⎕NTIE` or `⎕NCREATE`.
+
+<h3 class="example">Example</h3>
+
+The file **data.txt** holds the three characters `ABC` and a newline. With `output` omitted, `XY` is written to standard output before the file is read:
+
+```apl
+      in←'data.txt'⎕NTIE 0
+      (⍬ in)⎕ARBIN ⎕UCS'XY'
+XY65 66 67 10
+```
+
+## Result
 
 The result `R` is a simple numeric vector.  Each item of `R` is the numeric representation of an 8-bit code in the range 0 to 255 received from the input device.  The meaning of the code is dependent on the characteristics of the input device.  If a set of delimiters was defined by `terminate`, the last code returned will belong to that set.
 
@@ -44,33 +56,21 @@ The result `R` is a simple numeric vector.  Each item of `R` is the numeric repr
 The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other than numbers in the range 0-255, or  if the current process does not have permission to read from or write to the specified device(s).
 
 ## Examples (UNIX)
+
 ```apl
       )SH mkfifo ./fifo
-
-```
-```apl
-
       in←'./fifo'⎕NTIE 0
       out←'./fifo'⎕NTIE 0
-
-```
-```apl
 
       (10 (in out))⎕ARBIN ⎕UCS ⎕D
 48 49 50 51 52 53 54 55 56 57
 
-```
-```apl
-
       (⍬ (in out))⎕ARBIN 10
 10
 
-```
-```apl
 ⍝ cope with parity on line ending 10
       ((10+0 128) (in out))⎕ARBIN 10
 10
-
 ```
 
 <!-- Hidden search keywords -->
