@@ -11,11 +11,11 @@ search:
 
 |(-X) ○ Y|X|X ○ Y|
 |---|---|---|
-|`(1-Y*2)*.5`|`0`|`(1-Y*2)*.5`|
+|`(1-Y*2)*0.5`|`0`|`(1-Y*2)*0.5`|
 |`Arcsin Y`|`1`|`Sine Y`|
 |`Arccos Y`|`2`|`Cosine Y`|
 |`Arctan Y`|`3`|`Tangent Y`|
-|`Y=¯1:0Y≠¯1:(Y+1)×((Y-1)÷Y+1)*0.5`|`4`|`(1+Y*2)*.5`|
+|`Y=¯1:0`<br>`Y≠¯1:(Y+1)×((Y-1)÷Y+1)*0.5`|`4`|`(1+Y*2)*0.5`|
 |`Arcsinh Y`|`5`|`Sinh Y`|
 |`Arccosh Y`|`6`|`Cosh Y`|
 |`Arctanh Y`|`7`|`Tanh Y`|
@@ -25,7 +25,19 @@ search:
 |`Y×0J1`|`11`|`b`|
 |`*Y×0J1`|`12`|`θ`|
 
+The expressions in the table state the mathematical relationship. `○` computes it directly, and can be more accurate than evaluating the expression, which can overflow or lose precision in an intermediate result that `○` never forms:
+
+```apl
+      4○1E155
+1E155
+      (1+1E155*2)*0.5
+DOMAIN ERROR
+      (1+1E155*2)*0.5
+              ∧
+```
+
 <h2 class="example">Examples</h2>
+
 ```apl
       0 ¯1 ○ 1
 0 1.570796327
@@ -35,9 +47,7 @@ search:
  
       2○PI÷3
 0.5
-```
-```apl
- 
+
       9 11○3.5J¯1.2
 3.5 ¯1.2
 
