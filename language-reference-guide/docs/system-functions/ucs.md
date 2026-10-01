@@ -79,7 +79,7 @@ Dyadic `⎕UCS` translates between vectors of Unicode characters and one of thre
 
 ### UTF-8 and Integer Ranges
 
-By default `⎕UCS` consumes and returns positive integers. In the case of `X` having the value `'UTF-8'` or `'UTF-8' 0`, `⎕UCS will consume and return integers in the range `0` to `255. In the case of `X` having the value `'UTF-8' 83`, `⎕UCS` will instead consume and return integers in the range `¯128` to `+127`. For example:
+By default `⎕UCS` consumes and returns positive integers. In the case of `X` having the value `'UTF-8'` or `'UTF-8' 0`, `⎕UCS` will consume and return integers in the range `0` to `255`. In the case of `X` having the value `'UTF-8' 83`, `⎕UCS` will instead consume and return integers in the range `¯128` to `+127`. For example:
 
 ```apl
       'UTF-8' 83 ⎕UCS 'ABCÆØÅ'
