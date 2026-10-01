@@ -370,7 +370,7 @@ nav:
           - '<code>⎕LOCK</code>: Lock Definition': system-functions/lock.md
           - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
           - '<code>⎕MAP</code>: Map File': system-functions/map.md
-          - '<code>⎕MKDIR</code>: Make Directory': system-functions/mkdir.md
+          - '<code>⎕MKDIR</code>: Create Directory': system-functions/mkdir.md
           - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
           - '<code>⎕MONITOR</code>: Set Monitor': system-functions/set-monitor.md
           - '<code>⎕MONITOR</code>: Query Monitor': system-functions/query-monitor.md
