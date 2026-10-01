@@ -19,7 +19,7 @@ This function creates new directories.
 
 ## Right Argument
 
-`Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host Operating System.
+`Y` is a character vector or scalar containing a single directory name, or a vector of character vectors containing zero or more directory names. Names must conform to the naming rules of the host operating system.
 
 By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The optional [left argument](#left-argument) `X` and the [`Unique`](#variant-option-unique) variant option can be used to amend this behaviour.
 
