@@ -2,7 +2,7 @@
 
 ## Summary
 
-Support for user commands is included in non-Windows versions of Dyalog APL. Many of the user commands which were originally written for running under Microsoft Windows will run under the various flavours of Unix.
+Support for user commands is included in non-Windows versions of Dyalog. Many of the user commands that were originally written for running under Microsoft Windows will run under the various flavours of Unix.
 
 Under Unix there is no autocompletion of user command names.
 

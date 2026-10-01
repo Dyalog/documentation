@@ -1,6 +1,6 @@
 # The APL Command Line
 
-The command line for Dyalog APL is described below; the command line for non-Windows versions of Dyalog APL is very similar and is also documented in *Dyalog for Unix UI Guide: Starting APL*.
+The command line for Dyalog is described below; the command line for non-Windows versions of Dyalog is very similar (see [Starting APL](../unix-user-guide/starting-apl.md).
 
 Usually the command line is specified in the Target: field of the APL shortcut. The full pathname to the Dyalog executable is usually surrounded by double quotes as it contains spaces.
 
@@ -43,7 +43,7 @@ Instead of loading a workspace specified by the **ws** option, APL can be instru
 
 **[param]**
 
-A parameter name followed by an equals sign (`=`) and a value. The parameter name may be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../object-reference/methodorevents/getenvironment.md) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
+A parameter name followed by an equals sign (`=`) and a value. The parameter name could be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../object-reference/methodorevents/getenvironment.md) ). If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
 
 <h2 class="example">Examples</h2>
 

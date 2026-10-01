@@ -9,7 +9,7 @@ A script is executed by typing its name. User input is entered from the same ter
 
 ## Unix
 
-On Unix (and related) systems a Dyalog APL *shell script* is a text file with the following as the first line:
+On Unix (and related) systems a Dyalog *shell script* is a text file with the following as the first line:
 ```apl
 #!/usr/local/bin/dyalogscript
 ```
@@ -29,7 +29,7 @@ Any content that follows  the `#!` line (if present) is used as input into a Dya
 
 ## Input and Output
 
-`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short).  Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. [Implicit output](introduction/output.md), that is, output to the session without assignment to `⎕` or `⍞`, is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
+`⎕` and `⍞` input are taken from characters typed by the user into the terminal or shell (Standard input or *stdin* for short). Anything assigned to `⎕` and `⍞` will be displayed in the terminal window using streams Standard output (*stdout*) and Standard error (*stderr*) respectively. [*Implicit output*](introduction/output.md), that is, output to the session without assignment to `⎕` or `⍞`, is NOT displayed. Redirections of *stdin*, *stdout*, and *stderr* are supported.
 
 <h3 class="example">Examples</h3>
 

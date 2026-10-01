@@ -1,6 +1,6 @@
 # Using PuTTY under Windows
 
-Dyalog APL for Unix comes with support for the PuTTY terminal emulator. PuTTY is freely downloadable, supports ssh and telnet protocols, and supports Unicode keystrokes and fonts. To be able to generate and see APL characters it is also necessary to install the Dyalog UnicodeIME and the APL385 Unicode font.
+Dyalog for Unix comes with support for the PuTTY terminal emulator. PuTTY is freely downloadable, supports ssh and telnet protocols, and supports Unicode keystrokes and fonts. To be able to generate and see APL characters it is also necessary to install the Dyalog Unicode IME and the APL385 Unicode font.
 
 ## Downloading and installing the Dyalog UnicodeIME
 
@@ -18,7 +18,7 @@ PuTTY is available from https://www.chiark.greenend.org.uk/~sgtatham/putty. Full
 
 ## Configuring PuTTY to support Dyalog APL for Unix
 
-Firstly ensure that you are able to login to the Unix server which has Dyalog APL installed on it. If you are using an AIX server, it is recommended that in the Keyboard category you set the backspace key to Control-H.
+Ensure that you are able to login to the Unix server that has Dyalog installed on it. If you are using an AIX server, it is recommended that in the Keyboard category you set the backspace key to Control-H.
 
 For APL support the follow settings are required:
 
