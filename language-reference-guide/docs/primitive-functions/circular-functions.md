@@ -15,7 +15,7 @@ search:
 |`Arcsin Y`|`1`|`Sine Y`|
 |`Arccos Y`|`2`|`Cosine Y`|
 |`Arctan Y`|`3`|`Tangent Y`|
-|`Y=¯1:0`<br>`Y≠¯1:(Y+1)×((Y-1)÷Y+1)*0.5`|`4`|`(1+Y*2)*0.5`|
+|`((Y+1)*0.5)×(Y-1)*0.5`|`4`|`(1+Y*2)*0.5`|
 |`Arcsinh Y`|`5`|`Sinh Y`|
 |`Arccosh Y`|`6`|`Cosh Y`|
 |`Arctanh Y`|`7`|`Tanh Y`|
