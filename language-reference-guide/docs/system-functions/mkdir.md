@@ -23,7 +23,7 @@ This function creates new directories.
 
 By default, for each name in `Y` the path must exist and the base name must not exist (see [File Name Parts](nparts.md)), otherwise an error is signalled. The optional [left argument](#left-argument) `X` and the [`Unique`](#variant-option-unique) variant option can be used to amend this behaviour.
 
-When multiple names are specified, they are processed in the order given. If an error occurs at any point whilst creating directories, processing immediately stops and an error is signalled. The operation is not atomic; some directories might be created before this happens. In the event of an error, there is no result and therefore no indication of how many directories were created before the error occurred.
+When multiple names are specified, they are processed in the order given. If an error occurs at any point whilst creating directories, processing immediately stops and an error is signalled. The operation is not atomic; some directories might be created before this happens. In the event of an error, there is no result and, therefore, no indication of how many directories were created before the error occurred.
 
 ## Left Argument
 
