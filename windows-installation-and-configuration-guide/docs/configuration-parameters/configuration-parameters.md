@@ -15,9 +15,9 @@ This scheme provides a great deal of flexibility, and a system whereby you can o
 
 Furthermore, you are not limited to the set of parameters employed by APL itself as you may add parameters of your own choosing.
 
-Although for clarity parameter names are given here in mixed case, they are case-independent under Windows. Under Unix, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
+Although for clarity parameter names are given here in mixed case, they are case-independent under Microsoft Windows. Under Unix, if Dyalog parameters are specified as environment variables they must be named entirely in upper-case.
 
-Note that the value of a parameter obtained by the GetEnvironment method (see [GetEnvironment](../../object-reference/methodorevents/getenvironment.md)) uses exactly the same set of rules.
+The value of a parameter obtained by the [GetEnvironment](../../object-reference/methodorevents/getenvironment.md) method uses the same set of rules.
 
 The following section details those parameters that are implemented by Registry Values in the top-level folder identified by **IniFile**. Values that are implemented in sub-folders are *mainly* internal and are not described in detail here. However, any Value that is maintained via a configuration dialog box will be named and described in the documentation for that dialog box in The APL Environment.
 

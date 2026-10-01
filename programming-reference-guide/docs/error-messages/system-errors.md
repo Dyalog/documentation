@@ -27,7 +27,7 @@ Under Unix, this interesting information section can be extracted from the *aplc
 
 `sed -n '/======== Interesting Information/,$p' aplcore`
 
-To prevent this information from being written to the *aplcore* file, the [**APL_TextInAplCore**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-textinaplcore.md) parameter should be set to 0.
+To prevent this information from being written to the *aplcore* file, the [**APL_TextInAplCore**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-textinaplcore.md) parameter should be set to `0`.
 
 ## Workspace Integrity
 
@@ -120,7 +120,7 @@ After debugging, the System Exception dialog box appears again. Click on *Don't 
 
 ## ErrorOnExternalException Parameter
 
-This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) parameter set to 1.
+This parameter allows you to prevent APL from taking the actions described above when an exception caused by an external DLL occurs. The following example illustrates what happens when the functions above are run, but with the [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) parameter set to `1`.
 ```apl
    ⎕←2 ⎕NQ'.' 'GetEnvironment' 'ErrorOnExternalException'
 1
@@ -137,7 +137,7 @@ goo[1]
 foo[1]
 ```
 
-Note: Dyalog recommends that enabling [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) should only be done while developing or debugging an application; ignoring such errors may result in corruption in the workspace which could result to unexpected errors later in the application.
+Dyalog Ltd recommends that enabling [**ErrorOnExternalException**](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) should only be done while developing or debugging an application; ignoring such errors might result in corruption in the workspace, which could result in unexpected errors later in the application.
 
 ## What should I do if Dyalog hangs?
 
