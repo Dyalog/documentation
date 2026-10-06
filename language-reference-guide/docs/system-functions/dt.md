@@ -89,8 +89,8 @@ Table: Time numbers { #timenumbers }
 |Decimal encoded[^9]|||||
 | `60` |Floating-point decimal encoded format Digits take the form yyyymmdd.hhmmss|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
 | `61` |Integer decimal encoded format Digits take the form yyyymmddhhmmss (J digit time)|Encoded broken-down time 1&nbsp;s resolution|N/A|No|
-|Misc. Operating Systems|||||
-| `70` |AmigaOS|Tick count 1&nbsp;ms ticks[^3]|1978-01-01 00:00|No|
+|Miscellaneous operating systems|||||
+| `70` |AmigaOS|Tick count 1&nbsp;s ticks[^3]|1978-01-01 00:00|No|
 
 <h3 class="example">Examples: Time number to time number</h3>
 
