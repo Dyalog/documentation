@@ -138,7 +138,7 @@ See *Language Reference* for full details of the syntax of these system function
 
 Let us suppose that you have written an APL system that builds a personnel database, containing the name, age and place of birth of each employee. Let us assume that you have created a variable `DATA`, which is a nested vector with each element containing a person's name, age and place of birth:
 ```apl
-      ]Display DATA
+      ]Display 2↑DATA
 ┌→───────────────────────────────────────────────────────┐
 │ ┌→──────────────────────┐ ┌→─────────────────────────┐ │
 │ │ ┌→───────┐    ┌→────┐ │ │ ┌→──────┐    ┌→────────┐ │ │
