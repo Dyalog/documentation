@@ -83,18 +83,18 @@ The All event can also be set by assignment, and it too clears previous settings
 If no events are set, the result obtained by `⎕WG` and the result obtained by referencing Event directly are different:
 ```apl
       'F'⎕WC'Form'
-      DISPLAY 'F'⎕WG'Event'
-.→--.
-|0 0|
-'~--'
-      DISPLAY F.Event
-.⊖------------.
-| .→--------. |
-| | .⊖. .⊖. | |
-| | | | | | | |
-| | '-' '-' | |
-| '∊--------' |
-.∊------------.
+      ]Display 'F'⎕WG'Event'
+┌→──┐
+│0 0│
+└~──┘
+      ]Display F.Event
+┌⊖────────────┐
+│ ┌→────────┐ │
+│ │ ┌⊖┐ ┌⊖┐ │ │
+│ │ │ │ │ │ │ │
+│ │ └─┘ └─┘ │ │
+│ └∊────────┘ │
+└∊────────────┘
 ```
 
 ## Callback Functions
