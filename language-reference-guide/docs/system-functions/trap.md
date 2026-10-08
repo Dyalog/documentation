@@ -17,25 +17,6 @@ An EVENT may be an APL execution error, an interrupt by the user or the system, 
 
 `⎕TRAP` is the one system variable that does not take part in [pass-through localisation](system-functions-by-category.md#system-variables). Localising it, by naming it in a function header or in the argument to [`⎕SHADOW`](shadow.md), gives it the empty value it has in a clear workspace rather than the value it held outside. A function that localises `⎕TRAP` therefore begins with no trap definitions of its own, and defines whatever it needs by assigning them. Definitions already in effect outside still apply, because the search described below continues through the shadowed and global values.
 
-<h3 class="example">Example</h3>
-
-`F` localises `⎕TRAP` and reports its shape. The global definition is neither seen inside `F` nor disturbed by it:
-
-```apl
-      ⎕VR'F'
-     ∇ r←F;⎕TRAP
-[1]    r←⍴⎕TRAP
-     ∇
-
-      ⎕TRAP←⊂0 'E' '→ERR'
-      ⍴⎕TRAP
-1
-      F
-0
-      ⍴⎕TRAP
-1
-```
-
 When an event occurs, the system searches for a trap definition for that event.  The most local `⎕TRAP` value is searched first, followed by successive shadowed values of `⎕TRAP`, and finally the global `⎕TRAP` value.  Separate actions defined in a single `⎕TRAP` value are searched from **left to right**.  If a trap definition for the event is found, the defined action is taken.  Otherwise, the normal system action is followed.
 
 The ACTION code identifies the nature of the action to be taken when an associated event occurs.  Permitted codes are interpreted as follows:
@@ -137,12 +118,10 @@ Items may be specified as scalars.  If there is only a single trap definition, 
 1
 ```
 
-The value of `⎕TRAP` in a clear workspace is an empty vector whose prototype is
-
-`0⍴(⍬ '' '')`.  A convenient way of cancelling a `⎕TRAP` definition is:
+The value of `⎕TRAP` in a clear workspace is `0⍴⊂⍬ ' ' ''`: an empty vector whose prototype, `⊃⎕TRAP`, is the three-item vector `⍬ ' ' ''`, consisting of an empty numeric vector, a space and an empty character vector.  A convenient way of cancelling a `⎕TRAP` definition is:
 
 ```apl
-      ⎕TRAP←0⍴⎕TRAP
+      ⎕TRAP⍴⍨←0
 ```
 
 Event codes 0 and 1000 allow all events in the respective ranges 1-999 and 1000-1006 to be trapped.  Specific event codes may be excluded by the `N` action (which must precede the general event action):
