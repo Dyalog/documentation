@@ -28,7 +28,7 @@ The left argument `1` can be omitted when `Y` is not a simple character array, w
 
 `R` is a simple character vector containing the JSON document corresponding to `Y`. Its content depends on the [`Compact`](#variant-option-compact), [`Dialect`](#variant-option-dialect), and [`Charset`](#variant-option-charset) variant options.
 
-`⎕JSON` output is not affected by [`⎕PP`](pp.md); numbers are always represented with full precision.
+`⎕JSON` formats numbers independently of [`⎕PP`](pp.md), using at most 16 significant digits, so a number that needs more to be represented exactly, such as `÷7`, does not survive a round trip unchanged.
 
 Some JSON values lack a direct APL equivalent (<code class="language-nonAPL">true</code>, <code class="language-nonAPL">false</code>, <code class="language-nonAPL">null</code>, JavaScript fragments), and some APL representations of datasets do not correspond to common JSON practice. Such cases are handled by [wrappers](#wrappers).
 
