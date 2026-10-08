@@ -780,11 +780,11 @@ was CLEAR WS
 Then retrieve the new caption (max length 255) using window handle `HNDL` from the previous example:
 ```apl
       ]Display GetWindowText HNDL 255 255
-.→-------------------------.
-|    .→------------------. |
-| 19 |MYWS - Dyalog APL/W| |
-|    '-------------------' |
-'∊-------------------------'
+┌→─────────────────────────────┐
+│    ┌→──────────────────────┐ │
+│ 23 │MYWS.dws - Dyalog APL/W│ │
+│    └───────────────────────┘ │
+└∊─────────────────────────────┘
 ```
 
 There are three points to note.
@@ -800,11 +800,11 @@ For example:
       ⎕NA 'I User32|GetWindowText* P =0T I'
  
       ]Display GetWindowText HNDL (255⍴' ') 255
-.→-------------------------.
-|    .→------------------. |
-| 19 |MYWS - Dyalog APL/W| |
-|    '-------------------' |
-'∊-------------------------'
+┌→─────────────────────────────┐
+│    ┌→──────────────────────┐ │
+│ 23 │MYWS.dws - Dyalog APL/W│ │
+│    └───────────────────────┘ │
+└∊─────────────────────────────┘
 ```
 
 In this case, the second argument is coded as `=0T`, so when the function is called an array of the appropriate size must be supplied.  This method uses more space in the workspace, although for small arrays (as in this case) the real impact of doing so is negligible.
@@ -824,11 +824,11 @@ The following statements provide access to this routine through an APL function 
      'Prin'⎕WC'Printer'
  
       ]Display GetCharWidth ('Prin' ⎕WG 'Handle') 65 67 3 
-.→-------------.
-|   .→-------. |
-| 1 |50 50 50| |
-|   '~-------' |
-'∊-------------'
+┌→─────────────┐
+│   ┌→───────┐ │
+│ 1 │50 50 50│ │
+│   └~───────┘ │
+└∊─────────────┘
 ```
 
 `'Prin'⎕WG'Handle'` returns a handle which is represented as a number. The number will be in the range (0 - 2*32] on a 32-bit version and (0 - 2*64] on a 64-bit version. These can be passed to a P type parameter. Older versions used a 32-bit signed integer.

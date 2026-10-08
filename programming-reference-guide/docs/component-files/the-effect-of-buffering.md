@@ -2,12 +2,12 @@
 
 Disk drives are fairly slow devices, so most operating systems take advantage of a facility called buffering. This is shown in simple terms below:
 ```apl
-.------------------.
-| Operating System |   .--------.    .---------.
-| instruction to   |-->| BUFFER |--->| File on |
-| write large data |   ---------.    |  disk   |
-| object to a file |                 ----------.
--------------------.
+┌──────────────────┐
+│ Operating System │   ┌────────┐    ┌─────────┐
+│ instruction to   │──→│ BUFFER │───→│ File on │
+│ write large data │   └────────┘    │  disk   │
+│ object to a file │                 └─────────┘
+└──────────────────┘
 ```
 
 When you issue a write to a disk area, the data is not necessarily sent straight to the disk. Sometimes it is written to an internal buffer (or cache), which is usually held in (fast) main memory. When the buffer is full, the contents are passed to the disk. This means that at any one time, you could have data in the buffer, as well as on the disk. If your machine goes down whilst in this state, you could have a partially updated file on the disk. In these circumstances, the operating system generally recovers your file automatically.

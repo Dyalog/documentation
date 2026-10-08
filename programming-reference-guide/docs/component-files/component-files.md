@@ -138,14 +138,14 @@ See *Language Reference* for full details of the syntax of these system function
 
 Let us suppose that you have written an APL system that builds a personnel database, containing the name, age and place of birth of each employee. Let us assume that you have created a variable `DATA`, which is a nested vector with each element containing a person's name, age and place of birth:
 ```apl
-      DISPLAY 2↑DATA
-.→-------------------------------------------------------.
-| .→----------------------. .→-------------------------. |
-| | .→-------.    .→----. | | .→------.    .→--------. | |
-| | |Jonathan| 42 |Wales| | | |Pauline| 21 |Isleworth| | |
-| | '--------'    '-----' | | '-------'    '---------' | |
-| '∊----------------------' '∊-------------------------' |
-'∊-------------------------------------------------------'
+      ]Display 2↑DATA
+┌→───────────────────────────────────────────────────────┐
+│ ┌→──────────────────────┐ ┌→─────────────────────────┐ │
+│ │ ┌→───────┐    ┌→────┐ │ │ ┌→──────┐    ┌→────────┐ │ │
+│ │ │Jonathan│ 42 │Wales│ │ │ │Pauline│ 21 │Iselworth│ │ │
+│ │ └────────┘    └─────┘ │ │ └───────┘    └─────────┘ │ │
+│ └∊──────────────────────┘ └∊─────────────────────────┘ │
+└∊───────────────────────────────────────────────────────┘
 ```
 
 Then the following APL expressions can be used to access the database:
@@ -154,12 +154,12 @@ Then the following APL expressions can be used to access the database:
 
 Show record 2
 ```apl
-      DISPLAY 2⊃DATA
-.→-------------------------.
-| .→------.    .→--------. |
-| |Pauline| 21 |Isleworth| |
-| '-------'    '---------' |
-'∊-------------------------'
+      ]Display 2⊃DATA
+┌→─────────────────────────┐
+│ ┌→──────┐    ┌→────────┐ │
+│ │Pauline│ 21 │Iselworth│ │
+│ └───────┘    └─────────┘ │
+└∊─────────────────────────┘
 ```
 
 <h2 class="example">Example 2</h2>
@@ -204,13 +204,12 @@ Now we'll try our previous examples using this file.
 
 Show record 2
 ```apl
-      DISPLAY ⎕FREAD 1 2
-.→-------------------------.
-| .→------.    .→--------. |
-| |Pauline| 21 |Isleworth| |
-| '-------'    '---------' |
-'∊-------------------------'
-
+      ]Display  ⎕FREAD 1 2
+┌→─────────────────────────┐
+│ ┌→──────┐    ┌→────────┐ │
+│ │Pauline│ 21 │Iselworth│ │
+│ └───────┘    └─────────┘ │
+└∊─────────────────────────┘
 ```
 
 <h2 class="example">Example 2</h2>

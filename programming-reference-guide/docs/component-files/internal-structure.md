@@ -12,11 +12,11 @@ Consider a component file with 3 components:
 
 Dyalog APL will write these components onto contiguous areas of disk:
 ```apl
-.-.   .-.   .-.
-|1|   |2|   |3|
-.-----.-----.-------.
-| One | Two | Three |
---------------------.
+┌─┐   ┌─┐   ┌─┐
+│1│   │2│   │3│
+├─┴───┼─┴───┼─┴─────┐
+│ One │ Two │ Three │
+└─────┴─────┴───────┘
 ```
 
 Replace the second component with something the same size:
@@ -26,11 +26,11 @@ Replace the second component with something the same size:
 
 This will fit into the area currently used by component 2.
 ```apl
-.-.   .-.   .-.
-|1|   |2|   |3|
-.-----.-----.-------.
-| One | Six | Three |
---------------------.
+┌─┐   ┌─┐   ┌─┐
+│1│   │2│   │3│
+├─┴───┼─┴───┼─┴─────┐
+│ One │ Six │ Three │
+└─────┴─────┴───────┘
 ```
 
 If your system uses fixed length records, then the size of your components never change, and the internal structure of the file remains static.
@@ -42,11 +42,11 @@ However, suppose we start replacing larger data objects:
 
 This will not fit into the area currently assigned to component 1, so it is appended to the end of the file. Dyalog APL maintains internal tables which contain the location of each component; hence, even though the components may not be physically stored in order, they can always be accessed in order.
 ```apl
-      .-.   .-.     .-.
-      |2|   |3|     |1|
-.-----.-----.-------.------------.
-|⎕⎕⎕⎕⎕| Six | Three | Bigger One |
----------------------------------.
+      ┌─┐   ┌─┐     ┌─┐
+      │2│   │3│     │1│
+┌─────┼─┴───┼─┴─────┼─┴──────────┐
+│⎕⎕⎕⎕⎕│ Six │ Three │ Bigger One │
+└─────┴─────┴───────┴────────────┘
 ```
 
 The area that was occupied by component 1 now becomes free.
@@ -58,11 +58,11 @@ Now we'll replace component 3 with something bigger:
 
 Component 3 is appended to the end of the file, and the area that was used before becomes free:
 ```apl
-      .-.                .-.          .-.
-      |2|                |1|          |3|
-.-----.------------------.------------.----------.
-|⎕⎕⎕⎕⎕| Six |⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕| Bigger One | BigThree |
--------------------------------------------------.
+      ┌─┐                ┌─┐          ┌─┐
+      │2│                │1│          │3│
+┌─────┼─┴───┬────────────┼─┴──────────┼─┴────────┐
+│⎕⎕⎕⎕⎕│ Six │⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕│ Bigger One │ BigThree │
+└─────┴─────┴────────────┴────────────┴──────────┘
 ```
 
 Dyalog APL keeps tables of the size and location of the free areas, as well as the actual location of your data. Now we'll replace component 2 with something bigger:
@@ -72,11 +72,11 @@ Dyalog APL keeps tables of the size and location of the free areas, as well as t
 
 Free areas are used whenever possible, and contiguous holes are amalgamated.
 ```apl
-            .-.          .-.          .-.
-            |2|          |1|          |3|
-.-----------.------------.------------.----------.
-|⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕|BigTwo|⎕⎕⎕⎕⎕| Bigger One | BigThree |
--------------------------------------------------.
+            ┌─┐          ┌─┐          ┌─┐
+            │2│          │1│          │3│
+┌───────────┼────────────┼─┴──────────┼─┴────────┐
+│⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕│BigTwo│⎕⎕⎕⎕⎕│ Bigger One │ BigThree │
+└───────────┴────────────┴────────────┴──────────┘
 ```
 
 You can see that if you are continually updating your file with larger data objects, then the file structure can become fragmented. At any one time, the disk area occupied by your file will be greater than the area necessary to hold your data. However, free areas are constantly being reused, so that the amount of unused space in the file will seldom exceed 30%.

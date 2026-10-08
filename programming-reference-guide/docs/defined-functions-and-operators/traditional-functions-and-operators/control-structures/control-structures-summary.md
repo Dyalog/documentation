@@ -38,18 +38,18 @@ The following notation is used to describe Control Structures within this sectio
     <tr>
         <td><code>andor</code></td>
         <td><i>either</i> one or more <code>:AndIf</code> statements, <i>or</i> one or more <code>:OrIf</code> statements. For further details, see below.<br /><pre>
-|
-.-----------------------.
-|                       |
-|<--------------.       |<--------------.
-|               |       |               |
-code            |       code            | 
-|               |       |               |
-|               |       |               |
-:AndIf bexp-----'       :OrIf bexp------'
-|                       |
-|<----------------------'
-|
+│
+├───────────────────────┐
+│                       │
+│←──────────────┐       │←──────────────┐
+│               │       │               │
+code            │       code            │ 
+│               │       │               │
+│               │       │               │
+:AndIf bexp─────┘       :OrIf bexp──────┘
+│                       │
+│←──────────────────────┘
+│
 </pre></td>
    </tr>
 </table>
