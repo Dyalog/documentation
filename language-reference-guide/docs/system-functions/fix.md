@@ -104,8 +104,7 @@ DOMAIN ERROR: There were errors processing the script
 
 ```
 
-!!! Legacy "Legacy"
-    Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
+A dfn or dop in `Y` does not fix if any parenthesis or bracket in it is unmatched, because [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md#defined-functions) lets a parenthesis or bracket span several lines.
 
 ## Variant Options
 
