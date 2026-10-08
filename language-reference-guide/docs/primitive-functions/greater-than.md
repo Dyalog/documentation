@@ -5,11 +5,12 @@ search:
 
 # <span>Greater Than</span> `R←X>Y`{{key}}
 
-`Y` must be numeric. `X` must be numeric. `R` is Boolean. `R` is 1 if `X` is greater than `Y` and `X=Y` is 0. Otherwise `R` is 0.
+`X` and `Y` must be real numeric arrays. `R` is Boolean. `R` is 1 if `X` is greater than `Y` and `X=Y` is 0. Otherwise `R` is 0.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of _greater than_.
+`⎕CT` and `⎕DCT` are implicit arguments of _greater than_.
 
 <h2 class="example">Examples</h2>
+
 ```apl
       1 2 3 4 5 > 2
 0 0 1 1 1
