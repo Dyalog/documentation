@@ -13,6 +13,7 @@ When it refers to a [Metafile](../objects/metafile.md), the Picture property spe
 |3|The [Bitmap](../objects/bitmap.md) or [Icon](../objects/icon.md) is drawn in the centre of the object. This is the default. The centre of the [Bitmap](../objects/bitmap.md) is positioned over the centre of the object, so that you see the middle portion of a [Bitmap](../objects/bitmap.md) that is larger than the object in which it is displayed.|
 
 For example, the following statements produce a [Form](../objects/form.md) filled with the CARS bitmap.
+
 ```apl
       'CARS' ⎕WC 'Bitmap' 'C:\WINDOWS\CARS'
       'f1' ⎕WC 'Form' ('Picture' 'CARS' 1)
@@ -23,6 +24,8 @@ An easy way to provide a customised pushbutton is to create a [Button](../object
 If Picture is set on a [Button](../objects/button.md) whose [Style](style.md) is `'Radio'` or `'Check'`, the Button assumes pushbutton appearance, although its radio/check behaviour is preserved.
 
 For an [Image](../objects/image.md) object, the Picture property specifies the name of, or ref to, a [Bitmap](../objects/bitmap.md), [Icon](../objects/icon.md) or [Metafile](../objects/metafile.md) object to be drawn, or a vector of names or refs. The [Image](../objects/image.md) is a graphical object and is drawn *on top of* the background. It does not support the drawmode options provided by the objects in which Picture specifies the background.
+
+When Picture specifies a name, the object it names need not exist yet, and no error is reported, so a misspelt name goes unnoticed. A background picture is displayed as soon as the object is created, and an [Image](../objects/image.md) shows it the next time the Image's parent is redrawn. On a [Printer](../objects/printer.md), however, an Image is printed when it is created, so the object that its Picture names must exist by then.
 
 For the [Clipboard](../objects/clipboard.md) object, Picture is a "set-only" property that allows you to place a specified [Bitmap](../objects/bitmap.md) object into the Windows clipboard. To place a [Metafile](../objects/metafile.md) object into the clipboard, use its [Metafile](../objects/metafile.md) property.
 
