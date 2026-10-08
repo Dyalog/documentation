@@ -5,7 +5,7 @@ search:
 
 # <span>Set External Variable</span> `{R}←X ⎕XT Y`{{key}}
 
-`Y` must be a simple character scalar or vector which is taken to be a variable name.  `X` must be a simple character scalar or vector which is taken to be a file reference.  The name given by `Y` is identified as an EXTERNAL VARIABLE associated with an EXTERNAL ARRAY whose value may be stored in file identified by `X`. The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` has the same value as `X`.
+`Y` must be a simple character scalar or vector which is taken to be a variable name. `X` must be a simple character scalar or vector which is taken to be a file reference. The name given by `Y` is identified as an external variable associated with an external array whose value can be stored in file identified by `X`. The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` has the same value as `X`.
 
 If `Y` is the name of a defined function or operator, a label or a namespace in the active workspace, a `DOMAIN ERROR` is reported.
 
@@ -85,7 +85,7 @@ An external array is (usually) preserved in file space when the name of the exte
                    50 60 70 80
 ```
 
-In UNIX versions, if `X` is an empty vector, the external array is associated with a temporary file which is erased when the array is disassociated.
+In Unix versions, if `X` is an empty vector, the external array is associated with a temporary file which is erased when the array is disassociated.
 
 <h2 class="example">Example</h2>
 ```apl
@@ -101,7 +101,7 @@ In UNIX versions, if `X` is an empty vector, the external array is associated wi
 
 An external array may be erased using the native file function: `⎕NERASE`.
 
-In a multi-user environment (UNIX or a Windows LAN) a new file associated with an external array is created with access permission for owner read/write.  An existing file is opened for exclusive use (by the owner) if the permissions remain at this level.  If the access permissions allow any other users to read and write to the file, the file is opened for shared use.  In UNIX versions, access permissions may be modified using the appropriate Operating System command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
+In a multi-user environment (Unix or a Microsoft Windows LAN) a new file associated with an external array is created with access permission for owner read/write. An existing file is opened for exclusive use (by the owner) if the permissions remain at this level. If the access permissions allow any other users to read and write to the file, the file is opened for shared use. In Unix versions, access permissions can be modified using the appropriate operating system command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
 
 !!! Info "Information"
     Support for external variables has been deprecated. They are no longer supported by default, although setting the [DYALOG_EXTVAR_SUPPORTED](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported.md) configuration parameter to `1` reinstates support (support is scheduled for removal in a future release). For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).

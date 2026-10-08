@@ -63,7 +63,7 @@ Table: Time numbers { #timenumbers }
 | `15` |Go UnixMicro|Tick count 1&nbsp;µs ticks[^3]|1970-01-01 00:00|Yes|
 | `16` |Go UnixNano|Tick count 1&nbsp;ns ticks[^3]|1970-01-01 00:00|Yes|
 | `17` |APL+Win and APL64 workspace timestamp|Tick count 1μs ticks[^3]|1900-01-01 00:00|No|
-|UNIX|||||
+|Unix|||||
 | `20` |Unix time|Tick count 1&nbsp;s ticks[^3]|1970-01-01 00:00|Yes|
 | `21` |Apollo NCS UUID|Tick count 4µs ticks[^3]|1980-01-01 00:00|No|
 | `22` |OSF DCE UUID|Tick count 1&nbsp;ns ticks[^3]|1582-10-15 00:00|No|
