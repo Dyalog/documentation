@@ -118,7 +118,7 @@ Items may be specified as scalars.  If there is only a single trap definition, 
 1
 ```
 
-The value of `⎕TRAP` in a clear workspace is `0⍴⊂⍬ ' ' ''`: an empty vector whose prototype, `⊃⎕TRAP`, is the three-item vector `⍬ ' ' ''`, consisting of an empty numeric vector, a space and an empty character vector.  A convenient way of cancelling a `⎕TRAP` definition is:
+The value of `⎕TRAP` in a clear workspace is `0⍴⊂⍬ ' ' ''`: an empty vector whose prototype, `⊃⎕TRAP`, is the three-item vector `⍬ ' ' ''`. A convenient way of cancelling a `⎕TRAP` definition is:
 
 ```apl
       ⎕TRAP⍴⍨←0
