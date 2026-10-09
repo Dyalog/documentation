@@ -16,10 +16,9 @@ search:
 
 If the function or operator is successfully fixed, `R` is a simple character vector containing its name and the result is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Otherwise `R` is an integer scalar containing the (`⎕IO` dependent) index of the row of the canonical representation form in which the first error preventing its definition is detected. In this case the result `R` is **not shy**.
 
-!!! Legacy "Legacy"
-    Before Dyalog v20.0, it was possible to define dfns with unmatched parentheses and brackets. These are now rejected. TradFns will continue to fix as before, but subtle differences in how the code behaves might not be backwards-compatible and could have unexpected results.
+A dfn or dop does not fix if any parenthesis or bracket in it is unmatched, because [array notation](../../programming-reference-guide/introduction/arrays/array-notation.md#defined-functions) lets a parenthesis or bracket span several lines.
 
-Functions and operators which are pendent, that is, in the state indicator without a suspension mark (`*`), retain their original definition until they complete, or are cleared from the state indicator.  All other occurrences of the function or operator assume the new definition.  The function or operator will fail to fix if it has the same name as an existing variable, or a visible label.
+`⎕FX` replaces an existing definition immediately: [`⎕CR`](cr.md) reports the new definition, and every subsequent call uses it, as does a suspended instance when execution resumes. An instance that is _pendent_, that is, in the state indicator without a suspension mark (`*`), continues to run the definition it started with until it completes or is cleared from the state indicator. The function or operator fails to fix if it has the same name as an existing variable or a visible label.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
