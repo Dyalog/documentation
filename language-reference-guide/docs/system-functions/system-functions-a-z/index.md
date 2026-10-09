@@ -142,7 +142,9 @@ search:
 |[`⎕SHADOW`](../shadow.md)|Shadow names         |Monadic function|
 |[`⎕SHELL`](../shell.md)|Execute a shell command or another program              |Monadic function|
 |[`⎕SI`](../si.md)    |State Indicator          |Constant|
-|[`⎕SIGNAL`](../signal.md)   |Signal event                                    |Ambivalent function|
+|[`⎕SIGNAL`](../signal-reset.md)   |Reset Event Constants                           |Monadic function   |
+|[`⎕SIGNAL`](../signal-default.md)   |Signal Default Event                            |Ambivalent function|
+|[`⎕SIGNAL`](../signal-extended.md)   |Signal Extended Event                           |Monadic function   |
 |[`⎕SIZE`](../size.md)  |Size of objects        |Monadic function|
 |[`⎕SM`](../sm.md)   |Screen Map                       |Variable|
 |[`⎕SR`](../sr.md)   |Screen Read                      |Ambivalent function|
