@@ -61,7 +61,7 @@ DIVISION ERROR
 
 ## Effect on Execution
 
-Generating an event interrupts execution. The state indicator is cut back to exit the function, operator, or dfn capsule containing the line that invoked `⎕SIGNAL`, or to exit the [`⍎`](../primitive-functions/execute.md) expression that invoked it. The event is then generated in the environment that is left.
+Generating an event interrupts execution. The state indicator is cut back to exit the function, operator, or [dfn capsule](../../programming-reference-guide/defined-functions-and-operators/dfns-and-dops/capsules.md) containing the line that invoked `⎕SIGNAL`, or to exit the [`⍎`](../primitive-functions/execute.md) expression that invoked it. The event is then generated in the environment that is left.
 
 Because the state indicator is cut back past the function that invoked `⎕SIGNAL`, a [`:Trap`](../../programming-reference-guide/defined-functions-and-operators/traditional-functions-and-operators/control-structures/trap.md) or [`⎕TRAP`](trap.md) in that same function does not intercept the event; one in a calling function does.
 
