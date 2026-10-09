@@ -14,21 +14,33 @@ If the name is not already being edited, it is assigned a new edit window. If yo
 
 If the name is followed by a line-number in square brackets, for example, `MyFn[1000]`, the Editor will position the cursor on the specified line. This applies to all methods of invoking the Editor, except `⎕ED`. There must not be a space between the last character of the name and the "[".
 
-## Window Management (Standard)
+## Window Management
 
-Unless Classic Dyalog mode is selected from the *Layout* menu, the Editor is a Multiple Document Interface (MDI) window that may be a stand-alone window, or be docked in the Session window. Each of the objects being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities.
+By default, the Session has an Editor window docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
 
-![](img/editor-2.png)
+![](img/editor-3.png)
 
-The first edit sub-window window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters which  are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
+The arrangement is chosen from the [Layout menu](session-menubar.md#the-layout-menu). **Layout**>**Classic** removes the Editor window and opens each object in its own window instead; **Layout**>**Debugger at the bottom** restores the default. The Session must be saved for the choice to persist.
+
+Whichever arrangement is in use, the first edited object opens at the position specified by the **edit_first_y** and **edit_first_x** parameters, which are specified in terms of the size of a character in the current font relative to the top-left corner of the main Editor window or, where there is none, of the screen. Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
+
+![](img/editor-7.png)
 
 The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
 
-The blue triangles indicate that the line of text is longer than can be displayed in the current Edit window.
+A triangle at the end of a line indicates that the line is longer than can be displayed in the current edit window. Click and hold the left mouse button on the triangle to show the whole line in a pop-up.
 
-By default, the Session has the Editor docked along the right edge of the Session window. When you edit a function, the Editor window automatically springs into view as illustrated below.
+### Classic Layout
 
-![](img/editor-3.png)
+**Layout**>**Classic** removes the Editor window and displays each object in a separate window, as though it had been undocked from the Editor. These windows cannot be docked anywhere. Each has the full functionality of the Editor, so every setting and everything documented for the Editor applies to them too.
+
+![](img/editor-6.png)
+
+### Docked Layout
+
+**Layout**>**Debugger at the bottom** provides a single Editor as a Multiple Document Interface (MDI) window, which can stand alone or be docked in the Session window. Each object being edited is displayed in a separate sub-window. Individual edit windows are managed using standard MDI facilities, and can be undocked from and redocked in the Editor window, though not directly in the Session window.
+
+![](img/editor-2.png)
 
 ![](img/editor-4.png)
 
@@ -40,21 +52,7 @@ The picture below shows the effect of maximising the Editor. The `BUILD_SESSION`
 
 ![](img/editor-5.png)
 
-When the Editor has the focus, the Editor menubar is displayed in place of the Session menubar.
-
-## Window Management (Classic Dyalog mode)
-
-If Classic Dyalog mode is selected from the [Layout menu](session-menubar.md#the-layout-menu), each Edit window is a top-level window created as a child of the Session window. This means that normally Edit windows appear on top of the Session.
-
-The first Edit window is created at the position specified by the **edit_first_y** and **edit_first_x** parameters, which are specified in terms of the size of a character in the current font relative to the top-left corner of the screen.
-
-The initial size of an edit window is specified by the **edit_rows** and **edit_cols** parameters.
-
-![](img/editor-6.png)
-
-Subsequent ones are staggered according to the values of the **edit_offset_y** and **edit_offset_x** parameters.
-
-![](img/editor-7.png)
+When the Editor is docked and has the focus, the Editor menubar is displayed in place of the Session menubar.
 
 ### Moving around an edit window
 
