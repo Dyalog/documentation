@@ -163,6 +163,7 @@ nav:
           - Shy Result: defined-functions-and-operators/dfns-and-dops/shy-result.md
           - Global and Local Names: defined-functions-and-operators/dfns-and-dops/global-local-names.md
           - Lexical Name Scope: defined-functions-and-operators/dfns-and-dops/static-name-scope.md
+          - Capsules: defined-functions-and-operators/dfns-and-dops/capsules.md
           - Recursion: defined-functions-and-operators/dfns-and-dops/recursion.md
           - Tail Calls: defined-functions-and-operators/dfns-and-dops/tail-calls.md
           - Dops: defined-functions-and-operators/dfns-and-dops/dynamic-operators.md
