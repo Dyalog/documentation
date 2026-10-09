@@ -168,7 +168,7 @@ jill
 
 ## Specification
 
-The new syntactic forms were previously errors in every mainstream APL implementation and therefore introduce no backward incompatibilities, except in a defined function that contains an unmatched parenthesis or bracket, as described in [Defined Functions](#defined-functions).
+The new syntactic forms were previously errors in every mainstream APL implementation and introduce no backward incompatibilities, except in the case of a defined function that contains an unmatched parenthesis or bracket (as described in [Defined Functions](#defined-functions)).
 
 In the following:
 
@@ -211,7 +211,7 @@ At least one value expression must be non-empty.
 
 ### Defined Functions
 
-A line break in a defined function is a separator, so a parenthesis or bracket that is still open at the end of a line continues onto the following lines until it is closed, and those lines form a single statement:
+A line break in a defined function is a separator. This means that a parenthesis or bracket that is still open at the end of a line continues onto the following lines until it is closed, and those lines form a single statement:
 
 ```apl
       ⎕VR'F'
@@ -225,8 +225,8 @@ A line break in a defined function is a separator, so a parenthesis or bracket t
 
 This affects a defined function that contains an unmatched parenthesis or bracket:
 
-- A dfn or dop does not fix: [`⎕FX`](../../../language-reference-guide/system-functions/fx.md) returns an integer instead of the name, and [`⎕FIX`](../../../language-reference-guide/system-functions/fix.md) reports that the function could not be fixed.
-- A tradfn or tradop fixes, and the unmatched parenthesis or bracket is reported as a `SYNTAX ERROR` when its line is executed. An opening parenthesis or bracket on one line and a closing one on a later line, however, form a single statement, so lines that would each give an error on their own run together without one.
+- A dfn or dop does not fix. Instead, [`⎕FX`](../../../language-reference-guide/system-functions/fx.md) returns an integer rather than the name, and [`⎕FIX`](../../../language-reference-guide/system-functions/fix.md) reports that the function could not be fixed.
+- A tradfn or tradop fixes, and the unmatched parenthesis or bracket is reported as a `SYNTAX ERROR` when its line is executed. However, an opening parenthesis or bracket on one line and a closing one on a later line form a single statement, meaning that lines that would each give an error on their own run together without generating an error.
 
 ### Unsupported
 
