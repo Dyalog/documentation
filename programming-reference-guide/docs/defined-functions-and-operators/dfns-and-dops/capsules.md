@@ -16,27 +16,31 @@ h←{
 
 ## Line Numbers
 
-The lines of a capsule are numbered through the whole capsule, starting with 0 for the line that contains its opening brace. An error message names the capsule, while the state indicator names the dfn in which the error occurred, both using the capsule's line numbers. In this tradfn, the capsule `outer` contains the dfn `inner`:
+The lines of a capsule are numbered through the whole capsule, starting with 0 for the line that contains its opening brace. An error message names the capsule, and the state indicator names the dfn in which execution is suspended, both using the capsule's line numbers. The pendent levels of dfns nested in the capsule are named after the capsule. In this tradfn, the capsule `outer` contains the dfn `mid`, which contains the dfn `inner`:
 
 ```apl
-      ⎕VR 'T5'
-     ∇ T5;outer
+      ⎕VR 'T6'
+     ∇ T6;outer
 [1]    outer←{
-[2]        inner←{
-[3]            ÷0
-[4]        }
-[5]        1+inner ⍬
-[6]    }
-[7]    1+outer ⍬
+[2]        mid←{
+[3]            inner←{
+[4]                ÷0
+[5]            }
+[6]            1+inner ⍬
+[7]        }
+[8]        1+mid ⍬
+[9]    }
+[10]   1+outer ⍬
      ∇
-      T5
+      T6
 DOMAIN ERROR: Divide by zero
-outer[2] ÷0
+outer[3] ÷0
          ∧
       )SI
-#.inner[2]*
-#.outer[4]
-#.T5[7]
+#.inner[3]*
+#.outer[5]
+#.outer[7]
+#.T6[10]
 ```
 
 ## Signalling Events
@@ -56,9 +60,15 @@ DOMAIN ERROR
 
 When the capsule is called from a tradfn, the event is therefore reported in the tradfn, where a [`:Trap`](../traditional-functions-and-operators/control-structures/trap.md) control structure or [`⎕TRAP`](../../../language-reference-guide/system-functions/trap.md) can trap it.
 
-## Cutting a Capsule from the Stack
+## Cutting Back to a Capsule
 
-When execution is suspended in a capsule, the **&lt;CA&gt;** (Cut Capsule) action removes the capsule from the state indicator. This leaves execution suspended at the point where the capsule was called, in the state just before it was entered, so that the call can be traced or executed again. In `T5` above, **&lt;CA&gt;** removes both `inner` and `outer`, leaving `T5` suspended on line 7.
+When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&gt;** (Cut to capsule) action cuts the state indicator back to the capsule's outermost dfn, leaving it suspended at the line that led to the nested call. When execution is suspended in the capsule's outermost dfn, **&lt;CA&gt;** has no effect. In `T6` above, **&lt;CA&gt;** removes `inner` and `mid`:
+
+```apl
+      )SI
+#.outer[7]*
+#.T6[10]
+```
 
 **&lt;CA&gt;** has no keystroke by default. You can assign one on the [Keyboard Shortcuts tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab) of the Configuration dialog box, or invoke the action from the session by sending the key press to the session object with [`⎕NQ`](../../../language-reference-guide/system-functions/nq.md):
 
@@ -68,8 +78,16 @@ When execution is suspended in a capsule, the **&lt;CA&gt;** (Cut Capsule) actio
 
 The other ways of clearing the state indicator do not respect capsules:
 
-- [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `T5` means `inner`, `outer`, and `T5` itself.
-- [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, whatever functions they belong to, and leaves execution suspended at the level below them. In `T5`, `)RESET 1` removes only `inner`, leaving `outer` suspended on line 4, while `)RESET 2` has the same effect as **&lt;CA&gt;**.
+- [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `T6` means every level, including `T6` itself.
+- [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, whatever functions they belong to, and leaves execution suspended at the level below them. In `T6`, `)RESET 1` removes only `inner`:
+
+```apl
+      )RESET 1
+      )SI
+#.mid[5]*
+#.outer[7]
+#.T6[10]
+```
 
 ## Error-Guards
 
