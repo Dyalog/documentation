@@ -7,7 +7,7 @@ The [Points](../properties/points.md) property specifies one or more sets of poi
 The [Style](../properties/style.md) property determines the symbol that is drawn at each of a set of points. Marker styles are specified either by numbers which represent the following symbol shapes.
 
 |---|---|
-|0  |. { .shaded }  |
+|0  |single pixel|
 |1  |`+`|
 |2  |`*`|
 |3  |`⎕`|
@@ -17,7 +17,7 @@ The [Style](../properties/style.md) property determines the symbol that is drawn
 
 or by character vectors containing the names of [Bitmap](bitmap.md) or [Icon](icon.md) objects.
 
-The height of each symbol is specified by the value of the [Size](../properties/size.md) property. However this applies only to [Style](../properties/style.md)s 1-6 and is ignored if [Style](../properties/style.md) is 0 or the name of a [Bitmap](bitmap.md). The colour of each symbol is specified by the [FCol](../properties/fcol.md) property. The default is black.
+The height of each symbol is specified by the value of the [Size](../properties/size.md) property. However, this applies only to [Style](../properties/style.md)s 1–6 and is ignored if [Style](../properties/style.md) is 0 or the name of a [Bitmap](bitmap.md). Style 0, the default, always draws a single pixel at each point, so a Marker object can be used to draw individual pixels, for example, on a [Bitmap](bitmap.md). The colour of each symbol is specified by the [FCol](../properties/fcol.md) property. The default is black.
 
 The value of [Dragable](../properties/dragable.md) determines whether or not the object can be dragged. The value of [AutoConf](../properties/autoconf.md) determines whether or not the Marker object is resized when its parent is resized.
 
@@ -34,21 +34,25 @@ For a single set of polymarkers, [Points](../properties/points.md) is either a 2
 <h2 class="example">Examples</h2>
 
 First make a [Form](form.md):
+
 ```apl
       'F' ⎕WC 'Form'
 ```
 
-Draw a point at (y=20, x=10):
+Draw a single pixel at (y=20, x=10), using the default Style of 0:
+
 ```apl
       'F.M1' ⎕WC 'Marker' (20 10)
 ```
 
 Draw a row of points at (y=20, x=10, 20, ... 90) : (Note scalar extension of y-coordinate)
+
 ```apl
       'F.M1' ⎕WC 'Marker' (20(10×⍳9))
 ```
 
 Draw "+" symbols at each corner of a box:
+
 ```apl
       Y ← 10 10 50 50
       X ← 10 50 50 10
@@ -56,11 +60,13 @@ Draw "+" symbols at each corner of a box:
 ```
 
 Ditto, but draw them 10% high:
+
 ```apl
       'F.M1' ⎕WC 'Marker' (Y X) 1 10
 ```
 
 Ditto, but use "*" symbols in green:
+
 ```apl
       'F.M1' ⎕WC 'Marker' (Y X) 2 10 (0 255 0)
 ```
@@ -76,16 +82,19 @@ To draw multiple sets of polymarkers with a single name, [Points](../properties/
 <h2 class="example">Examples</h2>
 
 First make a [Form](form.md):
+
 ```apl
       'F' ⎕WC 'Form'
 ```
 
 Draw a "`⎕`" at (10,20) and a "`⋄`" at (20,20):
+
 ```apl
       'F.M1' ⎕WC 'Marker'((1 2⍴10 20)(1 2⍴20 20)) (3 5)
 ```
 
 Draw "+" symbols at each corner of one box and  "`○`" symbols at each corner of another:
+
 ```apl
       Y1 X1 ← (10 10 50 50) (10 50 50 10)
       Y2 X2 ← (20 20 40 40) (20 40 40 20)
@@ -93,11 +102,13 @@ Draw "+" symbols at each corner of one box and  "`○`" symbols at each corner o
 ```
 
 Ditto, but draw the "+" symbols with height 2% and the "`○`" symbols 5%:
+
 ```apl
       'F.M1' ⎕WC 'Marker' ((Y1 X1)(Y2 X2)) (1 6) (2 5)
 ```
 
 Ditto, but draw the "+" symbols in red and the "`○`" symbols in blue:
+
 ```apl
       'F.M1' ⎕WC 'Marker' ((Y1 X1)(Y2 X2)) (1 6) (2 5)
                           ('FCol' (255 0 0)(0 0 255))
