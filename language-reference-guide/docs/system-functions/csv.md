@@ -9,7 +9,7 @@ This function imports and exports Comma Separated Value (CSV) data.
 
 Monadic `⎕CSV` imports data from a CSV file or converts data from CSV format to an internal format. Dyadic `⎕CSV` exports data to a CSV file or converts data from internal format to a CSV format.
 
-`⎕CSV` output is not affected by [`⎕PP`](pp.md); numeric values are always represented with full precision.
+`⎕CSV` formats numbers independently of [`⎕PP`](pp.md), using at most 16 significant digits, so a number that needs more to be represented exactly, such as `÷7`, does not survive a round trip unchanged.
 
 ## Internal Format
 
