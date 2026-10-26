@@ -9,7 +9,7 @@ search:
 !!! windows "Dyalog on Microsoft Windows"
     This function is available only under Microsoft Windows.
 
-Under Windows, the Session Caption displays information such as the name of the current workspace. The contents of the Caption can be modified as described under [Window Captions](../../../windows-installation-and-configuration-guide/window-captions.md).
+Under Microsoft Windows, the Session Caption displays information such as the name of the current workspace. The contents of the Caption can be modified as described under [Window Captions](../../../windows-installation-and-configuration-guide/window-captions.md).
 
 However, the Caption is updated only at the six-space prompt; calling `⎕LOAD` for example from within a function will not result in the Caption being updated at the end of the `⎕LOAD`.
 
