@@ -24,7 +24,7 @@ This contains certain entries for the Editor.
 
 ### Event Viewer
 
-This contains entries that describe your settings for [The Event Viewer](../../windows-ui-guide/event-viewer).
+This contains entries that describe your settings for [The Event Viewer](../windows-ui-guide/event-viewer.md).
 
 ### Explorer
 
@@ -56,11 +56,11 @@ This contains entries for SALT. See [SALT](configuring-the-ide/configuration-dia
 
 ### Search
 
-This contains dynamic entries for the [Find Objects Tool](../../windows-ui-guide/find-objects-tool).
+This contains dynamic entries for the [Find Objects Tool](../windows-ui-guide/find-objects-tool.md).
 
 ### Threads
 
-This contains entries to remember your preferences for Threads. See [The Threads Tool](../../windows-ui-guide/threads-tool).
+This contains entries to remember your preferences for Threads. See [The Threads Tool](../windows-ui-guide/threads-tool.md).
 
 ### UnicodeIME
 
@@ -68,7 +68,7 @@ This contains entries for the Dyalog Unicode IME.
 
 ### ValueTips
 
-This contains entries for your [Value Tips](../../windows-ui-guide/value-tips) preferences.
+This contains entries for your [Value Tips](../windows-ui-guide/value-tips.md) preferences.
 
 ### WindowRects
 

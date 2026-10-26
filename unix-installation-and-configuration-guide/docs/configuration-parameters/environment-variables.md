@@ -7,7 +7,7 @@ Under Unix, all environment variables should appear in UPPER CASE. For example, 
 $ export DEFAULT_ML=3
 ```
 
-If a [configuration parameter](../../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
+If a [configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
 
 Many of these environment variables are set in the mapl script; their values are either appropriate for the installation location of Dyalog APL, or are set to define reasonable default values.
 
