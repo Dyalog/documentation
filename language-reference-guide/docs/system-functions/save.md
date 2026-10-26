@@ -9,7 +9,7 @@ search:
 
 Unless the path specified by `Y` is a full pathname, it is taken to be relative to the current working directory which may be obtained by the expression: `⊃1 ⎕NPARTS ''`.
 
-See [Programmer's Guide: "Workspaces"](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
+See [Workspaces](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
 
 The active workspace is saved with the  file name specified by  `Y`, whether or not a workspace file of that name already exists.
 

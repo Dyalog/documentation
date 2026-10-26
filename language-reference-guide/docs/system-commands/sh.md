@@ -8,7 +8,7 @@ The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and 
 
 `)SH` causes Dyalog to invoke the `system()` library call. The shell which is used to run the command is therefore the shell which `system()` is defined to call. For example, under AIX this would be `/usr/bin/sh`.
 
-When the shell is closed, control returns to APL. Further information about [calling Unix commands from Dyalog](../../unix-user-guide/calling-unix-commands.md) is provided in the *Dyalog for Unix UI Guide*.
+When the shell is closed, control returns to APL. Further information is available about [calling Unix commands from Dyalog](../../unix-user-guide/calling-unix-commands.md).
 
 The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different shell under the shell associated with `system()`.
 
@@ -24,4 +24,4 @@ The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different she
 ```
 
 !!! Info "Information"
-    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a [Ride](https://dyalog.github.io/ride) session which does not support this type of user interface.
