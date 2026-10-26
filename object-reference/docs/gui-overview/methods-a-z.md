@@ -16,6 +16,7 @@ search:
 |[AnimOpen](../methodorevents/animopen.md)|290|opens an AVI file  in an [Animation](../objects/animation.md) object.|
 |[AnimPlay](../methodorevents/animplay.md)|292|plays an AVI clip in an in an [Animation](../objects/animation.md) object.|
 |[AnimStop](../methodorevents/animstop.md)|293|stops an AVI clip that is playing in an in an [Animation](../objects/animation.md) object.|
+|[Bind](../methodorevents/bind.md)|&nbsp;|packages the active workspace as a file, such as a .NET assembly|
 |[Browse](../methodorevents/browse.md)|585|retained for compatibility with previous versions of Dyalog, but is no longer relevant and has no effect|
 |[CancelToClose](../methodorevents/canceltoclose.md)|367|changes the buttons in a [PropertySheet](../objects/propertysheet.md)|
 |[CellFromPoint](../methodorevents/cellfrompoint.md)|200|converts from [Grid](../objects/grid.md) coordinates to cell coordinates|

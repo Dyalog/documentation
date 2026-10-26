@@ -634,6 +634,7 @@ nav:
       - AnimPlay Method: methodorevents/animplay.md
       - AnimStop Method: methodorevents/animstop.md
       - Animate Method: methodorevents/animate.md
+      - Bind Method: methodorevents/bind.md
       - Browse Method: methodorevents/browse.md
       - CancelToClose Method: methodorevents/canceltoclose.md
       - CellFromPoint Method: methodorevents/cellfrompoint.md
@@ -773,6 +774,7 @@ nav:
       - BaseClass Property: properties/baseclass.md
       - BCol Property: properties/bcol.md
       - BeginEditLabel Event: methodorevents/begineditlabel.md
+      - Bind Method: methodorevents/bind.md
       - Bitmap Object: objects/bitmap.md
       - Bits Property: properties/bits.md
       - Border Property: properties/border.md
