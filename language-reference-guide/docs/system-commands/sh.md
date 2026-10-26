@@ -8,7 +8,7 @@ The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and 
 
 `)SH` causes Dyalog to invoke the `system()` library call. The shell which is used to run the command is therefore the shell which `system()` is defined to call. For example, under AIX this would be `/usr/bin/sh`.
 
-When the shell is closed, control returns to APL. See *Dyalog for Unix UI Guide* for further information.
+When the shell is closed, control returns to APL. Further information about [calling Unix commands from Dyalog](../../unix-user-guide/calling-unix-commands.md) is provided in the *Dyalog for Unix UI Guide*.
 
 The parameters CMD_PREFIX and CMD_POSTFIX may be used to execute a different shell under the shell associated with `system()`.
 

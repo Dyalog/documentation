@@ -1,6 +1,6 @@
 # The APL Command Line
 
-The command line for Dyalog is described below; the command line for non-Windows versions of Dyalog is very similar (see [Starting APL](../unix-user-guide/starting-apl.md).
+The command line for Dyalog is described below; the command line for non-Windows versions of Dyalog is very similar (see [Starting APL](../unix-user-guide/starting-apl.md)).
 
 Usually the command line is specified in the Target: field of the APL shortcut. The full pathname to the Dyalog executable is usually surrounded by double quotes as it contains spaces.
 

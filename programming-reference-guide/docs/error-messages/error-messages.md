@@ -8,4 +8,4 @@ Most errors may be trapped using the system variable `⎕TRAP`, thereby retainin
 
 Error messages appear in the Session log interactively, or on the [stderr stream](../introduction/output.md) when the interpreter is attached to operating-system streams.
 
-See *Dyalog Programming Reference Guide* for a full description of the Error Handling facilities in Dyalog APL.
+See [Error Trapping](../error-trapping/error-trapping.md) for a full description of the error handling facilities in Dyalog APL.
