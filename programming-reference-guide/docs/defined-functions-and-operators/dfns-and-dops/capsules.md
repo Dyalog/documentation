@@ -1,6 +1,6 @@
 # Capsules
 
-A _capsule_ is a dfn or dop that is not directly contained in another dfn or dop. It can be named, like a dfn that is defined on its own, or anonymous, like a dfn that is written in a line of a tradfn, in the session, or in a string executed by [_execute_ (`⍎`)](../../../language-reference-guide/primitive-functions/execute.md). Every dfn and dop written inside a capsule belongs to that capsule, including one that is given a local name, as described in [Lexical Name Scope](static-name-scope.md). An operand that is written outside a dop is a capsule of its own.
+A _capsule_ is a dfn or dop that is not directly contained in another dfn or dop. It can be named, like a dfn that is defined on its own, or anonymous, like a dfn that is written in a line of a tradfn, in the session, or in a string executed by [_execute_ (`⍎`)](../../../language-reference-guide/primitive-functions/execute.md). Every dfn and dop written inside a capsule belongs to that capsule, including one that is given a local name, as described in [Lexical Name Scope](static-name-scope.md). An operand belongs to the capsule in which it is written, not to the dop that it is passed to, so an operand that is written outside every dfn and dop is a capsule of its own.
 
 In the following, `f` and `g` are separate capsules, while `h` is a single capsule that contains the local dfn `i`:
 
@@ -76,7 +76,7 @@ When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&g
       2 ⎕NQ ⎕SE 'KeyPress' 'CA'
 ```
 
-The other ways of clearing the state indicator do not respect capsules:
+Other ways of cutting back the state indicator work by level, not by capsule:
 
 - [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `T6` means every level, including `T6` itself.
 - [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, whatever functions they belong to, and leaves execution suspended at the level below them. In `T6`, `)RESET 1` removes only `inner`:
