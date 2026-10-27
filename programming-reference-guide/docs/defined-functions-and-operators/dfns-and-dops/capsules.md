@@ -2,9 +2,22 @@
 
 A _capsule_ is a literal dfn or dop whose definition is not directly contained within another dfn or dop. Every literal dfn and dop that is written inside a capsule belongs to that capsule. An operand dfn belongs to the capsule in which it is written (which could be itself), not to the capsule of the dop to which it is passed.
 
-In the following, `caller` and `callee` are separate capsules, while `container` is a single capsule that contains the local dfn `helper`:
+In the following, `Main` is a tradfn that contains a single dfn capsule, `caller` and `callee` are separate capsules, and `container` is a separate single capsule that contains the local dfn `helper`:
 
 ```apl
+∇ Main;outer
+outer←{           ⍝ capsule line [0]
+    mid←{         ⍝ capsule line [1]
+        inner←{   ⍝ capsule line [2]
+            ÷0    ⍝ capsule line [3]
+        }         ⍝ capsule line [4]
+        1+inner ⍬ ⍝ capsule line [5]
+    }             ⍝ capsule line [6]
+    1+mid ⍬       ⍝ capsule line [7]
+}                 ⍝ capsule line [8]
+1+outer ⍬
+∇
+
 caller←{1+callee ⍵}
 callee←{⎕SIGNAL 11}
 
@@ -16,21 +29,9 @@ container←{
 
 ## Line Numbers
 
-The lines of a capsule are numbered through the whole capsule, starting with 0 for the line that contains its opening brace. An error message names the capsule, and the state indicator names the dfn in which execution is suspended, both using the capsule's line numbers. The pendent levels of dfns nested in the capsule are named after the capsule. In this tradfn, the capsule `outer` contains the dfn `mid`, which contains the dfn `inner`:
+The lines of a capsule are numbered through the whole capsule, starting with 0 for the line that contains its opening brace. An error message names the capsule, and the state indicator names the dfn in which execution is suspended, both using the capsule's line numbers. The pendent levels of dfns nested in the capsule are named after the capsule. In `Main` above, the capsule `outer` contains the dfn `mid`, which contains the dfn `inner`:
 
 ```apl
-      ⎕CR 'Main'
- Main;outer
- outer←{           ⍝ capsule line [0]
-     mid←{         ⍝ capsule line [1]
-         inner←{   ⍝ capsule line [2]
-             ÷0    ⍝ capsule line [3]
-         }         ⍝ capsule line [4]
-         1+inner ⍬ ⍝ capsule line [5]
-     }             ⍝ capsule line [6]
-     1+mid ⍬       ⍝ capsule line [7]
- }                 ⍝ capsule line [8]
- 1+outer ⍬
       Main
 DOMAIN ERROR: Divide by zero
 outer[3] ÷0    ⍝ capsule line [3]
