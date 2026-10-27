@@ -68,7 +68,7 @@ An instance reports its own class and every class that class derives from. A cla
 
 <h2 class="example">Example</h2>
 
-Interfaces appear alongside the class that supports them, within the same item of `R`. In the [Penguin Class example](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md), `Penguin` derives from `Animal` but additionally supports the `BirdBehaviour` and `FishBehaviour` interfaces, inheriting members from both. Its first node therefore holds three references, and `#.Animal` remains a node of its own:
+Interfaces appear alongside the class that supports them, within the same item of `R`. In the [Penguin Class example](../../programming-reference-guide/object-oriented-programming/interfaces/interface-example.md), `Penguin` derives from `Animal` but additionally supports the `BirdBehaviour` and `FishBehaviour` interfaces, inheriting members from both. Its first node, therefore, holds three references, and `#.Animal` remains a node of its own:
 
 ```apl
       ⎕CLASS Pingo←⎕NEW Penguin
