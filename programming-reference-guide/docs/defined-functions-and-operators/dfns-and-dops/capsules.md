@@ -19,22 +19,21 @@ container←{
 The lines of a capsule are numbered through the whole capsule, starting with 0 for the line that contains its opening brace. An error message names the capsule, and the state indicator names the dfn in which execution is suspended, both using the capsule's line numbers. The pendent levels of dfns nested in the capsule are named after the capsule. In this tradfn, the capsule `outer` contains the dfn `mid`, which contains the dfn `inner`:
 
 ```apl
-      ⎕VR 'Main'
-     ∇ Main;outer
-[1]    outer←{
-[2]        mid←{
-[3]            inner←{
-[4]                ÷0
-[5]            }
-[6]            1+inner ⍬
-[7]        }
-[8]        1+mid ⍬
-[9]    }
-[10]   1+outer ⍬
-     ∇
+      ⎕CR 'Main'
+ Main;outer
+ outer←{           ⍝ capsule line [0]
+     mid←{         ⍝ capsule line [1]
+         inner←{   ⍝ capsule line [2]
+             ÷0    ⍝ capsule line [3]
+         }         ⍝ capsule line [4]
+         1+inner ⍬ ⍝ capsule line [5]
+     }             ⍝ capsule line [6]
+     1+mid ⍬       ⍝ capsule line [7]
+ }                 ⍝ capsule line [8]
+ 1+outer ⍬
       Main
 DOMAIN ERROR: Divide by zero
-outer[3] ÷0
+outer[3] ÷0    ⍝ capsule line [3]
          ∧
       )SI
 #.inner[3]*
