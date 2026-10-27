@@ -374,7 +374,7 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 
 System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as _implicit arguments_.
 
-System variables can be localised by inclusion in the header line of a defined function or in the argument list of the system function `⎕SHADOW`. When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as "pass-through localisation". The exception to this rule is `⎕TRAP`.
+System variables can be localised by inclusion in the header line of a defined function or in the argument list of the system function [`⎕SHADOW`](shadow.md). When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as _pass-through localisation_. The exception to this rule is [`⎕TRAP`](trap.md).
 
 A system variable can never be undefined. Default values are assigned to all system variables in a clear workspace.
 
