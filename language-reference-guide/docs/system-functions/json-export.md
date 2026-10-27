@@ -425,7 +425,7 @@ The JSON structure can be represented in APL as:
  #.[Namespace]  #.[Namespace]  #.[Namespace] 
 ```
 
-If such a representation is already used in an APL application, then no special handling is necessary to generate the corresponding JSON. However, transforming a dataset into a vector of namespaces, just for export to JSON, is cumbersome and can be expensive. `⎕JSON`'s wrapper codes `2`, `3`, and `4`, provide a quick and efficient way to transform the common APL representations of a dataset directly into a JSON array of objects.
+If such a representation is already used in an APL application, then no special handling is necessary to generate the corresponding JSON. However, transforming a dataset into a vector of namespaces, only for export to JSON, is cumbersome and can be expensive. `⎕JSON`'s wrapper codes `2`, `3`, and `4`, provide a quick and efficient way to transform the common APL representations of a dataset directly into a JSON array of objects.
 
 ### Raw Text Wrapper
 
