@@ -20,7 +20,7 @@ In a terminal environment, the response is read from standard input.
 
 To have the response evaluated rather than taken as characters, [reference `⎕`](quad-input.md) instead. To read a stream of 8-bit codes from a nominated device rather than from the Session or terminal, use [`⎕ARBIN`](arbin.md).
 
-If the reference was preceded by [assignments to `⍞`](quotequad-output.md) with no intervening input or output, the last line of that output forms part of the response. Input through `⍞` therefore includes any output through `⍞` since the last new-line character.
+If the reference was preceded by [assignments to `⍞`](quotequad-output.md) with no intervening input or output, the last line of that output forms part of the response. Input through `⍞`, therefore, includes any output through `⍞` since the last new-line character.
 
 <h2 class="example">Examples</h2>
 
