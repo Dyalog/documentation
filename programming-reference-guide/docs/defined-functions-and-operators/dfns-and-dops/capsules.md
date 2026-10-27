@@ -61,7 +61,15 @@ This means that when a capsule is called from within a tradfn, the event is repo
 
 ## Cutting Back to a Capsule
 
-When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&gt;** (Cut to capsule) action cuts the state indicator back to the capsule's outermost dfn, leaving it suspended at the line that led to the nested call. When execution is suspended in the capsule's outermost dfn, **&lt;CA&gt;** has no effect. In `Main` above, **&lt;CA&gt;** removes `inner` and `mid`:
+When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&gt;** (Cut to capsule) action cuts the state indicator back to the capsule's outermost dfn, leaving it suspended at the line that led to the nested call. When execution is suspended in the capsule's outermost dfn, **&lt;CA&gt;** has no effect.
+
+**&lt;CA&gt;** has no keystroke by default. In Microsoft Windows, you can assign one on the [**Keyboard Shortcuts** tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab) of the **Configuration** dialog box, or invoke the action from the Session by sending the key press to the session object with [`⎕NQ`](../../../language-reference-guide/system-functions/nq.md):
+
+```apl
+      2 ⎕NQ ⎕SE 'KeyPress' 'CA'
+```
+
+In `Main` above, **&lt;CA&gt;** removes `inner` and `mid`:
 
 ```apl
       )SI
@@ -69,26 +77,28 @@ When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&g
 #.Main[10]
 ```
 
-
-- **&lt;CA&gt;** has no keystroke by default. In Microsoft Windows, you can assign one on the [**Keyboard Shortcuts** tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab) of the **Configuration** dialog box, or invoke the action from the Session by sending the key press to the session object with [`⎕NQ`](../../../language-reference-guide/system-functions/nq.md):
-
-
-```apl
-      2 ⎕NQ ⎕SE 'KeyPress' 'CA'
-```
-
 Other ways of cutting back the state indicator work by level, not by capsule:
 
-- [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `Main` means every level, including `Main` itself.
+- [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `Main` means every level, including `Main` itself:
+
+    ```apl
+          →
+          )SI
+    ```
+
 - [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, irrespective of the functions that they belong to, and leaves execution suspended at the level below them. In `Main`, `)RESET 1` removes only `inner`:
 
-```apl
-      )RESET 1
-      )SI
-#.mid[5]*
-#.outer[7]
-#.Main[10]
-```
+    ```apl
+          Main
+    DOMAIN ERROR: Divide by zero
+    outer[3] ÷0    ⍝ capsule line [3]
+             ∧
+          )RESET 1
+          )SI
+    #.mid[5]*
+    #.outer[7]
+    #.Main[10]
+    ```
 
 ## Error-Guards
 
