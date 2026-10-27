@@ -50,7 +50,7 @@ search:
 |[Less Than](../less-than.md)|`<`|Less Than|Dyadic|
 |[Less Than Or Equal To](../less-than-or-equal-to.md)|`≤`|Less Than Or Equal To|Dyadic|
 |[Logarithm](../logarithm.md)|`⍟`|Log|Dyadic|
-|[Lowest Common Multiple/AND](../lowest-common-multiple-and.md)|`^`|Logical AND|Dyadic|
+|[Lowest Common Multiple/AND](../lowest-common-multiple-and.md)|`∧`|Logical AND|Dyadic|
 |[Magnitude](../magnitude.md)|`|`|Stile|Monadic|
 |[Match](../match.md)|`≡`|Equal Underbar|Dyadic|
 |[Materialise](../materialise.md)|`⌷`|Squad|Monadic|
