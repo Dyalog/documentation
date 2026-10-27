@@ -1,6 +1,6 @@
 # Capsules
 
-A _capsule_ is a dfn or dop that is not directly contained in another dfn or dop. It can be named, like a dfn that is defined on its own, or anonymous, like a dfn that is written in a line of a tradfn, in the session, or in a string executed by [_execute_ (`⍎`)](../../../language-reference-guide/primitive-functions/execute.md). Every dfn and dop written inside a capsule belongs to that capsule, including one that is given a local name, as described in [Lexical Name Scope](static-name-scope.md). An operand belongs to the capsule in which it is written, not to the dop that it is passed to, so an operand that is written outside every dfn and dop is a capsule of its own.
+A _capsule_ is a literal dfn or dop whose definition is not directly contained within another dfn or dop. Every literal dfn and dop that is written inside a capsule belongs to that capsule. An operand dfn belongs to the capsule in which it is written (which could be itself), not to the capsule of the dop to which it is passed.
 
 In the following, `caller` and `callee` are separate capsules, while `container` is a single capsule that contains the local dfn `helper`:
 
@@ -58,7 +58,7 @@ DOMAIN ERROR
       ∧
 ```
 
-When the capsule is called from a tradfn, the event is therefore reported in the tradfn, where a [`:Trap`](../traditional-functions-and-operators/control-structures/trap.md) control structure or [`⎕TRAP`](../../../language-reference-guide/system-functions/trap.md) can trap it.
+This means that when a capsule is called from within a tradfn, the event is reported in the tradfn, where a [`:Trap`](../traditional-functions-and-operators/control-structures/trap.md) control structure or [`⎕TRAP`](../../../language-reference-guide/system-functions/trap.md) can trap it.
 
 ## Cutting Back to a Capsule
 
@@ -70,7 +70,9 @@ When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&g
 #.Main[10]
 ```
 
-**&lt;CA&gt;** has no keystroke by default. You can assign one on the [Keyboard Shortcuts tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab) of the Configuration dialog box, or invoke the action from the session by sending the key press to the session object with [`⎕NQ`](../../../language-reference-guide/system-functions/nq.md):
+
+- **&lt;CA&gt;** has no keystroke by default. In Microsoft Windows, you can assign one on the [**Keyboard Shortcuts** tab](../../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab) of the **Configuration** dialog box, or invoke the action from the Session by sending the key press to the session object with [`⎕NQ`](../../../language-reference-guide/system-functions/nq.md):
+
 
 ```apl
       2 ⎕NQ ⎕SE 'KeyPress' 'CA'
@@ -79,7 +81,7 @@ When execution is suspended in a dfn that is nested in a capsule, the **&lt;CA&g
 Other ways of cutting back the state indicator work by level, not by capsule:
 
 - [_Abort_ (`→`)](../../../language-reference-guide/other-syntax/abort.md) clears the most recently suspended statement and all of its pendent statements, which in `Main` means every level, including `Main` itself.
-- [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, whatever functions they belong to, and leaves execution suspended at the level below them. In `Main`, `)RESET 1` removes only `inner`:
+- [`)RESET n`](../../../language-reference-guide/system-commands/reset.md) removes the top `n` levels of the state indicator, irrespective of the functions that they belong to, and leaves execution suspended at the level below them. In `Main`, `)RESET 1` removes only `inner`:
 
 ```apl
       )RESET 1
