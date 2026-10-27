@@ -27,7 +27,7 @@ Reporting the name, type, and size of a directory:
 `Y` can be:
 
 - a numeric scalar containing the tie number of a native file
-- a character vector or scalar containing a file or directory name that conforms to the naming rules of the host Operating System
+- a character vector or scalar containing a file or directory name that conforms to the naming rules of the host operating system
 - a vector of character vectors and/or tie numbers
 
 !!! Warning "Warning"
@@ -96,7 +96,7 @@ Table: Structure of the result { #resultstructure }
 |a vector of names and tie numbers|`0`|`⍴Y`|an array of shape `⍴X`, holding that item's property values|
 |a vector of names and tie numbers|`1`|`⍴Y`|an array of shape `⍴X`, each of whose elements is a vector of property values, one per matching name|
 
-A single name and a one-element vector containing that name therefore give different structures, because it is the depth of `Y` that adds the first level, not the number of files.
+A single name and a one-element vector containing that name, therefore, give different structures, because it is the depth of `Y` that adds the first level, not the number of files.
 
 <h3 class="example">Examples</h3>
 
@@ -131,7 +131,7 @@ The name and size of one file, then of two, then of every file matching a patter
 └───────────┴───────────┘
 ```
 
-Note that the third result groups by property while the second groups by file, and that the matches are not in the order the pattern might suggest: `Wildcard` does not define an order.
+The third result groups by property while the second groups by file, and the matches are not in the order the pattern might suggest: `Wildcard` does not define an order.
 
 ## Variant Options
 
