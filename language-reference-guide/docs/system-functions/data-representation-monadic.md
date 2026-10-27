@@ -37,7 +37,7 @@ Table: Classic Edition
 |1287 |128 bits Decimal                          |
 |1289 |128 bits Complex                          |
 
-Before it reports the type, `⎕DR` squeezes `Y` into a smaller internal representation where it can do so without changing the values. The exception is data converted by [dyadic `⎕DR`](data-representation-dyadic.md), which keeps the internal representation it was converted to until a function that changes it is applied. [`181⌶`](../primitive-operators/i-beam/unsqueezed-type.md) reports the type in which `Y` is stored, without squeezing it.
+Before it reports the type, `⎕DR` squeezes `Y` into a smaller internal representation if it can do so without changing the values. The exception is data converted by [dyadic `⎕DR`](data-representation-dyadic.md), which keeps the internal representation it was converted to until a function that changes it is applied. [`181⌶`](../primitive-operators/i-beam/unsqueezed-type.md) reports the type in which `Y` is stored, without squeezing it.
 
 <h2 class="example">Example</h2>
 ```apl

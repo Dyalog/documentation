@@ -51,7 +51,7 @@ Conversion to and from character (data type 82) uses the translate vector given 
 
 ## Notes
 
-- Workspace compaction squeezes numeric arrays and (in the Unicode Edition) character arrays into a smaller internal representation where it can do so without changing their values, and monadic `⎕DR` squeezes its argument in the same way before it reports the type. The converted data in `R` is exempt: it keeps the internal representation that `X` specifies until a function that changes it is applied. A function that returns its argument unchanged leaves the exemption in place, and assignment, including indexed assignment, has no effect on it. [`181⌶`](../primitive-operators/i-beam/unsqueezed-type.md) reports the internal representation of an array without squeezing it.
+- Workspace compaction squeezes numeric arrays and (in the Unicode Edition) character arrays into smaller internal representations wherever it can do so without changing their values, and monadic `⎕DR` squeezes its argument in the same way before it reports the type. The converted data in `R` is exempt: it retains the internal representation that `X` specifies until a function that changes it is applied. A function that returns its argument unchanged leaves the exemption in place, and assignment (including indexed assignment) has no effect on it. [`181⌶`](../primitive-operators/i-beam/unsqueezed-type.md) reports the internal representation of an array without squeezing it.
 - The precise operation of dyadic `⎕DR` depends upon the byte-ordering scheme of the computer system.
 
 <!-- Hidden search keywords -->
