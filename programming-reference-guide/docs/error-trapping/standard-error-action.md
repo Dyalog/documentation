@@ -11,15 +11,15 @@ The error report consists of up to three lines
 <h2 class="example">Examples</h2>
 ```apl
       X PLUS U
-VALUE ERROR
+VALUE ERROR: Undefined name: U
       X PLUS U
              ∧
       FOO
 INDEX ERROR
 FOO[2] X←X+A[I]
-           ∧
+            ∧
       CALC
-⍎DOMAIN ERROR
+⍎DOMAIN ERROR: Divide by zero
 CALC[5] ÷0
         ∧
 
