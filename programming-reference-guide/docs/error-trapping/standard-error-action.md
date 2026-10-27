@@ -6,21 +6,21 @@ The error report consists of up to three lines
 
 1. The error message, preceded by the symbol `⍎` if the error occurred while evaluating the _execute_ function.
 2. The statement in which the error occurred (or expression being evaluated by the _execute_ function), preceded by the name of the function and line number where execution is suspended unless the state indicator has been cut back to immediate execution mode.  If the state indicator has been cut back because of a locked function in execution, the displayed statement is that from which the locked function was invoked.
-3. The symbol `^` under the last referenced symbol or name when the error occurred.  All code to the right of the `^` symbol in the expression will have been evaluated.
+3. The symbol `∧` under the last referenced symbol or name when the error occurred. All code to the right of the `∧` symbol in the expression will have been evaluated.
 
 <h2 class="example">Examples</h2>
 ```apl
       X PLUS U
-VALUE ERROR
+VALUE ERROR: Undefined name: U
       X PLUS U
-             ^
+             ∧
       FOO
 INDEX ERROR
 FOO[2] X←X+A[I]
-           ^
+            ∧
       CALC
-⍎DOMAIN ERROR
+⍎DOMAIN ERROR: Divide by zero
 CALC[5] ÷0
-        ^
+        ∧
 
 ```

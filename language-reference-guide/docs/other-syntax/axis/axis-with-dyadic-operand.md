@@ -14,7 +14,7 @@ Table: Primitive dyadic mixed functions with optional axis. {: #DyadicMixed }
 |`⊂`|Partitioned Enclose|`B∊⍳⍴⍴Y`|
 |`⌽ or ⊖`|Rotate|`B∊⍳⍴⍴Y`|
 |`, or ⍪`|Catenate|`B∊⍳⍴⍴Y`|
-|`, or ⍪`|Laminate|`(0≠1|B)^(B>⎕IO-1)^(B<⎕IO+(⍴⍴X)⌈⍴⍴Y)`|
+|`, or ⍪`|Laminate|`(0≠1|B)∧(B>⎕IO-1)∧(B<⎕IO+(⍴⍴X)⌈⍴⍴Y)`|
 |`↑`|Take|one or more axes of `Y`|
 |`↓`|Drop|one or more axes of `Y`|
 |`⌷`|Index|one or more axes of `Y`|
