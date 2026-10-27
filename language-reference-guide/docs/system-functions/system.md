@@ -195,7 +195,7 @@ The character vector NetBIOS domain name on Microsoft Windows and `''` on Unix.
 
 <h4 id="hostuserid">Host.UserId</h4>
 
-On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the identifier of the currently logged-in user. This is always a character vector, even on Unix where the value looks like a number.
+On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID). This is always a character vector, even on Unix where the value looks like a number.
 
 <h4 id="hostusername">Host.UserName</h4>
 
