@@ -46,7 +46,7 @@ The following validations are performed on the data in the array:
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
 
-An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
+An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is, therefore, `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 

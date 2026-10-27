@@ -29,7 +29,7 @@ This function converts XML text to an APL array. To convert an APL array to XML 
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
 
-An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is therefore `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
+An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is, therefore, `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 
@@ -69,7 +69,7 @@ Character data itself has no tag name or attributes. As an optimisation, when ch
 Column 5 describes each row as a convenience to simplify processing of the array, although this information could be deduced. A row can contain an entry for an element, character data, markup not otherwise defined, a comment, or a processing instruction, and an element has zero or more of these as children. For all types except elements the value is as shown above; for an element it is the value of the row itself (`1`) added to those of its children, so an element containing one or more sub-elements and character data is `7`, that is `1` (element) + `2` (child element) + `4` (character data). In addition:
 
 - Odd values always represent elements. Odd values other than `1` indicate that there are children.
-- Elements that contain just character data (`5`) are combined into a single row, as noted above.
+- Elements that contain only character data (`5`) are combined into a single row, as noted above.
 - Only immediate children are considered when computing the value. For example, an element that contains a sub-element that in turn contains character data does not itself contain the character data.
 - The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element that contains a comment, but comments are being discarded, there is no entry for the comment in the array, and column 5 for the element does not indicate that it has a child comment.
 
@@ -85,7 +85,7 @@ Column 5 describes each row as a convenience to simplify processing of the array
 
 Because markup that describes the format of allowable data is not processed, no error is reported if element contents and attributes do not conform to their restricted declarations.
 
-A [CDATA section](xml.md#cdata-sections) is never recorded as markup: its content appears as character data instead. XML imported to an APL array and exported again therefore has no CDATA sections, although [Export XML](xml-export.md#result) can generate them from markup.
+A [CDATA section](xml.md#cdata-sections) is never recorded as markup: its content appears as character data instead. XML imported to an APL array and exported again, therefore, has no CDATA sections, although [Export XML](xml-export.md#result) can generate them from markup.
 
 ## Variant Options
 
@@ -183,7 +183,7 @@ Line endings are normalised to `0x0A` before the XML is parsed, whatever `Whites
 
 ### Variant Option: `Markup`
 
-The `Markup` variant option determines whether markup, other than entity tags, appears in `R`. The text of a [comment](xml.md#comments) is therefore kept when `Markup` is `'Preserve'`, and discarded otherwise. The default is `'Strip'`.
+The `Markup` variant option determines whether markup, other than entity tags, appears in `R`. The text of a [comment](xml.md#comments) is, therefore, kept when `Markup` is `'Preserve'`, and discarded otherwise. The default is `'Strip'`.
 
 <h4 class="example">Examples</h4>
 
