@@ -6,7 +6,7 @@ Dyalog produces output through several distinct mechanisms. This section defines
 
 *Implicit output* is the display of the result of an expression that is not assigned to a name, passed as an argument to a function or operator, or otherwise suppressed. This is also known as "default output", "direct output", or "numeric output". It arises at the Session prompt and from unassigned values in traditional functions and operators.
 
-Output is also produced explicitly by assignment to [`⎕`](../../language-reference-guide/system-functions/evaluated-input-output.md), which displays an array in the same form as implicit output, or to [`⍞`](../../language-reference-guide/system-functions/character-input-output.md), which displays characters without a trailing new-line. Error messages, the output of [system commands](../../language-reference-guide/system-commands/index.md), and the messages reported by the function editor are all directed in the same way as output through `⍞`.
+Output is also produced explicitly by assignment to [`⎕`](../../language-reference-guide/system-functions/quad-output.md), which displays an array in the same form as implicit output, or to [`⍞`](../../language-reference-guide/system-functions/quotequad-output.md), which displays characters without a trailing new-line. Error messages, the output of [system commands](../../language-reference-guide/system-commands/index.md), and the messages reported by the function editor are all directed in the same way as output through `⍞`.
 
 ## Output in the Interactive Session
 

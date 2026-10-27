@@ -11,7 +11,7 @@ search:
 
 - monadic functions: [`⍕`](../primitive-functions/format.md)
 - system functions: [`⎕FMT`](format-monadic.md)
-- other syntax: [`⎕`](evaluated-input-output.md) and [`⍞`](character-input-output.md) output
+- other syntax: [`⎕`](quad-output.md) and [`⍞`](quotequad-output.md) output
 
 `⎕PP` is ignored for the display of integers.
 
