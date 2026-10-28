@@ -8,8 +8,8 @@ search:
 |-----------------------|---------------------------|----|
 |[`⎕`](../evaluated-input-output.md)      |Evaluated Input/Output|Variable|
 |[`⍞`](../character-input-output.md)      |Character Input/Output|Variable|
-|[`⎕A`](../a.md)   |Alphabetic uppercase characters|Variable|
-|[`⎕Ⓐ` or `⎕Á`](../underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
+|[`⎕A`](../a.md)   |Uppercase Alphabet|Constant|
+|[`⎕Á`](../underscored-alphabetic-characters.md) |Underscored Uppercase Alphabet|Constant|
 |[`⎕AI`](../ai.md)      |Account Information        |Constant|
 |[`⎕AN`](../an.md)      |Account Name               |Constant|
 |[`⎕ARBIN`](../arbin.md) |Arbitrary Input       |Dyadic function|

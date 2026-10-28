@@ -3,27 +3,25 @@ search:
   boost: 2
 ---
 
-# <span>Underscored Alphabetic Characters</span> `R←⎕Ⓐ`{{key}}
+# <span>Underscored Uppercase Alphabet</span> `R←⎕Á`{{key}}
 
-`⎕Ⓐ` is a deprecated feature. Dyalog **strongly** recommends that you move away from the use of `⎕Ⓐ` and of the underscored alphabet itself, as these symbols now constitute the sole remaining non-standard use of characters in Dyalog applications.
+!!! Legacy "Legacy"
+    `⎕Á` is deprecated but retained for backwards compatibility. The _Dyalog Box_, _Dyalog Std_, and _Dyalog Std TT_ fonts render it as `⎕Ⓐ` and its content as the underscored uppercase alphabet.
 
-In Versions of Dyalog APL prior to Version 11.0, `⎕Ⓐ` was a simple character vector, composed of the letters of the alphabet with underscores. If the Dyalog Alt font was in use, these symbols displayed as additional National Language characters.
+This is a system constant: a simple character vector of 26 consecutive characters of the [atomic vector](av.md), `⎕AV[97+⍳26]`.
 
-## Version 10.1 and Earlier
-```apl
-      ⎕Ⓐ
-ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ
-```
+Dyalog APL maps the uppercase underscored alphabet to Unicode's circled uppercase alphabet, `⎕UCS 9397+⍳26`. APL fonts such as _APL385 Unicode_ render these as underscored letters <code style="text-decoration:underline;">A</code> to <code style="text-decoration:underline;">Z</code>, while most other fonts render them as <code style="display:inline-block;width:1.4em;height:1.4em;text-align:center;border-radius:50%;outline: 0.1em solid currentColor;outline-offset:-0.3em;margin: -0.2em;">A</code> to <code style="display:inline-block;width:1.4em;height:1.4em;text-align:center;border-radius:50%;outline: 0.1em solid currentColor;outline-offset:-0.3em;margin: -0.2em;">Z</code>.
 
-For compatibility with previous versions of Dyalog APL, functions that contain references to `⎕Ⓐ` will continue to return characters with the same *index* in `⎕AV` as before. However, the display of `⎕Ⓐ` is now `⎕Á`, and the old underscored symbols appear as they did in previous Versions when the Dyalog Alt font was in use.
+<h2 class="example">Examples</h2>
 
-## Current Version
 ```apl
       ⎕Á
 ÁÂÃÇÈÊËÌÍÎÏÐÒÓÔÕÙÚÛÝþãìðòõ
+      ⎕UCS 9397+⍳26
+ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ
 ```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
-  ⎕ 
+  ⎕Á Á ⎕Ⓐ Ⓐ
 </div>
