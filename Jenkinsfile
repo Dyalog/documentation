@@ -116,9 +116,10 @@ pipeline {
         // ============================================================
         PRODUCTION_VERSIONS = '20.0 21.0'
 
-        // The "development" version currently on trunk in SVN.
-        // When v21 is released and v22 development starts, update this to '22.0'.
-        TRUNK_VERSION = '21.0'
+        // The development version on SVN trunk. Every other version is read
+        // from branches/{version}, so bump this as soon as the current
+        // version is branched, not when it is released.
+        TRUNK_VERSION = '22.0'
 
         // Versions whose "Licences for third-party components.docx" still lives
         // inside the docbin checkout. 21.0 onwards sources it from the dyalog
