@@ -34,7 +34,7 @@ This is the form that [importing](xml-import.md#result) produces, so XML can be 
 
 - The fifth column is not needed for XML generation and is effectively ignored. Any numeric values are accepted, or the column can be omitted altogether. If the fifth column is omitted, then the fourth column can also be omitted.
 - For the fourth column, if there are no attributes in a particular row, then the `(0 2⍴⊂'')` can be abbreviated as `⍬` (zilde). If there is only one attribute, then a 2-element vector can be specified.
-- Data in the third column and attribute values in the fourth column (if present) can be provided as either character vectors or numeric values. Numeric values are formatted independently of [`⎕PP`](pp.md), using at most 16 significant digits, so a number that needs more to be represented exactly, such as `÷7`, does not survive a round trip unchanged.
+- Data in the third column and attribute values in the fourth column (if present) can be provided as either character vectors or numeric values. Numeric values are written with full precision, as if [`⎕PP`](pp.md) were 17, whatever its value, but a negative number or exponent has `-` rather than `¯`, for example, `-1.5` and `1E-7`.
 
 The following validations are performed on the data in the array:
 
