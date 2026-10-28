@@ -342,7 +342,7 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 |Name     |Description                |Form|
 |---------|---------------------------|-----|
 |[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
-|[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
+|[`⎕Á` or `⎕Ⓐ`](underscored-alphabetic-characters.md) |Underscored Uppercase Alphabet|Constant|
 |[`⎕AV`](av.md)   |Atomic Vector              |Constant|
 |[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
 
