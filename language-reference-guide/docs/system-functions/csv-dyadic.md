@@ -98,7 +98,7 @@ If the CSV data is written to a file, `R` is the number of bytes (not characters
 
 Otherwise, `R` is the CSV data, as a simple character vector or as a vector of character vectors according to the [description](#description), and is not shy.
 
-`⎕CSV` output is not affected by [`⎕PP`](pp.md); numeric values are always represented with full precision.
+`⎕CSV` writes numbers with full precision, as if [`⎕PP`](pp.md) were 17, whatever its value. The text differs from APL's own formatting in that a negative number or exponent has `-` rather than `¯`, for example, `-1.5` and `1E-7`.
 
 ## Variant Options
 
