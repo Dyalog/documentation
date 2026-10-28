@@ -8,7 +8,7 @@ Under Unix there is no autocompletion of user command names.
 
 The SALT code resides in `⎕SE`, which is saved in a session file. The location of the session file is controlled by the environment variable SESSION_FILE; by default this file is $DYALOG/default.dse. Setting SESSION_FILE=/dev/null results in an empty `⎕SE` and SALT being disabled.
 
-See the  *User Commands User Guide* and the  *SALT User Guide* for more information.
+Further information is available about [user commands](https://docs.dyalog.com/latest/User%20Commands%20User%20Guide.pdf) and [SALT](https://docs.dyalog.com/latest/SALT%20User%20Guide.pdf).
 
 ## Caching User Command information
 

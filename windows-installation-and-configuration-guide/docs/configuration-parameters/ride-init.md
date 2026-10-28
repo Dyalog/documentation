@@ -2,7 +2,7 @@
 
 This parameter determines how the interpreter should behave with respect to the Ride protocol. Setting this configuration parameter on the machine that hosts the interpreter enables the interpreter-Ride connection.
 
-RIDE_Init can only be used to specify a limited number of Ride configuration options; the rest must be specified in a Ride ini file. Full details describing how to configure Ride, including using certificates to authenticate connections can be found in the [Ride User Guide](https://dyalog.github.io/ride).
+RIDE_Init can only be used to specify a limited number of Ride configuration options; the rest must be specified in a Ride ini file. The [Ride documentation](https://dyalog.github.io/ride) describes how to configure Ride in full, including using certificates to authenticate connections.
 
 The format of the value is:
 ```

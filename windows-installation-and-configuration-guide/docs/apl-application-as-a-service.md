@@ -152,7 +152,7 @@ The following function illustrates how the application code for the service migh
 
 Services are run in the background under the auspices of *Local System*, and not associated with an interactive user. Neither the APL Session nor any GUI components that it creates will be visible on the desktop. This prevents the normal editing and debugging tools from being available.
 
-However, the Dyalog APL Remote Integrated Development environment (Ride) may be connected to any APL session, including one running as a Windows Service, and provide a debugging environment. For more information, see the [Ride User Guide](https://dyalog.github.io/ride). Note however that the Conga DLLs/shared libraries must be available - usually they should reside in the same directory as the interpreter. In previous versions of Dyalog separate Ride DLLs/shared libraries were supplied; these have been subsumed into the Conga libraries in 16.0.
+However, the Dyalog Remote Integrated Development Environment ([Ride](https://dyalog.github.io/ride)) can be connected to any APL session, including one running as a Windows Service, and provide a debugging environment. Note however that the Conga DLLs/shared libraries must be available - usually they should reside in the same directory as the interpreter. In previous versions of Dyalog separate Ride DLLs/shared libraries were supplied; these have been subsumed into the Conga libraries in 16.0.
 
 ### Event Logging
 
