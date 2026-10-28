@@ -55,7 +55,7 @@ Furthermore, adding a complex number and its conjugate produces a real number:
 6
 ```
 
-The famous Euler's Identityeiπ+1=0 may be expressed as follows:
+The famous Euler's Identity e<sup>iπ</sup>+1=0 can be expressed as follows:
 ```apl
       1+*○0j1 ⍝ Euler Identity
 0
