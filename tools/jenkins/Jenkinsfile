@@ -200,10 +200,26 @@ pipeline {
                 // Change to 'swarm && gosport for live server'
                 label 'swarm && gosport'
             }
+            options {
+                skipDefaultCheckout(true)
+            }
             stages {
 
                 stage('Initialise') {
                     steps {
+                        // gh-pages holds a full site snapshot per deploy, so a
+                        // full clone into an empty workspace outlasts the default
+                        // 10-minute git timeout. Deploying needs only the tip.
+                        checkout([
+                            $class: 'GitSCM',
+                            branches: scm.branches,
+                            userRemoteConfigs: scm.userRemoteConfigs,
+                            extensions: [
+                                [$class: 'CloneOption', shallow: true, depth: 1,
+                                 noTags: true, honorRefspec: true, timeout: 30],
+                                [$class: 'CheckoutOption', timeout: 30]
+                            ]
+                        ])
                         script {
                             try {
                                 env.BUILD_TIMESTAMP = sh(
