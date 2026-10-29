@@ -16,6 +16,9 @@ This function runs a command through the Windows Command Processor and returns i
  Hello
 ```
 
+!!! Info "Information"
+    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a Ride session, which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+
 ## Right Argument
 
 `Y` is one of:
@@ -28,9 +31,6 @@ This function runs a command through the Windows Command Processor and returns i
 If `Y` is a command, `R` is a vector of character vectors, with one item per line of output from the command, or empty if the output was not collected.
 
 If `Y` specifies a program, `R` is the process identifier of the program, a numeric scalar, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
-
-!!! Info "Information"
-    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a Ride session, which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
 
 ## Running a Command
 
