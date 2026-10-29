@@ -23,11 +23,20 @@ This function runs a command through the Windows Command Processor and returns i
 - a simple character vector containing a [command](#running-a-command), which the Command Processor runs while APL waits
 - a 2-item vector of character vectors that specifies a [program](#starting-a-program), which Windows starts while APL continues
 
-### Running a Command
+## Result
+
+If `Y` is a command, `R` is a vector of character vectors, with one item per line of output from the command, or empty if the output was not collected.
+
+If `Y` specifies a program, `R` is the process identifier of the program, a numeric scalar, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
+
+!!! Info "Information"
+    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a Ride session, which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+
+## Running a Command
 
 The command is an instruction that the Command Processor recognises, or the path name of a program, with optional parameters. APL waits for the command to finish, and returns its output in `R`.
 
-<h4 class="example">Example</h4>
+<h3 class="example">Example</h3>
 
 ```apl
       Z←⎕CMD'echo Hello'
@@ -37,10 +46,18 @@ The command is an instruction that the Command Processor recognises, or the path
 Hello
 ```
 
+### Quotes in Commands
+
 If the path name of a program contains spaces, it must be enclosed in double quotes:
 
 ```apl
-      ⎕CMD'"C:\Program Files\My Tools\report.exe" sales.csv'
+      ⎕CMD'"C:\Program Files\Notepad++\notepad++.exe"'
+```
+
+Without the double quotes, the Command Processor takes `C:\Program` as the name of the program, and the command fails:
+
+```apl
+      ⎕CMD'C:\Program Files\Notepad++\notepad++.exe'
 ```
 
 The Command Processor does not allow more than one pair of double quotes in a command. Each of these is valid:
@@ -63,7 +80,9 @@ but this fails, because it has two pairs:
       ⎕CMD'"C:\Windows\System32\notepad.exe" "C:\temp\myfile.txt"' ''
 ```
 
-#### Commands that Prompt for Input
+[Direct execution](shell.md#direct-execution) with `⎕SHELL` also avoids the Command Processor, and it takes the program and each of its arguments as separate items, so none of them need quoting; it waits for the program to finish and returns its output.
+
+### Commands that Prompt for Input
 
 The output of a command is collected through an unnamed pipe, so a command that prompts for input cannot be answered, and APL waits indefinitely. Such a command must redirect its input and output to the console, `CON`. `⎕CMD` then runs the Command Processor in a visible window, through which the user can respond, and `R` is empty:
 
@@ -73,21 +92,15 @@ The output of a command is collected through an unnamed pipe, so a command that 
 
 More generally, `⎕CMD` does not collect the output of a command that contains the redirection symbol `>`, and `R` is then empty.
 
-#### Special Characters
+The [`Input`](shell.md#variant-option-input) variant option of `⎕SHELL` can supply a command's input from APL, while its output is still collected.
 
-`⎕CMD` gives these characters a special meaning in a command:
-
-|Character|Meaning|
-|---------|-------|
-|`#`|Starts a trailing comment|
-|`;`|Separates sub-commands|
-|`>`|In the last sub-command, makes `⎕CMD` use a visible window, as described in [Commands that Prompt for Input](#commands-that-prompt-for-input)|
-
-#### Command Processor
+### Command Processor
 
 By default, `⎕CMD` runs the command `Y` as `'cmd.exe /c ',Y`. The [`CMD_PREFIX` and `CMD_POSTFIX`](../../windows-installation-and-configuration-guide/configuration-parameters/cmd-prefix-and-cmd-postfix.md) configuration parameters select another command processor: the command is preceded by `CMD_PREFIX`, which names the command processor and any parameters it requires, and followed by `CMD_POSTFIX`. If `CMD_PREFIX` is not defined, it is the value of the `COMSPEC` environment variable followed by `/c`, or `cmd.exe /c` if `COMSPEC` is not defined either. If `CMD_POSTFIX` is not defined, it is empty.
 
-### Starting a Program
+The [`Shell`](shell.md#variant-option-shell) variant option of `⎕SHELL` selects the command processor for a single call instead.
+
+## Starting a Program
 
 The program is specified by a 2-item vector of character vectors:
 
@@ -96,7 +109,7 @@ The program is specified by a 2-item vector of character vectors:
 |`1⊃Y`|The name or full path name of an executable program, optionally followed by its parameters|
 |`2⊃Y`|The [window mode](#window-modes) in which the program starts|
 
-Windows starts the program, and `⎕CMD` returns immediately, without waiting for the program to finish. `R` is the process identifier of the program, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
+Windows starts the program, and `⎕CMD` returns immediately, without waiting for the program to finish or collecting its output. `R` is the process identifier of the program.
 
 If `1⊃Y` contains only the name of the program, Windows searches for it in these directories, in order:
 
@@ -108,9 +121,9 @@ If `1⊃Y` contains only the name of the program, Windows searches for it in the
 
 If Windows cannot find the program, `FILE ERROR 2` is signalled.
 
-APL cannot end a program that `⎕CMD` started; it runs until it finishes, or until it is ended outside APL.
+APL cannot end a program that `⎕CMD` started; it runs until it finishes, or until it is ended outside APL. The [`Timeout`](shell.md#variant-option-timeout) and [`Signal`](shell.md#variant-option-signal) variant options of `⎕SHELL` can end a program that runs for too long.
 
-<h4 class="example">Examples</h4>
+<h3 class="example">Examples</h3>
 
 ```apl
       pid←⎕CMD'notepad.exe C:\temp\myfile.txt' ''
@@ -123,7 +136,7 @@ A Command Prompt window can be opened by starting the Command Processor as a pro
       ⎕CMD'cmd.exe' ''
 ```
 
-#### Window Modes
+### Window Modes
 
 The window mode is one of the following; any other value signals `DOMAIN ERROR`:
 
@@ -138,15 +151,6 @@ The window mode is one of the following; any other value signals `DOMAIN ERROR`:
 A program that starts in a hidden window cannot be seen or closed by the user, unless it makes itself visible.
 
 The [`Window`](shell.md#variant-option-window) variant option of `⎕SHELL` takes the same window modes.
-
-## Result
-
-If `Y` is a command, `R` is a vector of character vectors, with one item per line of output from the command, or empty if the output was not collected.
-
-If `Y` specifies a program, `R` is the process identifier of the program, and is shy.
-
-!!! Info "Information"
-    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a Ride session, which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
