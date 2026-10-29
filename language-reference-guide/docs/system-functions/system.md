@@ -31,7 +31,7 @@ Getting the currently running APL interpreter's version number:
 
 The result `R` is a namespace in the root (`#` or `⎕SE`) of the current namespace. `R` contains only namespace members, each of which only contains variable members.
 
-More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json.md).
+More members might be added in a future release of Dyalog, but `R` will remain serialisable using [`1∘⎕JSON`](json-export.md).
 
 !!! Warning "Warning"
     Do not attempt to add or modify members (changes will not be persisted); only modify clones of the namespace (`⎕NS ⎕SYSTEM`). This locks down dynamic values like `⎕SYSTEM.Directories.Current` and `⎕SYSTEM.OS.UTCOffset`.
