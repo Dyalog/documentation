@@ -1,4 +1,4 @@
-# <span>Bind</span> <span>Method</span>
+# <span>Bind</span> <span>Method 800</span>
 
 The Bind method packages the active workspace as a file. On any supported platform, the following expression creates a .NET assembly in `<filename>` that contains the APL code in the classes in the active workspace:
 
