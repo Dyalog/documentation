@@ -22,8 +22,8 @@ search:
 |[`⎕C`](../c.md)    |Case Convert                                           |Ambivalent function|
 |[`⎕CLASS`](../class.md)    |Class       |Monadic function|
 |[`⎕CLEAR`](../clear.md)|Clear workspace (WS)       |Constant|
-|[`⎕CMD`](../execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|
-|[`⎕CMD`](../start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|
+|[`⎕CMD`](../cmd-monadic.md)  |Call Windows Command Processor|Monadic function|
+|[`⎕CMD`](../cmd-dyadic.md)  |Start a Windows Auxiliary Processor|Dyadic function|
 |[`⎕CR`](../cr.md)     |Canonical Representation|Monadic function|
 |[`⎕CS`](../cs.md)       |Change Space   |Monadic function|
 |[`⎕CSV`](../csv.md)  |Comma Separated Values                               |Ambivalent function|
@@ -136,8 +136,8 @@ search:
 |[`⎕SAVE`](../save.md)  |Save the active WS         |Function|
 |[`⎕SD`](../sd.md)   |Screen Dimensions                |Constant|
 |[`⎕SE`](../se.md)   |Session Namespace                |Reference|
-|[`⎕SH`](../execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|
-|[`⎕SH`](../start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|
+|[`⎕SH`](../sh-monadic.md)   |Call Unix Command Processor|Monadic function|
+|[`⎕SH`](../sh-dyadic.md)   |Start a Unix Auxiliary Processor|Dyadic function|
 |[`⎕SHADOW`](../shadow.md)|Shadow names             |Monadic function|
 |[`⎕SHADOW`](../shadow.md)|Shadow names         |Monadic function|
 |[`⎕SHELL`](../shell.md)|Execute a shell command or another program              |Monadic function|
