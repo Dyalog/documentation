@@ -295,7 +295,7 @@ nav:
           - Character Input Output: system-functions/character-input-output.md
           - Evaluated Input Output: system-functions/evaluated-input-output.md
           - Underscored Alphabetic Characters: system-functions/underscored-alphabetic-characters.md
-          - '<code>⎕A</code>: Alphabetic Characters': system-functions/a.md
+          - '<code>⎕A</code>: Uppercase Alphabet': system-functions/a.md
           - '<code>⎕AI</code>: Account Information': system-functions/ai.md
           - '<code>⎕AN</code>: Account Name': system-functions/an.md
           - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
