@@ -13,7 +13,7 @@ This function runs a command through the Windows Command Processor and returns i
 
 ```apl
       ⎕CMD'echo Hello'
- Hello
+Hello
 ```
 
 !!! Info "Information"
@@ -28,7 +28,9 @@ This function runs a command through the Windows Command Processor and returns i
 
 ## Result
 
-If `Y` is a command, `R` is a vector of character vectors, with one item per line of output from the command, or empty if the output was not collected.
+If `Y` is a command, `R` is a vector of character vectors, with one item per line of output from the command, or empty if the output was not collected. `⎕CMD` does not report the exit status of the command; [`⎕SHELL`](shell.md#return-value) returns it alongside the output.
+
+If the result is not used, for example, when `⎕CMD` is called in a statement on its own, the output lines are displayed instead of being returned as a vector of character vectors. This makes `⎕CMD` convenient to use in the session, and is why the output in the first example on this page appears without the leading space of a displayed vector of character vectors. `⎕SHELL` always returns its output.
 
 If `Y` specifies a program, `R` is the process identifier of the program, a numeric scalar, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
 

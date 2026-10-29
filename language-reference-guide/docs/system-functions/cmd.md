@@ -13,7 +13,7 @@ search:
 
 ```apl
       ⎕CMD'echo Hello'
- Hello
+Hello
 ```
 
 ## Start Windows Auxiliary Processor
