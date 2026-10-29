@@ -7,7 +7,7 @@ search:
 
 This function starts an auxiliary processor (AP), which defines one or more external functions in the workspace. [Monadic `⎕CMD`](cmd-monadic.md) runs a command or starts a program instead.
 
-`⎕CMD` is a synonym of `⎕SH`; this page describes their behaviour under Microsoft Windows, and [dyadic `⎕SH`](start-unix-auxiliary-processor.md) describes it under Unix. The effect on the workspace is the same on both, although the implementation differs.
+`⎕CMD` is a synonym of `⎕SH`; this page describes their behaviour under Microsoft Windows, and [dyadic `⎕SH`](sh-dyadic.md) describes it under Unix. The effect on the workspace is the same on both, although the implementation differs.
 
 !!! Hint "Hints and Recommendations"
     Although it is still possible for users to create their own APs, Dyalog Ltd strongly recommends creating shared libraries or DLLs instead, and calling them through [`⎕NA`](na.md).

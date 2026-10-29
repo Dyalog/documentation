@@ -7,7 +7,7 @@ search:
 
 This function runs a command through the Windows Command Processor and returns its output, or starts a Windows program and returns immediately. [Dyadic `⎕CMD`](cmd-dyadic.md) starts an auxiliary processor instead.
 
-`⎕CMD` is a synonym of `⎕SH`; this page describes their behaviour under Microsoft Windows, and [monadic `⎕SH`](execute-unix-command.md) describes it under Unix. The [`)CMD`](../system-commands/cmd.md) system command runs a command in the same way, and [`⎕SHELL`](shell.md) runs an external program with more control over its input, output, and environment.
+`⎕CMD` is a synonym of `⎕SH`; this page describes their behaviour under Microsoft Windows, and [monadic `⎕SH`](sh-monadic.md) describes it under Unix. The [`)CMD`](../system-commands/cmd.md) system command runs a command in the same way, and [`⎕SHELL`](shell.md) runs an external program with more control over its input, output, and environment.
 
 <h2 class="example">Example</h2>
 

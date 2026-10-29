@@ -2,7 +2,7 @@
 
 This command allows Microsoft Windows or Unix shell commands to be given from APL. `)SH` is a synonym of `)CMD`. Either command can be given in either environment (Windows or Unix) with the same effect.  `)SH` is probably more natural for the Unix user. This section describes the behaviour of `)SH` and `)CMD` under Unix. See [Windows Command Processor](cmd.md) for a discussion of their behaviour under Windows.
 
-The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/cmd-monadic.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute Unix Command](../system-functions/execute-unix-command.md) and [Call Windows Command Processor](../system-functions/cmd-monadic.md).
+The system functions [`⎕SH`](../system-functions/sh-monadic.md) and [`⎕CMD`](../system-functions/cmd-monadic.md) provide similar facilities but may be executed from within APL code. For further information, see [Call Unix Command Processor](../system-functions/sh-monadic.md) and [Call Windows Command Processor](../system-functions/cmd-monadic.md).
 
 `)SH` allows Unix shell commands to be given from APL. The argument must be entered in the appropriate case (usually lower-case).  The result of the command, if any, is displayed.
 
