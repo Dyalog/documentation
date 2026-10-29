@@ -29,7 +29,7 @@ Hello
 
 If the command writes nothing to its standard output, `R` is `0⍴⊂''`, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
 
-If the result is not used, for example, when `⎕SH` is called in a statement on its own, the output of the command is not collected: the command writes directly to the standard output of APL, which is the session in a terminal, and its [exit status](#exit-status) is not checked. This is why the output in the first example on this page appears without the leading space of a displayed vector of character vectors.
+If the result is not used, for example, when `⎕SH` is called in a statement on its own, the output of the command is not collected: the command writes directly to the standard output of APL, which is the session in a terminal, and its [exit status](#exit-status) is not checked. This makes `⎕SH` convenient to use in the session, and is why the output in the first example on this page appears without the leading space of a displayed vector of character vectors. `⎕SHELL` always returns its output.
 
 <h2 class="example">Examples</h2>
 
