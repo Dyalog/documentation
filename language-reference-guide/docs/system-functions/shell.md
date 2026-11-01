@@ -310,7 +310,7 @@ The default depends on the operating-system:
 !!! windows "Dyalog on Microsoft Windows"
     This option only has an effect on Microsoft Windows; it is ignored on other operating systems.
 
-The `Window` variant option specifies the initial window mode. The value must be a character vector containing one of the initial window parameters described on [`⎕CMD`](execute-windows-command.md#starting-a-windows-program).
+The `Window` variant option specifies the initial window mode. The value must be a character vector containing one of the initial window parameters described on [`⎕CMD`](cmd-monadic.md#window-modes).
 
 The default is `'Hidden'`.
 

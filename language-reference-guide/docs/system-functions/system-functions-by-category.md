@@ -353,8 +353,8 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 |Name    |Description                      |Form|Alternative|
 |--------|---------------------------------|----|-----------|
 |[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
-|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
-|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
+|[`⎕CMD`](cmd-monadic.md)  |Call Windows Command Processor|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕CMD`](cmd-dyadic.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
 |[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
@@ -362,8 +362,8 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 |[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
 |[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|
-|[`⎕SH`](execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
-|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
+|[`⎕SH`](sh-monadic.md)   |Call Unix Command Processor|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕SH`](sh-dyadic.md)   |Start a Unix Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
 |[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|`⎕UCS 8`, `⎕UCS 10`, and `⎕UCS 13`|
 |[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|`⎕ATX` can provide source as typed|
