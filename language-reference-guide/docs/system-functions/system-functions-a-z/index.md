@@ -159,7 +159,10 @@ search:
 |[`⎕SVR`](../svr.md)|Retract offer              |Monadic function|
 |[`⎕SVS`](../svs.md)|Query Shared Variable State|Monadic function|
 |[`⎕SYSTEM`](../system.md)|System Information|Reference|
-|[`⎕TALLOC`](../talloc.md)|Allocate Token Range|Ambivalent function|
+|[`⎕TALLOC`](../talloc-allocate.md)|Allocate Token Range|Monadic function|
+|[`⎕TALLOC`](../talloc-deallocate.md)|De-allocate Token Range|Dyadic function|
+|[`⎕TALLOC`](../talloc-ranges.md)|Query Allocated Token Ranges|Ambivalent function|
+|[`⎕TALLOC`](../talloc-pool.md)|Query Pooled Tokens in Range|Dyadic function|
 |[`⎕TC`](../tc.md)   |Terminal Control           |Constant|
 |[`⎕TCNUMS`](../tcnums.md) |Thread Child Numbers         |Monadic function|
 |[`⎕TGET`](../tget.md)  |Get Tokens          |Ambivalent function|
