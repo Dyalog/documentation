@@ -13,9 +13,6 @@ Table: Monadic Primitive Operators { #monadic-operators }
 
 |Name                           |Producing Monadic derived function|Producing Dyadic derived function|
 |-------------------------------|----------------------------------|---------------------------------|
-|Assignment (Modified)          |&nbsp;                            |`Xf←Y`                           |
-|Assignment (Indexed Modified)  |&nbsp;                            |`X[I]f←Y`                        |
-|Assignment (Selective Modified)|&nbsp;                            |`(EXP X)f←Y`                     |
 |Commute                        |`f⍨Y`                             |`Xf⍨Y`                           |
 |Each                           |`f¨Y`                             |`Xf¨Y`                           |
 |I-Beam                         |`A⌶Y`                             |`X(A⌶)Y`                         |
