@@ -29,7 +29,6 @@ Table: Dyadic Primitive Operators { #dyadic-operators }
 |--------------|----------------------------------|-----------------------------------|
 | At           |`f@gY`                            | `Xf@gY`                           |
 | Atop         |`f⍤gY`                            | `Xf⍤gY`                           |
-| Axis         |`f[B]Y`                           | `Xf[B]Y`                          |
 | Behind       |`f⍛gY`                            | `Xf⍛gY`                           |
 | Beside       |`f∘gY`                            | `Xf∘gY`                           |
 | Bind         |`A∘gY`                            | &nbsp;                            |
