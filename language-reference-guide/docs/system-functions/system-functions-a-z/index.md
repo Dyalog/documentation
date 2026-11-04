@@ -44,7 +44,6 @@ search:
 |[`⎕EM`](../em.md)       |Event Messages                                  |Monadic function|
 |[`⎕EN`](../en.md)       |Event Number          |Constant|
 |[`⎕EX`](../ex.md)     |Expunge objects         |Monadic function|
-|[`⎕EX`](../ex.md)     |Expunge objects         |Monadic function|
 |[`⎕EXCEPTION`](../exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
 |[`⎕EXPORT`](../export.md)|Export objects       |Ambivalent function|
 |[`⎕FAPPEND`](../fappend.md) |Append a component to File |Dyadic function|
@@ -139,7 +138,6 @@ search:
 |[`⎕SH`](../execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|
 |[`⎕SH`](../start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|
 |[`⎕SHADOW`](../shadow.md)|Shadow names             |Monadic function|
-|[`⎕SHADOW`](../shadow.md)|Shadow names         |Monadic function|
 |[`⎕SHELL`](../shell.md)|Execute a shell command or another program              |Monadic function|
 |[`⎕SI`](../si.md)    |State Indicator          |Constant|
 |[`⎕SIGNAL`](../signal.md)   |Signal event                                    |Ambivalent function|
