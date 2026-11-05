@@ -26,6 +26,19 @@ This function returns the internal data type of an array. [Dyadic `⎕DR`](dr-dy
 
 `R` is an integer scalar containing the code of the data type in which `Y` is stored, as listed in [](#data-types). A nested array has the data type `326`.
 
+A data type code is the number of bits per item followed by a digit for the kind of data:
+
+- `0`: Unicode character
+- `1`: Boolean
+- `2`: Classic character
+- `3`: signed integer
+- `5`: binary floating-point
+- `6`: pointer
+- `7`: decimal floating-point
+- `9`: complex
+
+For example, `163` is a 16-bit signed integer. The exception is `326`, which identifies a pointer whether the interpreter uses 32-bit or 64-bit pointers.
+
 The internal representation of character data differs between the Unicode and Classic editions, so some data types exist in only one of them.
 
 Table: Data types { #data-types }
