@@ -7,7 +7,7 @@ search:
 # <span>Serialise/Deserialise Array</span> `R←X(220⌶)Y`{{key}}
 
 In this section, the term *sint_vector* is used to refer to a simple integer vector whose items are all in the range `¯128` to `127`, that is, they are type 83. 
- For further information see [Data Representation (Monadic)](../../system-functions/data-representation-monadic.md).
+ For further information see [Query Data Representation](../../system-functions/dr-monadic.md).
 
 It is expected that in many cases this _I-beam_ functionality will be used in conjunction with `219⌶` - Compress/Decompress vector of short integers. It would also be possible to encrypt the serialised form and write to a file (either component or native), and reverse the process at a later date.
 

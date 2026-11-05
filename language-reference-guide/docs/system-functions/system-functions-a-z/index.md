@@ -37,8 +37,8 @@ search:
 |[`⎕DM`](../dm.md)       |Diagnostic Message    |Constant|
 |[`⎕DMX`](../dmx.md)      |Extended Diagnostic Message                     |Reference|
 |[`⎕DQ`](../dq.md)    |Await and process events   |Monadic function|
-|[`⎕DR`](../data-representation-dyadic.md)   |Data Representation (Dyadic)  |Ambivalent function|
-|[`⎕DR`](../data-representation-monadic.md)   |Data Representation (Monadic)|Ambivalent function|
+|[`⎕DR`](../dr-monadic.md)   |Query Data Representation|Monadic function|
+|[`⎕DR`](../dr-dyadic.md)   |Transform Data Representation|Dyadic function|
 |[`⎕DT`](../dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕ED`](../ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EM`](../em.md)       |Event Messages                                  |Monadic function|

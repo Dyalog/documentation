@@ -166,8 +166,8 @@ These are tools to convert between common representations of data.
 |--------|--------------------------------------------------------|----|
 |[`⎕C`](c.md)    |Case Convert                                           |Ambivalent function|
 |[`⎕CSV`](csv.md)  |Comma Separated Values                               |Ambivalent function|
-|[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
-|[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
+|[`⎕DR`](dr-monadic.md)   |Query Data Representation    |Monadic function|
+|[`⎕DR`](dr-dyadic.md)   |Transform Data Representation |Dyadic function|
 |[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
 |[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
