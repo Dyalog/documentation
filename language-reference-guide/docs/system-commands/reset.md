@@ -18,10 +18,10 @@ The optional parameter `n` specifies that only the top `n` levels of the state i
       )SI
 ```
 
-In `T5`, the dfn `outer` calls the dfn `inner`, which divides by zero:
+In `Calculate`, the dfn `outer` calls the dfn `inner`, which divides by zero:
 
 ```apl
-     ∇ T5;outer
+     ∇ Calculate;outer
 [1]    outer←{
 [2]        inner←{
 [3]            ÷0
@@ -35,16 +35,16 @@ In `T5`, the dfn `outer` calls the dfn `inner`, which divides by zero:
 The suspension spans three levels of the state indicator. `)RESET 1` clears only the top one, leaving `outer` suspended:
 
 ```apl
-      T5
+      Calculate
 DOMAIN ERROR: Divide by zero
 outer[2] ÷0
          ∧
       )SI
 #.inner[2]*
 #.outer[4]
-#.T5[7]
+#.Calculate[7]
       )RESET 1
       )SI
 #.outer[4]*
-#.T5[7]
+#.Calculate[7]
 ```
