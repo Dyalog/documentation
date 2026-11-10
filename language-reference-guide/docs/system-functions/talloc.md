@@ -5,7 +5,7 @@ search:
 
 # <span>Token Allocation</span> `⎕TALLOC`
 
-A *token range* reserves a set of token types for one purpose, so that unrelated parts of an application can use [`⎕TPUT`](tput.md) and [`⎕TGET`](tget.md) without choosing the same types by accident. The first element of the right argument chooses which action `⎕TALLOC` performs on such ranges.
+A *token range* reserves a set of token types for one purpose, so that unrelated parts of an application can use [`⎕TPUT`](tput.md) and [`⎕TGET`](tget.md) without choosing the same types by accident.
 
 ## Allocate Token Range
 
