@@ -5,7 +5,7 @@ search:
 
 # <span>Quad</span> `⎕`
 
-`⎕` communicates between an APL expression and the Session or terminal. Referencing it reads a value from there; assigning to it displays a value there.
+`⎕` communicates between an APL expression and the Session or terminal.
 
 ## Evaluated Input
 

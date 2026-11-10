@@ -5,7 +5,7 @@ search:
 
 # <span>Quote Quad</span> `⍞`
 
-`⍞` communicates between an APL expression and the Session or terminal. Referencing it reads characters from there; assigning to it displays characters there.
+`⍞` communicates between an APL expression and the Session or terminal.
 
 ## Character Input
 
