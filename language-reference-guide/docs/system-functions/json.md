@@ -5,7 +5,7 @@ search:
 
 # <span>JSON Convert</span> `⎕JSON`
 
-`⎕JSON` converts between APL data and [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON). The left argument chooses the direction.
+`⎕JSON` converts between APL data and [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON).
 
 ## Import JSON
 
