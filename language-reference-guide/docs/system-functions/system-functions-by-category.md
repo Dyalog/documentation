@@ -353,8 +353,8 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 |Name    |Description                      |Form|Alternative|
 |--------|---------------------------------|----|-----------|
 |[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
-|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
-|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
+|[`⎕CMD`](cmd-monadic.md)  |Call Windows Command Processor|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕CMD`](cmd-dyadic.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
 |[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|

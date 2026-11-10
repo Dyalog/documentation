@@ -2,7 +2,7 @@
 
 This command allows Microsoft Windows Command Processor or Unix shell commands to be given from APL. `)CMD` is a synonym of `)SH`. Either command may be given in either environment (Windows or Unix) with the same effect. `)CMD` is probably more natural for the Windows user. This section describes the behaviour of `)CMD` and `)SH` under Windows. See [Execute (Unix) Command](sh.md) for a discussion of the behaviour of these commands under Unix.
 
-The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/execute-windows-command.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute Unix Command](../system-functions/execute-unix-command.md) and [Execute Windows Command: ](../system-functions/execute-windows-command.md).
+The system functions [`⎕SH`](../system-functions/execute-unix-command.md) and [`⎕CMD`](../system-functions/cmd-monadic.md) provide similar facilities but may be executed from within APL code. For further information, see [Execute Unix Command](../system-functions/execute-unix-command.md) and [Call Windows Command Processor](../system-functions/cmd-monadic.md).
 
 Under Microsoft Windows, you cannot execute `)CMD` without a command. If you want to, you can easily open a new Command Prompt window outside APL.
 

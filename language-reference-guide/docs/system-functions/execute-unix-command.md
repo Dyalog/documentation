@@ -5,7 +5,7 @@ search:
 
 # <span>Execute Unix Command</span> `{R}←⎕SH Y`{{key}}
 
-`⎕SH` executes a Unix shell or a Microsoft Windows Command Processor. `⎕SH` is a synonym of `⎕CMD`. Either function cab be used in either environment (Unix or Windows) with the same effect. `⎕SH` is probably more natural for the Unix user. This section describes the behaviour of `⎕SH` and `⎕CMD` under Unix. See [Execute Windows Command](execute-windows-command.md) for a discussion of the behaviour of these system functions under Windows.
+`⎕SH` executes a Unix shell or a Microsoft Windows Command Processor. `⎕SH` is a synonym of `⎕CMD`. Either function cab be used in either environment (Unix or Windows) with the same effect. `⎕SH` is probably more natural for the Unix user. This section describes the behaviour of `⎕SH` and `⎕CMD` under Unix. See [Call Windows Command Processor](cmd-monadic.md) for a discussion of the behaviour of these system functions under Windows.
 
 The system commands [`)SH`](../system-commands/sh.md) and [`)CMD`](../system-commands/cmd.md) provide similar facilities.
 
