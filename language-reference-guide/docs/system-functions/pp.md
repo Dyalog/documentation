@@ -10,7 +10,7 @@ search:
 `⎕PP` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
 
 - monadic functions: [`⍕`](../primitive-functions/format.md)
-- system functions: [`⎕FMT`](format-monadic.md)
+- system functions: [`⎕FMT`](fmt-monadic.md)
 - other syntax: [`⎕`](evaluated-input-output.md) and [`⍞`](character-input-output.md) output
 
 `⎕PP` is ignored for the display of integers.

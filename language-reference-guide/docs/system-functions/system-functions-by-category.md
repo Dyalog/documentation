@@ -169,8 +169,8 @@ These are tools to convert between common representations of data.
 |[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
 |[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
 |[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
-|[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
-|[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
+|[`⎕FMT`](fmt-monadic.md)  |Resolve Display Format                    |Monadic function|
+|[`⎕FMT`](fmt-dyadic.md)  |Format Array                               |Dyadic function|
 |[`⎕JSON`](json.md) |JSON Convert                                        |Ambivalent function|
 |[`⎕TS`](ts.md)      |Timestamp                                          |Constant|
 |[`⎕UCS`](ucs.md)  |Unicode Convert                                      |Ambivalent function|
