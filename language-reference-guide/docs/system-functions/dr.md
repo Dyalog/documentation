@@ -5,7 +5,7 @@ search:
 
 # <span>Data Representation</span> `⎕DR`
 
-`⎕DR` reports the internal data type of an array when called monadically, and converts an array to another internal data type when called dyadically.
+`⎕DR` deals with the internal data type of an array.
 
 ## Query Data Representation
 
