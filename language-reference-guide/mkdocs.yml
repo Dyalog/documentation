@@ -474,7 +474,8 @@ nav:
           - '<code>⎕WS</code>: Windows Set Property': system-functions/ws.md
           - '<code>⎕WSID</code>: Workspace Identification': system-functions/wsid.md
           - '<code>⎕WX</code>: Window Expose': system-functions/wx.md
-          - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
+          - '<code>⎕XML</code>: Import XML': system-functions/xml-import.md
+          - '<code>⎕XML</code>: Export XML': system-functions/xml-export.md
           - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
           - '<code>⎕XT</code>: Set External Variable': system-functions/set-external-variable.md
           - '<code>⎕XT</code>: Query External Variable': system-functions/query-external-variable.md
