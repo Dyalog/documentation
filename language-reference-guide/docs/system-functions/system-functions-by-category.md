@@ -154,7 +154,7 @@ These constants simplify access to commonly-used values.
 
 |Name   |Description                     |
 |-------|--------------------------------|
-|[`⎕A`](a.md)   |Alphabetic uppercase characters (lowercase characters can be obtained with `⎕C⎕A`)|
+|[`⎕A`](a.md)   |Uppercase Alphabet              |
 |[`⎕D`](d.md)   |Digits                          |
 |[`⎕NULL`](null.md)|Null Item                       |
 
