@@ -5,7 +5,7 @@ search:
 
 # <span>Class</span> `⎕CLASS`
 
-`⎕CLASS` relates an instance or class to the classes and interfaces it derives from. The presence of a left argument chooses which of the two it does.
+`⎕CLASS` relates an instance or class to the classes and interfaces it derives from.
 
 ## Class Hierarchy
 
