@@ -5,9 +5,7 @@ search:
 
 # <span>Signal Event</span> `⎕SIGNAL`
 
-`⎕SIGNAL` generates an event under program control, or clears the information left behind by the most recent event.
-
-The first element of the right argument chooses which action `⎕SIGNAL` performs (an empty right argument does nothing).
+`⎕SIGNAL` generates an event under program control. An empty right argument does nothing.
 
 ## Reset Event Constants
 
