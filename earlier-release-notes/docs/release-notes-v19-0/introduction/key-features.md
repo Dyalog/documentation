@@ -53,7 +53,7 @@ Under macOS and Linux, if the configuration parameter **ENABLE_CEF** is 1, Auxil
 - The Session window (optionally) reserves the first column for information. See [DYALOG_GUTTER_ENABLE](../configuration-parameters/dyalog-gutter-enable.md). On TTY-versions it is hidden by default.
 - Lines output to the Session which are associated with errors are now syntax coloured using the *error* colour for the selected Session colour scheme.
 - The Caption property of the Session, which was previously read-only, can now be set. See below.
-- When you edit an object by double-clicking the mouse or pressing the `<ED>` key, or executing `)ED`, and the name of the object is followed by `[n]`, the Editor will position the cursor on line number `n`. Note that there must not be a space between the last character of the name and the "`[`".
+- When you edit an object by double-clicking the mouse or pressing the **<ED\>** key, or executing `)ED`, and the name of the object is followed by `[n]`, the Editor will position the cursor on line number `n`. Note that there must not be a space between the last character of the name and the "`[`".
 
 ## Session Caption
 
