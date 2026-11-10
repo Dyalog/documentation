@@ -57,8 +57,8 @@ search:
 |[`⎕FHOLD`](../fhold.md)   |File Hold                  |Ambivalent function|
 |[`⎕FIX`](../fix.md)      |Fix           |Ambivalent function|
 |[`⎕FLIB`](../flib.md)    |List File Library          |Monadic function|
-|[`⎕FMT`](../format-dyadic.md)  |Format array                               |Dyadic function|
-|[`⎕FMT`](../format-monadic.md)  |Resolve display                           |Monadic function|
+|[`⎕FMT`](../fmt-monadic.md)  |Resolve Display Format                    |Monadic function|
+|[`⎕FMT`](../fmt-dyadic.md)  |Format Array                               |Dyadic function|
 |[`⎕FNAMES`](../fnames.md)  |Names of tied Files        |Constant|
 |[`⎕FNUMS`](../fnums.md)   |Tie Numbers of tied Files  |Constant|
 |[`⎕FPROPS`](../fprops.md)  |File Properties            |Dyadic function|

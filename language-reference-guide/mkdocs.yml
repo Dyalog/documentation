@@ -343,8 +343,8 @@ nav:
           - '<code>⎕FHOLD</code>: File Hold': system-functions/fhold.md
           - '<code>⎕FIX</code>: Fix Script': system-functions/fix.md
           - '<code>⎕FLIB</code>: Component File Library': system-functions/flib.md
-          - '<code>⎕FMT</code>: Format Monadic': system-functions/format-monadic.md
-          - '<code>⎕FMT</code>: Format Dyadic': system-functions/format-dyadic.md
+          - '<code>⎕FMT</code>: Resolve Display Format': system-functions/fmt-monadic.md
+          - '<code>⎕FMT</code>: Format Array': system-functions/fmt-dyadic.md
           - '<code>⎕FNAMES</code>: File Names': system-functions/fnames.md
           - '<code>⎕FNUMS</code>: File Numbers': system-functions/fnums.md
           - '<code>⎕FPROPS</code>: File Properties': system-functions/fprops.md
