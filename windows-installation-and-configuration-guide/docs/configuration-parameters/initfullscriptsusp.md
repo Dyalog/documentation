@@ -2,7 +2,7 @@
 
 When using the Editor to edit  a script such as a Class or Namespace you can specify whether, when you Fix the script and Exit  the Editor, just the functions in the script are re-fixed, or whether the whole script is re-executed, thereby re-initialising any Fields or variables defined within.
 
-These two actions always appear in the Editor File menu, but you can specify which is associated with the **<EP\>** (Esc) key by selecting the appropriate option in the drop-downs labelled:
+These two actions always appear in the Editor File menu, but you can specify which is associated with the **<EP\>** (<kbd>Esc</kbd>) key by selecting the appropriate option in the drop-downs labelled:
 
 - Exit and save changes (EP) in a suspended class or namespace should fix:
 - If not suspended fix:
