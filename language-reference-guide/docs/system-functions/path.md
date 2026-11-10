@@ -16,7 +16,7 @@ A utility namespace in `⎕SE` makes `Average` available from any namespace:
 
 ```apl
       ⎕PATH←'⎕SE.util'⎕NS''
-      ⎕SE.util.⎕FX 'r←Average y' 'r←(+/y)÷≢y'
+      ⎕SE.util.Average←{(+/⍵)÷≢⍵}
       'ns'⎕NS''
       ns.(Average 2 4 9)
 5
@@ -42,7 +42,7 @@ These are the namespaces that some values of `⎕PATH` make the interpreter sear
 |`'↑'`|`##`, then `##.##`, and so on, up to `#` (or `⎕SE`)|
 |`'util ↑ ⎕SE.util'`|`util` (relative to the current namespace), then `##`, `##.##`, and so on, up to `#` (or `⎕SE`), then `⎕SE.util`|
 
-`↑` therefore makes the search proceed upwards through the enclosing namespaces, like the static scope rule of block-structured languages.
+With `↑` in `⎕PATH`, a function or operator defined in an enclosing namespace can be used from any namespace within it, much as a name defined in an outer block is visible in the inner blocks of a block-structured language with static scope.
 
 ## Scope
 
