@@ -5,7 +5,7 @@ search:
 
 # <span>Export Type</span> `⎕EXPORT`
 
-`⎕EXPORT` reports the export type of functions and operators when called monadically, and sets it when called dyadically. The export type determines whether the [`⎕PATH`](path.md) mechanism finds a function or operator.
+`⎕EXPORT` deals with the export type of functions and operators, which determines whether the [`⎕PATH`](path.md) mechanism finds them.
 
 !!! Legacy "Legacy"
     `⎕EXPORT` is retained for backwards compatibility purposes. Dyalog Ltd recommends referring to a function or operator in another namespace by its full (absolute or relative) namespace path instead.
