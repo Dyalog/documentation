@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       set_as_latest:
-        description: 'Set this version as the default/latest (tick when releasing v21 to production)'
+        description: 'Set this version as the default/latest on staging (GitHub Pages). No effect on docs.dyalog.com'
         required: false
         default: false
         type: boolean

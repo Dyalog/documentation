@@ -45,7 +45,8 @@ publish it to the live site — see [Procedure C](#c-publish-the-upcoming-versio
 | `PRODUCTION_VERSIONS` | `Jenkinsfile` | Space-separated list of versions Jenkins deploys to `docs.dyalog.com`. **The production gate.** |
 | `TRUNK_VERSION` | `Jenkinsfile` | Which version maps to the SVN *trunk* (vs `branches/<ver>/`). Equals **N** while N is in development. |
 | `.rsync-exclude` | `.rsync-exclude` | Defence-in-depth backstop. A version listed here is skipped by `rsync` even if it is in `PRODUCTION_VERSIONS`. |
-| `set_as_latest` | workflow input | When ticked, `mike` repoints the default/`latest` alias (and the root redirect) to the version being published. |
+| `set_as_latest` | workflow input | Staging only. When ticked, `mike` repoints the `latest` alias and the root redirect on `gh-pages` to the version being published. Neither is deployed to `docs.dyalog.com`. |
+| Root redirect | web server configuration (outside this repository) | Which version `docs.dyalog.com/` redirects to. `docs.dyalog.com/latest/` is a separate, permanent redirect to `/19.0/` and must not change. |
 | GitHub release `v<ver>.*` | (GitHub Releases) | Jenkins' `getVersionedReleaseAssets` downloads the release assets from the newest non-draft release whose tag starts `v<ver>.` (CHM for all versions; PDFs only on v20 and earlier). |
 
 > The `Jenkinsfile` and `.rsync-exclude` that Jenkins actually runs live at the
@@ -62,7 +63,7 @@ Routine update to the version that is already live and the default.
 
 1. Merge the content PR into the `vM.0` branch.
 2. Publish from `vM.0`. Leave `set_as_latest` **ticked only if M is still the
-   default** (normally yes, until N is promoted):
+   staging default** (normally yes, until N is promoted):
    - If the PDF/CHM assets changed, run **Full Release**. It rebuilds the
      assets, publishes them as a non-draft GitHub release, and republishes the
      site in one run.
@@ -124,18 +125,14 @@ remains the default. **No `vN.0` git or SVN branch is required** — N stays on
    updated `Jenkinsfile` + `.rsync-exclude` to `gh-pages`.
 4. Jenkins now deploys `docs.dyalog.com/N/`.
 
-**What "preview" gets you for free:** because `set_as_latest` is off, `mike`
-does not change the default — `docs.dyalog.com/` keeps redirecting to **M** and
-the root redirect is untouched. You avoid the root-redirect handling that a
-full release needs (see [Procedure D](#d-promote-the-upcoming-version-to-full-production)).
+**What "preview" means:** N is reachable at `/N/` and listed in the version
+dropdown (Jenkins writes the production `versions.json` from the deployed
+`PRODUCTION_VERSIONS`), while `docs.dyalog.com/`
+keeps redirecting to **M**. The root redirect is web server configuration and
+no publish changes it (see [Procedure D](#d-promote-the-upcoming-version-to-full-production)).
 
 **Caveats**
 
-- **Dropdown / discoverability:** the deploy stage only syncs version
-  directories, *not* the root `versions.json` that the `mike` version selector
-  reads on production. So the preview works by **direct URL** (`/N/`) but does
-  not appear in the version dropdown on the live site unless the production-root
-  `versions.json` is updated separately.
 - **Reversible:** to pull the preview, revert `PRODUCTION_VERSIONS`, restore the
   `N` line in `.rsync-exclude`, and on the server
   `rm -rf N/ && rm .git-hash` (removing `.git-hash` forces Jenkins to redeploy;
@@ -153,12 +150,17 @@ When N becomes the released default. Builds on [Procedure C](#c-publish-the-upco
    `.rsync-exclude` no longer lists `N`.
 3. Run **Publish MkDocs Documentation** from `main` with `set_as_latest`
    **ticked**. `mike` repoints `latest` and the root redirect on `gh-pages` to
-   `N/`.
-4. **Deploy the root redirect to production.** The deploy stage only syncs
-   version directories, so the root files (`index.html`, `versions.json`,
-   `latest/`) are **not** deployed automatically. Either extend the deploy
-   stage to also sync the root-level files from `gh-pages`, or update the
-   redirect / `versions.json` on the production server manually.
+   `N/`. This changes the default on staging only.
+4. **Change the root redirect on the production web server** so that
+   `docs.dyalog.com/` redirects to `/N/`. This is web server configuration,
+   outside this repository.
+
+   Jenkins deploys the version directories and writes its own root
+   `versions.json` listing the deployed `PRODUCTION_VERSIONS`. It takes nothing
+   from the root of `gh-pages`. **Never deploy `mike`'s root
+   `index.html` or `latest` alias to production:** `docs.dyalog.com/latest/` is
+   a permanent redirect to `/19.0/`, and `mike`'s `index.html` redirects to
+   `latest/`, so deploying either would send readers to 19.0.
 5. Verify: `docs.dyalog.com/N/` is live, `docs.dyalog.com/` redirects to N, and
    the version dropdown shows both M and N.
 
@@ -195,6 +197,7 @@ When N is released and N+1 development begins. This is the heavyweight
 | Jenkins `get_svn_docbin` bails: `filelist.txt includes files which are not in SVN` listing `Licences for third-party components.docx` | The docx still lives in the version's docbin `filelist.txt` after the move to the dyalog repo, so it is registered twice | Remove the docx and its `filelist.txt` entry from that version's docbin (it now lives in `dyalog/.../svn/docs/licences`). Alternatively, if the version predates the move, add it to `LICENCES_IN_DOCBIN`. |
 | Jenkins `get_svn_docbin` bails: `No ./licences/Licences for third-party components.docx file exists` | The version is sourced from the dyalog repo but the docx is missing or misnamed at `dyalog/.../svn/docs/licences` | Ensure the docx exists there under exactly that name (the site links to it by that name). Commit to SVN, then re-run. |
 | Jenkins `get_svn_docbin` bails: `filelist.txt includes files which are not in SVN` (lists a file) | `filelist.txt` references a file that was removed from the docbin | Remove the stale entry from `filelist.txt` (or restore the file in SVN). Commit, then re-run the build. |
-| Version deployed but missing from live dropdown | Production-root `versions.json` not synced (expected for previews) | Update root `versions.json` on the server, or promote via [Procedure D](#d-promote-the-upcoming-version-to-full-production) |
+| Version on staging but missing from the live dropdown | The production `versions.json` lists only deployed `PRODUCTION_VERSIONS` | Expected while a version is staging-only. Add it to `PRODUCTION_VERSIONS` to deploy it |
+| `docs.dyalog.com/` still redirects to the previous version after a promotion | The root redirect is web server configuration and is not changed by publishing or by `set_as_latest` | Change the redirect on the server ([Procedure D](#d-promote-the-upcoming-version-to-full-production) step 4) |
 | Version published to staging but not live | Not in `PRODUCTION_VERSIONS`, or still listed in `.rsync-exclude` | Add to `PRODUCTION_VERSIONS` / remove from `.rsync-exclude` on `main`, then publish |
 | Fixed config but Jenkins still skips deploy | `.git-hash` on server matches last commit ("no changes") | `rm .git-hash` in `WEB_ROOT` to force redeploy |
