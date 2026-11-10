@@ -5,7 +5,7 @@
 
 The interpreter may switch between running threads at the following points:
 
-- Between any two lines of a defined function or operator.
+- Between any two lines of a tradfn or tradop.
 - On entry to a dfn or dop.
 - While waiting for a `⎕DL` to complete.
 - While awaiting input from:
