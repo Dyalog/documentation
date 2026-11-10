@@ -5,7 +5,7 @@ search:
 
 # <span>Format Array</span> `R←X ⎕FMT Y`{{key}}
 
-This function formats numbers and text as a character matrix, according to a format specification. [Monadic `⎕FMT`](fmt-monadic.md) returns the display of an array as a character matrix instead.
+This function formats numbers and text as a character matrix, according to a format specification. [Monadic `⎕FMT`](fmt-monadic.md) uses the default display of an array instead of a format specification.
 
 <h2 class="example">Example</h2>
 
@@ -59,7 +59,7 @@ A vector is formatted as a column:
 
 ## Format Specification
 
-The format specification is a series of phrases, separated by single commas. Each phrase is one of the following:
+The format specification is a series of phrases, separated by single commas (`,`). Each phrase is one of the following:
 
 |Phrase|Format|
 |------|------|
@@ -221,6 +221,15 @@ JAMES|     |
  ¯1.5  ¯1.5 ¯01.5 ¯1.5   ¯1.500,0
   0.0       000.0 0.0         0,0
  25.0  25.0 025.0 25.0   25.000,0
+```
+
+The `S` qualifier can replace the APL high minus (`¯`) with the ASCII minus sign (`-`), as can the [`M` affixture](#affixtures) `M<->`:
+
+```apl
+      'S<¯->F7.2' ⎕FMT 150.3 ¯50.25 0
+ 150.30
+ -50.25
+   0.00
 ```
 
 ### O Qualifier
