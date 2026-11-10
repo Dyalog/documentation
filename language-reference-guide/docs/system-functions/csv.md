@@ -5,7 +5,7 @@ search:
 
 # <span>Comma Separated Values</span> `⎕CSV`
 
-`⎕CSV` converts between comma-separated values (CSV) and APL arrays, reading from or writing to a named file, a native file, or an array of text. It imports when called monadically, and exports when called dyadically.
+`⎕CSV` converts between comma-separated values (CSV) and APL arrays, reading from or writing to a named file, a native file, or an array of text.
 
 ## Import CSV
 
