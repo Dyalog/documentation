@@ -5,7 +5,7 @@ search:
 
 # <span>Format</span> `⎕FMT`
 
-`⎕FMT` formats an array as a character matrix. Called monadically, it gives the matrix as the array is displayed in the session; called dyadically, it formats numbers and text according to a format specification.
+`⎕FMT` formats an array as a character matrix.
 
 ## Resolve Display Format
 
