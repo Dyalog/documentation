@@ -24,7 +24,7 @@ search:
 [Dyadic `⎕EXPORT`](export-dyadic.md) sets the export types:
 
 ```apl
-      0 utils.⎕EXPORT ⊂'Sum'
+      0 utils.⎕EXPORT 'Sum'
 ```
 
 <!-- Hidden search keywords -->

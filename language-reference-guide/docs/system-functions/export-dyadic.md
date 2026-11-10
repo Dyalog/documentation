@@ -15,10 +15,15 @@ This function sets the export type of functions and operators, which determines 
 In the namespace `utils`, the function `Average` calls the function `Sum`. Setting the export type of `Sum` to `0` makes `⎕PATH` find `Average` but not `Sum`:
 
 ```apl
-      'utils'⎕NS''
-      utils.⎕FX 'r←Average y' 'r←(Sum y)÷≢y'
-      utils.⎕FX 'r←Sum y' 'r←+/y'
-      0 utils.⎕EXPORT ⊂'Sum'
+      :Namespace utils
+        ∇ r←Average y
+          r←(Sum y)÷≢y
+        ∇
+        ∇ r←Sum y
+          r←+/y
+        ∇
+      :EndNamespace
+      0 utils.⎕EXPORT 'Sum'
       ⎕PATH←'utils'
       Average 1 2 3 4
 2.5
@@ -34,11 +39,13 @@ VALUE ERROR: Undefined name: Sum
 
 ## Right Argument
 
-`Y` contains the names of functions and operators, in any of the forms that [monadic `⎕EXPORT`](export-monadic.md#right-argument) accepts.
+`Y` contains the names of the functions and operators whose export type is set. It is a simple character vector containing a single name, a character matrix with one name per row, or a vector of character vectors.
+
+A defined function or operator has the export type `1` until `⎕EXPORT` sets it to `0`. A name that is not the name of a defined function or operator, for example, a variable or a derived function, has the export type `0`, which cannot be changed, so `⎕PATH` never finds it.
 
 ## Result
 
-`R` is an integer vector of the export types that were set, with one item per name in `Y`, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
+`R` is an integer vector of the export types that the names in `Y` have after `⎕EXPORT` sets them, with one item per name, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). It differs from `X` for a name whose export type cannot be changed.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
