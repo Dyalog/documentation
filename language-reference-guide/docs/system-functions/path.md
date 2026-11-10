@@ -5,64 +5,48 @@ search:
 
 # <span>Search Path</span> `⎕PATH`
 
-`⎕PATH` is a simple character vector representing a blank-separated list of namespaces. It is approximately analogous to the PATH variable in Microsoft Windows or Unix.
+`⎕PATH` lists the namespaces in which the interpreter searches for a function or operator that is not defined in the current namespace. It makes the functions and operators in a utility namespace available from anywhere in the workspace without their full path names, much as the `PATH` environment variable of Microsoft Windows or Unix makes programs available from any directory.
 
-The `⎕PATH` variable can be used to identify a namespace in which commonly used utility functions reside.  Functions or operators (**NOT** variables) which are copied into this namespace and *exported* (see [Export Object](export.md)) can then be used directly from anywhere in the workspace without giving their full path names. `⎕PATH` has Session scope.
+!!! Legacy "Legacy"
+    `⎕PATH` is retained for backwards compatibility purposes. Dyalog Ltd recommends referring to a function or operator in another namespace by its full (absolute or relative) namespace path instead.
 
 <h2 class="example">Example</h2>
 
-To make the `DISPLAY` function available directly from within any namespace.
+A utility namespace in `⎕SE` makes `Average` available from any namespace:
+
 ```apl
-      ⍝ Create and reference utility namespace.
       ⎕PATH←'⎕SE.util'⎕NS''
-      ⍝ Copy DISPLAY function from UTIL into it.
-      'DISPLAY'⎕SE.util.⎕CY'UTIL'
-      ⍝ (Remember to save the session to file).  
+      ⎕SE.util.Average←{(+/⍵)÷≢⍵}
+      'ns'⎕NS''
+      ns.(Average 2 4 9)
+5
 ```
 
-In detail, `⎕PATH` works as follows:
+## Value
 
-When a reference to a name cannot be found in the current namespace, the system searches for it from left to right in the list of namespaces indicated by `⎕PATH`.  In each namespace, if the name references a defined function (or operator) *and* the export type of that function is non-zero (see [Export Object](export.md) ), then it is used to satisfy the reference.  If the search exhausts all the namespaces in `⎕PATH` without finding a qualifying reference, the system issues a `VALUE ERROR` in the normal manner.
+`⎕PATH` is a simple character vector of namespace names separated by spaces. The default is `''`, meaning that no namespaces are searched.
 
-The special character `↑` stands for the list of namespace ancestors:
-```apl
-       ## ##.## ##.##.## ...
-```
+Each name is either a full path name, or a path name relative to the namespace in which the search starts. The name `↑` stands for the ancestors of that namespace, `## ##.## ##.##.##`, up to `#`, or to `⎕SE` if the search starts in `⎕SE`. A name that does not identify an existing namespace is ignored.
 
-In other words, the search is conducted upwards through enclosing namespaces, emulating the static scope rule inherent in modern block-structured languages.
+## Search
 
-The `⎕PATH` mechanism is only used if the function reference cannot be satisfied in the current namespace. This is analogous to the case when the Microsoft Windows or Unix PATH variable begins with a `'.'`.
+`⎕PATH` is only used when a name cannot be found in the current namespace. The interpreter then searches the namespaces listed in `⎕PATH`, from left to right, and uses the first defined function or operator with that name whose [export type](export-monadic.md#export-types) is `1`, which is the default. [Dyadic `⎕EXPORT`](export-dyadic.md) can set the export type to `0`, to hide a function or operator from the search. Variables and derived functions are never found. If the search finds nothing, `VALUE ERROR` is signalled.
 
-<h2 class="example">Examples</h2>
-```other
-   ⎕PATH               Search in ...
+A function or operator that is found through `⎕PATH` runs in the namespace in which it was found, as if it had been referenced by its full path name.
 
-```
-```other
-1. '⎕SE.util'          Current space,   then
-                       ⎕SE.util,        then
-                       VALUE ERROR
- 
-2. '↑'                 Current space
-                       Parent space: ##
-                       Parent's parent space:  ##.##
-                       ...
-                       Root: # (or ⎕SE if current space
-                                was inside ⎕SE)
-                       VALUE ERROR
- 
-3. 'util ↑ ⎕SE.util'   Current space
-                       util (relative to current space)
-                       Parent space: ##
-                       ...
-                       Root: # or ⎕SE
-                       ⎕SE.util
-                       VALUE ERROR
-```
+These are the namespaces that some values of `⎕PATH` make the interpreter search, after the current namespace:
 
-`⎕PATH` is a *session* variable. This means that it is workspace-wide and survives `)LOAD` and `)CLEAR`. It can be localised by a defined function or operator.
+|`⎕PATH`|Namespaces searched|
+|-------|-------------------|
+|`'⎕SE.util'`|`⎕SE.util`|
+|`'↑'`|`##`, then `##.##`, and so on, up to `#` (or `⎕SE`)|
+|`'util ↑ ⎕SE.util'`|`util` (relative to the current namespace), then `##`, `##.##`, and so on, up to `#` (or `⎕SE`), then `⎕SE.util`|
 
-`⎕PATH` does not support derived functions and will not be extended to support them; nor will it be extended to support other types of functions that may be developed in the future. `⎕PATH` may therefore be considered an archaic feature.
+With `↑` in `⎕PATH`, a function or operator defined in an enclosing namespace can be used from any namespace within it, much as a name defined in an outer block is visible in the inner blocks of a block-structured language with static scope.
+
+## Scope
+
+`⎕PATH` has [session scope](system-functions-by-category.md#system-variables): it applies to the whole workspace, and keeps its value through `)LOAD` and `)CLEAR`. A defined function or operator can localise it.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
