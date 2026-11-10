@@ -5,7 +5,7 @@ search:
 
 # <span>Set Export Type</span> `{R}←X ⎕EXPORT Y`{{key}}
 
-This function sets the export type of functions and operators, which determines whether the [`⎕PATH`](path.md) mechanism finds them. [Monadic `⎕EXPORT`](export-monadic.md) reports the export type, and describes the [export types](export-monadic.md#export-types).
+This function sets the export type of functions and operators, which determines whether the [`⎕PATH`](path.md) mechanism finds them. [Monadic `⎕EXPORT`](export-monadic.md) reports the export type.
 
 !!! Legacy "Legacy"
     `⎕EXPORT` is retained for backwards compatibility purposes. Dyalog Ltd recommends referring to a function or operator in another namespace by its full (absolute or relative) namespace path instead.
@@ -35,7 +35,14 @@ VALUE ERROR: Undefined name: Sum
 
 ## Left Argument
 
-`X` is an integer scalar or vector of [export types](export-monadic.md#export-types), `0` or `1`, with one item per name in `Y`. A scalar or 1-item vector applies to every name.
+`X` is an integer scalar or vector of export types, with one item per name in `Y`. A scalar or 1-item vector applies to every name.
+
+When the `⎕PATH` mechanism locates a referenced function or operator in one of the namespaces that `⎕PATH` lists, it examines the export type of the function or operator:
+
+|Export type|Effect|
+|-----------|------|
+|`0`|This instance of the function is ignored, and the search resumes at the next namespace in `⎕PATH`. This is typically used for a function in a utility namespace that is not a utility itself, for example, a private sub-function of a utility function|
+|`1`|This instance of the function is run in the namespace in which it was found, and the search ends. The effect is the same as if the function had been referenced by its full path name. This is the default|
 
 ## Right Argument
 
