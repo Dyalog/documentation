@@ -32,7 +32,7 @@ In `Calculate`, the dfn `outer` calls the dfn `inner`, which divides by zero:
      ∇
 ```
 
-The suspension spans three levels of the state indicator. `)RESET 1` clears only the top one, leaving `outer` suspended:
+The suspension spans three levels of the state indicator. `)RESET 1` clears only the top level, leaving `outer` suspended:
 
 ```apl
       Calculate
