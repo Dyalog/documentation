@@ -354,7 +354,8 @@ nav:
           - '<code>⎕FREAD</code>: File Read Component': system-functions/fread.md
           - '<code>⎕FRENAME</code>: File Rename': system-functions/frename.md
           - '<code>⎕FREPLACE</code>: File Replace Component': system-functions/freplace.md
-          - '<code>⎕FRESIZE</code>: File Resize': system-functions/fresize.md
+          - '<code>⎕FRESIZE</code>: Compact Component File': system-functions/fresize-monadic.md
+          - '<code>⎕FRESIZE</code>: Resize Component File': system-functions/fresize-dyadic.md
           - '<code>⎕FSIZE</code>: File Size': system-functions/fsize.md
           - '<code>⎕FSTAC</code>: File Set Access': system-functions/fstac.md
           - '<code>⎕FSTIE</code>: File Share Tie': system-functions/fstie.md

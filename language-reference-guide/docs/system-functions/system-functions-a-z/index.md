@@ -68,7 +68,8 @@ search:
 |[`⎕FREAD`](../fread.md)   |Read a component from File |Monadic function|
 |[`⎕FRENAME`](../frename.md) |Rename a File              |Dyadic function|
 |[`⎕FREPLACE`](../freplace.md)|Replace a component on File|Dyadic function|
-|[`⎕FRESIZE`](../fresize.md) |File Resize                |Ambivalent function|
+|[`⎕FRESIZE`](../fresize-monadic.md) |Compact Component File     |Monadic function|
+|[`⎕FRESIZE`](../fresize-dyadic.md) |Resize Component File      |Dyadic function|
 |[`⎕FSIZE`](../fsize.md)   |File Size                  |Monadic function|
 |[`⎕FSTAC`](../fstac.md)   |Set File Access matrix     |Dyadic function|
 |[`⎕FSTIE`](../fstie.md)   |Share-Tie a File           |Dyadic function|
