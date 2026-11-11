@@ -27,7 +27,7 @@ FILE FULL: test.dcf: File size limit reached
 
 `X` is an integer scalar: the maximum size of the file, in bytes. `0` means the largest size that a component file can have.
 
-The maximum size is stored in the file, and applies until it is changed. An update that would make the file larger than its maximum size signals [`FILE FULL`](../../programming-reference-guide/error-messages/file-full.md). If `X` is smaller than the size of the file after [compaction](#compaction), `FILE FULL` is signalled and the maximum size is not changed.
+The maximum size is stored in the file, and applies until it is changed. An update that would make the file larger than its maximum size signals `FILE FULL`. If `X` is smaller than the size of the file after [compaction](#compaction), `FILE FULL` is signalled and the maximum size is not changed.
 
 ## Right Argument
 
