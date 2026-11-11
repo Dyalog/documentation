@@ -110,9 +110,9 @@ pipeline {
         SWARM_NAME      = "docsweb"
 
         // ============================================================
-        // PRODUCTION_VERSIONS: Space-separated list of versions to deploy
-        // 21.0 is published as a live preview (reachable at /21.0/);
-        // 20.0 remains the default (set_as_latest stays unchecked).
+        // PRODUCTION_VERSIONS: Space-separated list of versions to deploy.
+        // The version served at / is chosen by the web server redirect,
+        // not by this pipeline.
         // ============================================================
         PRODUCTION_VERSIONS = '20.0 21.0'
 
@@ -361,10 +361,12 @@ pipeline {
                                 fi
                             done
 
-                            # Add .git-hash if it exists
-                            if [ -f ".git-hash" ]; then
-                                BACKUP_TARGETS="${BACKUP_TARGETS} .git-hash"
-                            fi
+                            # Root files the deploy stage rewrites
+                            for ROOT_FILE in .git-hash versions.json; do
+                                if [ -f "${ROOT_FILE}" ]; then
+                                    BACKUP_TARGETS="${BACKUP_TARGETS} ${ROOT_FILE}"
+                                fi
+                            done
 
                             # Only create backup if we have something to backup
                             if [ -z "${BACKUP_TARGETS}" ]; then
@@ -394,6 +396,9 @@ pipeline {
                         lock('docs-deploy')
                     }
                     steps {
+                        script {
+                            env.DEPLOYMENT_STARTED = 'true'
+                        }
                         sh '''#!/bin/bash
                             set -euo pipefail
                             echo "Starting deployment to ${WEB_ROOT}."
@@ -449,6 +454,20 @@ pipeline {
                                 exit 1
                             fi
 
+                            # The version selector on every page fetches /versions.json.
+                            # It lists the deployed versions, newest first, rather than
+                            # mike's copy, which also lists versions that are only on staging.
+                            # mike's root index.html and latest alias stay undeployed:
+                            # / and /latest/ are served by web server redirects.
+                            ENTRIES=""
+                            for VERSION in $(echo ${PRODUCTION_VERSIONS} | xargs -n1 | sort -rV); do
+                                if [ -f "${WEB_ROOT}/${VERSION}/index.html" ]; then
+                                    printf -v ENTRY '{"version":"%s","title":"%s","aliases":[]}' "${VERSION}" "${VERSION}"
+                                    ENTRIES="${ENTRIES:+${ENTRIES},}${ENTRY}"
+                                fi
+                            done
+                            echo "[${ENTRIES}]" > "${WEB_ROOT}/versions.json"
+
                             # Update git hash
                             echo "Storing new git hash (${LATEST_HASH})."
                             echo "${LATEST_HASH}" | tee "${WEB_ROOT}/.git-hash" >/dev/null
@@ -484,6 +503,11 @@ pipeline {
                                     echo "  ${VERSION}/index.html OK"
                                 fi
                             done
+
+                            if ! test -f "${WEB_ROOT}/versions.json"; then
+                                echo "ERROR: versions.json not found"
+                                FAILED=1
+                            fi
 
                             if [ $FAILED -eq 1 ]; then
                                 exit 1
@@ -532,46 +556,35 @@ pipeline {
                         // Report which stage failed
                         echo "FAILURE: Pipeline failed at stage: ${env.STAGE_NAME ?: 'Unknown'}"
 
-                        // Only attempt rollback if a deployment was actually attempted
-                        if (hashSame == false) {
-                            echo "ERROR: Deployment failed. Attempting automatic rollback to the latest backup..."
+                        // The web root is only modified from the deploy stage onwards
+                        if (env.DEPLOYMENT_STARTED == 'true') {
+                            echo "ERROR: Deployment failed. Attempting automatic rollback to this build's backup..."
                             try {
-                                // Copy the most recent successful build's backup
-                                copyArtifacts projectName: env.JOB_NAME,
-                                            selector: lastSuccessful(),
-                                            filter: 'docs.backup.*.tar.gz',
-                                            flatten: true,
-                                            optional: false
-
                                 sh '''#!/bin/bash
                                     set -euo pipefail
-                                    # Find the backup file that was copied
-                                    BACKUP_FILE=$(ls docs.backup.*.tar.gz | head -n1)
 
-                                    if [[ -n "${BACKUP_FILE}" ]]; then
-                                        echo "Found backup for rollback: ${BACKUP_FILE}"
-
-                                        # Clear contents but preserve mount point
-                                        echo "Clearing failed deployment from ${WEB_ROOT}..."
-                                        find "${WEB_ROOT}" -mindepth 1 -delete
-
-                                        echo "Extracting ${BACKUP_FILE} to ${WEB_ROOT}..."
-                                        tar -xzf "${BACKUP_FILE}" -C "${WEB_ROOT}" --strip-components=1
-                                        echo "Extraction complete."
-
-                                        chown -R www-data:www-data "${WEB_ROOT}"
-                                        echo "Ownership set for rolled-back site."
-
-                                        echo "Automatic rollback completed successfully from ${BACKUP_FILE}"
-                                        if test -f "${WEB_ROOT}/.git-hash"; then
-                                            echo "Rolled back to Git hash: $(cat "${WEB_ROOT}/.git-hash")"
-                                        fi
-
-                                        # Clean up the copied artifact
-                                        rm -f "${BACKUP_FILE}"
-                                    else
-                                        echo "ERROR: No backup file found after copy"
+                                    # This build's backup is the state the deploy stage started from.
+                                    BACKUP="${WORKSPACE}/${BACKUP_FILE:-}"
+                                    if [ -z "${BACKUP_FILE:-}" ] || [ ! -f "${BACKUP}" ]; then
+                                        echo "ERROR: This build made no backup; leaving ${WEB_ROOT} as it is"
                                         exit 1
+                                    fi
+
+                                    # Remove only what the deploy stage writes. The web root also
+                                    # holds versions and server files that this pipeline does not own.
+                                    echo "Removing failed deployment from ${WEB_ROOT}..."
+                                    for VERSION in ${PRODUCTION_VERSIONS}; do
+                                        rm -rf "${WEB_ROOT}/${VERSION:?}"
+                                    done
+                                    rm -f "${WEB_ROOT}/.git-hash" "${WEB_ROOT}/versions.json"
+
+                                    # Archive paths are relative to the web root.
+                                    echo "Extracting ${BACKUP_FILE} to ${WEB_ROOT}..."
+                                    tar -xzf "${BACKUP}" -C "${WEB_ROOT}"
+
+                                    echo "Automatic rollback completed successfully from ${BACKUP_FILE}"
+                                    if test -f "${WEB_ROOT}/.git-hash"; then
+                                        echo "Rolled back to Git hash: $(cat "${WEB_ROOT}/.git-hash")"
                                     fi
                                 '''
                             } catch (Exception e) {

@@ -22,11 +22,14 @@ The deployment pipeline is triggered whenever a new build is triggered via the G
    - Archives as Jenkins artifact with fingerprinting
    - Jenkins manages retention (keeps 5)
 3. Deploys new content to web server
-   - Mirror content with `rsync --delete`
+   - Mirrors each `PRODUCTION_VERSIONS` directory with `rsync -rl --delete`
+   - Writes the root `versions.json` listing the deployed versions
    - Stage-level locking prevents concurrent deployments
-   - Sets proper ownership and permissions
 4. Verifies the deployment succeeded
-5. Automatic rollback on failure using `copyArtifacts` from last successful build
+5. Automatic rollback on failure from the backup taken by the same build
+   - Removes and restores only the `PRODUCTION_VERSIONS` directories, `.git-hash` and `versions.json`
+   - Leaves the rest of the web root (other versions, server files) alone
+   - No rollback is possible when `SKIP_BACKUP` is set
 6. Optional debug mode to display environment variables and state
 
 ## Stages
@@ -54,10 +57,10 @@ The deployment pipeline is triggered whenever a new build is triggered via the G
 
 5. `Deploy Site`:
     * Protected by `lock('docs-deploy')` to prevent concurrent deployments
-    * Clears existing content while preserving volume mount
-    * Uses `rsync -a --delete` to mirror content exactly
+    * Deploys only the `PRODUCTION_VERSIONS` directories; the rest of the web root is left alone
+    * Uses `rsync -rl --delete` to mirror each version directory. Ownership and permissions are not set explicitly
+    * Writes the root `versions.json` listing the deployed versions, which the version selector reads
     * Stores commit hash for future comparisons
-    * Sets proper ownership and permissions
     * Stage-level error reporting
 
 6. `Verify Deployment`:
@@ -73,10 +76,6 @@ The pipelines use the following Jenkins plugins:
 2. `git`
 3. `timestamper` (optional)
    - Adds timestamps to console output via `timestamps()`
-4. `copyartifact`
-   - Required for `archiveArtifacts` and `copyArtifacts` steps
-   - Backup storage and cross-job artifact access
-
-5. `lockable-resources`
+4. `lockable-resources`
    - Required for `lock('docs-deploy')` in deployment stage
    - Prevents concurrent deployments
