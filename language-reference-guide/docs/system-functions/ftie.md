@@ -16,24 +16,10 @@ The file must exist and  the user must have write access to it.  It cannot alre
 !!! Info "Information"
     Small-span (32-bit) component files are currently read-only; this support is scheduled for removal in a future release, after which it will not be possible to tie small-span component files. Dyalog Ltd recommends using `⎕FCOPY` to convert any such files to large-span (64-bit). For information on how to identify calls to small-span component files in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).
 
-## Automatic Tie Number Allocation
-
-A tie number of 0 as argument to a create, share tie or exclusive tie operation, allocates the first (closest to zero) available tie number, and returns it as an explicit result. This allows you to simplify code. For example:
-
-from:
-```apl
-      tie←1+⌈/0,⎕FNUMS ⍝ With next available number,
-      file ⎕FTIE tie   ⍝ ... tie file.
-```
-
-to:
-```apl
-      tie←file ⎕FTIE 0 ⍝ Tie with first available number.
-```
-
-The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result of `⎕FTIE` is the tie number of the file.
+The result of `⎕FTIE` is the tie number of the file. It is [shy](../../programming-reference-guide/introduction/results.md#shy-results) unless the tie number is `0`, in which case the system allocates the available tie number closest to zero and the result is explicit.
 
 <h2 class="example">Examples</h2>
+
 ```apl
       'SALES' ⎕FTIE 1
  
