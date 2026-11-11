@@ -18,6 +18,9 @@ This function maps a file of raw data to an array in the workspace, with a given
 40
 ```
 
+!!! windows "Dyalog on Microsoft Windows"
+    A file of length zero cannot be mapped.
+
 ## Left Argument
 
 `X` is an integer scalar or vector:
@@ -86,8 +89,6 @@ With read-write access, a change to the array by indexed or pick assignment, for
       mat←83 ¯1 20 ⎕MAP 'data.bin' 'W'
       mat[2 3;4 5]←2 2⍴⍳4
 ```
-
-Microsoft Windows does not support mapping a file of length zero.
 
 ## Compatibility between Editions
 
