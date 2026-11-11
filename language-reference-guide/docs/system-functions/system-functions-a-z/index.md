@@ -83,7 +83,8 @@ search:
 |[`⎕LOAD`](../load.md)  |Load a saved WS            |Function|
 |[`⎕LOCK`](../lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕LX`](../lx.md)    |Latent Expression        |Variable|
-|[`⎕MAP`](../map.md)  |Map a file                                              |Ambivalent function|
+|[`⎕MAP`](../map-monadic.md)  |Map Array File                                          |Monadic function|
+|[`⎕MAP`](../map-dyadic.md)  |Map Raw Data File                                       |Dyadic function|
 |[`⎕MKDIR`](../mkdir.md)   |Create Directory                                           |Ambivalent function|
 |[`⎕ML`](../ml.md) |Migration Level              |Variable|
 |[`⎕MONITOR`](../query-monitor.md)|Monitor query|Monadic function|

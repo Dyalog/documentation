@@ -200,7 +200,8 @@ These are APL interfaces to various facilities outside Dyalog.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
-|[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
+|[`⎕MAP`](map-monadic.md)  |Map Array File                                          |Monadic function|
+|[`⎕MAP`](map-dyadic.md)  |Map Raw Data File                                       |Dyadic function|
 |[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕S`](s.md)    |Search                                                  |Dyadic operator|

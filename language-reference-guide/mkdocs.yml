@@ -369,7 +369,8 @@ nav:
           - '<code>⎕LOAD</code>: Load Workspace': system-functions/load.md
           - '<code>⎕LOCK</code>: Lock Definition': system-functions/lock.md
           - '<code>⎕LX</code>: Latent Expression': system-functions/lx.md
-          - '<code>⎕MAP</code>: Map File': system-functions/map.md
+          - '<code>⎕MAP</code>: Map Array File': system-functions/map-monadic.md
+          - '<code>⎕MAP</code>: Map Raw Data File': system-functions/map-dyadic.md
           - '<code>⎕MKDIR</code>: Create Directory': system-functions/mkdir.md
           - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
           - '<code>⎕MONITOR</code>: Set Monitor': system-functions/set-monitor.md
