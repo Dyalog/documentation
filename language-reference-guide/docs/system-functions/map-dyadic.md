@@ -9,7 +9,7 @@ This function maps a file of raw data to an array in the workspace, with a given
 
 <h2 class="example">Example</h2>
 
-`data.bin` holds 40 64-bit floating-point numbers, which are mapped as a vector:
+`data.bin` holds 64-bit floating-point numbers, from 1 to 40, which are mapped as a vector:
 
 ```apl
       t←'data.bin' ⎕NCREATE 0 ⋄ (⍳40) ⎕NAPPEND t 645 ⋄ ⎕NUNTIE t
@@ -44,12 +44,12 @@ One item of the shape (normally the first) can be `¯1`, meaning as many complet
 
 ## Right Argument
 
-`Y` is a simple character vector containing the name of the file, or a vector of 2 or 3 items:
+`Y` is a simple character vector containing the name of the file, or a vector of up to 3 items:
 
 |Item |Content|
 |-----|-------|
 |`⊃Y`|The name of the file|
-|`2⊃Y`|The access: `'R'` or `'r'` for read-only access, or `'W'` or `'w'` for read-write access; the default is read-only access|
+|`2⊃Y`|The access: `'R'` or `'r'` for read-only access (default), or `'W'` or `'w'` for read-write access|
 |`3⊃Y`|The offset of the first byte of the file to map; the default is `0`|
 
 An offset is only permitted with read-only access; with read-write access, it signals `NONCE ERROR`. It must be a multiple of the word size (8 in a 64-bit interpreter, 4 in a 32-bit interpreter).
@@ -78,7 +78,7 @@ Bytes 80 to 159 of `data.bin`, written in the example at the top of this page, a
 
 ## Updating the File
 
-With read-write access, a change to the array by indexed or pick assignment is written to the file. With read-only access, the array can still be changed, but the changes are not written to the file.
+With read-write access, a change to the array by indexed or pick assignment, for example, `var[a]←b`, is written to the file. With read-only access, the array can still be changed, but the changes are not written to the file.
 
 <h3 class="example">Example</h3>
 
@@ -91,7 +91,7 @@ Microsoft Windows does not support mapping a file of length zero.
 
 ## Compatibility between Editions
 
-To interpret, in the Unicode Edition, character data in a raw file that was written with data type 82, map the file with data type 83 and use the result to index into [`⎕AVU`](avu.md).
+In the Unicode Edition, character data that was written to a raw file with data type 82 can be read by mapping the file with data type 83 and using the result `R` to index into [`⎕AVU`](avu.md): `⎕UCS ⎕AVU[⎕IO+256|R]` gives the characters.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

@@ -22,12 +22,12 @@ A file of this kind is written by the function `∆MPUT` in the `util` workspace
 
 ## Right Argument
 
-`Y` is a simple character vector containing the name of the file, or a 2-item vector:
+`Y` is a simple character vector containing the name of the file, or a vector of up to 2 items:
 
 |Item |Content|
 |-----|-------|
 |`⊃Y`|The name of the file|
-|`2⊃Y`|The access: `'R'` or `'r'` for read-only access, or `'W'` or `'w'` for read-write access; the default is read-only access|
+|`2⊃Y`|The access: `'R'` or `'r'` for read-only access (default), or `'W'` or `'w'` for read-write access|
 
 A file that was not written by `∆MPUT` signals `NONCE ERROR`.
 
