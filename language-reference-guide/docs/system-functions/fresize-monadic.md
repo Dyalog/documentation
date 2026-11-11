@@ -30,7 +30,7 @@ Dropping the first of two components leaves the file the same size, until `⎕FR
 
 |Item |Content|
 |-----|-------|
-|`1⊃Y`|The tie number of the file|
+|`⊃Y`|The tie number of the file|
 |`2⊃Y` (optional)|The passnumber; the default is `0`|
 
 ## Result
@@ -39,7 +39,7 @@ Dropping the first of two components leaves the file the same size, until `⎕FR
 
 ## Compaction
 
-Compaction reorders the components of the file, and gathers its free areas at the end, which is then truncated. The maximum size of the file is unchanged.
+Compaction moves the components of the file towards its start, closing the gaps between them, and then truncates the file, releasing the free space to the operating system. The maximum size of the file is unchanged.
 
 For a large file with many components, compaction can take a significant time. Any interrupt entered at the keyboard during compaction is ignored.
 
