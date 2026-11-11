@@ -37,8 +37,8 @@ search:
 |[`⎕DM`](../dm.md)       |Diagnostic Message    |Constant|
 |[`⎕DMX`](../dmx.md)      |Extended Diagnostic Message                     |Reference|
 |[`⎕DQ`](../dq.md)    |Await and process events   |Monadic function|
-|[`⎕DR`](../data-representation-dyadic.md)   |Data Representation (Dyadic)  |Ambivalent function|
-|[`⎕DR`](../data-representation-monadic.md)   |Data Representation (Monadic)|Ambivalent function|
+|[`⎕DR`](../dr-monadic.md)   |Query Data Representation|Monadic function|
+|[`⎕DR`](../dr-dyadic.md)   |Transform Data Representation|Dyadic function|
 |[`⎕DT`](../dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕ED`](../ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EM`](../em.md)       |Event Messages                                  |Monadic function|
@@ -83,7 +83,8 @@ search:
 |[`⎕LOAD`](../load.md)  |Load a saved WS            |Function|
 |[`⎕LOCK`](../lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕LX`](../lx.md)    |Latent Expression        |Variable|
-|[`⎕MAP`](../map.md)  |Map a file                                              |Ambivalent function|
+|[`⎕MAP`](../map-monadic.md)  |Map Array File                                          |Monadic function|
+|[`⎕MAP`](../map-dyadic.md)  |Map Raw Data File                                       |Dyadic function|
 |[`⎕MKDIR`](../mkdir.md)   |Create Directory                                           |Ambivalent function|
 |[`⎕ML`](../ml.md) |Migration Level              |Variable|
 |[`⎕MONITOR`](../query-monitor.md)|Monitor query|Monadic function|

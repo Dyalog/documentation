@@ -166,8 +166,8 @@ These are tools to convert between common representations of data.
 |--------|--------------------------------------------------------|----|
 |[`⎕C`](c.md)    |Case Convert                                           |Ambivalent function|
 |[`⎕CSV`](csv.md)  |Comma Separated Values                               |Ambivalent function|
-|[`⎕DR`](data-representation-monadic.md)   |Data Representation          |Monadic function|
-|[`⎕DR`](data-representation-dyadic.md)   |Data Representation           |Dyadic function|
+|[`⎕DR`](dr-monadic.md)   |Query Data Representation    |Monadic function|
+|[`⎕DR`](dr-dyadic.md)   |Transform Data Representation |Dyadic function|
 |[`⎕DT`](dt.md)   |Datetime                                              |Dyadic function|
 |[`⎕FMT`](format-monadic.md)  |Resolve display                           |Monadic function|
 |[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
@@ -200,7 +200,8 @@ These are APL interfaces to various facilities outside Dyalog.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
-|[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
+|[`⎕MAP`](map-monadic.md)  |Map Array File                                          |Monadic function|
+|[`⎕MAP`](map-dyadic.md)  |Map Raw Data File                                       |Dyadic function|
 |[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕S`](s.md)    |Search                                                  |Dyadic operator|
