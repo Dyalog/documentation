@@ -25,7 +25,7 @@ search:
 [Dyadic `⎕STOP`](stop-dyadic.md) sets the stop controls:
 
 ```apl
-      ⊢1 ⎕STOP 'FOO'
+      ⎕←1 ⎕STOP 'FOO'
 1
 ```
 

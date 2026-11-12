@@ -13,7 +13,7 @@ This function sets trace controls on lines of a tradfn or tradop, replacing any 
       ∇ R←FOO
 [1]    R←10
       ∇
-      ⊢(0,⍳10) ⎕TRACE 'FOO'
+      ⎕←(0,⍳10) ⎕TRACE 'FOO'
 0 1
 ```
 
@@ -26,7 +26,7 @@ This function sets trace controls on lines of a tradfn or tradop, replacing any 
 Setting trace controls cancels the existing ones:
 
 ```apl
-      ⊢1 ⎕TRACE 'FOO'
+      ⎕←1 ⎕TRACE 'FOO'
 1
       ⍴⍬ ⎕TRACE 'FOO'
 0

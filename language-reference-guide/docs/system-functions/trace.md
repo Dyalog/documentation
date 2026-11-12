@@ -25,7 +25,7 @@ search:
 [Dyadic `⎕TRACE`](trace-dyadic.md) sets the trace controls:
 
 ```apl
-      ⊢1 ⎕TRACE 'FOO'
+      ⎕←1 ⎕TRACE 'FOO'
 1
 ```
 

@@ -35,7 +35,7 @@ search:
 [Dyadic `⎕MONITOR`](monitor-dyadic.md) sets the monitor controls:
 
 ```apl
-      ⊢1 ⎕MONITOR 'FOO'
+      ⎕←1 ⎕MONITOR 'FOO'
 1
 ```
 
