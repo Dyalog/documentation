@@ -48,7 +48,7 @@ When the `⎕PATH` mechanism locates a referenced function or operator in one of
 
 `Y` contains the names of the functions and operators whose export type is set. It is a simple character vector containing a single name, a character matrix with one name per row, or a vector of character vectors.
 
-A defined function or operator has the export type `1` until `⎕EXPORT` sets it to `0`. A name that is not the name of a defined function or operator, for example, a variable or a derived function, has the export type `0`, which cannot be changed, so `⎕PATH` never finds it.
+A defined function or operator has the export type `1` until `⎕EXPORT` sets it to `0`. A name that is not the name of a defined function or operator, for example, a variable or a derived function, has the export type `0`, which cannot be changed. Therefore, `⎕PATH` never finds it.
 
 ## Result
 

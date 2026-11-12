@@ -46,7 +46,7 @@ When the `⎕PATH` mechanism locates a referenced function or operator in one of
 |`0`|This instance of the function is ignored, and the search resumes at the next namespace in `⎕PATH`. This is typically used for a function in a utility namespace that is not a utility itself, for example, a private sub-function of a utility function|
 |`1`|This instance of the function is run in the namespace in which it was found, and the search ends. The effect is the same as if the function had been referenced by its full path name. This is the default|
 
-A defined function or operator has the export type `1` until [dyadic `⎕EXPORT`](export-dyadic.md) sets it to `0`. A name that is not the name of a defined function or operator, for example, a variable or a derived function, has the export type `0`, which cannot be changed, so `⎕PATH` never finds it.
+A defined function or operator has the export type `1` until [dyadic `⎕EXPORT`](export-dyadic.md) sets it to `0`. A name that is not the name of a defined function or operator, for example, a variable or a derived function, has the export type `0`, which cannot be changed. Therefore, `⎕PATH` never finds it.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

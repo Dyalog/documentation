@@ -46,7 +46,7 @@ With `↑` in `⎕PATH`, a function or operator defined in an enclosing namespac
 
 ## Scope
 
-`⎕PATH` has [session scope](system-functions-by-category.md#system-variables): it applies to the whole workspace, and keeps its value through `)LOAD` and `)CLEAR`. A defined function or operator can localise it.
+`⎕PATH` has [session scope](system-functions-by-category.md#system-variables). This means that it applies to the whole workspace, and keeps its value through `)LOAD` and `)CLEAR`. A defined function or operator can localise it.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
