@@ -58,11 +58,11 @@ If the response is the [abort statement](../other-syntax/abort.md) `→`, execut
 
 ## Interrupts and Time Limits
 
-While `⎕` is awaiting input, a [`⎕TRAP`](trap.md) definition for an interrupt event in the range 1000–1008 does not fire: the interrupt is reported and the prompt is displayed again. A trap for any other event still applies to the expression entered at the prompt. A time limit set in [`⎕RTL`](rtl.md) has no effect either.
+While `⎕` is awaiting input, a [`⎕TRAP`](trap.md) definition for an interrupt event in the range 1000–1008 does not fire. Instead, the interrupt is reported and the prompt is displayed again. A trap for any other event still applies to the expression entered at the prompt. A time limit set in [`⎕RTL`](rtl.md) has no effect either.
 
 <h3 class="example">Example</h3>
 
-The trap on `1000` does not fire when the interrupt arrives, so `INTERRUPT` is reported rather than `STOP`. The trap on `11` does fire, because the `DOMAIN ERROR` comes from the expression entered at the prompt:
+The trap on `1000` does not fire when the interrupt arrives. Therefore, `INTERRUPT` is reported rather than `STOP`. The trap on `11` does fire, because the `DOMAIN ERROR` comes from the expression entered at the prompt:
 
 ```apl
       ⎕TRAP←(11 'C' '''ERROR''')(1000 'C' '''STOP''')

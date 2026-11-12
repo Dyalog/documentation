@@ -20,7 +20,7 @@ INPUT
 
 ## Message Output
 
-[`⍞←X`](quotequad-output.md) displays characters on standard error without a trailing new-line, so successive assignments build one line:
+[`⍞←X`](quotequad-output.md) displays characters on standard error without a trailing new-line. Therefore, successive assignments build one line:
 
 ```apl
       ⍞←'2+2' ⋄ ⍞←'=' ⋄ ⍞←4

@@ -19,7 +19,7 @@ MART
 
 To display characters without a trailing new-line, [assign to `⍞`](quotequad-output.md) instead. Error messages, the output of [system commands](../system-commands/index.md), and the messages reported by the editor are all directed in the same way as output through `⍞`. To write a stream of 8-bit codes to a nominated device rather than to the Session or terminal, use [`⎕ARBOUT`](arbout.md).
 
-In a terminal environment, output through `⎕` is written to standard output, and output through `⍞` to standard error, so the two can be redirected separately.
+In a terminal environment, output through `⎕` is written to standard output, and output through `⍞` to standard error. This means that the two can be redirected separately.
 
 Assigning to `⎕` generates the [SessionPrint](../../object-reference/methodorevents/sessionprint.md) event on the [Session](../../windows-ui-guide/the-session-object/session-object.md) object, which a callback can use to alter or suppress what is displayed.
 

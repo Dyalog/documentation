@@ -24,7 +24,7 @@ If the reference was preceded by [assignments to `⍞`](quotequad-output.md) wit
 
 <h2 class="example">Examples</h2>
 
-The prompt written with `⍞` is returned as part of the response, so `R` is 14 characters rather than the 5 typed:
+The prompt written with `⍞` is returned as part of the response. Therefore, `R` is 14 characters rather than the 5 typed:
 
 ```apl
       ⍞←'OPTION : ' ⋄ R←⍞
