@@ -39,7 +39,7 @@ Reporting the name, type, and size of a directory:
 
 ## Left Argument
 
-`X` can be an array of any shape. Each of its elements selects a property from [](#properties), and its depth decides what happens to that property: a simple numeric element reports the property's value, while a nested element is a property and the value it is to be set to. The table also shows which properties can be set, and what is reported when a value cannot be obtained.
+`X` can be an array of any shape. Each of its elements selects a property from [](#properties), and its depth decides what happens to that property. A simple numeric element reports the property's value, while a nested element is a property and the value it is to be set to. The table also shows which properties can be set, and what is reported when a value cannot be obtained.
 
 Table: Available properties { #properties }
 
@@ -65,7 +65,7 @@ Table: Available properties { #properties }
 !!! Info "Information"
     Of the file timestamps which are reported by the operating system, only the last modification time should be considered reliable and portable. Neither the access time or creation time are well supported across all platforms. Furthermore, they might not accurately reflect the actual time that the operation occurred.
 
-The values in `X` are processed in ravel order. Duplicates are allowed, so one call can both set a property and report it: an element that queries a property reports the value left by any earlier element that set it.
+The values in `X` are processed in ravel order. Duplicates are allowed. Therefore, one call can both set a property and report it. An element that queries a property reports the value left by any earlier element that set it.
 
 <h3 class="example">Example</h3>
 
@@ -79,7 +79,7 @@ The size of a newly created empty file is reported, set, and reported again:
 
 ## Result
 
-Each value in `R` reports a property: the value it holds if the corresponding element of `X` selected it for reporting, or its new value if that element set it. Where the element of `X` does not appear in [](#properties), the value is `⍬`; where it cannot be obtained, the default shown in the table is reported instead. Attempting to set a property that is not settable, or to give one a value that is not valid, signals an error.
+Each value in `R` reports a property, giving the value it holds if the corresponding element of `X` selected it for reporting, or its new value if that element set it. Where the element of `X` does not appear in [](#properties), the value is `⍬`; where it cannot be obtained, the default shown in the table is reported instead. Attempting to set a property that is not settable, or to give one a value that is not valid, signals an error.
 
 `R` is built from up to three levels, as summarised in [](#resultstructure):
 
@@ -131,7 +131,7 @@ The name and size of one file, then of two, then of every file matching a patter
 └───────────┴───────────┘
 ```
 
-The third result groups by property while the second groups by file, and the matches are not in the order the pattern might suggest: `Wildcard` does not define an order.
+The third result groups by property while the second groups by file, and the matches are not in the order the pattern might suggest, because `Wildcard` does not define an order.
 
 ## Variant Options
 
