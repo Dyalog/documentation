@@ -71,7 +71,7 @@ If the source is CSV data, the description is `'S'` (simple) or `'N'` (nested). 
 
 ### Column Types
 
-The column types are a numeric scalar or vector of the codes in the table below, one per field. A scalar applies to every field. If the column types are omitted or `⍬`, every field contains character data: a field that contains only numbers is converted to numbers only if its column type says so.
+The column types are a numeric scalar or vector of the codes in the table below, one per field. A scalar applies to every field. If the column types are omitted or `⍬`, every field contains character data. This means that a field that contains only numbers is converted to numbers only if its column type says so.
 
 |Code|The field                                                                                                                                      |
 |----|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -255,7 +255,7 @@ Data can be read from a named file or a tied native file. A tied native file can
 
 The file must contain text in one of the supported [file encodings](nget.md#Encodings). The file encoding is determined as follows:
 
-1. If the file starts with a byte order mark (BOM), the BOM determines the encoding, regardless of the description. A BOM is found only when the file is read from its start, so when a native file is read in sections, only the first section can find it.
+1. If the file starts with a byte order mark (BOM), the BOM determines the encoding, regardless of the description. A BOM is found only when the file is read from its start. Therefore, when a native file is read in sections, only the first section can find it.
 2. Otherwise, if the description specifies a file encoding, that encoding is used.
 3. Otherwise, a native file is decoded as UTF-8, and a named file is examined to deduce its likely encoding, using the same method as [`⎕NGET`](nget.md).
 
