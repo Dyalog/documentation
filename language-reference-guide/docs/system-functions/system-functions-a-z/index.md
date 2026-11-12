@@ -86,8 +86,8 @@ search:
 |[`⎕MAP`](../map.md)  |Map a file                                              |Ambivalent function|
 |[`⎕MKDIR`](../mkdir.md)   |Create Directory                                           |Ambivalent function|
 |[`⎕ML`](../ml.md) |Migration Level              |Variable|
-|[`⎕MONITOR`](../query-monitor.md)|Monitor query|Monadic function|
-|[`⎕MONITOR`](../set-monitor.md)|Monitor set    |Dyadic function|
+|[`⎕MONITOR`](../monitor-monadic.md)|Query Monitor Controls|Monadic function|
+|[`⎕MONITOR`](../monitor-dyadic.md)|Set Monitor Controls|Dyadic function|
 |[`⎕NA`](../na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕NAPPEND`](../nappend.md) |Append to File                                               |Dyadic function|
 |[`⎕NC`](../nc.md)    |Name Classification      |Monadic function|
@@ -147,8 +147,8 @@ search:
 |[`⎕SRC`](../src.md)      |Source        |Monadic function|
 |[`⎕STACK`](../stack.md) |Report Stack             |Constant|
 |[`⎕STATE`](../state.md) |Return State of an object|Monadic function|
-|[`⎕STOP`](../query-stop.md)   |Query Stop vector|Monadic function|
-|[`⎕STOP`](../set-stop.md)   |Set Stop vector   |Dyadic function|
+|[`⎕STOP`](../stop-monadic.md)   |Query Stop Vector|Monadic function|
+|[`⎕STOP`](../stop-dyadic.md)   |Set Stop Vector   |Dyadic function|
 |[`⎕SVC`](../query-access-control.md)|Query access Control       |Monadic function|
 |[`⎕SVC`](../set-access-control.md)|Set access Control         |Dyadic function|
 |[`⎕SVO`](../query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|
@@ -168,8 +168,8 @@ search:
 |[`⎕TNUMS`](../tnums.md) |Thread Numbers               |Constant|
 |[`⎕TPOOL`](../tpool.md) |Token Pool          |Monadic function|
 |[`⎕TPUT`](../tput.md)  |Put Tokens          |Ambivalent function|
-|[`⎕TRACE`](../query-trace.md)  |Query Trace vector|Monadic function|
-|[`⎕TRACE`](../set-trace.md)  |Set Trace vector  |Dyadic function|
+|[`⎕TRACE`](../trace-monadic.md)  |Query Trace Vector|Monadic function|
+|[`⎕TRACE`](../trace-dyadic.md)  |Set Trace Vector  |Dyadic function|
 |[`⎕TRAP`](../trap.md)     |Event Trap                                      |Variable|
 |[`⎕TREQ`](../treq.md)  |Token Requests      |Monadic function|
 |[`⎕TS`](../ts.md)      |Timestamp                                          |Constant|

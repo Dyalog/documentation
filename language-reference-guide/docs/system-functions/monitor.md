@@ -5,24 +5,41 @@ search:
 
 # <span>Monitor Controls</span> `⎕MONITOR`
 
-## Dyadic `⎕MONITOR` means
+`⎕MONITOR` deals with the monitor controls of a tradfn or tradop, which mark the lines for which timing statistics are collected.
 
-[Set Monitor Controls](set-monitor.md)
+## Query Monitor Controls
+
+[Monadic `⎕MONITOR`](monitor-monadic.md) reports the statistics collected:
+
 ```apl
-      +(0,⍳10) ⎕MONITOR 'FOO'
-0 1 2 3 4 5
+      ∇ FOO
+[1]    A←?300 300⍴100
+[2]    B←⌹A
+[3]    C←⌹B
+[4]    R1←⌊0.5+A+.×B
+[5]    R2←A=C
+      ∇
+      (0,⍳5) ⎕MONITOR 'FOO'
+      FOO
+      ⎕MONITOR 'FOO'
+0 1 35 35 0
+1 1  1  1 0
+2 1 14 14 0
+3 1 14 14 0
+4 1  6  6 0
+5 1  0  0 0
 ```
 
-## Monadic `⎕MONITOR` means
+## Set Monitor Controls
 
-[Query Monitor Controls](query-monitor.md)
+[Dyadic `⎕MONITOR`](monitor-dyadic.md) sets the monitor controls:
+
 ```apl
-
-      ⎕MONITOR 'FOO'
-0 1 1418 1000 0
-1 1   83    0 0
-2 1  400    0 0
-3 1  397    0 0
-4 1  467 1000 0
-5 1  100    0 0
+      ⎕←1 ⎕MONITOR 'FOO'
+1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕MONITOR MONITOR
+</div>

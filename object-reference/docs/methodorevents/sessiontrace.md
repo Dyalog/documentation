@@ -9,7 +9,7 @@ search:
 
 |[Session](../../windows-ui-guide/the-session-object/session-object.md)|&nbsp;|&nbsp;|||
 
-If enabled, this event is reported when an expression is executed with trace control. See [Set Trace ](../../language-reference-guide/system-functions/set-trace.md). Error messages and output from system commands do not generate this event.
+If enabled, this event is reported when an expression is executed with trace control. See [Set Trace Vector](../../language-reference-guide/system-functions/trace-dyadic.md#tracing). Error messages and output from system commands do not generate this event.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows :
 

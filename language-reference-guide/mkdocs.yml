@@ -372,8 +372,8 @@ nav:
           - '<code>⎕MAP</code>: Map File': system-functions/map.md
           - '<code>⎕MKDIR</code>: Create Directory': system-functions/mkdir.md
           - '<code>⎕ML</code>: Migration Level': system-functions/ml.md
-          - '<code>⎕MONITOR</code>: Set Monitor': system-functions/set-monitor.md
-          - '<code>⎕MONITOR</code>: Query Monitor': system-functions/query-monitor.md
+          - '<code>⎕MONITOR</code>: Query Monitor Controls': system-functions/monitor-monadic.md
+          - '<code>⎕MONITOR</code>: Set Monitor Controls': system-functions/monitor-dyadic.md
           - '<code>⎕NA</code>: Name Association': system-functions/na.md
           - '<code>⎕NAPPEND</code>: Native File Append': system-functions/nappend.md
           - '<code>⎕NC</code>: Name Classification': system-functions/nc.md
@@ -434,8 +434,8 @@ nav:
           - '<code>⎕SRC</code>: Source': system-functions/src.md
           - '<code>⎕STACK</code>: State Indicator Stack': system-functions/stack.md
           - '<code>⎕STATE</code>: State of Object': system-functions/state.md
-          - '<code>⎕STOP</code>: Set Stop': system-functions/set-stop.md
-          - '<code>⎕STOP</code>: Query Stop': system-functions/query-stop.md
+          - '<code>⎕STOP</code>: Query Stop Vector': system-functions/stop-monadic.md
+          - '<code>⎕STOP</code>: Set Stop Vector': system-functions/stop-dyadic.md
           - '<code>⎕SVC</code>: Set Access Control': system-functions/set-access-control.md
           - '<code>⎕SVC</code>: Query Access Control': system-functions/query-access-control.md
           - '<code>⎕SVO</code>: Shared Variable Offer': system-functions/shared-variable-offer.md
@@ -455,8 +455,8 @@ nav:
           - '<code>⎕TNUMS</code>: Thread Numbers': system-functions/tnums.md
           - '<code>⎕TPOOL</code>: Token Pool': system-functions/tpool.md
           - '<code>⎕TPUT</code>: Put Tokens': system-functions/tput.md
-          - '<code>⎕TRACE</code>: Set Trace': system-functions/set-trace.md
-          - '<code>⎕TRACE</code>: Query Trace': system-functions/query-trace.md
+          - '<code>⎕TRACE</code>: Query Trace Vector': system-functions/trace-monadic.md
+          - '<code>⎕TRACE</code>: Set Trace Vector': system-functions/trace-dyadic.md
           - '<code>⎕TRAP</code>: Trap Event': system-functions/trap.md
           - '<code>⎕TREQ</code>: Token Requests': system-functions/treq.md
           - '<code>⎕TS</code>: Timestamp': system-functions/ts.md
