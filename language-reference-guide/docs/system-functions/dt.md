@@ -549,7 +549,7 @@ If a text-formatted datetime contains elements from more than one of these three
 
 Elided elements of a year, month, day-of-month date are all (including the year) implicitly `1`. Elided elements of times are all implicitly `0`.
 
-Some combinations of variable-length substitutions can make particular texts impossible to parse unambiguously. For example, the formatting pattern `MD` (1 to 2 digits of month immediately followed by 1 to 2 digits of day-of-month) formats both 3 December and 23 January as `123`, so the text `123` cannot be matched against `MD` and an error is signalled. Whether such an ambiguity actually arises depends on the text being parsed: the text `1231` can only mean 31 December and is matched without error. Where two or more variable-length numeric or alphanumeric substitutions are adjacent, you can place literal text between them that cannot be confused with the substitution text to avoid such ambiguities.
+Some combinations of variable-length substitutions can make particular texts impossible to parse unambiguously. For example, the formatting pattern `MD` (1 to 2 digits of month immediately followed by 1 to 2 digits of day-of-month) formats both 3 December and 23 January as `123`. Therefore, the text `123` cannot be matched against `MD`, and an error is signalled. Whether such an ambiguity actually arises depends on the text being parsed. By contrast, the text `1231` can only mean 31 December, and is matched without error. Where two or more variable-length numeric or alphanumeric substitutions are adjacent, you can place literal text between them that cannot be confused with the substitution text to avoid such ambiguities.
 
 #### Consistency
 
