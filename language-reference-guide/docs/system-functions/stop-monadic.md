@@ -20,11 +20,13 @@ This function reports the lines of a defined function or operator on which stop 
 
 ## Right Argument
 
-`Y` is a simple character scalar or vector containing the name of a visible defined function or operator: a tradfn, tradop, dfn, or dop. Any other name signals `DOMAIN ERROR`.
+`Y` is a simple character scalar or vector containing the name of a visible function or operator. A name that is not the name of a function or operator signals `DOMAIN ERROR`.
 
 ## Result
 
 `R` is a simple integer vector of the line numbers on which stop controls are set, in ascending order. `0` means that a stop control is set immediately before exit from the function or operator.
+
+Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops): for a derived function, such as a train, `R` is empty.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

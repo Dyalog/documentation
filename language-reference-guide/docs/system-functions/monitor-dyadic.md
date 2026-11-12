@@ -39,11 +39,11 @@ Setting monitor controls cancels the existing ones, and the statistics collected
 
 ## Right Argument
 
-`Y` is a simple character scalar or vector containing the name of a visible defined function or operator. Any other name signals `DOMAIN ERROR`.
+`Y` is a simple character scalar or vector containing the name of a visible function or operator. A name that is not the name of a function or operator signals `DOMAIN ERROR`.
 
 ## Result
 
-`R` is a simple integer vector of the line numbers on which monitor controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Monitor controls do not apply to dfns and dops, and cannot be set in a locked function or operator: in these cases, the attempt is ignored, and `R` is empty.
+`R` is a simple integer vector of the line numbers on which monitor controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Monitor controls apply only to tradfns and tradops, and cannot be set in a locked one: otherwise, the attempt is ignored, and `R` is empty.
 
 Monitor controls, and the statistics collected for them, are saved with the workspace.
 

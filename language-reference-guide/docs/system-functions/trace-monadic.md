@@ -20,13 +20,13 @@ This function reports the lines of a tradfn or tradop on which trace controls ar
 
 ## Right Argument
 
-`Y` is a simple character scalar or vector containing the name of a visible defined function or operator. Any other name signals `DOMAIN ERROR`.
+`Y` is a simple character scalar or vector containing the name of a visible function or operator. A name that is not the name of a function or operator signals `DOMAIN ERROR`.
 
 ## Result
 
 `R` is a simple integer vector of the line numbers on which trace controls are set, in ascending order. `0` means that a trace control is set to display the result of the function or operator immediately before exit.
 
-Trace controls do not apply to dfns and dops: for a dfn or dop, `R` is empty.
+Trace controls apply only to tradfns and tradops: for any other function or operator, such as a dfn, a dop, or a derived function, `R` is empty.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

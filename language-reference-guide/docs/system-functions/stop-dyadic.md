@@ -34,11 +34,11 @@ Setting stop controls cancels the existing ones:
 
 ## Right Argument
 
-`Y` is a simple character scalar or vector containing the name of a visible defined function or operator: a tradfn, tradop, dfn, or dop. Any other name signals `DOMAIN ERROR`.
+`Y` is a simple character scalar or vector containing the name of a visible function or operator. A name that is not the name of a function or operator signals `DOMAIN ERROR`.
 
 ## Result
 
-`R` is a simple integer vector of the line numbers on which stop controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Stop controls cannot be set in a locked function or operator: the attempt is ignored, and `R` is empty.
+`R` is a simple integer vector of the line numbers on which stop controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops), and cannot be set in a locked function or operator: otherwise, the attempt is ignored, and `R` is empty.
 
 ## Stopping
 
