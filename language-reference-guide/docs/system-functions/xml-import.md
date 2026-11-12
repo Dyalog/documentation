@@ -29,7 +29,7 @@ This function converts XML text to an APL array. To convert an APL array to XML 
 
 `X` is optional, and specifies [variant options](#variant-options) as a set of option/value pairs, each a character vector. `X` can be a 2-element vector, or a vector of 2-element character vectors. The [`⍠`](../primitive-operators/variant.md) operator is the recommended way to set these options; `X` is retained for backwards compatibility.
 
-An option name or value is spelled differently from its `⍠` form: lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is, therefore, `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
+An option name or value is spelled differently from its `⍠` form. It is in lower case throughout, with a dash before a capital that is not the first letter. `UnknownEntity` is, therefore, `unknown-entity`, and `Preserve` is `preserve`. The names and values are case-sensitive either way.
 
 ## Result
 
@@ -66,7 +66,7 @@ All XML markup other than tags is delimited by either `<!` and `>`, or `<?` and 
 
 Character data itself has no tag name or attributes. As an optimisation, when character data is the sole content of an element it is included with its parent rather than as a separate row. The level number stored is then that of the parent; the data itself implicitly has a level number one greater.
 
-Column 5 describes each row as a convenience to simplify processing of the array, although this information could be deduced. A row can contain an entry for an element, character data, markup not otherwise defined, a comment, or a processing instruction, and an element has zero or more of these as children. For all types except elements the value is as shown above; for an element it is the value of the row itself (`1`) added to those of its children, so an element containing one or more sub-elements and character data is `7`, that is `1` (element) + `2` (child element) + `4` (character data). In addition:
+Column 5 describes each row as a convenience to simplify processing of the array, although this information could be deduced. A row can contain an entry for an element, character data, markup not otherwise defined, a comment, or a processing instruction, and an element has zero or more of these as children. For all types except elements the value is as shown above; for an element it is the value of the row itself (`1`) added to those of its children. For example, an element containing one or more sub-elements and character data is `7`, that is `1` (element) + `2` (child element) + `4` (character data). In addition:
 
 - Odd values always represent elements. Odd values other than `1` indicate that there are children.
 - Elements that contain only character data (`5`) are combined into a single row, as noted above.
@@ -75,17 +75,17 @@ Column 5 describes each row as a convenience to simplify processing of the array
 
 ## Limitations
 
-`⎕XML` does not process the contents of markup other than tags, so no validation takes place. This has varying effects, including but not limited to the following:
+`⎕XML` does not process the contents of markup other than tags. Therefore, no validation takes place. This has varying effects, including but not limited to the following:
 
-- Constraints specified in markup such as element type declarations are ignored, so syntactically correct elements that fall outside their constraint are not rejected.
+- Constraints specified in markup such as element type declarations are ignored. Therefore, syntactically correct elements that fall outside their constraint are not rejected.
 - Default attributes in attribute-list declarations are not automatically added to elements.
 - Conditional sections are always ignored.
-- Only standard, predefined entity references are recognised; entity declarations that define other entity references have no effect, so `⎕XML` converts only the predefined types.
+- Only standard, predefined entity references are recognised; entity declarations that define other entity references have no effect. Therefore, `⎕XML` converts only the predefined types.
 - External entities are not processed.
 
 Because markup that describes the format of allowable data is not processed, no error is reported if element contents and attributes do not conform to their restricted declarations.
 
-A [CDATA section](xml.md#cdata-sections) is never recorded as markup: its content appears as character data instead. XML imported to an APL array and exported again, therefore, has no CDATA sections, although [Export XML](xml-export.md#result) can generate them from markup.
+A [CDATA section](xml.md#cdata-sections) is never recorded as markup. Instead, its content appears as character data. XML imported to an APL array and exported again, therefore, has no CDATA sections, although [Export XML](xml-export.md#result) can generate them from markup.
 
 ## Variant Options
 
@@ -122,7 +122,7 @@ The examples below all use this XML:
 
 ### Variant Option: `Whitespace`
 
-The `Whitespace` variant option specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data, so whitespace in attribute values is always preserved. The default is `'Strip'`.
+The `Whitespace` variant option specifies the default handling of whitespace surrounding and within character data, which the `xml:space` attribute can override. Attribute values are not character data. Therefore, whitespace in attribute values is always preserved. The default is `'Strip'`.
 
 Line endings are normalised to `0x0A` before the XML is parsed, whatever `Whitespace` is set to.
 

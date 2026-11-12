@@ -43,7 +43,7 @@ The XML definition uses specific terminology to describe its component parts. Th
 
 ### Character Data
 
-Character data consists of free-form text. The free-form text should not include the characters `>`, `<` or `&`, so these must be represented by their entity references (`&gt;`, `&lt;`, and `&amp;` respectively), or numeric character references.
+Character data consists of free-form text. The free-form text should not include the characters `>`, `<`, or `&`. Instead, these must be represented by their entity references (`&gt;`, `&lt;`, and `&amp;` respectively), or numeric character references.
 
 ### Entity References and Character References
 
@@ -53,7 +53,7 @@ There is a predefined set of entity references, and the XML specification allows
 
 ### Whitespace
 
-Whitespace sequences consist of one or more spaces, tabs, or line endings. Line endings are represented differently on different systems: `0x0D 0x0A`, `0x0A`, and `0x0D` are all used.
+Whitespace sequences consist of one or more spaces, tabs, or line endings. Different systems represent line endings differently, using `0x0D 0x0A`, `0x0A`, or `0x0D`.
 
 ### Elements
 
