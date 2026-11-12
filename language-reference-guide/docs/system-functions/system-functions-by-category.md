@@ -50,15 +50,15 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
-|[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
-|[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
+|[`⎕MONITOR`](monitor-monadic.md)|Query Monitor Controls|Monadic function|
+|[`⎕MONITOR`](monitor-dyadic.md)|Set Monitor Controls|Dyadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
 |[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
 |[`⎕REFS`](refs.md)   |Local References      |Monadic function|
-|[`⎕STOP`](set-stop.md)   |Set Stop vector   |Dyadic function|
-|[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
-|[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
-|[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
+|[`⎕STOP`](stop-monadic.md)   |Query Stop Vector|Monadic function|
+|[`⎕STOP`](stop-dyadic.md)   |Set Stop Vector   |Dyadic function|
+|[`⎕TRACE`](trace-monadic.md)  |Query Trace Vector|Monadic function|
+|[`⎕TRACE`](trace-dyadic.md)  |Set Trace Vector  |Dyadic function|
 
 ### Top-level Namespaces
 

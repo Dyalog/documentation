@@ -3,20 +3,29 @@ search:
   exclude: true
 ---
 
-# <span>Stop Controls</span> `⎕STOP`
+# <span>Stop Vector</span> `⎕STOP`
 
-## Dyadic `⎕STOP` means
+`⎕STOP` deals with the stop controls of a defined function or operator: the lines before which execution is suspended.
 
-[Set Stop Controls](set-stop.md)
+## Query Stop Vector
+
+[Monadic `⎕STOP`](stop-monadic.md) reports the lines on which stop controls are set:
+
 ```apl
-      ⊢(0,⍳10) ⎕STOP 'FOO'
+      ⎕STOP 'FOO'
 0 1
 ```
 
-## Monadic `⎕STOP` means
+## Set Stop Vector
 
-[Query Stop Controls](query-stop.md)
+[Dyadic `⎕STOP`](stop-dyadic.md) sets the stop controls:
+
 ```apl
-      ⎕STOP 'FOO'
+      ⊢0 1 ⎕STOP 'FOO'
 0 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕STOP STOP
+</div>
