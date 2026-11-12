@@ -12,6 +12,10 @@ search:
 [Monadic `⎕STOP`](stop-monadic.md) reports the lines on which stop controls are set:
 
 ```apl
+      ∇ R←FOO
+[1]    R←10
+      ∇
+      0 1 ⎕STOP 'FOO'
       ⎕STOP 'FOO'
 0 1
 ```
@@ -21,8 +25,8 @@ search:
 [Dyadic `⎕STOP`](stop-dyadic.md) sets the stop controls:
 
 ```apl
-      ⊢0 1 ⎕STOP 'FOO'
-0 1
+      ⊢1 ⎕STOP 'FOO'
+1
 ```
 
 <!-- Hidden search keywords -->

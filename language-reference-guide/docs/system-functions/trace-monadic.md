@@ -9,11 +9,13 @@ This function reports the lines of a tradfn or tradop on which trace controls ar
 
 <h2 class="example">Example</h2>
 
-`DSL` is defined in the [example for dyadic `⎕TRACE`](trace-dyadic.md#tracing):
-
 ```apl
-      ⎕TRACE 'DSL'
-0 1 2 3 4 5 6
+      ∇ R←FOO
+[1]    R←10
+      ∇
+      0 1 ⎕TRACE 'FOO'
+      ⎕TRACE 'FOO'
+0 1
 ```
 
 ## Right Argument

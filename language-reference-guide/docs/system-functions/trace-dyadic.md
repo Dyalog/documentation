@@ -10,7 +10,9 @@ This function sets trace controls on lines of a tradfn or tradop, replacing any 
 <h2 class="example">Example</h2>
 
 ```apl
-      ⎕FX 'R←FOO' 'R←10'
+      ∇ R←FOO
+[1]    R←10
+      ∇
       ⊢(0,⍳10) ⎕TRACE 'FOO'
 0 1
 ```
@@ -49,15 +51,14 @@ Each display shows the name of the function or operator and the line number, fol
 <h3 class="example">Example</h3>
 
 ```apl
-      ⎕VR 'DSL'
-     ∇ R←DSL SKIP;A;B;C;D
+      ∇ R←DSL SKIP;A;B;C;D
 [1]    A←2×3+4
 [2]    B←(2 3⍴'ABCDEF')A
 [3]    →NEXT×⍳SKIP
 [4]    'SKIPPED LINE'
 [5]   NEXT:C←'one' ⋄ D←'two'
 [6]   END:R←C D
-     ∇
+      ∇
       (0,⍳6) ⎕TRACE 'DSL'
       DSL 1
  DSL[1]  14

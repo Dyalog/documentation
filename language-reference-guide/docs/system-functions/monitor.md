@@ -12,6 +12,15 @@ search:
 [Monadic `⎕MONITOR`](monitor-monadic.md) reports the statistics collected:
 
 ```apl
+      ∇ FOO
+[1]    A←?300 300⍴100
+[2]    B←⌹A
+[3]    C←⌹B
+[4]    R1←⌊0.5+A+.×B
+[5]    R2←A=C
+      ∇
+      (0,⍳5) ⎕MONITOR 'FOO'
+      FOO
       ⎕MONITOR 'FOO'
 0 1 35 35 0
 1 1  1  1 0
@@ -26,8 +35,8 @@ search:
 [Dyadic `⎕MONITOR`](monitor-dyadic.md) sets the monitor controls:
 
 ```apl
-      ⊢(0,⍳10) ⎕MONITOR 'FOO'
-0 1 2 3 4 5
+      ⊢1 ⎕MONITOR 'FOO'
+1
 ```
 
 <!-- Hidden search keywords -->

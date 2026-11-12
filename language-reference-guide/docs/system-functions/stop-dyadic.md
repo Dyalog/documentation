@@ -10,7 +10,9 @@ This function sets stop controls on lines of a defined function or operator, rep
 <h2 class="example">Example</h2>
 
 ```apl
-      ⎕FX 'R←FOO' 'R←10'
+      ∇ R←FOO
+[1]    R←10
+      ∇
       ⊢(0,⍳10) ⎕STOP 'FOO'
 0 1
 ```

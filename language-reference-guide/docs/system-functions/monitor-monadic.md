@@ -9,9 +9,16 @@ This function reports the timing statistics collected for the lines of a tradfn 
 
 <h2 class="example">Example</h2>
 
-`FOO` is defined, and its monitor controls are set, in the [example for dyadic `⎕MONITOR`](monitor-dyadic.md). After it has run once:
-
 ```apl
+      ∇ FOO
+[1]    A←?300 300⍴100
+[2]    B←⌹A
+[3]    C←⌹B
+[4]    R1←⌊0.5+A+.×B
+[5]    R2←A=C
+      ∇
+      (0,⍳5) ⎕MONITOR 'FOO'
+      FOO
       ⎕MONITOR 'FOO'
 0 1 35 35 0
 1 1  1  1 0

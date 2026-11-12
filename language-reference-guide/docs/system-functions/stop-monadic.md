@@ -10,7 +10,9 @@ This function reports the lines of a defined function or operator on which stop 
 <h2 class="example">Example</h2>
 
 ```apl
-      ⎕FX 'R←FOO' 'R←10'
+      ∇ R←FOO
+[1]    R←10
+      ∇
       0 1 ⎕STOP 'FOO'
       ⎕STOP 'FOO'
 0 1

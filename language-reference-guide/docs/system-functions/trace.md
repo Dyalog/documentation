@@ -12,8 +12,12 @@ search:
 [Monadic `⎕TRACE`](trace-monadic.md) reports the lines on which trace controls are set:
 
 ```apl
-      ⎕TRACE 'DSL'
-0 1 2 3 4 5 6
+      ∇ R←FOO
+[1]    R←10
+      ∇
+      0 1 ⎕TRACE 'FOO'
+      ⎕TRACE 'FOO'
+0 1
 ```
 
 ## Set Trace Vector
@@ -21,8 +25,8 @@ search:
 [Dyadic `⎕TRACE`](trace-dyadic.md) sets the trace controls:
 
 ```apl
-      ⊢(0,⍳6) ⎕TRACE 'DSL'
-0 1 2 3 4 5 6
+      ⊢1 ⎕TRACE 'FOO'
+1
 ```
 
 <!-- Hidden search keywords -->
