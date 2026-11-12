@@ -137,7 +137,7 @@ The Alphanumeric (`A`) phrase formats characters, right-justified in the field u
 
 ## Pattern Format
 
-The Pattern (`G`) phrase formats a number according to a pattern: an arbitrary string of characters, excluding the delimiters. The characters `9` and `Z` (unless altered by the [`S` qualifier](#qualifiers)) are special, and are known as _digit selectors_. Only the `B`, `K`, `S`, and `O` qualifiers can be used with the `G` phrase.
+The Pattern (`G`) phrase formats a number according to a pattern, which is an arbitrary string of characters, excluding the delimiters. The characters `9` and `Z` (unless altered by the [`S` qualifier](#qualifiers)) are special, and are known as _digit selectors_. Only the `B`, `K`, `S`, and `O` qualifiers can be used with the `G` phrase.
 
 The result has the same length as the pattern. The number is rounded to the nearest integer, after any scaling, and each digit replaces one digit selector. If there are fewer digits than digit selectors, the digits are padded with leading zeros; if there are more, the field is filled with asterisks.
 
@@ -244,7 +244,7 @@ The `O` qualifier replaces a specific number with text, and can be used with the
 
 The text replaces the number in the field. It is right-aligned, unless the `L` qualifier is also specified. A phrase can have more than one `O` qualifier.
 
-The comparison with the number is tolerant: [`⎕CT`](ct.md) and [`⎕DCT`](dct.md) are implicit arguments of `⎕FMT` with the `O` qualifier.
+The comparison with the number is tolerant. This means that [`⎕CT`](ct.md) and [`⎕DCT`](dct.md) are implicit arguments of `⎕FMT` with the `O` qualifier.
 
 <h4 class="example">Examples</h4>
 

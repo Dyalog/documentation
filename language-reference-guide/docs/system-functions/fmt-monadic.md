@@ -58,7 +58,7 @@ ab
   cd
 ```
 
-The result of [`⎕VR`](vr.md) separates its lines with carriage returns, so `⎕FMT` turns it into a matrix with one row per line:
+The result of [`⎕VR`](vr.md) separates its lines with carriage returns. Therefore, `⎕FMT` turns it into a matrix with one row per line:
 
 ```apl
       ⎕FX 'R←FOO' 'R←10'
