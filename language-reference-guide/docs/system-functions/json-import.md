@@ -24,7 +24,7 @@ The left argument `0` can be omitted when `Y` is a simple character array, which
 
 ## Result
 
-`R` is the APL data corresponding to `Y`. Its form depends on the [`Format`](#variant-option-format) variant option: `'D'` gives a direct APL representation, `'M'` a four-column matrix encoding the JSON structure.
+`R` is the APL data corresponding to `Y`. Its form depends on the [`Format`](#variant-option-format) variant option. `'D'` gives a direct APL representation, and `'M'` a four-column matrix encoding the JSON structure.
 
 The [JSON standard](https://www.rfc-editor.org/info/rfc8259/#section-4) states that members of a JSON object should have unique names and that implementations vary in how they treat duplicates. Dyalog does not error on duplicates, but their handling depends on the `Format` variant option.
 

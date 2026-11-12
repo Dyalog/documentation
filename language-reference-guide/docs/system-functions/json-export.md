@@ -46,7 +46,7 @@ These differences are catered for in various ways as discussed below.
 
 ## Name Mangling
 
-When `⎕JSON` converts APL data to a JSON document, a namespace member whose name begins with `⍙` is assumed to carry a name that [import](json-import.md#name-mangling) mangled, and the mangling is reversed: the leading `⍙` is dropped and each `⍙NNN⍙` group is replaced by the character with [decimal Unicode code point](ucs.md#monadic-ucs) `NNN`.
+When `⎕JSON` converts APL data to a JSON document, a namespace member whose name begins with `⍙` is assumed to carry a name that [import](json-import.md#name-mangling) mangled, and the mangling is reversed. The leading `⍙` is dropped, and each `⍙NNN⍙` group is replaced by the character with [decimal Unicode code point](ucs.md#monadic-ucs) `NNN`.
 
 <h3 class="example">Example</h3>
 
@@ -66,7 +66,7 @@ The member named `⍙2a` is exported under its original name `2a`, which is not 
 {"sýn":"vision"}
 ```
 
-A name is only un-mangled when doing so yields a name that is not valid in APL, because only such names are mangled in the first place. Any other name is exported as it stands, so a member name that genuinely begins with `⍙` survives:
+A name is only un-mangled when doing so yields a name that is not valid in APL, because only such names are mangled in the first place. Any other name is exported as it stands. Therefore, a member name that genuinely begins with `⍙` survives:
 
 ```apl
       1 ⎕JSON (⍙abc:1)
