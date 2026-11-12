@@ -9,7 +9,7 @@ This function releases a range of token types previously reserved by [`⎕TALLOC
 
 ## Left Argument
 
-`X` identifies the range to release. It is a scalar greater than or equal to the number of the range and less than one more than it, so the range's own number will do.
+`X` identifies the range to release. It is a scalar greater than or equal to the number of the range and less than one more than it. Therefore, the range's own number will do.
 
 ## Result
 
@@ -17,7 +17,7 @@ The [shy](../../programming-reference-guide/introduction/results.md#shy-results)
 
 ## Conditions
 
-The range must have been allocated, must not already have been released, and must be inactive: none of its tokens can be in the token pool or awaited by a [`⎕TGET`](tget.md). Otherwise `⎕TALLOC` signals a `DOMAIN ERROR` naming the range. Use [`⎕TALLOC 2`](talloc-pool.md) to see which of its tokens are still pooled.
+The range must have been allocated, must not already have been released, and must be inactive, meaning that none of its tokens can be in the token pool or awaited by a [`⎕TGET`](tget.md). Otherwise `⎕TALLOC` signals a `DOMAIN ERROR` naming the range. Use [`⎕TALLOC 2`](talloc-pool.md) to see which of its tokens are still pooled.
 
 <h2 class="example">Example</h2>
 

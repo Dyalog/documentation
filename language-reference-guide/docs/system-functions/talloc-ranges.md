@@ -9,7 +9,7 @@ This function reports the token ranges currently allocated by [`⎕TALLOC 1`](ta
 
 ## Left Argument
 
-`X` identifies one range to report on. It is a scalar greater than or equal to the number of the range and less than one more than it, so the range's own number will do. If `X` does not identify a currently allocated range, `⎕TALLOC` signals a `DOMAIN ERROR`.
+`X` identifies one range to report on. It is a scalar greater than or equal to the number of the range and less than one more than it. Therefore, the range's own number will do. If `X` does not identify a currently allocated range, `⎕TALLOC` signals a `DOMAIN ERROR`.
 
 If `X` is omitted, every currently allocated range is reported.
 

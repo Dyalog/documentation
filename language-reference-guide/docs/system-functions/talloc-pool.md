@@ -9,7 +9,7 @@ This function reports which tokens currently in the token pool belong to one all
 
 ## Left Argument
 
-`X` identifies the range to report on. It is a scalar greater than or equal to the number of the range and less than one more than it, so the range's own number will do.
+`X` identifies the range to report on. It is a scalar greater than or equal to the number of the range and less than one more than it. Therefore, the range's own number will do.
 
 ## Result
 
