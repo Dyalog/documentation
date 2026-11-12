@@ -26,7 +26,7 @@ This function reports the lines of a defined function or operator on which stop 
 
 `R` is a simple integer vector of the line numbers on which stop controls are set, in ascending order. `0` means that a stop control is set immediately before exit from the function or operator.
 
-Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops): for a derived function, such as a train, `R` is empty.
+Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops). For a derived function, such as a train, `R` is empty.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

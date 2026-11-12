@@ -5,7 +5,7 @@ search:
 
 # <span>Stop Vector</span> `⎕STOP`
 
-`⎕STOP` deals with the stop controls of a defined function or operator: the lines before which execution is suspended.
+`⎕STOP` deals with the stop controls of a defined function or operator, which mark the lines before which execution is suspended.
 
 ## Query Stop Vector
 

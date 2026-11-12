@@ -5,7 +5,7 @@ search:
 
 # <span>Monitor Controls</span> `⎕MONITOR`
 
-`⎕MONITOR` deals with the monitor controls of a tradfn or tradop: the lines for which timing statistics are collected.
+`⎕MONITOR` deals with the monitor controls of a tradfn or tradop, which mark the lines for which timing statistics are collected.
 
 ## Query Monitor Controls
 

@@ -38,7 +38,7 @@ Setting stop controls cancels the existing ones:
 
 ## Result
 
-`R` is a simple integer vector of the line numbers on which stop controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops), and cannot be set in a locked function or operator: otherwise, the attempt is ignored, and `R` is empty.
+`R` is a simple integer vector of the line numbers on which stop controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Stop controls apply only to defined functions and operators (tradfns, tradops, dfns, and dops), and cannot be set in a locked function or operator. An attempt to set them on a derived function, or on a locked function or operator, is ignored, and `R` is empty.
 
 ## Stopping
 

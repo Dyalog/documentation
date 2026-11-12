@@ -26,7 +26,7 @@ This function reports the lines of a tradfn or tradop on which trace controls ar
 
 `R` is a simple integer vector of the line numbers on which trace controls are set, in ascending order. `0` means that a trace control is set to display the result of the function or operator immediately before exit.
 
-Trace controls apply only to tradfns and tradops: for any other function or operator, such as a dfn, a dop, or a derived function, `R` is empty.
+Trace controls apply only to tradfns and tradops. For any other function or operator, such as a dfn, a dop, or a derived function, `R` is empty.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

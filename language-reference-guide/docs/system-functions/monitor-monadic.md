@@ -44,7 +44,7 @@ This function reports the timing statistics collected for the lines of a tradfn 
 |`R[;4]`|The elapsed time, in milliseconds|
 |`R[;5]`|Reserved|
 
-Monitor controls apply only to tradfns and tradops: for any other function or operator, such as a dfn, a dop, or a derived function, `R` is empty.
+Monitor controls apply only to tradfns and tradops. For any other function or operator, such as a dfn, a dop, or a derived function, `R` is empty.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

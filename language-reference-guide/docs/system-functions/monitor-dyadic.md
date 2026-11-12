@@ -43,7 +43,7 @@ Setting monitor controls cancels the existing ones, and the statistics collected
 
 ## Result
 
-`R` is a simple integer vector of the line numbers on which monitor controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Monitor controls apply only to tradfns and tradops, and cannot be set in a locked one: otherwise, the attempt is ignored, and `R` is empty.
+`R` is a simple integer vector of the line numbers on which monitor controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Monitor controls apply only to tradfns and tradops, and cannot be set in a locked one. An attempt to set them on any other function or operator, or on a locked one, is ignored, and `R` is empty.
 
 Monitor controls, and the statistics collected for them, are saved with the workspace.
 

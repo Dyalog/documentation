@@ -38,7 +38,7 @@ Setting trace controls cancels the existing ones:
 
 ## Result
 
-`R` is a simple integer vector of the line numbers on which trace controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Trace controls apply only to tradfns and tradops, and cannot be set in a locked one: otherwise, the attempt is ignored, and `R` is empty.
+`R` is a simple integer vector of the line numbers on which trace controls are now set, in ascending order, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results). Trace controls apply only to tradfns and tradops, and cannot be set in a locked one. An attempt to set them on any other function or operator, or on a locked one, is ignored, and `R` is empty.
 
 ## Tracing
 

@@ -5,7 +5,7 @@ search:
 
 # <span>Trace Vector</span> `⎕TRACE`
 
-`⎕TRACE` deals with the trace controls of a tradfn or tradop: the lines whose results are displayed as they are executed.
+`⎕TRACE` deals with the trace controls of a tradfn or tradop, which mark the lines whose results are displayed as they are executed.
 
 ## Query Trace Vector
 
