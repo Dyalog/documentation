@@ -76,17 +76,17 @@ but this fails, because it has two pairs:
       ⎕CMD'"C:\Windows\System32\notepad.exe" "C:\temp\myfile.txt"'
 ```
 
-[Starting the program](#starting-a-program) instead does not involve the Command Processor, so it has no such restriction, but `⎕CMD` then returns immediately, without the program's output:
+[Starting the program](#starting-a-program) instead does not involve the Command Processor. Therefore, it has no such restriction, but `⎕CMD` then returns immediately, without the program's output:
 
 ```apl
       ⎕CMD'"C:\Windows\System32\notepad.exe" "C:\temp\myfile.txt"' ''
 ```
 
-[Direct execution](shell.md#direct-execution) with `⎕SHELL` also avoids the Command Processor, and it takes the program and each of its arguments as separate items, so none of them need quoting; it waits for the program to finish and returns its output.
+[Direct execution](shell.md#direct-execution) with `⎕SHELL` also avoids the Command Processor, and it takes the program and each of its arguments as separate items. Therefore, none of them need quoting. It waits for the program to finish and returns its output.
 
 ### Commands that Prompt for Input
 
-The output of a command is collected through an unnamed pipe, so a command that prompts for input cannot be answered, and APL waits indefinitely. Such a command must redirect its input and output to the console, `CON`. `⎕CMD` then runs the Command Processor in a visible window, through which the user can respond, and `R` is empty:
+The output of a command is collected through an unnamed pipe. This means that a command that prompts for input cannot be answered, and APL waits indefinitely. Such a command must redirect its input and output to the console, `CON`. `⎕CMD` then runs the Command Processor in a visible window, through which the user can respond, and `R` is empty:
 
 ```apl
       ⎕CMD'pause <CON >CON'
@@ -98,7 +98,7 @@ The [`Input`](shell.md#variant-option-input) variant option of `⎕SHELL` can su
 
 ### Command Processor
 
-By default, `⎕CMD` runs the command `Y` as `'cmd.exe /c ',Y`. The [`CMD_PREFIX` and `CMD_POSTFIX`](../../windows-installation-and-configuration-guide/configuration-parameters/cmd-prefix-and-cmd-postfix.md) configuration parameters select another command processor: the command is preceded by `CMD_PREFIX`, which names the command processor and any parameters it requires, and followed by `CMD_POSTFIX`. If `CMD_PREFIX` is not defined, it is the value of the `COMSPEC` environment variable followed by `/c`, or `cmd.exe /c` if `COMSPEC` is not defined either. If `CMD_POSTFIX` is not defined, it is empty.
+By default, `⎕CMD` runs the command `Y` as `'cmd.exe /c ',Y`. The [`CMD_PREFIX` and `CMD_POSTFIX`](../../windows-installation-and-configuration-guide/configuration-parameters/cmd-prefix-and-cmd-postfix.md) configuration parameters select another command processor. The command is preceded by `CMD_PREFIX`, which names the command processor and any parameters it requires, and followed by `CMD_POSTFIX`. If `CMD_PREFIX` is not defined, it is the value of the `COMSPEC` environment variable followed by `/c`, or `cmd.exe /c` if `COMSPEC` is not defined either. If `CMD_POSTFIX` is not defined, it is empty.
 
 The [`Shell`](shell.md#variant-option-shell) variant option of `⎕SHELL` selects the command processor for a single call instead.
 
