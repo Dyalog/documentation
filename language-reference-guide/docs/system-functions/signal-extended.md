@@ -39,7 +39,7 @@ Each pair names a member of [`⎕DMX`](dmx.md) and the value to report for it; m
 
 The names that can be given are `Category`, `EM`, `EN`, `ENX`, `HelpURL`, `Message`, `OSError`, and `Vendor`. The remaining members of `⎕DMX`, `DM` and `InternalLocation`, are always derived by the interpreter and cannot be set.
 
-Each value must suit its name: `ENX` takes an integer, and `OSError` a three-element vector of an integer, an integer, and a character vector.
+Each value must suit its name. For example, `ENX` takes an integer, and `OSError` a three-element vector of an integer, an integer, and a character vector.
 
 !!! Info "Information"
     Dyalog might extend `⎕DMX` in a future release, which would change the names that can be given here.
@@ -60,7 +60,7 @@ Each value must suit its name: `ENX` takes an integer, and `OSError` a three-ele
 
 ## Result
 
-`R` is `Y`, and is shy. An event is generated, so `R` is only of interest when nothing is signalled, which happens when `Y` is empty.
+`R` is `Y`, and is shy. An event is generated. Therefore, `R` is only of interest when nothing is signalled, which happens when `Y` is empty.
 
 ## Effect on Execution
 
@@ -85,7 +85,7 @@ Because the state indicator is cut back past the function that invoked `⎕SIGNA
 
 ## .NET Exceptions
 
-`EN` `90` throws a .NET exception. There is no left argument to carry an exception object, so the exception thrown is always a plain `System.Exception`:
+`EN` `90` throws a .NET exception. There is no left argument to carry an exception object. Therefore, the exception thrown is always a plain `System.Exception`:
 
 ```apl
       ⎕SIGNAL⊂⊂('EN' 90)

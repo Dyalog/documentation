@@ -36,7 +36,7 @@ ERROR 500
 
 ## Left Argument
 
-`X` is the event message, replacing the standard one. It is optional: omitting it, or supplying an empty vector, uses the standard [event message](em.md) for the event number in `Y`. See [APL Error Messages](../../programming-reference-guide/error-messages/apl-errors.md) for the standard messages.
+`X` is the event message, replacing the standard one. It is optional. Omitting it, or supplying an empty vector, uses the standard [event message](em.md) for the event number in `Y`. See [APL Error Messages](../../programming-reference-guide/error-messages/apl-errors.md) for the standard messages.
 
 `X` must be a simple character scalar or vector, or a [reference to an exception object](#net-exceptions).
 
@@ -57,7 +57,7 @@ DIVISION ERROR
 
 ## Result
 
-`R` is `Y`, and is shy. An event is generated, so `R` is only of interest when nothing is signalled, which happens when `Y` is empty.
+`R` is `Y`, and is shy. An event is generated. Therefore, `R` is only of interest when nothing is signalled, which happens when `Y` is empty.
 
 ## Effect on Execution
 
