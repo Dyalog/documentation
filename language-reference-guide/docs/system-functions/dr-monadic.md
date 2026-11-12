@@ -39,7 +39,7 @@ A data type code is the number of bits per item followed by a digit for the kind
 
 For example, `163` is a 16-bit signed integer. The exception is `326`, which identifies a pointer whether the interpreter uses 32-bit or 64-bit pointers.
 
-The internal representation of character data differs between the Unicode and Classic editions, so some data types exist in only one of them.
+The internal representation of character data differs between the Unicode and Classic editions. Therefore, some data types exist in only one of them.
 
 Table: Data types { #data-types }
 
