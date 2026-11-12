@@ -32,7 +32,7 @@ This function maps a file of raw data to an array in the workspace, with a given
 
 The data type is any of the codes that [monadic `⎕DR`](dr-monadic.md) reports, except `326` (pointer) and, in the Unicode Edition, `82`.
 
-One item of the shape (normally the first) can be `¯1`, meaning as many complete records as the file holds. If `X` is a singleton, the array is a scalar, so only the first value in the file is accessible.
+One item of the shape (normally the first) can be `¯1`, meaning as many complete records as the file holds. If `X` is a singleton, the array is a scalar. This means that only the first value in the file is accessible.
 
 <h3 class="example">Examples</h3>
 
@@ -92,7 +92,7 @@ With read-write access, a change to the array by indexed or pick assignment, for
 
 ## Compatibility between Editions
 
-In the Unicode Edition, character data that was written to a raw file with data type 82 can be read by mapping the file with data type 83 and using the result `R` to index into [`⎕AVU`](avu.md): `⎕UCS ⎕AVU[⎕IO+256|R]` gives the characters.
+In the Unicode Edition, character data that was written to a raw file with data type 82 can be read by mapping the file with data type 83 and using the result `R` to index into [`⎕AVU`](avu.md). The expression `⎕UCS ⎕AVU[⎕IO+256|R]` gives the characters.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
