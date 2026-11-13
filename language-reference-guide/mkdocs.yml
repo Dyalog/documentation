@@ -303,7 +303,7 @@ nav:
           - '<code>⎕AT</code>: Attributes': system-functions/at.md
           - '<code>⎕ATX</code>: Extended Attributes': system-functions/atx.md
           - '<code>⎕AV</code>: Atomic Vector': system-functions/av.md
-          - '<code>⎕AVU</code>: Atomic Vector Unicode': system-functions/avu.md
+          - '<code>⎕AVU</code>: Atomic Vector Unicode Mapping': system-functions/avu.md
           - '<code>⎕BASE</code>: Base Class': system-functions/base.md
           - '<code>⎕C</code>: Case Convert': system-functions/c.md
           - '<code>⎕CLASS</code>: Class': system-functions/class.md
@@ -404,7 +404,8 @@ nav:
           - '<code>⎕NTIE</code>: Native File Tie': system-functions/ntie.md
           - '<code>⎕NULL</code>: Null Item': system-functions/null.md
           - '<code>⎕NUNTIE</code>: Native File Untie': system-functions/nuntie.md
-          - '<code>⎕NXLATE</code>: Native File Translate': system-functions/nxlate.md
+          - '<code>⎕NXLATE</code>: Query Native File Translation Vector': system-functions/nxlate-monadic.md
+          - '<code>⎕NXLATE</code>: Set Native File Translation Vector': system-functions/nxlate-dyadic.md
           - '<code>⎕OFF</code>: Sign Off APL': system-functions/off.md
           - '<code>⎕OPT</code>: Variant': system-functions/opt.md
           - '<code>⎕OR</code>: Object Representation': system-functions/or.md

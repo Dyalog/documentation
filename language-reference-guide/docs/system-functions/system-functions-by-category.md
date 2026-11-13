@@ -341,10 +341,11 @@ These are relevant only for the Classic (non-Unicode) edition and dealing with i
 
 |Name     |Description                |Form|
 |---------|---------------------------|-----|
-|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
+|[`⎕NXLATE`](nxlate-monadic.md)  |Query Native File Translation Vector|Monadic function|
+|[`⎕NXLATE`](nxlate-dyadic.md)  |Set Native File Translation Vector|Dyadic function|
 |[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
 |[`⎕AV`](av.md)   |Atomic Vector              |Constant|
-|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
+|[`⎕AVU`](avu.md)  |Atomic Vector Unicode Mapping   |Variable|
 
 ### Archaic and Deprecated
 
@@ -382,7 +383,7 @@ A system variable can never be undefined. Default values are assigned to all sys
 
 |Name           |Description                               |Scope      |
 |---------------|-----------------------------------------|-----------|
-|[`⎕AVU`](avu.md)  |Atomic Vector – Unicode              |Namespace  |
+|[`⎕AVU`](avu.md)  |Atomic Vector Unicode Mapping        |Namespace  |
 |[`⎕CT`](ct.md)    |Comparison Tolerance                |Namespace  |
 |[`⎕DCT`](dct.md)  |Decimal Comparison Tolerance              |Namespace  |
 |[`⎕DIV`](div.md)  |Division Method                     |Namespace  |
