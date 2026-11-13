@@ -28,7 +28,7 @@ If the workspace name identifies a file that is not a workspace, the system repo
 
 If the source workspace is too large to be loaded, the system reports `ws too large`.
 
-When copying data between Classic and Unicode Editions, `)COPY` will fail with `TRANSLATION ERROR` if *any* object in the source workspace fails conversion between Unicode and `⎕AV` indices, whether or not that object is specified by `nms`. See [Atomic Vector - Unicode](../system-functions/avu.md) for further details.
+When copying data between Classic and Unicode Editions, `)COPY` will fail with `TRANSLATION ERROR` if *any* object in the source workspace fails [conversion between Unicode and `⎕AV` indices](../system-functions/avu.md#translation), whether or not that object is specified by `nms`.
 
 If `ws` is omitted, the file open dialog box is displayed and all objects copied from the selected workspace.
 
