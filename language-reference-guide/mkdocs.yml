@@ -308,8 +308,8 @@ nav:
           - '<code>⎕C</code>: Case Convert': system-functions/c.md
           - '<code>⎕CLASS</code>: Class': system-functions/class.md
           - '<code>⎕CLEAR</code>: Clear Workspace': system-functions/clear.md
-          - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
-          - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
+          - '<code>⎕CMD</code>: Call Windows Command Processor': system-functions/cmd-monadic.md
+          - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/cmd-dyadic.md
           - '<code>⎕CR</code>: Canonical Representation': system-functions/cr.md
           - '<code>⎕CS</code>: Change Space': system-functions/cs.md
           - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
@@ -422,8 +422,8 @@ nav:
           - '<code>⎕SAVE</code>: Save Workspace': system-functions/save.md
           - '<code>⎕SD</code>: Screen Dimensions': system-functions/sd.md
           - '<code>⎕SE</code>: Session Namespace': system-functions/se.md
-          - '<code>⎕SH</code>: Execute Unix Command': system-functions/execute-unix-command.md
-          - '<code>⎕SH</code>: Start Unix Auxiliary Processor': system-functions/start-unix-auxiliary-processor.md
+          - '<code>⎕SH</code>: Call Unix Command Processor': system-functions/sh-monadic.md
+          - '<code>⎕SH</code>: Start Unix Auxiliary Processor': system-functions/sh-dyadic.md
           - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
           - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
           - '<code>⎕SI</code>: State Indicator': system-functions/si.md
