@@ -300,7 +300,8 @@ nav:
           - '<code>⎕AN</code>: Account Name': system-functions/an.md
           - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
           - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
-          - '<code>⎕AT</code>: Attributes': system-functions/at.md
+          - '<code>⎕AT</code>: Object Attributes for Dyalog': system-functions/at-monadic.md
+          - '<code>⎕AT</code>: Object Attributes for APL2': system-functions/at-dyadic.md
           - '<code>⎕ATX</code>: Extended Attributes': system-functions/atx.md
           - '<code>⎕AV</code>: Atomic Vector': system-functions/av.md
           - '<code>⎕AVU</code>: Atomic Vector Unicode': system-functions/avu.md

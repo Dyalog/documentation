@@ -89,7 +89,7 @@ The result `R` is a multi-line string (that is, a character vector with embedded
 The namespace `N` can contain any or all of following callback functions:
 
 - `N.quadNC` – analogous to the system function [`⎕NC`](../../system-functions/nc.md). When applied monadically to an enclosed character vector it returns the detailed nameclass of that name. For example, given the name of a global dfn it returns the value `3.2`.
-- `N.quadAT` – analogous to the system function [`⎕AT`](../../system-functions/at.md). When applied monadically to an enclosed character vector it returns a 1 by 4 matrix whose first item is a vector of 3 integers describing (respectively) the result, function valence, and operator valence of the name.
+- `N.quadAT` – analogous to the system function [`⎕AT`](../../system-functions/at-monadic.md). When applied monadically to an enclosed character vector it returns a 1 by 4 matrix whose first item is a vector of 3 integers describing (respectively) the result, function valence, and operator valence of the name.
 - `N.getValue` – used to obtain the name of a global constant. When applied monadically to a character vector that is a global constant it returns the enclose of the constant value, otherwise it returns `⍬`.
 
 Each of these callback functions returns information about names that should be guaranteed to exist when the compiled functions are executed. The compiler assumes that the information returned by the callbacks is correct, and generates bytecode accordingly. In the case of `quadNC` and `quadAT`, if the information returned by the callbacks turns out not to be correct when the compiled function is executed, then a runtime error is generated.
