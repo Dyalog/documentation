@@ -45,7 +45,8 @@ search:
 |[`⎕EN`](../en.md)       |Event Number          |Constant|
 |[`⎕EX`](../ex.md)     |Expunge objects         |Monadic function|
 |[`⎕EXCEPTION`](../exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
-|[`⎕EXPORT`](../export.md)|Export objects       |Ambivalent function|
+|[`⎕EXPORT`](../export-monadic.md)|Query Export Type    |Monadic function|
+|[`⎕EXPORT`](../export-dyadic.md)|Set Export Type      |Dyadic function|
 |[`⎕FAPPEND`](../fappend.md) |Append a component to File |Dyadic function|
 |[`⎕FAVAIL`](../favail.md)  |File system Availability   |Constant|
 |[`⎕FCHK`](../fchk.md)    |File Check and Repair      |Ambivalent function|

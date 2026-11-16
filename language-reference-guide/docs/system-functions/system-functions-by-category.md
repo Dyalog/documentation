@@ -358,7 +358,8 @@ These are deprecated facilities that are still supported for legacy purposes; Dy
 |[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
-|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) namespace paths|
+|[`⎕EXPORT`](export-monadic.md)|Query Export Type    |Monadic function|Use full (absolute or relative) namespace paths|
+|[`⎕EXPORT`](export-dyadic.md)|Set Export Type      |Dyadic function|Use full (absolute or relative) namespace paths|
 |[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
 |[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
 |[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|
