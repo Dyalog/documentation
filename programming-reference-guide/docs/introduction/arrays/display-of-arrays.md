@@ -161,7 +161,7 @@ The following approaches produce character data from an array rather than displa
 |--------|-------------|------------------------|
 | [`⍕`](../../../language-reference-guide/primitive-functions/format.md) | Character array identical to normal session display using `⎕←` | Yes |
 | ([`⎕FMT`](../../../language-reference-guide/system-functions/format-monadic.md)) | Character matrix similar to session display using `⍞←` | Yes |
-| [`⎕JSON`](../../../language-reference-guide/system-functions/json.md) export | Conversion to a JSON character vector | No |
+| [`⎕JSON`](../../../language-reference-guide/system-functions/json-export.md) export | Conversion to a JSON character vector | No |
 | [`⎕CSV`](../../../language-reference-guide/system-functions/csv.md) export | Conversion to a CSV array or file | No |
 
 ## Print Width

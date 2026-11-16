@@ -363,7 +363,8 @@ nav:
           - '<code>⎕FX</code>: Fix Definition': system-functions/fx.md
           - '<code>⎕INSTANCES</code>: Instances': system-functions/instances.md
           - '<code>⎕IO</code>: Index Origin': system-functions/io.md
-          - '<code>⎕JSON</code>: JSON Convert': system-functions/json.md
+          - '<code>⎕JSON</code>: Import JSON': system-functions/json-import.md
+          - '<code>⎕JSON</code>: Export JSON': system-functions/json-export.md
           - '<code>⎕KL</code>: Key Label': system-functions/kl.md
           - '<code>⎕LC</code>: Line Count': system-functions/lc.md
           - '<code>⎕LOAD</code>: Load Workspace': system-functions/load.md
