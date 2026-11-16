@@ -79,7 +79,8 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 |Name        |Description   |Form|
 |------------|--------------|-----|
 |[`⎕BASE`](base.md)     |Base Class   |Reference|
-|[`⎕CLASS`](class.md)    |Class       |Monadic function|
+|[`⎕CLASS`](class-monadic.md)    |Class Hierarchy|Monadic function|
+|[`⎕CLASS`](class-dyadic.md)    |Get Class/Interface Implementation|Dyadic function |
 |[`⎕CS`](cs.md)       |Change Space   |Monadic function|
 |[`⎕DF`](df.md)       |Display Format |Monadic function|
 |[`⎕FIX`](fix.md)      |Fix           |Ambivalent function|
