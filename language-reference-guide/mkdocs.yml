@@ -409,7 +409,8 @@ nav:
           - '<code>⎕OPT</code>: Variant': system-functions/opt.md
           - '<code>⎕OR</code>: Object Representation': system-functions/or.md
           - '<code>⎕PATH</code>: Search Path': system-functions/path.md
-          - '<code>⎕PFKEY</code>: Program Function Key': system-functions/pfkey.md
+          - '<code>⎕PFKEY</code>: Query Programmable Function Key': system-functions/pfkey-monadic.md
+          - '<code>⎕PFKEY</code>: Set Programmable Function Key': system-functions/pfkey-dyadic.md
           - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
           - '<code>⎕PROFILE</code>: Profile Application': system-functions/profile.md
           - '<code>⎕PW</code>: Print Width': system-functions/pw.md
