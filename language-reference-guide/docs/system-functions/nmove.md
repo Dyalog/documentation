@@ -142,7 +142,7 @@ The `RenameOnly` variant option (a Boolean) determines what happens when it is n
 
 ### Variant Option: `ProgressCallback`
 
-The `ProgressCallback` variant option is described in the [Dyalog Programming Reference Guide](../../programming-reference-guide/native-files.md#progress-callbacks). The following is specific to `⎕NMOVE`:
+The `ProgressCallback` variant option is described under [Progress Callbacks](../../programming-reference-guide/native-files.md#progress-callbacks). The following is specific to `⎕NMOVE`:
 
 * The first element of the right argument to the callback function is the character vector `'⎕NMOVE'`.
 

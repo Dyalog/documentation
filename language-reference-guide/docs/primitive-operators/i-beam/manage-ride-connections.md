@@ -6,7 +6,7 @@ search:
 
 # <span>Manage Ride Connections</span> `R←3502⌶Y`{{key}}
 
-`3502⌶` gives control over Ride connections to the interpreter. More details about Ride can be found in the [Ride User Guide](https://dyalog.github.io/ride).
+`3502⌶` gives control over [Ride](https://dyalog.github.io/ride) connections to the interpreter.
 
 `Y` may be either `0` or `1` or a simple character vector.
 
@@ -18,7 +18,7 @@ If `Y` is `1`, then the interpreter attempts to enable Ride, using the value of 
 
 If `Y` is a character vector and Ride is currently disabled, then the current initialisation string is unconditionally replaced by the contents of `Y`. If Ride is currently enabled, the initialisation string is not replaced, and `R` will have the value `¯2`.
 
-The initialisation string has the same syntax as the value of the **RIDE_INIT** configuration parameter which is described in the [Ride User Guide](https://dyalog.github.io/ride).
+The initialisation string has the same syntax as the value of the [**RIDE_INIT**](../../../windows-installation-and-configuration-guide/configuration-parameters/ride-init.md) configuration parameter.
 
 The configuration parameter **RIDE_INIT** can still be used to establish the initial value of the Ride initialisation string.
 

@@ -1,13 +1,13 @@
 # Environment Variables
 
-Environment variables are used to configure various aspects of Dyalog. The [complete list](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) appears in the *Dyalog for Microsoft Windows Installation and Configuration Guide*; this section discusses those variables that are of particular importance to the non-GUI versions of Dyalog, and lists those that have meaning to the Unix versions. There are also some non-GUI-specific variables that are described below and some that either do not apply or might not work as the user might at first expect.
+Environment variables are used to configure various aspects of Dyalog. The [complete list](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) appears with the configuration parameters for Microsoft Windows; this section discusses those variables that are of particular importance to the non-GUI versions of Dyalog, and lists those that have meaning to the Unix versions. There are also some non-GUI-specific variables that are described below and some that either do not apply or might not work as the user might at first expect.
 
 Under Unix, all environment variables should appear in UPPER CASE. For example, to set the default value of `⎕ML` to 3, then
 ```
 $ export DEFAULT_ML=3
 ```
 
-If a [configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) described in the *Dyalog for Microsoft Windows Installation and Configuration Guide* has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
+If a configuration parameter for Microsoft Windows has a backslash "\" in its name (strictly speaking, appears in a subkey of the Dyalog key in the Windows Registry), this should be replaced with an underscore in the equivalent environment variable. This applies for example to SALT\CommandFolder.
 
 Many of these environment variables are set in the mapl script; their values are either appropriate for the installation location of Dyalog APL, or are set to define reasonable default values.
 
@@ -35,7 +35,7 @@ Table: Commonly used Variables
 |`DYALOG_SERIALFILE`|This parameter specifies the full path to the text file containing your Dyalog serial number. The default location is `$HOME/.dyalog/serial`. Setting it is useful in a multi-user environment, where a single serial number file can be shared by all users.|
 |`ENABLE_CEF`|This parameter is a Boolean value with a default value of `1`. If set to `0`, it disables the [Chromium Embedded Framework (CEF)](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) and at attempt to create an HTMLRenderer object (see [HTMLRenderer](../../object-reference/objects/htmlrenderer.md)) will fail with an error message. See the information below.|
 |`ERRORONEXTERNALEXCEPTION`|By default, any error when calling `⎕NA` will result in APL terminating; if `ERRORONEXTERNALEXCEPTION` is set to 1, then APL will instead generate an event 91: `EXTERNAL DLL EXCEPTION` . Be aware however that the workspace may become corrupted. This is best used when developing `⎕NA` code rather than in production.|
-|`LIBPATH`|A suitable entry for the Conga libraries needs to be added to the `LIBPATH` variable if Conga is to be used. For more information see the *Conga Guide*.|
+|`LIBPATH`|A suitable entry for the Conga libraries needs to be added to the `LIBPATH` variable if [Conga](https://docs.dyalog.com/latest/Conga%20User%20Guide.pdf) is to be used.|
 |`MAXWS`|Defines the size of the workspace that will be presented to the user when Dyalog APL is started. A simple integer value will be treated as being in KB. K, M and G can be appended to the value to indicate KiB, MiB and GiB (binary) respectively. If unset, the default value is 256M.|
 |`WSPATH`|Defines the search path for both workspaces and Auxiliary processors.<p/><p/>If unset, there is no default value. Workspaces and APs that are not on the `WSPATH` can be accessed using absolute or relative pathnames.|
 
@@ -94,7 +94,7 @@ Table: Miscellaneous Variables used by non-GUI Dyalog APL
 |`DYALOG_EXTVAR_SUPPORTED`|This parameter is a Boolean value with a default value of `0`. If set to `1`, support for external variables is reinstated.|
 |`DYALOG_SHELL_SUBPROCESS`|On AIX, if `DYALOG_SHELL_SUBPROCESS` is `1` (the default on AIX), the interpreter starts a (small) child process that handles calls to `⎕SHELL`.|
 
-These are the [remaining variables listed](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md) in the *Dyalog for Microsoft Windows Installation and Configuration Guide* that are effective in the non-GUI Unix versions of Dyalog.
+These are the remaining configuration parameters for Microsoft Windows that are effective in the non-GUI Unix versions of Dyalog.
 
 Table: Editor-related environment variables
 
@@ -114,7 +114,7 @@ Table: Ride-related environment variables
 
 |---------|----------------------------------------------------------------------------|
 |Variable |Notes                                                                       |
-|`RIDE_INIT`|Enables and configures Ride; see the [Ride User Guide](https://dyalog.github.io/ride) for more information.|
+|`RIDE_INIT`|Enables and configures [Ride](https://dyalog.github.io/ride).|
 
 Table: SALT and user commands related environment variables
 
@@ -123,4 +123,4 @@ Table: SALT and user commands related environment variables
 |`SESSION_FILE`|Specifies the location of the file containing `⎕SE` . The default value is `$DYALOG/default.dse`|
 |`UCMDCACHEFILE`|Specifies the location of the user command cache file. Defaults to `"UserCommand{UcmdMajor}{UcmdMinor}.{DyalogMajor}{DyalogMinor}{U|C}{bits}.cache"` , for example, `UserCommand25.182U64.cache` in the `dyalog` directory.|
 
-Further information about SALT and user commands appear in the *User Commands User Guide* and the *SALT User Guide*.
+Further information is available about [SALT](https://docs.dyalog.com/latest/SALT%20User%20Guide.pdf) and [user commands](https://docs.dyalog.com/latest/User%20Commands%20User%20Guide.pdf).

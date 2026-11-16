@@ -8,7 +8,7 @@ If specified, `ws` is a full or relative path name to the file in which the work
 
 If  `ws` specifies a file name other than that implied by  `⎕WSID`, the specified file must not already exist unless the **force** parameter is specified.. If `ws` is omitted or resolves to the same file as  `⎕WSID`, an existing stored workspace with the same name will be replaced.
 
-See [Programmer's Guide: "Workspaces"](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
+See [Workspaces](../../programming-reference-guide/introduction/workspaces.md) for the rules for specifying a workspace name.
 
 If an extension is not specified, an extension is added according to the [**WSEXT** parameter](../../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md)..
 

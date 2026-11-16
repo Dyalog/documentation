@@ -147,7 +147,7 @@ There is no way to terminate an application started by `⎕CMD` from APL; it wil
 Either form of `⎕CMD` may be used to execute a program. The difference is that when the program is executed via the Command Processor, APL waits for it to complete and returns any result that the program would have displayed in the Command Window had it been executed from a Command Window. In the second case, APL starts the program (in parallel).
 
 !!! Info "Information"
-    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a [Ride](https://dyalog.github.io/ride) session which does not support this type of user interface.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
