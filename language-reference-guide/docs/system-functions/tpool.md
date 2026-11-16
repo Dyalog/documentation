@@ -24,7 +24,7 @@ The following (`⎕ML=0`) function returns a 2-column snapshot of the contents o
 
 ```
 
-See also: [Querying  the Token Pool (Y is 2)](talloc.md).
+See also [Query Pooled Tokens in Range](talloc-pool.md), which reports only the tokens belonging to one allocated range.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

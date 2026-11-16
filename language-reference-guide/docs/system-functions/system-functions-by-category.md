@@ -273,7 +273,10 @@ These are facilities to handle threads such as those created by [Spawn](../primi
 
 |Name     |Description                  |Form|
 |---------|-----------------------------|-----|
-|[`⎕TALLOC`](talloc.md) |Allocate Token Range         |Ambivalent function|
+|[`⎕TALLOC`](talloc-allocate.md)|Allocate Token Range|Monadic function|
+|[`⎕TALLOC`](talloc-deallocate.md)|De-allocate Token Range|Dyadic function|
+|[`⎕TALLOC`](talloc-ranges.md)|Query Allocated Token Ranges|Ambivalent function|
+|[`⎕TALLOC`](talloc-pool.md)|Query Pooled Tokens in Range|Dyadic function|
 |[`⎕TCNUMS`](tcnums.md) |Thread Child Numbers         |Monadic function|
 |[`⎕TID`](tid.md)   |Current Thread Identity      |Constant|
 |[`⎕TKILL`](tkill.md) |Kill Threads        |Ambivalent function|
@@ -288,7 +291,10 @@ These are facilities to ensure proper timing in the relationship between threads
 |Name     |Description         |Form|
 |---------|--------------------|-----|
 |[`⎕DL`](dl.md)      |Delay execution            |Function|
-|[`⎕TALLOC`](talloc.md)|Allocate Token Range|Ambivalent function|
+|[`⎕TALLOC`](talloc-allocate.md)|Allocate Token Range|Monadic function|
+|[`⎕TALLOC`](talloc-deallocate.md)|De-allocate Token Range|Dyadic function|
+|[`⎕TALLOC`](talloc-ranges.md)|Query Allocated Token Ranges|Ambivalent function|
+|[`⎕TALLOC`](talloc-pool.md)|Query Pooled Tokens in Range|Dyadic function|
 |[`⎕TGET`](tget.md)  |Get Tokens          |Ambivalent function|
 |[`⎕TPOOL`](tpool.md) |Token Pool          |Monadic function|
 |[`⎕TPUT`](tput.md)  |Put Tokens          |Ambivalent function|
