@@ -427,7 +427,9 @@ nav:
           - '<code>⎕SHADOW</code>: Shadow Name': system-functions/shadow.md
           - '<code>⎕SHELL</code>: Execute external program': system-functions/shell.md
           - '<code>⎕SI</code>: State Indicator': system-functions/si.md
-          - '<code>⎕SIGNAL</code>: Signal Event': system-functions/signal.md
+          - '<code>⎕SIGNAL</code>: Reset Event Constants': system-functions/signal-reset.md
+          - '<code>⎕SIGNAL</code>: Signal Default Event': system-functions/signal-default.md
+          - '<code>⎕SIGNAL</code>: Signal Extended Event': system-functions/signal-extended.md
           - '<code>⎕SIZE</code>: Size of Object': system-functions/size.md
           - '<code>⎕SM</code>: Screen Map': system-functions/sm.md
           - '<code>⎕SR</code>: Screen Read': system-functions/sr.md
