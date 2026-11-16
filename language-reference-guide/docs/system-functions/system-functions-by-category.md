@@ -175,7 +175,8 @@ These are tools to convert between common representations of data.
 |[`⎕TS`](ts.md)      |Timestamp                                          |Constant|
 |[`⎕UCS`](ucs.md)  |Unicode Convert                                      |Ambivalent function|
 |[`⎕VFI`](vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
-|[`⎕XML`](xml.md)  |XML Convert                                          |Ambivalent function|
+|[`⎕XML`](xml-import.md)  |Import XML                                           |Ambivalent function|
+|[`⎕XML`](xml-export.md)  |Export XML                                           |Ambivalent function|
 
 ### Input and Output
 
