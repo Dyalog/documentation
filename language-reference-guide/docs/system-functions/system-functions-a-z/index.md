@@ -174,7 +174,8 @@ search:
 |[`⎕TREQ`](../treq.md)  |Token Requests      |Monadic function|
 |[`⎕TS`](../ts.md)      |Timestamp                                          |Constant|
 |[`⎕TSYNC`](../tsync.md) |Wait for Threads to Terminate|Monadic function|
-|[`⎕UCS`](../ucs.md)  |Unicode Convert                                      |Ambivalent function|
+|[`⎕UCS`](../ucs-monadic.md)|Convert Unicode Code Point|Monadic function|
+|[`⎕UCS`](../ucs-dyadic.md)|Convert Unicode Representation|Dyadic function|
 |[`⎕USING`](../using.md)|Microsoft .NET Search Path                              |Variable|
 |[`⎕VFI`](../vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
 |[`⎕VGET`](../vget.md)     |Value Get    |Ambivalent function|
