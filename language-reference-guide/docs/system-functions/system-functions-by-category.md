@@ -21,7 +21,7 @@ These provide information on, or control, the execution environment.
 |[`⎕CLEAR`](clear.md)   |Clear workspace (WS)       |Constant|
 |[`⎕CY`](cy.md)         |Copy objects into active WS|Function|
 |[`⎕LOAD`](load.md)     |Load a saved WS            |Function|
-|[`⎕OFF`](off.md)       |End the session            |Constant|
+|[`⎕OFF`](off.md)       |End Session                |Constant|
 |[`⎕SAVE`](save.md)     |Save the active WS         |Function|
 |[`⎕SYSTEM`](system.md) |System Information         |Reference|
 

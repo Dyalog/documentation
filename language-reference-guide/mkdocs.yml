@@ -405,7 +405,7 @@ nav:
           - '<code>⎕NULL</code>: Null Item': system-functions/null.md
           - '<code>⎕NUNTIE</code>: Native File Untie': system-functions/nuntie.md
           - '<code>⎕NXLATE</code>: Native File Translate': system-functions/nxlate.md
-          - '<code>⎕OFF</code>: Sign Off APL': system-functions/off.md
+          - '<code>⎕OFF</code>: End Session': system-functions/off.md
           - '<code>⎕OPT</code>: Variant': system-functions/opt.md
           - '<code>⎕OR</code>: Object Representation': system-functions/or.md
           - '<code>⎕PATH</code>: Search Path': system-functions/path.md
