@@ -77,7 +77,7 @@ The access control vector is a 4-element Boolean vector whose elements specify a
 
 In principle, each of the two partners maintains its own copy of the access control vector using `⎕SVC`. Control is actually imposed by the **effective access control vector** which is the result of "ORing" the two individual ones. From your own point of view, the effective access control vector is:
 ```apl
-   (your ⎕SVC)  ∨  (your partner's ⎕SVC)[3 4 1 2]
+   (your ⎕SVC)  ∨  (your partner's ⎕SVC)[2 1 4 3]
 ```
 
 Whenever either of the partners attempts an operation (set or use) on a shared variable, the system consults its effective access control vector. If the vector indicates that the operation is currently permitted, it goes ahead. If however the vector indicates that the operation is currently inhibited, the operation is delayed until the situation changes.

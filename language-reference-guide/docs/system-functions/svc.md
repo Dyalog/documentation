@@ -5,19 +5,27 @@ search:
 
 # <span>Shared Variable Access Control</span> `⎕SVC`
 
-## Dyadic `⎕SVC` means
+`⎕SVC` deals with the access control of shared variables, which controls the order in which partners can set and use their values.
 
-[Set Access Control](set-access-control.md)
+## Query Shared Variable Access Control
+
+[Monadic `⎕SVC`](svc-monadic.md) returns the effective access control vector of a shared variable:
+
 ```apl
-
-      1 ⎕SVC 'X EXTNAME'
+      ⎕SVC 'X'
 1 1 1 1
 ```
 
-## Monadic `⎕SVC` means
+## Set Shared Variable Access Control
 
-[Query Access Control](query-access-control.md)
+[Dyadic `⎕SVC`](svc-dyadic.md) sets your access control vector of a shared variable:
+
 ```apl
-      ⎕SVC 'X'
+      1 ⎕SVC 'X EXTNAME'
 1 1 1 1
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕SVC SVC
+</div>
