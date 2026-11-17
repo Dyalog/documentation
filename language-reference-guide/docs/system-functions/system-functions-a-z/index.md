@@ -123,7 +123,8 @@ search:
 |[`⎕OPT`](../or.md)     |Variant            |Dyadic operator|
 |[`⎕OR`](../or.md)     |Object Representation   |Monadic function|
 |[`⎕PATH`](../path.md)  |Search Path            |Variable|
-|[`⎕PFKEY`](../pfkey.md)|Programmable Function Keys    |Ambivalent function|
+|[`⎕PFKEY`](../pfkey-monadic.md)|Query Programmable Function Key|Monadic function|
+|[`⎕PFKEY`](../pfkey-dyadic.md)|Set Programmable Function Key|Dyadic function|
 |[`⎕PP`](../pp.md) |Print Precision              |Variable|
 |[`⎕PROFILE`](../profile.md)|Profile Application|Ambivalent function|
 |[`⎕R`](../r.md)    |Replace                                                 |Dyadic operator|
