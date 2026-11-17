@@ -3,243 +3,128 @@ search:
   boost: 2
 ---
 
-# <span>Profile Application</span> `{R}←{X}⎕PROFILE Y`{{key}}
+# <span>Profiling Overview</span> `⎕PROFILE`
 
-`⎕PROFILE` facilitates the profiling of CPU consumption, code coverage, or elapsed time for a workspace. It does so by retaining time measurements collected for APL functions/operators and function/operator lines. `⎕PROFILE` is used to both control the state of profiling and retrieve the collected profiling data.
+`⎕PROFILE` measures where an application spends its time, by recording how often each defined function and operator, and each of their lines, runs and how long it takes.
 
-`Y` specifies the action to perform and any options for that action, if applicable. `Y` is case-insensitive. The result `R` is, in some cases, [shy](../../programming-reference-guide/introduction/results.md#shy-results).
+## Start Profiling
 
-|Syntax                              |Description                                                                    |
-|----------------------------------|-------------------------------------------------------------------------------|
-|`{state}←⎕PROFILE 'start' {timer}`|Turn profiling on using the specified timer, or resume if profiling was stopped|
-|`{state}←⎕PROFILE 'stop'`         |Suspend the collection of profiling data                                       |
-|`{state}←⎕PROFILE 'clear'`        |Turn profiling off, if active, and discard any collected profiling data        |
-|`{state}←⎕PROFILE 'calibrate'`    |Calibrate the profiling timer                                                  |
-|`state←⎕PROFILE 'state'`          |Query profiling state                                                          |
-|`data←⎕PROFILE 'data'`            |Retrieve profiling data in flat form                                           |
-|`data←⎕PROFILE 'tree'`            |Retrieve profiling data in tree form                                           |
+[`⎕PROFILE 'start'`](profile-start.md) makes the profiler active, using a chosen timer:
 
-## Actions
-
-`⎕PROFILE` has two states:
-
-- active – the profiler is running and profiling data is being collected. 
-- inactive – the profiler is not running.
-
-For most actions, the result of `⎕PROFILE` is its current state, and comprises:
-
-- `[1]` – Character vector indicating the `⎕PROFILE` state.
-- `[2]` – Character vector indicating the timer being used.
-- `[3]` – Call time bias (in milliseconds), that is, the time that is consumed for the system to take a time measurement.
-- `[4]` – Timer granularity (in milliseconds), that is, the resolution of the timer being used.
-
-### Turn Profiling On
-
-Syntax: `{state} ← ⎕PROFILE 'start' {timer}`
-
-Turns profiling on using the specified timer, or resumes profiling if it was stopped.
-
-`timer` is an optional, case-independent, character vector. Possible values are:
-
-- `'CPU'` (the default)
-- `'elapsed'`
-- `'none'` – `⎕PROFILE` records the number of times each line of code is executed without incurring the timing overhead.
-- `'coverage'` – `⎕PROFILE` identifies which lines of code are executed without incurring the timing or counting overhead.
-
-The first time a particular timer is chosen, `⎕PROFILE` will spend 1,000 milliseconds (1 second) to approximate the call time bias and granularity for that timer.
-
-<h3 class="example">Example</h3>
 ```apl
-      ⊢⎕PROFILE 'start' 'CPU'
- active  CPU  0.000489407284 0
+      ∇ Main
+[1]    Wait 0.2
+[2]    Wait 0.1
+      ∇
+      ∇ Wait s
+[1]    ⎕DL s
+      ∇
+      ⎕←⎕PROFILE 'start' 'elapsed'
+ active  elapsed  0.000009997165762 0
+      Main
 ```
 
-### Suspend Data Collection
+## Stop Profiling
 
-Suspends the collection of profiling data
+[`⎕PROFILE 'stop'`](profile-stop.md) makes the profiler inactive, and keeps the data that it has collected:
 
-Syntax: `{state}←⎕PROFILE 'stop'`
-
-<h3 class="example">Example</h3>
 ```apl
-      ⊢⎕PROFILE 'stop'
- inactive  CPU  0.000489407284 0
+      ⎕←⎕PROFILE 'stop'
+ inactive  elapsed  0.000009997165762 0
 ```
 
-### Turn Profiling Off
+## Query Profiling State
 
-Syntax: `{state}←⎕PROFILE 'clear'`
+[`⎕PROFILE 'state'`](profile-state.md) returns the state of the profiler:
 
-Clears any collected profiling data and, if profiling is active, places profiling into an inactive state.
-
-<h3 class="example">Example</h3>
 ```apl
-      ⊢⎕PROFILE 'clear'
- inactive    0 0
-```
-
-### Calibrate Profiling Timer
-
-Syntax: `{state}←⎕PROFILE 'calibrate'`
-
-Causes `⎕PROFILE` to perform a 1,000 millisecond calibration to approximate the call time bias and granularity for the current timer.
-
-!!! Info "Information"
-    A timer must have been previously selected by using `⎕PROFILE 'start'`, otherwise a `DOMIAN ERROR` is generated.
-
-`⎕PROFILE` will retain the lesser of the current timer values compared to the new values computed by the calibration. This ensures that the smallest possible values of which we can be certain is used.
-
-<h3 class="example">Example</h3>
-```apl
-      ⊢⎕PROFILE'calibrate'
- active  CPU  0.000489407284 0
-```
-
-### Query Profiling State
-
-Syntax: `state←⎕PROFILE 'state'`
-
-Queries and returns the current profiling state.
-
-<h3 class="example">Example</h3>
-```apl
-      )CLEAR
-clear ws
       ⎕PROFILE 'state'
- inactive    0 0
- 
-      ⊢⎕PROFILE 'start' 'CPU'
- active  CPU  0.000489407284 0
-      ⎕PROFILE 'state'
- active  CPU  0.000489407284 0
+ inactive  elapsed  0.000009997165762 0
 ```
 
-### Retrieve Data (Flat Form)
+## Calibrate Profiling Timer
 
-Syntax: `data←{X} ⎕PROFILE 'data'`
+[`⎕PROFILE 'calibrate'`](profile-calibrate.md) measures the call time bias and granularity of the timer again:
 
-Retrieves the collected profiling data and returns it in flat form. If the `X` is omitted, the result is a matrix with the following columns:
+```apl
+      ⎕←⎕PROFILE 'calibrate'
+ inactive  elapsed  0.000009997165762 0
+```
 
-- `[;1]` – function name
-- `[;2]` – function line number or `⍬` for a whole function entry
-- `[;3]` – number of times the line or function was executed
-- `[;4]` – accumulated time (ms) for this entry exclusive of items called by this entry
-- `[;5]` – accumulated time (ms) for this entry inclusive of items called by this entry
-- `[;6]` – number of times the timer function was called for the exclusive time
-- `[;7]` – number of times the timer function was called for the inclusive time
+## Get Flat Profiling Data
 
-<h3 class="example">Example</h3>
-Numbers in this example have been truncated for formatting purposes.
+[`⎕PROFILE 'data'`](profile-data.md) returns the data with one row for each function and each of their lines:
+
 ```apl
       ⎕PROFILE 'data'
-#.foo             1  1.04406  39347.64945   503 4080803
-#.foo      1      1  0.12488     0.124887     1       1
-#.foo      2    100  0.58851 39347.193900   200 4080500
-#.foo      3    100  0.21340     0.213406   100     100
-#.NS1.goo       100 99.44404   39346.6053 50300 4080300
-#.NS1.goo  1    100  0.61679     0.616793   100     100
-#.NS1.goo  2  10000 67.80292   39314.9642 20000 4050000
-#.NS1.goo  3  10000 19.60274      19.6027 10000   10000
+ #.Wait     2 301.002264         301.002264         10 10
+ #.Wait  0  2   0.0001199805411    0.0001199805411   2  2
+ #.Wait  1  2 300.999908         300.999908          2  2
+ #.Main     1   0.008215996786   301.01048           9 19
+ #.Main  0  1   0.00005000038072   0.00005000038072  1  1
+ #.Main  1  1   0.002273998689   200.664644          2  7
+ #.Main  2  1   0.005489986506   100.345384          2  7
 ```
 
-If `X` is specified, it must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
+## Get Profiling Data Tree
 
-```apl
-X ⎕PROFILE 'data' ←→ ↓[⎕IO](⎕PROFILE 'data')[;X]
-```
+[`⎕PROFILE 'tree'`](profile-tree.md) returns the data as a tree, in which the rows for a called function follow the row for the line that called it:
 
-If `[;2]` is included in the result, then the value `¯1` is used instead of `⍬` to indicate a whole-function entry.
-
-### Retrieve Data (Tree Form)
-
-Syntax: `data←{X} ⎕PROFILE 'tree'`
-
-Retrieves the collected profiling data and returns it in tree form. If the `X` is omitted, the result is a matrix with the following columns: 
-
-- `[;1]` – depth level
-- `[;2]` – function name
-- `[;3]` – function line number or `⍬` for a whole function entry
-- `[;4]` – number of times the line or function was executed
-- `[;5]` – accumulated time (ms) for this entry exclusive of items called by this entry
-- `[;6]` – accumulated time (ms) for this entry inclusive of items called by this entry
-- `[;7]` – number of times the timer function was called for the exclusive time
-- `[;8]` – number of times the timer function was called for the inclusive time
-
-<h2 class="example">Example</h2>
-Numbers in this example have been truncated for formatting purposes.
 ```apl
       ⎕PROFILE 'tree'
-0  #.foo               1     1.04406 39347.64945     503 4080803
-1  #.foo      1        1     0.12488     0.12488       1       1
-1  #.foo      2      100     0.58851 39347.19390     200 4080500
-2  #.NS1.goo         100    99.44404 39346.60538   50300 4080300
-3  #.NS1.goo  1      100     0.61679     0.61679     100     100
-3  #.NS1.goo  2    10000    67.80292 39314.96426   20000 4050000
-4  #.NS2.moo       10000 39247.16133 39247.16133 4030000 4030000
-5  #.NS2.moo  1    10000    39.28315    39.28315   10000   10000
-5  #.NS2.moo  2  1000000 36430.65236 36430.65236 1000000 1000000
-5  #.NS2.moo  3  1000000  1645.36214  1645.36214 1000000 1000000
-3  #.NS1.goo  3    10000    19.60274    19.60274   10000   10000
-1  #.foo      3      100     0.21340     0.21340     100     100
+0  #.Main     1   0.008215996786   301.01048          9 19
+1  #.Main  0  1   0.00005000038072   0.00005000038072 1  1
+1  #.Main  1  1   0.002273998689   200.664644         2  7
+2  #.Wait     1 200.66237          200.66237          5  5
+3  #.Wait  0  1   0.00004998582881   0.00004998582881 1  1
+3  #.Wait  1  1 200.661167         200.661167         1  1
+1  #.Main  2  1   0.005489986506   100.345384         2  7
+2  #.Wait     1 100.339894         100.339894         5  5
+3  #.Wait  0  1   0.00006999471225   0.00006999471225 1  1
+3  #.Wait  1  1 100.338741         100.338741         1  1
 ```
 
-Rows with an even depth level in `[;1]` represent function summary entries; odd depth level rows are function line entries. Recursive functions generate separate rows for each level of recursion.
+## Clear Profiling Data
 
-If `X` is specified, it must be a simple vector of column indices. The result `R` has the same shape as `X`, and is a vector of the specified column vectors.
+[`⎕PROFILE 'clear'`](profile-clear.md) discards the data, and makes the profiler inactive with no timer:
 
 ```apl
-X ⎕PROFILE 'tree' ←→ ↓[⎕IO](⎕PROFILE 'tree')[;X]
+      ⎕←⎕PROFILE 'clear'
+ inactive    0 0
 ```
 
-## Profile Data Entry Types
+## Profiling Data
 
-The results of `⎕PROFILE 'data'` and `⎕PROFILE 'tree'` have two types of entries; function summary entries and function line entries. Function summary entries contain `⍬` in the line number column, whereas function line entries contain the line number. Line entries for dfns start with 0 as, unlike tradfns, they do not have a header line. The timer data and timer call counts in function summary entries represent the aggregate of the function line entries plus any time spent that cannot be directly attributed to a function line entry. This could include time spent during function initialisation, and so on.
-
-<h3 class="example">Example</h3>
-```apl
- #.foo         1  1.04406 39347.649450   503 4080803
- #.foo    1    1  0.12488     0.124887     1       1
- #.foo    2  100  0.58851 39347.193900   200 4080500
- #.foo    3  100  0.21340     0.213406   100     100
-```
-
-## Timer Data Persistence
-
-The profiling data collected is stored outside the workspace and will not impact workspace availability. The data is cleared upon workspace load, clear workspace, `⎕PROFILE 'clear'`, or interpreter sign off.
+There is one profiler for the whole session, whichever namespace uses `⎕PROFILE`. It holds its data outside the workspace. Therefore, profiling does not use workspace space. `)LOAD`, `)CLEAR`, `⎕PROFILE 'clear'`, and ending the session discard the data.
 
 ## Using `⎕PROFILE`
 
-!!! Info "Information"
-    Running your application with `⎕PROFILE` turned on incurs a significant processing overhead and will slow dwon your application.
-	
-If you choose to use `⎕PROFILE`, the following guidelines and information may be of use to you.
+Profiling slows an application down significantly.
 
 ### Selecting a Timer
 
-`⎕PROFILE` supports profiling of either CPU or elapsed time. CPU time is generally of more interest in profiling application performance.
+`⎕PROFILE` measures either CPU time or elapsed time. CPU time is generally of more interest when tuning the performance of an application. Elapsed time also includes time in which the interpreter does not use the CPU, such as the delays of [`⎕DL`](dl.md) in the examples above.
 
 ### Simple Profiling
 
-The following procedure should help you to identify any items that take more than 10% of the run time on the top CPU time consumers in an application:
+These steps find the items that take more than 10% of the CPU time of an application:
 
-1. Ensure the application runs for a long enough period to collect enough data to overcome the timer granularity. As a guide, the application should run for at least `(4000×4⊃⎕PROFILE 'state')` milliseconds.
-2. Turn profiling on with `⎕PROFILE 'start' 'CPU'`
-3. Run your application.
-4. Pause the profiler with `⎕PROFILE 'stop'`
-5. Examine the profiling data from `⎕PROFILE 'data'` or `⎕PROFILE 'tree'` for entries that consume large amounts of resource.
+1. Make sure that the application runs for long enough to overcome the timer granularity, which means at least `4000×4⊃⎕PROFILE 'state'` milliseconds
+2. Start profiling with `⎕PROFILE 'start' 'CPU'`
+3. Run the application
+4. Stop profiling with `⎕PROFILE 'stop'`
+5. Look in `⎕PROFILE 'data'` or `⎕PROFILE 'tree'` for the entries that take the most time
 
-To identify items that take more than 1% of the run time, or to focus on elapsed time rather than CPU time, take the following additional steps prior to running the profiler:
+To find the items that take more than 1% of the run time, or to measure elapsed time rather than CPU time, take these steps before profiling:
 
-1. Turn off as much hardware as possible. This would include peripherals, network connections, and so on.
-2. Turn off as many other tasks and processes as possible. These include anti-virus software, firewalls, internet services, and background tasks.
-3. Raise the priority on the Dyalog task to higher than normal (in general, avoid giving it the highest priority).
-4. Run the profiler as described above.
+1. Turn off as much hardware as possible, such as peripherals and network connections
+2. Stop as many other tasks and processes as possible, such as anti-virus software, firewalls, internet services, and background tasks
+3. Raise the priority of the Dyalog process above normal, but generally not to the highest priority
 
 ### Advanced Profiling
 
-The timing data collected by `⎕PROFILE` is not adjusted for the timer's call time bias; this means that the times reported by `⎕PROFILE` include the time spent calling the timer function. One effect of this is that "cheap" lines that are called many times appear to consume more resource. If you require more accurate profiling measurements, or if your application takes a short amount of time to run, you might want to adjust for the timer call time bias. To do so, subtract from the timing data the timer's' call time bias multiplied by the number of times the timer was called.
+The times that `⎕PROFILE` reports include the time spent calling the timer. Therefore, a quick line that runs many times appears to take more time than it does. For more accurate measurements, or for an application that runs only briefly, subtract the call time bias multiplied by the number of timer calls:
 
-<h4 class="example">Example</h4>
 ```apl
       CallTimeBias←3⊃⎕PROFILE 'state'
       RawTimes←⎕PROFILE 'data'
@@ -248,7 +133,7 @@ The timing data collected by `⎕PROFILE` is not adjusted for the timer's call t
 
 ## The `]Profile` User Command
 
-The `]Profile` user command implements a high-level interface to `⎕PROFILE`, and provides reporting and analysis tools that act on the profiling data. For more information, see the [_Application Tuning Guide_](https://docs.dyalog.com/20.0/files/Application_Tuning_Guide.pdf).
+The `]Profile` user command is a high-level interface to `⎕PROFILE`, with tools that report on and analyse the profiling data. The [Application Tuning Guide](https://docs.dyalog.com/21.0/files/Application_Tuning_Guide.pdf) describes it.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
