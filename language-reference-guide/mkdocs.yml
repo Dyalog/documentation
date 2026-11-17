@@ -461,7 +461,8 @@ nav:
           - '<code>⎕TREQ</code>: Token Requests': system-functions/treq.md
           - '<code>⎕TS</code>: Timestamp': system-functions/ts.md
           - '<code>⎕TSYNC</code>: Wait for Threads to Terminate': system-functions/tsync.md
-          - '<code>⎕UCS</code>: Unicode Convert': system-functions/ucs.md
+          - '<code>⎕UCS</code>: Convert Unicode Code Point': system-functions/ucs-monadic.md
+          - '<code>⎕UCS</code>: Convert Unicode Representation': system-functions/ucs-dyadic.md
           - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
           - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
           - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
