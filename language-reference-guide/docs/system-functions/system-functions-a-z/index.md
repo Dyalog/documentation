@@ -189,5 +189,5 @@ search:
 |[`⎕WX`](../wx.md)    |Expose GUI property names  |Variable|
 |[`⎕XML`](../xml.md)  |XML Convert                                          |Ambivalent function|
 |[`⎕XSI`](../xsi.md)   |Extended State Indicator |Constant|
-|[`⎕XT`](../query-external-variable.md)   |Query External variable  |Monadic function|
-|[`⎕XT`](../set-external-variable.md)   |Associate External variable|Dyadic function|
+|[`⎕XT`](../xt-monadic.md)   |Query External Variable  |Monadic function|
+|[`⎕XT`](../xt-dyadic.md)   |Associate External Variable|Dyadic function|

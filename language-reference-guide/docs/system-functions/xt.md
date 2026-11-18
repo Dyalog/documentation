@@ -3,19 +3,33 @@ search:
   exclude: true
 ---
 
-# <span>External Variables</span> `⎕XT`
+# <span>External Variable</span> `⎕XT`
 
-## Dyadic `⎕XT` means
+`⎕XT` deals with external variables, whose values are stored in files instead of in the workspace.
 
-[Set External Variable](./set-external-variable.md)
+## Query External Variable
+
+[Monadic `⎕XT`](xt-monadic.md) returns the file that is associated with an external variable:
+
 ```apl
-      'EXT\ARRAY' ⎕XT 'V'
+      'array' ⎕XT 'V'
+      ⎕XT 'V'
+array
 ```
 
-## Monadic `⎕XT` means
+## Associate External Variable
 
-[Query External Variable](./query-external-variable.md)
+[Dyadic `⎕XT`](xt-dyadic.md) associates a variable with a file, which keeps the value when the variable is expunged:
+
 ```apl
-      ⎕XT'V'
-EXT\ARRAY
+      V←⍳5
+      ⎕EX 'V'
+      'array' ⎕XT 'F'
+      F
+1 2 3 4 5
 ```
+
+<!-- Hidden search keywords -->
+<div style="display: none;">
+  ⎕XT XT
+</div>
