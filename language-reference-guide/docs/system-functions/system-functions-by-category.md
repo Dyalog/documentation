@@ -327,12 +327,12 @@ These constitute the [shared variable](../../interface-guide/dde/shared-variable
 
 |Name  |Description                |Form|
 |------|---------------------------|-----|
-|[`⎕SVC`](set-access-control.md)|Set access Control         |Dyadic function|
-|[`⎕SVC`](query-access-control.md)|Query access Control       |Monadic function|
-|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer      |Dyadic function|
-|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|
-|[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|
-|[`⎕SVR`](svr.md)|Retract offer              |Monadic function|
+|[`⎕SVC`](svc-monadic.md)|Query Shared Variable Access Control|Monadic function|
+|[`⎕SVC`](svc-dyadic.md)|Set Shared Variable Access Control|Dyadic function|
+|[`⎕SVO`](svo-monadic.md)|Query Shared Variable Degree of Coupling|Monadic function|
+|[`⎕SVO`](svo-dyadic.md)|Offer Shared Variable|Dyadic function|
+|[`⎕SVQ`](svq.md)|Query Shared Variable|Monadic function|
+|[`⎕SVR`](svr.md)|Retract Shared Variable Offer|Monadic function|
 |[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|
 
 ### Features for Classic

@@ -149,12 +149,12 @@ search:
 |[`⎕STATE`](../state.md) |Return State of an object|Monadic function|
 |[`⎕STOP`](../query-stop.md)   |Query Stop vector|Monadic function|
 |[`⎕STOP`](../set-stop.md)   |Set Stop vector   |Dyadic function|
-|[`⎕SVC`](../query-access-control.md)|Query access Control       |Monadic function|
-|[`⎕SVC`](../set-access-control.md)|Set access Control         |Dyadic function|
-|[`⎕SVO`](../query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|
-|[`⎕SVO`](../shared-variable-offer.md)|Shared Variable Offer      |Dyadic function|
-|[`⎕SVQ`](../svq.md)|Shared Variable Query      |Monadic function|
-|[`⎕SVR`](../svr.md)|Retract offer              |Monadic function|
+|[`⎕SVC`](../svc-monadic.md)|Query Shared Variable Access Control|Monadic function|
+|[`⎕SVC`](../svc-dyadic.md)|Set Shared Variable Access Control|Dyadic function|
+|[`⎕SVO`](../svo-monadic.md)|Query Shared Variable Degree of Coupling|Monadic function|
+|[`⎕SVO`](../svo-dyadic.md)|Offer Shared Variable|Dyadic function|
+|[`⎕SVQ`](../svq.md)|Query Shared Variable|Monadic function|
+|[`⎕SVR`](../svr.md)|Retract Shared Variable Offer|Monadic function|
 |[`⎕SVS`](../svs.md)|Query Shared Variable State|Monadic function|
 |[`⎕SYSTEM`](../system.md)|System Information|Reference|
 |[`⎕TALLOC`](../talloc.md)|Allocate Token Range|Ambivalent function|

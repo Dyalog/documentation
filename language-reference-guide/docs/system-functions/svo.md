@@ -1,24 +1,28 @@
 ---
 search:
-  boost: 2
+  exclude: true
 ---
 
 # <span>Shared Variable Offer</span> `⎕SVO`
 
-## Dyadic `⎕SVO` means
+`⎕SVO` deals with offers to share variables with another APL workspace or another application.
 
-[Shared Variable Offer](shared-variable-offer.md)
+## Query Shared Variable Degree of Coupling
+
+[Monadic `⎕SVO`](svo-monadic.md) returns the degree of coupling of a shared variable:
+
 ```apl
-      DATA←⍳9
-     'DDE:' ⎕SVO 'DATA'
+      ⎕SVO 'DATA'
 1
 ```
 
-## Monadic `⎕SVO` means
+## Offer Shared Variable
 
-[Query Degree of Coupling](query-degree-of-coupling.md)
+[Dyadic `⎕SVO`](svo-dyadic.md) offers to share a variable:
+
 ```apl
-      ⎕SVO 'DATA'
+      DATA←⍳9
+      'DDE:' ⎕SVO 'DATA'
 1
 ```
 

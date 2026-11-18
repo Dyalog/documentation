@@ -436,13 +436,13 @@ nav:
           - '<code>⎕STATE</code>: State of Object': system-functions/state.md
           - '<code>⎕STOP</code>: Set Stop': system-functions/set-stop.md
           - '<code>⎕STOP</code>: Query Stop': system-functions/query-stop.md
-          - '<code>⎕SVC</code>: Set Access Control': system-functions/set-access-control.md
-          - '<code>⎕SVC</code>: Query Access Control': system-functions/query-access-control.md
-          - '<code>⎕SVO</code>: Shared Variable Offer': system-functions/shared-variable-offer.md
-          - '<code>⎕SVO</code>: Query Degree of Coupling': system-functions/query-degree-of-coupling.md
-          - '<code>⎕SVQ</code>: Shared Variable Query': system-functions/svq.md
-          - '<code>⎕SVR</code>: Shared Variable Retract Offer': system-functions/svr.md
-          - '<code>⎕SVS</code>: Shared Variable State': system-functions/svs.md
+          - '<code>⎕SVC</code>: Query Shared Variable Access Control': system-functions/svc-monadic.md
+          - '<code>⎕SVC</code>: Set Shared Variable Access Control': system-functions/svc-dyadic.md
+          - '<code>⎕SVO</code>: Query Shared Variable Degree of Coupling': system-functions/svo-monadic.md
+          - '<code>⎕SVO</code>: Offer Shared Variable': system-functions/svo-dyadic.md
+          - '<code>⎕SVQ</code>: Query Shared Variable': system-functions/svq.md
+          - '<code>⎕SVR</code>: Retract Shared Variable Offer': system-functions/svr.md
+          - '<code>⎕SVS</code>: Query Shared Variable State': system-functions/svs.md
           - '<code>⎕SYSTEM</code>: System Information': system-functions/system.md
           - '<code>⎕TALLOC</code>: Allocate Token Range': system-functions/talloc.md
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
