@@ -122,7 +122,7 @@ Certain primitives and system functions have behaviour that is customised global
 
 The following table describes the dependencies that exist between language elements and these system variables.
 
-Table: Implicit Arguments {: #Implicit_Arguments }
+Table: Implicit Arguments { #Implicit_Arguments }
 
 |System Variable|Monadic Functions|Dyadic Functions|Other|
 |---|---|---|---|

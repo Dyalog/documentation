@@ -31,7 +31,7 @@ Otherwise, if `f` is _catenate_, `R` is `S⍴⊂0/⊃Y`. If `f` is _catenate fir
 
 Otherwise, `DOMAIN ERROR` is reported.
 
-Table: Identity Elements {: #IdentityElements }
+Table: Identity Elements { #IdentityElements }
 
 |Function|&nbsp;| Identity |
 |---|---|----------|
