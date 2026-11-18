@@ -476,8 +476,8 @@ nav:
           - '<code>⎕WX</code>: Window Expose': system-functions/wx.md
           - '<code>⎕XML</code>: XML Convert': system-functions/xml.md
           - '<code>⎕XSI</code>: Extended State Indicator': system-functions/xsi.md
-          - '<code>⎕XT</code>: Set External Variable': system-functions/set-external-variable.md
-          - '<code>⎕XT</code>: Query External Variable': system-functions/query-external-variable.md
+          - '<code>⎕XT</code>: Query External Variable': system-functions/xt-monadic.md
+          - '<code>⎕XT</code>: Associate External Variable': system-functions/xt-dyadic.md
   - System Commands:
       - System Commands: system-commands/index.md
       - System Commands (A-Z):
