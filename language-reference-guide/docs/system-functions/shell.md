@@ -143,7 +143,7 @@ Any output the child process produces on its stream `Stream` will go to the spec
 | `('File' path)` | Redirect the output to an existing file with a path described by the character vector `path`. The output is appended to the end of the file. |
 | `('Array' type)` | Redirect the output to the interpreter, which will convert it into a vector with data type `type`, and include it in the result of `⎕SHELL`. For example, to get standard output as a Boolean vector, the variant value would be `(1 ('Array' 11))`. |
 | `'Array'` | Redirect the output to the interpreter, which will convert it to a vector of character vectors, split into the separate lines of text. The line endings and text encoding are determined automatically, like when reading files using monadic [`⎕NGET`](nget.md). The nested array is included as part of the result of `⎕SHELL`. |
-| `('Array' textEncoding)` | Redirect the output to the interpreter like with the `'Array'` format above, but use a specific text encoding, described by the character vector `textEncoding`. The possible values for `textEncodings` are those which are allowed as the left argument to dyadic [`⎕NGET`](nget.md). |
+| `('Array' textEncoding)` | Redirect the output to the interpreter like with the `'Array'` format above, but use a specific text encoding, `textEncoding`, which is a [file encoding](#file-encodings). |
 | `'Null'` | Redirect the output to the operating-system's null device, which effectively means the output is ignored. |
 | `('Callback' fn encodingOrType)` | Redirect the output to the interpreter, which periodically will turn the data produced into an array, and run a callback function specified in `fn`. `fn` can either be a character vector, in which case it is the name of the function to run, or it can be a 2-element vector where the first element is the function name, and the second element is some arbitrary data which will be passed as the left argument to the callback function. When `encodingOrType` is a scalar integer, the conversion behaves as with `('Array' type)`, and otherwise it behaves as `('Array' textEncoding)`. |
 | `('Callback' fn)` | This is identical to the other callback format, with the difference that the data is converted into lines of text in the same way as when the `'Array'` format is used, using heuristics to determine the line endings and text encoding. |
@@ -197,7 +197,7 @@ Any input the child process tries to read on its stream `Stream` will come from 
 | `('File' path)` | Input comes from an existing file with a path described by the character vector `path`. |
 | `('Array' Data Type)` | The APL array `Data` is raveled and converted to a vector of type `Type`. The input on the stream comes from the bytes of the converted array. |
 | `('Array' Data)` | Shorthand for `('Array' Data (⎕DR Data))`. In Unicode interpreters when `Data` is a character array, this is the same as `('Array' Data 80)`. |
-| `('Array' Data Encoding)` | This is similar to `('Array' Data Type)`, but `Data` must be either a character vector, or a vector of character vectors. Each character vector is converted to text in the given `Encoding`, and terminated by a newline character/character sequence. The `Encoding` must be one of those supported by [`⎕NPUT`](nput.md). |
+| `('Array' Data Encoding)` | This is similar to `('Array' Data Type)`, but `Data` must be either a character vector, or a vector of character vectors. Each character vector is converted to text in the given `Encoding`, and terminated by a newline character/character sequence. `Encoding` is the name of a [file encoding](#file-encodings), not a byte map. |
 | `('Array' Data Encoding Newline)` | Similar to `('Array' Data Encoding)`, but provides explicit control over the newline character/sequence. `Newline` must be one of the values supported by [`⎕NPUT`](nput.md). |
 | `'Null'` | Input comes from the operating-system's null device, which effectively means no input is provided. |
 | `('Token' n)` | `⎕SHELL` will periodically see if any tokens are available on the token number `n`, such as those produced by `X ⎕TPUT n`. When one becomes available, the token data `X` is parsed as one of the `('Array' ...)` sources, and appended to a buffer of data that the child process then sees on the specified stream. A token with no data, as constructed by a monadic [`⎕TPUT`](tput.md) call, closes the stream. This, combined with running `⎕SHELL` on its own APL thread, provides a mechanism for feeding a child process input input dynamically. |
@@ -315,6 +315,33 @@ The `Window` variant option specifies the initial window mode. The value must be
 The default is `'Hidden'`.
 
 See also [`8373⌶`](../primitive-operators/i-beam/shell-process-control.md).
+
+## File Encodings
+
+<!-- This section is also on csv-monadic.md, csv-dyadic.md, nget.md, nput.md, and r.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`. When writing, this says whether the text starts with a byte order mark (BOM). Without either, UTF-8 text has no BOM, and UTF-16 and UTF-32 text has one. When reading, it makes no difference.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+Bytes that are not valid in the file encoding, and characters that it cannot represent, signal `TRANSLATION ERROR`.
 
 ## Default Redirections
 Most programs assume that the three standard streams are configured when the program starts. For this reason, `⎕SHELL` always sets up some redirections for those three, even when variant options have explicitly only set up some of them. For example, when `⎕SHELL⍠'Output' (1 ('File' '/tmp/log.txt'))⊢cmd` is run, stream 0 and stream 2 are set up to their default values.

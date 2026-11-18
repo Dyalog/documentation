@@ -393,48 +393,11 @@ This option may only be used with `⎕S`. With `⎕R` searching always continues
 
 ### InEnc Option
 
-This option specifies the encoding of the input stream when it cannot be determined automatically. It is either:
-
-- a character vector that specifies the file-encoding as shown in the table below.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
-
-When the stream is read from its start, and the start of the stream contains a recognised Byte Order Mark (BOM), the encoding is taken as that specified by the BOM and this option is ignored. Otherwise, the encoding is assumed to be as specified by this option.
-
-|------------|----------------------------------------------------------------------------------------------------------------------------------|
-|UTF-8 { .shaded } |The stream is processed as UTF-8 data. ASCII is a subset of UTF-8, so this default is also suitable for ASCII data.     |
-|UTF-16      |The stream is processed as UTF16 little-endian data on little-ended systems, or as UTF16 big-endian data on big-endian systems.   |
-|UTF-16LE    |The stream is processed as UTF16 little-endian data.                                                                              |
-|UTF-16BE    |The stream is processed as UTF16 big-endian data.                                                                                 |
-|UTF-32      |The stream is processed as UTF32 little-endian data on little-ended systems, or as UTF32 big-endian data on big-endian systems.   |
-|UTF-32LE    |The stream is processed as UTF32 little-endian data.                                                                              |
-|UTF-32BE    |The stream is processed as UTF32 big-endian data.                                                                                 |
-|ASCII       |The stream is processed as ASCII data. If the stream contains any characters outside of the ASCII range then an error is produced.|
-|Windows-1252|The stream is processed as Windows-1252 (ANSI) data.                                                                              |
-|ANSI        |Same as Windows-1252                                                                                                              |
-
-For compatibility with the OutEnc option, the above UTF formats may be qualified with -BOM (for example, UTF-8-BOM) or -NOBOM. For input streams, the qualified and unqualified options are equivalent.
+This option specifies the [file encoding](#file-encodings) of the input stream. If the stream is read from its start, and it starts with a byte order mark (BOM), the BOM determines the encoding instead. The default is `'UTF-8'`, which also suits ASCII data, because ASCII is a subset of UTF-8.
 
 ### OutEnc Option
 
-When the output is written to a stream, this option specifies how the data is to be encoded.  It is either:
-
-- a character vector that specifies the file-encoding as shown in the table below.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value may appear in the table more than once.
-
-|------------|-------------------------------------------------------------------------------------------------------------------------------|
-|Implied { .shaded }  |If input came from a stream then the encoding format is the same as the input stream, otherwise UTF-8                          |
-|UTF-8       |The data is written in UTF-8 format.                                                                                           |
-|UTF-16      |The data is written in UTF16 little-endian format on little-ended systems, or in UTF16 big-endian format on big-endian systems.|
-|UTF-16LE    |The data is written in UTF-16 little-endian format.                                                                            |
-|UTF-16BE    |The data is written in UTF-16 big-endian format.                                                                               |
-|UTF-32      |The data is written in UTF32 little-endian format on little-ended systems, or in UTF32 big-endian format on big-endian systems.|
-|UTF-32LE    |The data is written in UTF-32 little-endian format.                                                                            |
-|UTF-32BE    |The data is written in UTF-32 big-endian format.                                                                               |
-|ASCII       |The data is written in ASCII format.                                                                                           |
-|Windows-1252|The data is written in Windows-1252 (ANSI) format.                                                                             |
-|ANSI        |Same as Windows-1252                                                                                                           |
-
-The above UTF formats may be qualified with -BOM (for example, UTF-8-BOM) to specify that a Byte Order Mark should be written at the start of the stream or, -NOBOM that it should not. For files, this is ignored if the file already contains any data.  If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.
+When the output is written to a stream, this option specifies the [file encoding](#file-encodings) of the output stream. It can also be `'Implied'`, the default, which is the encoding of the input stream if the input came from a stream, and `'UTF-8'` otherwise. If the encoding calls for a BOM, the BOM is written only if the output stream is initially empty.
 
 ### Enc Option
 
@@ -510,6 +473,33 @@ The CAT SAT on the MAT
 The \u0 \u0 on the \u0
 
 ```
+
+## File Encodings
+
+<!-- This section is also on csv-monadic.md, csv-dyadic.md, nget.md, nput.md, and shell.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`. When writing, this says whether the text starts with a byte order mark (BOM). Without either, UTF-8 text has no BOM, and UTF-16 and UTF-32 text has one. When reading, it makes no difference.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+Bytes that are not valid in the file encoding, and characters that it cannot represent, signal `TRANSLATION ERROR`.
 
 ## Line, document and mixed modes
 
