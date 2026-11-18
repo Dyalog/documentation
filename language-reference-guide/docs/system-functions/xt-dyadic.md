@@ -7,8 +7,8 @@ search:
 
 This function makes a variable an [external variable](#external-variables) by associating it with a file. [Monadic `⎕XT`](xt-monadic.md) returns the file that an external variable is associated with.
 
-!!! Legacy "Legacy"
-    External variables are retained for backwards compatibility purposes, and are scheduled for removal in a future release. Dyalog Ltd recommends using [`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md) instead. Support for external variables is enabled by default. Setting the [`DYALOG_EXTVAR_SUPPORTED`](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported.md) configuration parameter to `0` disables it, and `⎕XT` then signals `SYNTAX ERROR`. The [Release Notes](../../release-notes/announcements/deprecated-functionality.md) describe how to find uses of external variables in existing code.
+!!! Info "Information"
+    External variables have been deprecated, and are scheduled for removal in a future release. Dyalog Ltd recommends using [`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md) instead. Support for external variables is enabled by default. Setting the [`DYALOG_EXTVAR_SUPPORTED`](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported.md) configuration parameter to `0` disables it, and `⎕XT` then signals `SYNTAX ERROR`. The [Release Notes](../../release-notes/announcements/deprecated-functionality.md) describe how to find uses of external variables in existing code.
 
 <h2 class="example">Examples</h2>
 
