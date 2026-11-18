@@ -12,9 +12,9 @@ search:
 [Monadic `⎕XT`](xt-monadic.md) returns the file that is associated with an external variable:
 
 ```apl
-      'array' ⎕XT 'V'
+      'array.dxv' ⎕XT 'V'
       ⎕XT 'V'
-array
+array.dxv
 ```
 
 ## Associate External Variable
@@ -24,7 +24,7 @@ array
 ```apl
       V←⍳5
       ⎕EX 'V'
-      'array' ⎕XT 'F'
+      'array.dxv' ⎕XT 'F'
       F
 1 2 3 4 5
 ```

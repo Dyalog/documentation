@@ -15,7 +15,7 @@ This function makes a variable an [external variable](#external-variables) by as
 A new external variable has no value until one is assigned:
 
 ```apl
-      'array' ⎕XT 'V'
+      'array.dxv' ⎕XT 'V'
       V
 VALUE ERROR
       V
@@ -51,7 +51,7 @@ The file keeps the value, and can be associated with another variable:
 
 ```apl
       ⎕EX'V'
-      'array' ⎕XT 'F'
+      'array.dxv' ⎕XT 'F'
       F
 10 20  ABC  40 50  10 20 30 40
                    50 60 70 80
@@ -59,7 +59,7 @@ The file keeps the value, and can be associated with another variable:
 
 ## Left Argument
 
-`X` is a simple character scalar or vector, the name of the file. If the file does not exist, it is created. Under Unix, `X` can also be [empty](#temporary-files). If another variable is associated with the file, `⎕XT` signals `FILE TIED`.
+`X` is a simple character scalar or vector, the name of the file. Under Microsoft Windows, a name without an extension gets the extension `.DXV`. If the file does not exist, it is created. Under Unix, `X` can also be [empty](#temporary-files). If another variable is associated with the file, `⎕XT` signals `FILE TIED`.
 
 ## Right Argument
 
@@ -67,7 +67,7 @@ The file keeps the value, and can be associated with another variable:
 
 ## Result
 
-`R` is `X`, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
+`R` is the name of the file, including any extension that `⎕XT` added, and is [shy](../../programming-reference-guide/introduction/results.md#shy-results).
 
 ## External Variables
 

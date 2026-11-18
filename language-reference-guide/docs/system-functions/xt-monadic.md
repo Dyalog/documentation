@@ -13,9 +13,9 @@ For an [external variable](#external-variables), this function returns the name 
 <h2 class="example">Example</h2>
 
 ```apl
-      'array' ⎕XT 'V'
+      'array.dxv' ⎕XT 'V'
       ⎕XT 'V'
-array
+array.dxv
       ⍴⎕XT 'G'
 0
 ```
@@ -26,7 +26,7 @@ array
 
 ## Result
 
-`R` is the name of the file that is associated with the variable, as it was given when the variable was associated with it. `R` is `''` if the variable is not an external variable, or if it is associated with a temporary file.
+`R` is the name of the file that is associated with the variable. `R` is `''` if the variable is not an external variable, or if it is associated with a temporary file.
 
 ## External Variables
 
