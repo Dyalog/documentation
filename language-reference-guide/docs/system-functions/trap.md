@@ -21,7 +21,7 @@ When an event occurs, the system searches for a trap definition for that event.�
 
 The ACTION code identifies the nature of the action to be taken when an associated event occurs.  Permitted codes are interpreted as follows:
 
-Table: Trappable Event Codes {: #TrapEvents }
+Table: Trappable Event Codes { #TrapEvents }
 
 |---|---|---|
 |`C`|Cutback|The state indicator is 'cut back' to the environment in which the `⎕TRAP` is locally defined (or to immediate execution level).  The APL expression in element 3 of the same `⎕TRAP` item is then executed.|

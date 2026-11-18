@@ -5,7 +5,7 @@
 
 For an alternative method of applying any function to a subset of axes, see [Rank](../../primitive-operators/rank.md).
 
-Table: Primitive monadic mixed functions with optional axis. {: #MonadicMixed }
+Table: Primitive monadic mixed functions with optional axis. { #MonadicMixed }
 
 |Function|Name|Range of B|
 |---|---|---|

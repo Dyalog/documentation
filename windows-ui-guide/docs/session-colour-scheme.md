@@ -10,7 +10,7 @@ In the Classic Edition, colours may alternatively be defined in the Output Trans
 
 The first table below shows the colours used for different session components. The second table shows how different colours are used to identify different types of data in edit windows.
 
-Table: Default Colour Scheme - Session {: #default-colour-scheme-session }
+Table: Default Colour Scheme - Session { #default-colour-scheme-session }
 
 |Colour|Used for                   |Default            |
 |------|---------------------------|-------------------|
@@ -20,7 +20,7 @@ Table: Default Colour Scheme - Session {: #default-colour-scheme-session }
 |253   |Tracer : Pendent Function  |Yellow on Dark Grey|
 |245   |Tracer : Current Line      |White on Red       |
 
-Table: Default Colour Scheme Edit windows {: #default-colour-scheme-edit-windows }
+Table: Default Colour Scheme Edit windows { #default-colour-scheme-edit-windows }
 
 |Colour|Array Type                 |Editable|Default         |
 |------|---------------------------|--------|----------------|
