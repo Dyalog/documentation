@@ -4,13 +4,13 @@ search:
 ---
 # System Functions (by Category)
 
-## System Functions by Subject
-
 The following tables list the system functions (a collective term for system constants, variables, functions, and operators) divided into appropriate categories by usage.
 
-The dyadic operator `⎕OPT` is unique in that it modifies the behaviour of other system functions (and function derived from system operators), effectively providing them with additional option arguments.
+The dyadic operator [`⎕OPT`](opt.md) is unique in that it modifies the behaviour of other system functions (and functions derived from system operators), effectively providing them with additional option arguments.
 
-### Session Information and Management
+A dagger (†) after a description marks a system function that is also listed under [Archaic and Deprecated](#archaic-and-deprecated), with the alternative that Dyalog Ltd recommends.
+
+## Session Information and Management
 
 These provide information on, or control, the execution environment.
 
@@ -25,12 +25,13 @@ These provide information on, or control, the execution environment.
 |[`⎕SAVE`](save.md)     |Save the active WS         |Function|
 |[`⎕SYSTEM`](system.md) |System Information         |Reference|
 
-### Workspace
+## Workspace
 
 These provide information on, and control, the current workspace and its contents.
 
 |Name     |Description              |Form|
 |---------|-------------------------|-----|
+|[`⎕AT`](at.md)     |Object Attributes[†](#archaic-and-deprecated)|Ambivalent function|
 |[`⎕ATX`](atx.md)   |Extended Attributes     |Dyadic function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
@@ -41,17 +42,20 @@ These provide information on, and control, the current workspace and its content
 |[`⎕WA`](wa.md)    |Workspace Available      |Constant|
 |[`⎕WSID`](wsid.md)  |Workspace Identification|Variable|
 
-### Manipulating Workspace Contents
+## Manipulating Workspace Contents
 
 These are tools that allow you perform development environment actions under program control.
 
 |Name      |Description             |Form|
 |----------|------------------------|-----|
+|[`⎕CR`](cr.md)     |Canonical Representation[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
+|[`⎕FX`](fx.md)     |Fix definition[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
+|[`⎕NR`](nr.md)     |Nested Representation[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
 |[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
 |[`⎕REFS`](refs.md)   |Local References      |Monadic function|
@@ -59,8 +63,9 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
 |[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
 |[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
+|[`⎕VR`](vr.md)     |Vector Representation[†](#archaic-and-deprecated)|Monadic function|
 
-### Top-level Namespaces
+## Top-level Namespaces
 
 These are namespaces that are equal to their parent namespace (`##`), that is, for a namespace `ns`, `ns=ns.##`.
 
@@ -72,7 +77,7 @@ These are namespaces that are equal to their parent namespace (`##`), that is, f
 
 The workspace root namespace, `#`, is also its own parent.
 
-### Namespaces and Objects
+## Namespaces and Objects
 
 These are facilities to create, manipulate, and navigate namespaces and other objects, and for object oriented programming.
 
@@ -82,15 +87,18 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 |[`⎕CLASS`](class.md)    |Class       |Monadic function|
 |[`⎕CS`](cs.md)       |Change Space   |Monadic function|
 |[`⎕DF`](df.md)       |Display Format |Monadic function|
+|[`⎕EXPORT`](export.md)|Export objects[†](#archaic-and-deprecated)|Ambivalent function|
 |[`⎕FIX`](fix.md)      |Fix           |Ambivalent function|
 |[`⎕INSTANCES`](instances.md)|Instances|Monadic function|
 |[`⎕NEW`](new.md)      |New Instance  |Monadic function|
 |[`⎕NS`](ns.md)       |Namespace      |Ambivalent function|
+|[`⎕PATH`](path.md)  |Search Path[†](#archaic-and-deprecated)|Variable|
+|[`⎕SRC`](src.md)      |Source[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕THIS`](this.md)     |Self-reference|Reference|
 |[`⎕VGET`](vget.md)     |Value Get    |Ambivalent function|
 |[`⎕VSET`](vset.md)     |Value Set    |Ambivalent function|
 
-### Built-in Objects and Windows GUI
+## Built-in Objects and Windows GUI
 
 These are facilities for dealing with built-in objects. They mostly represent Microsoft Windows GUI elements, although a few other built-in objects are cross-platform and/or do not relate to the graphical interface.
 
@@ -105,7 +113,7 @@ These are facilities for dealing with built-in objects. They mostly represent Mi
 |[`⎕WS`](ws.md)    |Set GUI object properties  |Ambivalent function|
 |[`⎕WX`](wx.md)    |Expose GUI property names  |Variable|
 
-### Modifying Language Behaviour
+## Modifying Language Behaviour
 
 Certain primitives and system functions have behaviour that is customised globally via a set of system variables. They are: 
 
@@ -148,7 +156,7 @@ Table: Implicit Arguments {: #Implicit_Arguments }
 
 Tolerant comparisons depend on `⎕FR` to select which of `⎕CT` and `⎕DCT` is used. Even  intolerant comparison depends on `⎕FR` in the case of comparing DECFs: If two DECFs are different but correspond to the same double, then they will be treated as unequal when `⎕FR` is `1287` but equal when it is `645`.
 
-### System Constants
+## System Constants
 
 These constants simplify access to commonly-used values.
 
@@ -157,8 +165,9 @@ These constants simplify access to commonly-used values.
 |[`⎕A`](a.md)   |Uppercase Alphabet              |
 |[`⎕D`](d.md)   |Digits                          |
 |[`⎕NULL`](null.md)|Null Item                       |
+|[`⎕TC`](tc.md)   |Terminal Control[†](#archaic-and-deprecated)|
 
-### Data Conversion
+## Data Conversion
 
 These are tools to convert between common representations of data.
 
@@ -177,7 +186,7 @@ These are tools to convert between common representations of data.
 |[`⎕VFI`](vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
 |[`⎕XML`](xml.md)  |XML Convert                                          |Ambivalent function|
 
-### Input and Output
+## Input and Output
 
 These are communication facilities.
 
@@ -194,20 +203,24 @@ These are communication facilities.
 |[`⎕SM`](sm.md)   |Screen Map                       |Variable|
 |[`⎕SR`](sr.md)   |Screen Read                      |Ambivalent function|
 
-### External Utilities
+## External Utilities
 
 These are APL interfaces to various facilities outside Dyalog.
 
 |Name    |Description                                             |Form|
 |--------|--------------------------------------------------------|----|
+|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor[†](#archaic-and-deprecated)|Dyadic function|
 |[`⎕MAP`](map.md)  |Map a file                                              |Ambivalent function|
 |[`⎕NA`](na.md)   |Declare a DLL function                                  |Ambivalent function|
 |[`⎕R`](r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕S`](s.md)    |Search                                                  |Dyadic operator|
+|[`⎕SH`](execute-unix-command.md)   |Execute a Unix command or another program[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor[†](#archaic-and-deprecated)|Dyadic function|
 |[`⎕SHELL`](shell.md)|Execute a shell command or another program              |Monadic function|
 |[`⎕USING`](using.md)|Microsoft .NET Search Path                              |Variable|
 
-### Component Files
+## Component Files
 
 These create, control, and manipulate component files.
 
@@ -237,8 +250,10 @@ These create, control, and manipulate component files.
 |[`⎕FSTIE`](fstie.md)   |Share-Tie a File           |Dyadic function|
 |[`⎕FTIE`](ftie.md)    |Tie a File exclusively     |Dyadic function|
 |[`⎕FUNTIE`](funtie.md)  |Untie Files                |Monadic function|
+|[`⎕XT`](query-external-variable.md)   |Query External variable[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕XT`](set-external-variable.md)   |Associate External variable[†](#archaic-and-deprecated)|Dyadic function|
 
-### Native Files
+## Native Files
 
 These create and manipulate files of any type as well as directories.
 
@@ -267,7 +282,7 @@ These create and manipulate files of any type as well as directories.
 |[`⎕NTIE`](ntie.md)    |Tie a File exclusively                                       |Dyadic function|
 |[`⎕NUNTIE`](nuntie.md)  |Untie Files                                                  |Monadic function|
 
-### Threads
+## Threads
 
 These are facilities to handle threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
@@ -281,7 +296,7 @@ These are facilities to handle threads such as those created by [Spawn](../primi
 |[`⎕TNUMS`](tnums.md) |Thread Numbers               |Constant|
 |[`⎕TSYNC`](tsync.md) |Wait for Threads to Terminate|Monadic function|
 
-### Synchronisation
+## Synchronisation
 
 These are facilities to ensure proper timing in the relationship between threads such as those created by [Spawn](../primitive-operators/spawn.md) (`&`).
 
@@ -294,7 +309,7 @@ These are facilities to ensure proper timing in the relationship between threads
 |[`⎕TPUT`](tput.md)  |Put Tokens          |Ambivalent function|
 |[`⎕TREQ`](treq.md)  |Token Requests      |Monadic function|
 
-### Stack
+## Stack
 
 These provide information about and manipulate the current call stack.
 
@@ -309,70 +324,83 @@ These provide information about and manipulate the current call stack.
 |[`⎕STATE`](state.md) |Return State of an object|Monadic function|
 |[`⎕XSI`](xsi.md)   |Extended State Indicator |Constant|
 
-### Error Handling
+## Error Handling
 
 These are facilities to catch, cause, and investigate error events and interruptions.
 
 |Name        |Description                                     |Form|
 |------------|------------------------------------------------|----|
+|[`⎕DM`](dm.md)       |Diagnostic Message[†](#archaic-and-deprecated)|Constant|
 |[`⎕DMX`](dmx.md)      |Extended Diagnostic Message                     |Reference|
 |[`⎕EM`](em.md)       |Event Messages                                  |Monadic function|
+|[`⎕EN`](en.md)       |Event Number[†](#archaic-and-deprecated)|Constant|
 |[`⎕EXCEPTION`](exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
 |[`⎕SIGNAL`](signal.md)   |Signal event                                    |Ambivalent function|
 |[`⎕TRAP`](trap.md)     |Event Trap                                      |Variable|
 
-### Shared Variables
+## Shared Variables
 
 These constitute the [shared variable](../../interface-guide/dde/shared-variable-principles.md) interface.
 
 |Name  |Description                |Form|
 |------|---------------------------|-----|
-|[`⎕SVC`](set-access-control.md)|Set access Control         |Dyadic function|
-|[`⎕SVC`](query-access-control.md)|Query access Control       |Monadic function|
-|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer      |Dyadic function|
-|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|
-|[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|
-|[`⎕SVR`](svr.md)|Retract offer              |Monadic function|
-|[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|
+|[`⎕SVC`](set-access-control.md)|Set access Control[†](#archaic-and-deprecated)|Dyadic function|
+|[`⎕SVC`](query-access-control.md)|Query access Control[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer[†](#archaic-and-deprecated)|Dyadic function|
+|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕SVQ`](svq.md)|Shared Variable Query[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕SVR`](svr.md)|Retract offer[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕SVS`](svs.md)|Query Shared Variable State[†](#archaic-and-deprecated)|Monadic function|
 
-### Features for Classic
+## Features for Classic
 
 These are relevant only for the Classic (non-Unicode) edition and dealing with its data.
 
 |Name     |Description                |Form|
 |---------|---------------------------|-----|
-|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|
-|[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters|Constant|
-|[`⎕AV`](av.md)   |Atomic Vector              |Constant|
-|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|
+|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table[†](#archaic-and-deprecated)|Ambivalent function|
+|[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md) |Underscored Alphabetic Characters[†](#archaic-and-deprecated)|Constant|
+|[`⎕AV`](av.md)   |Atomic Vector[†](#archaic-and-deprecated)|Constant|
+|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode[†](#archaic-and-deprecated)|Variable|
 
-### Archaic and Deprecated
+## Archaic and Deprecated
 
-These are deprecated facilities that are still supported for legacy purposes; Dyalog Ltd recommends using alternative approaches.
+These are archaic or deprecated facilities that are retained for backwards compatibility purposes. Dyalog Ltd recommends using the alternatives instead.
 
 |Name    |Description                      |Form|Alternative|
 |--------|---------------------------------|----|-----------|
-|[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|`⎕ATX` supports many more attributes|
-|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
-|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
-|[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|`⎕DMX.DM` is thread-safe|
-|[`⎕EN`](en.md)       |Event Number          |Constant|`⎕DMX.EN` is thread-safe|
-|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) namespace paths|
-|[`⎕FX`](fx.md)     |Fix definition          |Monadic function|`⎕FIX` saves source as typed|
-|[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) namespace paths|
-|[`⎕SH`](execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|`⎕SHELL` is interruptible, can separate output streams, and has lots of advanced options|
-|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|DLL/shared libraries via `⎕NA`|
-|[`⎕SRC`](src.md)      |Source        |Monadic function|`⎕ATX` can provide source for non-objects|
-|[`⎕TC`](tc.md)   |Terminal Control           |Constant|`⎕UCS 8`, `⎕UCS 10`, and `⎕UCS 13`|
-|[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|`⎕ATX` can provide source as typed|
-|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|`⎕MAP` or [component files](../../programming-reference-guide/introduction/component-files.md)|
-|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|`⎕MAP` or [component files](../../programming-reference-guide/introduction/component-files.md)|
+|[`⎕Ⓐ` or `⎕Á`](underscored-alphabetic-characters.md)|Underscored Alphabetic Characters|Constant|[`⎕UCS`](ucs.md) on code points|
+|[`⎕AT`](at.md)     |Object Attributes       |Ambivalent function|[`⎕ATX`](atx.md) supports many more attributes|
+|[`⎕AV`](av.md)   |Atomic Vector              |Constant|[`⎕UCS`](ucs.md) converts to/from code points|
+|[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|Unicode data needs no translation|
+|[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|[`⎕SHELL`](shell.md) is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via [`⎕NA`](na.md)|
+|[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|[`⎕DMX.DM`](dmx.md) is thread-safe|
+|[`⎕EN`](en.md)       |Event Number          |Constant|[`⎕DMX.EN`](dmx.md) is thread-safe|
+|[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) [namespace paths](../../programming-reference-guide/introduction/namespaces/namespace-syntax.md)|
+|[`⎕FX`](fx.md)     |Fix definition          |Monadic function|[`⎕FIX`](fix.md) saves source as typed|
+|[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|[`⎕NGET`](nget.md) and [`⎕NPUT`](nput.md) read and write Unicode text files|
+|[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) [namespace paths](../../programming-reference-guide/introduction/namespaces/namespace-syntax.md)|
+|[`⎕SH`](execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|[`⎕SHELL`](shell.md) is interruptible, can separate output streams, and has lots of advanced options|
+|[`⎕SH`](start-unix-auxiliary-processor.md)   |Start a Unix Auxiliary Processor|Dyadic function|DLL/shared libraries via [`⎕NA`](na.md)|
+|[`⎕SRC`](src.md)      |Source        |Monadic function|[`⎕ATX`](atx.md) can provide source for non-objects|
+|[`⎕SVC`](set-access-control.md)|Set access Control         |Dyadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVC`](query-access-control.md)|Query access Control       |Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVO`](shared-variable-offer.md)|Shared Variable Offer      |Dyadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVO`](query-degree-of-coupling.md)|Query degree of coupling   |Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVQ`](svq.md)|Shared Variable Query      |Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVR`](svr.md)|Retract offer              |Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
+|[`⎕TC`](tc.md)   |Terminal Control           |Constant|<code><a href="../ucs/">⎕UCS</a> 8 10 13</code>|
+|[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|[`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md)|
+|[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|[`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md)|
 
 ## System Variables
 
-System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as _implicit arguments_.
+System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as [implicit arguments](../primitive-functions/notes.md#implicit-arguments).
 
 System variables can be localised by inclusion in the header line of a defined function or in the argument list of the system function [`⎕SHADOW`](shadow.md). When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as _pass-through localisation_. The exception to this rule is [`⎕TRAP`](trap.md).
 
@@ -382,7 +410,7 @@ A system variable can never be undefined. Default values are assigned to all sys
 
 |Name           |Description                               |Scope      |
 |---------------|-----------------------------------------|-----------|
-|[`⎕AVU`](avu.md)  |Atomic Vector – Unicode              |Namespace  |
+|[`⎕AVU`](avu.md)  |Atomic Vector – Unicode[†](#archaic-and-deprecated)|Namespace  |
 |[`⎕CT`](ct.md)    |Comparison Tolerance                |Namespace  |
 |[`⎕DCT`](dct.md)  |Decimal Comparison Tolerance              |Namespace  |
 |[`⎕DIV`](div.md)  |Division Method                     |Namespace  |
@@ -390,7 +418,7 @@ A system variable can never be undefined. Default values are assigned to all sys
 |[`⎕IO`](io.md)    |Index Origin                        |Namespace  |
 |[`⎕LX`](lx.md)    |Latent Expression                   |Workspace  |
 |[`⎕ML`](ml.md)    |Migration Level                     |Namespace  |
-|[`⎕PATH`](path.md)|Search Path                         |Session    |
+|[`⎕PATH`](path.md)|Search Path[†](#archaic-and-deprecated)|Session    |
 |[`⎕PP`](pp.md)    |Print Precision                     |Namespace  |
 |[`⎕PW`](pw.md)    |Print Width                         |Session    |
 |[`⎕RL`](rl.md)    |Random Link                         |Namespace  |
