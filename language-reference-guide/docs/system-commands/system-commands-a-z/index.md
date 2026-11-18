@@ -4,7 +4,7 @@ search:
 ---
 # System Commands (A-Z)
 
-Table: System Commands {: #SystemCommands }
+Table: System Commands { #SystemCommands }
 
 |Command                                                           |Description                                |
 |---------------------------------------------------------------|-------------------------------------------|

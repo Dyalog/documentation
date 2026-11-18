@@ -9,7 +9,7 @@ search:
 
 `Y` is either an array of the same shape as the selected elements of `X` or a scalar that is notionally extended to be the same shape as the selection.
 
-The operator loops through the selected elements of `X` in ravel order. For each selected element `X[i]`,     it calculates the result of `X[i]fY[i]` and assigns it back to the same element `X[i]`.
+Selective modified assignment loops through the selected elements of `X` in ravel order. For each selected element `X[i]`,     it calculates the result of `X[i]fY[i]` and assigns it back to the same element `X[i]`.
 
 `R` is the "pass-through" value, that is, the value of `Y`.  If the result of the derived function is not assigned or used, there is no explicit result.
 
@@ -23,7 +23,7 @@ The operator loops through the selected elements of `X` in ravel order. For each
 12 3600 23 7800 30
 ```
 
-As the operator performs a loop, if an element of `X` is selected more than once,  function `f` will be applied the corresponding number of times and successively to the same element of `X`.
+Because it loops, if an element of `X` is selected more than once,  function `f` is applied the corresponding number of times and successively to the same element of `X`.
 ```apl
       a←3⍴0
       (5⍴a)+←1

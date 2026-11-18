@@ -122,7 +122,7 @@ Certain primitives and system functions have behaviour that is customised global
 
 The following table describes the dependencies that exist between language elements and these system variables.
 
-Table: Implicit Arguments {: #Implicit_Arguments }
+Table: Implicit Arguments { #Implicit_Arguments }
 
 |System Variable|Monadic Functions|Dyadic Functions|Other|
 |---|---|---|---|
@@ -154,7 +154,7 @@ These constants simplify access to commonly-used values.
 
 |Name   |Description                     |
 |-------|--------------------------------|
-|[`⎕A`](a.md)   |Alphabetic uppercase characters (lowercase characters can be obtained with `⎕C⎕A`)|
+|[`⎕A`](a.md)   |Uppercase Alphabet              |
 |[`⎕D`](d.md)   |Digits                          |
 |[`⎕NULL`](null.md)|Null Item                       |
 

@@ -11,7 +11,7 @@ Once you have defined the functionality of your .NET classes, you can save them 
 - Selecting **Export...** from the **Session**'s **File** menu. You will be prompted to specify the directory and name of the assembly (DLL), and it will then be created and saved.
 
 - Using the [Bind method](#the-bind-method).
-- Using the [Dyalog .NET Compiler ](../apl-source-files/the-dyalog-dotnet-compiler.md).
+- Using the [Dyalog .NET Compiler](../apl-source-files/the-dyalog-dotnet-compiler.md).
 
 Your .NET class is now ready for use by any .NET development environment, including APL.
 
@@ -24,7 +24,7 @@ If you want to repeat the most recent export after making changes to the class, 
 
 ## The Bind Method
 
-The [`Bind` method](../../object-reference/methodorevents/bind.md) is described in the _Dyalog for Microsoft Windows Object Reference Guide_. A subset of the `Bind` method can be used on any supported platform to export .NET assemblies. Specifically, the expression:
+A subset of the [`Bind` method](../../object-reference/methodorevents/bind.md) can be used on any supported platform to export .NET assemblies. Specifically, the expression:
 ```apl
       2 ⎕NQ '.' 'Bind' <filename> 'Library'
 ```

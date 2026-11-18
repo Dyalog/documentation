@@ -18,6 +18,8 @@ The value of Scroll Type is 0 (drag), 1 or `¯1` (small change) or 2 or `¯2` (l
 
 The value of Position is the new (requested) position of the thumb. However, the event is generated **before** the thumb is actually moved. If your callback function returns a scalar 0, the position of the thumb will remain unaltered.
 
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
+
 ## Application
 
 Objects: [Scroll](../objects/scroll.md), [TrackBar](../objects/trackbar.md)

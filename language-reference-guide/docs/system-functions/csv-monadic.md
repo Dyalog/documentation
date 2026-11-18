@@ -62,8 +62,8 @@ The source is one of:
 
 If the source is a file name or a tie number, the description is one of:
 
-- a character vector that names the [file encoding](nget.md#Encodings), for example, `'UTF-8'`
-- a 256-item numeric vector that maps each byte value, from `0` to `255` in order, to a Unicode code point, with `¯1` for a byte value that is not mapped to any character; apart from `¯1`, no value can appear more than once
+- the name of a [file encoding](#file-encodings), for example, `'UTF-8'`
+- a [byte map](#file-encodings)
 
 If the description is omitted or empty, the file encoding is deduced as described in [File Handling](#file-handling).
 
@@ -253,7 +253,7 @@ The second record is extended and the third is truncated:
 
 Data can be read from a named file or a tied native file. A tied native file can be read in sections by calling `⎕CSV` repeatedly, with the `Records` variant option limiting the number of records that each call reads, until no more data is read.
 
-The file must contain text in one of the supported [file encodings](nget.md#Encodings). The file encoding is determined as follows:
+The file must contain text in one of the supported [file encodings](#file-encodings). The file encoding is determined as follows:
 
 1. If the file starts with a byte order mark (BOM), the BOM determines the encoding, regardless of the description. A BOM is found only when the file is read from its start. Therefore, when a native file is read in sections, only the first section can find it.
 2. Otherwise, if the description specifies a file encoding, that encoding is used.
@@ -262,6 +262,33 @@ The file must contain text in one of the supported [file encodings](nget.md#Enco
 A native file is read from its current file position. When `⎕CSV` completes, the file position is at the first character that was not processed, which is the end of the file unless the `Records` variant option limited the number of records read. If an error is signalled, the file position is undefined.
 
 Unlike `⎕NGET`, `⎕CSV` does not report the file encoding or the line-ending type of the file.
+
+## File Encodings
+
+<!-- This section is also on csv-dyadic.md, nget.md, nput.md, r.md, and shell.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`. When reading, this makes no difference.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+Bytes that are not valid in the file encoding signal `TRANSLATION ERROR`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

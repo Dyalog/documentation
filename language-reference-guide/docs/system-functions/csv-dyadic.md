@@ -76,8 +76,8 @@ The destination is one of:
 
 If the destination is a file name or a tie number, the description is one of:
 
-- a character vector that names the [file encoding](nget.md#Encodings), for example, `'UTF-8'`
-- a 256-item numeric vector that maps each byte value, from `0` to `255` in order, to a Unicode code point, with `¯1` for a byte value that is not mapped to any character; apart from `¯1`, no value can appear more than once
+- the name of a [file encoding](#file-encodings), for example, `'UTF-8'`
+- a [byte map](#file-encodings)
 
 If the destination is empty, the description is `'S'` (simple) or `'N'` (nested). The default is `'S'`.
 
@@ -206,6 +206,33 @@ ab  1E3
 A native file is written from its current file position. When `⎕CSV` completes, the file position is at the end of the data written. If an error is signalled, the amount of data written is undefined.
 
 If the file encoding calls for a byte order mark (BOM), it is written to a native file only if the file position is initially `0`, that is, when writing starts at the beginning of the file.
+
+## File Encodings
+
+<!-- This section is also on csv-monadic.md, nget.md, nput.md, r.md, and shell.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`, to say whether the text starts with a byte order mark (BOM). Without either, UTF-8 text has no BOM, and UTF-16 and UTF-32 text has one.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+A character that the file encoding cannot represent signals `TRANSLATION ERROR`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
