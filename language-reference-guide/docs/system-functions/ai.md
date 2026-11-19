@@ -20,10 +20,10 @@ This is a system constant: a 4-item integer vector that identifies the user and 
 
 |Item |Content|
 |-----|-------|
-|`1⊃R`|The [user number](#user-number)|
-|`2⊃R`|Compute time: the processor time that the session has used|
-|`3⊃R`|Connect time: the time since the session started|
-|`4⊃R`|Keying time: the time that the session has spent waiting for input from the keyboard|
+|`R[1]`|The [user number](#user-number)|
+|`R[2]`|Compute time: the processor time that the session has used|
+|`R[3]`|Connect time: the time since the session started|
+|`R[4]`|Keying time: the time that the session has spent waiting for input from the keyboard|
 
 The times are in milliseconds. They relate to the session, so clearing the workspace or loading another one does not reset them. Future releases might add items to `R`.
 
