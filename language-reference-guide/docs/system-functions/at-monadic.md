@@ -52,7 +52,7 @@ If `Y` specifies a single name as a character scalar, a character vector, or as 
 
 ### Valences
 
-Each item of `R[1]` or `R[;1]` is a 3-element integer vector representing the function header syntax:
+`1⊃R`, or each item of `R[;1]`, is a 3-element integer vector representing the function header syntax:
 
 |---|---|---|
 |`1 1⊃R` or `1⊃¨R[;1]`|Function result|`0` if the function has no result, `1` if the function has an explicit result, `¯1` if the function has a [shy](../../programming-reference-guide/introduction/results.md#shy-results) result|
@@ -71,7 +71,7 @@ Each item of `R[1]` or `R[;1]` is a 3-element integer vector representing the fu
 
 ### Fix Time
 
-Each item of `R[2]` or `R[;2]` is the time the function was last fixed, reported as 7 integer elements in the same form as `⎕TS`. The fix time reported for names in `Y` which are not defined functions or operators is `0`, and [`⎕LOCK`](lock.md) clears it, as it has for `foo` above.
+`2⊃R`, or each item of `R[;2]`, is the time the function was last fixed, reported as 7 integer elements in the same form as `⎕TS`. The fix time reported for names in `Y` which are not defined functions or operators is `0`, and [`⎕LOCK`](lock.md) clears it, as it has for `foo` above.
 
 |---|-------------------------------------------|
 |`2 1⊃R` or `1⊃¨R[;2]`|Year|
@@ -84,7 +84,7 @@ Each item of `R[2]` or `R[;2]` is the time the function was last fixed, reported
 
 ### Lock State
 
-Each item of `R[3]` or `R[;3]` is an integer reporting the current [`⎕LOCK`](lock.md) state of the function:
+`3⊃R`, or each item of `R[;3]`, is an integer reporting the current [`⎕LOCK`](lock.md) state of the function:
 
 |---|-------------------------|
 |`0`|Not locked |
@@ -94,7 +94,7 @@ Each item of `R[3]` or `R[;3]` is an integer reporting the current [`⎕LOCK`](l
 
 ### Author
 
-Each item of `R[4]` or `R[;4]` is a character vector, the [account name](an.md) of the user who last fixed the function. `⎕LOCK` clears it, as it has for `foo` above.
+`4⊃R`, or each item of `R[;4]`, is a character vector, the [account name](an.md) of the user who last fixed the function. `⎕LOCK` clears it, as it has for `foo` above.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
