@@ -20,7 +20,9 @@ pete
 
 Under Microsoft Windows, `R` is the name of the user account that the interpreter runs under.
 
-Under Unix, `R` is the name that the user database, usually **/etc/passwd**, gives for the real user identifier (UID) of the interpreter's process, which is also its [user number](ai.md#user-number). Environment variables such as `USER` do not affect it. If the user database has no entry for the UID, `R` is empty.
+Under Unix, `R` is the name that the user database, usually **/etc/passwd**, gives for the real user identifier (UID) of the interpreter's process, which is also its [user number](ai.md#user-number). If the user database has no entry for the UID, `R` is empty.
+
+Environment variables, such as `USERNAME` under Microsoft Windows and `USER` under Unix, do not affect `R`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
