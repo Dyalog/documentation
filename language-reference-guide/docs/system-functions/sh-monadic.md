@@ -37,7 +37,7 @@ If the result is not used, for example, when `⎕SH` is called in a statement on
       Z←⎕SH'printf "one\ntwo\n"'
       ⍴Z
 2
-      ⊃Z
+      1⊃Z
 one
       ⎕SH'rm old.log'
 ```
@@ -64,7 +64,7 @@ DOMAIN ERROR: Command interpreter returned failure code 1
 
 ```apl
       Z←⎕SH'ls nosuchfile 2>&1; exit 0'
-      ⊃Z
+      1⊃Z
 ls: cannot access 'nosuchfile': No such file or directory
 ```
 
