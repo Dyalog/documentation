@@ -147,9 +147,9 @@ Full version number of the available .NET (possibly .NET Framework) as three int
 
 Related indications whether (`1`) or not (`0`):
 
-- .NET or .NET Framework is available: `0≠⊃⎕SYSTEM.Features.DotNet`
-- .NET Framework is in use: `4=⊃⎕SYSTEM.Features.DotNet`
-- .NET (non-Framework) is in use: `5≤⊃⎕SYSTEM.Features.DotNet`
+- .NET or .NET Framework is available: `0≠⎕SYSTEM.Features.DotNet[1]`
+- .NET Framework is in use: `4=⎕SYSTEM.Features.DotNet[1]`
+- .NET (non-Framework) is in use: `5≤⎕SYSTEM.Features.DotNet[1]`
 
 <h4 id="featuresinteractive">Features.Interactive</h4>
 
