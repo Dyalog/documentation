@@ -31,7 +31,7 @@ Keying time includes waiting at the session prompt, and waiting for input to [`�
 
 <h3 class="example">Example</h3>
 
-The difference between two values of `⎕AI` gives the times in between. A [delay](dl.md) counts as connect time but not as compute time, while a calculation counts as both connect time and compute time:
+Subtracting an earlier value of `⎕AI` from a later one shows how much each time increased between the two evaluations. A [delay](dl.md) counts as connect time but not as compute time, while a calculation counts as both connect time and compute time:
 
 ```apl
       t←⎕AI ⋄ ⎕DL 2 ⋄ ⎕AI-t
