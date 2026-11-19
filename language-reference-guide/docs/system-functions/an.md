@@ -22,7 +22,7 @@ Under Microsoft Windows, `R` is the name of the user account that the interprete
 
 Under Linux, `R` is the name that the user logged in with. Starting the interpreter with `sudo` or `su`, or changing the user with [Change User](../primitive-operators/i-beam/change-user.md), does not change it. If there is no login name (for example, in a container), `R` is the name that the user database, usually **/etc/passwd**, gives for the real user identifier (UID) of the interpreter's process, or empty if the user database has no entry for that UID.
 
-Under macOS, `R` is the name that the user database gives for the real UID of the interpreter's process, which is also its [user number](ai.md#user-number). Starting the interpreter with `sudo`, or changing the user with Change User, changes it.
+Under macOS, `R` is the name that the user database gives for the real UID of the interpreter's process, which is also its [user number](ai.md#user-number), or empty if the user database has no entry for that UID. Starting the interpreter with `sudo`, or changing the user with Change User, changes it.
 
 Environment variables, such as `USERNAME` under Microsoft Windows and `USER` under Unix, do not affect `R`.
 
