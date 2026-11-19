@@ -165,10 +165,10 @@ When `Wildcard` is `1`, zero or more files and directories might match the patte
 Names are matched case insensitively on Microsoft Windows and macOS, and case sensitively on other platforms. The names `.` and `..` are never matched, and the order of the matches is not defined.
 
 !!! Hint "Hints and Recommendations"
-    Where matching is case insensitive, `⊃⊃(⎕NINFO⍠1)name` reports the capitalisation the file system actually holds, whatever capitalisation `name` uses. Only the leaf name is canonicalised this way.
+    Where matching is case insensitive, `1⊃⊃(⎕NINFO⍠1)name` reports the capitalisation the file system actually holds, whatever capitalisation `name` uses. Only the leaf name is canonicalised this way.
 
     ```apl
-          ⊃⊃(⎕NINFO⍠1)'/windows/inboxapps'
+          1⊃⊃(⎕NINFO⍠1)'/windows/inboxapps'
     /windows/InboxApps
     ```
 
