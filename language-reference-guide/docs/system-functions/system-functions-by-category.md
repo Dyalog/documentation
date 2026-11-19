@@ -8,7 +8,7 @@ The following tables list the system functions (a collective term for system con
 
 The dyadic operator [`⎕OPT`](opt.md) is unique in that it modifies the behaviour of other system functions (and functions derived from system operators), effectively providing them with additional option arguments.
 
-A dagger (†) after a description marks a system function that is also listed under [Archaic and Deprecated](#archaic-and-deprecated), with the alternative that Dyalog Ltd recommends.
+A † symbol after a description marks a system function that is also listed under [Archaic and Deprecated](#archaic-and-deprecated) with the alternative that Dyalog Ltd recommends.
 
 ## Session Information and Management
 
@@ -115,7 +115,7 @@ These are facilities for dealing with built-in objects. They mostly represent Mi
 
 ## Modifying Language Behaviour
 
-Certain primitives and system functions have behaviour that is customised globally via a set of system variables. They are: 
+Certain primitives and system functions have behaviour that is customised globally through a set of system variables. They are: 
 
 |Name  |Description                              |
 |------|-----------------------------------------|
@@ -400,7 +400,7 @@ These are archaic or deprecated facilities that are retained for backwards compa
 
 ## System Variables
 
-System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators to which they act as [implicit arguments](../primitive-functions/notes.md#implicit-arguments).
+System variables retain information used by the system in some way. Many system variables affect the behaviour of primitive functions and operators, to which they act as [_implicit arguments_](../primitive-functions/notes.md#implicit-arguments).
 
 System variables can be localised by inclusion in the header line of a defined function or in the argument list of the system function [`⎕SHADOW`](shadow.md). When a system variable is localised, it retains its previous value until it is assigned a new one. This feature is known as _pass-through localisation_. The exception to this rule is [`⎕TRAP`](trap.md).
 
