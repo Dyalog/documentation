@@ -195,11 +195,11 @@ The character vector NetBIOS domain name on Microsoft Windows and `''` on Unix.
 
 <h4 id="hostuserid">Host.UserId</h4>
 
-On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID). This is always a character vector, even on Unix where the value looks like a number.
+On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the identifier of the user who logged in (the user that the `logname` command names). Starting the interpreter with `sudo`, or changing the user with [Change User](../primitive-operators/i-beam/change-user.md), does not change it. Under Linux, in a session with no login name (for example, in a service or a container), it is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID) of the interpreter's process instead. This is always a character vector, even on Unix where the value looks like a number.
 
 <h4 id="hostusername">Host.UserName</h4>
 
-The currently logged-in user.
+The name of the user that [`Host.UserId`](#hostuserid) identifies.
 
 ### OS
 This namespace provides information about the operating system.
