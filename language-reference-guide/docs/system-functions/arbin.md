@@ -9,10 +9,10 @@ search:
 
 <h2 class="example">Example</h2>
 
-`data.txt` holds two lines, and the first of them is read, up to and including its line feed:
+[`⎕NPUT`](nput.md) writes two lines to `data.txt`, each ending with a line feed (`10`), and the first of them is read, up to and including its line feed:
 
 ```apl
-      (⊂'ABC' 'DEF')⎕NPUT'data.txt'
+      (('ABC' 'DEF')'UTF-8' 10)⎕NPUT'data.txt'
       in←'data.txt'⎕NTIE 0
       (⍬ in)⎕ARBIN ⍬
 65 66 67 10
@@ -57,9 +57,9 @@ The input device and the output device are each one of:
 - the tie number of a native file, from [`⎕NTIE`](ntie.md) or [`⎕NCREATE`](ncreate.md). Reading and writing start at the current position in the file, and move it past the bytes read or written.
 - under Unix, a file descriptor that the command that started the interpreter opened, for example, `9` when the interpreter was started with `9<data.txt`. The descriptors `0`, `1`, and `2` (standard input, output, and error) signal `DOMAIN ERROR`. The interpreter does not check that any other descriptor was opened by that command, and it has descriptors of its own open.
 
-The output device is optional. If it is omitted, `Y` is written to standard output, which can only be reached in this way.
+The output device is optional. If it is omitted, `Y` is written to standard output, which can only be reached in this way. Under Microsoft Windows, what is written to standard output does not appear in the Session.
 
-A negative number that is not a tie number signals `DOMAIN ERROR`. A device that is not open for reading or writing, as the read or write needs, signals `FILE ERROR`, for example, an output device tied for reading only.
+A negative number that is not a tie number signals `DOMAIN ERROR`. The output device is only checked when `Y` is not empty. A device that is not open for reading or writing, as the read or write needs, signals `FILE ERROR`, for example, an output device tied for reading only.
 
 <h3 class="example">Example</h3>
 
