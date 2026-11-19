@@ -5,7 +5,7 @@ search:
 
 # <span>Account Information</span> `R←⎕AI`{{key}}
 
-This is a system constant: a 4-item integer vector that identifies the user and reports how much time the session has used. [`⎕SYSTEM`](system.md) gives more information of this kind, such as the user's name and the identifier of the interpreter's process.
+This is a system constant: a 4-item integer vector that identifies the user and reports how much time the session has used. [`⎕SYSTEM`](system.md) provides additional information, for example, the user's name and the identifier of the interpreter's process.
 
 <h2 class="example">Example</h2>
 
@@ -25,9 +25,9 @@ This is a system constant: a 4-item integer vector that identifies the user and 
 |`3⊃R`|Connect time: the time since the session started|
 |`4⊃R`|Keying time: the time that the session has spent waiting for input from the keyboard|
 
-The times are in milliseconds. They are for the whole session, so clearing the workspace or loading another one does not reset them. Future releases might add items to `R`.
+The times are in milliseconds. They relate to the session, so clearing the workspace or loading another one does not reset them. Future releases might add items to `R`.
 
-Keying time includes waiting at the session prompt, and waiting for input to [`⎕`](evaluated-input-output.md) or [`⍞`](character-input-output.md). Input that is not typed, such as input piped to the interpreter, does not count.
+Keying time includes waiting at the session prompt, and waiting for input to [`⎕`](evaluated-input-output.md) or [`⍞`](character-input-output.md). Input that is not typed (for example, input piped to the interpreter) does not count.
 
 <h3 class="example">Example</h3>
 
