@@ -28,9 +28,9 @@ If a non-empty file is appended to:
 - No BOM will be written, even if encoding specifies it.
 - No check is made that the existing file content is text in the same encoding format.
 
-If specified, `newline` is numeric and is either  `⍬` or a scalar or vector  from the  column labelled *Value* in the **newline characters** section of the table [Line separators:](nget.md). Any other value causes `DOMAIN ERROR`. If `newline` is omitted it defaults to `(13 10)` on Windows and `10` on other platforms.
+If specified, `newline` is numeric and is either  `⍬` or a scalar or vector  from the  column labelled *Value* in the **newline characters** section of the table of [line separators](nget.md#Line_Separators). Any other value causes `DOMAIN ERROR`. If `newline` is omitted it defaults to `(13 10)` on Windows and `10` on other platforms.
 
-In all cases, `newline` is appended if required to a simple vector or to each vector in a vector of vectors.
+In all cases, `newline` is appended to each vector in a vector of vectors, and to a simple vector that does not already end with a line separator, so that a non-empty file always ends with a line separator, as each line of a POSIX text file does.
 
 If content contains anything other than a character vector or scalar (or these, nested), then a `DOMAIN ERROR` is signalled.
 
