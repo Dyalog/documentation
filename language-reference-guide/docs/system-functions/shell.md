@@ -78,7 +78,7 @@ A stream is a connection between the process and some resource, such as a file, 
 
 The StreamData and StreamIds vectors have the same length. The StreamIds are always sorted in ascending order. Each index describes one collected output stream; StreamIds contains the integer stream IDs, and the elements of StreamData depend on how the output is collected (see the [`Output`](#variant-option-output) variant).
 
-By default, `⊃⊃⎕SHELL cmd` returns a vector of character vectors representing the lines of the collected output text from the child process (both standard output and standard error).
+By default, `1⊃1⊃⎕SHELL cmd` returns a vector of character vectors representing the lines of the collected output text from the child process (both standard output and standard error).
 
 ### Exit Reasons
 
