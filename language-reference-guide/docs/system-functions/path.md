@@ -44,6 +44,17 @@ These are the namespaces that some values of `⎕PATH` make the interpreter sear
 
 With `↑` in `⎕PATH`, a function or operator defined in an enclosing namespace can be used from any namespace within it, much as a name defined in an outer block is visible in the inner blocks of a block-structured language with static scope.
 
+`⎕PATH` plays no part in deciding which names a statement assigns. If `Average` is not defined in the current namespace, `Average x←2 4 9` is a [multiple assignment](../other-syntax/assignment/index.md#example-of-multiple-assignment-without-parentheses) to `Average` and `x`, not a call of the function that `⎕PATH` would find. With three values for two names, it signals `LENGTH ERROR`. With two values, it would define a variable `Average`, which then hides the function. Putting the assignment in parentheses, or in a separate statement, makes `Average` a function call. Using `ns` from the example at the top of this page:
+
+```apl
+      ns.(Average x←2 4 9)
+LENGTH ERROR
+      ns.(Average x←2 4 9)
+                   ∧
+      ns.(Average (x←2 4 9))
+5
+```
+
 ## Scope
 
 `⎕PATH` has [session scope](system-functions-by-category.md#system-variables). This means that it applies to the whole workspace, and keeps its value through `)LOAD` and `)CLEAR`. A defined function or operator can localise it.
