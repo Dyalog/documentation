@@ -44,7 +44,7 @@ The command is an instruction that the Command Processor recognises, or the path
       Z←⎕CMD'echo Hello'
       ⍴Z
 1
-      ⊃Z
+      1⊃Z
 Hello
 ```
 
