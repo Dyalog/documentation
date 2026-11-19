@@ -59,7 +59,7 @@ Map bytes 100-160 in raw file as a `5×2` read-only matrix of doubles:
 
 Put simple 4-byte integer array on disk ready for mapping:
 ```apl
-      (⊃83 323 ⎕DR 2 3 4⍴⍳24)∆MPUT'c:\myvar'
+      (1⊃83 323 ⎕DR 2 3 4⍴⍳24)∆MPUT'c:\myvar'
 ```
 
 Then, map a read-write variable:
