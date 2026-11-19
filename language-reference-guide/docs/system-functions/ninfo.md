@@ -175,7 +175,7 @@ Names are matched case insensitively on Microsoft Windows and macOS, and case se
 <h4 class="example">Examples</h4>
 
 ```apl
-      ⊃1⎕NPARTS '' ⍝ current working directory
+      1⊃1⎕NPARTS '' ⍝ current working directory
 c:/Users/Pete/
       (⎕NINFO⍠1)'D*'
 ┌─────────────────────────────────────┐
@@ -191,7 +191,7 @@ c:/Users/Pete/
 │└────────────────────┘│
 └──────────────────────┘
 
-      ⊃1⎕NPARTS '' ⍝ current working directory
+      1⊃1⎕NPARTS '' ⍝ current working directory
 C:/Users/Pete/Documents/Dyalog APL-64 16.0 Unicode Files/
       (⎕NINFO⍠1)'*.*'
 ┌──────────────────────────────────────────────────────┐
