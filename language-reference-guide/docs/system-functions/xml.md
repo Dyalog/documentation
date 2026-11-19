@@ -202,7 +202,7 @@ The remainder of XML markup, including document type declarations,  XML declarat
 - The computed value is derived from what is actually preserved in the array. For example, if the source XML contains an element which contains a comment, but comments are being discarded, there will be no entry for the comment in the array and the fifth column for the element will not indicate that it has a child comment.
 
 
-### Conversion to XML
+## Conversion to XML
 
 
 Conversion to XML takes an array with the format described above and generates XML text from it. There are some simplifications to the array which are accepted:
@@ -224,7 +224,7 @@ The following validations are performed on the data in the array:
 
 Then, character references and entity references are emitted in place of characters where necessary, to ensure that valid XML is generated. However, markup, if present, is *not* validated and it is possible to generate invalid XML if care in not taken with markup constructs.
 
-### Options
+## Options
 
 
 There are 3 options which may be specified using the Variant operator `⍠` (recommended) or by the optional left argument `X` (retained for backwards compatibility). The names are different and are case-sensitive; they must be spelled exactly as shown below.
