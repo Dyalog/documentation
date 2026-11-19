@@ -46,7 +46,7 @@ Starting with the timer that collected the existing data resumes collection, and
       ⎕PROFILE 'start' 'elapsed'
       Wait 0.1
       ⎕PROFILE 'stop'
-      ⊃(,3)⎕PROFILE 'data'
+      1⊃(,3)⎕PROFILE 'data'
 2 2 2
 ```
 

@@ -20,7 +20,7 @@ The run of `Wait` after profiling stops is not counted in the data that [`⎕PRO
       ⎕←⎕PROFILE 'stop'
  inactive  elapsed  0.000009997165762 0
       Wait 0.1
-      ⊃(,3)⎕PROFILE 'data'
+      1⊃(,3)⎕PROFILE 'data'
 1 1 1
 ```
 
