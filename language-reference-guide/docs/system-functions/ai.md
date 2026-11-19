@@ -5,27 +5,50 @@ search:
 
 # <span>Account Information</span> `R←⎕AI`{{key}}
 
-This is a simple integer vector, whose four elements are:
-
-|--------|-------------------------------------------------|
-|`⎕AI[1]`|user identification.                             |
-|`⎕AI[2]`|compute time for the APL session in milliseconds.|
-|`⎕AI[3]`|connect time for the APL session in milliseconds.|
-|`⎕AI[4]`|keying time for the APL session in milliseconds. |
-
-Elements beyond 4 are not defined but reserved.
+This is a system constant: a 4-item integer vector that identifies the user and reports how much time the session has used. [`⎕SYSTEM`](system.md) provides additional information, for example, the user's name and the identifier of the interpreter's process.
 
 <h2 class="example">Example</h2>
+
 ```apl
-     ⎕AI
-52 7396 2924216 2814831
+      ⎕AI
+1000 312 20079 19765
 ```
 
-!!! unix "Dyalog on Unix"
-    Under Unix, `⎕AI[1]` is the effective UID of the account whereas [`⎕AN`](./an.md) returns the real name.
+## Result
 
-!!! windows "Dyalog on Microsoft Windows"
-    Under Microsoft Windows, `⎕AI[1]` is the aplnid (network ID from configuration dialog box).
+`R` is a 4-item integer vector:
+
+|Item |Content|
+|-----|-------|
+|`1⊃R`|The [user number](#user-number)|
+|`2⊃R`|Compute time: the processor time that the session has used|
+|`3⊃R`|Connect time: the time since the session started|
+|`4⊃R`|Keying time: the time that the session has spent waiting for input from the keyboard|
+
+The times are in milliseconds. They relate to the session, so clearing the workspace or loading another one does not reset them. Future releases might add items to `R`.
+
+Keying time includes waiting at the session prompt, and waiting for input to [`⎕`](evaluated-input-output.md) or [`⍞`](character-input-output.md). Input that is not typed (for example, input piped to the interpreter) does not count.
+
+<h3 class="example">Example</h3>
+
+The difference between two values of `⎕AI` gives the times in between. A [delay](dl.md) counts as connect time but not as compute time, while a calculation counts as both connect time and compute time:
+
+```apl
+      t←⎕AI ⋄ ⎕DL 2 ⋄ ⎕AI-t
+0 2 2005 0
+      t←⎕AI ⋄ x←{+/⍳⍵}¨10/1e7 ⋄ ⎕AI-t
+0 226 226 0
+```
+
+## User Number
+
+The user number identifies the user to the [access control](../../programming-reference-guide/component-files/component-files.md#user-number) of component files.
+
+Under Microsoft Windows, the user number is the value of the [**aplnid**](../../windows-installation-and-configuration-guide/configuration-parameters/aplnid.md) configuration parameter, or `0` if that is not set.
+
+Under Unix, the user number is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID) (UID) of the interpreter's process.
+
+A user number of `0`, which is the root user's under Unix, bypasses the access matrix, leaving only the operating system's file permissions.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
