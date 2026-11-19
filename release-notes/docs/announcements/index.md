@@ -12,7 +12,7 @@ On Microsoft Windows, Dyalog v21.0 includes experimental support for dark mode. 
 
 The Dyalog v21.0 installation images include a preview of a new proportional font, currently called APL335. This is to APL333 as APL387 (introduced in Dyalog v20.0) is to APL385.
 
-The font can be explored within the Microsoft Windows IDE (it can be selected from the drop-down font selection list) or at [https://dyalog.github.io/APL387/335/](https://dyalog.github.io/APL387/335/).
+The font can be explored within the Microsoft Windows IDE (it can be selected from the drop-down font selection list) or at [https://dyalog.github.io/APL387/335](https://dyalog.github.io/APL387/335).
 
 The design of APL335 has not yet been finalised, and feedback is welcome. Please email your feedback to [support@dyalog.com](mailto:support@dyalog.com) or raise issues in the APL387 GitHub project ([https://github.com/Dyalog/APL387](https://github.com/Dyalog/APL387)).
 
