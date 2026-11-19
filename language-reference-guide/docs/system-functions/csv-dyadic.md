@@ -66,7 +66,7 @@ The destination is one of:
 
 ```apl
       data hdr ⎕CSV'sales.csv'
-      ⊃⎕NGET'sales.csv' 1
+      1⊃⎕NGET'sales.csv' 1
 ┌─────────────┬────────────┬───────────┬────────────┐
 │Product,Sales│Widgets,1912│Gimlets,205│Dingbats,189│
 └─────────────┴────────────┴───────────┴────────────┘
@@ -181,7 +181,7 @@ If the named file already exists, `IfExists` chooses whether `⎕CSV` signals `F
 ```apl
       data⍪←'Gizmos' 23
       data hdr(⎕CSV⍠'IfExists' 'Replace')'sales.csv'
-      ⊃⎕NGET'sales.csv' 1
+      1⊃⎕NGET'sales.csv' 1
 ┌─────────────┬────────────┬───────────┬────────────┬─────────┐
 │Product,Sales│Widgets,1912│Gimlets,205│Dingbats,189│Gizmos,23│
 └─────────────┴────────────┴───────────┴────────────┴─────────┘
