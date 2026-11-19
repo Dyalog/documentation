@@ -61,6 +61,9 @@ The output device is optional. If it is omitted, `Y` is written to standard outp
 
 A negative number that is not a tie number signals `DOMAIN ERROR`. The output device is only checked when `Y` is not empty. A device that is not open for reading or writing, as the read or write needs, signals `FILE ERROR`, for example, an output device tied for reading only.
 
+!!! Warning "Warning"
+    Do not read or write the same tie with both `⎕ARBIN` or [`⎕ARBOUT`](arbout.md) and native file functions such as [`⎕NREAD`](nread.md) and [`⎕NREPLACE`](nreplace.md). The interpreter keeps track of the position in a native file, but `⎕ARBIN` and `⎕ARBOUT` move the position without updating its record, so a native file function can then read or write at the wrong place.
+
 <h3 class="example">Example</h3>
 
 Under Unix, a FIFO (named pipe) can be both the input device and the output device. The digits are written to it, and 10 bytes are then read back:

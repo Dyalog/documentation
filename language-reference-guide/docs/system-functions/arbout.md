@@ -25,9 +25,12 @@ search:
 
 A negative number that is not a tie number signals `DOMAIN ERROR`, and a tie that is not open for writing signals `FILE ERROR`.
 
+!!! Warning "Warning"
+    Do not read or write the same tie with both [`⎕ARBIN`](arbin.md) or `⎕ARBOUT` and native file functions such as [`⎕NREAD`](nread.md) and [`⎕NREPLACE`](nreplace.md). The interpreter keeps track of the position in a native file, but `⎕ARBIN` and `⎕ARBOUT` move the position without updating its record, so a native file function can then read or write at the wrong place.
+
 <h3 class="example">Examples</h3>
 
-Continuing with `abc.txt` from the example above, a new tie starts at the beginning of the file, so `XY` replaces `AB`. [`⎕ARBIN`](arbin.md) reads the file back:
+Continuing with `abc.txt` from the example above, a new tie starts at the beginning of the file, so `XY` replaces `AB`. `⎕ARBIN` reads the file back:
 
 ```apl
       ⎕NUNTIE out
