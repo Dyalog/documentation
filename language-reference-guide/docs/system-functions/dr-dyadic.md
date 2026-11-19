@@ -60,10 +60,10 @@ If `X` is a 2-item vector, the values of `Y` are converted from one data type to
 
 |Item |Content|
 |-----|-------|
-|`1⊃X`|`0`, or the data type as which the bits of `Y` are interpreted before they are converted|
-|`2⊃X`|The data type to which the values are converted|
+|`X[1]`|`0`, or the data type as which the bits of `Y` are interpreted before they are converted|
+|`X[2]`|The data type to which the values are converted|
 
-If `1⊃X` is `0`, the values of `Y` are converted as they are. The conversion preserves each value without loss of precision; a value that cannot be represented in the target type is not converted. A scalar `Y` is treated as a 1-item vector.
+If `X[1]` is `0`, the values of `Y` are converted as they are. The conversion preserves each value without loss of precision; a value that cannot be represented in the target type is not converted. A scalar `Y` is treated as a 1-item vector.
 
 `R` is a 2-item vector:
 
@@ -96,7 +96,7 @@ Only `1` and `¯7` can be represented as 8-bit signed integers:
 
 ## Classic Edition: 16-bit Integers as Characters
 
-In the Classic Edition, `X` can be a 3-item vector in which `1⊃X` is a data type and `1↓X` is `163 82`. The bits of `Y` are interpreted as an array of type `1⊃X`, and are then converted to the character representation of the corresponding 16-bit integers. This form is provided primarily for compatibility with APL\*PLUS; new applications can use the conversion code of [`⎕NAPPEND`](nappend.md) and [`⎕NREPLACE`](nreplace.md) instead. In the Unicode Edition, a 3-item `X` signals `DOMAIN ERROR`.
+In the Classic Edition, `X` can be a 3-item vector in which `X[1]` is a data type and `1↓X` is `163 82`. The bits of `Y` are interpreted as an array of type `X[1]`, and are then converted to the character representation of the corresponding 16-bit integers. This form is provided primarily for compatibility with APL\*PLUS; new applications can use the conversion code of [`⎕NAPPEND`](nappend.md) and [`⎕NREPLACE`](nreplace.md) instead. In the Unicode Edition, a 3-item `X` signals `DOMAIN ERROR`.
 
 In the Classic Edition, conversion to and from character data (data type `82`) uses the translate vector given by [`⎕NXLATE 0`](nxlate.md). By default, this is the mapping defined by the current output translate table (usually `WIN.DOT`).
 
