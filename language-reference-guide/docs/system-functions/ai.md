@@ -46,7 +46,7 @@ The user number identifies the user to the [access control](../../programming-re
 
 Under Microsoft Windows, the user number is the value of the [**aplnid**](../../windows-installation-and-configuration-guide/configuration-parameters/aplnid.md) configuration parameter, or `0` if that is not set.
 
-Under Unix, the user number is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID) (UID) of the interpreter's process, which `⎕SYSTEM.Host.UserId` gives as a character vector.
+Under Unix, the user number is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID) (UID) of the interpreter's process.
 
 A user number of `0`, which is the root user's under Unix, bypasses the access matrix, leaving only the operating system's file permissions.
 
