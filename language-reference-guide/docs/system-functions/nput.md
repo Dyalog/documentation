@@ -21,21 +21,16 @@ The left-argument `X` is comprised of 1, 2 or 3 items which identify `(content) 
 
 `content` is either a vector of character vectors, each of which represents a line in the file to be written, a simple character vector, or a character matrix. If it is a matrix, then trailing spaces will be stripped from each row.
 
-If specified, `encoding` is either:
-
-- a character vector from the first column in the table [File Encodings](nget.md). If `encoding` specifies a UTF format, it can be qualified with -BOM  (for example, UTF-8-BOM), which causes a Byte Order Mark (BOM) to be written at the beginning of the file or -NOBOM which does not. If the -BOM or -NOBOM suffix is omitted, UTF-8 defaults to UTF-8-NOBOM, while the other UTF formats default to -BOM.
-- a 256-element numeric vector that maps each possible byte value (0-255) to a  Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
-
-If  omitted, `encoding` defaults to UTF-8-NOBOM.
+If specified, `encoding` is the [file encoding](#file-encodings) to write the file in. If omitted, it is `'UTF-8-NOBOM'`.
 
 If a non-empty file is appended to:
 
 - No BOM will be written, even if encoding specifies it.
 - No check is made that the existing file content is text in the same encoding format.
 
-If specified, `newline` is numeric and is either  `⍬` or a scalar or vector  from the  column labelled *Value* in the **newline characters** section of the table [Line separators:](nget.md). Any other value causes `DOMAIN ERROR`. If `newline` is omitted it defaults to `(13 10)` on Windows and `10` on other platforms.
+If specified, `newline` is numeric and is either  `⍬` or a scalar or vector  from the  column labelled *Value* in the **newline characters** section of the table of [line separators](nget.md#Line_Separators). Any other value causes `DOMAIN ERROR`. If `newline` is omitted it defaults to `(13 10)` on Windows and `10` on other platforms.
 
-In all cases, `newline` is appended if required to a simple vector or to each vector in a vector of vectors.
+In all cases, `newline` is appended to each vector in a vector of vectors, and to a simple vector that does not already end with a line separator, so that a non-empty file always ends with a line separator, as each line of a POSIX text file does.
 
 If content contains anything other than a character vector or scalar (or these, nested), then a `DOMAIN ERROR` is signalled.
 
@@ -97,6 +92,33 @@ In the third example, all of the line endings are normalised so the written file
 
 !!! Warning "Warning"
     If two or more APL processes separately write to a file using `⎕NPUT`, the behaviour is undefined. In particular, if multiple APL processes use `⎕NPUT` with flags set to `2` (append), it is not guaranteed that each `⎕NPUT` operation will be atomic and all the text written to the file will be complete and/or contiguous.
+
+## File Encodings
+
+<!-- This section is also on csv.md, nget.md, r.md, and shell.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`, to say whether the text starts with a byte order mark (BOM). Without either, UTF-8 text has no BOM, and UTF-16 and UTF-32 text has one.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+A character that the file encoding cannot represent signals `TRANSLATION ERROR`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

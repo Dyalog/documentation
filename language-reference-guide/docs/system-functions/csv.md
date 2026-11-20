@@ -27,6 +27,33 @@ Some characters in a CSV file are metacharacters that define the structure of th
 
 Fixed-width fields do not require these options and they are ignored if fixed-width fields are being processed.
 
+## File Encodings
+
+<!-- This section is also on nget.md, nput.md, r.md, and shell.md, adapted to each page. A change here might be needed there too. -->
+
+A file encoding is either the name of an encoding or a byte map.
+
+The name of an encoding is one of these character vectors, which are case-sensitive:
+
+|Name|Encoding|
+|----|--------|
+|`'UTF-8'`|UTF-8|
+|`'UTF-16LE'`|UTF-16, little-endian|
+|`'UTF-16BE'`|UTF-16, big-endian|
+|`'UTF-16'`|UTF-16, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'UTF-32LE'`|UTF-32, little-endian|
+|`'UTF-32BE'`|UTF-32, big-endian|
+|`'UTF-32'`|UTF-32, with the endianness of the platform, which is big-endian under AIX, and little-endian on all other platforms|
+|`'ASCII'`|7-bit ASCII|
+|`'Windows-1252'`|8-bit Windows-1252|
+|`'ANSI'`|8-bit Windows-1252, the same as `'Windows-1252'`|
+
+A UTF name can end in `-BOM` or `-NOBOM`, as in `'UTF-8-BOM'`. When exporting, this says whether the text starts with a byte order mark (BOM). Without either, UTF-8 text has no BOM, and UTF-16 and UTF-32 text has one. When importing, it makes no difference.
+
+A byte map is a numeric vector of 256 items, one for each byte value from `0` to `255` in order. Each item is the code point of the character that the byte represents, or `¯1` if the byte represents no character. Apart from `¯1`, no code point can appear more than once.
+
+Bytes that are not valid in the file encoding, and characters that it cannot represent, signal `TRANSLATION ERROR`.
+
 # Monadic `⎕CSV`
 
 `R←⎕CSV Y`
@@ -50,8 +77,8 @@ Fixed-width fields do not require these options and they are ignored if fixed-wi
 
 If `Y[1]` is a file name or tie number *Description* can be one of:
 
-- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
-- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
+- the name of a [file encoding](#file-encodings), for example, `'UTF-8'`
+- a [byte map](#file-encodings)
 
 If omitted or empty, the file encoding is deduced (see below).
 
@@ -216,7 +243,7 @@ If `Y[4]` does specify that the data contains a header, then `R` is a 2-element 
 
 Data can be read from a named file or a tied native file. A tied native file can be read in sections by repeatedly invoking `⎕CSV` for a specified maximum number of records (specified by the `Records` variant option) until no more data is read.
 
-In all cases the files must contain text using one of the supported encodings (see [File Encodings](nget.md)). The method used to determine the file encoding is as follows:
+In all cases the files must contain text using one of the supported [file encodings](#file-encodings). The method used to determine the file encoding is as follows:
 
 - If a Byte Order Mark (BOM) is encountered at the start of the file, it is used regardless of `Y[2]` (if specified). However, the BOM can only be encountered if the file is read from the start - specifically, if a native file is read in sections, any BOM present will only be encountered when the first section is read.
 - Otherwise, the file will be read and decoded according to the file encoding in `Y[2]` if specified.
@@ -254,8 +281,8 @@ The left argument `X` is either:
 
 If `Y[1]` is a file name or tie number, *Description* can be:
 
-- a character vector specifying the file encoding such as `'UTF-8'` (see [File Encodings](nget.md)).
-- a 256-element numeric vector that maps each possible byte value (0-255) to a Unicode code point (1st element = Unicode code point corresponding to byte value 0, and so on). ¯1 indicates that the corresponding byte value is not mapped to any character. Apart from ¯1, no value can appear in the table more than once.
+- the name of a [file encoding](#file-encodings), for example, `'UTF-8'`
+- a [byte map](#file-encodings)
 
 If `Y[1]` is empty, *Description* can be a character scalar `'S'` (simple) or `'N'` (nested). If omitted, the default is `'S'`.
 
