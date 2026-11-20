@@ -301,7 +301,7 @@ nav:
           - '<code>⎕ARBIN</code>: Arbitrary Input': system-functions/arbin.md
           - '<code>⎕ARBOUT</code>: Arbitrary Output': system-functions/arbout.md
           - '<code>⎕AT</code>: Attributes': system-functions/at.md
-          - '<code>⎕ATX</code>: Extended Attributes': system-functions/atx.md
+          - '<code>⎕ATX</code>: Extended Object Attributes': system-functions/atx.md
           - '<code>⎕AV</code>: Atomic Vector': system-functions/av.md
           - '<code>⎕AVU</code>: Atomic Vector Unicode': system-functions/avu.md
           - '<code>⎕BASE</code>: Base Class': system-functions/base.md

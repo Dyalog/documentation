@@ -32,7 +32,7 @@ These provide information on, and control, the current workspace and its content
 |Name     |Description              |Form|
 |---------|-------------------------|-----|
 |[`⎕AT`](at.md)     |Object Attributes[†](#archaic-and-deprecated)|Ambivalent function|
-|[`⎕ATX`](atx.md)   |Extended Attributes     |Dyadic function|
+|[`⎕ATX`](atx.md)   |Extended Object Attributes|Dyadic function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕LX`](lx.md)    |Latent Expression        |Variable|
 |[`⎕NC`](nc.md)    |Name Classification      |Monadic function|
