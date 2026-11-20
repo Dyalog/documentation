@@ -12,7 +12,7 @@ search:
 
 `Y` is a 1- or 2-element vector.
 
-`Y[1]` is a negative integer value that specifies an (unused) tie number by which the file may subsequently be referred.
+`Y[1]` is `0` or a negative integer that specifies an unused tie number by which the file can subsequently be referred to. If `Y[1]` is `0`, the system allocates the available tie number closest to zero.
 
 `Y[2]` is optional and specifies the mode in which the file is to be opened.  This is an integer value calculated as the sum of 2 codes.  The first code refers to the type of access needed from users who have already tied the native file.  The second code refers to the type of access you wish to grant to users who subsequently try to open the file while you have it open.
 
@@ -20,43 +20,27 @@ If `Y[2]` is omitted, the system tries to open the file with the default value o
 
 |Needed from existing users                     ||Granted to subsequent users                     ||
 |--------------------------|---------------------|---------------------------|---------------------|
-|0                         |read access          |0                          |no access (exclusive)|
-|1                         |write access         |16                         |no access (exclusive)|
-|2                         |read and write access|32                         |read access          |
-|&nbsp;                    |&nbsp;               |48                         |write access         |
+|0                         |read access          |16                         |no access (exclusive)|
+|1                         |write access         |32                         |read access          |
+|2                         |read and write access|48                         |write access         |
 |&nbsp;                    |&nbsp;               |64                         |read and write access|
+
+If `Y[2]` includes no code for subsequent users, they are granted no access, as with `16`.
 
 On Unix systems, the second column has no meaning and only the first code (`16|mode`) is passed to the `open(2)` call as the access parameter. See include file `fcntl.h` for details. See also [Native File Lock](nlock.md) which is not platform dependent.
 
-!!! Legacy "Legacy"
-    The original objective of value 0 from existing users (granting subsequent users a value of 0) is no longer relevant, and 0 now means the same as 16. The option remains for backwards compatibility purposes.
-
 `R` is the tie number by which the file may subsequently be referred. If `Y[1]` is a negative integer, then `R` is a [shy](../../programming-reference-guide/introduction/results.md#shy-results) result; if `Y[1]` is 0, `R` is an explicit result.
 
-## Automatic Tie Number Allocation
-
-A tie number of 0 as argument to a create or tie operation, allocates, and returns as an explicit result, the first (closest to zero) available tie number. This allows you to simplify code. For example:
-
-from:
-```apl
-      tie←¯1+⌊/0,⎕NNUMS    ⍝ With next available number,
-      file ⎕NTIE tie       ⍝ ... tie file.
-```
-
-to:
-```apl
-      tie←file ⎕NTIE 0     ⍝ Tie with first available no.
-```
+If the native file is already tied, executing `⎕NTIE` with the same or a different tie number re-ties it with that tie number, and a tie number of `0` re-ties it with the tie number it already has. This can be used to re-tie the file with a different mode.
 
 <h2 class="example">Example</h2>
+
 ```apl
 ntie←{                  ⍝ tie file and return tie no.
     ⍺←2+64              ⍝ default all access.
     ⍵ ⎕NTIE 0 ⍺         ⍝ return new tie no.
 }
 ```
-
-If the native file is already tied, executing `⎕NTIE` with the same or a different tie number simply re-ties it with the same or the new tie number. Re-tying a file with a tie number of 0, re-ties it with the same tie number. This feature can be used to re-tie the file using a different mode.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

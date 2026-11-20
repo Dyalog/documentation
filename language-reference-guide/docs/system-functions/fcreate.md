@@ -7,7 +7,7 @@ search:
 
 `Y` must be a simple integer scalar or a 1 or 2 element vector:  
 
-- The first element is the *file tie number*. The *file tie number* must not be the tie number associated with another tied file.
+- The first element is the *file tie number*. The *file tie number* must not be the tie number associated with another tied file. If it is `0`, the system allocates the available tie number closest to zero.
 - The second element, if specified, must be `64`. 
 
 !!! Legacy "Legacy"
@@ -21,27 +21,10 @@ search:
 
 The newly created file is tied for exclusive use.
 
-The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result of `⎕FCREATE` is the tie number of the new file.
-
-## Automatic Tie Number Allocation
-
-A tie number of 0 as argument to a create or tie operation, allocates, and returns as an explicit result, the first (closest to zero) available tie number. This allows you to simplify code. For example:
-
-from:
-```apl
-
-      tie←1+⌈/0,⎕FNUM     ⍝ With next available number,
-      file ⎕FCREATE tie   ⍝ ... create file.
-
-```
-
-to:
-```apl
-
-      tie←file ⎕FCREATE 0 ⍝ Create with first available..
-```
+The result of `⎕FCREATE` is the tie number of the new file. It is [shy](../../programming-reference-guide/introduction/results.md#shy-results) unless the file tie number is `0`, in which case it is explicit.
 
 <h2 class="example">Examples</h2>
+
 ```apl
 
       '..\BUDGET\SALES'    ⎕FCREATE 2    ⍝ Windows
@@ -77,6 +60,7 @@ The principal option is a number that sets journaling (`'J'`) and checksum (`'C'
 See also: [File Properties ](fprops.md).
 
 <h2 class="example">Examples</h2>
+
 ```apl
       'newfile' (⎕FCREATE⍠3) 0
 1
