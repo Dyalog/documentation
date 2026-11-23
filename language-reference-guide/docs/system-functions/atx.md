@@ -40,6 +40,13 @@ An array that has no name can be given one by applying a dfn to it, in which it 
 2032
 ```
 
+Likewise, a function that has no name can be given one by making it the operand of a dop, in which it is `⍺⍺`. The code of the dop must use `⍺⍺` itself, not only in the name given to `⎕ATX`, or it is a dfn rather than a dop. Here, `⋄ ⍺⍺` does that, although it is never reached:
+
+```apl
+      {+/⍵}{30 31 32 ⎕ATX '⍺⍺' ⋄ ⍺⍺}⍬
+1 0 1
+```
+
 ## Result
 
 `R` holds one value for each code in `X` and each name in `Y`:
