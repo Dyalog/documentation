@@ -81,7 +81,7 @@ Continuing with `plus` from the example above:
 
 ## Attributes
 
-The attributes are in groups, each of which has a range of codes. Where an attribute does not apply to a name, for example, the author of a variable, `⎕ATX` reports the value in the last column of the group's table.
+The attributes are in groups, each of which has a range of codes. Where an attribute does not apply to a name, for example, the author of a variable, `⎕ATX` reports its default, which is in the Default column of the group's table.
 
 The examples continue with `plus` and `dfn` from the examples above.
 
@@ -93,8 +93,8 @@ The examples continue with `plus` and `dfn` from the examples above.
 
 ### Syntax
 
-|Code|Attribute|Where it does not apply|
-|----|---------|-----------------------|
+|Code|Attribute|Default|
+|----|---------|-------|
 |`10`|Whether a function or operator has a result: `1` for an explicit result, `¯1` for a [shy](../../programming-reference-guide/introduction/results.md#shy-results) result, or `0` for no result|`0`|
 |`11`|The valence of a function, or of the functions that an operator derives: `0` niladic, `1` monadic, `2` dyadic, or `¯2` ambivalent|`0`|
 |`12`|The valence of an operator: `0` not an operator, `1` monadic, or `2` dyadic|`0`|
@@ -114,14 +114,14 @@ The examples continue with `plus` and `dfn` from the examples above.
 
 ### Last Edit
 
-|Code|Attribute|Where it does not apply|
-|----|---------|-----------------------|
+|Code|Attribute|Default|
+|----|---------|-------|
 |`20`|The [account name](an.md) of the user who last edited a tradfn or tradop|`''`|
 |`21`|The time of the last edit of a tradfn or tradop, as the number of days, including the fraction of a day, since 1899-12-31 at 00:00 UTC|`¯1`|
 |`22`|The local time of the last edit of a tradfn or tradop, as a 7-item vector in the same form as [`⎕TS`](ts.md)|`⍬`|
 |`23`|The number of bytes needed to store the value, without any parts that it shares with other arrays|`0`|
 
-[`1 ⎕LOCK`](lock.md) clears the author and the time of the last edit.
+[`1∘⎕LOCK`](lock.md) clears the author and the time of the last edit.
 
 <h4 class="example">Example</h4>
 
@@ -138,13 +138,13 @@ The examples continue with `plus` and `dfn` from the examples above.
 
 ### Restrictions
 
-|Code|Attribute|Where it does not apply|
-|----|---------|-----------------------|
-|`30`|Whether the source of a function or operator can be displayed: `1` or `0`|`¯1`|
-|`31`|Whether execution can be suspended inside a function or operator: `1` or `0`|`¯1`|
+|Code|Attribute|Default|
+|----|---------|-------|
+|`30`|Whether the source of a function or operator can be displayed: `1`, or `0` after [`1∘⎕LOCK`](lock.md)|`¯1`|
+|`31`|Whether execution can be suspended inside a function or operator: `1`, or `0` after `2∘⎕LOCK` and for a single-line dfn or dop|`¯1`|
 |`32`|Whether a function or operator responds to a weak interrupt: `1` or `0`|`¯1`|
 
-`⎕LOCK` prevents displaying the source or suspending execution. Execution cannot be suspended inside a dfn or dop.
+Execution can be suspended inside a multi-line dfn or dop, but inside a single-line one only with [inline tracing](../../windows-ui-guide/tracer.md#inline-tracing).
 
 <h4 class="example">Example</h4>
 
@@ -152,12 +152,16 @@ The examples continue with `plus` and `dfn` from the examples above.
       ∇ R←Hidden
 [1]    R←0
       ∇
+      ∇ R←Atomic
+[1]    R←0
+      ∇
       1 ⎕LOCK 'Hidden'
+      2 ⎕LOCK 'Atomic'
       x←42
-      30 31 32 ⎕ATX 'plus' 'Hidden' 'dfn' 'x'
-┌────────┬────────┬────────┐
-│1 0 1 ¯1│1 1 0 ¯1│1 1 1 ¯1│
-└────────┴────────┴────────┘
+      30 31 32 ⎕ATX 'plus' 'Hidden' 'Atomic' 'dfn' 'x'
+┌──────────┬──────────┬──────────┐
+│1 0 1 1 ¯1│1 1 0 0 ¯1│1 1 1 1 ¯1│
+└──────────┴──────────┴──────────┘
 ```
 
 ### Class
@@ -174,7 +178,7 @@ The examples continue with `plus` and `dfn` from the examples above.
 <h4 class="example">Example</h4>
 
 ```apl
-      ns←⎕NS ''
+      ns←()
       ↑40 41 42 ⎕ATX 'plus' 'dfn' 'x' 'op' 'ns' 'undefined' '3x'
 3   3   2   4   9   0 ¯1
 1   2   1   2   1   0  0
@@ -183,8 +187,8 @@ The examples continue with `plus` and `dfn` from the examples above.
 
 ### Source
 
-|Code|Attribute|Where it does not apply|
-|----|---------|-----------------------|
+|Code|Attribute|Default|
+|----|---------|-------|
 |`50`|The name of the file that the definition was [fixed](fix.md) from|`''`|
 |`51`|The [file encoding](nget.md#file-encodings) of that file|`''`|
 |`52`|A checksum of that file|`''`|
@@ -199,14 +203,20 @@ Codes `54` and `55` also apply to a definition that was fixed from a script that
 `c.apln` is a namespace script, and `range` and `Double` are defined in it:
 
 ```apl
-      src←':Namespace c' '    range←{⍺↓⍳⍵}' '    ∇ R←Double Y' '      R←2×Y' '    ∇' ':EndNamespace'
-      (⊂src)⎕NPUT'c.apln'
-      2 ⎕FIX'file://c.apln'
+      (
+          ':Namespace c'
+          '    range←{⍺↓⍳⍵}'
+          '    ∇ R←Double Y'
+          '      R←2×Y'
+          '    ∇'
+          ':EndNamespace'
+      )⊂⍛⎕NPUT'c.apln'
+      2 ⎕FIX'c.apln'
       50 51 52 53 54 55 ⎕ATX 'c'
 ┌──────┬───────────┬────────┬──┬─┬─┐
 │c.apln│UTF-8-NOBOM│f8406927│10│0│6│
 └──────┴───────────┴────────┴──┴─┴─┘
-      c.(54 55 ⎕ATX 'range' 'Double')
+      54 55 c.⎕ATX 'range' 'Double'
 ┌───┬───┐
 │1 2│1 3│
 └───┴───┘
@@ -214,10 +224,10 @@ Codes `54` and `55` also apply to a definition that was fixed from a script that
 
 ### Definition
 
-|Code|Attribute|Where it does not apply|
-|----|---------|-----------------------|
+|Code|Attribute|Default|
+|----|---------|-------|
 |`60`|The source as it was typed|`0⍴⊂''`|
-|`61`|The normalised source, as with the configuration parameters **AUTOFORMAT** set to `1` and **TABSTOPS** set to `4`|`0⍴⊂''`|
+|`61`|The normalised source, as with the configuration parameters [**AUTOFORMAT**](../../windows-installation-and-configuration-guide/configuration-parameters/autoformat.md) set to `1` and [**TABSTOPS**](../../windows-installation-and-configuration-guide/configuration-parameters/tabstops.md) set to `4`|`0⍴⊂''`|
 |`62`|The source as it was typed, or else the normalised source|`0⍴⊂''`|
 
 A dfn or dop that is assigned in the Session has no source as it was typed, so code `60` reports an empty vector for it, and code `62` reports its normalised source.
