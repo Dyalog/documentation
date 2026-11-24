@@ -9,7 +9,7 @@ search:
 
 `Y` is either an array of the same shape as the indices specified by `I` or a scalar that is notionally extended to be the same shape as those indices.
 
-The operator loops through the indices specified by `I` in ravel order. For each successive index `i` in the set specified by `I`,     it calculates the result of `X[i]fY[i]` and assigns it back to `X[i]`.
+Indexed modified assignment loops through the indices specified by `I` in ravel order. For each successive index `i` in the set specified by `I`,     it calculates the result of `X[i]fY[i]` and assigns it back to `X[i]`.
 
 `R` is the "pass-through" value, that is, the value of `Y`.  If the result of the derived function is not assigned or used, there is no explicit result.
 
@@ -30,7 +30,7 @@ The operator loops through the indices specified by `I` in ravel order. For each
 1 3 1.5 5 5
 ```
 
-As the operator performs a loop, if an index in `I` is repeated, function `f` will be applied that number of times and successively to the same item of `X`.
+Because it loops, if an index in `I` is repeated, function `f` is applied that number of times and successively to the same item of `X`.
 
 <h2 class="example">Example</h2>
 ```apl

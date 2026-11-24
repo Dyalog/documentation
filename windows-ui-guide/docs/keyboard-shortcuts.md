@@ -4,7 +4,7 @@ The terms keyboard shortcut (Unicode Edition) and command (Classic Edition) are 
 
 ## Unicode Edition
 
-Unicode Edition provides a number of shortcut keys that may be used to perform actions. For compatibility with Classic Edition and with previous versions of Dyalog, these are identified by 2-character codes; for example the action to start the Tracer is identified by the code <TC>, and mapped to user-configurable keystrokes.
+Unicode Edition provides a number of shortcut keys that may be used to perform actions. For compatibility with Classic Edition and with previous versions of Dyalog, these are identified by 2-character codes; for example the action to start the Tracer is identified by the code **<TC\>**, and mapped to user-configurable keystrokes.
 
 In the Unicode Edition, Keyboard Shortcuts are defined using Options/Configure/Keyboard Shortcuts and stored in the Windows Registry. The Unicode IME translate tables have definitions for the Keyboard Shortcuts too; these are ignored by the interpreter, and are intended for use with terminal emulators being used in conjunction with non-GUI versions of Dyalog.
 

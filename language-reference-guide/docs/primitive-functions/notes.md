@@ -94,7 +94,7 @@ LENGTH ERROR: Mismatched left and right argument shapes
 
 ## Scalar and Singleton Extension
 
-A _singleton_ is an array with exactly one element, of any rank: a scalar, a one-element vector, a one-by-one matrix, and so on. An array `Y` is a singleton if `1=×/⍴Y`. When a dyadic scalar function is applied to a singleton and a non-singleton, the singleton is extended to conform with the other argument, and the result takes the shape of the non-singleton argument.
+A _singleton_ is an array with exactly one element, of any rank: a scalar, a one-element vector, a one-by-one matrix, and so on. An array `Y` is a singleton if `1=≢,Y`. When a dyadic scalar function is applied to a singleton and a non-singleton, the singleton is extended to conform with the other argument, and the result takes the shape of the non-singleton argument.
 
 <h2 class="example">Examples</h2>
 ```apl

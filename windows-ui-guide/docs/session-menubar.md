@@ -6,7 +6,7 @@ The Session MenuBar (`⎕SE.mb`) contains a set of menus as follows. Unless spec
 
 The *File* menu (`⎕SE.mb.file`) provides a means to execute those APL System Commands that are concerned with the active and saved workspaces. The contents of a typical File menu and the operations they perform are illustrated below.
 
-Table: File Menu Operations {: #file-menu-operations }
+Table: File Menu Operations { #file-menu-operations }
 
 |Item|Action|Description|
 |---|---|---|
@@ -29,7 +29,7 @@ Table: File Menu Operations {: #file-menu-operations }
 
 The *Edit* menu (`⎕SE.mb.edit`) provides a means to recall previously entered input lines for re-execution and for copying text to and from the clipboard.
 
-Table: Edit menu operations {: #edit-menu-operations }
+Table: Edit menu operations { #edit-menu-operations }
 
 |Item             |Action          |Description                                                                               |
 |-----------------|----------------|------------------------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ Table: Edit menu operations {: #edit-menu-operations }
 
 The *View* menu (`⎕SE.mb.view`) toggles the visibility of the Session Toolbar, StatusBar, and Language Bar.
 
-Table: View menu operations {: #view-menu-operations }
+Table: View menu operations { #view-menu-operations }
 
 |Item       |Action|Description                    |
 |-----------|------|-------------------------------|
@@ -59,7 +59,7 @@ Table: View menu operations {: #view-menu-operations }
 
 This contains a single action (`⎕SE.mb.windows`) which is to close all of the Edit and Trace windows and the Status window.
 
-Table: Window menu operations {: #window-menu-operations }
+Table: Window menu operations { #window-menu-operations }
 
 |Item             |Action      |Description                      |
 |-----------------|------------|---------------------------------|
@@ -73,7 +73,7 @@ In addition, the *Window* menu will contain options to switch the focus to any s
 
 The *Session* menu (`⎕SE.mb.session`) provides access to the system operations that allow you to load a session (`⎕SE`) from a session file and to save your current session (`⎕SE`) to a session file. If you use these facilities rarely, you may wish to move them to (say) the *Options* menu or even dispense with them entirely.
 
-Table: Session menu operations {: #session-menu-operations }
+Table: Session menu operations { #session-menu-operations }
 
 |Item|Action|Description|
 |---|---|---|
@@ -85,7 +85,7 @@ Table: Session menu operations {: #session-menu-operations }
 
 The *Log* menu (`⎕SE.mb.log`) provides access to the system operations that manipulate Session log files.
 
-Table: Log menu operations {: #log-menu-operations }
+Table: Log menu operations { #log-menu-operations }
 
 |Item   |Action       |Description                                                                                 |
 |-------|-------------|--------------------------------------------------------------------------------------------|
@@ -99,7 +99,7 @@ Table: Log menu operations {: #log-menu-operations }
 
 The *Action* menu (`⎕SE.mb.action`) may be used to perform a variety of operations on the *current object* or the *current line*. The current object is the object whose name contains the cursor. The current line is that line that contains the cursor. The *Edit*, *Copy Object*, *Paste Object* and *Print Object* items operate on the current object. For example, if the name `SALES` appears in the session and the cursor is placed somewhere within it, `SALES` is the current object and will be copied to the clipboard by selecting *Copy object* or opened up for editing by selecting *Edit*.
 
-Table: Action menu operations {: #actions-menu-operations }
+Table: Action menu operations { #actions-menu-operations }
 
 |Item        |Action       |Description                                                                                                                           |
 |------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -117,7 +117,7 @@ Table: Action menu operations {: #actions-menu-operations }
 
 The *Options* menu (`⎕SE.mb.options`) provides configuration options.
 
-Table: Options menu operations {: #options-menu-operations }
+Table: Options menu operations { #options-menu-operations }
 
 |Item                     |Action                      |Description                                                                                                      |
 |-------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ The value associated with the *Expose Root* option reflects the value of this se
 
 The *Tools* menu (`⎕SE.mb.tools`) provides access to various session tools and dialog boxes.
 
-Table: Tools Menu Operations {: #tools-menu-operations }
+Table: Tools Menu Operations { #tools-menu-operations }
 
 |Item        |Action         |Description                                                                                          |
 |------------|---------------|-----------------------------------------------------------------------------------------------------|
@@ -148,7 +148,7 @@ Table: Tools Menu Operations {: #tools-menu-operations }
 
 The *Threads* menu (`⎕SE.mb.threads`) provides access to various session tools and dialog boxes.
 
-Table: Threads Menu Operations {: #threads-menu-operations }
+Table: Threads Menu Operations { #threads-menu-operations }
 
 |Item               |Action                 |Description                                        |
 |-------------------|-----------------------|---------------------------------------------------|
@@ -165,7 +165,7 @@ Table: Threads Menu Operations {: #threads-menu-operations }
 
 The *Layout* menu (`⎕SE.mb.layout`) selects the layout of the Session and of the tools that are docked in it, including the Editor and the Debugger.
 
-Table: Layout Menu Operations {: #debugger-layout-menu-operations }
+Table: Layout Menu Operations { #debugger-layout-menu-operations }
 
 |Item                                |Action      |Description                                                                                                                                              |
 |------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -180,7 +180,7 @@ The selected layout is saved when Dyalog exits and is restored the next time it 
 
 The *Help* menu (`⎕SE.mb.help`) provides access to the help system which is packaged as a single *Microsoft HTML Help* compiled help file named `help\dyalog.chm.`
 
-Table: Help menu operations {: #help-menu-operations }
+Table: Help menu operations { #help-menu-operations }
 
 |Label|Action|Description|
 |---|---|---|

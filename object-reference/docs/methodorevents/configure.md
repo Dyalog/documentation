@@ -32,6 +32,8 @@ vector as follows :
 For any object, the operation can be prevented by returning a scalar 0 from
 the callback function associated with the Configure event.
 
+The associated callback is run **immediately** while the windows notification is still on the stack. See [High-Priority Callback Functions](../../interface-guide/introduction/high-priority-callbacks.md).
+
 ## Full-Drag Considerations
 
 The user may choose a system option, described here as *full-drag*,

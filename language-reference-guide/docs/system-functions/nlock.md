@@ -65,7 +65,7 @@ The left argument may have a second optional item that specifies a *timeout* val
 
 ### Errors
 
-- In this release, an attempt to unlock a region that contains bytes that have not been locked results in a `DOMAIN ERROR`.
+- Under Microsoft Windows, an attempt to unlock a region that contains bytes that have not been locked results in a `DOMAIN ERROR`. On other platforms, the operating system allows this, and no error is signalled.
 - A `LIMIT ERROR` results if the operating system lock daemon has insufficient resources to honour the locking request.
 - Some systems support only write locks. In this case an attempt to set a read lock will generate a `DOMAIN ERROR`, and it may be appropriate for the APL programmer to trap the error and apply a write lock.
 - No attempt will be made to detect deadlock. Some servers do this and if such a condition is detected, a `DEADLOCK` error (1008) will be reported.

@@ -9,7 +9,7 @@ search:
 
 The following functions may appear in the selection expression. Where appropriate these functions may be used with axis `[]` and with the _each_ operator `¨`.
 
-Table: Functions for Selective Assignment {: #Selective_Assignment_Functions }
+Table: Functions for Selective Assignment { #Selective_Assignment_Functions }
 
 |----|------------------------------|
 |`↑` |Take                          |

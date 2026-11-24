@@ -147,9 +147,9 @@ Full version number of the available .NET (possibly .NET Framework) as three int
 
 Related indications whether (`1`) or not (`0`):
 
-- .NET or .NET Framework is available: `0≠⊃⎕SYSTEM.Features.DotNet`
-- .NET Framework is in use: `4=⊃⎕SYSTEM.Features.DotNet`
-- .NET (non-Framework) is in use: `5≤⊃⎕SYSTEM.Features.DotNet`
+- .NET or .NET Framework is available: `0≠⎕SYSTEM.Features.DotNet[1]`
+- .NET Framework is in use: `4=⎕SYSTEM.Features.DotNet[1]`
+- .NET (non-Framework) is in use: `5≤⎕SYSTEM.Features.DotNet[1]`
 
 <h4 id="featuresinteractive">Features.Interactive</h4>
 
@@ -176,15 +176,6 @@ The name of the machine, which is the [hostname](https://en.wikipedia.org/wiki/H
 
 The [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) domain of the machine.
 
-<h4 id="hosteffectiveuserid">Host.EffectiveUserId</h4>
-
-
-The [Effective User Identifier](https://en.wikipedia.org/wiki/User_identifier#Effective_user_ID) is a non-negative integer on Unix and `¯1` on Microsoft Windows.
-
-<h4 id="hosteffectiveusername">Host.EffectiveUserName</h4>
-
-The character vector name associated with the current Effective User Identifier on Unix and `''` on Microsoft Windows.
-
 <h4 id="hostfqdn">Host.FQDN</h4>
 
 The [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) of the current machine as a character vector.
@@ -204,7 +195,7 @@ The character vector NetBIOS domain name on Microsoft Windows and `''` on Unix.
 
 <h4 id="hostuserid">Host.UserId</h4>
 
-On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the identifier of the currently logged-in user. This is always a character vector, even on Unix where the value looks like a number.
+On Microsoft Windows, this is the [relative identifier](https://en.wikipedia.org/wiki/Relative_identifier). On Unix, this is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID). This is always a character vector, even on Unix where the value looks like a number.
 
 <h4 id="hostusername">Host.UserName</h4>
 
