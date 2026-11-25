@@ -36,7 +36,7 @@ Any other value signals `DOMAIN ERROR`.
 
 ## Right Argument
 
-`Y` is any array. The characters in it are converted at any depth of nesting, and its numbers are unchanged. A reference is returned unchanged, without converting anything in the namespace that it refers to.
+`Y` is any array. The characters in it are converted at any depth of nesting, and all other data is unchanged. A reference is returned unchanged, without converting anything in the namespace that it refers to.
 
 <h3 class="example">Example</h3>
 
@@ -56,7 +56,7 @@ Pete
 
 ## Mapping
 
-Mapping converts characters to upper case or to lower case. A character that has no case, or that is already in that case, is left as it is, and so is a character that Unicode gives no simple conversion to that case.
+Mapping converts characters to upper case or to lower case. A character that has no case, or that is already in that case, is left as it is, and so is a character for which Unicode gives no simple conversion to that case.
 
 <h3 class="example">Examples</h3>
 
@@ -100,13 +100,15 @@ Mapping `ίσως` to lower case leaves both of its sigmas as they are, while fo
 ίσωσ
 ```
 
-Folding both arguments of a function with [_over_](../primitive-operators/over.md) (`⍥`) makes the function case-insensitive:
+Applying a function to folded arguments makes it case-insensitive:
 
 ```apl
       'pete' 'pete' 'pete' ≡⍥⎕C 'PETE' 'Pete' 'pEte'
 1
       'Andy' 'Brian' 'Pete' ⍳⍥⎕C 'ANDY' 'pete'
 1 3
+      ∪⍥⎕C'Abracadabra'
+abrcd
 ```
 
 <!-- Hidden search keywords -->
