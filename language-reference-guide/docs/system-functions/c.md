@@ -52,7 +52,7 @@ Pete
 
 ## Result
 
-`R` has the same structure as `Y`. Each character is mapped to exactly one character, whatever the context, so `R` also has the same shape as `Y`. A character whose case mapping would take more than one character, for example, `ß`, whose upper case is `SS`, is left as it is.
+`R` has the same structure and shape as `Y`. Unicode defines both simple case conversions, which convert one character to exactly one character, and full ones, which can convert one character to several, and can depend on the characters around it. `⎕C` uses only the simple conversions. For example, the full upper case of `ß` is `SS`, but `ß` has no simple upper case, so `⎕C` leaves it as it is:
 
 <h3 class="example">Example</h3>
 
@@ -63,11 +63,11 @@ STRAßE
 
 ## Folding
 
-Folding maps characters to a form in which they can be compared without regard to case. For most characters, it is the same as mapping them to lower case, but it also maps characters that differ only in how they are written to the same character. The [Unicode FAQ on case mappings](https://unicode.org/faq/casemap_charprop.html) explains the difference between case folding and case mapping.
+Folding converts characters to a form in which they can be compared without regard to case. For most characters, it is the same as mapping them to lower case, but it also converts characters that differ only in how they are written to the same character. The [Unicode FAQ on case mappings](https://unicode.org/faq/casemap_charprop.html) explains the difference between case folding and case mapping.
 
 <h3 class="example">Examples</h3>
 
-Greek has two forms of lower-case sigma, `σ` and `ς` (used at the end of a word), but only one upper-case form, `Σ`. Mapping to lower case leaves each lower-case form as it is, while folding maps both to `σ`. Mapping `Σ` to lower case gives `σ`, even at the end of a word:
+Greek has two forms of lower-case sigma, `σ` and `ς` (used at the end of a word), but only one upper-case form, `Σ`. Mapping to lower case leaves each lower-case form as it is, while folding converts both to `σ`. Mapping `Σ` to lower case gives `σ`, even at the end of a word:
 
 ```apl
       ⎕C 'ίσως'
