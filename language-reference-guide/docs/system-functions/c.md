@@ -5,49 +5,87 @@ search:
 
 # <span>Case Convert</span> `R←{X}⎕C Y`{{key}}
 
-`Y` is any array. `R` is an identical array except that character arrays within it are either folded for case-less comparison, or mapped to upper or lower case.
-
-For a discussion of case folding and case conversion (mapping), see [Character Properties, Case Mappings & Names FAQ](https://unicode.org/faq/casemap_charprop.html).
-
-If the optional left-argument `X` is omitted, `R` is a copy of `Y` with character arrays folded, for case-less comparison.
-
-If `X` is specified, the following cases are supported:
-
-|X   |Description                                                                                                     |
-|----|----------------------------------------------------------------------------------------------------------------|
-|`1` |`R` is a copy of `Y` with character arrays mapped to upper case.                                                |
-|`¯1`|`R` is a copy of `Y` with character arrays mapped to lower case.                                                |
-|`¯3`|`R` is a copy of `Y` with character arrays folded, for case-less comparison (this is equivalent to monadic use).|
+`⎕C` maps the characters in `Y` to upper case or lower case, or folds them for case-insensitive comparison.
 
 <h2 class="example">Examples</h2>
+
 ```apl
-
       ⎕C 42 'Pete' 'Πέτρος'
-42  pete  πέτροσ 
+┌──┬────┬──────┐
+│42│pete│πέτροσ│
+└──┴────┴──────┘
       1 ⎕C 42 'Pete' 'Πέτρος'
-42  PETE  ΠΈΤΡΟΣ 
+┌──┬────┬──────┐
+│42│PETE│ΠΈΤΡΟΣ│
+└──┴────┴──────┘
       ¯1 ⎕C 42 'Pete' 'Πέτρος'
-42  pete  πέτρος
-
-      (⊂'pete'){⍺≡⎕C ⍵}¨'PETE' 'Pete' 'pEte'
-1 1 1
-
+┌──┬────┬──────┐
+│42│pete│πέτρος│
+└──┴────┴──────┘
 ```
 
-<h2 class="example">Example</h2>
+## Left Argument
 
-Greek has two forms of lower-case Sigma, namely "σ" and "ς" but a single upper-case Sigma "Σ". Each lower-case form remains unchanged when mapped to lower-case, but both fold to "σ", while "Σ" is mapped to lower-case "σ" .
+`X` is optional, and is one of:
+
+- `1` – characters are mapped to upper case.
+- `¯1` – characters are mapped to lower case.
+- `¯3` – characters are [folded](#folding) for case-insensitive comparison (default).
+
+Any other value signals `DOMAIN ERROR`.
+
+## Right Argument
+
+`Y` is any array. The characters in it are converted at any depth of nesting, and its numbers are unchanged. A reference is returned unchanged, without converting anything in the namespace that it refers to.
+
+<h3 class="example">Example</h3>
+
+```apl
+      ns←()
+      ns.Name←'Pete'
+      r←⎕C ns
+      r≡ns
+1
+      ns.Name
+Pete
+```
+
+## Result
+
+`R` has the same structure as `Y`. Each character is mapped to exactly one character, whatever the context, so `R` also has the same shape as `Y`. A character whose case mapping would take more than one character, for example, `ß`, whose upper case is `SS`, is left as it is.
+
+<h3 class="example">Example</h3>
+
+```apl
+      1 ⎕C 'Straße'
+STRAßE
+```
+
+## Folding
+
+Folding maps characters to a form in which they can be compared without regard to case. For most characters, it is the same as mapping them to lower case, but it also maps characters that differ only in how they are written to the same character. The [Unicode FAQ on case mappings](https://unicode.org/faq/casemap_charprop.html) explains the difference between case folding and case mapping.
+
+<h3 class="example">Examples</h3>
+
+Greek has two forms of lower-case sigma, `σ` and `ς` (used at the end of a word), but only one upper-case form, `Σ`. Mapping to lower case leaves each lower-case form as it is, while folding maps both to `σ`. Mapping `Σ` to lower case gives `σ`, even at the end of a word:
+
 ```apl
       ⎕C 'ίσως'
 ίσωσ
+      ¯1 ⎕C 'ίσως'
+ίσως
       1 ⎕C 'ίσως'
 ΊΣΩΣ
-      ¯1⎕C 1 ⎕C 'ίσως'
+      ¯1 ⎕C 1 ⎕C 'ίσως'
 ίσωσ
-
 ```
 
-Refs in `Y` are not followed but returned unchanged.
+Folding both sides of a comparison makes it case-insensitive:
+
+```apl
+      (⊂⎕C 'pete')≡¨⎕C 'PETE' 'Pete' 'pEte'
+1 1 1
+```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
