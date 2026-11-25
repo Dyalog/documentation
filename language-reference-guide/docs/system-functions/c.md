@@ -107,7 +107,7 @@ Applying a function to folded arguments makes it case-insensitive:
 1
       'Andy' 'Brian' 'Pete' ⍳⍥⎕C 'ANDY' 'pete'
 1 3
-      ∪⍥⎕C'Abracadabra'
+      ∪⎕C'Abracadabra'
 abrcd
 ```
 
