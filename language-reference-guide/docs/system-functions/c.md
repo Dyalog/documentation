@@ -52,7 +52,7 @@ Pete
 
 ## Result
 
-`R` has the same structure and shape as `Y`. Unicode defines both simple case conversions, which convert one character to exactly one character, and full ones, which can convert one character to several, and can depend on the characters around it. `⎕C` uses only the simple conversions. For example, the full upper case of `ß` is `SS`, but `ß` has no simple upper case, so `⎕C` leaves it as it is:
+`R` has the same structure and shape as `Y`. Unicode defines both simple case conversions, which convert one character to exactly one character, and full ones, which can convert one character to several, and can depend on the characters around it. `⎕C` uses only the simple conversions. For example, the full upper case of `ß` is `SS`, but `ß` has no simple upper case, so `⎕C` leaves it as it is.
 
 <h3 class="example">Example</h3>
 
