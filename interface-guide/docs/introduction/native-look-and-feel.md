@@ -8,7 +8,7 @@ A second factor that affects the appearance of user-interface controls is the ap
 
 If *Native Look and Feel* is enabled, Windows loads the latest version of `comctl32.dll` (and potentially other Windows dlls) that is appropriate for the version of Windows in use. If *Native Look and Feel* is disabled, an earlier version may be loaded. The specific version that is loaded is not determined by Dyalog, but by Windows.
 
-**The Dyalog for Microsoft Windows Object Reference Guide identifies which features require Native Look and Feel to be enabled. It documents the typical appearance of controls with Native Look and Feel disabled but does not specify how the appearance of controls is affected by enabling Native Look and Feel, which is in any case affected by the Visual Styles selected by the user.**
+**The [descriptions of the GUI objects](../../object-reference/index.md) identify which features require Native Look and Feel to be enabled. It documents the typical appearance of controls with Native Look and Feel disabled but does not specify how the appearance of controls is affected by enabling Native Look and Feel, which is in any case affected by the Visual Styles selected by the user.**
 
 The following pictures  illustrate the appearance of a simple Button created with and without *Native Look and Feel* under Windows 10.
 

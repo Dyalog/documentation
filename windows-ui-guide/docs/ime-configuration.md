@@ -23,7 +23,7 @@ The translate table defines the mapping between APL characters and the keystroke
 
 The *Backtick* keyboard provided by Ride may be used natively. By default it is disabled. To enable it, check the box labelled *Enable Backtick Keyboard introducer*. You may replace the backtick character (```) with an alternative character to act as the introducer for APL glyphs, but take care to choose a character that is otherwise unused.
 
-For information on using this keyboard interface, see [Ride User Guide](https://dyalog.github.io/ride).
+For information on using this keyboard interface, see the [Ride documentation](https://dyalog.github.io/ride).
 
 ## Overstrikes
 

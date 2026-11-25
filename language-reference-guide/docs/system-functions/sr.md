@@ -109,7 +109,7 @@ Structure of the Result of `⎕SR`
 `EXIT_CONTEXT[8 9]` are integer scalars which specify the row and column position of the mouse pointer within the field `EXIT_CONTEXT[7]` when `⎕SR` terminated.
 
 !!! Info "Information"
-    This function is disabled and instead generates a `DOMAIN ERROR` if the RIDE_SPAWNED parameter is non-zero. This is designed to prevent it being invoked from a Ride session which does not support this type of user interface. For further details, see the [Ride User Guide](https://dyalog.github.io/ride).
+    This function is disabled and instead generates a `DOMAIN ERROR` if the [RIDE_SPAWNED](../../windows-installation-and-configuration-guide/configuration-parameters/ride-spawned.md) parameter is non-zero. This is designed to prevent it being invoked from a [Ride](https://dyalog.github.io/ride) session which does not support this type of user interface.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
