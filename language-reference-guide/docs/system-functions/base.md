@@ -3,9 +3,9 @@ search:
   boost: 2
 ---
 
-# <span>Base Class</span> `R←⎕BASE.Y`{{key}}
+# <span>Base Class</span> `R←⎕BASE.M`{{key}}
 
-`⎕BASE.Y` refers to the member `Y` as the base class of the current class implements it.
+`⎕BASE.M` refers to the member `M` as the base class of the current class implements it.
 
 <h2 class="example">Example</h2>
 
@@ -34,9 +34,9 @@ Squark! Who's a pretty boy, then!
 
 ## Member
 
-`Y` is the name of a public member of the base class: a method, a field, or a property. A name that is not a public member of the base class signals `VALUE ERROR`.
+`M` is the name of a public member of the base class: a method, a field, or a property. A name that is not a public member of the base class signals `VALUE ERROR`.
 
-`⎕BASE.Y` is mostly used to call a method that the current class supersedes, as in the example above. [Dyadic `⎕CLASS`](class-dyadic.md) reaches a superseded member from outside the class.
+`⎕BASE.M` is mostly used to call a method that the current class supersedes, as in the example above. [Dyadic `⎕CLASS`](class-dyadic.md) reaches a superseded member from outside the class.
 
 <h3 class="example">Example</h3>
 
@@ -63,7 +63,7 @@ Squark! Who's a pretty boy, then!
 
 ## Context
 
-`⎕BASE.Y` is special syntax, which works where the current namespace is a class or an instance of one, for example, inside its methods. Where the current namespace is not a class or an instance, it signals `DOMAIN ERROR`, and in a class that has no base class, it signals `VALUE ERROR`. `⎕BASE` on its own signals `SYNTAX ERROR`.
+`⎕BASE.M` is special syntax, which works where the current namespace is a class or an instance of one, for example, inside its methods. Where the current namespace is not a class or an instance, it signals `DOMAIN ERROR`, and in a class that has no base class, it signals `VALUE ERROR`. `⎕BASE` on its own signals `SYNTAX ERROR`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
