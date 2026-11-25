@@ -28,8 +28,8 @@ search:
 
 `X` is optional, and is one of:
 
-- `1` – characters are mapped to upper case.
-- `¯1` – characters are mapped to lower case.
+- `1` – characters are [mapped](#mapping) to upper case.
+- `¯1` – characters are [mapped](#mapping) to lower case.
 - `¯3` – characters are [folded](#folding) for case-insensitive comparison (default).
 
 Any other value signals `DOMAIN ERROR`.
@@ -52,13 +52,37 @@ Pete
 
 ## Result
 
-`R` has the same structure and shape as `Y`. Unicode defines both simple case conversions, which convert one character to exactly one character, and full ones, which can convert one character to several, and can depend on the characters around it. `⎕C` uses only the simple conversions. For example, the full upper case of `ß` is `SS`, but `ß` has no simple upper case, so `⎕C` leaves it as it is.
+`R` has the same structure and shape as `Y`. Unicode defines both simple case conversions, which convert one character to exactly one character, and full ones, which can convert one character to several, and can depend on the language and on the characters around it. `⎕C` uses only the simple conversions.
 
-<h3 class="example">Example</h3>
+## Mapping
+
+Mapping converts characters to upper case or to lower case. A character that has no case, or that is already in that case, is left as it is, and so is a character that Unicode gives no simple conversion to that case.
+
+<h3 class="example">Examples</h3>
+
+The full upper case of `ß` is `SS`, but `ß` has no simple upper case:
 
 ```apl
       1 ⎕C 'Straße'
 STRAßE
+```
+
+Mapping does not depend on the language. In Turkish, `ı` and `i` are different letters, whose upper cases are `I` and `İ`, but `⎕C` maps both to `I`, and both `I` and `İ` to `i`:
+
+```apl
+      1 ⎕C 'ıi'
+II
+      ¯1 ⎕C 'Iİ'
+ii
+```
+
+Mapping does not depend on the characters around it either. Greek writes lower-case sigma as `ς` at the end of a word and as `σ` elsewhere, but `⎕C` maps `Σ` to `σ` wherever it is:
+
+```apl
+      1 ⎕C 'ίσως'
+ΊΣΩΣ
+      ¯1 ⎕C 1 ⎕C 'ίσως'
+ίσωσ
 ```
 
 ## Folding
@@ -67,24 +91,22 @@ Folding converts characters to a form in which they can be compared without rega
 
 <h3 class="example">Examples</h3>
 
-Greek has two forms of lower-case sigma, `σ` and `ς` (used at the end of a word), but only one upper-case form, `Σ`. Mapping to lower case leaves each lower-case form as it is, while folding converts both to `σ`. Mapping `Σ` to lower case gives `σ`, even at the end of a word:
+Mapping `ίσως` to lower case leaves both of its sigmas as they are, while folding converts both to `σ`:
 
 ```apl
-      ⎕C 'ίσως'
-ίσωσ
       ¯1 ⎕C 'ίσως'
 ίσως
-      1 ⎕C 'ίσως'
-ΊΣΩΣ
-      ¯1 ⎕C 1 ⎕C 'ίσως'
+      ⎕C 'ίσως'
 ίσωσ
 ```
 
-Folding both sides of a comparison makes it case-insensitive:
+Folding both arguments of a function with [_over_](../primitive-operators/over.md) (`⍥`) makes the function case-insensitive:
 
 ```apl
-      (⊂⎕C 'pete')≡¨⎕C 'PETE' 'Pete' 'pEte'
-1 1 1
+      'pete' 'pete' 'pete' ≡⍥⎕C 'PETE' 'Pete' 'pEte'
+1
+      'Andy' 'Brian' 'Pete' ⍳⍥⎕C 'ANDY' 'pete'
+1 3
 ```
 
 <!-- Hidden search keywords -->
