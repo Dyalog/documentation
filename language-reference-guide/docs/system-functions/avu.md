@@ -78,8 +78,8 @@ A function that localises `⎕AVU` can read characters that were written with a 
 ```apl
       ⎕AV[97+⍳26]⎕FAPPEND 1
       ∇ R←ReadStd;⎕AVU
-[1]    'Std.⎕AVU'⎕CY'avu'
-[2]    R←⎕FREAD 1 2
+        'Std.⎕AVU'⎕CY'avu'
+        R←⎕FREAD 1 2
       ∇
       ⎕FREAD 1 2
 ÁÂÃÇÈÊËÌÍÎÏÐÒÓÔÕÙÚÛÝþãìðòõ
