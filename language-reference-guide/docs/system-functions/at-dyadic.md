@@ -26,17 +26,16 @@ If `Y` specifies a single name as a character scalar, a character vector, or as 
 The examples below all use these definitions:
 
 ```apl
-    ∇ {z}←{l}(fn myop)r
-[1] ...
-
-    ∇ z←foo
-[1] ...
-
-    ∇ z←{larg}util rarg
-[1] ...
-
-      ⎕LOCK'foo'
-
+      ∇ {z}←{l}(fn myop)r
+        z←fn r
+      ∇
+      ∇ z←foo
+        z←0
+      ∇
+      ∇ z←{larg}util rarg
+        z←rarg
+      ∇
+      ⎕LOCK 'foo'
       util2←util
 ```
 
@@ -81,11 +80,11 @@ If `X` is `2`, `R` reports the time each object named in `Y` was last updated, a
 |`R[7]` or `R[;7]`|Milliseconds (this is always reported as `0`)|
 
 ```apl
-      2 ⎕AT'myop' 'foo' 'util' 'util2'
-1996 8  2  2 13 56 0
-   0 0  0  0  0  0 0
-1996 3  1 14 12 10 0
-1998 8 26 16 16 42 0
+      2 ⎕AT 'myop' 'foo' 'util' 'util2'
+2026 11 26 13 51 28 0
+   0  0  0  0  0  0 0
+2026 11 26 13 51 28 0
+2026 11 26 13 51 28 0
 ```
 
 ### Execution Properties
@@ -98,9 +97,25 @@ If `X` is `3`, `R` contains 4 elements (or columns) whose meaning is as follows:
 |`R[3]` or `R[;3]`|Weak Interrupt behaviour|`0` if the object responds to interrupt, `1` if the object ignores interrupt|
 |`R[4]` or `R[;4]`|&nbsp;|(always `0`)|
 
+```apl
+      3 ⎕AT 'myop' 'foo' 'util' 'util2'
+0 0 0 0
+1 1 0 0
+0 0 0 0
+0 0 0 0
+```
+
 ### Object Size
 
 If `X` is `4`, `R` contains 2 elements (or columns) that both report the `⎕SIZE` of the object.
+
+```apl
+      4 ⎕AT 'myop' 'foo' 'util' 'util2'
+800 800
+584 584
+712 712
+712 712
+```
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
