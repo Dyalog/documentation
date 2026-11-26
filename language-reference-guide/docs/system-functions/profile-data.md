@@ -13,11 +13,11 @@ This function returns the data that the [profiler](profile.md) has collected, wi
 
 ```apl
       ∇ Main
-[1]    Wait 0.2
-[2]    Wait 0.1
+        Wait 0.2
+        Wait 0.1
       ∇
       ∇ Wait s
-[1]    ⎕DL s
+        ⎕DL s
       ∇
       ⎕PROFILE 'start' 'elapsed'
       Main

@@ -11,7 +11,7 @@ This function discards the data that the [profiler](profile.md) has collected, a
 
 ```apl
       ∇ Wait s
-[1]    ⎕DL s
+        ⎕DL s
       ∇
       ⎕PROFILE 'start' 'elapsed'
       Wait 0.1

@@ -13,7 +13,7 @@ The run of `Wait` after profiling stops is not counted in the data that [`⎕PRO
 
 ```apl
       ∇ Wait s
-[1]    ⎕DL s
+        ⎕DL s
       ∇
       ⎕PROFILE 'start' 'elapsed'
       Wait 0.1

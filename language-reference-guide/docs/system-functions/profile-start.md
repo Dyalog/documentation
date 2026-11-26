@@ -13,7 +13,7 @@ Collecting the elapsed time of a function that waits:
 
 ```apl
       ∇ Wait s
-[1]    ⎕DL s
+        ⎕DL s
       ∇
       ⎕←⎕PROFILE 'start' 'elapsed'
  active  elapsed  0.000009997165762 0
