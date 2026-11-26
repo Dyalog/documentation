@@ -13,7 +13,7 @@ search:
 
 ```apl
       ∇ R←X plus Y
-[1]    R←X+Y
+        R←X+Y
       ∇
       10 11 12 ⎕ATX 'plus'
 1 2 0
@@ -103,7 +103,7 @@ The examples continue with `plus` and `dfn` from the examples above.
 
 ```apl
       ∇ {R}←Shy Y
-[1]    R←Y
+        R←Y
       ∇
       op←{⍺⍺ ⍵}
       10 11 12 ⎕ATX 'plus' 'Shy' 'dfn' 'op'
@@ -150,10 +150,10 @@ Execution can be suspended inside a multi-line dfn or dop, but inside a single-l
 
 ```apl
       ∇ R←Hidden
-[1]    R←0
+        R←0
       ∇
       ∇ R←Atomic
-[1]    R←0
+        R←0
       ∇
       1 ⎕LOCK 'Hidden'
       2 ⎕LOCK 'Atomic'
