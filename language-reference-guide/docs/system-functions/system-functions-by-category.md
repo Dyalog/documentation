@@ -197,7 +197,8 @@ These are communication facilities.
 |[`⎕ARBIN`](arbin.md) |Arbitrary Input       |Dyadic function|
 |[`⎕ARBOUT`](arbout.md)|Arbitrary Output      |Dyadic function|
 |[`⎕KL`](kl.md)   |Key Labels                       |Monadic function|
-|[`⎕PFKEY`](pfkey.md)|Programmable Function Keys    |Ambivalent function|
+|[`⎕PFKEY`](pfkey-monadic.md)|Query Programmable Function Key|Monadic function|
+|[`⎕PFKEY`](pfkey-dyadic.md)|Set Programmable Function Key|Dyadic function|
 |[`⎕RTL`](rtl.md)   |Response Time Limit   |Variable|
 |[`⎕SD`](sd.md)   |Screen Dimensions                |Constant|
 |[`⎕SM`](sm.md)   |Screen Map                       |Variable|
