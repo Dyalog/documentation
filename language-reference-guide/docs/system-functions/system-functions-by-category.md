@@ -335,7 +335,9 @@ These are facilities to catch, cause, and investigate error events and interrupt
 |[`⎕EM`](em.md)       |Event Messages                                  |Monadic function|
 |[`⎕EN`](en.md)       |Event Number[†](#archaic-and-deprecated)|Constant|
 |[`⎕EXCEPTION`](exception.md)|Reports the most recent Microsoft .NET Exception|Reference|
-|[`⎕SIGNAL`](signal.md)   |Signal event                                    |Ambivalent function|
+|[`⎕SIGNAL`](signal-reset.md)   |Reset Event Constants                           |Monadic function   |
+|[`⎕SIGNAL`](signal-default.md)   |Signal Default Event                            |Ambivalent function|
+|[`⎕SIGNAL`](signal-extended.md)   |Signal Extended Event                           |Monadic function   |
 |[`⎕TRAP`](trap.md)     |Event Trap                                      |Variable|
 
 ## Shared Variables
