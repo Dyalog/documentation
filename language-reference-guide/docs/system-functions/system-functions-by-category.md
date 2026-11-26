@@ -182,7 +182,8 @@ These are tools to convert between common representations of data.
 |[`⎕FMT`](format-dyadic.md)  |Format array                               |Dyadic function|
 |[`⎕JSON`](json.md) |JSON Convert                                        |Ambivalent function|
 |[`⎕TS`](ts.md)      |Timestamp                                          |Constant|
-|[`⎕UCS`](ucs.md)  |Unicode Convert                                      |Ambivalent function|
+|[`⎕UCS`](ucs-monadic.md)|Convert Unicode Code Point|Monadic function|
+|[`⎕UCS`](ucs-dyadic.md)|Convert Unicode Representation|Dyadic function|
 |[`⎕VFI`](vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
 |[`⎕XML`](xml.md)  |XML Convert                                          |Ambivalent function|
 
