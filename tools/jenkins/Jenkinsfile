@@ -105,9 +105,7 @@ pipeline {
     environment {
         GITHUB_REPO     = 'https://github.com/dyalog/documentation.git'
         WEB_ROOT        = '/DockerVolumes/websites/docs.dyalog.com/'
-        WEB_URL         = 'docs.dyalog.com'
         HASH_SAME       = 'unknown'
-        SWARM_NAME      = "docsweb"
 
         // ============================================================
         // PRODUCTION_VERSIONS: Space-separated list of versions to deploy.
@@ -197,7 +195,6 @@ pipeline {
         stage('Update online files')
         {
             agent {
-                // Change to 'swarm && gosport for live server'
                 label 'swarm && gosport'
             }
             options {
@@ -523,17 +520,6 @@ pipeline {
                             echo "ERROR: Deployment verification failed - site may be in inconsistent state"
                         }
                     }
-                }
-                stage('Update Containers') { // Deploy the swarm server incase anything has changed
-                // Note: Swarm is clever enough that if nothing changes in the config, it won't re-deploy the service.
-                    steps {
-                        sh '''#!/bin/bash
-                            sed -i 's%{{WEB_ROOT}}%${WEB_ROOT}%g' service.yml
-                            sed -i 's%{{WEB_URL}}%${WEB_URL}%g' service.yml
-                        '''
-                        swarmDeploy "${SWARM_NAME}"
-                    }
-
                 }
             }
 
