@@ -10,7 +10,9 @@ search:
 
 It is only possible to change the user name if the *effective uid* is 0 (that is, the process has root privileges).
 
-If the operation is successful, `R` is the user name specified in `Y`. The value of `⎕AN` is not affected, but the value of `⊃⎕AI` is.
+If the operation is successful, `R` is the user name specified in `Y`, and the [user number](../../system-functions/ai.md) in `⊃⎕AI` becomes that user's identifier (UID).
+
+Under macOS, [`⎕AN`](../../system-functions/an.md) also becomes the user name specified in `Y`. Under AIX and Linux, `⎕AN` is the name that the user logged in with, and does not change. [`⎕SYSTEM.Host.UserId`](../../system-functions/system.md#hostuserid) and `⎕SYSTEM.Host.UserName` do not change on any of the three. Under Linux, in a session with no login name, `⎕AN` and `⎕SYSTEM.Host` change too, because they follow the real UID there.
 
 If the operation fails, the function generates a `FILE ERROR 1 Not Owner` error.
 
