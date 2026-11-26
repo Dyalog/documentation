@@ -46,9 +46,9 @@ kept
 
 ```apl
       ∇ Tidy
-[1]    ⎕←'before'
-[2]    ⎕CLEAR
-[3]    ⎕←'after'
+        ⎕←'before'
+        ⎕CLEAR
+        ⎕←'after'
       ∇
       Tidy ⋄ ⎕←'next'
 before
