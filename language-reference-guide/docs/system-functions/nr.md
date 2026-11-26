@@ -11,7 +11,7 @@ search:
 
 ```apl
       ∇ R←Mean X    ⍝ Arithmetic mean
-[1]    R←(+/X)÷≢X
+        R←(+/X)÷≢X
       ∇
       ⎕NR 'Mean'
 ┌──────────────────────────────┬───────────┐
@@ -25,7 +25,7 @@ search:
 
 ## Result
 
-If `Y` is the name of a defined function or operator, `R` is a vector of character vectors. Its first item is the header, and each other item is a line of the definition. The lines are normalised, so that they have no unnecessary blanks other than the blanks in comments and the indentation of control structures. Each line starts with a blank, except a label or a line that is only a comment, which starts in the first column.
+If `Y` is the name of a defined function or operator, `R` is a vector of character vectors. Its first item is the header, and each other item is a normalised line of the definition.
 
 [`⎕FX`](fx.md) accepts `R`, to define the function or operator again.
 
@@ -35,12 +35,12 @@ If `Y` is the name of a [locked](lock.md) function or operator, an [external fun
 
 ```apl
       ∇ R←Sign X
-[1]   ⍝ The sign of a number
-[2]    :If X>0
-[3]        R←1
-[4]    :Else
-[5]        R←¯1
-[6]    :EndIf
+        ⍝ The sign of a number
+        :If X>0
+            R←1
+        :Else
+            R←¯1
+        :EndIf
       ∇
       ⎕NR 'Sign'
 ┌─────────┬──────────────────────┬────────┬────────┬──────┬─────────┬───────┐
@@ -55,7 +55,7 @@ If `Y` is a name to which a function was assigned, or the name of an operand ins
 - For a primitive function, `R` is a 1-item vector of its symbol.
 - For a system function, `R` is a 1-item vector of its name, enclosed.
 - For a defined function or operator, `R` is its own representation, whose header has its original name rather than `Y`.
-- For a derived function or a train, `R` is a vector of the representations of its parts, in which an array is itself and a primitive operator is its symbol.
+- For a derived function or a train, `R` is a vector of the representations of its parts, in which an array is itself and a primitive is its symbol.
 
 <h3 class="example">Examples</h3>
 
@@ -79,11 +79,29 @@ Continuing with `Mean` from the example above:
 └────────────────────────────────────────────┴─┴─┘
 ```
 
+A part that is itself a derived function or a train is represented in the same way, so the nesting of `R` follows the structure of the function. `AHM`, which computes the arithmetic-harmonic mean, is an atop of `⊃` and a derived function whose left operand is a train of two trains:
+
+```apl
+      AHM←⊃((+⌿÷≢),≢÷1⊥÷)⍣≡
+      AHM 1 2 4
+2
+      ⎕NR 'AHM'
+┌─┬─────────────────────────────┐
+│⊃│┌───────────────────────┬─┬─┐│
+│ ││┌────────┬─┬──────────┐│⍣│≡││
+│ │││┌──┬─┬─┐│,│┌─┬─┬────┐││ │ ││
+│ ││││+⌿│÷│≢││ ││≢│÷│1 ⊥÷│││ │ ││
+│ │││└──┴─┴─┘│ │└─┴─┴────┘││ │ ││
+│ ││└────────┴─┴──────────┘│ │ ││
+│ │└───────────────────────┴─┴─┘│
+└─┴─────────────────────────────┘
+```
+
 Inside the operator `Show`, `F` is the name of its operand:
 
 ```apl
       ∇ R←(F Show) Y
-[1]    R←⎕NR 'F'
+        R←⎕NR 'F'
       ∇
       +Show 0
 +
