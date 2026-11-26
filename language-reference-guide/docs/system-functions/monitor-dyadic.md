@@ -11,11 +11,11 @@ This function sets monitor controls on lines of a tradfn or tradop, replacing an
 
 ```apl
       ∇ FOO
-[1]    A←?300 300⍴100
-[2]    B←⌹A
-[3]    C←⌹B
-[4]    R1←⌊0.5+A+.×B
-[5]    R2←A=C
+        A←?300 300⍴100
+        B←⌹A
+        C←⌹B
+        R1←⌊0.5+A+.×B
+        R2←A=C
       ∇
       ⎕←(0,⍳10) ⎕MONITOR 'FOO'
 0 1 2 3 4 5

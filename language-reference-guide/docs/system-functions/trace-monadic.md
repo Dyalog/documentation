@@ -11,7 +11,7 @@ This function reports the lines of a tradfn or tradop on which trace controls ar
 
 ```apl
       ∇ R←FOO
-[1]    R←10
+        R←10
       ∇
       0 1 ⎕TRACE 'FOO'
       ⎕TRACE 'FOO'

@@ -13,7 +13,7 @@ search:
 
 ```apl
       ∇ R←FOO
-[1]    R←10
+        R←10
       ∇
       0 1 ⎕STOP 'FOO'
       ⎕STOP 'FOO'

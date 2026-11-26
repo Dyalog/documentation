@@ -11,7 +11,7 @@ This function reports the lines of a defined function or operator on which stop 
 
 ```apl
       ∇ R←FOO
-[1]    R←10
+        R←10
       ∇
       0 1 ⎕STOP 'FOO'
       ⎕STOP 'FOO'

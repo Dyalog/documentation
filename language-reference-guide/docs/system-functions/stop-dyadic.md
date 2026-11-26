@@ -11,7 +11,7 @@ This function sets stop controls on lines of a defined function or operator, rep
 
 ```apl
       ∇ R←FOO
-[1]    R←10
+        R←10
       ∇
       ⎕←(0,⍳10) ⎕STOP 'FOO'
 0 1
