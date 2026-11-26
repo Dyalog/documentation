@@ -15,7 +15,7 @@ A newer system function, [`⎕ATX`](atx.md), can be used instead. It is a supers
 
 ```apl
       ∇ R←X plus Y
-         R←X+Y
+        R←X+Y
       ∇
       ⎕AT 'plus'
  1 2 0  2026 9 9 7 42 30 0  0  pete 
@@ -28,7 +28,7 @@ A newer system function, [`⎕ATX`](atx.md), can be used instead. It is a supers
 
 ```apl
       ∇ R←X plus Y
-         R←X+Y
+        R←X+Y
       ∇
       1 ⎕AT 'plus'
 1 2 0
