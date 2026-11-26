@@ -3,11 +3,30 @@ search:
   boost: 2
 ---
 
-# <span>Sign Off APL</span> `⎕OFF`
+# <span>End Session</span> `⎕OFF{I}`{{key}}
 
-This niladic system function terminates the APL session, returning to the shell command level. The active workspace does not replace the last continuation workspace.
+This is a system constant. Evaluating it ends the APL session, and stranding it with an array `I`, as in `⎕OFF 42`, makes `I` the [exit code](#exit-code) that the session returns to the operating system.
 
-Although `⎕OFF` is niladic, you can specify an optional integer `I` to the right of the system function; this will be reported to the operating system as the exit code. If `I` is an *expression* generating an integer, you should put the expression in parentheses. `I` must be in the range 0-255, but Unix processes use values greater than 127 to indicate the signal number that was used to terminate a process, and currently APL itself generates values 0-13; this list is documented in [APL Exit Codes](off.md) and could be extended in future releases.
+<h2 class="example">Example</h2>
+
+In a Unix shell, the exit code of a script is in `$?`:
+
+```other
+$ echo '⎕OFF 42' > done.apls
+$ dyalogscript done.apls; echo $?
+42
+```
+
+`⎕OFF` ends the session wherever it is evaluated, including in a defined function or a dfn. Statements after it on the same line do not run.
+
+## Exit Code
+
+`I` is optional, and is what `⎕OFF` is stranded with, such as a number, a name, or an expression in parentheses. Stranding [binds](../../programming-reference-guide/introduction/binding-strength.md) more tightly than a function, meaning that `⎕OFF 2+3` ends the session with the exit code `2`, while `⎕OFF (2+3)` ends it with `5`. If a function immediately follows `⎕OFF`, as in `⎕OFF ≢⎕A`, nothing is stranded with it.
+
+`I` is a whole number from `0` to `255`, as a scalar or as an array with one item. Any other number signals `DOMAIN ERROR`, and more or fewer items signal `LENGTH ERROR`. These errors can be trapped. If `I` is omitted, the exit code is `0`.
+
+!!! Hint "Hints and Recommendations"
+    The interpreter uses the [exit codes](../../windows-installation-and-configuration-guide/apl-exit-codes.md) `0` to `13` itself, and Dyalog Ltd recommends values greater than `13` for an application's own exit codes. Under Unix, exit codes greater than `127` usually report the signal that ended a process.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
