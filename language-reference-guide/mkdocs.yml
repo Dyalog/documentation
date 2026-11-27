@@ -312,7 +312,8 @@ nav:
           - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
           - '<code>⎕CR</code>: Canonical Representation': system-functions/cr.md
           - '<code>⎕CS</code>: Change Space': system-functions/cs.md
-          - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
+          - '<code>⎕CSV</code>: Import CSV': system-functions/csv-monadic.md
+          - '<code>⎕CSV</code>: Export CSV': system-functions/csv-dyadic.md
           - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
           - '<code>⎕CY</code>: Copy Workspace': system-functions/cy.md
           - '<code>⎕D</code>: Digits': system-functions/d.md
