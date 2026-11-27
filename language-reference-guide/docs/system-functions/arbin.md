@@ -5,72 +5,106 @@ search:
 
 # <span>Arbitrary Input</span> `R←X ⎕ARBIN Y`{{key}}
 
-This transmits a stream of 8-bit codes in `Y` to an output device specified by `X` prior to reading from an input device specified by `X`.
+`⎕ARBIN` writes the bytes in `Y` to an output device, and then reads bytes from an input device until a condition in `X` ends the read.
 
-`Y` may be a scalar or a simple vector of integer numbers in the range 0-255.
+<h2 class="example">Example</h2>
 
-`X` may take several forms:
+[`⎕NPUT`](nput.md) writes two lines to `data.txt`, each ending with a line feed (`10`), and the first of them is read, up to and including its line feed:
 
-|--------------------------|--------|-------|
-|`terminate (input output)`|`⎕ARBIN`|`codes`|
-|`terminate input`         |`⎕ARBIN`|`codes`|
+```apl
+      (('ABC' 'DEF')'UTF-8' 10)⎕NPUT'data.txt'
+      in←'data.txt'⎕NTIE 0
+      (⍬ in)⎕ARBIN ⍬
+65 66 67 10
+```
 
-## terminate
+## Left Argument
 
-This is a numeric scalar or vector that specifies how the read operation should be terminated.
+`X` is a 2-item vector:
 
-- If it is a numeric scalar, it defines the number of bytes to be read.
-- If it is a numeric vector, it defines a set of terminating bytes.
-- If it is the null vector, the read terminates on Newline (10).
+|Item |Content|
+|-----|-------|
+|`1⊃X`|The [condition](#ending-the-read) that ends the read|
+|`2⊃X`|The [input device](#devices), or a 2-item vector of the input device and the [output device](#devices)|
 
-## input
+### Ending the Read
 
-This is a simple numeric scalar that specifies the input device.
+`1⊃X` is one of:
 
-- If it is positive or zero, it represents a file descriptor that must have been associated by the command that started Dyalog APL.
-- If it is negative, it represents the tie number of a file opened by `⎕NTIE` or `⎕NCREATE`.
+- an integer scalar, which is the number of bytes to read.
+- an integer vector of bytes, any of which ends the read. The byte that ends it is the last item of `R`.
+- an empty vector, which ends the read at a line feed (`10`).
 
-## output
-
-This is a simple numeric integer that identifies the output device. It is optional; when it is omitted, the codes in `Y` are written to standard output.
-
-- If it is positive or zero, it represents a file descriptor that must have been associated by the command that started Dyalog APL.
-- If it is negative, it represents the tie number of a file opened by `⎕NTIE` or `⎕NCREATE`.
+The read also ends at the end of a file, and when the [time limit](#time-limit) is reached. `R` then holds the bytes read so far.
 
 <h3 class="example">Example</h3>
 
-The file **data.txt** holds the three characters `ABC` and a newline. With `output` omitted, `XY` is written to standard output before the file is read:
+Continuing with `in` from the example above, each read starts where the previous one ended. The last read asks for 5 bytes, but only the final line feed is left:
 
 ```apl
-      in←'data.txt'⎕NTIE 0
-      (⍬ in)⎕ARBIN ⎕UCS'XY'
-XY65 66 67 10
+      (2 in)⎕ARBIN ⍬
+68 69
+      ((70 90) in)⎕ARBIN ⍬
+70
+      (5 in)⎕ARBIN ⍬
+10
 ```
+
+### Devices
+
+The input device and the output device are each one of:
+
+- the tie number of a native file, from [`⎕NTIE`](ntie.md) or [`⎕NCREATE`](ncreate.md). Reading and writing start at the current position in the file, and move it past the bytes read or written.
+- under Unix, a file descriptor that the command that started the interpreter opened, for example, `9` when the interpreter was started with `9<data.txt`. The descriptors `0`, `1`, and `2` (standard input, output, and error) signal `DOMAIN ERROR`. The interpreter does not check that any other descriptor was opened by that command, and it has descriptors of its own open.
+
+The output device is optional. If it is omitted, `Y` is written to standard output, which can only be reached in this way. Under Microsoft Windows, what is written to standard output does not appear in the Session.
+
+A negative number that is not a tie number signals `DOMAIN ERROR`. The output device is only checked when `Y` is not empty. A device that is not open for reading or writing, as the read or write needs, signals `FILE ERROR`, for example, an output device tied for reading only.
+
+!!! Warning "Warning"
+    Do not read or write the same tie with both `⎕ARBIN` or [`⎕ARBOUT`](arbout.md) and native file functions such as [`⎕NREAD`](nread.md) and [`⎕NREPLACE`](nreplace.md). The interpreter keeps track of the position in a native file, but `⎕ARBIN` and `⎕ARBOUT` move the position without updating its record, so a native file function can then read or write at the wrong place.
+
+<h3 class="example">Example</h3>
+
+Under Unix, a FIFO (named pipe) can be both the input device and the output device. The digits are written to it, and 10 bytes are then read back:
+
+```apl
+      ⎕SH'mkfifo fifo'
+      in←'fifo'⎕NTIE 0
+      out←'fifo'⎕NTIE 0
+      (10 (in out))⎕ARBIN ⎕UCS ⎕D
+48 49 50 51 52 53 54 55 56 57
+```
+
+A device that sets the high bit of each byte for parity sends a line feed as `138`, so a read from it ends at either byte:
+
+```apl
+      ((10 138) (in out))⎕ARBIN 138
+138
+```
+
+## Right Argument
+
+`Y` is an integer scalar or a simple integer vector of the bytes to write to the output device before the read. Each item is from `¯128` to `255`, and a negative item `b` is written as the byte `256+b`. If `Y` is empty, nothing is written.
+
+An item outside that range, or that is not an integer, signals `DOMAIN ERROR`. An array of rank 2 or more signals `RANK ERROR`.
 
 ## Result
 
-The result `R` is a simple numeric vector.  Each item of `R` is the numeric representation of an 8-bit code in the range 0 to 255 received from the input device.  The meaning of the code is dependent on the characteristics of the input device.  If a set of delimiters was defined by `terminate`, the last code returned will belong to that set.
+`R` is a simple integer vector of the bytes read, each from `0` to `255`. Their meaning depends on the input device.
 
-`⎕RTL` (Response Time Limit) is an implicit argument of `⎕ARBIN`.  This allows a time limit to be imposed on input.  If the time limit is reached, `⎕ARBIN` returns with the codes read up to that point. This does not apply under Windows.
+## Time Limit
 
-The operation will fail with a `DOMAIN ERROR` if  `Y` contains anything other than numbers in the range 0-255, or  if the current process does not have permission to read from or write to the specified device(s).
+Under Unix, [`⎕RTL`](rtl.md) is an implicit argument of `⎕ARBIN`. If it is not `0`, a read that has not ended after that many seconds ends then, and `R` holds the bytes read so far. Under Microsoft Windows, `⎕RTL` has no effect on `⎕ARBIN`.
 
-## Examples (Unix)
+<h3 class="example">Example</h3>
+
+Continuing with the FIFO under [Devices](#devices), `AB` is written to it, but no line feed follows. After 2 seconds, the read ends with the 2 bytes:
 
 ```apl
-      )SH mkfifo ./fifo
-      in←'./fifo'⎕NTIE 0
-      out←'./fifo'⎕NTIE 0
-
-      (10 (in out))⎕ARBIN ⎕UCS ⎕D
-48 49 50 51 52 53 54 55 56 57
-
-      (⍬ (in out))⎕ARBIN 10
-10
-
-⍝ cope with parity on line ending 10
-      ((10+0 128) (in out))⎕ARBIN 10
-10
+      ⎕RTL←2
+      (⍬ (in out))⎕ARBIN 65 66
+65 66
 ```
 
 <!-- Hidden search keywords -->
