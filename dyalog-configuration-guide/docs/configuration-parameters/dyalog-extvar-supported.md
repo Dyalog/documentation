@@ -1,0 +1,12 @@
+# DYALOG_EXTVAR_SUPPORTED
+
+Whether support for external variables is enabled. Support for external variables has been deprecated and is scheduled for removal in a future release; they are supported by default, and setting this parameter to `0` disables them.
+
+Valid values are:
+
+- `0` : support for external variables is disabled
+- `1` : support for external variables is enabled
+
+Default is `1`.
+
+See also [Set External Variable](../../language-reference-guide/system-functions/set-external-variable.md) and [Query External Variable](../../language-reference-guide/system-functions/query-external-variable.md).

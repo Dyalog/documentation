@@ -104,7 +104,7 @@ An external array may be erased using the native file function: `⎕NERASE`.
 In a multi-user environment (Unix or a Microsoft Windows LAN) a new file associated with an external array is created with access permission for owner read/write. An existing file is opened for exclusive use (by the owner) if the permissions remain at this level. If the access permissions allow any other users to read and write to the file, the file is opened for shared use. In Unix versions, access permissions can be modified using the appropriate operating system command, or in Windows using the supplied function `XVAR` from the UTIL workspace.
 
 !!! Info "Information"
-    Support for external variables has been deprecated, and is scheduled for removal in a future release. External variables are supported by default, and setting the [DYALOG_EXTVAR_SUPPORTED](../../windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported.md) configuration parameter to `0` disables them. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).
+    Support for external variables has been deprecated, and is scheduled for removal in a future release. External variables are supported by default, and setting the [DYALOG_EXTVAR_SUPPORTED](../../dyalog-configuration-guide/configuration-parameters/dyalog-extvar-supported.md) configuration parameter to `0` disables them. For information on how to identify uses of external variables in your existing codebase, see the [Release Notes](../../release-notes/announcements/deprecated-functionality.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

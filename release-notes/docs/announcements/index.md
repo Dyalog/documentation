@@ -67,7 +67,7 @@ Dyalog v16.0 was the last major version to support creating and updating small-s
 
 The ability to create and update external variables will be removed in a future release (exact release to be decided, expected to be implemented by the year 2029).
 
-External variables are supported by default, and setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `0` disables them.
+External variables are supported by default, and setting the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/dyalog-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter to `0` disables them.
 
 ### J0C0 Component Files
 

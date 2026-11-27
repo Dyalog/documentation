@@ -174,7 +174,7 @@ Table: Layout Menu Operations { #debugger-layout-menu-operations }
 |Debugger at the bottom              |&nbsp;      |Docks the Debugger at the bottom of the Session window (default)                                                                                          |
 |Classic with Vertical Inline Tracing|&nbsp;      |As *Classic*, but with the Left Argument pane docked above the Tracer and the Right Argument pane docked below it                                          |
 
-The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../windows-installation-and-configuration-guide/configuration-parameters/layout-file.md) parameter.
+The selected layout is saved when Dyalog exits and is restored the next time it starts; see the [LAYOUT_FILE](../dyalog-configuration-guide/configuration-parameters/layout-file.md) parameter.
 
 ## The Help Menu
 

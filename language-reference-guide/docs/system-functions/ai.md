@@ -44,7 +44,7 @@ Subtracting an earlier value of `⎕AI` from a later one shows how much each tim
 
 The user number identifies the user to the [access control](../../programming-reference-guide/component-files/component-files.md#user-number) of component files.
 
-Under Microsoft Windows, the user number is the value of the [**aplnid**](../../windows-installation-and-configuration-guide/configuration-parameters/aplnid.md) configuration parameter, or `0` if that is not set.
+Under Microsoft Windows, the user number is the value of the [**aplnid**](../../dyalog-configuration-guide/configuration-parameters/aplnid.md) configuration parameter, or `0` if that is not set.
 
 Under Unix, the user number is the [real user identifier](https://en.wikipedia.org/wiki/User_identifier#Real_user_ID) (UID) of the interpreter's process.
 

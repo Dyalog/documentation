@@ -1,7 +1,0 @@
-# AplCoreName
-
-This parameter specifies the directory and name of the file in which *aplcore* should be saved. The optional wild-card character (`*`) is replaced by a number when the file is written; only one `*` can be used. If **AplCoreName** contains more than one `*`, the setting is ignored and the aplcore is named `aplcore`. For more details, including how to prevent aplcore files from being generated, see [MaxAplCores](maxaplcores.md).
-
-Dyalog terminates with an exit code of 3 when an aplcore file is generated.
-
-See also [aplcore Parameters](../../language-reference-guide/primitive-operators/i-beam/aplcore-parameters.md).
