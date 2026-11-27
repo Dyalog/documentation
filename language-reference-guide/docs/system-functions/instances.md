@@ -5,58 +5,49 @@ search:
 
 # <span>Instances</span> `R←⎕INSTANCES Y`{{key}}
 
-`⎕INSTANCES` returns a list all the current instances of the Class specified by `Y`.
+`⎕INSTANCES` returns references to the existing instances of the class `Y`, including instances of the classes derived from it.
 
-`Y` must be a reference.
+<h2 class="example">Example</h2>
 
-If `Y` is a reference to a Class, `R` is a vector of references to all existing Class Instances of  `Y`. Otherwise, `R` is empty.
-
-<h2 class="example">Examples</h2>
-
-This example illustrates a simple inheritance tree or Class hierarchy. There are 3 Classes, namely:
-```apl
-Animal
-    Bird (derived from Animal)
-        Parrot (derived from Bird)
-```
-```apl
-:Class Animal
-...
-:EndClass ⍝ Animal
- 
-:Class Bird: Animal
-...
-:EndClass ⍝ Bird
- 
-:Class Parrot: Bird
-...
-:EndClass ⍝ Parrot
-```
+`Bird` derives from `Animal`, so an instance of `Bird` is also an instance of `Animal`:
 
 ```apl
+      :Class Animal
+      :EndClass
+      :Class Bird: Animal
+      :EndClass
       Eeyore←⎕NEW Animal
       Robin←⎕NEW Bird
-      Polly←⎕NEW Parrot
- 
-      ⎕INSTANCES Parrot
- #.[Parrot] 
-      ⎕INSTANCES Bird
- #.[Bird]  #.[Parrot] 
       ⎕INSTANCES Animal
- #.[Animal]  #.[Bird]  #.[Parrot] 
-
+ #.[Animal]  #.[Bird]
+      ⎕INSTANCES Bird
+ #.[Bird]
 ```
-```apl
-      Eeyore.⎕DF 'eeyore'
-      Robin.⎕DF 'robin'
-      Polly.⎕DF 'polly'
 
-      ⎕INSTANCES Parrot
- polly
-      ⎕INSTANCES Bird
- robin  polly 
+## Right Argument
+
+`Y` is a reference to a class. If it is a reference to anything else, for example, an instance or a namespace that is not a class, `R` is empty. Any other value signals `DOMAIN ERROR`.
+
+## Result
+
+`R` is a vector of references to the instances, in the order in which they were created. An instance is included only while something refers to it.
+
+<h3 class="example">Example</h3>
+
+Continuing with the classes from the example above, [`⎕DF`](df.md) gives each instance a display form, which shows which instance is which. When `Robin` is expunged, nothing refers to its instance any more:
+
+```apl
+      :Class Parrot: Bird
+      :EndClass
+      Polly←⎕NEW Parrot
+      Eeyore.⎕DF 'eeyore' ⋄ Robin.⎕DF 'robin' ⋄ Polly.⎕DF 'polly'
       ⎕INSTANCES Animal
- eeyore  robin  polly 
+ eeyore  robin  polly
+      ⎕INSTANCES Bird
+ robin  polly
+      ⎕EX 'Robin'
+      ⎕INSTANCES Animal
+ eeyore  polly
 ```
 
 <!-- Hidden search keywords -->

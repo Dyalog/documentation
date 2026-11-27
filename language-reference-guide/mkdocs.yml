@@ -306,7 +306,8 @@ nav:
           - '<code>⎕AVU</code>: Atomic Vector Unicode': system-functions/avu.md
           - '<code>⎕BASE</code>: Base Class': system-functions/base.md
           - '<code>⎕C</code>: Case Convert': system-functions/c.md
-          - '<code>⎕CLASS</code>: Class': system-functions/class.md
+          - '<code>⎕CLASS</code>: Class Hierarchy': system-functions/class-monadic.md
+          - '<code>⎕CLASS</code>: Get Class/Interface Implementation': system-functions/class-dyadic.md
           - '<code>⎕CLEAR</code>: Clear Workspace': system-functions/clear.md
           - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
           - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md

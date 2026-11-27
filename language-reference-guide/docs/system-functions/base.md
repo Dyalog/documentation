@@ -3,40 +3,67 @@ search:
   boost: 2
 ---
 
-# <span>Base Class</span> `R←⎕BASE.Y`{{key}}
+# <span>Base Class</span> `R←⎕BASE.M`{{key}}
 
-`⎕BASE` is used to access the base class implementation of the name specified by `Y`.
+`⎕BASE.M` refers to the member `M` as the base class of the current class implements it.
 
-`Y` must be the name of a Public member (Method, Field or Property) that is provided by the Base Class of the current Class or Instance.
+<h2 class="example">Example</h2>
 
-`⎕BASE` is typically used to call a method in the Base Class which has been *superseded* by a Method in the current Class.
+`DomesticParrot` derives from `Parrot` and supersedes its `Speak` method. The `Speak` of `DomesticParrot` calls the one of `Parrot` through `⎕BASE`:
 
-`⎕BASE.Y` is *special syntax*; any direct reference to `⎕BASE` on its own or in any other context is meaningless and causes `SYNTAX ERROR`.
-
-In the following example, Class `DomesticParrot` derives from Class `Parrot` and supersedes its `Speak` method. `DomesticParrot.Speak` calls the `Speak` method in its Base Class `Parrot`, via `⎕BASE`.
 ```apl
-:Class Parrot: Bird
-    ∇ R←Speak
-      :Access Public
-      R←'Squark!'
-    ∇
-:EndClass ⍝ Parrot
- 
-:Class DomesticParrot: Parrot
-    ∇ R←Speak
-      :Access Public
-      R←⎕BASE.Speak,' Who''s a pretty boy, then!'
-    ∇
-:EndClass ⍝ DomesticParrot
-
+      :Class Parrot
+          ∇ R←Speak
+            :Access Public
+            R←'Squark!'
+          ∇
+      :EndClass
+      :Class DomesticParrot: Parrot
+          ∇ R←Speak
+            :Access Public
+            R←⎕BASE.Speak,' Who''s a pretty boy, then!'
+          ∇
+      :EndClass
       Maccaw←⎕NEW Parrot
       Maccaw.Speak
 Squark!
- 
       Polly←⎕NEW DomesticParrot
       Polly.Speak
 Squark! Who's a pretty boy, then!
 ```
+
+## Member
+
+`M` is the name of a public member of the base class: a method, a field, or a property. A name that is not a public member of the base class signals `VALUE ERROR`.
+
+`⎕BASE.M` is mostly used to call a method that the current class supersedes, as in the example above. [Dyadic `⎕CLASS`](class-dyadic.md) reaches a superseded member from outside the class.
+
+<h3 class="example">Example</h3>
+
+`Bird` has a field `Legs` of its own, as does its base class `Animal`:
+
+```apl
+      :Class Animal
+          :Field Public Legs←4
+      :EndClass
+      :Class Bird: Animal
+          :Field Public Legs←2
+          ∇ R←BothLegs
+            :Access Public
+            R←⎕BASE.Legs,Legs
+          ∇
+      :EndClass
+      (⎕NEW Bird).BothLegs
+4 2
+```
+
+## Result
+
+`R` is the value of the member: the result of a method, or the value of a field or property.
+
+## Context
+
+`⎕BASE.M` is special syntax, which works where the current namespace is a class or an instance of one, for example, inside its methods. Where the current namespace is not a class or an instance, it signals `DOMAIN ERROR`, and in a class that has no base class, it signals `VALUE ERROR`. `⎕BASE` on its own signals `SYNTAX ERROR`.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">
