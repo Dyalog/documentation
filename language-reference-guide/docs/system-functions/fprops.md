@@ -62,15 +62,14 @@ Journaling and checksum settings may be changed at any time a file is exclusivel
 
       tn←'myfile64' ⎕FCREATE 0
       'SEUJ' ⎕FPROPS tn
-64 0 1 0
-
+64 0 1 1
 ```
 
 The following expression disables Unicode and switches Journaling on. The function returns the previous settings:
 ```apl
 
       ('U' 0)('J' 1) ⎕FPROPS tn
-1 0
+1 1
 ```
 
 To set the value of just a single property, the following two statements are equivalent:

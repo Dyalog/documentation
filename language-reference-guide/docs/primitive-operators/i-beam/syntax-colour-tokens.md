@@ -23,7 +23,7 @@ The 4th column is intended for the benefit of non-Windows users using the tty in
 <h2 class="example">Example</h2>
 ```apl
       ⍴201⌶⍬
-207 4
+234 4
      3 4↑201⌶⍬
 ┌────────────┬─┬────────────┬───┐
 │Global token│0│MINI_NULL   │129│

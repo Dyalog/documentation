@@ -456,7 +456,7 @@ This option may only be used with `⎕R`.
       ⎕UCS ¨ ('A' ⎕R 'x') 'AB' 'CD'                
   120 66  67 68                    
       ⎕UCS ('A' ⎕R 'x' ⍠ 'ResultText' 'Simple') 'AB' 'CD'
- 120 66 13 10 67 68
+120 66 13 10 67 68 13 10
 ```
 
 ### UCP Option
