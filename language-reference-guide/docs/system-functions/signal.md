@@ -121,7 +121,7 @@ ERROR 200
       ⎕SIGNAL⊂('EN' 200)('Vendor' 'Andy')('Message' 'My error')
 ERROR 200: My error
       ⎕SIGNAL⊂('EN' 200)('Vendor' 'Andy')('Message' 'My error')
-     ∧
+      ∧
 
 ```
 ```apl
@@ -142,8 +142,7 @@ Be aware of the following case, in which the argument has not been sufficiently 
       ⎕SIGNAL⊂('EN' 200)
 DOMAIN ERROR: Unexpected name in signalled ⎕DMX specification
       ⎕SIGNAL⊂('EN' 200)
-     ∧
-
+      ∧
 ```
 
 <!-- Hidden search keywords -->

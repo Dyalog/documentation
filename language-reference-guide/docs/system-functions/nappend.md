@@ -27,9 +27,9 @@ As a consequence of these two rules, you must specify the data type (either 160 
       'abc' ⎕NAPPEND n
 
       'ταβέρνα'⎕NAPPEND n
-DOMAIN ERROR
+DOMAIN ERROR: Left argument array could not be converted to the requested type
       'ταβέρνα'⎕NAPPEND n
-     ∧
+               ∧
 
       'ταβέρνα'⎕NAPPEND n 160
 

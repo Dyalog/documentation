@@ -19,9 +19,9 @@ Attempts to assign namespace references or the `⎕OR` of namespaces to an exter
 If the file reference does not exist, the external variable has no value until a value is assigned:
 ```apl
       V
-VALUE ERROR
+VALUE ERROR: Undefined name: V
       V
-      ^
+      ∧
 ```
 
 A value assigned to an external variable is stored in file space, not within the workspace:
