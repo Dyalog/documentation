@@ -25,7 +25,7 @@ search:
 |[`⎕CMD`](../execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|
 |[`⎕CMD`](../start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|
 |[`⎕CR`](../cr.md)     |Canonical Representation|Monadic function|
-|[`⎕CS`](../cs.md)       |Change Space   |Monadic function|
+|[`⎕CS`](../cs.md)       |Change Namespace|Ambivalent function|
 |[`⎕CSV`](../csv.md)  |Comma Separated Values                               |Ambivalent function|
 |[`⎕CT`](../ct.md) |Comparison Tolerance         |Variable|
 |[`⎕CY`](../cy.md)      |Copy objects into active WS|Function|
@@ -161,7 +161,7 @@ search:
 |[`⎕TC`](../tc.md)   |Terminal Control           |Constant|
 |[`⎕TCNUMS`](../tcnums.md) |Thread Child Numbers         |Monadic function|
 |[`⎕TGET`](../tget.md)  |Get Tokens          |Ambivalent function|
-|[`⎕THIS`](../this.md)     |Self-reference|Reference|
+|[`⎕THIS`](../this.md)     |Current Namespace|Reference|
 |[`⎕TID`](../tid.md)   |Current Thread Identity      |Constant|
 |[`⎕TKILL`](../tkill.md) |Kill Threads        |Ambivalent function|
 |[`⎕TNAME`](../tname.md) |Current Thread Name          |Variable|

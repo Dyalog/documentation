@@ -311,7 +311,7 @@ nav:
           - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
           - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
           - '<code>⎕CR</code>: Canonical Representation': system-functions/cr.md
-          - '<code>⎕CS</code>: Change Space': system-functions/cs.md
+          - '<code>⎕CS</code>: Change Namespace': system-functions/cs.md
           - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
           - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
           - '<code>⎕CY</code>: Copy Workspace': system-functions/cy.md
@@ -448,7 +448,7 @@ nav:
           - '<code>⎕TC</code>: Terminal Control': system-functions/tc.md
           - '<code>⎕TCNUMS</code>: Thread Child Numbers': system-functions/tcnums.md
           - '<code>⎕TGET</code>: Get Tokens': system-functions/tget.md
-          - '<code>⎕THIS</code>: This Space': system-functions/this.md
+          - '<code>⎕THIS</code>: Current Namespace': system-functions/this.md
           - '<code>⎕TID</code>: Current Thread Identity': system-functions/tid.md
           - '<code>⎕TKILL</code>: Kill Thread': system-functions/tkill.md
           - '<code>⎕TNAME</code>: Current Thread Name': system-functions/tname.md

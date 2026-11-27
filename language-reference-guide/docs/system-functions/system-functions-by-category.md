@@ -85,7 +85,7 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 |------------|--------------|-----|
 |[`⎕BASE`](base.md)     |Base Class   |Reference|
 |[`⎕CLASS`](class.md)    |Class       |Monadic function|
-|[`⎕CS`](cs.md)       |Change Space   |Monadic function|
+|[`⎕CS`](cs.md)       |Change Namespace|Ambivalent function|
 |[`⎕DF`](df.md)       |Display Format |Monadic function|
 |[`⎕EXPORT`](export.md)|Export objects[†](#archaic-and-deprecated)|Ambivalent function|
 |[`⎕FIX`](fix.md)      |Fix           |Ambivalent function|
@@ -94,7 +94,7 @@ These are facilities to create, manipulate, and navigate namespaces and other ob
 |[`⎕NS`](ns.md)       |Namespace      |Ambivalent function|
 |[`⎕PATH`](path.md)  |Search Path[†](#archaic-and-deprecated)|Variable|
 |[`⎕SRC`](src.md)      |Source[†](#archaic-and-deprecated)|Monadic function|
-|[`⎕THIS`](this.md)     |Self-reference|Reference|
+|[`⎕THIS`](this.md)     |Current Namespace|Reference|
 |[`⎕VGET`](vget.md)     |Value Get    |Ambivalent function|
 |[`⎕VSET`](vset.md)     |Value Set    |Ambivalent function|
 
