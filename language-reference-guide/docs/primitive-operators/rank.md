@@ -90,37 +90,35 @@ The _rank_ operator can be used to apply the function to sub-arrays; in this cas
 
 ## Dyadic Examples
 ```apl
-
       10 20 30 (+⍤0 1)3 4⍴⍳12
-10 11 12 13
-24 25 26 27
-38 39 40 41
+11 12 13 14
+25 26 27 28
+39 40 41 42
 ```
 
 Using the function `{⍺ ⍵}`  as the left operand demonstrates how the dyadic case of the _rank_ operator works.
 ```apl
-
       10 20 30 ({⍺ ⍵}⍤0 1)3 4⍴⍳12
-┌──┬─────────┐
-│10│0 1 2 3  │
-├──┼─────────┤
-│20│4 5 6 7  │
-├──┼─────────┤
-│30│8 9 10 11│
-└──┴─────────┘
+┌──┬──────────┐
+│10│1 2 3 4   │
+├──┼──────────┤
+│20│5 6 7 8   │
+├──┼──────────┤
+│30│9 10 11 12│
+└──┴──────────┘
 ```
 
 A right operand of `¯1` applies the function between the major cells (in this case *elements*) of the left argument, and the major cells (in this case *rows*) of the right argument.
 ```apl
 
       10 20 30 ({⍺ ⍵}⍤¯1)3 4⍴⍳12
-┌──┬─────────┐
-│10│0 1 2 3  │
-├──┼─────────┤
-│20│4 5 6 7  │
-├──┼─────────┤
-│30│8 9 10 11│
-└──┴─────────┘
+┌──┬──────────┐
+│10│1 2 3 4   │
+├──┼──────────┤
+│20│5 6 7 8   │
+├──┼──────────┤
+│30│9 10 11 12│
+└──┴──────────┘
 ```
 
 <!-- Hidden search keywords -->

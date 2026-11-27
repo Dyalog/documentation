@@ -61,7 +61,9 @@ For a full explanation of the different normalisation forms, see [Unicode Standa
       'BrandTM'≡'Brand™'
 0
       'KD'(5581⌶)'Brand™'
-BrandTM
+┌→──────┐
+│BrandTM│
+└───────┘
       'BrandTM'≡⍥('KD'∘(5581⌶))'Brand™'
 1
 

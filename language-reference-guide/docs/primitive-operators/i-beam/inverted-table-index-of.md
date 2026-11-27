@@ -14,18 +14,18 @@ The following is an example of an inverted table:
 ```apl
       X←(10 3⍴⎕A) (⍳10) 'metalepsis'
       X
-┌───┬───────────────────┬──────────┐
-│ABC│0 1 2 3 4 5 6 7 8 9│metalepsis│
-│DEF│                   │          │
-│GHI│                   │          │
-│JKL│                   │          │
-│MNO│                   │          │
-│PQR│                   │          │
-│STU│                   │          │
-│VWX│                   │          │
-│YZA│                   │          │
-│BCD│                   │          │
-└───┴───────────────────┴──────────┘
+┌───┬────────────────────┬──────────┐
+│ABC│1 2 3 4 5 6 7 8 9 10│metalepsis│
+│DEF│                    │          │
+│GHI│                    │          │
+│JKL│                    │          │
+│MNO│                    │          │
+│PQR│                    │          │
+│STU│                    │          │
+│VWX│                    │          │
+│YZA│                    │          │
+│BCD│                    │          │
+└───┴────────────────────┴──────────┘
 ```
 
 Using inverted tables, it is often necessary to perform a table look-up to find the "row" indices of one in another. Suppose there is a second table `Y`:
@@ -33,39 +33,41 @@ Using inverted tables, it is often necessary to perform a table look-up to find 
 
       Y←(⊂⊂3 1 4 1 5 9)⌷¨X
       Y
- GHI  3 1 4 1 5 9  tmamli 
- ABC                      
- JKL                      
- ABC                      
- MNO                      
- YZA  
+┌───┬───────────┬──────┐
+│GHI│3 1 4 1 5 9│tmamli│
+│ABC│           │      │
+│JKL│           │      │
+│ABC│           │      │
+│MNO│           │      │
+│YZA│           │      │
+└───┴───────────┴──────┘
 ```
 
 To compute the indices of   `Y` in `X`  using dyadic `⍳`, it is necessary to first un-invert each of the tables in order to create nested matrices that `⍳` can handle.
 ```apl
       unvert ← {⍉↑⊂⍤¯1¨⍵}
       unvert X
-┌───┬─┬─┐
-│ABC│0│m│
-├───┼─┼─┤
-│DEF│1│e│
-├───┼─┼─┤
-│GHI│2│t│
-├───┼─┼─┤
-│JKL│3│a│
-├───┼─┼─┤
-│MNO│4│l│
-├───┼─┼─┤
-│PQR│5│e│
-├───┼─┼─┤
-│STU│6│p│
-├───┼─┼─┤
-│VWX│7│s│
-├───┼─┼─┤
-│YZA│8│i│
-├───┼─┼─┤
-│BCD│9│s│
-└───┴─┴─┘
+┌───┬──┬─┐
+│ABC│1 │m│
+├───┼──┼─┤
+│DEF│2 │e│
+├───┼──┼─┤
+│GHI│3 │t│
+├───┼──┼─┤
+│JKL│4 │a│
+├───┼──┼─┤
+│MNO│5 │l│
+├───┼──┼─┤
+│PQR│6 │e│
+├───┼──┼─┤
+│STU│7 │p│
+├───┼──┼─┤
+│VWX│8 │s│
+├───┼──┼─┤
+│YZA│9 │i│
+├───┼──┼─┤
+│BCD│10│s│
+└───┴──┴─┘
 
       (unvert X) ⍳ (unvert Y)
 3 1 4 1 5 9

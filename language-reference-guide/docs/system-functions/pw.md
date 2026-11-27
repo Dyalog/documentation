@@ -23,8 +23,7 @@ If the [**Auto_PW**](../../windows-installation-and-configuration-guide/configur
 <h2 class="example">Examples</h2>
 ```apl
       ⎕PW←42
- 
-      ⎕←3⍴÷3
+      ⎕←4⍴÷3
 0.3333333333 0.3333333333 0.3333333333
       0.3333333333
 ```

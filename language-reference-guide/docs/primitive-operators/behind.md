@@ -76,7 +76,7 @@ Identify the palindromes, and filter to return only the palindromes:
       ⌽⍛≡¨ 'racecar' 'racer' 'hanna' 'asa'   ⍝ create mask
 1 0 0 1
       ⌽⍛≡¨⍛/ 'racecar' 'racer' 'hanna' 'asa' ⍝ apply filter
-‘racecar’ ‘asa’
+racecar asa
 ```
 
 Find the mean value of a vector of numbers, identify the individual numbers in the vector that are greater than the mean value, and filter to retun only those numbers:
