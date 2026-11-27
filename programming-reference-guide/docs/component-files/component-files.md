@@ -42,7 +42,7 @@ There are two levels of file access control. As a regular file, the operating sy
 
 ### User Number
 
-Under Windows, this is a number which is defined by the **aplnid** parameter.   If you intend to use Dyalog's **access matrix** to control file access in a multi-user environment, it is desirable to allocate to each user, a distinct **user number**. However, if you intend to rely on underlying operating system controls, allocating a user number of 0 (the default installation value) to everyone is more appropriate.  Under non-Windows platforms the User Number is set to be the effective user-id of the APL process and cannot be altered. In both cases, a user number of 0 causes APL to circumvent the access matrix mechanism described below.
+Under Windows, this is a number which is defined by the **aplnid** parameter.   If you intend to use Dyalog's **access matrix** to control file access in a multi-user environment, it is desirable to allocate to each user, a distinct **user number**. However, if you intend to rely on underlying operating system controls, allocating a user number of 0 (the default installation value) to everyone is more appropriate.  Under non-Windows platforms the User Number is set to be the real user-id of the APL process and cannot be altered. In both cases, a user number of 0 causes APL to circumvent the access matrix mechanism described below.
 
 ## Permission Code
 
