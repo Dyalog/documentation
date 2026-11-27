@@ -57,7 +57,13 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
 |[`⎕NR`](nr.md)     |Nested Representation[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
-|[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
+|[`⎕PROFILE'start'`](profile-start.md)|Start Profiling|Monadic function|
+|[`⎕PROFILE'stop'`](profile-stop.md)|Stop Profiling|Monadic function|
+|[`⎕PROFILE'clear'`](profile-clear.md)|Clear Profiling Data|Monadic function|
+|[`⎕PROFILE'calibrate'`](profile-calibrate.md)|Calibrate Profiling Timer|Monadic function|
+|[`⎕PROFILE'state'`](profile-state.md)|Query Profiling State|Monadic function|
+|[`⎕PROFILE'data'`](profile-data.md)|Get Flat Profiling Data|Ambivalent function|
+|[`⎕PROFILE'tree'`](profile-tree.md)|Get Profiling Data Tree|Ambivalent function|
 |[`⎕REFS`](refs.md)   |Local References      |Monadic function|
 |[`⎕STOP`](set-stop.md)   |Set Stop vector   |Dyadic function|
 |[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|

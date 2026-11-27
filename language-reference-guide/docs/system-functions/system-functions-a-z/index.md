@@ -125,7 +125,13 @@ search:
 |[`⎕PATH`](../path.md)  |Search Path            |Variable|
 |[`⎕PFKEY`](../pfkey.md)|Programmable Function Keys    |Ambivalent function|
 |[`⎕PP`](../pp.md) |Print Precision              |Variable|
-|[`⎕PROFILE`](../profile.md)|Profile Application|Ambivalent function|
+|[`⎕PROFILE'start'`](../profile-start.md)|Start Profiling|Monadic function|
+|[`⎕PROFILE'stop'`](../profile-stop.md)|Stop Profiling|Monadic function|
+|[`⎕PROFILE'clear'`](../profile-clear.md)|Clear Profiling Data|Monadic function|
+|[`⎕PROFILE'calibrate'`](../profile-calibrate.md)|Calibrate Profiling Timer|Monadic function|
+|[`⎕PROFILE'state'`](../profile-state.md)|Query Profiling State|Monadic function|
+|[`⎕PROFILE'data'`](../profile-data.md)|Get Flat Profiling Data|Ambivalent function|
+|[`⎕PROFILE'tree'`](../profile-tree.md)|Get Profiling Data Tree|Ambivalent function|
 |[`⎕R`](../r.md)    |Replace                                                 |Dyadic operator|
 |[`⎕REFS`](../refs.md)   |Local References      |Monadic function|
 |[`⎕RL`](../rl.md) |Random Link                  |Variable|

@@ -411,7 +411,14 @@ nav:
           - '<code>⎕PATH</code>: Search Path': system-functions/path.md
           - '<code>⎕PFKEY</code>: Program Function Key': system-functions/pfkey.md
           - '<code>⎕PP</code>: Print Precision': system-functions/pp.md
-          - '<code>⎕PROFILE</code>: Profile Application': system-functions/profile.md
+          - '<code>⎕PROFILE</code>: Profiling Overview': system-functions/profile.md
+          - "<code>⎕PROFILE'start'</code>: Start Profiling": system-functions/profile-start.md
+          - "<code>⎕PROFILE'stop'</code>: Stop Profiling": system-functions/profile-stop.md
+          - "<code>⎕PROFILE'clear'</code>: Clear Profiling Data": system-functions/profile-clear.md
+          - "<code>⎕PROFILE'calibrate'</code>: Calibrate Profiling Timer": system-functions/profile-calibrate.md
+          - "<code>⎕PROFILE'state'</code>: Query Profiling State": system-functions/profile-state.md
+          - "<code>⎕PROFILE'data'</code>: Get Flat Profiling Data": system-functions/profile-data.md
+          - "<code>⎕PROFILE'tree'</code>: Get Profiling Data Tree": system-functions/profile-tree.md
           - '<code>⎕PW</code>: Print Width': system-functions/pw.md
           - '<code>⎕R</code>: Replace': system-functions/r.md
           - '<code>⎕REFS</code>: Cross References': system-functions/refs.md
