@@ -13,11 +13,11 @@ Items in `X` and `Y` are considered the same if `X≡Y` returns 1 for those item
 
 <h2 class="example">Examples</h2>
 ```apl
-      'WASH' ∪ 'SHOUT'
+      'WASH' ∪ 'SHOUT'
 WASHOUT
- 
-      'ONE' 'TWO' ∪ 'TWO' 'THREE'
- ONE  TWO  THREE
+ 
+      'ONE' 'TWO' ∪ 'TWO' 'THREE'
+ ONE  TWO  THREE
 ```
 
 For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../programming-reference-guide/introduction/search-functions-and-hash.md).

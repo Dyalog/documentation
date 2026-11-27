@@ -25,14 +25,14 @@ The two system operators, `⎕R` for replace and `⎕S` for search, are syntacti
 
 ## Examples of replace operations
 ```apl
-      ('.at' ⎕R '\u0') 'The cat sat on the mat'     
+      ('.at' ⎕R '\u0') 'The cat sat on the mat'     
 The CAT SAT on the MAT
 ```
 
 In the search pattern the dot matches any character, so the pattern as a whole matches sequences of three characters ending 'at'. The transformation is given as a character string, and causes the entire matching text to be folded to upper case.
 
 ```apl
-      ('\w+' ⎕R {⌽⍵.Match}) 'The cat sat on the mat'
+      ('\w+' ⎕R {⌽⍵.Match}) 'The cat sat on the mat'
 ehT tac tas no eht tam
 ```
 
@@ -40,22 +40,22 @@ The search pattern matches each word. The transformation is given as a function,
 
 ## Examples of search operations
 ```apl
-      STR←'The cat sat on the mat'
+      STR←'The cat sat on the mat'
       ('.at' ⎕S '\u0') STR
-CAT  SAT  MAT 
+CAT  SAT  MAT 
 ```
 
 The example is identical to the first, above, except that after the transformation is applied to the matches the results are returned in a vector, not substituted into the source text.
 
 ```apl
-      ('.at' ⎕S {⍵.((1↑Offsets),1↑Lengths)}) STR
-4 3  8 3  19 3
+      ('.at' ⎕S {⍵.((1↑Offsets),1↑Lengths)}) STR
+4 3  8 3  19 3
 ```
 
 When searching, the result vector need not contain only text and in this example the function returns the numeric position and length of the match given to it; the resultant vector contains these values for each of the three matches.
 ```apl
-      ('.at' ⎕S 0 1) STR       
-4 3  8 3  19 3
+      ('.at' ⎕S 0 1) STR       
+4 3  8 3  19 3
 ```
 
 Here the transformation is given as a vector of numeric codes which are a short-hand for the position and length of each match; the overall result is therefore identical to the previous example.
@@ -250,9 +250,9 @@ When set, case is ignored in searches.
 
 <h2 class="example">Example</h2>
 ```apl
-      ('[AEIOU]' ⎕R 'X' ⍠ 'IC' 1) 'ABCDE abcde'
+      ('[AEIOU]' ⎕R 'X' ⍠ 'IC' 1) 'ABCDE abcde'
 XBCDX XbcdX
-      ('[AEIOU]' ⎕R 'X' ⍠ 1)'ABCDE abcde'
+      ('[AEIOU]' ⎕R 'X' ⍠ 1)'ABCDE abcde'
 XBCDX XbcdX
 ```
 
@@ -271,10 +271,10 @@ Specifies whether the input document is interpreted in **line** mode, **document
  ABC[Endline]  DEF[Endline] 
         
       ('$' ⎕R '[Endline]' ⍠ 'Mode' 'D') 'ABC' 'DEF'
- ABC  DEF[Endline]
+ ABC  DEF[Endline]
          
-      ('$' ⎕R '[Endline]' ⍠ 'Mode' 'M') 'ABC' 'DEF'
- ABC[Endline]  DEF[Endline]
+      ('$' ⎕R '[Endline]' ⍠ 'Mode' 'M') 'ABC' 'DEF'
+ ABC[Endline]  DEF[Endline]
 ```
 
 ### DotAll Option
@@ -539,7 +539,7 @@ PCRE has a buffer length limit of 2<sup>31</sup> bytes (2GB). UTF-8 encodes each
 
 Several of the examples use the following vector as the input document:
 ```apl
-      text
+      text
 To be or not to be- that is the question:
 Whether 'tis nobler in the mind to suffer
 The slings and arrows of outrageous fortune,
@@ -548,35 +548,35 @@ Or to take arms against a sea of troubles
 
 Replace all upper and lower-case vowels by `'X'`:
 ```apl
-       ('[aeiou]' ⎕R 'X' ⍠ 'IC' 1) text
-TX bX Xr nXt tX bX- thXt Xs thX qXXstXXn:   
-WhXthXr 'tXs nXblXr Xn thX mXnd tX sXffXr   
+       ('[aeiou]' ⎕R 'X' ⍠ 'IC' 1) text
+TX bX Xr nXt tX bX- thXt Xs thX qXXstXXn:   
+WhXthXr 'tXs nXblXr Xn thX mXnd tX sXffXr   
 ThX slXngs Xnd XrrXws Xf XXtrXgXXXs fXrtXnX,
-Xr tX tXkX Xrms XgXXnst X sXX Xf trXXblXs   
+Xr tX tXkX Xrms XgXXnst X sXX Xf trXXblXs   
 ```
 
 Replace only the second vowel on each line by `'\VOWEL\'`:
 ```apl
-       ('[aeiou]' ⎕R '\\VOWEL\\'⍠('IC' 1)('ML' ¯2)) text
-To b\VOWEL\ or not to be- that is the question:   
-Wheth\VOWEL\r 'tis nobler in the mind to suffer   
+       ('[aeiou]' ⎕R '\\VOWEL\\'⍠('IC' 1)('ML' ¯2)) text
+To b\VOWEL\ or not to be- that is the question:   
+Wheth\VOWEL\r 'tis nobler in the mind to suffer   
 The sl\VOWEL\ngs and arrows of outrageous fortune,
 Or t\VOWEL\ take arms against a sea of troubles
 ```
 
 Case fold each word:
 ```apl
-      ('(?<first>\w)(?<remainder>\w*)' ⎕R '\u<first>\l<remainder>') text
-To Be Or Not To Be- That Is The Question:   
-Whether 'Tis Nobler In The Mind To Suffer   
+      ('(?<first>\w)(?<remainder>\w*)' ⎕R '\u<first>\l<remainder>') text
+To Be Or Not To Be- That Is The Question:   
+Whether 'Tis Nobler In The Mind To Suffer   
 The Slings And Arrows Of Outrageous Fortune,
-Or To Take Arms Against A Sea Of Troubles   
+Or To Take Arms Against A Sea Of Troubles   
 ```
 
 Extract only the lines with characters 'or' (in upper or lower case) on them:
 ```apl
-      ↑('or' ⎕S '%' ⍠ ('IC' 1)('ML' 1)) text
-To be or not to be– that is the question:   
+      ↑('or' ⎕S '%' ⍠ ('IC' 1)('ML' 1)) text
+To be or not to be– that is the question:   
 The slings and arrows of outrageous fortune,
 Or to take arms against a sea of troubles 
 ```
@@ -592,7 +592,7 @@ Note the difference between the characters *'or'* (which appear in 'fortune') an
 
 Place every non-space sequence of characters in brackets:
 ```apl
-      ('[^\s]+' ⎕R '(&)' ) 'To be or not to be, that is the question'
+      ('[^\s]+' ⎕R '(&)' ) 'To be or not to be, that is the question'
 (To) (be) (or) (not) (to) (be,) (that) (is) (the) (question)
 ```
 
@@ -643,7 +643,7 @@ Change numerals to their expanded names, using a function:
 
 Swap 'red' and 'blue':
 ```apl
-      ('red' 'blue' ⎕R 'blue' 'red') 'red hat blue coat'
+      ('red' 'blue' ⎕R 'blue' 'red') 'red hat blue coat'
 blue hat red coat
 ```
 
@@ -665,46 +665,46 @@ Output file:
 |`1980-03-01,Widgets,€ 5.21` `1980-04-02,Bolts,€ 31.57` `1980-06-17,Nuts; special rate DEM 17.00,€ 8.69` `1980-07-18,Hammer,€ 0.63`|
 
 ```apl
-     ∇ ret←f a;d;m;y;v
-[1]    ⎕IO←0
-[2]    :Select a.PatternNum
-[3]    :Case 0
-[4]        d m y←{a.Match[a.Offsets[⍵+1]+⍳a.Lengths[⍵+1]]}¨⍳3
-[5]        ret←y,'-',m,'-',d,','
-[6]    :Else
-[7]        v←⍎a.Block[a.Offsets[1]+⍳a.Lengths[1]]
-[8]        v÷←1.95583
-[9]        ret←',€ ',('(\d+\.\d\d).*'⎕R'\1')⍕v
-[10]   :EndSelect
-     ∇
+     ∇ ret←f a;d;m;y;v
+[1]    ⎕IO←0
+[2]    :Select a.PatternNum
+[3]    :Case 0
+[4]        d m y←{a.Match[a.Offsets[⍵+1]+⍳a.Lengths[⍵+1]]}¨⍳3
+[5]        ret←y,'-',m,'-',d,','
+[6]    :Else
+[7]        v←⍎a.Block[a.Offsets[1]+⍳a.Lengths[1]]
+[8]        v÷←1.95583
+[9]        ret←',€ ',('(\d+\.\d\d).*'⎕R'\1')⍕v
+[10]   :EndSelect
+     ∇
 ```
 ```apl
-      in ← 'x.csv' ⎕NTIE 0
-      out ← 'new.csv' ⎕NCREATE 0
-      dateptn←'(\d{2})/(\d{2})/(\d{4}),'
-      valptn←',DEM ([0-9.]+)'
-      out (dateptn valptn ⎕R f) in
-      ⎕NUNTIE¨in out
+      in ← 'x.csv' ⎕NTIE 0
+      out ← 'new.csv' ⎕NCREATE 0
+      dateptn←'(\d{2})/(\d{2})/(\d{4}),'
+      valptn←',DEM ([0-9.]+)'
+      out (dateptn valptn ⎕R f) in
+      ⎕NUNTIE¨in out
 ```
 ## Create a simple profanity filter:
 
 For the list of objectionable words
 ```apl
-       profanity←'bleeding' 'heck'
+       profanity←'bleeding' 'heck'
 ```
 
 first construct a pattern which will match the words:
 ```apl
-      ptn←(('^' '$' '\r\n') ⎕R '\\b(' ')\\b' '|'
-                           ⎕OPT 'Mode' 'D') profanity
-      ptn
+      ptn←(('^' '$' '\r\n') ⎕R '\\b(' ')\\b' '|'
+                           ⎕OPT 'Mode' 'D') profanity
+      ptn
 \b(bleeding|heck)\b
 ```
 
 then a function that uses this pattern:
 ```apl
-      sanitise←ptn ⎕R '****' ⎕OPT 1
-      sanitise '"Heck", I said'
+      sanitise←ptn ⎕R '****' ⎕OPT 1
+      sanitise '"Heck", I said'
 "****", I said
 ```
 

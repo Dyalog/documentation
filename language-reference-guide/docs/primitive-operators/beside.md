@@ -15,29 +15,29 @@ The derived function is equivalent to `fgY` or `XfgY` and need not return a resu
 
 <h2 class="example">Examples</h2>
 ```apl
-      RANK ← ⍴∘⍴
-      RANK ¨ 'JOANNE' (2 3⍴⍳6)
- 1  2
+      RANK ← ⍴∘⍴
+      RANK ¨ 'JOANNE' (2 3⍴⍳6)
+ 1  2
 ```
 ```apl
-      +/∘⍳¨2 4 6
+      +/∘⍳¨2 4 6
 3 10 21
- 
- 
-      ⎕VR'SUM'
-     ∇ R←SUM X
-[1]    R←+/X
-     ∇
- 
-      SUM∘⍳¨2 4 6
+ 
+ 
+      ⎕VR'SUM'
+     ∇ R←SUM X
+[1]    R←+/X
+     ∇
+ 
+      SUM∘⍳¨2 4 6
 3 10 21
 ```
 ```apl
-      +∘÷/40⍴1       ⍝ Golden Ratio! (Bob Smith)
+      +∘÷/40⍴1       ⍝ Golden Ratio! (Bob Smith)
 1.618033989
- 
-      0,∘⍳¨⍳5
-0 1  0 1 2  0 1 2 3  0 1 2 3 4  0 1 2 3 4 5
+ 
+      0,∘⍳¨⍳5
+0 1  0 1 2  0 1 2 3  0 1 2 3 4  0 1 2 3 4 5
 ```
 
 <!-- Hidden search keywords -->
