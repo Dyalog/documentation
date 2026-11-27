@@ -282,7 +282,7 @@ Non-negative integer [process identifier](https://en.wikipedia.org/wiki/Process_
 
 <h4 id="processlaunchtarget">Process.LaunchTarget</h4>
 
-The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line.md) or using the [LOAD configuration parameter](../../windows-installation-and-configuration-guide/configuration-parameters/load.md).
+The fully qualified path of the file or directory loaded at startup. This is set by either a workspace name on the [APL command line](../../windows-installation-and-configuration-guide/apl-command-line.md) or using the [LOAD configuration parameter](../../dyalog-configuration-guide/configuration-parameters/load.md).
 
 <h4 id="processparentid">Process.ParentId</h4>
 

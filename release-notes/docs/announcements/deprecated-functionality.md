@@ -28,7 +28,7 @@ For Dyalog v21.0, the following names are valid:
 * `1200⌶` – format date-time
 * `739⌶` – temporary directory
 * `S32` – small-span component files
-* `⎕XT` – external variables (only valid when support for external variables is enabled, which it is unless the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/windows-installation-and-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter is set to `0`)
+* `⎕XT` – external variables (only valid when support for external variables is enabled, which it is unless the [`DYALOG_EXTVAR_SUPPORTED`](https://docs.dyalog.com/21.0/dyalog-configuration-guide/configuration-parameters/dyalog-extvar-supported/) configuration parameter is set to `0`)
 * `43⌶632` – monadic operator generator: generics operator
 
 In addition, there are four reserved names than can be used:  

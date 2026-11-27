@@ -9,4 +9,4 @@ Default is `3` on all platforms.
 !!! Info "Information"
     Unix versions of Dyalog have no GUI objects, but `⎕SE` is present, so `⎕WX` still affects expressions such as `⎕SE.PropList`.
 
-See also [Expose properties of GUI Namespaces](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog/configuration-dialog-object-syntax-tab.md) in the Windows Configuration Dialog.
+See also [Expose properties of GUI Namespaces](../../windows-installation-and-configuration-guide/configuring-the-ide/configuration-dialog.md#object-syntax-tab) in the Windows Configuration Dialog.
