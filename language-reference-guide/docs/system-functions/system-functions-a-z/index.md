@@ -24,7 +24,7 @@ search:
 |[`⎕CLEAR`](../clear.md)|Clear workspace (WS)       |Constant|
 |[`⎕CMD`](../execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|
 |[`⎕CMD`](../start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|
-|[`⎕CR`](../cr.md)     |Canonical Representation|Monadic function|
+|[`⎕CR`](../cr.md)     |Canonical Representation of Function|Monadic function|
 |[`⎕CS`](../cs.md)       |Change Space   |Monadic function|
 |[`⎕CSV`](../csv.md)  |Comma Separated Values                               |Ambivalent function|
 |[`⎕CT`](../ct.md) |Comparison Tolerance         |Variable|
@@ -107,7 +107,7 @@ search:
 |[`⎕NPARTS`](../nparts.md)  |Split a file name into its constituent parts.                |Ambivalent function|
 |[`⎕NPUT`](../nput.md)    |Write Text File                                              |Dyadic function|
 |[`⎕NQ`](../nq.md)    |Place an event on the Queue|Ambivalent function|
-|[`⎕NR`](../nr.md)     |Nested Representation   |Monadic function|
+|[`⎕NR`](../nr.md)     |Nested Representation of Function|Monadic function|
 |[`⎕NREAD`](../nread.md)   |Read from File                                               |Monadic function|
 |[`⎕NRENAME`](../nrename.md) |Rename a File                                                |Dyadic function|
 |[`⎕NREPLACE`](../nreplace.md)|Replace data on File                                         |Dyadic function|
@@ -178,7 +178,7 @@ search:
 |[`⎕USING`](../using.md)|Microsoft .NET Search Path                              |Variable|
 |[`⎕VFI`](../vfi.md)  |Verify and Fix numeric                               |Ambivalent function|
 |[`⎕VGET`](../vget.md)     |Value Get    |Ambivalent function|
-|[`⎕VR`](../vr.md)     |Vector Representation   |Monadic function|
+|[`⎕VR`](../vr.md)     |Vector Representation of Function|Monadic function|
 |[`⎕VSET`](../vset.md)     |Value Set    |Ambivalent function|
 |[`⎕WA`](../wa.md)    |Workspace Available      |Constant|
 |[`⎕WC`](../wc.md)    |Create GUI object          |Ambivalent function|

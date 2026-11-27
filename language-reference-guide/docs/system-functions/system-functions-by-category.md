@@ -48,14 +48,14 @@ These are tools that allow you perform development environment actions under pro
 
 |Name      |Description             |Form|
 |----------|------------------------|-----|
-|[`⎕CR`](cr.md)     |Canonical Representation[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕CR`](cr.md)     |Canonical Representation of Function[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕ED`](ed.md)     |Edit one or more objects|Ambivalent function|
 |[`⎕EX`](ex.md)     |Expunge objects         |Monadic function|
 |[`⎕FX`](fx.md)     |Fix definition[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕LOCK`](lock.md)   |Lock a function       |Ambivalent function|
 |[`⎕MONITOR`](set-monitor.md)|Monitor set    |Dyadic function|
 |[`⎕MONITOR`](query-monitor.md)|Monitor query|Monadic function|
-|[`⎕NR`](nr.md)     |Nested Representation[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕NR`](nr.md)     |Nested Representation of Function[†](#archaic-and-deprecated)|Monadic function|
 |[`⎕OR`](or.md)     |Object Representation   |Monadic function|
 |[`⎕PROFILE`](profile.md)|Profile Application|Ambivalent function|
 |[`⎕REFS`](refs.md)   |Local References      |Monadic function|
@@ -63,7 +63,7 @@ These are tools that allow you perform development environment actions under pro
 |[`⎕STOP`](query-stop.md)   |Query Stop vector|Monadic function|
 |[`⎕TRACE`](set-trace.md)  |Set Trace vector  |Dyadic function|
 |[`⎕TRACE`](query-trace.md)  |Query Trace vector|Monadic function|
-|[`⎕VR`](vr.md)     |Vector Representation[†](#archaic-and-deprecated)|Monadic function|
+|[`⎕VR`](vr.md)     |Vector Representation of Function[†](#archaic-and-deprecated)|Monadic function|
 
 ## Top-level Namespaces
 
@@ -375,12 +375,12 @@ These are archaic or deprecated facilities that are retained for backwards compa
 |[`⎕AVU`](avu.md)  |Atomic Vector - Unicode         |Variable|Unicode data needs no translation|
 |[`⎕CMD`](execute-windows-command.md)  |Execute the Windows Command Processor or another program|Monadic function|[`⎕SHELL`](shell.md) is interruptible, can separate output streams, and has lots of advanced options|
 |[`⎕CMD`](start-windows-auxiliary-processor.md)  |Start a Windows Auxiliary Processor|Dyadic function|DLL/shared libraries via [`⎕NA`](na.md)|
-|[`⎕CR`](cr.md)     |Canonical Representation|Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕CR`](cr.md)     |Canonical Representation of Function|Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
 |[`⎕DM`](dm.md)       |Diagnostic Message    |Constant|[`⎕DMX.DM`](dmx.md) is thread-safe|
 |[`⎕EN`](en.md)       |Event Number          |Constant|[`⎕DMX.EN`](dmx.md) is thread-safe|
 |[`⎕EXPORT`](export.md)|Export objects       |Ambivalent function|Use full (absolute or relative) [namespace paths](../../programming-reference-guide/introduction/namespaces/namespace-syntax.md)|
 |[`⎕FX`](fx.md)     |Fix definition          |Monadic function|[`⎕FIX`](fix.md) saves source as typed|
-|[`⎕NR`](nr.md)     |Nested Representation   |Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕NR`](nr.md)     |Nested Representation of Function|Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
 |[`⎕NXLATE`](nxlate.md)  |Specify Translation Table |Ambivalent function|[`⎕NGET`](nget.md) and [`⎕NPUT`](nput.md) read and write Unicode text files|
 |[`⎕PATH`](path.md)  |Search Path            |Variable|Use full (absolute or relative) [namespace paths](../../programming-reference-guide/introduction/namespaces/namespace-syntax.md)|
 |[`⎕SH`](execute-unix-command.md)   |Execute a Unix command or another program|Monadic function|[`⎕SHELL`](shell.md) is interruptible, can separate output streams, and has lots of advanced options|
@@ -394,7 +394,7 @@ These are archaic or deprecated facilities that are retained for backwards compa
 |[`⎕SVR`](svr.md)|Retract offer              |Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
 |[`⎕SVS`](svs.md)|Query Shared Variable State|Monadic function|[Jarvis](https://dyalog.github.io/Jarvis/) or [.NET](../../dotnet-interface-guide/index.md) or [COM](../../interface-guide/ole-client/introduction.md)|
 |[`⎕TC`](tc.md)   |Terminal Control           |Constant|<code><a href="../ucs/">⎕UCS</a> 8 10 13</code>|
-|[`⎕VR`](vr.md)     |Vector Representation   |Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
+|[`⎕VR`](vr.md)     |Vector Representation of Function|Monadic function|[`⎕ATX`](atx.md) can provide source as typed|
 |[`⎕XT`](query-external-variable.md)   |Query External variable  |Monadic function|[`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md)|
 |[`⎕XT`](set-external-variable.md)   |Associate External variable|Dyadic function|[`⎕MAP`](map.md) or [component files](../../programming-reference-guide/introduction/component-files.md)|
 

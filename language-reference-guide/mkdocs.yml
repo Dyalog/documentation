@@ -310,7 +310,7 @@ nav:
           - '<code>⎕CLEAR</code>: Clear Workspace': system-functions/clear.md
           - '<code>⎕CMD</code>: Execute Windows Command': system-functions/execute-windows-command.md
           - '<code>⎕CMD</code>: Start Windows Auxiliary Processor': system-functions/start-windows-auxiliary-processor.md
-          - '<code>⎕CR</code>: Canonical Representation': system-functions/cr.md
+          - '<code>⎕CR</code>: Canonical Representation of Function': system-functions/cr.md
           - '<code>⎕CS</code>: Change Space': system-functions/cs.md
           - '<code>⎕CSV</code>: Comma Separated Values': system-functions/csv.md
           - '<code>⎕CT</code>: Comparison Tolerance': system-functions/ct.md
@@ -393,7 +393,7 @@ nav:
           - '<code>⎕NPARTS</code>: File Name Parts': system-functions/nparts.md
           - '<code>⎕NPUT</code>: Write Text File': system-functions/nput.md
           - '<code>⎕NQ</code>: Enqueue Event': system-functions/nq.md
-          - '<code>⎕NR</code>: Nested Representation': system-functions/nr.md
+          - '<code>⎕NR</code>: Nested Representation of Function': system-functions/nr.md
           - '<code>⎕NREAD</code>: Native File Read': system-functions/nread.md
           - '<code>⎕NRENAME</code>: Native File Rename': system-functions/nrename.md
           - '<code>⎕NREPLACE</code>: Native File Replace': system-functions/nreplace.md
@@ -465,7 +465,7 @@ nav:
           - '<code>⎕USING</code>: Using Microsoft Net Search Path': system-functions/using.md
           - '<code>⎕VFI</code>: Verify Fix Input': system-functions/vfi.md
           - '<code>⎕VGET</code>: Value Get': system-functions/vget.md
-          - '<code>⎕VR</code>: Vector Representation': system-functions/vr.md
+          - '<code>⎕VR</code>: Vector Representation of Function': system-functions/vr.md
           - '<code>⎕VSET</code>: Value Set': system-functions/vset.md
           - '<code>⎕WA</code>: Workspace Available': system-functions/wa.md
           - '<code>⎕WC</code>: Windows Create Object': system-functions/wc.md

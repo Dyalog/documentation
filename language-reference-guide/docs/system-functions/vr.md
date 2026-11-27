@@ -3,60 +3,111 @@ search:
   boost: 2
 ---
 
-# <span>Vector Representation</span> `R←⎕VR Y`{{key}}
+# <span>Vector Representation of Function</span> `R←⎕VR Y`{{key}}
 
-`Y` must be a simple character scalar or vector which represents the name of a function or defined operator.
-
-If `Y` is the name of a defined function or defined operator, `R` is a simple character vector containing a character representation of the function or operator with each line except the last terminated by the newline character (`⎕UCS ⎕AVU[4]`).
-
-Its display form is as follows:
-
-1. the header line starts at column 8 with the `∇` symbol in column 6,
-2. the line number for each line of the function starts in column 1,
-3. the statement contained in each line starts at column 8 except for labelled lines or lines beginning with `⍝` which start at column 7,
-4. the header line and statements contain no redundant blanks beyond column 7 except that the `⋄` separator is surrounded by single blanks, control structure indentation is preserved and comments retain embedded blanks as originally defined,
-5. the last line shows only the `∇` character in column 6.
-
-If `Y` is the name of a variable, a locked function or operator, an external function, or is undefined, `R` is an empty vector.
+`⎕VR` returns the definition of the function or operator named in `Y` as a single character vector, with line numbers and the lines separated by carriage returns. [`⎕NR`](nr.md) returns it as a vector of lines instead, and [`⎕ATX`](atx.md) can also return it as it was typed.
 
 <h2 class="example">Example</h2>
+
 ```apl
-
-      ⍴V←⎕VR'PLUS'
-128
-
-      V
-     ∇ R←{A}PLUS B
-[1]   ⍝ MONADIC OR DYADIC +
-[2]    →DYADIC⍴⍨2=⎕NC'A' ⋄ R←B ⋄ →END
-[3]   DYADIC:R←A+B ⋄ →END
-[4]   END:
+      ∇ R←Mean X    ⍝ Arithmetic mean
+        R←(+/X)÷≢X
+      ∇
+      ⎕VR 'Mean'
+     ∇ R←Mean X    ⍝ Arithmetic mean
+[1]    R←(+/X)÷≢X
      ∇
 ```
 
-The definition of `⎕VR` has been extended to names assigned to functions by specification (`←`), and to local names of functions used as operands to defined operators. In these cases, the result of `⎕VR` is identical to that of `⎕CR` except that the representation of defined functions and operators is as described above.
+## Right Argument
 
-<h2 class="example">Example</h2>
+`Y` is a character scalar or vector that is the name of a function or operator, optionally with its namespace path. An array of higher rank signals `RANK ERROR`.
+
+## Result
+
+If `Y` is the name of a defined function or operator, `R` is a simple character vector of lines, each of which except the last ends with a carriage return (`⎕UCS 13`). The first line is `∇` followed by the header, each line of the definition is normalised and starts with its line number in brackets, and the last line is `∇`.
+
+[`⎕FX`](fx.md) accepts `R`, to define the function or operator again.
+
+If `Y` is the name of a [locked](lock.md) function or operator, an [external function](na.md), a variable, or a namespace, or if it is not defined, `R` is an empty vector.
+
+<h3 class="example">Example</h3>
+
 ```apl
-
-      AVG←MEAN∘,
-
-      +F←⎕VR'AVG'
-      ∇ R←MEAN X    ⍝ Arithmetic mean
-[1]     R←(+/X)÷⍴X
-     ∇ ∘,
-
-      ⍴F
+      ∇ R←Sign X
+        ⍝ The sign of a number
+        :If X>0 ⋄ R←1 ⋄ :Else ⋄ R←¯1 ⋄ :EndIf
+      ∇
+      ⎕VR 'Sign'
+     ∇ R←Sign X
+[1]   ⍝ The sign of a number
+[2]    :If X>0 ⋄ R←1 ⋄ :Else ⋄ R←¯1 ⋄ :EndIf
+     ∇
+      +/(⎕VR 'Sign')=⎕UCS 13
 3
+```
 
-      ]Display F
-┌→───────────────────────────────────────────┐
-│ ┌→───────────────────────────────────┐     │
-│ │     ∇ R←MEAN X    ⍝ Arithmetic mean│ ∘ , │
-│ │[1]    R←(+/X)÷⍴X                   │ - - │
-│ │     ∇                              │     │
-│ └────────────────────────────────────┘     │
-└∊───────────────────────────────────────────┘
+## Assigned Functions and Operands
+
+If `Y` is a name to which a function was assigned, or the name of an operand inside a defined operator, `R` represents that function:
+
+- For a primitive function, `R` is a 1-item vector of its symbol.
+- For a system function, `R` is a 1-item vector of its name, enclosed.
+- For a defined function or operator, `R` is its own representation, whose header has its original name rather than `Y`.
+- For a derived function or a train, `R` is a vector of the representations of its parts, in which an array is itself and a primitive is its symbol.
+
+<h3 class="example">Examples</h3>
+
+Continuing with `Mean` from the example above:
+
+```apl
+      Plus←+
+      ⎕VR 'Plus'
++
+      V←⎕VR
+      ⎕VR 'V'
+┌───┐
+│⎕VR│
+└───┘
+      Avg←Mean∘,
+      ⎕VR 'Avg'
+┌────────────────────────────────────┬─┬─┐
+│     ∇ R←Mean X    ⍝ Arithmetic mean│∘│,│
+│[1]    R←(+/X)÷≢X                   │ │ │
+│     ∇                              │ │ │
+└────────────────────────────────────┴─┴─┘
+```
+
+A part that is itself a derived function or a train is represented in the same way, so the nesting of `R` follows the structure of the function. `AHM`, which computes the arithmetic-harmonic mean, is an atop of `⊃` and a derived function whose left operand is a train of two trains:
+
+```apl
+      AHM←⊃((+⌿÷≢),≢÷1⊥÷)⍣≡
+      AHM 1 2 4
+2
+      ⎕VR 'AHM'
+┌─┬─────────────────────────────┐
+│⊃│┌───────────────────────┬─┬─┐│
+│ ││┌────────┬─┬──────────┐│⍣│≡││
+│ │││┌──┬─┬─┐│,│┌─┬─┬────┐││ │ ││
+│ ││││+⌿│÷│≢││ ││≢│÷│1 ⊥÷│││ │ ││
+│ │││└──┴─┴─┘│ │└─┴─┴────┘││ │ ││
+│ ││└────────┴─┴──────────┘│ │ ││
+│ │└───────────────────────┴─┴─┘│
+└─┴─────────────────────────────┘
+```
+
+Inside the operator `Show`, `F` is the name of its operand:
+
+```apl
+      ∇ R←(F Show) Y
+        R←⎕VR 'F'
+      ∇
+      +Show 0
++
+      Mean Show 0
+     ∇ R←Mean X    ⍝ Arithmetic mean
+[1]    R←(+/X)÷≢X
+     ∇
 ```
 
 <!-- Hidden search keywords -->
