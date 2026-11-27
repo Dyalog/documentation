@@ -13,7 +13,7 @@ search:
 
 Elements of `X` select from successively deeper levels in the structure of `Y`.  The items of `X` are simple integer scalars or vectors which identify a set of indices, one per axis at the particular level of nesting of `Y` in row-major order.  Simple scalar items in `Y` may be picked by empty vector items in `X` to any arbitrary depth.
 
-`⎕IO` is an implicit argument of Pick.
+`⎕IO` is an implicit argument of _pick_.
 
 <h2 class="example">Examples</h2>
 ```apl

@@ -22,7 +22,7 @@ For more information, see [Search Functions and Hash Tables](https://help.dyalog
 
 The proposed size increase may potentially cause `WS FULL` errors or may change the frequency of workspace compactions.
 
-To allow the user to evaluate the effect of this future change on their applications, two new I-beam functions have been provided. These functions increase the space allocated to the internal tables for the sole purpose of testing these potential effects. The new I-beams may affect performance either directly or by triggering a change of algorithm, but should not be used for that sole purpose since performance degradation in some cases cannot be excluded. See [Hash Table Size](../language-reference-changes/hash-table-size.md) and [Lookup Table Size](../language-reference-changes/lookup-table-size.md).
+To allow the user to evaluate the effect of this future change on their applications, two new _I-beam_ functions have been provided. These functions increase the space allocated to the internal tables for the sole purpose of testing these potential effects. The new _I-beams_ may affect performance either directly or by triggering a change of algorithm, but should not be used for that sole purpose since performance degradation in some cases cannot be excluded. See [Hash Table Size](../language-reference-changes/hash-table-size.md) and [Lookup Table Size](../language-reference-changes/lookup-table-size.md).
 
 When the next major release is published, it is anticipated that few, if any, users will notice negative effects from changing the internal table sizes. Rather, they will benefit from the improved performance that will result.
 

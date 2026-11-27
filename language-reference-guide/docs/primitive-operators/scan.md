@@ -69,7 +69,7 @@ The imprecise way in which large and non-integral values can be stored means tha
       +\ 1 1E100 ¯1E100
 1 1E100 0
 ``` 
-For backwards compatibility reasons, `+\` and `×\` of simple vectors are still evaluated in left-to-right order and that will not change. Any deviation from this, such as arguments that are not simple vectors (for example, higher-rank arrays or nested arguments) or additional qualifications of the derived function (for example, with bracket axes or application of the rank operator) can change the evaluation order. This means that some running sums and products can give different results to those that might be expected. For example:
+For backwards compatibility reasons, `+\` and `×\` of simple vectors are still evaluated in left-to-right order and that will not change. Any deviation from this, such as arguments that are not simple vectors (for example, higher-rank arrays or nested arguments) or additional qualifications of the derived function (for example, with bracket axes or application of the _rank_ operator) can change the evaluation order. This means that some running sums and products can give different results to those that might be expected. For example:
 ```apl 
       +\ 1E100 ¯1E100 1
 1E100 0 1

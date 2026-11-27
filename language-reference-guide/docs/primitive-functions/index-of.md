@@ -15,7 +15,7 @@ In particular, if `X` is a vector, the result `R` is a simple integer array with
 
 Elements of `X` and `Y` are considered the same if `X≡Y` returns 1 for those elements.
 
-`⎕IO`,  `⎕CT` and `⎕DCT` are implicit arguments of Index Of.
+`⎕IO`,  `⎕CT` and `⎕DCT` are implicit arguments of _index of_.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -115,7 +115,7 @@ Deutschland
 
 ```
 
-Note that the expression `y⍳x` signals a `LENGTH ERROR` because it looks for major cells in the left argument, whose shape is `5 14` (that is `1↓⍴y`), which is not the same as the trailing shape of `x`.
+The expression `y⍳x` signals a `LENGTH ERROR` because it looks for major cells in the left argument, whose shape is `5 14` (that is `1↓⍴y`), which is not the same as the trailing shape of `x`.
 ```apl
 
       y⍳x
@@ -124,7 +124,7 @@ LENGTH ERROR
      ∧
 ```
 
-For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../programming-reference-guide/introduction/search-functions-and-hash.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

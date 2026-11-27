@@ -1,7 +1,5 @@
 # <span>CurrentState</span> <span>Property</span>
 
-**Description**
-
 The CurrentState property is a read-only property that reports the current state of a [TCPSocket](../objects/tcpsocket.md) object. Its possible values and their means are as follows:
 
 |CurrentState        |Description                                              |
@@ -14,6 +12,6 @@ The CurrentState property is a read-only property that reports the current state
 |`'PartnerHasClosed'`|a temporary state on the way to Closed                   |
 |`'Closed'`          |a socket that has been closed by both client and server  |
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

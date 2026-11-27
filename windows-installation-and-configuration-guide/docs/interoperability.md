@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Workspaces and component files are stored on disk in a binary format (illegible to text editors). This format differs between machine architectures and among versions of Dyalog. For example, a file component written by a PC may well have an internal format that is different from one written by a UNIX machine. Similarly, a workspace saved from Dyalog Version {{ version_majmin }} will differ internally from one saved by a previous version of Dyalog APL.
+Workspaces and component files are stored on disk in a binary format (illegible to text editors). This format differs between machine architectures and among versions of Dyalog. For example, a file component written by a PC may well have a different internal format to one written by a Unix machine. Similarly, a workspace saved from Dyalog v{{ version_majmin }} will differ internally from one saved by a previous version of Dyalog.
 
 It is convenient for versions of Dyalog APL running on different platforms to be able to
 *interoperate* by sharing workspaces and component files. From Version 11.0, component files and workspaces can generally be shared between Dyalog interpreters running on different platforms. However, this is not always possible and the following sections describe limitations in interoperability:
@@ -39,7 +39,7 @@ An attempt to `⎕FREAD` a component containing a `⎕OR` that was created by a 
 
 It is no longer possible to *create* or write to small-span (32-bit) files; however it is still currently possible to *read* from small span files. Setting the second item of the right argument of `⎕FCREATE` to anything other than 64 will generate a `DOMAIN ERROR`.
 
-Note that *small-span* (32-bit-addressing) component files cannot contain Unicode data. Unicode editions of Dyalog APL can only write character data which would be readable by a Classic
+*Small-span* (32-bit-addressing) component files cannot contain Unicode data. Unicode editions of Dyalog APL can only write character data which would be readable by a Classic
 edition (consisting of elements of `⎕AV`).
 
 ## External Variables
@@ -50,7 +50,7 @@ External variables are subject to the same restrictions as small-span component 
 
 There is complete interoperability between 32- and 64-bit interpreters, except that 32-bit interpreters are unable to work with arrays or workspaces greater than 2GB in size.
 
-Note however that under Windows a 32-bit version of Dyalog APL may only access 32-bit DLLs, and a 64-bit version of Dyalog APL may only access 64-bit DLLs. This is a Windows restriction.
+However, under Microsoft Windows, a 32-bit version of Dyalog can only access 32-bit DLLs, and a 64-bit version of Dyalog can only access 64-bit DLLs. This is a Windows restriction.
 
 ## Unicode vs. Classic Editions
 

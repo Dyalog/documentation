@@ -11,9 +11,9 @@ For each positive element of `Y` the corresponding element of `R` is an integer,
 
 For each zero element of `Y`, the corresponding element of `R` is a pseudo-random floating-point value in the range 0 - 1, but excluding 0 and 1, that is, `(0<R[I]<1)`.
 
-`⎕IO` and `⎕RL` are implicit arguments of Roll. A side effect of Roll is to change the value of `⎕RL`.
+`⎕IO` and `⎕RL` are implicit arguments of _roll_. A side effect of _roll_ is to change the value of `⎕RL`.
 
-Note that different random number generators are available; see `⎕RL` for more information.
+Different random number generators are available; see `⎕RL` for more information.
 
 <h2 class="example">Examples</h2>
 ```apl

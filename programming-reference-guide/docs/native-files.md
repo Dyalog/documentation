@@ -73,7 +73,7 @@ Event is a character vector which indicates the stage of the copy or move operat
 |`'Progress'`|Indicates that the system function is at the main stage of the operation and is processing the files.|
 |`'Done'`|Indicates that all files have been processed.|
 
-Note that there will always be at least 2 invocations of the callback, to indicate the start and end of the operation.
+There will always be at least 2 invocations of the callback, to indicate the start and end of the operation.
 
 ### Info
 

@@ -38,23 +38,21 @@ The following notation is used to describe Control Structures within this sectio
     <tr>
         <td><code>andor</code></td>
         <td><i>either</i> one or more <code>:AndIf</code> statements, <i>or</i> one or more <code>:OrIf</code> statements. For further details, see below.<br /><pre>
-|
-.-----------------------.
-|                       |
-|<--------------.       |<--------------.
-|               |       |               |
-code            |       code            | 
-|               |       |               |
-|               |       |               |
-:AndIf bexp-----'       :OrIf bexp------'
-|                       |
-|<----------------------'
-|
+│
+├───────────────────────┐
+│                       │
+│←──────────────┐       │←──────────────┐
+│               │       │               │
+code            │       code            │ 
+│               │       │               │
+│               │       │               │
+:AndIf bexp─────┘       :OrIf bexp──────┘
+│                       │
+│←──────────────────────┘
+│
 </pre></td>
    </tr>
 </table>
-
-## Notes
 
 ## Code preceding `:OrIf` and `:AndIf`
 
@@ -73,7 +71,7 @@ A potential use for code before a `:OrIf` or `:AndIf` is to prepare for the cond
 :EndIf
 ```
 
-!!! warning
+!!! Warning "Warning"
     With the exception of a diamondised statement, a control statement that should **not** be followed by an expression will generate an error if an expression is supplied.
 
     A line in a function consisting of a control statement followed by a `⋄` and subsequent expression(s) is not **currently** disallowed but may exhibit unexpected behaviour. In particular, the line will not honour  `⎕STOP` and will not be metered by `⎕MONITOR`. This syntax is not recommended.

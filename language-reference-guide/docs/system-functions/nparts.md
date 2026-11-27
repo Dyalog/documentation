@@ -15,7 +15,7 @@ The optional left-argument `X` specifies whether or not the name or names specif
 
 - Pathnames are made absolute.
 - On Windows, all "\" directory separators are changed to "/".
-- The resultant name is simplified by removing extraneous directory separators etc. On Windows, this includes resolving occurrences of "." and ".."  within the name. On non-Windows platforms single "." are removed. Note that ".." and symbolic links interact differently on Windows to other platforms; on other platforms they cannot be removed without reference to the file system itself and are left in place. 
+- The resultant name is simplified by removing extraneous directory separators etc. On Windows, this includes resolving occurrences of "." and ".."  within the name. On non-Windows platforms single "." are removed. ".." and symbolic links interact differently on Windows to other platforms; on other platforms they cannot be removed without reference to the file system itself and are left in place. 
 
 If `Y` is a scalar or vector, the result `R` is a 3-element vector of character vectors as follows:
 
@@ -66,7 +66,7 @@ AIX-64
 
 ```
 
-Note that `⊃1 ⎕NPARTS ''` returns the current working directory.
+`⊃1 ⎕NPARTS ''` returns the current working directory.
 ```apl
       ⊃1 ⎕NPARTS ''
 ┌→─────────────┐

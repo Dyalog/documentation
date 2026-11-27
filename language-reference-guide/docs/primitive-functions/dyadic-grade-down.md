@@ -94,7 +94,7 @@ MAT       FIRsT       FIRsT       FIRsT       FIRST
 RAT       FIRST       FIRST       FIRST       fIRST
 ```
 
-`⎕IO` is an implicit argument of Grade Down.
+`⎕IO` is an implicit argument of _grade down_.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

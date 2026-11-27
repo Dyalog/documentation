@@ -1,6 +1,6 @@
 # Basic Usage
 
-Theoretically (although there are some [restrictions](restrictions.md)), every defined function in a workspace can have a compiled bytecode form. This bytecode is saved and loaded as part of the workspace, and will be copied along with the function on [`⎕CY`](../../language-reference-guide/system-functions/cy) or [`)COPY`](../../language-reference-guide/system-commands/copy) or the [`⎕OR`](../../language-reference-guide/system-functions/or) of a compiled function.
+Theoretically (although there are some [restrictions](restrictions.md)), every defined function in a workspace can have a compiled bytecode form. This bytecode is saved and loaded as part of the workspace, and will be copied along with the function on [`⎕CY`](../language-reference-guide/system-functions/cy.md) or [`)COPY`](../language-reference-guide/system-commands/copy.md) or the [`⎕OR`](../language-reference-guide/system-functions/or.md) of a compiled function.
 
 To query whether a function `foo` has been successfully compiled, enter:
 ```apl
@@ -32,4 +32,4 @@ In summary:
       foo 99           ⍝ execute the compiled code
 ```
 
-For full details on the syntax of `400⌶`, see [Compiler Control I-beam](../../language-reference-guide/primitive-operators/i-beam/compiler-control).
+For full details on the syntax of `400⌶`, see [Compiler Control I-beam](../language-reference-guide/primitive-operators/i-beam/compiler-control.md).

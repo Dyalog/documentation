@@ -1,7 +1,5 @@
 # <span>Default</span> <span>Property</span>
 
-**Description**
-
 This property determines which of a set of push buttons in a [Form](../objects/form.md), [SubForm](../objects/subform.md) or [MsgBox](../objects/msgbox.md) is the default button.
 
 In a [Form](../objects/form.md) or [SubForm](../objects/subform.md), the Default [Button](../objects/button.md) will generate a [Select](../methodorevents/select.md) event (30) when the user presses the Enter key, even though the Default [Button](../objects/button.md) may not have the focus at the time.
@@ -12,6 +10,6 @@ For a [Button](../objects/button.md), the Default property has the value 1 or 0.
 
 In a [MsgBox](../objects/msgbox.md), Default specifies which button initially has the focus. It has the value 1, 2 or 3 corresponding to the three buttons that can be defined. See [Btns](btns.md) property for further details.
 
-**Application**
+## Application
 
 Objects: [Button](../objects/button.md), [MsgBox](../objects/msgbox.md)

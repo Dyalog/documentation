@@ -54,14 +54,14 @@ The components used to support the .NET interface are:
 
 Different versions of each component are supplied  according to the target platform.
 
-For a list of the files associated with each of these components, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
+For a [list of the files associated with each of these components](../windows-installation-and-configuration-guide/files-and-directories.md#files), see the _Dyalog for Microsoft Windows Installation and Configuration Guide_.
 
 The **[DYALOG]/Samples** directory contains several sub-directories relating to the .NET interface:
 
 - **aplclasses** – a sub-directory that contains examples of .NET classes written in APL.
 - **bound_exe** – a sub-directory that contains APL source file examples.
 - **asp.net** – a sub-directory that is mapped to the IIS Virtual Directory **dyalog.net** and contains various sample APL web applications, as well as: 
-    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](/implementation-details/the-webconfig-file/)).
+    - **web.config** – a file that specifies Dyalog configuration parameters for ASP.NET (see [The web.config File](implementation-details/the-webconfig-file.md)).
 - **winforms** – a sub-directory that contains sample applications that use the <code class="language-nonAPL">System.Windows.Forms</code> GUI classes.
 
 ## Enabling the .NET Framework Interface
@@ -71,7 +71,7 @@ The .NET Framework interface is enabled when the DYALOG_NETCORE configuration pa
 !!! Info "Information"
     The .NET Framework interface and .NET interface cannot be enabled simultaneously.
 
-For information on how to set configuration parameters, see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
+For information on how to set [configuration parameters](../windows-installation-and-configuration-guide/configuration-parameters/configuration-parameters.md), see the _Dyalog for Microsoft Windows Installation and Configuration Guide_. To check the value of DYALOG_NETCORE, enter the following  when in a Session:
 ```apl
 +2⎕NQ'.' 'GetEnvironment' 'DYALOG_NETCORE'
 ```
@@ -87,7 +87,7 @@ VALUE ERROR: Undefined name: DateTime
 
 ```
 
-In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying)).
+In this situation, ensure that the .NET Framework has been installed according to [Microsoft's .NET documentation](https://docs.microsoft.com/en-gb/dotnet/) and the .NET Framework interface has been enabled by setting DOTNET_NETCORE to `0` (see [Verifying the Installation](#verifying-the-installation)).
 
 If everything has been installed and enabled correctly, then the version of .NET Framework in use will be returned by the following statement:
 ```apl

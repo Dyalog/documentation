@@ -35,7 +35,7 @@ The *Create bound file* dialog box contains the following fields. These will onl
 |Icon file|Allows you to associate an icon with your executable. Type in the pathname, or use the *Browse* button to navigate to an icon file.|
 |Command line|For an out-of-process COM Server, this allows you to specify the command line for the process. For a bound executable, this allows you to specify command-line parameters for the corresponding Dyalog APL DLL.|
 
-The following example illustrates how you can package the supplied workspace `calc.dws` as an executable. Before making the executable, it is essential to set up the latent expression to run the program using `⎕LX` as shown. Notice that in this case it is not necessary to execute `⎕OFF`; the `calc.exe` program will terminate normally when the user closes the calculator window and the system returns to Session input.
+The following example illustrates how you can package the supplied workspace `calc.dws` as an executable. Before making the executable, it is essential to set up the latent expression to run the program using `⎕LX` as shown. In this case, it is not necessary to execute `⎕OFF`; the `calc.exe` program will terminate normally when the user closes the calculator window and the system returns to Session input.
 
 In this example, the supplied workspace `calc.dws` is first saved to a directory to which the user has write access and, just to make certain, the Dyalog program is run as Administrator.
 
@@ -51,7 +51,7 @@ The *Runtime application* checkbox is checked, indicating that `calc.exe` is to 
 
 As this is a GUI application, the *Console application* checkbox is left unset.
 
-Note that if you enter the name of a file containing an icon (use the *Browse* button to browse for it) that icon will be bound with your executable and be used instead of the standard Dyalog APL icon.
+If you enter the name of a file containing an icon (use the *Browse* button to browse for it), that icon will be bound with your executable and be used instead of the standard Dyalog icon.
 
 The *Command Line* box allows you to enter parameters and values that are to be passed to your executable when it is invoked.
 

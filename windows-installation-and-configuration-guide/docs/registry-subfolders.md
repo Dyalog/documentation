@@ -8,7 +8,7 @@ However, any Registry Value that is maintained via a configuration dialog box wi
 
 ### AutoComplete
 
-This contains registry entries that describe your personal AutoComplete options. See [Auto Complete Tab](configuring-the-ide/configuration-dialog/configuration-dialog-auto-complete-tab.md)
+This contains registry entries that describe your personal AutoComplete options. See [Auto Complete Tab](configuring-the-ide/configuration-dialog.md#auto-complete-tab)
 
 ### Captions
 
@@ -24,26 +24,23 @@ This contains certain entries for the Editor.
 
 ### Event Viewer
 
-This contains entries that describe your settings for the Event Viewer. See 
-UI Guide: 
-
-The Event Viewer.
+This contains entries that describe your settings for [The Event Viewer](../windows-ui-guide/event-viewer.md).
 
 ### Explorer
 
-This contains entries that describe your settings for the [Workspace Explorer](../../windows-ui-guide/workspace-explorer/).
+This contains entries that describe your settings for the [Workspace Explorer](../windows-ui-guide/workspace-explorer.md).
 
 ### files
 
-This contains the size of your recently used file list (see [General Tab](configuring-the-ide/configuration-dialog/configuration-dialog-general-tab.md)) and the list of your most recently loaded workspaces.
+This contains the size of your recently used file list (see [General Tab](configuring-the-ide/configuration-dialog.md#general-tab)) and the list of your most recently loaded workspaces.
 
 ### KeyboardShortcuts/keys
 
-This contains the definitions of your Keyboard Shortcuts (Unicode Edition only). See [Keyboard Shortcuts Tab](configuring-the-ide/configuration-dialog/configuration-dialog-keyboard-shortcuts-tab.md).
+This contains the definitions of your Keyboard Shortcuts (Unicode Edition only). See [Keyboard Shortcuts Tab](configuring-the-ide/configuration-dialog.md#keyboard-shortcuts-tab).
 
 ### KeyboardShortcuts/chars
 
-This contains the Registry Keyboard mappings between keystrokes and APL characters (Unicode Edition only). See [Unicode Edition and the Registry Keyboard](../../windows-ui-guide/apl-keyboards).
+This contains the Registry Keyboard mappings between keystrokes and APL characters (Unicode Edition only). See [Unicode Edition and the Registry Keyboard](../windows-ui-guide/apl-keyboards.md).
 
 ### LanguageBar
 
@@ -55,21 +52,15 @@ This contains the entries for your Printer Setup options. See  [Print Configurat
 
 ### SALT
 
-This contains entries for SALT. See [SALT](configuring-the-ide/configuration-dialog//configuration-dialog-salt-tab.md).
+This contains entries for SALT. See [SALT](configuring-the-ide/configuration-dialog.md#salt-tab).
 
 ### Search
 
-This contains dynamic entries for the Find Objects Tool. See 
-UI Guide: 
-
-Find Objects Tool.
+This contains dynamic entries for the [Find Objects Tool](../windows-ui-guide/find-objects-tool.md).
 
 ### Threads
 
-This contains entries to remember your preferences for Threads. See 
-UI Guide: 
-
-The Threads Menu.
+This contains entries to remember your preferences for Threads. See [The Threads Tool](../windows-ui-guide/threads-tool.md).
 
 ### UnicodeIME
 
@@ -77,10 +68,7 @@ This contains entries for the Dyalog Unicode IME.
 
 ### ValueTips
 
-This contains entries for your Value Tips preferences. See 
-UI Guide: 
-
-Value Tips.
+This contains entries for your [Value Tips](../windows-ui-guide/value-tips.md) preferences.
 
 ### WindowRects
 

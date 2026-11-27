@@ -1,7 +1,5 @@
 # <span>AddChildren</span> <span>Method 310</span>
 
-**Description**
-
 This method is used to add child items to an item in a [TreeView](../objects/treeview.md) object
 
 The argument to AddChildren is a 3, 4 or 5 element array as follows:
@@ -23,6 +21,6 @@ The argument to AddChildren is a 3, 4 or 5 element array as follows:
 
 The result is the index at which the first new item has been inserted.
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

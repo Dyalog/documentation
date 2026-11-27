@@ -204,9 +204,9 @@ Payments = APLLoan.CalcPayments(LoanAmt, LenMax, LenMin,
 
 calls the APL function `CalcPayments` and receives the result.
 
-In Excel terms, this statement invokes the CalcPayments method of the APLLoan object.  In practice, it calls the `CalcPayments` APL function with the specified argument and puts the result in the local variable Payments. Note that the conversion between the result of the function (a Dyalog APL floating-point matrix) and the corresponding Excel data type is performed automatically for you.
+In Excel terms, this statement invokes the CalcPayments method of the APLLoan object.  In practice, it calls the `CalcPayments` APL function with the specified argument and puts the result in the local variable Payments. The conversion between the result of the function (a Dyalog APL floating-point matrix) and the corresponding Excel data type is performed automatically for you.
 
-Notice that the APLLoan variable is local to the Calc macro. This means that the dyalog.Loan object is loaded every time that Calc is run and is unloaded when it terminates.
+The APLLoan variable is local to the Calc macro. This means that the dyalog.Loan object is loaded every time that Calc is run and is unloaded when it terminates.
 
 ## Using Loan from Dyalog APL
 
@@ -250,4 +250,4 @@ If you exported `Loan` as an *out-of-process* OLE Server, OLE starts a second Dy
 
 If you exported `Loan` as an *in-process* OLE Server, OLE loads MYLOAN.DLL into the Dyalog APL program which in turn loads the appropriate Dyalog APL DLL. These DLLs are both are loaded into the same address space as the original APL process. In effect, you have two copies of APL (and two workspaces) running as a single program.
 
-Note that in both cases, the mapping between the corresponding functions and variables is direct. Effectively, the client namespace `LN` is an instance of the server namespace `Loan`.
+In both cases, the mapping between the corresponding functions and variables is direct. Effectively, the client namespace `LN` is an instance of the server namespace `Loan`.

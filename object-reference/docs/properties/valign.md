@@ -1,7 +1,5 @@
 # <span>VAlign</span> <span>Property</span>
 
-**Description**
-
 This property determines the vertical alignment of text in the [Text](../objects/text.md) object. It is either a single integer value, or, if the [Text](../objects/text.md) object has several components, a corresponding vector of such values.
 
 These may be :
@@ -13,6 +11,6 @@ These may be :
 |3  |bottom aligned|the bottom of the character cell is aligned on the y-coordinate specified by the [Points](points.md) property.                  |
 |4  |top aligned   |the top of the character cell is aligned on the y-coordinate specified by the [Points](points.md) property. This is the default.|
 
-**Application**
+## Application
 
 Objects: [Text](../objects/text.md)

@@ -1,7 +1,5 @@
 # <span>TCPReady</span> <span>Event 379</span>
 
-**Description**
-
 If enabled, this event is reported when the TCP/IP buffers are free and there is no data waiting to be sent in the internal APL queue.
 
 This event is provided to enable you to control the transmission of a large amount of data that cannot be handled in a single call to [TCPSend](./tcpsend.md).
@@ -16,6 +14,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[1]`|Object|ref or character vector|
 |`[2]`|Event |`'TCPReady'` or 379    |
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

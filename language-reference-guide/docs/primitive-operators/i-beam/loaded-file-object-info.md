@@ -6,7 +6,7 @@ search:
 
 # <span>Loaded File Object Info</span> `R←5179⌶Y`{{key}}
 
-The editor may be used to edit Dyalog script files (*.dyalog* files) and general text files and to save the contents in the workspace. Additionally `⎕FIX` can be used to fix scripts held in files. This I-Beam returns details about an object in the workspace specified by `Y` that is associated with such a file.
+The editor may be used to edit Dyalog script files (*.dyalog* files) and general text files and to save the contents in the workspace. Additionally `⎕FIX` can be used to fix scripts held in files. This _I-beam_ returns details about an object in the workspace specified by `Y` that is associated with such a file.
 
 `Y` is a character vector that specifies the name of a workspace object or a ref to an object.
 

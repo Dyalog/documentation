@@ -48,7 +48,7 @@ The first time ASP.NET processes a script file, it first performs a compilation 
 
 ASP.NET associates the compiled assembly with the script file, and only recompiles it if/when it has changed.
 
-ASP.NET does not itself compile a script; it delegates this task to a specialised compiler that is associated with the language declared in the script. This association is made either in the application's **web.config** file or in the global **machine.config** file. Dyalog installs a default **web.config** file that includes these settings in the **[DYALOG]\Samples\asp.net** folder; for additional information, see [The web.config File](../../implementation-details/the-webconfig-file/).
+ASP.NET does not itself compile a script; it delegates this task to a specialised compiler that is associated with the language declared in the script. This association is made either in the application's **web.config** file or in the global **machine.config** file. Dyalog installs a default **web.config** file that includes these settings in the **[DYALOG]\Samples\asp.net** folder; for additional information, see [The web.config File](../implementation-details/the-webconfig-file.md).
 
 The Dyalog .NET Compiler is written in Dyalog.
 

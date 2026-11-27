@@ -1,7 +1,5 @@
 # <span>FormatString</span> <span>Property</span>
 
-**Description**
-
 The FormatString property specifies one or more `⎕FMT` format specifications to be used to format data in an Grid or single-line Edit. When applied to a Grid, it is either a simple character vector that specifies the format specification for the entire Grid, or a vector of character vectors. If it is a vector, its elements are mapped to individual cells via the CellTypes property. When applied to an Edit object, FormatString must be a simple character vector.
 
 APL derives the text to be displayed in a cell by calling `⎕FMT` with a left argument of the corresponding element of FormatString and a right argument of the cell value. If the format specification is invalid, the text displayed is blank.
@@ -18,6 +16,6 @@ In a Grid, formatted data may be aligned vertically using the [AlignChar](alignc
 
 ![](../img/gridfmt.gif)
 
-**Application**
+## Application
 
 Objects: [ButtonEdit](../objects/buttonedit.md), [Edit](../objects/edit.md), [Grid](../objects/grid.md), [Label](../objects/label.md), [Spinner](../objects/spinner.md)

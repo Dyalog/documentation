@@ -1,6 +1,6 @@
 # Arrays of Namespace References
 
-You can construct arrays of refs using strand notation, array notation, catenate (`,`), reshape (`⍴`) and other structural primitives, as well as certain system functions.
+You can construct arrays of refs using strand notation, array notation, _catenate_ (`,`), _reshape_ (`⍴`) and other structural primitives, as well as certain system functions.
 ```apl
       EMP←JOHN PAUL
       ⍴EMP
@@ -15,7 +15,7 @@ Like any other array, an array of refs has name class 2:
 2
 ```
 
-Expressions such as indexing and pick return refs that may in turn be used as follows:
+Expressions such as indexing and _pick_ return refs that may in turn be used as follows:
 ```apl
       EMP[1].FirstName
 John
@@ -23,7 +23,7 @@ John
 44
 ```
 
-The each (`¨`) operator may be used to apply a function to an array of refs:
+The _each_ (`¨`) operator may be used to apply a function to an array of refs:
 ```apl
       SHOW¨EMP
  John Smith is 50  Paul Brown is 44
@@ -51,14 +51,14 @@ An array of refs to the left of an assignment arrow is expanded thus:
       (x y).a←c d → (x.a←c)(y.a←d)
 ```
 
-Note that the array of refs can be of any rank. In the limiting case of a simple scalar array, the array construct: `refs.exp` is identical to the scalar construct: `ref.exp`.
+The array of refs can be of any rank. In the limiting case of a simple scalar array, the array construct: `refs.exp` is identical to the scalar construct: `ref.exp`.
 
-Note that the expression to the right of the '`.`' pervades a nested array of refs to its left:
+The expression to the right of the '`.`' pervades a nested array of refs to its left:
 ```apl
       ((u v)(x y)).exp → ((u.exp)(v.exp))((x.exp)(y.exp))
 ```
 
-Note also that with successive expansions `(u v).(x y z).` ..., the final number of "leaf" terms is the product of the number of refs at each level.
+With successive expansions `(u v).(x y z).` ..., the final number of "leaf" terms is the product of the number of refs at each level.
 
 <h2 class="example">Examples</h2>
 ```apl

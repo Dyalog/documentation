@@ -4,11 +4,11 @@ search:
 ---
 # <span>I-Beam</span> `⌶`
 
-I-Beam is a monadic operator that provides a range of system related services.
+_I-beam_ is a monadic operator that provides a range of system related services.
 
 <h3 class="example">Examples</h3>
 
-Monadic operator:  I-Beam
+Monadic operator:  _I-beam_
 
 Provides a system-related service
 determined by the left-operand value.

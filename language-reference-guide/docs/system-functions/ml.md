@@ -5,7 +5,15 @@ search:
 
 # <span>Migration Level</span> `⎕ML`
 
-`⎕ML` determines the degree of migration of the Dyalog APL language towards IBM's APL2.  Setting this variable to other than its default value of `1` changes the interpretation of certain symbols and language constructs. `⎕ML` has Namespace scope.
+`⎕ML` determines the degree of migration of the Dyalog APL language towards IBM's APL2.
+
+`⎕ML` is an [implicit argument](../primitive-functions/notes.md#implicit-arguments) of:
+
+- monadic functions: [`∊`](../primitive-functions/enlist.md), [`↑`](../primitive-functions/mix.md), [`⊃`](../primitive-functions/first.md), [`≡`](../primitive-functions/depth.md)
+- dyadic functions: [`⊂`](../primitive-functions/partitioned-enclose.md)
+- system functions: [`⎕TC`](tc.md)
+
+Setting this variable to other than its default value of `1` changes the interpretation of certain symbols and language constructs. `⎕ML` has Namespace scope.
 
 |-------|----------|-----------------------------------------------------------------------------------------------------|
 |`⎕ML←0`|&nbsp;    |Original Native Dyalog                                                                               |

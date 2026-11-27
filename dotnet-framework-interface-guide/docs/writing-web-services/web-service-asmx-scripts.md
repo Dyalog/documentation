@@ -1,6 +1,6 @@
 # Web Service (.asmx) Scripts
 
-Web services can be written in a variety of languages, including the scripting version of Dyalog APL. For more information on APL source files, see [APL Source Files](../../apl-source-files/).
+Web services can be written in a variety of languages, including the scripting version of Dyalog APL. For more information on APL source files, see [APL Source Files](../apl-source-files/index.md).
 
 The first statement in the script file declares the language and the name of the service. For example, the following statement declares a Dyalog web service named <code class="language-nonAPL">GolfService</code>.
 ```nonAPL

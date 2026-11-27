@@ -1,6 +1,6 @@
 # The APL Command Line
 
-The command line for Dyalog APL is described below; the command line for non-Windows versions of Dyalog APL is very similar and is also documented in *Dyalog for UNIX UI Guide: Starting APL*.
+The command line for Dyalog is described below; the command line for non-Windows versions of Dyalog is very similar (see [Starting APL](../unix-user-guide/starting-apl.md)).
 
 Usually the command line is specified in the Target: field of the APL shortcut. The full pathname to the Dyalog executable is usually surrounded by double quotes as it contains spaces.
 
@@ -17,7 +17,7 @@ Is the location of the Dyalog executable. Usually this is the full pathname, sur
 **[options]**
 
 |---|---|
-|-x|Disables the execution of the `⎕LX` expression and the derived expression when code is loaded from a source code file or directory. This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See [Latent Expression](../language-reference-guide/system-functions/lx.md) and [Load](../dyalog-configuration-guide/configuration-parameters/load.md)|
+|-x|Disables the execution of the `⎕LX` expression and the derived expression when code is loaded from a source code file or directory.  This applies only at start-up and does not apply to workspaces or source files that are loaded subsequently. See [Latent Expression](../language-reference-guide/system-functions/lx.md) and [Load](configuration-parameters/load.md)|
 |-a|Start in USER mode.|
 |-b|Suppress the banner in the Session..|
 |-s|Disable the Session. This option is ignored in Windows versions.|
@@ -39,12 +39,11 @@ Is the location of the Dyalog executable. Usually this is the full pathname, sur
 
 The name of a Dyalog APL workspace to be loaded. Unless specified, on Windows the file extension .DWS is assumed.
 
+Instead of loading a workspace specified by the **ws** option, APL can be instructed to load a program from a script file. For further information, see [Load](configuration-parameters/load.md).
+
 **[param]**
 
-A parameter name followed by an equals sign (`=`) and a value. The parameter name can be one of the standard APL parameters (see [Configuration Parameters](../dyalog-configuration-guide/configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../object-reference/methodorevents/getenvironment.md) ) . If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
-
-!!! note
-    Instead of  a loading a workspace specified by the **ws** option, APL can be instructed to load a program from a script file. For further information, see [Load](../dyalog-configuration-guide/configuration-parameters/load.md).
+A parameter name followed by an equals sign (`=`) and a value. The parameter name could be one of the standard APL parameters (see [Configuration Parameters](configuration-parameters/configuration-parameters.md) ) or a name and value of your own choosing (see [GetEnvironment](../object-reference/methodorevents/getenvironment.md) ). If the parameter is in a registry sub-folder (see [Registry Sub-Folders](registry-subfolders.md) ), its name must be preceded by the name of the sub-folder, followed by a backslash (`\`) or underscore (`_`).
 
 <h2 class="example">Examples</h2>
 

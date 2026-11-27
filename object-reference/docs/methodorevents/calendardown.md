@@ -1,7 +1,5 @@
 # <span>CalendarDown</span> <span>Event 271</span>
 
-**Description**
-
 If enabled, this event is reported when the user depresses the left mouse
 button over a [Calendar](../objects/calendar.md) object.
 
@@ -36,6 +34,6 @@ If the value of the 6<sup>th</sup> element of the event message is 6
 
 Otherwise, the 3<sup>rd</sup> element of the event message is 0.
 
-**Application**
+## Application
 
 Objects: [Calendar](../objects/calendar.md)

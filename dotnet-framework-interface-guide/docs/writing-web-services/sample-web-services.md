@@ -567,7 +567,7 @@ In other previous webservice samples ([EG1](#sample-eg1), [LoanService](#sample-
 
 Given this instruction, ASP.NET will locate the `APLServices.Example` web service by searching the **bin** sub-directory for assemblies. Therefore, to make this work, we need to create a .NET assembly in **[DYALOG]\Samples\asp.net\webservices\bin**. The assembly should contain a .NET namespace named <code class="language-nonAPL">APLServices</code>, which in turn defines a class named <code class="language-nonAPL">Example</code>.
 
-The procedure for creating .NET classes and assemblies in Dyalog was described in [Writing .NET Classes](../../writing-dotnet-classes/) and its sub-sections. The same procedure is performed to make a web service class.
+The procedure for creating .NET classes and assemblies in Dyalog was described in [Writing .NET Classes](../writing-dotnet-classes/index.md) and its sub-sections. The same procedure is performed to make a web service class.
 
 **[DYALOG]\Samples\asp.net\webservices\bin** already contains copies of the dependent Dyalog DLLs that are required to execute the code.
 

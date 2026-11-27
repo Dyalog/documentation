@@ -1,7 +1,5 @@
 # <span>GetItemState</span> <span>Method 306</span>
 
-**Description**
-
 This method is used to obtain the status of a particular item in a [ListView](../objects/listview.md) or [TreeView](../objects/treeview.md) object.
 
 The argument for GetItemState is a single item as follows:
@@ -23,6 +21,6 @@ The result indicates the state of the item as the sum of one or more of the foll
 |64  |Item is or has been expanded                                  |
 |4096|Item is checked. See [CheckBoxes](../properties/checkboxes.md)|
 
-**Application**
+## Application
 
 Objects: [ListView](../objects/listview.md), [TreeView](../objects/treeview.md)

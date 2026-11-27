@@ -10,7 +10,7 @@ sets the variable `NUMB` in namespace `X` to 88.
       88 UTIL.FOO 99
 ```
 
-calls dyadic function `FOO` in namespace `UTIL` with left and right arguments of 88 and 99 respectively.  The interpreter can distinguish between this use of `'.'` and its use as the inner product operator, because the leftmost name: `UTIL` is a (class 9) namespace, rather than a (class 3) function.
+calls dyadic function `FOO` in namespace `UTIL` with left and right arguments of 88 and 99 respectively.  The interpreter can distinguish between this use of `'.'` and its use as the _inner product_ operator, because the leftmost name: `UTIL` is a (class 9) namespace, rather than a (class 3) function.
 
 The general namespace reference syntax is:
 ```apl
@@ -48,9 +48,9 @@ There are two special space names:
       UTIL.⍎STRING         ⍝ Execute STRING in UTIL space
 ```
 
-You may also reference a function or operator in a namespace *implicitly* using the mechanism provided by `⎕EXPORT` (See [Language Reference](../../../../language-reference-guide/system-functions/export)) and `⎕PATH`. If you reference a name that is undefined in the current space, the system searches for it in the list of exported names defined for the namespaces specified by `⎕PATH`. See [Language Reference](../../../../language-reference-guide/system-functions/path) for further details.
+You may also reference a function or operator in a namespace *implicitly* using the mechanism provided by `⎕EXPORT` (See [Language Reference](../../../language-reference-guide/system-functions/export.md)) and `⎕PATH`. If you reference a name that is undefined in the current space, the system searches for it in the list of exported names defined for the namespaces specified by `⎕PATH`. See [Language Reference](../../../language-reference-guide/system-functions/path.md) for further details.
 
-Notice that the expression to the right of a dot may be arbitrarily complex and will be executed within the namespace or ref to the left of the dot.
+The expression to the right of a dot can be arbitrarily complex and is executed within the namespace or ref to the left of the dot.
 ```apl
       X.(C←A×B)
       X.C

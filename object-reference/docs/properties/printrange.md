@@ -1,7 +1,5 @@
 # <span>PrintRange</span> <span>Property</span>
 
-**Description**
-
 The PrintRange property specifies the range of pages to be printed.
 
 PrintRange may be an empty character vector (the default), or `'All'`, either of which will cause all pages to be printed.
@@ -18,6 +16,6 @@ In this case, printing starts at the page specified to be
 the Start page, and ends at the page specified by End page or after the Maximum 
 number of pages has been reached, whichever is sooner.
 
-**Application**
+## Application
 
 Objects: [Printer](../objects/printer.md)

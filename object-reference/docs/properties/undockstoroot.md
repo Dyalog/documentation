@@ -1,7 +1,5 @@
 # <span>UndocksToRoot</span> <span>Property</span>
 
-**Description**
-
 Specifies the parent adopted by an object when its Type changes to a Form as a result of an undocking operation.
 
 UndocksToRoot is a single number with the value 0 or 1.
@@ -12,6 +10,6 @@ If UndocksToRoot is 0, the object becomes a Form that is a child of the Form in 
 
 The default value of UndocksToRoot is 1 if the object was originally created as a child of Root; otherwise it is 0.
 
-**Application**
+## Application
 
 Objects: [CoolBand](../objects/coolband.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)

@@ -1,7 +1,5 @@
 # <span>CalendarUp</span> <span>Event 272</span>
 
-**Description**
-
 If enabled, this event is reported when the user releases the left mouse
 button over a [Calendar](../objects/calendar.md) object.
 
@@ -22,6 +20,6 @@ vector as follows :
 
 For the meaning of elements 3 and 6, see [CalendarDown](./calendardown.md).
 
-**Application**
+## Application
 
 Objects: [Calendar](../objects/calendar.md)

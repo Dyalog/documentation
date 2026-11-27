@@ -101,7 +101,7 @@ Does the left argument exist within the right argument?
 1
 ```
 
-Select elements using the index function:
+Select elements using the _index_ function:
 ```apl
       1 4 1 13 ⊂⍛⌷ ⎕A
 ADAM

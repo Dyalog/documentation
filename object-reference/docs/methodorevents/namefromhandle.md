@@ -1,7 +1,5 @@
 # <span>NameFromHandle</span> <span>Method 136</span>
 
-**Description**
-
 This method is used to obtain the name of a particular object from the value of its Handle property.
 
 The argument to NameFromHandle is a single item as follows:
@@ -11,6 +9,6 @@ The argument to NameFromHandle is a single item as follows:
 
 The result is a character vector containing the name of the object.
 
-**Application**
+## Application
 
 Objects: [Root](../objects/root.md)

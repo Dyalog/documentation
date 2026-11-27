@@ -1,7 +1,5 @@
 # <span>TabFocus</span> <span>Property</span>
 
-**Description**
-
 The TabFocus property specifies the focus behaviour for the [TabControl](../objects/tabcontrol.md) object and may
 
 TabFocus is a character vector that may be `'Normal'` (the default), `'Never'` or `'ButtonDown'`.
@@ -12,6 +10,6 @@ If TabFocus is `'ButtonDown'`, the tabs or buttons in a [TabControl](../objects/
 
 If TabFocus is `'Never'`, the tabs or buttons in a [TabControl ](../objects/tabcontrol.md)*never* receive the input focus. This allows the user to circulate through a set of tabbed SubForms without ever losing the input focus to the [TabControl](../objects/tabcontrol.md) itself.
 
-**Application**
+## Application
 
 Objects: [TabControl](../objects/tabcontrol.md)

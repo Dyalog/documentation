@@ -1,6 +1,6 @@
 # <span>Memory Manager Statistics</span> `R←{X}(2000⌶)Y`
 
-This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This I-Beam is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](https://help.dyalog.com/19.0/index.htm#UserGuide/Installation%20and%20Configuration/Workspace%20Management.htm).
+This function returns information about the state of the workspace and provides a means to reset certain statistics and to control workspace allocation. This _I-beam_ is provided for performance tuning and is VERY LIKELY to change in the next release. See also [Workspace Management](https://help.dyalog.com/19.0/index.htm#UserGuide/Installation%20and%20Configuration/Workspace%20Management.htm).
 
 `Y` is a simple integer scalar or vector containing values listed in the table below.
 

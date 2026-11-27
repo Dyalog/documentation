@@ -1,11 +1,9 @@
 # <span>MDIActiveObject</span> <span>Property</span>
 
-**Description**
-
 This property contains a ref to the [SubForm](../objects/subform.md) owned by the [MDIClient](../objects/mdiclient.md) that is currently active.
 
 See also [MDIActive](mdiactive.md) property.
 
-**Application**
+## Application
 
 Objects: [MDIClient](../objects/mdiclient.md)

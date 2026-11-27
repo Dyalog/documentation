@@ -13,7 +13,7 @@ The result `R` identifies whether the Dyalog Session is running through Ride. Po
 - `0` : the Session is not running through Ride
 - `1` : the Session is running through Ride
 
-This I-Beam may be extended in future.
+This _I-beam_ may be extended in future.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

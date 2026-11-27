@@ -40,6 +40,12 @@ If you find once you start working that the issue is not adequately describing w
 
 Commit your work to the branch, crafting a good commit message, describing what has been changed or added. Don't auto-close the ticket with `Closes #X` (if `X` is the ticket id) -- this is reserved for the _merge message_; see below. 
 
+Before you push, check any links you have written or changed. Internal links are source-relative paths ending in `.md` (see [Link targets](https://dyalog.github.io/documentation-guidelines/style/#link-targets) in the guidelines); the following reports every link in the repository that is not:
+
+```
+python tools/utils/bare_links.py
+```
+
 Once you have committed, push your branch to the upstream repository, for example:
 
 ```

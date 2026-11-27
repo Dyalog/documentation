@@ -10,7 +10,7 @@ Start APL (clear ws) and type the expressions :
       'DDE:' ⎕SVO 'X SALES'
 ```
 
-The workspace MUST have a name as this is broadcast as the DDE **topic**. Note that it is currently essential that `X` contains a value before you make the offer. The result of `⎕SVO` is 1, indicating that no client has yet joined in the conversation.
+The workspace MUST have a name as this is broadcast as the DDE **topic**. It is currently essential that `X` contains a value before you make the offer. The result of `⎕SVO` is 1, indicating that no client has yet joined in the conversation.
 
 Start Excel (empty spreadsheet).
 
@@ -31,7 +31,7 @@ Switch to the APL Session and type :
 2
 ```
 
-Notice that now that Excel has made the connection, the degree of coupling is 2.
+Now that Excel has made the connection, the degree of coupling is 2.
 
 Now type :
 

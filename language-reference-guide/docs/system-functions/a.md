@@ -3,14 +3,17 @@ search:
   boost: 2
 ---
 
-# <span>Alphabetic Characters</span> `R←⎕A`{{key}}
+# <span>Uppercase Alphabet</span> `R←⎕A`{{key}}
 
-This is a simple character vector, composed of the letters of the alphabet.
+This is a system constant: a simple character vector of the 26 uppercase letters from `A` to `Z`, in alphabetical order. [Case Convert](c.md) gives the lowercase letters.
 
-<h2 class="example">Example</h2>
+<h2 class="example">Examples</h2>
+
 ```apl
       ⎕A
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      ⎕C ⎕A
+abcdefghijklmnopqrstuvwxyz
 ```
 
 <!-- Hidden search keywords -->

@@ -1,7 +1,5 @@
 # <span>GripperMode</span> <span>Property</span>
 
-**Description**
-
 The GripperMode property specifies whether or not the [CoolBand](../objects/coolband.md) has a gripper bar which is used to reposition and resize the [CoolBand](../objects/coolband.md) within its parent [CoolBar](../objects/coolbar.md).
 
 GripperMode is a character vector with the value `'Always'` (the default), `'Never'` or `'Auto'`.
@@ -12,6 +10,6 @@ If GripperMode is '`Never'`, the [CoolBand](../objects/coolband.md) does not hav
 
 If GripperMode is '`Auto'`, the [CoolBand](../objects/coolband.md) displays a gripper bar only if there are other [CoolBands](../objects/coolband.md) in the same [CoolBar](../objects/coolbar.md).
 
-**Application**
+## Application
 
 Objects: [CoolBand](../objects/coolband.md)

@@ -11,7 +11,7 @@ The axis specification is optional.  If present, it must be a simple integer sca
 
 `R` is a vector of items selected from `Y` by inserting 0 or more dividers, specified by `X`, between its major cells.
 
-Each element of `X` specifies the number of dividers to insert before the corresponding major cell of `Y`. The maximum length of `X` is `1+≢Y`, when the last element of `X` specifies the number of trailing dividers. Note that major cells of `Y` that precede the first divider (identified by the first non-zero element of `X`) are excluded from the result.
+Each element of `X` specifies the number of dividers to insert before the corresponding major cell of `Y`. The maximum length of `X` is `1+≢Y`, when the last element of `X` specifies the number of trailing dividers. Major cells of `Y` that precede the first divider (identified by the first non-zero element of `X`) are excluded from the result.
 
 The length of `R` is `+/X` (after possible extension).
 

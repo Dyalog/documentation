@@ -12,11 +12,11 @@ Consider a component file with 3 components:
 
 Dyalog APL will write these components onto contiguous areas of disk:
 ```apl
-.-.   .-.   .-.
-|1|   |2|   |3|
-.-----.-----.-------.
-| One | Two | Three |
---------------------.
+┌─┐   ┌─┐   ┌─┐
+│1│   │2│   │3│
+├─┴───┼─┴───┼─┴─────┐
+│ One │ Two │ Three │
+└─────┴─────┴───────┘
 ```
 
 Replace the second component with something the same size:
@@ -26,11 +26,11 @@ Replace the second component with something the same size:
 
 This will fit into the area currently used by component 2.
 ```apl
-.-.   .-.   .-.
-|1|   |2|   |3|
-.-----.-----.-------.
-| One | Six | Three |
---------------------.
+┌─┐   ┌─┐   ┌─┐
+│1│   │2│   │3│
+├─┴───┼─┴───┼─┴─────┐
+│ One │ Six │ Three │
+└─────┴─────┴───────┘
 ```
 
 If your system uses fixed length records, then the size of your components never change, and the internal structure of the file remains static.
@@ -42,11 +42,11 @@ However, suppose we start replacing larger data objects:
 
 This will not fit into the area currently assigned to component 1, so it is appended to the end of the file. Dyalog APL maintains internal tables which contain the location of each component; hence, even though the components may not be physically stored in order, they can always be accessed in order.
 ```apl
-      .-.   .-.     .-.
-      |2|   |3|     |1|
-.-----.-----.-------.------------.
-|⎕⎕⎕⎕⎕| Six | Three | Bigger One |
----------------------------------.
+      ┌─┐   ┌─┐     ┌─┐
+      │2│   │3│     │1│
+┌─────┼─┴───┼─┴─────┼─┴──────────┐
+│⎕⎕⎕⎕⎕│ Six │ Three │ Bigger One │
+└─────┴─────┴───────┴────────────┘
 ```
 
 The area that was occupied by component 1 now becomes free.
@@ -58,11 +58,11 @@ Now we'll replace component 3 with something bigger:
 
 Component 3 is appended to the end of the file, and the area that was used before becomes free:
 ```apl
-      .-.                .-.          .-.
-      |2|                |1|          |3|
-.-----.------------------.------------.----------.
-|⎕⎕⎕⎕⎕| Six |⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕| Bigger One | BigThree |
--------------------------------------------------.
+      ┌─┐                ┌─┐          ┌─┐
+      │2│                │1│          │3│
+┌─────┼─┴───┬────────────┼─┴──────────┼─┴────────┐
+│⎕⎕⎕⎕⎕│ Six │⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕│ Bigger One │ BigThree │
+└─────┴─────┴────────────┴────────────┴──────────┘
 ```
 
 Dyalog APL keeps tables of the size and location of the free areas, as well as the actual location of your data. Now we'll replace component 2 with something bigger:
@@ -72,16 +72,16 @@ Dyalog APL keeps tables of the size and location of the free areas, as well as t
 
 Free areas are used whenever possible, and contiguous holes are amalgamated.
 ```apl
-            .-.          .-.          .-.
-            |2|          |1|          |3|
-.-----------.------------.------------.----------.
-|⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕|BigTwo|⎕⎕⎕⎕⎕| Bigger One | BigThree |
--------------------------------------------------.
+            ┌─┐          ┌─┐          ┌─┐
+            │2│          │1│          │3│
+┌───────────┼────────────┼─┴──────────┼─┴────────┐
+│⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕│BigTwo│⎕⎕⎕⎕⎕│ Bigger One │ BigThree │
+└───────────┴────────────┴────────────┴──────────┘
 ```
 
 You can see that if you are continually updating your file with larger data objects, then the file structure can become fragmented. At any one time, the disk area occupied by your file will be greater than the area necessary to hold your data. However, free areas are constantly being reused, so that the amount of unused space in the file will seldom exceed 30%.
 
-Whenever you issue a monadic `⎕FRESIZE` command on a component file, Dyalog APL COMPACTS the file; that is, it restructures it by reordering the components and by amalgamating the free areas at the end of the file. It then truncates the file and releases the disk space back to the operating system (note that some versions of UNIX do not allow the space to be released). For a large file with many components, this process may take a significant time.
+Whenever you issue a monadic `⎕FRESIZE` command on a component file, Dyalog _compacts_ the file; that is, it restructures it by reordering the components and amalgamating the free areas at the end of the file. It then truncates the file and releases the disk space back to the operating system (some versions of Unix do not allow the space to be released). For a large file with many components, this process can take a significant time.
 
 ## Error Conditions
 ```apl
@@ -104,7 +104,7 @@ A `FILE TIED` error is reported if you attempt to tie a file which another user 
 
 ### File Tie Quota
 
-The File Tie Quota is the maximum number of files that a user may tie concurrently. Dyalog APL itself allows a maximum of 1024 under UNIX and 512 under Windows, although in either case your installation may impose a lower limit. When an attempt is made to exceed this limit, the report `FILE TIE QUOTA` (Error code 31) is given. This error will also be generated if an attempt is made to exceed the maximum number of open files that is imposed by the operating system.
+The File Tie Quota is the maximum number of files that a user can tie concurrently. Dyalog allows a maximum of 1024 under Unix and 512 under Microsoft Windows, although in either case your installation can impose a lower limit. When an attempt is made to exceed this limit, the report `FILE TIE QUOTA` (Error code 31) is given. This error will also be generated if an attempt is made to exceed the maximum number of open files that is imposed by the operating system.
 
 ### File Name Quota
 

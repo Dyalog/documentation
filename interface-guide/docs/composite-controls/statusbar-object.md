@@ -2,7 +2,7 @@
 
 Like the Toolbar, the StatusBar object is also a container that manages its children. However, the StatusBar may contain only one type of object, namely StatusFields. By default, the StatusBar is a flat grey object, positioned along the bottom edge of a Form, upon which the StatusFields are drawn as sunken rectangles. StatusFields display textual information and are typically used for help messages and for monitoring the status of an application. They can also be used to automatically report the status of the Caps Lock, Num Lock, Scroll Lock, and Insert keys
 
-The following example illustrates a default StatusBar containing three StatusFields. Notice how the StatusFields are positioned automatically.
+The following example illustrates a default StatusBar containing three StatusFields. The StatusFields are positioned automatically.
 ```apl
 'TEST'⎕WC'Form' 'Simple StatusBar'
 'TEST' ⎕WS'BCol' (255 255 255)
@@ -62,7 +62,7 @@ The second major use of a StatusField is to display **hints** which you do by se
 |KeyMode   |Monitors the keyboard mode (APL/ASCII) (Classic Edition only)|
 |InsRep    |Monitors the state of the Insert/Replace toggle key          |
 
-The following example illustrates different uses of the StatusField object. The first StatusField `F.SB.S1` is used for context-sensitive help by making it the HintObj for the Form `F`. The second StatusField `F.SB.S2` is simply used to display application status; in this case "Ready ...". The third and fourth StatusField objects monitor the status of the Insert and Caps Lock keys respectively. Note that whilst the Caps Lock, Num Lock and Scroll Lock keys have a recognised *state*, the Insert key does not. Initially, APL sets the key to "Ins" and then toggles to and from "Rep" whenever the key is pressed. To discover which mode the keyboard is in, you should use `⎕WG` to read the value of the Text property of the StatusField.
+The following example illustrates different uses of the StatusField object. The first StatusField `F.SB.S1` is used for context-sensitive help by making it the HintObj for the Form `F`. The second StatusField `F.SB.S2` is simply used to display application status; in this case "Ready ...". The third and fourth StatusField objects monitor the status of the Insert and Caps Lock keys respectively. Whilst the Caps Lock, Num Lock, and Scroll Lock keys have a recognised *state*, the Insert key does not. Initially, APL sets the key to "Ins" and then toggles to and from "Rep" whenever the key is pressed. To discover which mode the keyboard is in, you should use `⎕WG` to read the value of the Text property of the StatusField.
 ```apl
 'F'⎕WC'Form' 'Using StatusFields'('Coord' 'Pixel')
  

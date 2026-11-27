@@ -6,4 +6,4 @@ An alternative approach is to define separate MenuBar objects as children of the
 
 It is possible to mix these techniques, so that the MenuBar displayed is either the result of your callback function making it visible, or because a SubForm has its own MenuBar object defined and received the focus.
 
-Note that when the user maximises a SubForm, its system menu button and restore button are displayed in the parent Form's menu bar. It is therefore essential that you ensure that your application provides such a menu bar at all times. Otherwise, when your user maximises a SubForm there is no way to reverse it.
+When the user maximises a SubForm, its system menu button and restore button are displayed in the parent Form's menu bar. It is, therefore, essential that you ensure that your application provides such a menu bar at all times. Otherwise, when your user maximises a SubForm there is no way to reverse it.

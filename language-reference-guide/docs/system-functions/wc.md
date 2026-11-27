@@ -5,19 +5,19 @@ search:
 
 # <span>Window Create Object</span> `{R}←{X}⎕WC Y`{{key}}
 
-**Windows only.**
+Most objects can be created on the Microsoft Windows operating system only. The exceptions are [`Timer`](../../object-reference/objects/timer.md) and [`TCPSocket`](../../object-reference/objects/tcpsocket.md) objects, which can be created on all platforms, and [`HTMLRenderer`](../../object-reference/objects/htmlrenderer.md) objects, which can be created on any platform on which a GUI is available.
 
 This system function creates a GUI **object**.  `Y` is either a vector which specifies **properties** that determine the new object's appearance and behaviour, or a ref to or the `⎕OR` of a GUI object that exists or previously existed.  `X` is a character vector which specifies the name of the new object, and its position in the object hierarchy.
 
 If `X` is omitted, `⎕WC` attaches a GUI component to the current namespace, retaining any functions, variables and other namespaces that it may contain.  Monadic `⎕WC` is discussed in detail at the end of this section.
 
-If `Y` is a nested vector each element specifies a property.  The `Type` property (which specifies the class of the object) **must** be specified.  Most other properties take default values and need not be explicitly stated.  Properties (including `Type`) may be declared either positionally or with a keyword followed by a value. Note that `Type` must always be the first property specified. Properties are specified positionally by placing their values in `Y` in the order prescribed for an object of that type.
+If `Y` is a nested vector, each element specifies a property. The `Type` property (which specifies the class of the object) **must** be specified; most other properties take default values and need not be explicitly stated.  Properties (including `Type`) can be declared either positionally or with a keyword followed by a value. `Type` must always be the first property specified. Properties are specified positionally by placing their values in `Y` in the order prescribed for an object of that type.
 
 If `Y` is a ref or the result of `⎕OR`, the new object is a complete copy of the other, including any child objects, namespaces, functions and variables that it contained at that time.
 
-The shy result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace `X`.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is the full name (starting `#.` or   `⎕SE`.) of the namespace `X`.
 
-An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../../programming-reference-guide/introduction/names)
+An object's name is specified by giving its full pathname in the object hierarchy.  At the top of the hierarchy is the `Root` object whose name is "`.`".  Below "`.`" there may be one or more "top-level" objects.  The names of these objects follow the standard rules for other APL objects as described in [Legal Names](../../programming-reference-guide/introduction/names.md)
 
 Names for sub-objects follow the same rules except that the character "`.`" is used as a delimiter to indicate parent/child relationships.
 

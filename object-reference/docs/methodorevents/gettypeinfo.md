@@ -1,7 +1,5 @@
 # <span>GetTypeInfo</span> <span>Method 553</span>
 
-**Description**
-
 This method is used to obtain information about a type list supported by a COM object.
 
 The argument to GetTypeInfo is a single item as follows:
@@ -20,6 +18,6 @@ The result is a nested vector with one element per [Type List](../properties/typ
 |`[2]`|Value           |(usually) numeric|
 |`[3]`|Description     |character vector |
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

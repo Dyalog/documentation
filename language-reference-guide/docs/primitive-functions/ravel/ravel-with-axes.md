@@ -13,7 +13,7 @@ search:
 - A simple integer scalar or vector of axes of `Y`, or
 - An empty vector
 
-Ravel with axis can be used with selective specification.
+_Ravel_ with axis can be used with selective specification.
 
 `R` depends on the case of `K` above.
 
@@ -52,7 +52,7 @@ If `K` is an integer scalar or vector of axes of `Y`, then:
 - `K` must contain contiguous axes of `Y` in ascending order
 - `R` contains the elements of `Y` ravelled along the indicated axes
 
-Note that if `K` is a scalar or single element vector, `R ←→ Y`.
+If `K` is a scalar or single element vector, `R ←→ Y`.
 
 ```apl
       ⍴⍴R ←→ 1+(⍴⍴Y)-⍴,K

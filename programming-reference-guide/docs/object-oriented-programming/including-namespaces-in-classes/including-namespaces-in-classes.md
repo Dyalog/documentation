@@ -7,11 +7,11 @@ To import methods from a Namespace `NS`, the Class Script must include a stateme
 :Include NS
 ```
 
-When the Class is fixed by the editor or by `⎕FIX`, all the defined functions and operators in Namespace `NS` are included as methods in the Class. The functions and operators which are brought in as methods from the namespace `NS` are treated exactly as if the source of each function/operator had been included in the class script at the point of the `:Include` statement. For example, if a function contains `:Signature` or `:Access` statements, these will be taken into account. Note that such declarations have no effect on a function/operator which is in an ordinary namespace.
+When the Class is fixed by the editor or by `⎕FIX`, all the defined functions and operators in Namespace `NS` are included as methods in the Class. The functions and operators which are brought in as methods from the namespace `NS` are treated exactly as if the source of each function/operator had been included in the class script at the point of the `:Include` statement. For example, if a function contains `:Signature` or `:Access` statements, these will be taken into account. Such declarations have no effect on a function/operator which is in an ordinary namespace.
 
 Dfns and dops in `NS` are also included in the Class but as *Private members*, because dfns and dops may not contain `:Signature` or `:Access` statements. Variables and Sub-namespaces in `NS` are **not** included.
 
-Note that objects imported in this way are not actually *copied*, so there is no penalty incurred in using this feature. Additions, deletions and changes to the functions in `NS` are immediately reflected in the Class.
+Objects imported in this way are not *copied*, so there is no penalty incurred in using this feature. Additions, deletions, and changes to the functions in `NS` are immediately reflected in the Class.
 
 If there is a member in the Class with the same name as a function in `NS`, the Class member takes precedence and supersedes the function in `NS`.
 
@@ -23,4 +23,4 @@ Conversely, functions in `NS` will supersede members of the same name that are i
 
 Any number of Namespaces may be included in a Class and the `:Include` statements may occur anywhere in the Class script. However, for the sake of readability, it is recommended that you have `:Include` statements at the top, given that any definitions in the script will supersede included functions and operators.
 
-For information on copying classes that reference namespaces in this way, see  [Referenced Objects](../../../../language-reference-guide/system-commands/copy).
+For information on copying classes that reference namespaces in this way, see  [Referenced Objects](../../../language-reference-guide/system-commands/copy.md).

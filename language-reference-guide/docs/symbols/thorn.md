@@ -27,7 +27,7 @@ NB: In the following examples space characters
 4·5·6
 ```
 
-N.B. depends on `⎕PP`
+This depends on `⎕PP`.
 
 Dyadic Thorn means
 

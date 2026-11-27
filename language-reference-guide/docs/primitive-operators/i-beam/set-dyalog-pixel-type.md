@@ -6,8 +6,8 @@ search:
 
 # <span>Set Dyalog Pixel Type</span> `R←2035⌶Y`{{key}}
 
-!!! note
-    **Windows only**
+!!! windows "Dyalog on Microsoft Windows"
+    This function is available only under Microsoft Windows.
 
 Determines how Coord `'Pixel'` is interpreted. This is determined initially by the value of the DYALOG_PIXEL_TYPE parameter and, when altered by this function,  applies to all subsequent GUI operations.
 

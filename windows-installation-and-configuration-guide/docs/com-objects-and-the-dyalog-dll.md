@@ -6,7 +6,7 @@ Each different implementation of Dyalog contains two versions of the Dyalog APL 
 
 In the remainder of this section, the term *Dyalog APL DLL* is used to refer to any one of these DLLs. The term *COM object* is used to refer to a Dyalog APL in-process OLE Server (OLEServer object) or a Dyalog APL ActiveX Control (ActiveXControl object).
 
-The Dyalog APL DLL is used to host COM objects and .NET objects written in Dyalog APL. Although this section describes how it operates with COM objects, much of this also applies when it hosts .NET objects. Further information is provided in the *.NET Interface Guide*.
+The Dyalog APL DLL is used to host COM objects and [.NET objects written in Dyalog APL](../net-interface-guide/writing-dotnet-classes/assemblies-namespaces-and-classes.md). Although this section describes how it operates with COM objects, much of this also applies when it hosts .NET objects.
 
 ## Classes, Instances and Namespace Cloning
 
@@ -16,7 +16,7 @@ When a host application creates an instance of a Dyalog APL COM object, the corr
 
 Cloned OLEServer and ActiveXControl namespaces are created in almost exactly the same way as those that you can make yourself using `⎕OR` and `⎕WC` except that they do not have separate names. In fact, each clone believes itself to be the one and only original OLEServer or ActiveXControl namespace, with the same name, and is completely unaware of the existence of other clones.
 
-Notice that cloning does not initially replicate all the objects within the OLEServer or ActiveXControl namespace. Instead, the objects inside the cloned namespaces are actually represented by pointers to the original objects in the original namespace. Only when an object is changed does any information get replicated. Typically, the only objects likely to differ from one instance to another are variables, so only one copy of the functions will exist in the workspace. This design enables many instances of a Dyalog APL COM object to exist without overloading the workspace.
+Cloning does not initially replicate all the objects within the OLEServer or ActiveXControl namespace. Instead, the objects inside the cloned namespaces are actually represented by pointers to the original objects in the original namespace. Only when an object is changed does any information get replicated. Typically, the only objects likely to differ from one instance to another are variables, so only one copy of the functions will exist in the workspace. This design enables many instances of a Dyalog APL COM object to exist without overloading the workspace.
 
 ## Workspace Management
 
@@ -36,7 +36,7 @@ where `<appname>` is the name of the application, containing a String Value name
 
 When an application loads its first Dyalog APL COM object, it starts the Dyalog APL DLL which initialises a `CLEAR WS`. It then copies the namespace tree for the appropriate OLEServer or ActiveXControl object into its active workspace.
 
-This namespace tree comprises the OLEServer or ActiveXControl namespace itself, together with all its parent namespaces *with the exception of* the root workspace itself. Note that for an ActiveXControl, there is at least one parent namespace that represents a Form.
+This namespace tree comprises the OLEServer or ActiveXControl namespace itself, together with all its parent namespaces *with the exception of* the root workspace itself. For an ActiveXControl, there is at least one parent namespace that represents a Form.
 
 For example, if an ActiveXControl namespace is called `#.F.Dual`, the Dyalog APL DLL will copy the contents of `#.F` into its active workspace when the first instance of the control is loaded by the host application.
 

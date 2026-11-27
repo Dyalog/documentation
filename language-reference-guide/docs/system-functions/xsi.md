@@ -5,7 +5,7 @@ search:
 
 # <span>Extended State Indicator</span> `R←⎕XSI`{{key}}
 
-`R` is a nested vector of character vectors giving the full path names of the functions or operators in the execution stack. Note that if a function has changed space, its original (home) space is reported, rather than its current one.
+`R` is a nested vector of character vectors giving the full path names of the functions or operators in the execution stack. If a function has changed space, its original (home) space is reported, rather than its current one.
 
 <h2 class="example">Example</h2>
 

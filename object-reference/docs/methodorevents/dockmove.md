@@ -1,7 +1,5 @@
 # <span>DockMove</span> <span>Event 481</span>
 
-**Description**
-
 If enabled, this event is reported by a host object when a dockable object (the client) is dragged over it. The event will only be reported if the name of the client object is included in the list of objects that the host object will accept, which is defined by its DockChildren property.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 7-element vector as follows :
@@ -27,6 +25,6 @@ A callback function may modify the event message to cause a different sized dock
 
 The DockMove event is generated repeatedly as the docking object is dragged.
 
-**Application**
+## Application
 
 Objects: [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)

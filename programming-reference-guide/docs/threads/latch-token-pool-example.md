@@ -17,7 +17,7 @@ A visual example of a latch might be a ferry terminal, where cars accumulate in 
 [3]   ...
 ```
 
-Note that it is easy to modify this example to provide a maximum number of ferry places per trip by inserting `max_places↑` between `⎕TPUT` and its argument. If fewer cars than the ferry capacity are waiting, the `↑` will fill with trailing 0s. This will not cause problems because zero tokens are ignored.
+It is easy to modify this example to provide a maximum number of ferry places per trip by inserting `max_places↑` between `⎕TPUT` and its argument. If fewer cars than the ferry capacity are waiting, the `↑` will fill with trailing 0s. This will not cause problems because zero tokens are ignored.
 
 Let us replace the car ferry with a new road bridge. Once the bridge is ready for traffic, the barrier could be opened permanently by putting a *negative* ticket in the pool.
 ```apl

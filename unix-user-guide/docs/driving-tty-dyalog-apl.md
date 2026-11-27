@@ -17,17 +17,17 @@ Some error conditions generate text that does not become part of the session, ye
 
 The session and the edit and trace windows form a loop; to cycle forwards between windows use the command Windows Tab (TB), to cycle backwards use the command Reverse Windows Tab (BT). At any time you can use the command Jump (JP) to toggle between the current edit/trace window and the session. Escape (EP) closes the current window, having saved any changes (where appropriate); QuiT (QT) closes the current window, but without saving any changes.
 
-It is possible to move and to resize an edit or a trace window; hit Move/Resize (MR) to swap into this mode. In this mode the cursor keys move the current window around (note that when the window reaches the edge of the screen, its size will in many cases reduce as the opposite edge continues to move in the direction of movement. Up one Screen (US), Down one Screen (DS), Left one Screen (LS) and Right one Screen (RS) cause the right or bottom margin to extend or reduce as appropriate. Note that if the right or bottom edge is against the right or bottom edge of the session, then the window is made larger by "pushing" the left or top edge away as applicable.
+It is possible to move and to resize an edit or a trace window; hit Move/Resize (MR) to swap into this mode. In this mode the cursor keys move the current window around (when the window reaches the edge of the screen, its size will in many cases reduce as the opposite edge continues to move in the direction of movement). Up one Screen (US), Down one Screen (DS), Left one Screen (LS) and Right one Screen (RS) cause the right or bottom margin to extend or reduce as appropriate. If the right or bottom edge is against the right or bottom edge of the session, then the window is made larger by "pushing" the left or top edge away as applicable.
 
-Trace windows are read-only; however, it is possible to edit the currently traced object by hitting Edit (ED) while the cursor is on the first column of any line or by hitting ED while the cursor is on the name of the object. However, both in the Editor and Trace windows individual breakpoints (aka Stops) can be set and unset using the Toggle Breakpoint (BP) command. The Clear Breakpoints (CB) command will cause all breakpoints in the current object to be cleared. Note that by default there is no visible indication that either of these commands has been run; however, the output from `⎕STOP` will show whether either of these commands has been run. See "Configuring the Editor" for more details.
+Trace windows are read-only; however, it is possible to edit the currently traced object by hitting Edit (ED) while the cursor is on the first column of any line or by hitting ED while the cursor is on the name of the object. However, both in the Editor and Trace windows individual breakpoints (aka Stops) can be set and unset using the Toggle Breakpoint (BP) command. The Clear Breakpoints (CB) command will cause all breakpoints in the current object to be cleared. By default there is no visible indication that either of these commands has been run; however, the output from `⎕STOP` will show whether either of these commands has been run. See "Configuring the Editor" for more details.
 
-Edit windows and the session are read-write. By default input lines are in insert mode. It is possible to toggle to overwrite mode by using the Insert Toggle (IN) command. Note that this mode allows you to generate those overstrike APL characters which are supported by Dyalog APL; attempting to overwrite an existing character with one that does not form a valid APL character results in the original character being replaced with the newly-typed one. Destructive Backspace (DB) and Delete Item (DI) delete the character immediately before the cursor and the character under the cursor respectively. It is possible to define keycodes for Insert Item (II) and Non-destructive Backspace (NB) and Non-destructive Space (NS) but these are not in general use. Destructive Space (DP) is mapped to the Spacebar.
+Edit windows and the session are read-write. By default input lines are in insert mode. It is possible to toggle to overwrite mode by using the Insert Toggle (IN) command. This mode allows you to generate those overstrike APL characters which are supported by Dyalog APL; attempting to overwrite an existing character with one that does not form a valid APL character results in the original character being replaced with the newly-typed one. Destructive Backspace (DB) and Delete Item (DI) delete the character immediately before the cursor and the character under the cursor respectively. It is possible to define keycodes for Insert Item (II) and Non-destructive Backspace (NB) and Non-destructive Space (NS) but these are not in general use. Destructive Space (DP) is mapped to the Spacebar.
 
 In an edit window Toggle Localisation (TL) will add the name currently under the cursor to the end of the header line so as to localise that name if it was not already present in the header; if the name is present in the header, it is removed from the header. Redraw (RD) causes the function to be reformatted, with indentations added etc.
 
 It is possible to move or copy a line or a block of lines from one window to the other. It is also possible to Cut (CT) from the cursor position to the end of the line and to Paste (PT) the cut text; however, there is no other mechanism for selecting parts of a line, although you can use the mouse and the facilities of the terminal window or emulator to move partial lines around. In this case you may find that it is best to have the editor or tracer windows maximised to avoid copying the line drawing characters that form the outline of the edit or trace windows too; Zoom (ZM) toggles windows between maximised and standard size.
 
-Use the Tag (TG) command to select contiguous lines of text; identify the initial line with TG, move to the last line you wish to highlight and hit TG again. The next TG command only removes the tagging from the currently tagged block - it does not clear and initiate another selection. For Copy (CP) or Move (MV) move to the line immediately above where the text is to be placed, and hit CP or MV as appropriate. Use Delete Block (DK) to delete the highlighted lines. Note that it is possible to copy or move text between edit windows and the session.
+Use the Tag (TG) command to select contiguous lines of text; identify the initial line with TG, move to the last line you wish to highlight and hit TG again. The next TG command only removes the tagging from the currently tagged block - it does not clear and initiate another selection. For Copy (CP) or Move (MV) move to the line immediately above where the text is to be placed, and hit CP or MV as appropriate. Use Delete Block (DK) to delete the highlighted lines. It is possible to copy or move text between edit windows and the session.
 
 Comments can be aligned to the column where the cursor is by hitting Align Comments (AC). Comments that appear in columns which precede the first tabstop are aligned to column 1.
 
@@ -37,7 +37,7 @@ Strings can be replaced in the Editor and Session windows; the cursor must be at
 
 For both the Search and Replace commands EP is used to clear the definition of the appropriate string; the entire field will be removed from the status line.
 
-Dyalog APL responds to weak and strong interrupts; the `kill` operating system command can be used to send a signal 2 (SIGINT) or 3 (SIGQUIT) respectively, or the user can hit the intr or quit keystrokes. The current mappings for these two keystrokes can be seen by running the operating system command `stty -a`. The most common keystrokes for intr and quit are Ctrl-C and Ctrl-\ respectively. Note that when using PuTTY it will be necessary to swap out of the APL keyboard to generate these keystrokes.
+Dyalog APL responds to weak and strong interrupts; the `kill` operating system command can be used to send a signal 2 (SIGINT) or 3 (SIGQUIT) respectively, or the user can hit the intr or quit keystrokes. The current mappings for these two keystrokes can be seen by running the operating system command `stty -a`. The most common keystrokes for intr and quit are Ctrl-C and Ctrl-\ respectively. When using PuTTY it will be necessary to swap out of the APL keyboard to generate these keystrokes.
 
 The tables below show the keystrokes that can be used in the different windows.
 
@@ -244,11 +244,12 @@ The tables below show the keystrokes that can be used in the different windows.
     </tr>
 </table>
 
-!!! note
-    1. The editor can also be started using `)ED` or `⎕ED`. Hitting ED in the session with a suspended function on the stack will open the editor on that function; this is called Naked Edit.
-    2. By default, outlines are not shown. See "Configuring the Editor" for further details.
-    3. By default, there is no visual indication that a breakpoint has been set, although `⎕STOP` will show the breakpoints. However, it is possible to view breakpoints - see "Configuring the Editor" for further details.
-    4. AO, DO, RD only work in 13.1 onwards
+### Notes
+
+1. The editor can also be started using `)ED` or `⎕ED`. Hitting ED in the session with a suspended function on the stack will open the editor on that function; this is called Naked Edit.
+2. By default, outlines are not shown. See "Configuring the Editor" for further details.
+3. By default, there is no visual indication that a breakpoint has been set, although `⎕STOP` will show the breakpoints. However, it is possible to view breakpoints - see "Configuring the Editor" for further details.
+4. AO, DO, RD only work in 13.1 onwards
 
 ## Tracer Commands
 
@@ -308,9 +309,10 @@ The tables below show the keystrokes that can be used in the different windows.
     </tr>
 </table>
 
-!!! note
-    1. Hitting TC in the session with a suspended function on the stack will open one trace window for each function on the stack; this is called Naked Trace.
-    2. By default, there is no visual indication that a breakpoint has been set, although `⎕STOP` will show the breakpoints. However, it is possible to view breakpoints - see "Configuring the Editor" for further details.
+### Notes
+
+1. Hitting TC in the session with a suspended function on the stack will open one trace window for each function on the stack; this is called Naked Trace.
+2. By default, there is no visual indication that a breakpoint has been set, although `⎕STOP` will show the breakpoints. However, it is possible to view breakpoints - see "Configuring the Editor" for further details.
 
 ## Search and Replace Commands
 
@@ -351,10 +353,11 @@ The tables below show the keystrokes that can be used in the different windows.
     </tr>
 </table>
 
-!!! note
-    1. Applies to session, editor and tracer
-    2. Applies to the session and editor only
-    3. Caution: the Repeat All replaces ALL matches in the current object
+### Notes
+
+1. Applies to session, editor and tracer
+2. Applies to the session and editor only
+3. Caution: the Repeat All replaces ALL matches in the current object
 
 ## Session-related Commands
 

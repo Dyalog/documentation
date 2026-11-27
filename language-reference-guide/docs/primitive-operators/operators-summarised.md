@@ -7,15 +7,12 @@ search:
 
 [](#monadic-operators) and [](#dyadic-operators) below summarise the Monadic and Dyadic primitive operators whose detailed descriptions  follow in alphabetical order in this section.
 
-Some operators may include an axis specification (indicated `[]`in the tables). Note that in these case `⎕IO` is an implicit argument of the derived function.
+Some operators can include an axis specification (indicated `[]`in the tables). For these operators, `⎕IO` is an implicit argument of the derived function.
 
 Table: Monadic Primitive Operators { #monadic-operators }
 
 |Name                           |Producing Monadic derived function|Producing Dyadic derived function|
 |-------------------------------|----------------------------------|---------------------------------|
-|Assignment (Modified)          |&nbsp;                            |`Xf←Y`                           |
-|Assignment (Indexed Modified)  |&nbsp;                            |`X[I]f←Y`                        |
-|Assignment (Selective Modified)|&nbsp;                            |`(EXP X)f←Y`                     |
 |Commute                        |`f⍨Y`                             |`Xf⍨Y`                           |
 |Each                           |`f¨Y`                             |`Xf¨Y`                           |
 |I-Beam                         |`A⌶Y`                             |`X(A⌶)Y`                         |
@@ -32,7 +29,6 @@ Table: Dyadic Primitive Operators { #dyadic-operators }
 |--------------|----------------------------------|-----------------------------------|
 | At           |`f@gY`                            | `Xf@gY`                           |
 | Atop         |`f⍤gY`                            | `Xf⍤gY`                           |
-| Axis         |`f[B]Y`                           | `Xf[B]Y`                          |
 | Behind       |`f⍛gY`                            | `Xf⍛gY`                           |
 | Beside       |`f∘gY`                            | `Xf∘gY`                           |
 | Bind         |`A∘gY`                            | &nbsp;                            |

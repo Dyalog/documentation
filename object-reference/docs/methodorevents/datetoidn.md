@@ -1,7 +1,5 @@
 # <span>DateToIDN</span> <span>Method 264</span>
 
-**Description**
-
 This method is used to convert a date from `⎕TS` format into an [IDN](../miscellaneous/international-day-number.md) suitable for use in a [Calendar](../objects/calendar.md) object.
 
 The argument to DateToIDN is a 3-element array as follows:
@@ -25,6 +23,6 @@ DateToIDN will also accept a single enclosed argument containing these values. I
 36048
 ```
 
-**Application**
+## Application
 
 Objects: [Calendar](../objects/calendar.md), [DateTimePicker](../objects/datetimepicker.md), [Root](../objects/root.md)

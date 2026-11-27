@@ -1,7 +1,5 @@
 # <span>FStyle</span> <span>Property</span>
 
-**Description**
-
 This property determines how a graphics object is filled. It takes one of the following values, or, if the object has more than one component, a vector of such values.
 
 |FStyle|Effect                                                                                             |
@@ -20,6 +18,6 @@ For example, to fill an object with criss-crossing diagonal lines you would spec
 
 If the size of the [Bitmap](../objects/bitmap.md) is 8x8 APL uses a Windows "brush" to fill the object. If not, it uses "tiling". Filling with a brush is faster.
 
-**Application**
+## Application
 
 Objects: [Circle](../objects/circle.md), [Ellipse](../objects/ellipse.md), [Poly](../objects/poly.md), [Rect](../objects/rect.md)

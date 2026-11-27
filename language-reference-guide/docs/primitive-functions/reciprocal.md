@@ -7,7 +7,7 @@ search:
 
 `Y` must be a numeric array.  `R` is numeric.  `R` is the reciprocal of `Y`; that is `1÷Y`.  If `⎕DIV=0`, `÷0` results in a `DOMAIN ERROR`.  If `⎕DIV=1`, `÷0` returns 0.
 
-`⎕DIV` is an implicit argument of Reciprocal.
+`⎕DIV` is an implicit argument of _reciprocal_.
 
 <h2 class="example">Examples</h2>
 ```apl

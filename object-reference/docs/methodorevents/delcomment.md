@@ -1,7 +1,5 @@
 # <span>DelComment</span> <span>Method 221</span>
 
-**Description**
-
 This method is used to delete a comment from a [Grid](../objects/grid.md).
 
 The argument to DelComment is a 2 array as follows or `⍬`:
@@ -15,10 +13,10 @@ For example, the following expression removes the comment associated with the ce
       F.C.DelComment 2 1
 ```
 
-Note that to delete a comment associated with a row or column *title*, the appropriate element in the argument should be `¯1`.
+To delete a comment associated with a row or column *title*, the appropriate element in the argument should be `¯1`.
 
 If the argument is `⍬`, all comments are deleted.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

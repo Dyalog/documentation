@@ -2,9 +2,9 @@
 
 The captions of the various windows that comprise the Dyalog Integrated Development Environment (IDE) are user-configurable and defined by entries in the Windows registry in the *Captions* subkey of the main Dyalog key.
 
-Note that this only applies when the windows are floating (un-docked). When a window is docked Dyalog displays a fixed non-configurable caption.
+This only applies when the windows are floating (un-docked). When a window is docked Dyalog displays a fixed non-configurable caption.
 
-Note also that the *Captions* subkey is not created by the interpreter; the user must create the subkey and the values.
+The *Captions* subkey is not created by the interpreter; you must create the subkey and the values.
 
 Each entry is a string value whose name identifies the window as follows:
 

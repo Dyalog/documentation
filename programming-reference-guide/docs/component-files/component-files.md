@@ -12,7 +12,7 @@ To access an existing component file it must be **tied**, that is, opened for us
 
 ## Tie Numbers
 
-A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647 and, you can supply one explicitly, or have the interpreter allocate the next available one by specifying 0. The system functions which tie files return the tie number as a "shy" result.
+A file is tied by associating a **file name** with a **tie number**. Tie numbers are integers in the range 1 - 2147483647; you can supply one explicitly, or have the interpreter allocate the next available one by specifying `0`. The system functions that tie files return the tie number as a [shy](../introduction/results.md#shy-results) result.
 
 ## Creating and Removing Files
 
@@ -32,7 +32,7 @@ In addition to the data held in a component, the user ID that wrote it and the t
 
 ## Multi-User Access
 
-`⎕FSTIE` ties a file for **shared** (that is, multi-user) access. This kind of access would be appropriate for a multi-user UNIX system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.
+`⎕FSTIE` ties a file for _shared_ (that is, multi-user) access. This type of access would be appropriate for a multi-user Unix system, a network of single user PCs, or multiple APL tasks under Microsoft Windows.
 
 `⎕FHOLD` provides the means for the user to temporarily prevent other co-operating users from accessing one or more files. This is necessary to allow a single logical update involving more than one component, and perhaps more than one file, to be completed without interference from another user. `⎕FHOLD` is applicable to External Variables as well as Component Files
 
@@ -72,7 +72,7 @@ This is an integer representation of a Boolean mask. Each bit in the mask indica
 
 For example, if bits 1, 4 and 6 are set and all other relevant bits are zero only `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP` are permitted. A convenient way to set up the mask is to sum the access codes associated with each operation.
 
-For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND` and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. Thus by subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. Note that the value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES` and `⎕FNUMS` are not subject to access control. Passnumbers may also be used to establish different levels of access for the same user.
+For example, the value 41 (1+8+32) authorises `⎕FREAD`, `⎕FAPPEND`, and `⎕FDROP`. A value of `¯1` (all bits set) permits all operations. By subtracting the access codes of operations to be forbidden, it is possible to permit all but certain types of access. For example, a value of `¯133` (`¯1- 4+128`) permits all operations except `⎕FERASE` and `⎕FRENAME`. The value of unused bits is ignored. Any non-zero permission code allows `⎕FSTIE` and `⎕FSIZE`. `⎕FCREATE`, `⎕FUNTIE`, `⎕FLIB`, `⎕FNAMES`, and `⎕FNUMS` are not subject to access control. Passnumbers can also be used to establish different levels of access for the same user.
 
 When the user attempts to tie a file using `⎕FTIE` or `⎕FSTIE` a row of the access matrix is selected to control this and subsequent operations.
 
@@ -138,14 +138,14 @@ See *Language Reference* for full details of the syntax of these system function
 
 Let us suppose that you have written an APL system that builds a personnel database, containing the name, age and place of birth of each employee. Let us assume that you have created a variable `DATA`, which is a nested vector with each element containing a person's name, age and place of birth:
 ```apl
-      DISPLAY 2↑DATA
-.→-------------------------------------------------------.
-| .→----------------------. .→-------------------------. |
-| | .→-------.    .→----. | | .→------.    .→--------. | |
-| | |Jonathan| 42 |Wales| | | |Pauline| 21 |Isleworth| | |
-| | '--------'    '-----' | | '-------'    '---------' | |
-| '∊----------------------' '∊-------------------------' |
-'∊-------------------------------------------------------'
+      ]Display 2↑DATA
+┌→───────────────────────────────────────────────────────┐
+│ ┌→──────────────────────┐ ┌→─────────────────────────┐ │
+│ │ ┌→───────┐    ┌→────┐ │ │ ┌→──────┐    ┌→────────┐ │ │
+│ │ │Jonathan│ 42 │Wales│ │ │ │Pauline│ 21 │Iselworth│ │ │
+│ │ └────────┘    └─────┘ │ │ └───────┘    └─────────┘ │ │
+│ └∊──────────────────────┘ └∊─────────────────────────┘ │
+└∊───────────────────────────────────────────────────────┘
 ```
 
 Then the following APL expressions can be used to access the database:
@@ -154,12 +154,12 @@ Then the following APL expressions can be used to access the database:
 
 Show record 2
 ```apl
-      DISPLAY 2⊃DATA
-.→-------------------------.
-| .→------.    .→--------. |
-| |Pauline| 21 |Isleworth| |
-| '-------'    '---------' |
-'∊-------------------------'
+      ]Display 2⊃DATA
+┌→─────────────────────────┐
+│ ┌→──────┐    ┌→────────┐ │
+│ │Pauline│ 21 │Iselworth│ │
+│ └───────┘    └─────────┘ │
+└∊─────────────────────────┘
 ```
 
 <h2 class="example">Example 2</h2>
@@ -193,7 +193,7 @@ Create a new file, giving the file name, and the number you wish to use to ident
 
 If the file already exists, or you have already used this tie number, then APL will respond with the appropriate error message.
 
-Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use each (`¨`).
+Now write the data to the file. We could write a function that loops to do this, but it is neater to take advantage of the fact that our data is a nested vector, and use _each_ (`¨`).
 ```apl
       DATA ⎕FAPPEND¨ 1
 ```
@@ -204,13 +204,12 @@ Now we'll try our previous examples using this file.
 
 Show record 2
 ```apl
-      DISPLAY ⎕FREAD 1 2
-.→-------------------------.
-| .→------.    .→--------. |
-| |Pauline| 21 |Isleworth| |
-| '-------'    '---------' |
-'∊-------------------------'
-
+      ]Display  ⎕FREAD 1 2
+┌→─────────────────────────┐
+│ ┌→──────┐    ┌→────────┐ │
+│ │Pauline│ 21 │Iselworth│ │
+│ └───────┘    └─────────┘ │
+└∊─────────────────────────┘
 ```
 
 <h2 class="example">Example 2</h2>

@@ -9,7 +9,7 @@ search:
 
 An element of `X` is considered identical to an element in `Y` if `X≡Y` returns 1 for those elements.
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Membership.
+`⎕CT` and `⎕DCT` are  implicit arguments of _membership_.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -20,7 +20,7 @@ An element of `X` is considered identical to an element in `Y` if `X≡Y` return
 1 1 0
 ```
 
-For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../../programming-reference-guide/introduction/search-functions-and-hash).
+For performance information, see [Programmer's Guide: "Search Functions and Hash Tables"](../../programming-reference-guide/introduction/search-functions-and-hash.md).
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

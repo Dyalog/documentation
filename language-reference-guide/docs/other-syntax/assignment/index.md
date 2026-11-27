@@ -55,7 +55,7 @@ TEXT
 2017			
 			
 ```
-Implementation note: erroneous expressions such as `var 3←5` will result in `5` being assigned to `var`, even though a `SYNTAX ERROR` will be generated. In the case of `(var 3)←5` no assignment will be made.
+Erroneous expressions such as `var 3←5` result in `5` being assigned to `var`, even though a `SYNTAX ERROR` is generated. In the case of `(var 3)←5` no assignment is made.
 
 Pass-through assignments are permitted. The value of `Y` is carried through each assignment:
 ```apl

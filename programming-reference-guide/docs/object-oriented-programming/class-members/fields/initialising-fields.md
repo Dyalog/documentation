@@ -26,6 +26,6 @@ Field `Talks` will be initialised to `1` in every instance of the Class.
 Dicky
 ```
 
-Note that if a Field is ReadOnly, this is the only way that it may be assigned a value.
+If a Field is ReadOnly, this is the only way that it can be assigned a value.
 
 See also: [Shared Fields.](shared-fields.md)

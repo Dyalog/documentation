@@ -9,7 +9,7 @@ search:
 
 `⎕SE` is maintained separately from the active workspace and is not affected by `)LOAD` or `)CLEAR`.  It is therefore useful for containing utility functions.  The contents of `⎕SE` may be saved in and loaded from a .DSE file.
 
-See [The Session Object](../../../windows-ui-guide/the-session-object/session-object) for further details.
+See [The Session Object](../../windows-ui-guide/the-session-object/session-object.md) for further details.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

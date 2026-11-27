@@ -24,7 +24,7 @@ Locking enables controlled update of native files by co-operating users. A proce
 1. Type: 0: Unlock, 1:Read lock, 2:Write lock.
 2. Timeout: Number of seconds to wait for lock before generating a `TIMEOUT` error. Defaults to indefinite wait.
 
-The shy result `R` is `Y`. To unlock the file, this value should subsequently be supplied in the right argument to `0 ⎕NLOCK`.
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R` is `Y`. To unlock the file, this value should subsequently be supplied in the right argument to `0 ⎕NLOCK`.
 
 <h2 class="example">Examples</h2>
 ```apl
@@ -65,7 +65,7 @@ The left argument may have a second optional item that specifies a *timeout* val
 
 ### Errors
 
-- In this release, an attempt to unlock a region that contains bytes that have not been locked results in a `DOMAIN ERROR`.
+- Under Microsoft Windows, an attempt to unlock a region that contains bytes that have not been locked results in a `DOMAIN ERROR`. On other platforms, the operating system allows this, and no error is signalled.
 - A `LIMIT ERROR` results if the operating system lock daemon has insufficient resources to honour the locking request.
 - Some systems support only write locks. In this case an attempt to set a read lock will generate a `DOMAIN ERROR`, and it may be appropriate for the APL programmer to trap the error and apply a write lock.
 - No attempt will be made to detect deadlock. Some servers do this and if such a condition is detected, a `DEADLOCK` error (1008) will be reported.

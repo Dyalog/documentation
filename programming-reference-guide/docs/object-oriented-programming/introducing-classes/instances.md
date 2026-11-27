@@ -1,6 +1,6 @@
 # Instances
 
-A Class is generally used as a blueprint or model from which one or more Instances of the Class are constructed. Note however that a class can have Shared members which can be used directly without first creating an instance.
+A Class is generally used as a blueprint or model from which one or more Instances of the Class are constructed. However, a class can have Shared members which can be used directly without first creating an instance.
 
 You create an instance of a Class using the `⎕NEW` system function which is monadic.
 

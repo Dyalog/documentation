@@ -1,7 +1,5 @@
 # <span>DockAccept</span> <span>Event 483</span>
 
-**Description**
-
 If enabled, this event is reported by a host object just before it accepts a client object docking operation. This event is reported (by the host) immediately after the [DockRequest](./dockrequest.md) is reported (by the client).
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 7-element vector as follows :
@@ -17,6 +15,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 
 Elements 4-7 of this event message are the same as those reported by [DockMove](./dockmove.md), and the effect of a callback function is identical. See [DockMove](./dockmove.md) for further information.
 
-**Application**
+## Application
 
 Objects: [CoolBand](../objects/coolband.md), [CoolBar](../objects/coolbar.md), [Form](../objects/form.md), [SubForm](../objects/subform.md), [ToolControl](../objects/toolcontrol.md)

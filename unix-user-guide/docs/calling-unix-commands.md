@@ -1,6 +1,6 @@
 # `⎕SH`, exit codes and stderr
 
-Note that `⎕SH` calls /bin/sh; this cannot be altered.
+`⎕SH` calls /bin/sh; this cannot be altered.
 
 If the command, or command pipe issued using `⎕SH` exits with a non-zero exit code, then `⎕SH` will terminate with a `DOMAIN ERROR`, and all output from the command will be lost. To avoid this, add an exit 0 to the end of the command string, and the `DOMAIN ERROR` will be suppressed. However, this technique does require that some other method is used to determine that the command pipe failed.
         Example:

@@ -2,7 +2,7 @@
 
 A number of bug fixes implemented in Version {{ version_majmin }} may change the way that existing code operates and are therefore documented in this section.
 
-- When **APL_COMPLEX_AS_V12** is set, the circular functions `(X○Y)` with `(|X)>7`, generate `DOMAIN ERROR` if the result would be complex.
+- When **APL_COMPLEX_AS_V12** is set, the _circular functions_ `(X○Y)` with `(|X)>7`, generate `DOMAIN ERROR` if the result would be complex.
 - Previously, if GetTextSize was given an invalid font name it would use the default for the window that the method was invoked in. Now, invalid font names correctly generate `DOMAIN ERROR`.
 - `⎕FMT` using the `E` qualifier now behaves as intended.
 ```apl

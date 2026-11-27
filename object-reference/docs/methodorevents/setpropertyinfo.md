@@ -1,7 +1,5 @@
 # <span>SetPropertyInfo</span> <span>Method 554</span>
 
-**Description**
-
 This method is used to redefine a property that is exported by a COM object. SetPropertyInfo is used to override the information provided by the object's Type Library.
 
 The argument to SetPropertyInfo is a  2 or 3-element array as follows:
@@ -25,6 +23,6 @@ For example, the following statement declares the PropertyGet function for the I
       Fields.SetPropertyInfo 'Item'('VT_DISPATCH' 'VT_I4')2
 ```
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

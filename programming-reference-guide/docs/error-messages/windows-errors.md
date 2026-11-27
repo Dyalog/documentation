@@ -1,6 +1,6 @@
 # Windows Operating System Error Messages
 
-Table: Windows Operating System Messages {: #WindowsErrorMessages }
+Table: Windows Operating System Messages { #WindowsErrorMessages }
 
 |Error Code|Report                                       |
 |----------|---------------------------------------------|

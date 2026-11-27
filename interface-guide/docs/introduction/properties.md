@@ -46,7 +46,7 @@ Normal namespace path rules apply, so the following are all equivalent:
       :EndWith
 ```
 
-Notice however, that used directly in this way, Property names are case-sensitive. The following expressions assign values to *variables* in F and have no effect on the Caption property.
+However, used directly in this way, Property names are case-sensitive. The following expressions assign values to *variables* in F and have no effect on the Caption property.
 ```apl
       F.caption←'Hello World'
       F.CAPTION←'Hello World'
@@ -114,9 +114,9 @@ The third and fourth properties are (usually) Posn, which specifies the position
 
 ## Changing Property Values with `⎕WS`
 
-Once you have created an object using `⎕WC`, you are free to alter most of its properties using `⎕WS`. However in general, those properties that define the overall structure of an object's window cannot be altered using `⎕WS`. Such *immutable* properties include Type and (for some objects) Style. Note that if you find that you do need to alter one of these properties dynamically, it is a simple matter to recreate the object with `⎕WC`.
+Once you have created an object using `⎕WC`, you are free to alter most of its properties using `⎕WS`. However in general, those properties that define the overall structure of an object's window cannot be altered using `⎕WS`. Such *immutable* properties include Type and (for some objects) Style. If you find that you do need to alter one of these properties dynamically, it is a simple matter to recreate the object with `⎕WC`.
 
-The syntax for `⎕WS` is identical to that of `⎕WC`. The following examples illustrate how the properties of a Button can be altered dynamically. Note that you can use `⎕WS` in a callback function to change the properties of any object, including the one that generated the event.
+The syntax for `⎕WS` is identical to that of `⎕WC`. The following examples illustrate how the properties of a Button can be altered dynamically. You can use `⎕WS` in a callback function to change the properties of any object, including the one that generated the event.
 
 Create "OK" button at (10,10) that calls `FOO` when pressed
 ```apl
@@ -128,7 +128,9 @@ Some time later, change caption and size
  'form.b1' ⎕WS ('Caption' 'Yes') ('Size' 20 15)
 ```
 
-Note that if the right argument to `⎕WS` specifies a single property, it is not necessary to enclose it. How the Property List is Processed
+If the right argument to `⎕WS` specifies a single property, it is not necessary to enclose it.
+
+## How the Property List is Processed
 
 The system is designed to give you as much flexibility as possible in specifying property values. You should find that any "reasonable" specification will be accepted. However, you may find the following explanation of how the right argument of `⎕WC` and `⎕WS` is parsed, useful. **The casual reader may wish to skip this page**.
 
@@ -181,7 +183,7 @@ For example, either of the following statements will associate the callback func
       'F1'⎕WS 'Event' 22 'CHECK_KEY'
 ```
 
-Note that by default, all events are processed automatically by APL, and may be ignored by your application unless you want to take a specific action. Thus, for example, you don't have to handle Configure events when the user resizes your Form; you can just let APL handle them for you.
+By default, all events are processed automatically by APL, and can be ignored by your application unless you want to take a specific action. Thus, for example, you don't have to handle Configure events when the user resizes your Form; you can just let APL handle them for you.
 
 Before looking further into events, it is necessary to describe how control is passed to the user, and to introduce the concept of the *event queue*.
 

@@ -1,7 +1,5 @@
 # <span>GridLineWidth</span> <span>Property</span>
 
-**Description**
-
 The GridLineWidth property specifies the widths in pixels of the grid lines in a [Grid](../objects/grid.md) object.
 
 GridLineWidth may be an integer scalar or a vector. Its default value is an empty numeric vector (`⍬`). If so, grid lines are drawn 1-pixel wide.
@@ -14,6 +12,6 @@ Elements of GridLineWidth are allocated to individual grid lines via the [RowLin
 
 See also: [GridLineFCol](gridlinefcol.md).
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

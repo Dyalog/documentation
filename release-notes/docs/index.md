@@ -12,7 +12,7 @@ Key enhancements in Dyalog v21.0 include the following:
 - `⎕DT` has been extended to validate and parse text-format datetimes. It now also includes formatting features prototyped as `1200⌶`.
 - `⎕SYSTEM` provides information about Dyalog and the environment, including the operating system, important library versions, and the current/initial/temporary directories.
 - .NET generics are now fully supported for both .NET and .NET Framework, enabling the creation and instantiation of concrete versions of generic classes and calling of generic methods.
-- A complete Software Bill of Materials is now included, making it easier to document files that are included when redistributing solutions built on Dyalog.
+- A complete [Software Bill of Materials](https://en.wikipedia.org/wiki/Software_supply_chain) is now included.
 
 For more information on these and other changes introduced in Dyalog v21.0, see [New and Enhanced Features](new-enhanced.md).
 	
@@ -27,9 +27,9 @@ Some of the tools that are supplied with Dyalog or can be downloaded separately 
 - Link v4.2
     - GitHub repository – [https://github.com/Dyalog/link](https://github.com/Dyalog/link/)
 	- Documentation – [https://dyalog.github.io/link/4.2](https://dyalog.github.io/link/4.2/)
-- Ride v4.6
+- Ride v4.7
     - GitHub repository – [https://github.com/Dyalog/ride](https://github.com/Dyalog/ride/)
-	- Documentation – [https://dyalog.github.io/ride/4.6](https://dyalog.github.io/ride/4.6/)
+	- Documentation – [https://dyalog.github.io/ride/](https://dyalog.github.io/ride/4.7/)
 - SALT v2.9
 - SQAPL v6.7
 - User Commands v2.8
@@ -37,4 +37,4 @@ Some of the tools that are supplied with Dyalog or can be downloaded separately 
 Changes to tools are not included within these Release Notes.
 
 !!! Info "Information"
-     It is not necessary to keep tool versions synchronised with the interpreter version, but doing so will provide the optimal experience.
+     It is not necessary to keep tool versions synchronised with the interpreter version, but doing so is recommended.

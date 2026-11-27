@@ -5,7 +5,7 @@ search:
 
 # <span>Constant</span> `R←{X}(A⍨)Y`{{key}}
 
-`A`,  `X` and `Y` are arrays. The Constant operator returns array `A`.
+`A`,  `X` and `Y` are arrays. The _constant_ operator returns array `A`.
 
 <h2 class="example">Examples</h2>
 ```apl

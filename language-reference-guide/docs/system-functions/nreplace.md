@@ -18,14 +18,14 @@ search:
 
 See [Native File Read](nread.md) for a list of valid conversion codes.
 
-The shy result is the location of the internal file pointer which will be pointing to the end of the newly written data. Used, for example, in:
+The [shy](../../programming-reference-guide/introduction/results.md#shy-results) result is the location of the internal file pointer which will be pointing to the end of the newly written data. Used, for example, in:
 ```apl
 
       ⍝ Replace sequentially from indx.
       {⍺ ⎕NREPLACE tie ⍵}/vec,indx 
 ```
 
-Note that `8 ⎕NINFO ⊃Y`  can be used to report the current position of the file pointer.
+`8 ⎕NINFO ⊃Y` can be used to report the current position of the file pointer.
 
 ## Unicode Edition
 

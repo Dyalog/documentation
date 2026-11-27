@@ -9,7 +9,7 @@ on:
         default: ''
         type: string
       set_as_latest:
-        description: 'Set this version as the default/latest'
+        description: 'Set this version as the default/latest on staging (GitHub Pages). No effect on docs.dyalog.com'
         required: false
         default: false
         type: boolean
@@ -124,13 +124,12 @@ jobs:
         git fetch origin main
         git checkout -- mkdocs.yml
         git checkout gh-pages
-        git checkout origin/main -- tools/jenkins/Jenkinsfile tools/jenkins/service.yml tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
+        git checkout origin/main -- tools/jenkins/Jenkinsfile tools/jenkins/.rsync-exclude tools/jenkins/get_svn_docbin
         mv tools/jenkins/Jenkinsfile .
-        mv tools/jenkins/service.yml .
         mv tools/jenkins/.rsync-exclude .
         mv tools/jenkins/get_svn_docbin .
         git rm -r tools 2>/dev/null || true
-        git add Jenkinsfile service.yml .rsync-exclude get_svn_docbin
+        git add Jenkinsfile .rsync-exclude get_svn_docbin
         if git diff --staged --quiet; then
           echo "No changes to Jenkins files"
         else

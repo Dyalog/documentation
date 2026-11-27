@@ -44,13 +44,13 @@ Using ScaledPixel coordinates, if you specify an Edit object to be 80 units wide
 
 ## Font Object
 
-The Font object has a Coord property which may be set to  `'Pixel'`, `'ScaledPixel'` or `'RealPixel'` when the object is created, but  may not subsequently be changed. Note that the Font object does not support other Coord values. `'Pixel'` is treated as `'ScaledPixel'` or `'RealPixel'` as discussed above.
+The Font object has a Coord property which can be set to `'Pixel'`, `'ScaledPixel'`, or `'RealPixel'` when the object is created, but cannot subsequently be changed. The Font object does not support other Coord values. `'Pixel'` is treated as `'ScaledPixel'` or `'RealPixel'` as discussed above.
 
 If you are using `'ScaledPixel'`, this means that your fonts will also be scaled up automatically, as well as the sizes of the controls in which they are used.
 
 ## Set Dyalog Pixel Type (`2035⌶`)
 
-This function provides the means to set the meaning of `Coord 'Pixel'` programmatically and dynamically. This function affects the way that Pixel coordinates are subsequently treated. For further information, see [Set Dyalog Pixel Type](../../../language-reference-guide/primitive-operators/i-beam/set-dyalog-pixel-type).
+This function provides the means to set the meaning of `Coord 'Pixel'` programmatically and dynamically. This function affects the way that Pixel coordinates are subsequently treated. For further information, see [Set Dyalog Pixel Type](../../language-reference-guide/primitive-operators/i-beam/set-dyalog-pixel-type.md).
 
 ## Enabling DWM Scaling
 
@@ -65,7 +65,7 @@ dyalogrt.exe myruntime.dws AUTODPI=0
 
 This will prevent Dyalog from registering your application as DPI-Aware in start-up.
 
-Another way to enable DWM scaling is to use a manifest file. Note that if you disable DWM scaling for the development version of Dyalog APL, the appearance of the Session window may be imperfect.
+Another way to enable DWM scaling is to use a manifest file. If you disable DWM scaling for the development version of Dyalog, the appearance of the Session window might be imperfect.
 
 ### Using a Manifest
 

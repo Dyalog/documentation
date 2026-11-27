@@ -1,7 +1,5 @@
 # <span>CBits</span> <span>Property</span>
 
-**Description**
-
 The CBits property represents the pixels that make up a picture..
 
 CBits provides an alternative representation to that provided by the [Bits](bits.md) and [CMap](cmap.md) properties which apply only to images with 256 colours or under. CBits may be used to represent both low-colour and high-colour images.
@@ -15,6 +13,6 @@ For a [Bitmap](../objects/bitmap.md), the colour value of each pixel is obtained
 
 where `RED`, `GREEN` and `BLUE` are numbers in the range 0-255.
 
-**Application**
+## Application
 
 Objects: [Bitmap](../objects/bitmap.md), [Clipboard](../objects/clipboard.md), [Icon](../objects/icon.md)

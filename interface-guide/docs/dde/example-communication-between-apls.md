@@ -30,7 +30,7 @@ Select the top window (SERVER) again and type:
 1 0 1 0
 ```
 
-Note that the result of `⎕SVS` indicates that the SERVER has set `A`, but the CLIENT has not yet referenced the value.
+The result of `⎕SVS` indicates that the SERVER has set `A`, but the CLIENT has not yet referenced the value.
 
 Select the lower window (CLIENT) and type:
 ```apl
@@ -42,7 +42,7 @@ Select the lower window (CLIENT) and type:
 0 0 1 1
 ```
 
-Note how, after referencing the shared variable, its state has changed.
+After referencing the shared variable, its state has changed.
 
 Still in the CLIENT workspace, write the following function called `FOO`:
 ```apl
@@ -64,6 +64,6 @@ Now switch to the upper window (SERVER) and type:
       A←⌹A
 ```
 
-Type this expression repeatedly, or experiment with others. Note how changing `A` generates a DDE event (event number 50) on the system object `'.'` in CLIENT, which in turn fires the callback.
+Type this expression repeatedly, or experiment with others. Changing `A` generates a DDE event (event number 50) on the system object `'.'` in CLIENT, which in turn fires the callback.
 
 To interrupt `⎕DQ` in the CLIENT, type Ctrl+Break or select "Interrupt" from the *Action* menu in the Session Window.

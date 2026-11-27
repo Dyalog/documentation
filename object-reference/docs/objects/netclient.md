@@ -1,10 +1,6 @@
 # <span>NetClient</span> <span>Object</span>
 
-**Purpose:** The NetClient object represents an instance of a Microsoft .NET class.
-
-**Description**
-
-The NetClient object represents an instance of a .NET class.
+The NetClient object represents an instance of a Microsoft .NET class.
 
 Normally, you create a NetClient object using the `New` method. For example:
 ```apl
@@ -22,7 +18,7 @@ If, for any reason, you are unable to use the `New` method, you may create a Net
  NetClient  System.DateTime  1949 4 30
 ```
 
-**Application**
+## Application
 
 Parents: [NetType](../objects/nettype.md), [Root](../objects/root.md)
 

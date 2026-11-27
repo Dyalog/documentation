@@ -1,0 +1,31 @@
+# Model Syntax
+
+A dfn is written as a sequence of one or more statements, separated by newlines or the diamond (`⋄`) character and enclosed in braces (`{}`). A dop takes the same form, and additionally refers to its operands. The arguments and operands are referred to by a fixed set of names rather than being declared in a header:
+
+| Name | Refers to |
+|------|-----------|
+| `⍵` | the right argument |
+| `⍺` | the left argument |
+| `⍺⍺` | the left operand (dops only) |
+| `⍵⍵` | the right operand (dops only) |
+| `∇` | the dfn itself, for recursion |
+| `∇∇` | the dop itself, for recursion |
+
+These names are described under [Arguments](arguments-and-operands.md).
+
+In its simplest form, a dfn is a single expression:
+```apl
+      {(+/⍵)÷≢⍵} 1 2 3 4
+2.5
+```
+
+A dfn is a value like any other function, so it can be named by ordinary assignment or used anonymously:
+```apl
+      mean←{(+/⍵)÷≢⍵}
+      mean 1 2 3 4
+2.5
+```
+
+A dfn is ambivalent, and its valence is not declared: its valence is inferred from whether the body refers to `⍺`, and whether the dfn is applied with one argument or two. When a dfn that refers to `⍺` is called monadically, `⍺` has no value until a statement beginning `⍺←` supplies a [default left argument](default-left-argument.md). Similarly, a dop is a monadic or dyadic operator according to whether it refers to `⍵⍵`.
+
+See [Statements](statements.md) for information on the layout of multi-line dfns and [Multi-line Dfns](multiline-dynamic-functions.md) for the role of each line within such statements.

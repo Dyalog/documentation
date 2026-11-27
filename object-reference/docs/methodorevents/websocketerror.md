@@ -1,7 +1,5 @@
 # <span>WebSocketError</span> <span>Event 844</span>
 
-**Description**
-
 This event is triggered an error occurs on the WebSocket.  It is for notification only.
 
 The event message reported as the result of `⎕DQ`, or supplied as the right argument to your callback function, is a 4-element vector as follows:
@@ -12,6 +10,6 @@ The event message reported as the result of `⎕DQ`, or supplied as the right ar
 |`[3]`|ID     |Character vector containing the ID of the WebSocket|
 |`[4]`|Message|The error message (character vector)               |
 
-**Application**
+## Application
 
 Objects: [HTMLRenderer](../objects/htmlrenderer.md)

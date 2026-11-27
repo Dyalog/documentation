@@ -16,7 +16,7 @@ If `X` is omitted, `R` is a 4-element vector or a 4 column matrix with the same 
 `R[1]` or `R[;1]`: Each item is a 3-element integer vector representing the function header syntax:
 
 |---|---|---|
-|1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a shy result|
+|1|Function result|0 if the function has no result 1 if the function has an explicit result `¯1` if the function has a [shy](../../programming-reference-guide/introduction/results.md#shy-results) result|
 |2|Function valence|0 if the object is a niladic function or not a function 1 if the object is a monadic function 2 if the object is a dyadic function `¯2` if the object is an ambivalent 				function|
 |3|Operator valence|0 if the object is not an operator 1 if the object is a monadic operator 2 if the object is a dyadic operator|
 
@@ -61,20 +61,21 @@ The following values correspond to the syntax shown alongside:
 ```apl
 
       ]Display ⎕AT 'myop' 'foo' 'util' 'util2'
-.→--------------------------------------------.
-↓ .→------. .→-----------------.     .→---.   |
-| |¯1 ¯2 1| |1996 8 2 2 13 56 0|   0 |john|   |
-| '~------' '~-----------------'     '----'   |
-| .→----.   .→------------.          .⊖.      |
-| |1 0 0|   |0 0 0 0 0 0 0|        3 | |      |
-| '~----'   '~------------'          '-'      |
-| .→-----.  .→------------------.    .→---.   |
-| |1 ¯2 0|  |1996 3 1 14 12 10 0|  0 |pete|   |
-| '~-----'  '~------------------'    '----'   |
-| .→-----.  .→-------------------.   .→-----. |
-| |1 ¯2 0|  |1998 8 26 16 16 42 0| 0 |graeme| |
-| '~-----'  '~-------------------'   '------' |
-'∊--------------------------------------------'
+┌→────────────────────────────────────────────┐
+↓ ┌→──────┐ ┌→───────────────────┐   ┌→───┐   │
+│ │¯1 ¯2 1│ │1996 8 2 2 13 56 0  │ 0 │john│   │
+│ └~──────┘ └~───────────────────┘   └────┘   │
+│ ┌→────┐   ┌→────────────┐          ┌⊖┐      │
+│ │1 0 0│   │0 0 0 0 0 0 0│        3 │ │      │
+│ └~────┘   └~────────────┘          └─┘      │
+│ ┌→─────┐  ┌→───────────────────┐   ┌→───┐   │
+│ │1 ¯2 0│  │1996 3 1 14 12 10 0 │ 0 │pete│   │
+│ └~─────┘  └~───────────────────┘   └────┘   │
+│ ┌→─────┐  ┌→───────────────────┐   ┌→─────┐ │
+│ │1 ¯2 0│  │1998 8 26 16 16 42 0│ 0 │graeme│ │
+│ └~─────┘  └~───────────────────┘   └──────┘ │
+└∊────────────────────────────────────────────┘
+
 ```
 ## Dyadic Use
 

@@ -1,7 +1,5 @@
 # <span>TCPRecv</span> <span>Event 373</span>
 
-**Description**
-
 If enabled, this event is reported when data is received by a [TCPSocket](../objects/tcpsocket.md) object.
 
 You may not disable or nullify the operation by setting the action code for
@@ -30,6 +28,6 @@ If the [SocketType](../properties/sockettype.md) is `'UDP'` and there is potenti
 and port number information provided by the TCPRecv event is more reliable than
 the current values of [RemoteAddr](../properties/remoteaddr.md) and [RemotePort](../properties/remoteport.md) as these may already have changed.
 
-**Application**
+## Application
 
 Objects: [TCPSocket](../objects/tcpsocket.md)

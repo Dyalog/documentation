@@ -17,7 +17,7 @@ For Boolean `X` and `Y`, the value of `R` is the exclusive or (XOR)  result, det
              1   1     0
 ```
 
-`⎕CT` and `⎕DCT` are  implicit arguments of Not Equal To.
+`⎕CT` and `⎕DCT` are  implicit arguments of _not equal to_.
 
 <h2 class="example">Examples</h2>
 ```apl

@@ -1,7 +1,5 @@
 # <span>AnimPlay</span> <span>Method 292</span>
 
-**Description**
-
 The AnimPlay method plays an AVI clip in an Animation object.
 
 The argument to AnimPlay is a 3-element array as follows:
@@ -19,6 +17,6 @@ The argument to AnimPlay is a 3-element array as follows:
 
 The last frame remains displayed until the clip is unloaded using [AnimClose](./animclose.md) or until another clip is loaded.
 
-**Application**
+## Application
 
 Objects: [Animation](../objects/animation.md)

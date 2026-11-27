@@ -2,7 +2,7 @@
 
 There follows a numerically sorted list of error messages emanating from a typical operating system and reported through Dyalog APL.
 
-Table: APL Error Messages {: #APLErrors }
+Table: APL Error Messages { #APLErrors }
 
 |Error Code|Report                                |
 |----------|--------------------------------------|

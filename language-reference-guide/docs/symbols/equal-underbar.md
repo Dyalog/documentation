@@ -18,7 +18,7 @@ Monadic Equal Underbar means
 ¯2
 ```
 
-Note: Result is always positive if `⎕ML` is greater than or equal to 2
+The result is always positive if `⎕ML` is greater than or equal to 2.
 
 Dyadic Equal Underbar means
 [Match](../primitive-functions/match.md)

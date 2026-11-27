@@ -14,9 +14,6 @@ theme:
 extra_css:
   - documentation-assets/css/main.css
   - documentation-assets/css/extra.css
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - privacy
   - search
@@ -38,8 +35,6 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.highlight:
       use_pygments: false
       pygments_lang_class: true

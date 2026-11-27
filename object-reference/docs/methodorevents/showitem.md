@@ -1,7 +1,5 @@
 # <span>ShowItem</span> <span>Method 316</span>
 
-**Description**
-
 This method is used to display a particular item in a [TreeView](../objects/treeview.md) object.
 
 The argument to ShowItem is a single item as follows:
@@ -13,6 +11,6 @@ The argument to ShowItem is a single item as follows:
 
 In order to display the requested item, the parent item (if any) will be opened and the object will be scrolled if necessary.
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

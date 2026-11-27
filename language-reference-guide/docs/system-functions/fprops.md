@@ -33,7 +33,7 @@ The default properties for a newly created file are as follows:
 - Z = 0
 - E depends upon the computer architecture.
 
-Note that the defaults for C and J can be overridden by calling `⎕FCREATE` via the Variant operator `⍠`. For further information, see [File Properties](fcreate.md).
+The defaults for C and J can be overridden by calling `⎕FCREATE` using the _variant_ operator `⍠`. For further information, see [File Properties](fcreate.md).
 
 # Journaling Levels
 
@@ -47,11 +47,11 @@ Enabling journaling on a component file will reduce performance of file updates;
 
 Journaling levels 2 and 3 cannot be set unless the checksum option is also enabled.
 
-The default level of journaling may be changed using the **APL_FCREATE_PROPS_J** parameter (see *Dyalog for Microsoft Windows Installation and Configuration Guide: Configuration Parameters* for more information).
+The default level of journaling can be changed using the [**APL_FCREATE_PROPS_J**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-j.md) configuration parameter.
 
 ## Checksum Option
 
-The checksum option is enabled by default. This  enables a damaged file to be repaired using `⎕FCHK`. It will however  reduce the performance of file updates slightly and result in larger component files. The default may be changed using the **APL_FCREATE_PROPS_C** parameter (See User Guide).
+The checksum option is enabled by default. This enables a damaged file to be repaired using `⎕FCHK`. It will, however, reduce the performance of file updates slightly and result in larger component files. The default can be changed using the [**APL_FCREATE_PROPS_C**](../../windows-installation-and-configuration-guide/configuration-parameters/apl-fcreate-props-c.md) configuration parameter.
 
 Enabling the checksum option on an existing non-empty component file will result in all previously written components without a checksum  being check-summed and converted. This operation which will take place when `⎕FPROPS` is changed, may not therefore be instantaneous.
 
@@ -73,7 +73,7 @@ The following expression disables Unicode and switches Journaling on. The functi
 1 0
 ```
 
-Note that to set the value of just a single property, the following two statements are equivalent:
+To set the value of just a single property, the following two statements are equivalent:
 ```apl
 
       'J' 1 ⎕FPROPS tn
@@ -108,7 +108,7 @@ Compression is intended to deliver a performance gain reading and writing large 
 
 The default for the `'Z'` property is 0 which means no compression; 1 means compression. When written, components are compressed or not according to the current value of the `'Z'` property. Changing this property does not change any components already in the file.
 
-A component file may therefore contain a mixture of normal and compressed components. Note that only the data in file components are compressed, the file access matrix and other header information is not compressed.
+A component file can, therefore, contain a mixture of normal and compressed components. Only the data in file components are compressed; the file access matrix and other header information is not compressed.
 
 When read, compressed components are decompressed regardless of the value of the `'Z'` property.
 

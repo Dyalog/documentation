@@ -26,7 +26,10 @@ COMCTL32.DLL also contains individual bitmaps in resources 132-134.
 
 ## Dyalog Bitmap Resources
 
-Another three sets of useful bitmaps are to be found in the DyaRes DLL file. These bitmaps are used in the Dyalog APL/W Session tool buttons. Note that if you include these bitmaps in a run-time application, you will have to ship DyaRes DLL with it.
+Another three sets of useful bitmaps are to be found in the DyaRes DLL file. These bitmaps are used in the Dyalog APL/W Session tool buttons.
+
+!!! Info "Information"
+    If you include these bitmaps in a run-time application, you will have to ship DyaRes DLL with it.
 
 The *normal* set of bitmaps associated with the Session buttons may be created using the statement:
 
@@ -50,7 +53,7 @@ The bitmaps used when the buttons are *inactive* may be created using the statem
 
 ![](../img/tb-inactive-bitmaps.bmp)
 
-Note that in the Dyalog Session, if Native Look and Feel is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles. For further information, see [Native Look and Feel](../introduction/native-look-and-feel.md).
+In the Dyalog Session, if [Native Look and Feel](../introduction/native-look-and-feel.md) is enabled, these bitmaps are overridden by a single set of images designed to operate with the user's chosen theme and Visual Styles.
 
 ## Creating ImageLists for ToolButtons
 
@@ -64,7 +67,7 @@ When you create each ToolButton you specify its ImageIndex property, selecting u
 
 If you specify only a single ImageList, the picture on the ToolButton will be the same in all three cases. However, the appearance of the buttons themselves change when the button is highlighted or pressed, and in many situations this may be sufficient behaviour.
 
-The following example illustrates how a simple ToolControl can be constructed using standard Windows bitmaps. Notice that the Masked property of the ImageList is set to 0; this is necessary if the ImageList is to contain bitmaps, as opposed to icons. Secondly, because the bitmaps are in this case size 16 x 16, it is unnecessary to specify the Size property of the ImageList which is, by default, also 16 x 16.
+The following example illustrates how a simple ToolControl can be constructed using standard Windows bitmaps. The Masked property of the ImageList is set to 0; this is necessary if the ImageList is to contain bitmaps, as opposed to icons. Secondly, because the bitmaps are in this case size 16 x 16, it is unnecessary to specify the Size property of the ImageList which is, by default, also 16 x 16.
 ```apl
 'F'⎕WC'Form' 'ToolControl'('Size' 10 40)
 'F.TB'⎕WC'ToolControl'
@@ -82,7 +85,7 @@ The following example illustrates how a simple ToolControl can be constructed us
 
 The overall appearance of the ToolButton objects displayed by the ToolControl is defined by the Style property of the ToolControl itself, rather than by properties of individual ToolButtons.
 
-Note that the Style property may only be set when the ToolControl is created using `⎕WC` and may not subsequently be changed using `⎕WS`.
+The Style property can only be set when the ToolControl is created using `⎕WC` and cannot subsequently be changed using `⎕WS`.
 
 Style may be `'FlatButtons'`, `'Buttons'`, `'List'` or `'FlatList'`. The default Style is of a ToolControl is `'FlatButtons'`, as is the first example above. The following examples illustrate the other three styles:
 
@@ -104,7 +107,7 @@ The MultiLine property specifies whether or not ToolButtons (and other child con
 
 If MultiLine is 0 (the default), the ToolControl object *clips* its children and the user must resize the Form to bring more objects into view.
 
-Note that you may change MultiLine dynamically, using `⎕WS`.
+You can change MultiLine dynamically, using `⎕WS`:
 ```apl
 'F'⎕WC'Form' 'ToolControl: MultiLine 0'
 'F.TB'⎕WC'ToolControl'('Style' 'List')
@@ -129,7 +132,7 @@ If we set MultiLine to 1, the ToolButtons are instead displayed in several rows:
 
 ## The Transparent Property
 
-The Transparent property (default 0) specifies whether or not the ToolControl is transparent. Note that Transparent must be set when the object is created using `⎕WC` and may not subsequently be changed using `⎕WS`.
+The Transparent property (default 0) specifies whether or not the ToolControl is transparent. Transparent must be set when the object is created using `⎕WC` and cannot subsequently be changed using `⎕WS`.
 
 If a ToolControl is created with Transparent set to 1, the visual effect is as if the ToolButtons (and other controls) were drawn directly on the parent Form as shown below.
 ```apl
@@ -158,7 +161,7 @@ The Style property of a ToolButton may be `'Push'`, `'Check'`, `'Radio'`, `'Sepa
 
 *Radio* and *Check* buttons are used to select options and have two states, normal (out) and selected (in). Their State property is 0 when the button is in its normal (unselected state) or 1 when it is selected.
 
-A group of adjacent ToolButtons with Style `'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. Note that a group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another Style.
+A group of adjacent ToolButtons with Style `'Radio'` defines a set in which only one of the ToolButtons may be selected at any one time. The act of selecting one will automatically deselect any other. A group of Radio buttons must be separated from Check buttons or other groups of Radio buttons by ToolButtons of another Style.
 
 Separator buttons are a special case as they have no Caption or picture, but appear as a thin vertical grooves that are used only to separate groups of buttons.
 
@@ -185,7 +188,7 @@ The following example illustrates how two groups of radio buttons are establishe
 
 ![](../img/toolcontrol-radio-buttons.png)
 
-Notice that the appearance of the Separator ToolButton is less obvious when the ToolControl Style is Buttons or List, but the radio grouping effect is the same:
+The appearance of the Separator ToolButton is less obvious when the ToolControl Style is Buttons or List, but the radio grouping effect is the same:
 
 ![](../img/toolcontrol-list-radio-buttons.png)
 

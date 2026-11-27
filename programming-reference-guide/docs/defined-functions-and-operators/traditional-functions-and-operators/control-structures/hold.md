@@ -6,7 +6,7 @@
 
 Whenever more than one thread tries to access the same piece of data or shared resource at the same time, you need some type of synchronisation to control access to that data. This is provided by `:Hold`.
 
-`:Hold` provides a mechanism to control thread entry into a critical section of code. `tkns` must be a simple character vector or scalar, or a vector of character vectors. `tkns` represents a set of "tokens", all of which must be acquired before the thread can continue into the control structure. `:Hold` is analogous to the component file system `⎕FHOLD` which is used to synchronise access between **processes**. See also [File Hold](../../../../../earlier-release-notes/release-notes-v19-0/language-reference-changes/fhold).
+`:Hold` provides a mechanism to control thread entry into a critical section of code. `tkns` must be a simple character vector or scalar, or a vector of character vectors. `tkns` represents a set of "tokens", all of which must be acquired before the thread can continue into the control structure. `:Hold` is analogous to the component file system `⎕FHOLD` which is used to synchronise access between **processes**. See also [File Hold](../../../../earlier-release-notes/release-notes-v19-0/language-reference-changes/fhold.md).
 
 Within the whole active workspace, a token with a particular value may be held only once. If the hold succeeds, the current thread *acquires* the tokens and execution continues with the first phrase in the control structure. On exit from the structure, the tokens are released for use by other threads. If the hold fails, because one or more of the tokens is already in use:
 
@@ -64,7 +64,7 @@ If this deadlock situation is detected acquisition of the tokens is abandoned. T
 
 You can avoid deadlock by ensuring that threads always attempt to acquire tokens in the same chronological order, and that threads never attempt to acquire tokens that they already own.
 
-Note that token acquisition for any particular `:Hold` is atomic, that is, either *all* of the tokens or *none* of them are acquired. The following example *cannot* deadlock:
+Token acquisition for any particular `:Hold` is atomic, that is, either *all* of the tokens or *none* of them are acquired. The following example *cannot* deadlock:
 
 |Thread 1                                                                           |Thread 2                                              |
 |-----------------------------------------------------------------------------------|------------------------------------------------------|
@@ -114,7 +114,7 @@ or,
     tie←fname ⎕FSTIE 0
 ```
 
-Note that `:Hold`, like its component file system counterpart `⎕FHOLD`, is a device to enable *co-operating* threads to synchronise their operation.
+`:Hold`, like its component file system counterpart `⎕FHOLD`, is a device to enable *co-operating* threads to synchronise their operation.
 
 `:Hold` does not *prevent* threads from updating the same data structures concurrently, it prevents threads only from `:Hold`ing the same tokens.
 
@@ -126,4 +126,4 @@ Note that `:Hold`, like its component file system counterpart `⎕FHOLD`, is a d
  DOMAIN ERROR: Cannot :Hold within high priority callback
 ```
 
-See [High-Priority Callback Functions](../../../../../interface-guide/introduction/high-priority-callbacks).
+See [High-Priority Callback Functions](../../../../interface-guide/introduction/high-priority-callbacks.md).

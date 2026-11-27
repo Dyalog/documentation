@@ -1,7 +1,5 @@
 # <span>InputMode</span> <span>Property</span>
 
-**Description**
-
 This property determines editing behaviour and the action of the cursor movement keys when the user changes the contents of a Grid using a *floating*[ Edit](../objects/edit.md) or DropEdit [Combo](../objects/combo.md) control.
 
 InputMode is a character vector with one of the following values:
@@ -27,6 +25,6 @@ If the user presses F2 (or the key defined by the [InputModeKey](inputmodekey.md
 
 In either case, the left and right cursor keys now move the cursor within the current data string, but skip to the adjacent cell from the beginning or end of the data. This behaviour differs from *InCell* mode in which the cursor movement keys *stick* at the end of the data.
 
-**Application**
+## Application
 
 Objects: [Grid](../objects/grid.md)

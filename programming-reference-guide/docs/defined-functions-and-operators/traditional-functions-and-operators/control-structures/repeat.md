@@ -4,7 +4,7 @@
 
 [Formal Definition](repeat-statement-definition.md){: .noprint }
 
-The simplest type of `:Repeat` loop is as follows.  This example executes lines `[3-5]` 100 times.  Notice that as there is no conditional test at the beginning of a `:Repeat` structure, its code statements are executed at least once.
+The simplest type of `:Repeat` loop is as follows.  This example executes lines `[3-5]` 100 times. As there is no conditional test at the beginning of a `:Repeat` structure, its code statements are executed at least once.
 ```apl
 [1]   I←0
 [2]   :Repeat

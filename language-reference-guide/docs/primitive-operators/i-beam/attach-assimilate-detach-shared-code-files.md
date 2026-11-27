@@ -8,7 +8,7 @@ search:
 
 **Restriction**: 64-bit Unicode only
 
-The value of `Y` specifies whether this attaches, assimilates, or detaches [shared code files](../../../../shared-code-files-user-guide/).
+The value of `Y` specifies whether this attaches, assimilates, or detaches [shared code files](../../../shared-code-files-user-guide/index.md).
 
 ## Attach Shared Code Files
 

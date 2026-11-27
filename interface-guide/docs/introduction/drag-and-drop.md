@@ -11,6 +11,6 @@ When the user drops an object, the default processing for the event is:
 1. If the object is dropped over its parent, it is moved to the new location.
 2. If the object is dropped over an object other than its parent, the dragged object remains where it is.
 
-If you enable the DragDrop event (11) on all eligible objects, you can control what happens explicitly. If an object is dropped onto a new parent, you can move it by first deleting it and then recreating it. Note that you must give it a new name to reflect its new parentage. Note too that the DragDrop event reports co-ordinates relative to the object being dropped **on**, so it is easy to rebuild the object in the correct position and with the correct size.
+If you enable the DragDrop event (11) on all eligible objects, you can control what happens explicitly. If an object is dropped onto a new parent, you can move it by first deleting it and then recreating it. You must give it a new name to reflect its new parentage. The DragDrop event reports co-ordinates relative to the object being dropped **on**, so it is easy to rebuild the object in the correct position and with the correct size.
 
 An alternative to using the built-in drag/drop operation is to do it yourself with the Locator object. This is no less efficient and has the advantage that you can choose which mouse button you use. It can also be used to move a group of objects. However, the Locator only supports a rectangular or elliptical outline.

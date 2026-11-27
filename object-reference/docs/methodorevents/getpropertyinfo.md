@@ -1,7 +1,5 @@
 # <span>GetPropertyInfo</span> <span>Method 550</span>
 
-**Description**
-
 This method is used to obtain information about a particular property or set of properties supported by a COM object.
 
 For each property supported by a COM object, the author will have registered the property name, its data type, and an optional help message or description of the property. GetPropertyInfo returns this information.
@@ -35,6 +33,6 @@ The result is a nested vector with one element per property name. Each element o
 
 If the data type of a property is VT_USERDEFINED, it means that the property may assume one of a set of values defined by a type list. In this case, the name of the type list is returned in place of the string "VT_USERDEFINED". Further information can be obtained using [GetTypeInfo](gettypeinfo.md) with this name as a parameter.
 
-**Application**
+## Application
 
 Objects: [OCXClass](../objects/ocxclass.md), [OLEClient](../objects/oleclient.md)

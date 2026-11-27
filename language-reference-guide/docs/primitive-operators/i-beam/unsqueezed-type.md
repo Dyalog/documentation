@@ -8,18 +8,22 @@ search:
 
 `Y` is any array.
 
-The result `R` is an integer scalar containing an integer value which indicates the type of the array.
- For further information see [Data Representation (Monadic)](../../system-functions/data-representation-monadic.md).
+The result `R` is an integer scalar that indicates the type in which `Y` is stored, using the values listed for [monadic `⎕DR`](../../system-functions/data-representation-monadic.md).
 
-`181⌶` is functionally identical to monadic `⎕DR`, except that no attempt is made to squeeze the data into smaller data types. `⎕DR` always attempts to squeeze the data; `181⌶` does not, but if a workspace compaction occurs during execution of `181⌶`, the data may still be squeezed before the type is identified.
+`181⌶` is identical to monadic `⎕DR`, except that it does not squeeze `Y` into a smaller internal representation. Monadic `⎕DR` squeezes `Y` unless `Y` is data converted by [dyadic `⎕DR`](../../system-functions/data-representation-dyadic.md) to which no function that changes it has been applied. If a workspace compaction occurs during the execution of `181⌶`, then `Y` can still be squeezed before its type is identified.
 
-<h2 class="example">Example</h2>
+<h2 class="example">Examples</h2>
 ```apl
-
       ⎕DR 1↑1 1000
-11
-      (181⌶) 1↑1 1000
+83
+      181⌶ 1↑1 1000
 163
+
+      v←645 ⎕DR 64⍴0
+      ⎕DR ⍪v
+83
+      181⌶ ⍪v
+645
 ```
 
 <!-- Hidden search keywords -->

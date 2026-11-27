@@ -6,8 +6,8 @@ search:
 
 # <span>Update DataTable</span> `R←{X}2010⌶Y`{{key}}
 
-!!! note
-    **.NET Framework only**
+!!! Info "Information"
+    This function is available only in the .NET Framework interface.
 
 This function performs a *block update* of an instance of the ADO.NET object System.Data.DataTable. This object may only be updated using an explicit row-wise loop, which is slow at the APL level. `2010⌶` implements an *internal* row-wise loop which is much faster on large arrays. Furthermore, the function handles NULL values and the conversion of internal APL data to the appropriate .NET datatype in a more efficient manner than can be otherwise achieved. These 3 factors together mean that the function provides a significant improvement in performance compared to calling the row-wise programming interface directly at the APL level.
 
@@ -109,14 +109,10 @@ Sometimes, you may have read a very large number of rows from a DataTable, but o
       SetDT dt (1 4⍴'one' 'odd' 1 DateTime.Now) ⍬ 0
 ```
 
-!!! note
-    - `Y[2]` must be provided as a matrix, even if you only want to update a single row, 
-    - `Y[4]` specifies row indices using zero origin (the first row has number 0).
-    - `Y[2]` must be provided as a matrix, even if you only want to update a single row, 
-    - `Y[4]` specifies row indices using zero origin (the first row has number 0).
+`Y[2]` must be provided as a matrix, even if you only want to update a single row, and `Y[4]` specifies row indices using zero origin (the first row has number 0).
 
-!!! warning
-    If you are experimenting with writing to a DataTable, note that you should call `dt.Rows.Clear` each time to clear the current contents of the table. Otherwise you will end up with a very large number of rows after a while.
+!!! Hint "Hints and Recommendations"
+    If you are experimenting with writing to a DataTable, you should call `dt.Rows.Clear` each time to clear the current contents of the table. Otherwise you will end up with a very large number of rows after a while.
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

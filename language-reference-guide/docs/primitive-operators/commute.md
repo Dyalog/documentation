@@ -37,7 +37,7 @@ The following statements are equivalent:
       F←I/F
 ```
 
-Commute often eliminates the need for parentheses
+_Commute_ often eliminates the need for parentheses
 
 <!-- Hidden search keywords -->
 <div style="display: none;">

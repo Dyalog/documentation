@@ -17,7 +17,7 @@ The [GolfService](golfservice-example-class.md) constructor takes the name of a 
 #.[Instance of GolfService]
 ```
 
-The [GetCourses](getcourses-method.md){: .noprint } method returns an array of Instances of the internal (nested) Class [GolfCourse](golfcourse-class.md){: .noprint }. Notice how the display form of each Instance is established by the [GolfCourse](golfcourse-class.md){: .noprint } constructor, to obtain the output display shown below.
+The [GetCourses](getcourses-method.md){: .noprint } method returns an array of Instances of the internal (nested) Class [GolfCourse](golfcourse-class.md){: .noprint }. The display form of each Instance is established by the [GolfCourse](golfcourse-class.md){: .noprint } constructor, to obtain the output display shown below.
 ```apl
       G.GetCourses
  St Andrews(1)  Hindhead(2)  Basingstoke(3) 

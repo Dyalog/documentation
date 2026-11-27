@@ -11,7 +11,7 @@ $ strings -a -n 14 core | grep "BuildID="
 
 Additionally, the BuildID is included in the "Interesting Information" section of aplcore files provided that the environment variable APL_TEXTINAPLCORE is set to 1.
 
-The BuildID can be identified both from within the interpreter (using the GetBuildID method), and also from the BuildID executable which is supplied with the product on UNIX.
+The BuildID can be identified both from within the interpreter (using the GetBuildID method), and also from the BuildID executable which is supplied with the product on Unix.
 
 Both of these methods can be used for any file; they are useful and very fast ways of keeping track of workspaces versions etc. although md5sum and others may be more appropriate.
 

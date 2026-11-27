@@ -1,7 +1,5 @@
 # <span>DeleteChildren</span> <span>Method 311</span>
 
-**Description**
-
 This method is used to delete child items from a parent item in a [TreeView](../objects/treeview.md) object.
 
 The argument to DeleteChildren is a scalar or 1 element array as follows:
@@ -13,6 +11,6 @@ The argument to DeleteChildren is a scalar or 1 element array as follows:
 
 The result is an integer that indicates the number of children that have been removed from the parent item.
 
-**Application**
+## Application
 
 Objects: [TreeView](../objects/treeview.md)

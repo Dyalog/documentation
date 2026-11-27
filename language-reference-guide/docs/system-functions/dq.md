@@ -9,7 +9,7 @@ search:
 
 `⎕DQ` awaits and processes events.  `Y` specifies the GUI objects(s) for which events are to be processed.  Objects are identified by their names, as character scalars/vectors, or by namespace references. These may be objects of type Root, Form, Locator, FileBox, MsgBox, PropertySheet, TCPSocket, Timer, Clipboard and pop-up Menu. Sub-objects (children) of those named in `Y` are also included.  However, any objects which exist, but are not named in `Y`, are effectively disabled (do not respond to the user).
 
-If `Y` is `#`, `'#'`, or `'.'`, all objects currently owned and subsequently created by the current thread are included in the `⎕DQ`. Note that because the Root object is owned by thread 0, events on Root are reported only to thread 0.
+If `Y` is `#`, `'#'`, or `'.'`, all objects currently owned and subsequently created by the current thread are included in the `⎕DQ`. Because the Root object is owned by thread 0, events on Root are reported only to thread 0.
 
 If `Y` is empty it specifies the object associated with the current namespace and is only valid if the current space is one of the objects listed above.
 
@@ -50,7 +50,7 @@ If the callback function returns its event message with some of the parameters c
 
 ## Action = `⍎`expr
 
-If `Action` is set to a character vector whose first element is the execute symbol (`⍎`) the remaining string will be executed automatically whenever the event occurs.  The default processing for the event is performed first and may not be changed or inhibited in any way.
+If `Action` is set to a character vector whose first element is the _execute_ symbol (`⍎`) the remaining string will be executed automatically whenever the event occurs.  The default processing for the event is performed first and may not be changed or inhibited in any way.
 
 ## Action = fn& {larg}
 
@@ -58,7 +58,7 @@ If `Action` is set to a character vector whose first element is the execute symb
 
 # The Result of `⎕DQ`
 
-`⎕DQ` terminates, returning the shy result `R`, in one of four instances.
+`⎕DQ` terminates, returning the [shy](../../programming-reference-guide/introduction/results.md#shy-results) result `R`, in one of four instances.
 
 Firstly, `⎕DQ` terminates when an event occurs whose "action code" is 1.  In this case, its result is a nested vector containing the **event message** associated with the event.  The structure of an event message varies according to the event type (see *Object Reference*).  However, an event message has at least two elements of which the first is a ref to the object or a character vector containing the name of the object, and the second is a character vector or numeric code which identifies the event type.
 

@@ -235,11 +235,11 @@ Let us consider the effect of using Cut-Back instead of Execute. Consider the sy
 ```apl
              REPORT
                 |
- .-------------------------.
+ ┌──────────┬───┴──┬───────┐
  |          |      |       |
 REP1      REP2    REP3    REP4
                    |
-              .----.----.
+              ┌────┼────┐
               |    |    |
              ...  DIV  ...
 ```

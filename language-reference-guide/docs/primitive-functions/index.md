@@ -18,7 +18,7 @@ search:
 |`⌊`|Downstile|[Floor](floor.md)|[Minimum](minimum.md)|
 |`!`|Exclamation Mark|[Factorial](factorial.md)|[Binomial](binomial.md)|
 |`?`|Question Mark|[Roll](roll.md)|[Deal](deal.md)|
-|`^`|Logical AND|&nbsp;|[Lowest Common Multiple/AND](lowest-common-multiple-and.md)|
+|`∧`|Logical AND|&nbsp;|[Lowest Common Multiple/AND](lowest-common-multiple-and.md)|
 |`∨`|Logical OR|&nbsp;|[Greatest Common Divisor/OR](greatest-common-divisor-or.md)|
 |`⍲`|Logical NAND|&nbsp;|[NAND](nand.md)|
 |`⍱`|Logical NOR|&nbsp;|[NOR](nor.md)|
