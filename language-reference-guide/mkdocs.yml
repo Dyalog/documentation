@@ -323,8 +323,8 @@ nav:
           - '<code>⎕DM</code>: Diagnostic Message': system-functions/dm.md
           - '<code>⎕DMX</code>: Extended Diagnostic Message': system-functions/dmx.md
           - '<code>⎕DQ</code>: Dequeue Events': system-functions/dq.md
-          - '<code>⎕DR</code>: Data Representation Monadic': system-functions/data-representation-monadic.md
-          - '<code>⎕DR</code>: Data Representation Dyadic': system-functions/data-representation-dyadic.md
+          - '<code>⎕DR</code>: Query Data Representation': system-functions/dr-monadic.md
+          - '<code>⎕DR</code>: Transform Data Representation': system-functions/dr-dyadic.md
           - '<code>⎕DT</code>: Datetime': system-functions/dt.md
           - '<code>⎕ED</code>: Edit Object': system-functions/ed.md
           - '<code>⎕EM</code>: Event Message': system-functions/em.md
