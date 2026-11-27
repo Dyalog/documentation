@@ -68,7 +68,9 @@ Structural functions generally do NOT change the type, for example:
       ⎕FR←1287
       x←1E1000
       ⎕FR←645 ⋄ x+0
-DOMAIN ERROR
+DOMAIN ERROR: ⎕FR=645 limits arithmetic to the range +/-1.79E308 (approx)
+      ⎕FR←645 ⋄ x+0
+                 ∧
 ```
 
 When experimenting with `⎕FR`, it is important to remember that numeric constants entered into the Session are evaluated (and assigned a data type) before the line is actually executed. This means that constants are evaluated according to the value of `⎕FR` that pertained before the line was entered. For example:

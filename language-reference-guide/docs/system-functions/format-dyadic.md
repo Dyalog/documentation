@@ -84,7 +84,7 @@ The columns of the separate arrays in the items of a non-simple right argument a
 ```apl
       '2I4,F7.1' ⎕FMT (⍳4)(2 2⍴ 0.1×⍳4)
    1   0    0.2
-   1   0    0.4
+   2   0    0.4
    3
    4
 ```
@@ -98,7 +98,7 @@ Characters are right justified within the specified field width, unless the `L` 
 If the result is too wide to fit within the specified width, the field is filled with asterisks:
 ```apl
       'F5.2' ⎕FMT 0.1×5 1000 ¯100
-  0.50
+ 0.50
 *****
 *****
 ```

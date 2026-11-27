@@ -18,7 +18,7 @@ If `Y` is the name of a variable, a locked function or operator, an external fun
       ∇
  
       +F←⎕NR'MEAN'
-  R←MEAN X    ⍝Average   R←(+/X)÷⍴X
+  R←MEAN X    ⍝ Average   R←(+/X)÷⍴X
  
       ⍴F
 2

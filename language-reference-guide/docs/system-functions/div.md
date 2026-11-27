@@ -24,9 +24,9 @@ If `⎕DIV=1`, division by 0 returns 0.
 0.5 1 2
  
       ÷0 1
-DOMAIN ERROR
+DOMAIN ERROR: Divide by zero
       ÷0 1
-      ^
+      ∧
  
       ⎕DIV←1
  

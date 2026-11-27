@@ -20,8 +20,8 @@ For further information, see [Comparison Tolerance](ct.md).
 
 <h2 class="example">Examples</h2>
 ```apl
-      ⎕DCT←1E¯10
-      1.00000000001 1.0000001 = 1
+      ⎕DCT←1E¯10
+      1.00000000001 1.0000001 = 1
 1 0
 ```
 

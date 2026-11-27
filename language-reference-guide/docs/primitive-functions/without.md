@@ -13,12 +13,12 @@ Elements of `X` and `Y` are considered the same if `X≡Y` returns 1 for those e
 
 <h2 class="example">Examples</h2>
 ```apl
-      'HELLO'~'GOODBYE'
+      'HELLO'~'GOODBYE'
 HLL
-      'MONDAY' 'TUESDAY' 'WEDNESDAY'~'TUESDAY' 'FRIDAY'
- MONDAY  WEDNESDAY
- 
-      5 10 15~⍳10
+      'MONDAY' 'TUESDAY' 'WEDNESDAY'~'TUESDAY' 'FRIDAY'
+ MONDAY  WEDNESDAY
+ 
+      5 10 15~⍳10
 15
 ```
 
