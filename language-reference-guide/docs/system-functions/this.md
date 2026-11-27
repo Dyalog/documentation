@@ -3,42 +3,47 @@ search:
   boost: 2
 ---
 
-# <span>This Space</span> `R←⎕THIS`{{key}}
+# <span>Current Namespace</span> `R←⎕THIS`{{key}}
 
-`⎕THIS` returns a reference to the current namespace, that is, to the space in which it is referenced.
-
-If `NC9` is a reference to any object whose name-class is `9`, then:
-```apl
-      NC9≡NC9.⎕THIS
-1
-```
+`⎕THIS` is a reference to the current namespace, which is the namespace in which it is evaluated.
 
 <h2 class="example">Examples</h2>
+
 ```apl
       ⎕THIS
 #
-      'X'⎕NS ''
-      X.⎕THIS
-#.X
-     'F'⎕WC'Form'
-     'F.B'⎕WC'Button'
-      F.B.⎕THIS
-#.F.B
- 
+      'x'⎕NS ''
+      x.⎕THIS
+#.x
+      x≡x.⎕THIS
+1
+      x.{⎕THIS}0
+#.x
+```
+
+## Classes and Instances
+
+In an instance, or in a method that runs in an instance, `⎕THIS` is a reference to that instance, and in a class, it is a reference to that class.
+
+<h3 class="example">Examples</h3>
+
+[`⎕CLASS`](class.md) gives the class of the instance, and [`⎕INSTANCES`](instances.md) then gives every instance of that class:
+
+```apl
+      :Class Parrot
+          ∇ R←Me
+            :Access Public
+            R←⎕THIS
+          ∇
+      :EndClass
       Polly←⎕NEW Parrot
       Polly.⎕THIS
 #.[Parrot]
-```
-
-An Instance may use `⎕THIS` to obtain a reference to its own Class:
-```apl
-    Polly.(⊃⊃⎕CLASS ⎕THIS)
+      Polly≡Polly.Me
+1
+      Polly.(1 1⊃⎕CLASS ⎕THIS)
 #.Parrot
-```
-
-or a function (such as a Constructor or Destructor) may identify or enumerate all other Instances of the same Class:
-```apl
-      Polly.(⍴⎕INSTANCES⊃⊃⎕CLASS ⎕THIS)
+      Polly.(≢⎕INSTANCES 1 1⊃⎕CLASS ⎕THIS)
 1
 ```
 
