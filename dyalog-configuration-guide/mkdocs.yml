@@ -111,6 +111,7 @@ nav:
       - confirm_fix: configuration-parameters/confirm-fix.md
       - confirm_session_delete: configuration-parameters/confirm-session-delete.md
       - default_div: configuration-parameters/default-div.md
+      - default_fr: configuration-parameters/default-fr.md
       - default_io: configuration-parameters/default-io.md
       - default_ml: configuration-parameters/default-ml.md
       - default_pp: configuration-parameters/default-pp.md

@@ -161,6 +161,7 @@ Table: Configuration dialog box – Session tab
 |[`⎕PP`](../../language-reference-guide/system-functions/pp.md)|[Default_PP](../../dyalog-configuration-guide/configuration-parameters/default-pp.md)|The default value of `⎕PP` in a `clear ws`|
 |[`⎕RTL`](../../language-reference-guide/system-functions/rtl.md)|[Default_RTL](../../dyalog-configuration-guide/configuration-parameters/default-rtl.md)|The default value of `⎕RTL` in a `clear ws`|
 |[`⎕DIV`](../../language-reference-guide/system-functions/div.md)|[Default_DIV](../../dyalog-configuration-guide/configuration-parameters/default-div.md)|The default value of `⎕DIV` in a `clear ws`|
+|[`⎕FR`](../../language-reference-guide/system-functions/fr.md)|[Default_FR](../../dyalog-configuration-guide/configuration-parameters/default-fr.md)|The default value of `⎕FR` in a `clear ws`|
 |[`⎕WX`](../../language-reference-guide/system-functions/wx.md)|[Default_WX](../../dyalog-configuration-guide/configuration-parameters/default-wx.md)|The default value of `⎕WX` in a `clear ws`|
 |Auto PW|[Auto_PW](../../dyalog-configuration-guide/configuration-parameters/auto-pw.md)|If checked, the value of [`⎕PW`](../../language-reference-guide/system-functions/pw.md) is dynamic and depends on the width of the Session Window|
 |Input buffer size|[Input_Size](../../dyalog-configuration-guide/configuration-parameters/input-size.md)|The size of the buffer used to store marked lines (lines awaiting execution) in the Session|

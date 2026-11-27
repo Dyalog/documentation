@@ -47,6 +47,7 @@ These set the values that system variables and related flags take in a clear wor
 |Name|Description|
 |----|-----------|
 |[`Default_DIV`](default-div.md)|The value of `⎕DIV` in a clear workspace|
+|[`Default_FR`](default-fr.md)|The value of `⎕FR` (floating-point representation) in a clear workspace|
 |[`Default_IO`](default-io.md)|The value of `⎕IO` in a clear workspace|
 |[`Default_ML`](default-ml.md)|The value of `⎕ML` (migration level) in a clear workspace|
 |[`Default_PP`](default-pp.md)|The value of `⎕PP` (print precision) in a clear workspace|
