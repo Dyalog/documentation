@@ -15,8 +15,8 @@ If `Y` is a name of a defined function or operator, `R` is a simple character ma
 [1]  R←(+/X)÷⍴X
 [2]  ∇
       +F←⎕CR'MEAN'
-R←MEAN X    ⍝ Arithmetic mean
-R←(+/X)÷⍴X
+ R←MEAN X    ⍝ Arithmetic mean
+ R←(+/X)÷⍴X
  
       ⍴F
 2 30
